@@ -29,6 +29,15 @@
   "Limits": [
     "Game-owned orchestration interfaces use NSubstitute; actual NetworkState, Statechart, MessageBroker, Auth3.8 state and Photon RealtimeClient are imported.",
     "No socket/cloud requests or rendered-game proof is performed by this fixture.",
-    "Real Main Metal normal-game rerun belongs to the integrator and was pending when this evidence was frozen."
-  ]
+    "Real Main Metal normal-game rerun passed after integration: actual Home Play, Maze36entities/35bots,270advancing verified frames,0runtime errors/0rejectedjoins. Separate public main-match-flow-ugs.json records that proof."
+  ],
+  "BeforeFixNegative": {
+    "Passed": 0,
+    "Failed": 1,
+    "Skipped": 0,
+    "UnityExitCode": 2,
+    "SourceSHA256": "059134ea43e6b14acc3400c1d71adbc5cfa39fc65804d9394827187cb711e40e",
+    "Failure": "Expected zero reservation calls before native next-frame dispatch; original production source already dispatched two reservations synchronously.",
+    "XML": "Docs/Modernization/verification/network-matchmaking-start-before-fix-tests.xml"
+  }
 }

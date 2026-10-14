@@ -1,0 +1,25 @@
+{
+  "NativeEditMode": {
+    "Passed": 2,
+    "Failed": 0,
+    "Skipped": 0,
+    "UnityExitCode": 0
+  },
+  "NativeSourceCompile": {
+    "Warnings": 0,
+    "Errors": 0
+  },
+  "RuntimeSourceSHA256": "5c8dd45da64d2e6a30f55a0c96de32e069bb32f3a5787803c68f0fef6503bd36",
+  "NativeGameAssemblySHA256": "f63c5c58a9343e67ac88656716952c5e7bbb0e55c4528b62815b3f5ab78e930e",
+  "Scope": "Actual AuthService.SetDisplayName, real Authentication3.8 internal service/state/player-name component, generated IPlayerNamesApi with a controlled delayed local response; actual game loaded-name hook and broker.",
+  "Cases": [
+    "Native account A\u2192B then late successful A name response preserves loaded B game name and publishes no stale notification.",
+    "Native same-ID sign-out/relogin then late successful old-generation name response likewise preserves reloaded game name."
+  ],
+  "Correction": "Keep awaited native API name in a local; validate the account before Public CloudSave; validate again before mutating game cached name and notifying subscribers.",
+  "Limits": [
+    "No cloud request; tests deliberately hit the first stale-account guard before CloudSave can be invoked.",
+    "Auth3.8 vendor UpdatePlayerNameAsync itself writes its own PlayerNameComponent after its await without a generation guard; this patch protects game cached/profile/published state, not that vendor-owned cache.",
+    "Whole Main suite integration/revalidation belongs to root."
+  ]
+}

@@ -445,10 +445,11 @@ namespace FirstLight.Game.Services.Authentication
 			try
 			{
 				var account = UgsAccountSession.Capture();
-				RawLocalPlayerName = await AuthenticationService.Instance.UpdatePlayerNameAsync(newNameTrimmed);
+				var updatedName = await AuthenticationService.Instance.UpdatePlayerNameAsync(newNameTrimmed);
 				account.ThrowIfChanged();
-				await CloudSaveService.Instance.SavePlayerNameAsync(RawLocalPlayerName);
+				await CloudSaveService.Instance.SavePlayerNameAsync(updatedName);
 				account.ThrowIfChanged();
+				RawLocalPlayerName = updatedName;
 				_msgBroker.PublishSafe(new DisplayNameChangedMessage { NewPlayfabDisplayName = RawLocalPlayerName });
 				return null;
 			}

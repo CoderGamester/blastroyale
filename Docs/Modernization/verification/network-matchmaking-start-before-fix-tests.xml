@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test-run id="2" testcasecount="1" result="Failed(Child)" total="1" passed="0" failed="1" inconclusive="0" skipped="0" asserts="0" engine-version="3.5.0.0" clr-version="4.0.30319.42000" start-time="2026-10-14 17:54:40Z" end-time="2026-10-14 17:54:40Z" duration="0.1357423">
+  <test-suite type="TestSuite" id="1015" name="network-start-project" fullname="network-start-project" runstate="Runnable" testcasecount="5" result="Failed" site="Child" start-time="2026-10-14 17:54:40Z" end-time="2026-10-14 17:54:40Z" duration="0.135742" total="1" passed="0" failed="1" inconclusive="0" skipped="0" asserts="0">
+    <properties>
+      <property name="platform" value="PlayMode" />
+    </properties>
+    <failure>
+      <message><![CDATA[One or more child tests had errors]]></message>
+    </failure>
+    <test-suite type="Assembly" id="1009" name="Unity.Services.Authentication.Tests.dll" fullname="<repo>/.local/network-start-project/Library/ScriptAssemblies/Unity.Services.Authentication.Tests.dll" runstate="Runnable" testcasecount="5" result="Failed" site="Child" start-time="2026-10-14 17:54:40Z" end-time="2026-10-14 17:54:40Z" duration="0.132151" total="1" passed="0" failed="1" inconclusive="0" skipped="0" asserts="0">
+      <properties>
+        <property name="_PID" value="32335" />
+        <property name="_APPDOMAIN" value="Unity Child Domain" />
+        <property name="platform" value="PlayMode" />
+        <property name="EditorOnly" value="False" />
+      </properties>
+      <failure>
+        <message><![CDATA[One or more child tests had errors]]></message>
+      </failure>
+      <test-suite type="TestSuite" id="1010" name="FirstLight" fullname="FirstLight" runstate="Runnable" testcasecount="5" result="Failed" site="Child" start-time="2026-10-14 17:54:40Z" end-time="2026-10-14 17:54:40Z" duration="0.131892" total="1" passed="0" failed="1" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <failure>
+          <message><![CDATA[One or more child tests had errors]]></message>
+        </failure>
+        <test-suite type="TestSuite" id="1011" name="Tests" fullname="FirstLight.Tests" runstate="Runnable" testcasecount="5" result="Failed" site="Child" start-time="2026-10-14 17:54:40Z" end-time="2026-10-14 17:54:40Z" duration="0.131733" total="1" passed="0" failed="1" inconclusive="0" skipped="0" asserts="0">
+          <properties />
+          <failure>
+            <message><![CDATA[One or more child tests had errors]]></message>
+          </failure>
+          <test-suite type="TestSuite" id="1012" name="EditorMode" fullname="FirstLight.Tests.EditorMode" runstate="Runnable" testcasecount="5" result="Failed" site="Child" start-time="2026-10-14 17:54:40Z" end-time="2026-10-14 17:54:40Z" duration="0.131581" total="1" passed="0" failed="1" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <failure>
+              <message><![CDATA[One or more child tests had errors]]></message>
+            </failure>
+            <test-suite type="TestSuite" id="1013" name="Network" fullname="FirstLight.Tests.EditorMode.Network" runstate="Runnable" testcasecount="5" result="Failed" site="Child" start-time="2026-10-14 17:54:40Z" end-time="2026-10-14 17:54:40Z" duration="0.131414" total="1" passed="0" failed="1" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <failure>
+                <message><![CDATA[One or more child tests had errors]]></message>
+              </failure>
+              <test-suite type="TestFixture" id="1003" name="NetworkMatchmakingStartTests" fullname="FirstLight.Tests.EditorMode.Network.NetworkMatchmakingStartTests" classname="FirstLight.Tests.EditorMode.Network.NetworkMatchmakingStartTests" runstate="Runnable" testcasecount="5" result="Failed" site="Child" start-time="2026-10-14 17:54:40Z" end-time="2026-10-14 17:54:40Z" duration="0.130952" total="1" passed="0" failed="1" inconclusive="0" skipped="0" asserts="0">
+                <properties />
+                <failure>
+                  <message><![CDATA[One or more child tests had errors]]></message>
+                </failure>
+                <test-case id="1004" name="SynchronousBundledMatchmakingPublishesAfterNativeChoiceCommits" fullname="FirstLight.Tests.EditorMode.Network.NetworkMatchmakingStartTests.SynchronousBundledMatchmakingPublishesAfterNativeChoiceCommits" methodname="SynchronousBundledMatchmakingPublishesAfterNativeChoiceCommits" classname="FirstLight.Tests.EditorMode.Network.NetworkMatchmakingStartTests" runstate="Runnable" seed="285705234" result="Failed" start-time="2026-10-14 17:54:40Z" end-time="2026-10-14 17:54:40Z" duration="0.126275" asserts="0">
+                  <properties>
+                    <property name="_JOINTYPE" value="UnityCombinatorial" />
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                  <failure>
+                    <message><![CDATA[  Expected: 0
+  But was:  2
+]]></message>
+                    <stack-trace><![CDATA[at FirstLight.Tests.EditorMode.Network.NetworkMatchmakingStartTests.<SynchronousBundledMatchmakingPublishesAfterNativeChoiceCommits>b__14_0 () [0x00022] in <repo>/.local/network-start-project/Assets/Tests/NetworkMatchmakingStartTests.cs:126
+at Cysharp.Threading.Tasks.UniTask+ExceptionResultSource.GetResult (System.Int16 token) [0x00015] in ./Library/PackageCache/com.cysharp.unitask@bf35135da627/Runtime/UniTask.Factory.cs:326
+at Cysharp.Threading.Tasks.UniTaskExtensions+ToCoroutineEnumerator.RunTask (Cysharp.Threading.Tasks.UniTask task) [0x00020] in ./Library/PackageCache/com.cysharp.unitask@bf35135da627/Runtime/UniTaskExtensions.cs:807
+at Cysharp.Threading.Tasks.UniTaskExtensions+ToCoroutineEnumerator.MoveNext () [0x0002b] in ./Library/PackageCache/com.cysharp.unitask@bf35135da627/Runtime/UniTaskExtensions.cs:838
+at UnityEngine.TestTools.TestEnumerator+<Execute>d__7.MoveNext () [0x0003a] in ./Library/PackageCache/com.unity.test-framework@bd7f943e9647/UnityEngine.TestRunner/NUnitExtensions/Attributes/TestEnumerator.cs:44
+]]></stack-trace>
+                  </failure>
+                  <output><![CDATA[ (T1 F13)  [NetworkState] Using Photon room matchmaking!
+ (T1 F13)  [NetworkState] Using Photon room matchmaking!
+Saving results to: <user>/Library/Application Support/DefaultCompany/network-start-project/TestResults.xml
+]]></output>
+                </test-case>
+              </test-suite>
+            </test-suite>
+          </test-suite>
+        </test-suite>
+      </test-suite>
+    </test-suite>
+  </test-suite>
+</test-run>

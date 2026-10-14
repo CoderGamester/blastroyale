@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test-run id="2" testcasecount="2" result="Passed" total="2" passed="2" failed="0" inconclusive="0" skipped="0" asserts="0" engine-version="3.5.0.0" clr-version="4.0.30319.42000" start-time="2026-10-14 17:54:48Z" end-time="2026-10-14 17:54:48Z" duration="0.0776621">
+  <test-suite type="TestSuite" id="1000" name="display-name-project" fullname="display-name-project" runstate="Runnable" testcasecount="3" result="Passed" start-time="2026-10-14 17:54:48Z" end-time="2026-10-14 17:54:48Z" duration="0.077662" total="2" passed="2" failed="0" inconclusive="0" skipped="0" asserts="0">
+    <properties>
+      <property name="platform" value="EditMode" />
+    </properties>
+    <test-suite type="Assembly" id="1013" name="Unity.Services.Authentication.Tests.dll" fullname="<repo>/.local/display-name-project/Library/ScriptAssemblies/Unity.Services.Authentication.Tests.dll" runstate="Runnable" testcasecount="2" result="Passed" start-time="2026-10-14 17:54:48Z" end-time="2026-10-14 17:54:48Z" duration="0.074695" total="2" passed="2" failed="0" inconclusive="0" skipped="0" asserts="0">
+      <properties>
+        <property name="_PID" value="31786" />
+        <property name="_APPDOMAIN" value="Unity Child Domain" />
+        <property name="platform" value="EditMode" />
+        <property name="EditorOnly" value="True" />
+      </properties>
+      <test-suite type="TestSuite" id="1014" name="FirstLight" fullname="FirstLight" runstate="Runnable" testcasecount="2" result="Passed" start-time="2026-10-14 17:54:48Z" end-time="2026-10-14 17:54:48Z" duration="0.074519" total="2" passed="2" failed="0" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <test-suite type="TestSuite" id="1015" name="Tests" fullname="FirstLight.Tests" runstate="Runnable" testcasecount="2" result="Passed" start-time="2026-10-14 17:54:48Z" end-time="2026-10-14 17:54:48Z" duration="0.074425" total="2" passed="2" failed="0" inconclusive="0" skipped="0" asserts="0">
+          <properties />
+          <test-suite type="TestSuite" id="1016" name="EditorMode" fullname="FirstLight.Tests.EditorMode" runstate="Runnable" testcasecount="2" result="Passed" start-time="2026-10-14 17:54:48Z" end-time="2026-10-14 17:54:48Z" duration="0.074341" total="2" passed="2" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-suite type="TestSuite" id="1017" name="Authentication" fullname="FirstLight.Tests.EditorMode.Authentication" runstate="Runnable" testcasecount="2" result="Passed" start-time="2026-10-14 17:54:48Z" end-time="2026-10-14 17:54:48Z" duration="0.074227" total="2" passed="2" failed="0" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <test-suite type="TestFixture" id="1009" name="DisplayNameIsolationTests" fullname="FirstLight.Tests.EditorMode.Authentication.DisplayNameIsolationTests" classname="FirstLight.Tests.EditorMode.Authentication.DisplayNameIsolationTests" runstate="Runnable" testcasecount="2" result="Passed" start-time="2026-10-14 17:54:48Z" end-time="2026-10-14 17:54:48Z" duration="0.073991" total="2" passed="2" failed="0" inconclusive="0" skipped="0" asserts="0">
+                <properties />
+                <test-suite type="ParameterizedMethod" id="1012" name="LateOldAccountNameResponseCannotMutateReloadedGameProfile" fullname="FirstLight.Tests.EditorMode.Authentication.DisplayNameIsolationTests.LateOldAccountNameResponseCannotMutateReloadedGameProfile" classname="FirstLight.Tests.EditorMode.Authentication.DisplayNameIsolationTests" runstate="Runnable" testcasecount="2" result="Passed" start-time="2026-10-14 17:54:48Z" end-time="2026-10-14 17:54:48Z" duration="0.072568" total="2" passed="2" failed="0" inconclusive="0" skipped="0" asserts="0">
+                  <properties />
+                  <test-case id="1010" name="LateOldAccountNameResponseCannotMutateReloadedGameProfile(False)" fullname="FirstLight.Tests.EditorMode.Authentication.DisplayNameIsolationTests.LateOldAccountNameResponseCannotMutateReloadedGameProfile(False)" methodname="LateOldAccountNameResponseCannotMutateReloadedGameProfile" classname="FirstLight.Tests.EditorMode.Authentication.DisplayNameIsolationTests" runstate="Runnable" seed="1105414547" result="Passed" start-time="2026-10-14 17:54:48Z" end-time="2026-10-14 17:54:48Z" duration="0.068099" asserts="0">
+                    <properties>
+                      <property name="retryIteration" value="0" />
+                      <property name="repeatIteration" value="0" />
+                    </properties>
+                  </test-case>
+                  <test-case id="1011" name="LateOldAccountNameResponseCannotMutateReloadedGameProfile(True)" fullname="FirstLight.Tests.EditorMode.Authentication.DisplayNameIsolationTests.LateOldAccountNameResponseCannotMutateReloadedGameProfile(True)" methodname="LateOldAccountNameResponseCannotMutateReloadedGameProfile" classname="FirstLight.Tests.EditorMode.Authentication.DisplayNameIsolationTests" runstate="Runnable" seed="358562753" result="Passed" start-time="2026-10-14 17:54:48Z" end-time="2026-10-14 17:54:48Z" duration="0.000683" asserts="0">
+                    <properties>
+                      <property name="retryIteration" value="0" />
+                      <property name="repeatIteration" value="0" />
+                    </properties>
+                    <output><![CDATA[Saving results to: <user>/Library/Application Support/DefaultCompany/display-name-project/TestResults.xml
+]]></output>
+                  </test-case>
+                </test-suite>
+              </test-suite>
+            </test-suite>
+          </test-suite>
+        </test-suite>
+      </test-suite>
+    </test-suite>
+  </test-suite>
+</test-run>
