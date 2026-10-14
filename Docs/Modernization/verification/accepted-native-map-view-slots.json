@@ -1,0 +1,122 @@
+[
+  {
+    "Scene": "Assets/AddressableResources/Maps/Battlelands/BattlelandsMapScene.unity",
+    "Map": "Assets/AddressableResources/Maps/Battlelands/BattlelandsMap.asset",
+    "Prototypes": 479,
+    "SceneReferenceSlots": 479,
+    "NativeSelfViews": 262,
+    "NativeAssetViewPrototypes": 0,
+    "PureSimulationPrototypes": 217,
+    "MarkedVisualUnitBoxes": 0,
+    "EverySceneReferenceEqualsActualSdkSelfView": true,
+    "OriginalMetadataAndAllMapFieldsMatchLedger": true
+  },
+  {
+    "Scene": "Assets/AddressableResources/Maps/Cemetery/CemeteryScene.unity",
+    "Map": "Assets/AddressableResources/Maps/Cemetery/Cemetery.asset",
+    "Prototypes": 139,
+    "SceneReferenceSlots": 139,
+    "NativeSelfViews": 45,
+    "NativeAssetViewPrototypes": 0,
+    "PureSimulationPrototypes": 94,
+    "MarkedVisualUnitBoxes": 138,
+    "EverySceneReferenceEqualsActualSdkSelfView": true,
+    "OriginalMetadataAndAllMapFieldsMatchLedger": true
+  },
+  {
+    "Scene": "Assets/AddressableResources/Maps/District/DistrictScene.unity",
+    "Map": "Assets/AddressableResources/Maps/District/District.asset",
+    "Prototypes": 223,
+    "SceneReferenceSlots": 223,
+    "NativeSelfViews": 114,
+    "NativeAssetViewPrototypes": 0,
+    "PureSimulationPrototypes": 109,
+    "MarkedVisualUnitBoxes": 263,
+    "EverySceneReferenceEqualsActualSdkSelfView": true,
+    "OriginalMetadataAndAllMapFieldsMatchLedger": true
+  },
+  {
+    "Scene": "Assets/AddressableResources/Maps/Fortress/FortressScene.unity",
+    "Map": "Assets/AddressableResources/Maps/Fortress/Fortress.asset",
+    "Prototypes": 140,
+    "SceneReferenceSlots": 140,
+    "NativeSelfViews": 49,
+    "NativeAssetViewPrototypes": 0,
+    "PureSimulationPrototypes": 91,
+    "MarkedVisualUnitBoxes": 202,
+    "EverySceneReferenceEqualsActualSdkSelfView": true,
+    "OriginalMetadataAndAllMapFieldsMatchLedger": true
+  },
+  {
+    "Scene": "Assets/AddressableResources/Maps/IslandOne/IslandOneScene.unity",
+    "Map": "Assets/AddressableResources/Maps/IslandOne/IslandOne.asset",
+    "Prototypes": 2824,
+    "SceneReferenceSlots": 2824,
+    "NativeSelfViews": 1344,
+    "NativeAssetViewPrototypes": 0,
+    "PureSimulationPrototypes": 1480,
+    "MarkedVisualUnitBoxes": 3027,
+    "EverySceneReferenceEqualsActualSdkSelfView": true,
+    "OriginalMetadataAndAllMapFieldsMatchLedger": true
+  },
+  {
+    "Scene": "Assets/AddressableResources/Maps/Islands/IslandsMapScene.unity",
+    "Map": "Assets/AddressableResources/Maps/Islands/IslandsMap.asset",
+    "Prototypes": 943,
+    "SceneReferenceSlots": 943,
+    "NativeSelfViews": 361,
+    "NativeAssetViewPrototypes": 0,
+    "PureSimulationPrototypes": 582,
+    "MarkedVisualUnitBoxes": 0,
+    "EverySceneReferenceEqualsActualSdkSelfView": true,
+    "OriginalMetadataAndAllMapFieldsMatchLedger": true
+  },
+  {
+    "Scene": "Assets/AddressableResources/Maps/Test/TestScene_Scene.unity",
+    "Map": "Assets/AddressableResources/Maps/Test/TestScene.asset",
+    "Prototypes": 80,
+    "SceneReferenceSlots": 80,
+    "NativeSelfViews": 41,
+    "NativeAssetViewPrototypes": 0,
+    "PureSimulationPrototypes": 39,
+    "MarkedVisualUnitBoxes": 11,
+    "EverySceneReferenceEqualsActualSdkSelfView": true,
+    "OriginalMetadataAndAllMapFieldsMatchLedger": true
+  },
+  {
+    "Scene": "Assets/AddressableResources/Maps/TestAssets/TestAssetsMap.unity",
+    "Map": "Assets/AddressableResources/Maps/TestAssets/TestAssetsMap.asset",
+    "Prototypes": 10,
+    "SceneReferenceSlots": 10,
+    "NativeSelfViews": 0,
+    "NativeAssetViewPrototypes": 0,
+    "PureSimulationPrototypes": 10,
+    "MarkedVisualUnitBoxes": 458,
+    "EverySceneReferenceEqualsActualSdkSelfView": true,
+    "OriginalMetadataAndAllMapFieldsMatchLedger": true
+  },
+  {
+    "Scene": "Assets/AddressableResources/Maps/FtueDeck/FtueDeckScene.unity",
+    "Map": "Assets/AddressableResources/Maps/FtueDeck/FtueDeck.asset",
+    "Prototypes": 17,
+    "SceneReferenceSlots": 17,
+    "NativeSelfViews": 16,
+    "NativeAssetViewPrototypes": 0,
+    "PureSimulationPrototypes": 1,
+    "MarkedVisualUnitBoxes": 100,
+    "EverySceneReferenceEqualsActualSdkSelfView": true,
+    "OriginalMetadataAndAllMapFieldsMatchLedger": true
+  },
+  {
+    "Scene": "Assets/AddressableResources/Maps/MazeMayhem/MazeMayhemScene.unity",
+    "Map": "Assets/AddressableResources/Maps/MazeMayhem/MazeMayhem.asset",
+    "Prototypes": 708,
+    "SceneReferenceSlots": 708,
+    "NativeSelfViews": 341,
+    "NativeAssetViewPrototypes": 0,
+    "PureSimulationPrototypes": 367,
+    "MarkedVisualUnitBoxes": 681,
+    "EverySceneReferenceEqualsActualSdkSelfView": true,
+    "OriginalMetadataAndAllMapFieldsMatchLedger": true
+  }
+]

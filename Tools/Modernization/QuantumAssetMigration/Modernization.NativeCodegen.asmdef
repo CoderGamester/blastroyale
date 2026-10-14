@@ -1,0 +1,17 @@
+{
+  "name": "Modernization.NativeCodegen",
+  "references": [
+    "Quantum.Unity.Editor.CodeGen"
+  ],
+  "includePlatforms": [
+    "Editor"
+  ],
+  "allowUnsafeCode": false,
+  "overrideReferences": true,
+  "precompiledReferences": [
+    "Quantum.CodeGen.Qtn.dll",
+    "Quantum.Engine.dll",
+    "Quantum.Log.dll"
+  ],
+  "autoReferenced": false
+}

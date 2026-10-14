@@ -1,0 +1,282 @@
+[
+  {
+    "Path": "Assets/AddressableResources/QuantumAssets/Characters/DummyCharacter.prefab",
+    "LocalId": "-3041705823161878789",
+    "QuantumPath": "AddressableResources/QuantumAssets/Characters/DummyCharacter|EntityView",
+    "ActualSdkTargetScript": "{fileID: 206745634, guid: b156eeaae3f741b40af66649a4748430, type: 3}",
+    "OriginalReference": "{fileID: 11500000, guid: 4d5baec4de8d2754a864a680181831e8, type: 3}"
+  },
+  {
+    "Path": "Assets/AddressableResources/QuantumAssets/Characters/DummyCharacter.prefab",
+    "LocalId": "-6204203526727587837",
+    "QuantumPath": "AddressableResources/QuantumAssets/Characters/DummyCharacter|EntityPrototype",
+    "ActualSdkTargetScript": "{fileID: 11500000, guid: 97c37404f174494591b8ec9d24e5bc8e, type: 3}",
+    "OriginalReference": "{fileID: 11500000, guid: 0120b722c3ca5454da1240b65656905f, type: 3}"
+  },
+  {
+    "Path": "Assets/AddressableResources/QuantumAssets/Collectables/EquipmentPickup.prefab",
+    "LocalId": "-881262544539562628",
+    "QuantumPath": "AddressableResources/QuantumAssets/Collectables/EquipmentPickup|EntityPrototype",
+    "ActualSdkTargetScript": "{fileID: 11500000, guid: 97c37404f174494591b8ec9d24e5bc8e, type: 3}",
+    "OriginalReference": "{fileID: 11500000, guid: 0120b722c3ca5454da1240b65656905f, type: 3}"
+  },
+  {
+    "Path": "Assets/AddressableResources/QuantumAssets/Collectables/EquipmentPickup.prefab",
+    "LocalId": "7845361808403847208",
+    "QuantumPath": "AddressableResources/QuantumAssets/Collectables/EquipmentPickup|EntityView",
+    "ActualSdkTargetScript": "{fileID: 206745634, guid: b156eeaae3f741b40af66649a4748430, type: 3}",
+    "OriginalReference": "{fileID: 11500000, guid: 4d5baec4de8d2754a864a680181831e8, type: 3}"
+  },
+  {
+    "Path": "Assets/AddressableResources/QuantumAssets/Destructibles/Landmine.prefab",
+    "LocalId": "-4900543462875793108",
+    "QuantumPath": "AddressableResources/QuantumAssets/Destructibles/Landmine|EntityView",
+    "ActualSdkTargetScript": "{fileID: 206745634, guid: b156eeaae3f741b40af66649a4748430, type: 3}",
+    "OriginalReference": "{fileID: 11500000, guid: 4d5baec4de8d2754a864a680181831e8, type: 3}"
+  },
+  {
+    "Path": "Assets/AddressableResources/QuantumAssets/Destructibles/Landmine.prefab",
+    "LocalId": "665492507139040224",
+    "QuantumPath": "AddressableResources/QuantumAssets/Destructibles/Landmine|EntityPrototype",
+    "ActualSdkTargetScript": "{fileID: 11500000, guid: 97c37404f174494591b8ec9d24e5bc8e, type: 3}",
+    "OriginalReference": "{fileID: 11500000, guid: 0120b722c3ca5454da1240b65656905f, type: 3}"
+  },
+  {
+    "Path": "Assets/AddressableResources/QuantumAssets/Spawners/LegacyWeaponPlatformSpawner.prefab",
+    "LocalId": "-881262544539562628",
+    "QuantumPath": "AddressableResources/QuantumAssets/Spawners/LegacyWeaponPlatformSpawner|EntityPrototype",
+    "ActualSdkTargetScript": "{fileID: 11500000, guid: 97c37404f174494591b8ec9d24e5bc8e, type: 3}",
+    "OriginalReference": "{fileID: 11500000, guid: 0120b722c3ca5454da1240b65656905f, type: 3}"
+  },
+  {
+    "Path": "Assets/AddressableResources/QuantumAssets/Spawners/LegacyWeaponPlatformSpawner.prefab",
+    "LocalId": "7845361808403847208",
+    "QuantumPath": "AddressableResources/QuantumAssets/Spawners/LegacyWeaponPlatformSpawner|EntityView",
+    "ActualSdkTargetScript": "{fileID: 206745634, guid: b156eeaae3f741b40af66649a4748430, type: 3}",
+    "OriginalReference": "{fileID: 11500000, guid: 4d5baec4de8d2754a864a680181831e8, type: 3}"
+  },
+  {
+    "Path": "Assets/AddressableResources/QuantumAssets/Spawners/PlayerSpawner.prefab",
+    "LocalId": "-5335015958420445853",
+    "QuantumPath": "AddressableResources/QuantumAssets/Spawners/PlayerSpawner|EntityPrototype",
+    "ActualSdkTargetScript": "{fileID: 11500000, guid: 97c37404f174494591b8ec9d24e5bc8e, type: 3}",
+    "OriginalReference": "{fileID: 11500000, guid: 0120b722c3ca5454da1240b65656905f, type: 3}"
+  },
+  {
+    "Path": "Assets/AddressableResources/QuantumAssets/Spawners/PlayerSpawner.prefab",
+    "LocalId": "8281891606988313191",
+    "QuantumPath": "AddressableResources/QuantumAssets/Spawners/PlayerSpawner|EntityView",
+    "ActualSdkTargetScript": "{fileID: 206745634, guid: b156eeaae3f741b40af66649a4748430, type: 3}",
+    "OriginalReference": "{fileID: 11500000, guid: 4d5baec4de8d2754a864a680181831e8, type: 3}"
+  },
+  {
+    "Path": "Assets/AddressableResources/QuantumAssets/Characters/PlayerCharacter.prefab",
+    "LocalId": "-3041705823161878789",
+    "QuantumPath": "AddressableResources/QuantumAssets/Characters/PlayerCharacter|EntityView",
+    "ActualSdkTargetScript": "{fileID: 206745634, guid: b156eeaae3f741b40af66649a4748430, type: 3}",
+    "OriginalReference": "{fileID: 11500000, guid: 4d5baec4de8d2754a864a680181831e8, type: 3}"
+  },
+  {
+    "Path": "Assets/AddressableResources/QuantumAssets/Characters/PlayerCharacter.prefab",
+    "LocalId": "-6204203526727587837",
+    "QuantumPath": "AddressableResources/QuantumAssets/Characters/PlayerCharacter|EntityPrototype",
+    "ActualSdkTargetScript": "{fileID: 11500000, guid: 97c37404f174494591b8ec9d24e5bc8e, type: 3}",
+    "OriginalReference": "{fileID: 11500000, guid: 0120b722c3ca5454da1240b65656905f, type: 3}"
+  },
+  {
+    "Path": "Assets/AddressableResources/QuantumAssets/Collectables/AirDrop.prefab",
+    "LocalId": "-881262544539562628",
+    "QuantumPath": "AddressableResources/QuantumAssets/Collectables/AirDrop|EntityPrototype",
+    "ActualSdkTargetScript": "{fileID: 11500000, guid: 97c37404f174494591b8ec9d24e5bc8e, type: 3}",
+    "OriginalReference": "{fileID: 11500000, guid: 0120b722c3ca5454da1240b65656905f, type: 3}"
+  },
+  {
+    "Path": "Assets/AddressableResources/QuantumAssets/Collectables/AirDrop.prefab",
+    "LocalId": "7845361808403847208",
+    "QuantumPath": "AddressableResources/QuantumAssets/Collectables/AirDrop|EntityView",
+    "ActualSdkTargetScript": "{fileID: 206745634, guid: b156eeaae3f741b40af66649a4748430, type: 3}",
+    "OriginalReference": "{fileID: 11500000, guid: 4d5baec4de8d2754a864a680181831e8, type: 3}"
+  },
+  {
+    "Path": "Assets/AddressableResources/QuantumAssets/Projectiles/RocketBullet.prefab",
+    "LocalId": "-8452382852626058855",
+    "QuantumPath": "AddressableResources/QuantumAssets/Projectiles/RocketBullet|EntityView",
+    "ActualSdkTargetScript": "{fileID: 206745634, guid: b156eeaae3f741b40af66649a4748430, type: 3}",
+    "OriginalReference": "{fileID: 11500000, guid: 4d5baec4de8d2754a864a680181831e8, type: 3}"
+  },
+  {
+    "Path": "Assets/AddressableResources/QuantumAssets/Projectiles/RocketBullet.prefab",
+    "LocalId": "1323075388786064289",
+    "QuantumPath": "AddressableResources/QuantumAssets/Projectiles/RocketBullet|EntityPrototype",
+    "ActualSdkTargetScript": "{fileID: 11500000, guid: 97c37404f174494591b8ec9d24e5bc8e, type: 3}",
+    "OriginalReference": "{fileID: 11500000, guid: 0120b722c3ca5454da1240b65656905f, type: 3}"
+  },
+  {
+    "Path": "Assets/AddressableResources/QuantumAssets/Projectiles/RocketExplosion.prefab",
+    "LocalId": "-8452382852626058855",
+    "QuantumPath": "AddressableResources/QuantumAssets/Projectiles/RocketExplosion|EntityView",
+    "ActualSdkTargetScript": "{fileID: 206745634, guid: b156eeaae3f741b40af66649a4748430, type: 3}",
+    "OriginalReference": "{fileID: 11500000, guid: 4d5baec4de8d2754a864a680181831e8, type: 3}"
+  },
+  {
+    "Path": "Assets/AddressableResources/QuantumAssets/Projectiles/RocketExplosion.prefab",
+    "LocalId": "1323075388786064289",
+    "QuantumPath": "AddressableResources/QuantumAssets/Projectiles/RocketExplosion|EntityPrototype",
+    "ActualSdkTargetScript": "{fileID: 11500000, guid: 97c37404f174494591b8ec9d24e5bc8e, type: 3}",
+    "OriginalReference": "{fileID: 11500000, guid: 0120b722c3ca5454da1240b65656905f, type: 3}"
+  },
+  {
+    "Path": "Assets/AddressableResources/QuantumAssets/Projectiles/MainBullet.prefab",
+    "LocalId": "-8452382852626058855",
+    "QuantumPath": "AddressableResources/QuantumAssets/Projectiles/MainBullet|EntityView",
+    "ActualSdkTargetScript": "{fileID: 206745634, guid: b156eeaae3f741b40af66649a4748430, type: 3}",
+    "OriginalReference": "{fileID: 11500000, guid: 4d5baec4de8d2754a864a680181831e8, type: 3}"
+  },
+  {
+    "Path": "Assets/AddressableResources/QuantumAssets/Projectiles/MainBullet.prefab",
+    "LocalId": "1323075388786064289",
+    "QuantumPath": "AddressableResources/QuantumAssets/Projectiles/MainBullet|EntityPrototype",
+    "ActualSdkTargetScript": "{fileID: 11500000, guid: 97c37404f174494591b8ec9d24e5bc8e, type: 3}",
+    "OriginalReference": "{fileID: 11500000, guid: 0120b722c3ca5454da1240b65656905f, type: 3}"
+  },
+  {
+    "Path": "Assets/AddressableResources/QuantumAssets/Projectiles/HammerHit.prefab",
+    "LocalId": "-8452382852626058855",
+    "QuantumPath": "AddressableResources/QuantumAssets/Projectiles/HammerHit|EntityView",
+    "ActualSdkTargetScript": "{fileID: 206745634, guid: b156eeaae3f741b40af66649a4748430, type: 3}",
+    "OriginalReference": "{fileID: 11500000, guid: 4d5baec4de8d2754a864a680181831e8, type: 3}"
+  },
+  {
+    "Path": "Assets/AddressableResources/QuantumAssets/Projectiles/HammerHit.prefab",
+    "LocalId": "1323075388786064289",
+    "QuantumPath": "AddressableResources/QuantumAssets/Projectiles/HammerHit|EntityPrototype",
+    "ActualSdkTargetScript": "{fileID: 11500000, guid: 97c37404f174494591b8ec9d24e5bc8e, type: 3}",
+    "OriginalReference": "{fileID: 11500000, guid: 0120b722c3ca5454da1240b65656905f, type: 3}"
+  },
+  {
+    "Path": "Assets/AddressableResources/MatchAssets/MapObjects/Bush Small.prefab",
+    "LocalId": "-8226625531942892954",
+    "QuantumPath": "AddressableResources/MatchAssets/MapObjects/Bush Small|EntityView",
+    "ActualSdkTargetScript": "{fileID: 206745634, guid: b156eeaae3f741b40af66649a4748430, type: 3}",
+    "OriginalReference": "{fileID: 11500000, guid: 4d5baec4de8d2754a864a680181831e8, type: 3}"
+  },
+  {
+    "Path": "Assets/AddressableResources/MatchAssets/MapObjects/Bush Small.prefab",
+    "LocalId": "4751215988775159202",
+    "QuantumPath": "AddressableResources/MatchAssets/MapObjects/Bush Small|EntityPrototype",
+    "ActualSdkTargetScript": "{fileID: 11500000, guid: 97c37404f174494591b8ec9d24e5bc8e, type: 3}",
+    "OriginalReference": "{fileID: 11500000, guid: 0120b722c3ca5454da1240b65656905f, type: 3}"
+  },
+  {
+    "Path": "Assets/AddressableResources/QuantumAssets/Others/DeathFlagPrototype.prefab",
+    "LocalId": "-3107729907178575119",
+    "QuantumPath": "AddressableResources/QuantumAssets/Others/DeathFlagPrototype|EntityPrototype",
+    "ActualSdkTargetScript": "{fileID: 11500000, guid: 97c37404f174494591b8ec9d24e5bc8e, type: 3}",
+    "OriginalReference": "{fileID: 11500000, guid: 0120b722c3ca5454da1240b65656905f, type: 3}"
+  },
+  {
+    "Path": "Assets/AddressableResources/QuantumAssets/Others/DeathFlagPrototype.prefab",
+    "LocalId": "-904598757417271593",
+    "QuantumPath": "AddressableResources/QuantumAssets/Others/DeathFlagPrototype|EntityView",
+    "ActualSdkTargetScript": "{fileID: 206745634, guid: b156eeaae3f741b40af66649a4748430, type: 3}",
+    "OriginalReference": "{fileID: 11500000, guid: 4d5baec4de8d2754a864a680181831e8, type: 3}"
+  },
+  {
+    "Path": "Assets/AddressableResources/QuantumAssets/Spawners/PlatformSpawner.prefab",
+    "LocalId": "-881262544539562628",
+    "QuantumPath": "AddressableResources/QuantumAssets/Spawners/PlatformSpawner|EntityPrototype",
+    "ActualSdkTargetScript": "{fileID: 11500000, guid: 97c37404f174494591b8ec9d24e5bc8e, type: 3}",
+    "OriginalReference": "{fileID: 11500000, guid: 0120b722c3ca5454da1240b65656905f, type: 3}"
+  },
+  {
+    "Path": "Assets/AddressableResources/QuantumAssets/Spawners/PlatformSpawner.prefab",
+    "LocalId": "7845361808403847208",
+    "QuantumPath": "AddressableResources/QuantumAssets/Spawners/PlatformSpawner|EntityView",
+    "ActualSdkTargetScript": "{fileID: 206745634, guid: b156eeaae3f741b40af66649a4748430, type: 3}",
+    "OriginalReference": "{fileID: 11500000, guid: 4d5baec4de8d2754a864a680181831e8, type: 3}"
+  },
+  {
+    "Path": "Assets/AddressableResources/QuantumAssets/Collectables/ConsumablePickup.prefab",
+    "LocalId": "-881262544539562628",
+    "QuantumPath": "AddressableResources/QuantumAssets/Collectables/ConsumablePickup|EntityPrototype",
+    "ActualSdkTargetScript": "{fileID: 11500000, guid: 97c37404f174494591b8ec9d24e5bc8e, type: 3}",
+    "OriginalReference": "{fileID: 11500000, guid: 0120b722c3ca5454da1240b65656905f, type: 3}"
+  },
+  {
+    "Path": "Assets/AddressableResources/QuantumAssets/Collectables/ConsumablePickup.prefab",
+    "LocalId": "7845361808403847208",
+    "QuantumPath": "AddressableResources/QuantumAssets/Collectables/ConsumablePickup|EntityView",
+    "ActualSdkTargetScript": "{fileID: 206745634, guid: b156eeaae3f741b40af66649a4748430, type: 3}",
+    "OriginalReference": "{fileID: 11500000, guid: 4d5baec4de8d2754a864a680181831e8, type: 3}"
+  },
+  {
+    "Path": "Assets/AddressableResources/QuantumAssets/Gates/GateBarrierEntity.prefab",
+    "LocalId": "-1120451371767905211",
+    "QuantumPath": "AddressableResources/QuantumAssets/Gates/GateBarrierEntity|EntityView",
+    "ActualSdkTargetScript": "{fileID: 206745634, guid: b156eeaae3f741b40af66649a4748430, type: 3}",
+    "OriginalReference": "{fileID: 11500000, guid: 4d5baec4de8d2754a864a680181831e8, type: 3}"
+  },
+  {
+    "Path": "Assets/AddressableResources/QuantumAssets/Gates/GateBarrierEntity.prefab",
+    "LocalId": "-1837711530320632775",
+    "QuantumPath": "AddressableResources/QuantumAssets/Gates/GateBarrierEntity|EntityPrototype",
+    "ActualSdkTargetScript": "{fileID: 11500000, guid: 97c37404f174494591b8ec9d24e5bc8e, type: 3}",
+    "OriginalReference": "{fileID: 11500000, guid: 0120b722c3ca5454da1240b65656905f, type: 3}"
+  },
+  {
+    "Path": "Assets/AddressableResources/MatchAssets/MapObjects/Bush.prefab",
+    "LocalId": "-8226625531942892954",
+    "QuantumPath": "AddressableResources/MatchAssets/MapObjects/Bush|EntityView",
+    "ActualSdkTargetScript": "{fileID: 206745634, guid: b156eeaae3f741b40af66649a4748430, type: 3}",
+    "OriginalReference": "{fileID: 11500000, guid: 4d5baec4de8d2754a864a680181831e8, type: 3}"
+  },
+  {
+    "Path": "Assets/AddressableResources/MatchAssets/MapObjects/Bush.prefab",
+    "LocalId": "4751215988775159202",
+    "QuantumPath": "AddressableResources/MatchAssets/MapObjects/Bush|EntityPrototype",
+    "ActualSdkTargetScript": "{fileID: 11500000, guid: 97c37404f174494591b8ec9d24e5bc8e, type: 3}",
+    "OriginalReference": "{fileID: 11500000, guid: 0120b722c3ca5454da1240b65656905f, type: 3}"
+  },
+  {
+    "Path": "Assets/AddressableResources/QuantumAssets/Projectiles/MainSmallBullet.prefab",
+    "LocalId": "-8452382852626058855",
+    "QuantumPath": "AddressableResources/QuantumAssets/Projectiles/MainSmallBullet|EntityView",
+    "ActualSdkTargetScript": "{fileID: 206745634, guid: b156eeaae3f741b40af66649a4748430, type: 3}",
+    "OriginalReference": "{fileID: 11500000, guid: 4d5baec4de8d2754a864a680181831e8, type: 3}"
+  },
+  {
+    "Path": "Assets/AddressableResources/QuantumAssets/Projectiles/MainSmallBullet.prefab",
+    "LocalId": "1323075388786064289",
+    "QuantumPath": "AddressableResources/QuantumAssets/Projectiles/MainSmallBullet|EntityPrototype",
+    "ActualSdkTargetScript": "{fileID: 11500000, guid: 97c37404f174494591b8ec9d24e5bc8e, type: 3}",
+    "OriginalReference": "{fileID: 11500000, guid: 0120b722c3ca5454da1240b65656905f, type: 3}"
+  },
+  {
+    "Path": "Assets/AddressableResources/QuantumAssets/Collectables/ChestPickup.prefab",
+    "LocalId": "-881262544539562628",
+    "QuantumPath": "AddressableResources/QuantumAssets/Collectables/ChestPickup|EntityPrototype",
+    "ActualSdkTargetScript": "{fileID: 11500000, guid: 97c37404f174494591b8ec9d24e5bc8e, type: 3}",
+    "OriginalReference": "{fileID: 11500000, guid: 0120b722c3ca5454da1240b65656905f, type: 3}"
+  },
+  {
+    "Path": "Assets/AddressableResources/QuantumAssets/Collectables/ChestPickup.prefab",
+    "LocalId": "7845361808403847208",
+    "QuantumPath": "AddressableResources/QuantumAssets/Collectables/ChestPickup|EntityView",
+    "ActualSdkTargetScript": "{fileID: 206745634, guid: b156eeaae3f741b40af66649a4748430, type: 3}",
+    "OriginalReference": "{fileID: 11500000, guid: 4d5baec4de8d2754a864a680181831e8, type: 3}"
+  },
+  {
+    "Path": "Assets/AddressableResources/MatchAssets/MapObjects/VisVolume.prefab",
+    "LocalId": "-8226625531942892954",
+    "QuantumPath": "AddressableResources/MatchAssets/MapObjects/VisVolume|EntityView",
+    "ActualSdkTargetScript": "{fileID: 206745634, guid: b156eeaae3f741b40af66649a4748430, type: 3}",
+    "OriginalReference": "{fileID: 11500000, guid: 4d5baec4de8d2754a864a680181831e8, type: 3}"
+  },
+  {
+    "Path": "Assets/AddressableResources/MatchAssets/MapObjects/VisVolume.prefab",
+    "LocalId": "4751215988775159202",
+    "QuantumPath": "AddressableResources/MatchAssets/MapObjects/VisVolume|EntityPrototype",
+    "ActualSdkTargetScript": "{fileID: 11500000, guid: 97c37404f174494591b8ec9d24e5bc8e, type: 3}",
+    "OriginalReference": "{fileID: 11500000, guid: 0120b722c3ca5454da1240b65656905f, type: 3}"
+  }
+]
