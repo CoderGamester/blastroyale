@@ -1,0 +1,18 @@
+{
+  "entered_play_mode": true,
+  "selected_actual_tutorial_ui": true,
+  "native_authenticated": true,
+  "actual_runner_present": true,
+  "passed": true,
+  "error_logs": 0,
+  "first_verified_frame": 19,
+  "last_verified_frame": 288,
+  "player_entities": 5,
+  "bot_entities": 4,
+  "states": [
+    "Initial",
+    "Authentication",
+    "Core"
+  ],
+  "scope": "Historical tutorial checkpoint: real native runner and269 advancingverifiedframes,5players4bots; GameContainer.HasGameStarted was not yet measured"
+}
