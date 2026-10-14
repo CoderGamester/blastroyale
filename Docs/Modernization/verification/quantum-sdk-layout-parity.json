@@ -1,0 +1,100 @@
+{
+  "Before": ".local/quantum-sdk-layout-audit/before/Quantum.Unity.dll",
+  "After": ".local/quantum-sdk-layout-audit/after/Quantum.Unity.dll",
+  "AssemblyTypeCount": 524,
+  "AssemblyMethodCount": 2416,
+  "AssemblyApiEqual": true,
+  "AssemblyMethodILEqual": true,
+  "RelocatedTypeCount": 11,
+  "Rows": [
+    {
+      "Type": "Quantum.QPrototypeNavMeshPathfinder",
+      "Fields": 2,
+      "Methods": 4,
+      "AllDeclaredFieldOrderTypesAndAttributesEqual": true,
+      "ApiSha256": "7ab7fabd9d8064599d8bb056bd17f2fb5bcd8a0aa2df0e82cbb8866b173d0aac",
+      "AllMethodILPreserved": true
+    },
+    {
+      "Type": "Quantum.QPrototypePhysicsCollider2D",
+      "Fields": 3,
+      "Methods": 6,
+      "AllDeclaredFieldOrderTypesAndAttributesEqual": true,
+      "ApiSha256": "96c9731cfd644d5c934ec6c86bc4913cd9c2e7a00a23aac9aa9a3707289762d4",
+      "AllMethodILPreserved": true
+    },
+    {
+      "Type": "Quantum.QPrototypePhysicsCollider3D",
+      "Fields": 3,
+      "Methods": 7,
+      "AllDeclaredFieldOrderTypesAndAttributesEqual": true,
+      "ApiSha256": "0e3c382e22f5de17fc02e8c1b99a2f5a3a0cf182ef20f47fbd6fc687a5f5ea88",
+      "AllMethodILPreserved": true
+    },
+    {
+      "Type": "Quantum.QPrototypePhysicsJoints2D",
+      "Fields": 1,
+      "Methods": 6,
+      "AllDeclaredFieldOrderTypesAndAttributesEqual": true,
+      "ApiSha256": "10633ffe168d01dad122da308d35e40e43809f5668d4deb055e53e24d7e1f5f2",
+      "AllMethodILPreserved": true
+    },
+    {
+      "Type": "Quantum.QPrototypePhysicsJoints3D",
+      "Fields": 1,
+      "Methods": 5,
+      "AllDeclaredFieldOrderTypesAndAttributesEqual": true,
+      "ApiSha256": "611b7783d93af519835b9dd2d82d3105baf2929de642aab2a1d7af2ab55aa30f",
+      "AllMethodILPreserved": true
+    },
+    {
+      "Type": "Quantum.QPrototypeTransform2D",
+      "Fields": 3,
+      "Methods": 4,
+      "AllDeclaredFieldOrderTypesAndAttributesEqual": true,
+      "ApiSha256": "3de4e580fb77e1137031aecfc4412a613515a62ef765eb54e90040c46a48ed20",
+      "AllMethodILPreserved": true
+    },
+    {
+      "Type": "Quantum.QPrototypeTransform2DVertical",
+      "Fields": 3,
+      "Methods": 4,
+      "AllDeclaredFieldOrderTypesAndAttributesEqual": true,
+      "ApiSha256": "5c9e42ec0acf8a67d2611150c916187dd6ef46c9438af25b7df0d995f3e47b7d",
+      "AllMethodILPreserved": true
+    },
+    {
+      "Type": "Quantum.QPrototypeTransform3D",
+      "Fields": 3,
+      "Methods": 4,
+      "AllDeclaredFieldOrderTypesAndAttributesEqual": true,
+      "ApiSha256": "ff09ce030e79457e1ca502462cac118127a12b88ff7832f2140f9bb520526fcc",
+      "AllMethodILPreserved": true
+    },
+    {
+      "Type": "Quantum.QuantumUnityDB",
+      "Fields": 11,
+      "Methods": 80,
+      "AllDeclaredFieldOrderTypesAndAttributesEqual": true,
+      "ApiSha256": "cddbd624e3f5ff5c48c2cbec28d370791c91c9977a2eea1215585dbc11618197",
+      "AllMethodILPreserved": true
+    },
+    {
+      "Type": "Quantum.QuantumMonoBehaviour",
+      "Fields": 0,
+      "Methods": 1,
+      "AllDeclaredFieldOrderTypesAndAttributesEqual": true,
+      "ApiSha256": "247e88a9c90ef63f613fa06a42c073d44b3c65d51b706322057e18a120d3e12c",
+      "AllMethodILPreserved": true
+    },
+    {
+      "Type": "Quantum.QuantumScriptableObject",
+      "Fields": 0,
+      "Methods": 1,
+      "AllDeclaredFieldOrderTypesAndAttributesEqual": true,
+      "ApiSha256": "79253bd7347bf502399ee8e82eae708bb137192cc6a8305a7a83d482888efe42",
+      "AllMethodILPreserved": true
+    }
+  ],
+  "Differences": []
+}

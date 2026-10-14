@@ -1,0 +1,26 @@
+[
+  {
+    "Mode": "editor",
+    "Layout": "before",
+    "ExitCode": 0,
+    "Diagnostics": 0
+  },
+  {
+    "Mode": "editor",
+    "Layout": "after",
+    "ExitCode": 0,
+    "Diagnostics": 0
+  },
+  {
+    "Mode": "player",
+    "Layout": "before",
+    "ExitCode": 0,
+    "Diagnostics": 0
+  },
+  {
+    "Mode": "player",
+    "Layout": "after",
+    "ExitCode": 0,
+    "Diagnostics": 0
+  }
+]

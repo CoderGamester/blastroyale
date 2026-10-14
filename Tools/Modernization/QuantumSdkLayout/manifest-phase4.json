@@ -1,0 +1,22 @@
+{
+  "Version": 1,
+  "Sdk": "Photon Quantum 3.0.14 Stable 2241 after reviewed phase 3 layout",
+  "MergedPath": "Assets/Photon/Quantum/Runtime/QuantumUnityRuntime.cs",
+  "MergedBeforeSha256": "1fb4201b16268c697fb5ff7e01f3aafa9c3226ea00dd26ecc36d94c759e59ee7",
+  "MergedAfterSha256": "075f95624b64ca7aa455ebbc92f5f2290c9838c8378d4af660759649b33338c5",
+  "MergedMetaSha256": "e4ba4868f3e0c2ba23b7c56035ba3fcf27af73f30d109fd0395963a229fa72bc",
+  "BackupDirectory": ".modernization-sdk-layout-phase4-backup",
+  "Targets": [
+    {
+      "Name": "QuantumGameGizmos",
+      "GenericArity": 0,
+      "MergedDeclarationCount": 7,
+      "RelativePath": "Assets/Photon/Quantum/Runtime/QuantumGameGizmos.cs",
+      "SourceBeforeSha256": null,
+      "SourceAfterSha256": "c6d7f87a0b4d507b10a9ae30b8170c935e74b5273184d9593d50a66e5e6251bc",
+      "MetaSha256": null,
+      "NewMetaSha256": "9baf3126816801df2af2d387ad4769472a4c5ba6e3ca866fcba95eacae84e021",
+      "Guid": "9ee20606a5cc4aeb940de64c6d3c6a85"
+    }
+  ]
+}

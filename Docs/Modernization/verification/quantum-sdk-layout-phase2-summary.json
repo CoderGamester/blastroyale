@@ -1,0 +1,29 @@
+{
+  "Status": "Isolated SDK source relocation accepted; native warning count pending root import",
+  "SourceManifest": "Tools/Modernization/QuantumSdkLayout/manifest-phase2.json",
+  "Types": [
+    "Quantum.QuantumMenuSceneInfo",
+    "Quantum.QuantumGlobalScriptableObject`1"
+  ],
+  "MovedDeclarations": 3,
+  "ExistingCanonicalMetadata": "QuantumMenuSceneInfo.cs.meta preserved byte-identical",
+  "Editor": {
+    "CompileErrors": 0,
+    "CompileWarnings": 0,
+    "AssemblyTypes": 524,
+    "AssemblyMethods": 2416,
+    "ApiAndGenericConstraintsEqual": true,
+    "MethodILEqual": true
+  },
+  "Player": {
+    "CompileErrors": 0,
+    "CompileWarnings": 0,
+    "AssemblyTypes": 502,
+    "AssemblyMethods": 2231,
+    "ApiAndGenericConstraintsEqual": true,
+    "MethodILEqual": true
+  },
+  "DeclaredFieldOrderEqual": true,
+  "MainWritesByThisAgent": false,
+  "NativeWarnings": "Not yet remeasured after phase 2"
+}

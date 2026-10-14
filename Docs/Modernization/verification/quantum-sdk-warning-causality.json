@@ -1,0 +1,65 @@
+{
+  "Sdk": "Photon Quantum 3.0.14 Stable 2241",
+  "Unity": "6000.3.26f1",
+  "Cause": "Installed Unity MonoScript source generator keys namespace and identifier without generic arity. Duplicate generic/non-generic declarations are marked partial even though neither declaration uses partial. Three Object-derived pairs have no canonical source filename.",
+  "ActualObjectDerivedTypes": 170,
+  "AssemblyResolutionFailures": 0,
+  "RemainingMergedObjectTypeDeclarationsAtPhase4": 10,
+  "AllTenWereNonpartial": true,
+  "RequiredNewCanonicalNongenericTypes": [
+    "QuantumUnityComponentPrototype",
+    "QuantumEntityViewComponent",
+    "QuantumSceneViewComponent"
+  ],
+  "NativeCausalWarningCountsPerImport": {
+    "Phase4Baseline": 6,
+    "OnlyQuantumUnityComponentPrototypeMoved": 4,
+    "Phase2PlusPhase5": 0
+  },
+  "NativeLogs": [
+    {
+      "Path": "artifacts/sdk-objects-phase4-native-baseline.log",
+      "SHA256": "d20e8e0a32839b66d4d6d7167158f38e84d20979b63464af204a4776cd990771",
+      "MergedWarningOccurrences": 12,
+      "CSharpDiagnostics": 0,
+      "CompletedSuccessfully": true
+    },
+    {
+      "Path": "artifacts/sdk-component-pair-native-causality-probe.log",
+      "SHA256": "c3530281cc69ff25d0e12fc6898b2b6cd4247227362ee3db8284e872bdf7bb4a",
+      "MergedWarningOccurrences": 8,
+      "CSharpDiagnostics": 0,
+      "CompletedSuccessfully": true
+    },
+    {
+      "Path": "artifacts/sdk-phase5-native-causality-probe.log",
+      "SHA256": "d0effd4ccc6dafb041b024e343c419f215d6f944d374fe3119592517d8b5a699",
+      "MergedWarningOccurrences": 0,
+      "CSharpDiagnostics": 0,
+      "CompletedSuccessfully": true
+    }
+  ],
+  "InstalledSourceGeneratorSHA256": "17e535e1e543ea2007f3016376b67965a813dafc081abedb7b5f9110aca66cca",
+  "NegativeProbes": [
+    "QuantumUnityStaticDispatcherAdapterWorker canonicalization: no reduction",
+    "QuantumCallback relocation: no reduction",
+    "QuantumRunner two-declaration consolidation: no reduction",
+    "Phase3 six plain-object declarations: no reduction",
+    "Phase4 seven QuantumGameGizmos declarations: no reduction"
+  ],
+  "FreshRestoreManifestOrder": [
+    "manifest.json",
+    "manifest-phase2.json",
+    "manifest-phase5.json"
+  ],
+  "MainRecoveryManifestOrder": [
+    "manifest-phase4.json --rollback",
+    "manifest-phase3.json --rollback",
+    "manifest-phase5.json --apply"
+  ],
+  "MainBeforeMergedSHA256": "075f95624b64ca7aa455ebbc92f5f2290c9838c8378d4af660759649b33338c5",
+  "RecoveredPhase2MergedSHA256": "5bd95eedfb4224cb4dd26dc7aa824782cf794d2c02cc3917ef4c3a2e4b2b8ea0",
+  "FinalMergedSHA256": "0e5852a8c1d90daa4e9efda6bdfe680ae1c1ed67c5165f72657f98194c08b176",
+  "MainModifiedByThisAudit": false,
+  "NativeLimit": "The owned older full-client clone retains two unrelated BotSDK AIAction partial warnings that Main previously resolved. This evidence establishes the six merged SDK warning cause and reduction; complete Main startup acceptance belongs to root."
+}

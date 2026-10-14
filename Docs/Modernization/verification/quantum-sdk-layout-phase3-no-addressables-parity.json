@@ -1,0 +1,172 @@
+{
+  "Before": ".local/quantum-sdk-layout-audit/phase3-no-addressables-before/Quantum.Unity.dll",
+  "After": ".local/quantum-sdk-layout-audit/phase3-no-addressables-after/Quantum.Unity.dll",
+  "AssemblyTypeCount": 514,
+  "AssemblyMethodCount": 2374,
+  "AssemblyApiEqual": true,
+  "AssemblyMethodILEqual": true,
+  "RelocatedTypeCount": 5,
+  "Rows": [
+    {
+      "Type": "Quantum.QuantumGameGizmosSettings",
+      "Fields": 37,
+      "Methods": 5,
+      "AllDeclaredFieldOrderTypesAndAttributesEqual": true,
+      "ApiSha256": "48fe15a46c7a7103b16f360fe25d574b35abfa7304391ddf41be86648d4e3893",
+      "AllMethodILPreserved": true
+    },
+    {
+      "Type": "Quantum.QuantumAssetSourceResource\u00601",
+      "Fields": 4,
+      "Methods": 11,
+      "AllDeclaredFieldOrderTypesAndAttributesEqual": true,
+      "ApiSha256": "9ba9abb6253859afc0dbb3713a14813b708710edb2d094849b6e07e40870a7e8",
+      "AllMethodILPreserved": true
+    },
+    {
+      "Type": "Quantum.QuantumAssetSourceResource\u00601/\u003C\u003Ec",
+      "Fields": 2,
+      "Methods": 3,
+      "AllDeclaredFieldOrderTypesAndAttributesEqual": true,
+      "ApiSha256": "a703291044ec16d30ea913ae06973aff7df2cc3d27dbaeadd433f4a0d10c41a7",
+      "AllMethodILPreserved": true
+    },
+    {
+      "Type": "Quantum.QuantumAssetSourceStatic\u00601",
+      "Fields": 1,
+      "Methods": 9,
+      "AllDeclaredFieldOrderTypesAndAttributesEqual": true,
+      "ApiSha256": "a9d88192b1fe4182c3c321ebabf98e73bbccc412c6274adaac4b669e2cae9308",
+      "AllMethodILPreserved": true
+    },
+    {
+      "Type": "Quantum.QuantumAssetSourceStaticLazy\u00601",
+      "Fields": 1,
+      "Methods": 9,
+      "AllDeclaredFieldOrderTypesAndAttributesEqual": true,
+      "ApiSha256": "881f092e3f89226a7993972b6d8e25d9d5a544eae512a2ebfafaafffd193fb2e",
+      "AllMethodILPreserved": true
+    },
+    {
+      "Type": "Quantum.QuantumNavMesh",
+      "Fields": 1,
+      "Methods": 6,
+      "AllDeclaredFieldOrderTypesAndAttributesEqual": true,
+      "ApiSha256": "6c381568ab5cdc6f62867f5f461ccd5b1fa64e029fea80eb7160ecf3b604f875",
+      "AllMethodILPreserved": true
+    },
+    {
+      "Type": "Quantum.QuantumNavMesh/Vertex",
+      "Fields": 2,
+      "Methods": 1,
+      "AllDeclaredFieldOrderTypesAndAttributesEqual": true,
+      "ApiSha256": "081926c635cb93c3accd5761624ed8fb4199c20525973a7bef53b9f7e30b0ba7",
+      "AllMethodILPreserved": true
+    },
+    {
+      "Type": "Quantum.QuantumNavMesh/ImportSettings",
+      "Fields": 15,
+      "Methods": 2,
+      "AllDeclaredFieldOrderTypesAndAttributesEqual": true,
+      "ApiSha256": "55a307abb82fc03213d9015dffb21805a25bfd68713b244fabff9ff7730fea3b",
+      "AllMethodILPreserved": true
+    },
+    {
+      "Type": "Quantum.QuantumNavMesh/ImportUtils",
+      "Fields": 0,
+      "Methods": 8,
+      "AllDeclaredFieldOrderTypesAndAttributesEqual": true,
+      "ApiSha256": "beb1e9b95a28abd3387b5958d1066ea81d445f6351dd15e57b677d7539461847",
+      "AllMethodILPreserved": true
+    },
+    {
+      "Type": "Quantum.QuantumNavMesh/ImportUtils/\u003C\u003Ec",
+      "Fields": 2,
+      "Methods": 3,
+      "AllDeclaredFieldOrderTypesAndAttributesEqual": true,
+      "ApiSha256": "8f415d54f03c4f2a7857b0429526a1757093e6ffb9ecc3e6e127811040963480",
+      "AllMethodILPreserved": true
+    },
+    {
+      "Type": "Quantum.QuantumNavMesh/NavMeshLinkTemp",
+      "Fields": 9,
+      "Methods": 1,
+      "AllDeclaredFieldOrderTypesAndAttributesEqual": true,
+      "ApiSha256": "37e5f0d579404279b53faca8337a19d8b350b160d1fed76139ed7cdea8d031ce",
+      "AllMethodILPreserved": true
+    },
+    {
+      "Type": "Quantum.QuantumNavMesh/TriangleGrid",
+      "Fields": 5,
+      "Methods": 11,
+      "AllDeclaredFieldOrderTypesAndAttributesEqual": true,
+      "ApiSha256": "a4516827453cc89ed76b4b390cf08d44c256508a1f6326765fbb638e3e321c92",
+      "AllMethodILPreserved": true
+    },
+    {
+      "Type": "Quantum.QuantumNavMesh/Vector2Double",
+      "Fields": 2,
+      "Methods": 3,
+      "AllDeclaredFieldOrderTypesAndAttributesEqual": true,
+      "ApiSha256": "bf3d7bb2422c70b869b2ff3ea46616177070ed3132ac2e253293848285f44809",
+      "AllMethodILPreserved": true
+    },
+    {
+      "Type": "Quantum.QuantumNavMesh/Vector3Double",
+      "Fields": 3,
+      "Methods": 24,
+      "AllDeclaredFieldOrderTypesAndAttributesEqual": true,
+      "ApiSha256": "b754ddf350cf7c3d83b7d3cf3d53f79ee221161336275d8ca00dea1a926d2f62",
+      "AllMethodILPreserved": true
+    },
+    {
+      "Type": "Quantum.QuantumNavMesh/DelaunayTriangulation",
+      "Fields": 0,
+      "Methods": 7,
+      "AllDeclaredFieldOrderTypesAndAttributesEqual": true,
+      "ApiSha256": "af3f55e622ee0ffeef0a2dd597f19383dbf683ef910909ab99da6c949f6a7df4",
+      "AllMethodILPreserved": true
+    },
+    {
+      "Type": "Quantum.QuantumNavMesh/DelaunayTriangulation/HalfEdge",
+      "Fields": 5,
+      "Methods": 1,
+      "AllDeclaredFieldOrderTypesAndAttributesEqual": true,
+      "ApiSha256": "3728764b9172725cee1c4a865b8d13a153ceaf7173b52f760ce5cd204f7d551f",
+      "AllMethodILPreserved": true
+    },
+    {
+      "Type": "Quantum.QuantumNavMesh/DelaunayTriangulation/HalfEdgeVertex",
+      "Fields": 3,
+      "Methods": 1,
+      "AllDeclaredFieldOrderTypesAndAttributesEqual": true,
+      "ApiSha256": "a9fd7b474d8f8990af68685a556a40bdde9de9fc81dd9ca4479ed134f89b7a68",
+      "AllMethodILPreserved": true
+    },
+    {
+      "Type": "Quantum.QuantumNavMesh/DelaunayTriangulation/Triangle",
+      "Fields": 5,
+      "Methods": 2,
+      "AllDeclaredFieldOrderTypesAndAttributesEqual": true,
+      "ApiSha256": "d3a10f62968afa359df46e99b47418b271d317087524c6f0b52d8b7aa6268f2d",
+      "AllMethodILPreserved": true
+    },
+    {
+      "Type": "Quantum.QuantumNavMesh/\u003C\u003Ec",
+      "Fields": 4,
+      "Methods": 5,
+      "AllDeclaredFieldOrderTypesAndAttributesEqual": true,
+      "ApiSha256": "38871d0f26db9a5fcb64633d0187f326f26593ca380d3158b5e0c101b5f97d63",
+      "AllMethodILPreserved": true
+    },
+    {
+      "Type": "Quantum.QuantumNavMesh/\u003C\u003Ec__DisplayClass5_0",
+      "Fields": 1,
+      "Methods": 7,
+      "AllDeclaredFieldOrderTypesAndAttributesEqual": true,
+      "ApiSha256": "c06a7f76b9f6f3a990d80fc48c2216810f4f5ac2d4f8296feb97f549d188b000",
+      "AllMethodILPreserved": true
+    }
+  ],
+  "Differences": []
+}

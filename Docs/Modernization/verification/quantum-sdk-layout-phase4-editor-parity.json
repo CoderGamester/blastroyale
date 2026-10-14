@@ -1,0 +1,44 @@
+{
+  "Before": ".local/quantum-sdk-layout-audit/phase4-editor-before/Quantum.Unity.dll",
+  "After": ".local/quantum-sdk-layout-audit/phase4-editor-after/Quantum.Unity.dll",
+  "AssemblyTypeCount": 524,
+  "AssemblyMethodCount": 2416,
+  "AssemblyApiEqual": true,
+  "AssemblyMethodILEqual": true,
+  "RelocatedTypeCount": 1,
+  "Rows": [
+    {
+      "Type": "Quantum.QuantumGameGizmos",
+      "Fields": 5,
+      "Methods": 71,
+      "AllDeclaredFieldOrderTypesAndAttributesEqual": true,
+      "ApiSha256": "9130ff671fb48ab616cd9e9e3b1ae4fe684fc464ceb284bef82c85c4b90567c6",
+      "AllMethodILPreserved": true
+    },
+    {
+      "Type": "Quantum.QuantumGameGizmos/\u003C\u003Ec",
+      "Fields": 2,
+      "Methods": 4,
+      "AllDeclaredFieldOrderTypesAndAttributesEqual": true,
+      "ApiSha256": "0e70d53ef85643674e4f0a87098162d0caa101c32bfe5e4f7fd39e1590fe8e62",
+      "AllMethodILPreserved": true
+    },
+    {
+      "Type": "Quantum.QuantumGameGizmos/\u003C\u003Ec__DisplayClass26_0",
+      "Fields": 1,
+      "Methods": 3,
+      "AllDeclaredFieldOrderTypesAndAttributesEqual": true,
+      "ApiSha256": "2bf2af8b19ecaada74f0822bc1865d049d2a82ca3cd1470f61c295e27a6ec493",
+      "AllMethodILPreserved": true
+    },
+    {
+      "Type": "Quantum.QuantumGameGizmos/\u003C\u003Ec__DisplayClass42_0",
+      "Fields": 1,
+      "Methods": 4,
+      "AllDeclaredFieldOrderTypesAndAttributesEqual": true,
+      "ApiSha256": "780cb82da30ddc48f10131235ee7055d001d7d7fb58cbfdc4876752c1279fcb1",
+      "AllMethodILPreserved": true
+    }
+  ],
+  "Differences": []
+}

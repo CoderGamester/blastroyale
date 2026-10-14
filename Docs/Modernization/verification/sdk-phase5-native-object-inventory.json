@@ -1,0 +1,1338 @@
+[
+  {
+    "type": "Quantum.PhotonServerSettings",
+    "abstractType": false,
+    "generic": false,
+    "paths": [
+      "Assets/Photon/Quantum/Runtime/PhotonServerSettings.cs"
+    ]
+  },
+  {
+    "type": "Quantum.QPrototypeCharacterController2D",
+    "abstractType": false,
+    "generic": false,
+    "paths": [
+      "Assets/Photon/Quantum/Runtime/QPrototypeCharacterController2D.cs"
+    ]
+  },
+  {
+    "type": "Quantum.QPrototypeCharacterController3D",
+    "abstractType": false,
+    "generic": false,
+    "paths": [
+      "Assets/Photon/Quantum/Runtime/QPrototypeCharacterController3D.cs"
+    ]
+  },
+  {
+    "type": "Quantum.QPrototypeNavMeshAvoidanceAgent",
+    "abstractType": false,
+    "generic": false,
+    "paths": [
+      "Assets/Photon/Quantum/Runtime/QPrototypeNavMeshAvoidanceAgent.cs"
+    ]
+  },
+  {
+    "type": "Quantum.QPrototypeNavMeshAvoidanceObstacle",
+    "abstractType": false,
+    "generic": false,
+    "paths": [
+      "Assets/Photon/Quantum/Runtime/QPrototypeNavMeshAvoidanceObstacle.cs"
+    ]
+  },
+  {
+    "type": "Quantum.QPrototypeNavMeshPathfinder",
+    "abstractType": false,
+    "generic": false,
+    "paths": [
+      "Assets/Photon/Quantum/Runtime/QPrototypeNavMeshPathfinder.cs"
+    ]
+  },
+  {
+    "type": "Quantum.QPrototypeNavMeshSteeringAgent",
+    "abstractType": false,
+    "generic": false,
+    "paths": [
+      "Assets/Photon/Quantum/Runtime/QPrototypeNavMeshSteeringAgent.cs"
+    ]
+  },
+  {
+    "type": "Quantum.QPrototypePhysicsBody2D",
+    "abstractType": false,
+    "generic": false,
+    "paths": [
+      "Assets/Photon/Quantum/Runtime/QPrototypePhysicsBody2D.cs"
+    ]
+  },
+  {
+    "type": "Quantum.QPrototypePhysicsBody3D",
+    "abstractType": false,
+    "generic": false,
+    "paths": [
+      "Assets/Photon/Quantum/Runtime/QPrototypePhysicsBody3D.cs"
+    ]
+  },
+  {
+    "type": "Quantum.QPrototypePhysicsCallbacks2D",
+    "abstractType": false,
+    "generic": false,
+    "paths": [
+      "Assets/Photon/Quantum/Runtime/QPrototypePhysicsCallbacks2D.cs"
+    ]
+  },
+  {
+    "type": "Quantum.QPrototypePhysicsCallbacks3D",
+    "abstractType": false,
+    "generic": false,
+    "paths": [
+      "Assets/Photon/Quantum/Runtime/QPrototypePhysicsCallbacks3D.cs"
+    ]
+  },
+  {
+    "type": "Quantum.QPrototypePhysicsCollider2D",
+    "abstractType": false,
+    "generic": false,
+    "paths": [
+      "Assets/Photon/Quantum/Runtime/QPrototypePhysicsCollider2D.cs"
+    ]
+  },
+  {
+    "type": "Quantum.QPrototypePhysicsCollider3D",
+    "abstractType": false,
+    "generic": false,
+    "paths": [
+      "Assets/Photon/Quantum/Runtime/QPrototypePhysicsCollider3D.cs"
+    ]
+  },
+  {
+    "type": "Quantum.QPrototypePhysicsJoints2D",
+    "abstractType": false,
+    "generic": false,
+    "paths": [
+      "Assets/Photon/Quantum/Runtime/QPrototypePhysicsJoints2D.cs"
+    ]
+  },
+  {
+    "type": "Quantum.QPrototypePhysicsJoints3D",
+    "abstractType": false,
+    "generic": false,
+    "paths": [
+      "Assets/Photon/Quantum/Runtime/QPrototypePhysicsJoints3D.cs"
+    ]
+  },
+  {
+    "type": "Quantum.QPrototypeTransform2D",
+    "abstractType": false,
+    "generic": false,
+    "paths": [
+      "Assets/Photon/Quantum/Runtime/QPrototypeTransform2D.cs"
+    ]
+  },
+  {
+    "type": "Quantum.QPrototypeTransform2DVertical",
+    "abstractType": false,
+    "generic": false,
+    "paths": [
+      "Assets/Photon/Quantum/Runtime/QPrototypeTransform2DVertical.cs"
+    ]
+  },
+  {
+    "type": "Quantum.QPrototypeTransform3D",
+    "abstractType": false,
+    "generic": false,
+    "paths": [
+      "Assets/Photon/Quantum/Runtime/QPrototypeTransform3D.cs"
+    ]
+  },
+  {
+    "type": "Quantum.QPrototypeView",
+    "abstractType": false,
+    "generic": false,
+    "paths": [
+      "Assets/Photon/Quantum/Runtime/QPrototypeView.cs"
+    ]
+  },
+  {
+    "type": "Quantum.QuantumAddRuntimePlayers",
+    "abstractType": false,
+    "generic": false,
+    "paths": [
+      "Assets/Photon/Quantum/Runtime/QuantumAddRuntimePlayers.cs"
+    ]
+  },
+  {
+    "type": "Quantum.QuantumDebugInput",
+    "abstractType": false,
+    "generic": false,
+    "paths": [
+      "Assets/Photon/Quantum/Runtime/QuantumDebugInput.cs"
+    ]
+  },
+  {
+    "type": "Quantum.QuantumDefaultConfigs",
+    "abstractType": false,
+    "generic": false,
+    "paths": [
+      "Assets/Photon/Quantum/Runtime/QuantumDefaultConfigs.cs"
+    ]
+  },
+  {
+    "type": "Quantum.QuantumDeterministicSessionConfigAsset",
+    "abstractType": false,
+    "generic": false,
+    "paths": [
+      "Assets/Photon/Quantum/Runtime/QuantumDeterministicSessionConfigAsset.cs"
+    ]
+  },
+  {
+    "type": "Quantum.QuantumEntityPrototype",
+    "abstractType": false,
+    "generic": false,
+    "paths": [
+      "Assets/Photon/Quantum/Runtime/QuantumEntityPrototype.cs"
+    ]
+  },
+  {
+    "type": "Quantum.QuantumEntityView",
+    "abstractType": false,
+    "generic": false,
+    "paths": [
+      "Assets/Photon/Quantum/Runtime/QuantumEntityView.cs"
+    ]
+  },
+  {
+    "type": "Quantum.QuantumEntityViewComponent",
+    "abstractType": true,
+    "generic": false,
+    "paths": [
+      "Assets/Photon/Quantum/Runtime/QuantumEntityViewComponent.cs"
+    ]
+  },
+  {
+    "type": "Quantum.QuantumEntityViewPool",
+    "abstractType": false,
+    "generic": false,
+    "paths": [
+      "Assets/Photon/Quantum/Runtime/QuantumEntityViewPool.cs"
+    ]
+  },
+  {
+    "type": "Quantum.QuantumEntityViewUpdater",
+    "abstractType": false,
+    "generic": false,
+    "paths": [
+      "Assets/Photon/Quantum/Runtime/QuantumEntityViewUpdater.cs"
+    ]
+  },
+  {
+    "type": "Quantum.QuantumFrameDiffer",
+    "abstractType": false,
+    "generic": false,
+    "paths": [
+      "Assets/Photon/Quantum/Runtime/QuantumFrameDiffer.cs"
+    ]
+  },
+  {
+    "type": "Quantum.QuantumGameGizmosSettingsScriptableObject",
+    "abstractType": false,
+    "generic": false,
+    "paths": [
+      "Assets/Photon/Quantum/Runtime/QuantumGameGizmosSettingsScriptableObject.cs"
+    ]
+  },
+  {
+    "type": "Quantum.QuantumGlobalScriptableObject`1",
+    "abstractType": true,
+    "generic": true,
+    "paths": []
+  },
+  {
+    "type": "Quantum.QuantumInstantReplayDemo",
+    "abstractType": false,
+    "generic": false,
+    "paths": [
+      "Assets/Photon/Quantum/Runtime/QuantumInstantReplayDemo.cs"
+    ]
+  },
+  {
+    "type": "Quantum.QuantumLookupTables",
+    "abstractType": false,
+    "generic": false,
+    "paths": [
+      "Assets/Photon/Quantum/Runtime/QuantumLookupTables.cs"
+    ]
+  },
+  {
+    "type": "Quantum.QuantumMachineId",
+    "abstractType": false,
+    "generic": false,
+    "paths": [
+      "Assets/Photon/Quantum/Runtime/QuantumMachineId.cs"
+    ]
+  },
+  {
+    "type": "Quantum.QuantumMapData",
+    "abstractType": false,
+    "generic": false,
+    "paths": [
+      "Assets/Photon/Quantum/Runtime/QuantumMapData.cs"
+    ]
+  },
+  {
+    "type": "Quantum.QuantumMapLoader",
+    "abstractType": false,
+    "generic": false,
+    "paths": [
+      "Assets/Photon/Quantum/Runtime/QuantumMapLoader.cs"
+    ]
+  },
+  {
+    "type": "Quantum.QuantumMapNavMeshUnity",
+    "abstractType": false,
+    "generic": false,
+    "paths": [
+      "Assets/Photon/Quantum/Runtime/QuantumMapNavMeshUnity.cs"
+    ]
+  },
+  {
+    "type": "Quantum.QuantumMemoryStats",
+    "abstractType": false,
+    "generic": false,
+    "paths": [
+      "Assets/Photon/Quantum/Runtime/QuantumMemoryStats.cs"
+    ]
+  },
+  {
+    "type": "Quantum.QuantumMenuSceneInfo",
+    "abstractType": false,
+    "generic": false,
+    "paths": [
+      "Assets/Photon/Quantum/Runtime/QuantumMenuSceneInfo.cs"
+    ]
+  },
+  {
+    "type": "Quantum.QuantumMeshCollection",
+    "abstractType": false,
+    "generic": false,
+    "paths": [
+      "Assets/Photon/Quantum/Runtime/QuantumMeshCollection.cs"
+    ]
+  },
+  {
+    "type": "Quantum.QuantumMonoBehaviour",
+    "abstractType": true,
+    "generic": false,
+    "paths": [
+      "Assets/Photon/Quantum/Runtime/QuantumMonoBehaviour.cs"
+    ]
+  },
+  {
+    "type": "Quantum.QuantumMultiClientPlayer",
+    "abstractType": false,
+    "generic": false,
+    "paths": [
+      "Assets/Photon/Quantum/Runtime/QuantumMultiClientPlayer.cs"
+    ]
+  },
+  {
+    "type": "Quantum.QuantumMultiClientPlayerView",
+    "abstractType": false,
+    "generic": false,
+    "paths": [
+      "Assets/Photon/Quantum/Runtime/QuantumMultiClientPlayerView.cs"
+    ]
+  },
+  {
+    "type": "Quantum.QuantumMultiClientRunner",
+    "abstractType": false,
+    "generic": false,
+    "paths": [
+      "Assets/Photon/Quantum/Runtime/QuantumMultiClientRunner.cs"
+    ]
+  },
+  {
+    "type": "Quantum.QuantumNavMeshDebugDrawer",
+    "abstractType": false,
+    "generic": false,
+    "paths": [
+      "Assets/Photon/Quantum/Runtime/QuantumNavMeshDebugDrawer.cs"
+    ]
+  },
+  {
+    "type": "Quantum.QuantumNavMeshRegion",
+    "abstractType": false,
+    "generic": false,
+    "paths": [
+      "Assets/Photon/Quantum/Runtime/QuantumNavMeshRegion.cs"
+    ]
+  },
+  {
+    "type": "Quantum.QuantumRunnerBehaviour",
+    "abstractType": false,
+    "generic": false,
+    "paths": [
+      "Assets/Photon/Quantum/Runtime/QuantumRunnerBehaviour.cs"
+    ]
+  },
+  {
+    "type": "Quantum.QuantumRunnerLocalDebug",
+    "abstractType": false,
+    "generic": false,
+    "paths": [
+      "Assets/Photon/Quantum/Runtime/QuantumRunnerLocalDebug.cs"
+    ]
+  },
+  {
+    "type": "Quantum.QuantumRunnerLocalReplay",
+    "abstractType": false,
+    "generic": false,
+    "paths": [
+      "Assets/Photon/Quantum/Runtime/QuantumRunnerLocalReplay.cs"
+    ]
+  },
+  {
+    "type": "Quantum.QuantumRunnerLocalSavegame",
+    "abstractType": false,
+    "generic": false,
+    "paths": [
+      "Assets/Photon/Quantum/Runtime/QuantumRunnerLocalSavegame.cs"
+    ]
+  },
+  {
+    "type": "Quantum.QuantumSceneViewComponent",
+    "abstractType": true,
+    "generic": false,
+    "paths": [
+      "Assets/Photon/Quantum/Runtime/QuantumSceneViewComponent.cs"
+    ]
+  },
+  {
+    "type": "Quantum.QuantumScriptableObject",
+    "abstractType": true,
+    "generic": false,
+    "paths": [
+      "Assets/Photon/Quantum/Runtime/QuantumScriptableObject.cs"
+    ]
+  },
+  {
+    "type": "Quantum.QuantumStaticBoxCollider2D",
+    "abstractType": false,
+    "generic": false,
+    "paths": [
+      "Assets/Photon/Quantum/Runtime/QuantumStaticBoxCollider2D.cs"
+    ]
+  },
+  {
+    "type": "Quantum.QuantumStaticBoxCollider3D",
+    "abstractType": false,
+    "generic": false,
+    "paths": [
+      "Assets/Photon/Quantum/Runtime/QuantumStaticBoxCollider3D.cs"
+    ]
+  },
+  {
+    "type": "Quantum.QuantumStaticCapsuleCollider2D",
+    "abstractType": false,
+    "generic": false,
+    "paths": [
+      "Assets/Photon/Quantum/Runtime/QuantumStaticCapsuleCollider2D.cs"
+    ]
+  },
+  {
+    "type": "Quantum.QuantumStaticCapsuleCollider3D",
+    "abstractType": false,
+    "generic": false,
+    "paths": [
+      "Assets/Photon/Quantum/Runtime/QuantumStaticCapsuleCollider3D.cs"
+    ]
+  },
+  {
+    "type": "Quantum.QuantumStaticCircleCollider2D",
+    "abstractType": false,
+    "generic": false,
+    "paths": [
+      "Assets/Photon/Quantum/Runtime/QuantumStaticCircleCollider2D.cs"
+    ]
+  },
+  {
+    "type": "Quantum.QuantumStaticEdgeCollider2D",
+    "abstractType": false,
+    "generic": false,
+    "paths": [
+      "Assets/Photon/Quantum/Runtime/QuantumStaticEdgeCollider2D.cs"
+    ]
+  },
+  {
+    "type": "Quantum.QuantumStaticMeshCollider3D",
+    "abstractType": false,
+    "generic": false,
+    "paths": [
+      "Assets/Photon/Quantum/Runtime/QuantumStaticMeshCollider3D.cs"
+    ]
+  },
+  {
+    "type": "Quantum.QuantumStaticPolygonCollider2D",
+    "abstractType": false,
+    "generic": false,
+    "paths": [
+      "Assets/Photon/Quantum/Runtime/QuantumStaticPolygonCollider2D.cs"
+    ]
+  },
+  {
+    "type": "Quantum.QuantumStaticSphereCollider3D",
+    "abstractType": false,
+    "generic": false,
+    "paths": [
+      "Assets/Photon/Quantum/Runtime/QuantumStaticSphereCollider3D.cs"
+    ]
+  },
+  {
+    "type": "Quantum.QuantumStaticTerrainCollider3D",
+    "abstractType": false,
+    "generic": false,
+    "paths": [
+      "Assets/Photon/Quantum/Runtime/QuantumStaticTerrainCollider3D.cs"
+    ]
+  },
+  {
+    "type": "Quantum.QuantumStats",
+    "abstractType": false,
+    "generic": false,
+    "paths": [
+      "Assets/Photon/Quantum/Runtime/QuantumStats.cs"
+    ]
+  },
+  {
+    "type": "Quantum.QuantumTaskRunnerJobs",
+    "abstractType": false,
+    "generic": false,
+    "paths": [
+      "Assets/Photon/Quantum/Runtime/QuantumTaskRunnerJobs.cs"
+    ]
+  },
+  {
+    "type": "Quantum.QuantumUnityComponentPrototype",
+    "abstractType": true,
+    "generic": false,
+    "paths": [
+      "Assets/Photon/Quantum/Runtime/QuantumUnityComponentPrototype.cs"
+    ]
+  },
+  {
+    "type": "Quantum.QuantumUnityDB",
+    "abstractType": false,
+    "generic": false,
+    "paths": [
+      "Assets/Photon/Quantum/Runtime/QuantumUnityDB.cs"
+    ]
+  },
+  {
+    "type": "Quantum.QuantumUnityInputSystemWithLegacyFallback",
+    "abstractType": false,
+    "generic": false,
+    "paths": [
+      "Assets/Photon/Quantum/Runtime/QuantumUnityInputSystemWithLegacyFallback.cs"
+    ]
+  },
+  {
+    "type": "Quantum.QuantumUnityComponentPrototype`1",
+    "abstractType": true,
+    "generic": true,
+    "paths": []
+  },
+  {
+    "type": "Quantum.QuantumUnityStaticDispatcherAdapterWorker",
+    "abstractType": false,
+    "generic": false,
+    "paths": []
+  },
+  {
+    "type": "Quantum.QuantumEntityViewComponent`1",
+    "abstractType": true,
+    "generic": true,
+    "paths": []
+  },
+  {
+    "type": "Quantum.QuantumSceneViewComponent`1",
+    "abstractType": true,
+    "generic": true,
+    "paths": []
+  },
+  {
+    "type": "Quantum.QuantumViewComponent`1",
+    "abstractType": true,
+    "generic": true,
+    "paths": []
+  },
+  {
+    "type": "Quantum.QuantumCallbacks",
+    "abstractType": true,
+    "generic": false,
+    "paths": []
+  },
+  {
+    "type": "Quantum.QuantumGlobalScriptableObject",
+    "abstractType": true,
+    "generic": false,
+    "paths": [
+      "Assets/Photon/Quantum/Runtime/QuantumGlobalScriptableObject.cs"
+    ]
+  },
+  {
+    "type": "Quantum.QuantumStartUIConnectionBase",
+    "abstractType": true,
+    "generic": false,
+    "paths": [
+      "Assets/Photon/Quantum/Runtime/StartUI/QuantumStartUI.Common.cs"
+    ]
+  },
+  {
+    "type": "Quantum.QuantumStartUI",
+    "abstractType": false,
+    "generic": false,
+    "paths": [
+      "Assets/Photon/Quantum/Runtime/StartUI/QuantumStartUI.cs"
+    ]
+  },
+  {
+    "type": "Quantum.QuantumStartUIConnection",
+    "abstractType": false,
+    "generic": false,
+    "paths": [
+      "Assets/Photon/Quantum/Runtime/StartUI/QuantumStartUIConnection.cs"
+    ]
+  },
+  {
+    "type": "Quantum.QuantumStartUIRegionDropdown",
+    "abstractType": false,
+    "generic": false,
+    "paths": [
+      "Assets/Photon/Quantum/Runtime/StartUI/QuantumStartUIRegionDropdown.cs"
+    ]
+  },
+  {
+    "type": "Quantum.QPrototypeAIBlackboardComponent",
+    "abstractType": false,
+    "generic": false,
+    "paths": [
+      "Assets/Photon/QuantumAddons/QuantumBotSDK/Runtime/QPrototypeAIBlackboardComponent.cs"
+    ]
+  },
+  {
+    "type": "Quantum.QPrototypeBTAgent",
+    "abstractType": false,
+    "generic": false,
+    "paths": [
+      "Assets/Photon/QuantumAddons/QuantumBotSDK/Runtime/QPrototypeBTAgent.cs"
+    ]
+  },
+  {
+    "type": "Quantum.QPrototypeBotSDKGlobals",
+    "abstractType": false,
+    "generic": false,
+    "paths": [
+      "Assets/Photon/QuantumAddons/QuantumBotSDK/Runtime/QPrototypeBotSDKGlobals.cs"
+    ]
+  },
+  {
+    "type": "Quantum.QPrototypeHFSMAgent",
+    "abstractType": false,
+    "generic": false,
+    "paths": [
+      "Assets/Photon/QuantumAddons/QuantumBotSDK/Runtime/QPrototypeHFSMAgent.cs"
+    ]
+  },
+  {
+    "type": "Quantum.QPrototypeUTAgent",
+    "abstractType": false,
+    "generic": false,
+    "paths": [
+      "Assets/Photon/QuantumAddons/QuantumBotSDK/Runtime/QPrototypeUTAgent.cs"
+    ]
+  },
+  {
+    "type": "Quantum.EntityComponentNavMeshPathfinderLegacy",
+    "abstractType": false,
+    "generic": false,
+    "paths": [
+      "Assets/Photon/QuantumMigration/Runtime/EntityComponentNavMeshPathfinderLegacy.cs"
+    ]
+  },
+  {
+    "type": "Quantum.EntityComponentPhysicsBody2DLegacy",
+    "abstractType": false,
+    "generic": false,
+    "paths": [
+      "Assets/Photon/QuantumMigration/Runtime/EntityComponentPhysicsBody2DLegacy.cs"
+    ]
+  },
+  {
+    "type": "Quantum.EntityComponentPhysicsBody3DLegacy",
+    "abstractType": false,
+    "generic": false,
+    "paths": [
+      "Assets/Photon/QuantumMigration/Runtime/EntityComponentPhysicsBody3DLegacy.cs"
+    ]
+  },
+  {
+    "type": "Quantum.EntityComponentPhysicsCallbacks2DLegacy",
+    "abstractType": false,
+    "generic": false,
+    "paths": [
+      "Assets/Photon/QuantumMigration/Runtime/EntityComponentPhysicsCallbacks2DLegacy.cs"
+    ]
+  },
+  {
+    "type": "Quantum.EntityComponentPhysicsCallbacks3DLegacy",
+    "abstractType": false,
+    "generic": false,
+    "paths": [
+      "Assets/Photon/QuantumMigration/Runtime/EntityComponentPhysicsCallbacks3DLegacy.cs"
+    ]
+  },
+  {
+    "type": "Quantum.EntityComponentPhysicsCollider2DLegacy",
+    "abstractType": false,
+    "generic": false,
+    "paths": [
+      "Assets/Photon/QuantumMigration/Runtime/EntityComponentPhysicsCollider2DLegacy.cs"
+    ]
+  },
+  {
+    "type": "Quantum.EntityComponentPhysicsCollider3DLegacy",
+    "abstractType": false,
+    "generic": false,
+    "paths": [
+      "Assets/Photon/QuantumMigration/Runtime/EntityComponentPhysicsCollider3DLegacy.cs"
+    ]
+  },
+  {
+    "type": "Quantum.EntityComponentPhysicsJoints2DLegacy",
+    "abstractType": false,
+    "generic": false,
+    "paths": [
+      "Assets/Photon/QuantumMigration/Runtime/EntityComponentPhysicsJoints2DLegacy.cs"
+    ]
+  },
+  {
+    "type": "Quantum.EntityComponentPhysicsJoints3DLegacy",
+    "abstractType": false,
+    "generic": false,
+    "paths": [
+      "Assets/Photon/QuantumMigration/Runtime/EntityComponentPhysicsJoints3DLegacy.cs"
+    ]
+  },
+  {
+    "type": "Quantum.EntityComponentTransform2DLegacy",
+    "abstractType": false,
+    "generic": false,
+    "paths": [
+      "Assets/Photon/QuantumMigration/Runtime/EntityComponentTransform2DLegacy.cs"
+    ]
+  },
+  {
+    "type": "Quantum.EntityComponentTransform2DVerticalLegacy",
+    "abstractType": false,
+    "generic": false,
+    "paths": [
+      "Assets/Photon/QuantumMigration/Runtime/EntityComponentTransform2DVerticalLegacy.cs"
+    ]
+  },
+  {
+    "type": "Quantum.EntityComponentTransform3DLegacy",
+    "abstractType": false,
+    "generic": false,
+    "paths": [
+      "Assets/Photon/QuantumMigration/Runtime/EntityComponentTransform3DLegacy.cs"
+    ]
+  },
+  {
+    "type": "Quantum.QPrototypeAfkPlayer",
+    "abstractType": false,
+    "generic": false,
+    "paths": [
+      "Assets/QuantumUser/View/Generated/QPrototypeAfkPlayer.cs"
+    ]
+  },
+  {
+    "type": "Quantum.QPrototypeAirDrop",
+    "abstractType": false,
+    "generic": false,
+    "paths": [
+      "Assets/QuantumUser/View/Generated/QPrototypeAirDrop.cs"
+    ]
+  },
+  {
+    "type": "Quantum.QPrototypeAirDropSpawner",
+    "abstractType": false,
+    "generic": false,
+    "paths": [
+      "Assets/QuantumUser/View/Generated/QPrototypeAirDropSpawner.cs"
+    ]
+  },
+  {
+    "type": "Quantum.QPrototypeAlivePlayerCharacter",
+    "abstractType": false,
+    "generic": false,
+    "paths": [
+      "Assets/QuantumUser/View/Generated/QPrototypeAlivePlayerCharacter.cs"
+    ]
+  },
+  {
+    "type": "Quantum.QPrototypeBotCharacter",
+    "abstractType": false,
+    "generic": false,
+    "paths": [
+      "Assets/QuantumUser/View/Generated/QPrototypeBotCharacter.cs"
+    ]
+  },
+  {
+    "type": "Quantum.QPrototypeBotLoadout",
+    "abstractType": false,
+    "generic": false,
+    "paths": [
+      "Assets/QuantumUser/View/Generated/QPrototypeBotLoadout.cs"
+    ]
+  },
+  {
+    "type": "Quantum.QPrototypeChest",
+    "abstractType": false,
+    "generic": false,
+    "paths": [
+      "Assets/QuantumUser/View/Generated/QPrototypeChest.cs"
+    ]
+  },
+  {
+    "type": "Quantum.QPrototypeChestContents",
+    "abstractType": false,
+    "generic": false,
+    "paths": [
+      "Assets/QuantumUser/View/Generated/QPrototypeChestContents.cs"
+    ]
+  },
+  {
+    "type": "Quantum.QPrototypeChunkDebug",
+    "abstractType": false,
+    "generic": false,
+    "paths": [
+      "Assets/QuantumUser/View/Generated/QPrototypeChunkDebug.cs"
+    ]
+  },
+  {
+    "type": "Quantum.QPrototypeCollectable",
+    "abstractType": false,
+    "generic": false,
+    "paths": [
+      "Assets/QuantumUser/View/Generated/QPrototypeCollectable.cs"
+    ]
+  },
+  {
+    "type": "Quantum.QPrototypeCollectableChunks",
+    "abstractType": false,
+    "generic": false,
+    "paths": [
+      "Assets/QuantumUser/View/Generated/QPrototypeCollectableChunks.cs"
+    ]
+  },
+  {
+    "type": "Quantum.QPrototypeCollectablePlatformSpawner",
+    "abstractType": false,
+    "generic": false,
+    "paths": [
+      "Assets/QuantumUser/View/Generated/QPrototypeCollectablePlatformSpawner.cs"
+    ]
+  },
+  {
+    "type": "Quantum.QPrototypeCollectableTime",
+    "abstractType": false,
+    "generic": false,
+    "paths": [
+      "Assets/QuantumUser/View/Generated/QPrototypeCollectableTime.cs"
+    ]
+  },
+  {
+    "type": "Quantum.QPrototypeConsumable",
+    "abstractType": false,
+    "generic": false,
+    "paths": [
+      "Assets/QuantumUser/View/Generated/QPrototypeConsumable.cs"
+    ]
+  },
+  {
+    "type": "Quantum.QPrototypeCosmeticsHolder",
+    "abstractType": false,
+    "generic": false,
+    "paths": [
+      "Assets/QuantumUser/View/Generated/QPrototypeCosmeticsHolder.cs"
+    ]
+  },
+  {
+    "type": "Quantum.QPrototypeDeadPlayerCharacter",
+    "abstractType": false,
+    "generic": false,
+    "paths": [
+      "Assets/QuantumUser/View/Generated/QPrototypeDeadPlayerCharacter.cs"
+    ]
+  },
+  {
+    "type": "Quantum.QPrototypeDeathFlag",
+    "abstractType": false,
+    "generic": false,
+    "paths": [
+      "Assets/QuantumUser/View/Generated/QPrototypeDeathFlag.cs"
+    ]
+  },
+  {
+    "type": "Quantum.QPrototypeDestructible",
+    "abstractType": false,
+    "generic": false,
+    "paths": [
+      "Assets/QuantumUser/View/Generated/QPrototypeDestructible.cs"
+    ]
+  },
+  {
+    "type": "Quantum.QPrototypeDummyCharacter",
+    "abstractType": false,
+    "generic": false,
+    "paths": [
+      "Assets/QuantumUser/View/Generated/QPrototypeDummyCharacter.cs"
+    ]
+  },
+  {
+    "type": "Quantum.QPrototypeEntityDestroyer",
+    "abstractType": false,
+    "generic": false,
+    "paths": [
+      "Assets/QuantumUser/View/Generated/QPrototypeEntityDestroyer.cs"
+    ]
+  },
+  {
+    "type": "Quantum.QPrototypeEntityGroup",
+    "abstractType": false,
+    "generic": false,
+    "paths": [
+      "Assets/QuantumUser/View/Generated/QPrototypeEntityGroup.cs"
+    ]
+  },
+  {
+    "type": "Quantum.QPrototypeEquipmentCollectable",
+    "abstractType": false,
+    "generic": false,
+    "paths": [
+      "Assets/QuantumUser/View/Generated/QPrototypeEquipmentCollectable.cs"
+    ]
+  },
+  {
+    "type": "Quantum.QPrototypeGameContainer",
+    "abstractType": false,
+    "generic": false,
+    "paths": [
+      "Assets/QuantumUser/View/Generated/QPrototypeGameContainer.cs"
+    ]
+  },
+  {
+    "type": "Quantum.QPrototypeGate",
+    "abstractType": false,
+    "generic": false,
+    "paths": [
+      "Assets/QuantumUser/View/Generated/QPrototypeGate.cs"
+    ]
+  },
+  {
+    "type": "Quantum.QPrototypeHazard",
+    "abstractType": false,
+    "generic": false,
+    "paths": [
+      "Assets/QuantumUser/View/Generated/QPrototypeHazard.cs"
+    ]
+  },
+  {
+    "type": "Quantum.QPrototypeImmunity",
+    "abstractType": false,
+    "generic": false,
+    "paths": [
+      "Assets/QuantumUser/View/Generated/QPrototypeImmunity.cs"
+    ]
+  },
+  {
+    "type": "Quantum.QPrototypeInsideVisibilityArea",
+    "abstractType": false,
+    "generic": false,
+    "paths": [
+      "Assets/QuantumUser/View/Generated/QPrototypeInsideVisibilityArea.cs"
+    ]
+  },
+  {
+    "type": "Quantum.QPrototypeInvisibility",
+    "abstractType": false,
+    "generic": false,
+    "paths": [
+      "Assets/QuantumUser/View/Generated/QPrototypeInvisibility.cs"
+    ]
+  },
+  {
+    "type": "Quantum.QPrototypeKnockedOut",
+    "abstractType": false,
+    "generic": false,
+    "paths": [
+      "Assets/QuantumUser/View/Generated/QPrototypeKnockedOut.cs"
+    ]
+  },
+  {
+    "type": "Quantum.QPrototypeKnockedOutCollider",
+    "abstractType": false,
+    "generic": false,
+    "paths": [
+      "Assets/QuantumUser/View/Generated/QPrototypeKnockedOutCollider.cs"
+    ]
+  },
+  {
+    "type": "Quantum.QPrototypeLandMine",
+    "abstractType": false,
+    "generic": false,
+    "paths": [
+      "Assets/QuantumUser/View/Generated/QPrototypeLandMine.cs"
+    ]
+  },
+  {
+    "type": "Quantum.QPrototypePlayerCharacter",
+    "abstractType": false,
+    "generic": false,
+    "paths": [
+      "Assets/QuantumUser/View/Generated/QPrototypePlayerCharacter.cs"
+    ]
+  },
+  {
+    "type": "Quantum.QPrototypePlayerCharging",
+    "abstractType": false,
+    "generic": false,
+    "paths": [
+      "Assets/QuantumUser/View/Generated/QPrototypePlayerCharging.cs"
+    ]
+  },
+  {
+    "type": "Quantum.QPrototypePlayerInventory",
+    "abstractType": false,
+    "generic": false,
+    "paths": [
+      "Assets/QuantumUser/View/Generated/QPrototypePlayerInventory.cs"
+    ]
+  },
+  {
+    "type": "Quantum.QPrototypePlayerSpawner",
+    "abstractType": false,
+    "generic": false,
+    "paths": [
+      "Assets/QuantumUser/View/Generated/QPrototypePlayerSpawner.cs"
+    ]
+  },
+  {
+    "type": "Quantum.QPrototypeProjectile",
+    "abstractType": false,
+    "generic": false,
+    "paths": [
+      "Assets/QuantumUser/View/Generated/QPrototypeProjectile.cs"
+    ]
+  },
+  {
+    "type": "Quantum.QPrototypeRage",
+    "abstractType": false,
+    "generic": false,
+    "paths": [
+      "Assets/QuantumUser/View/Generated/QPrototypeRage.cs"
+    ]
+  },
+  {
+    "type": "Quantum.QPrototypeRaycastShots",
+    "abstractType": false,
+    "generic": false,
+    "paths": [
+      "Assets/QuantumUser/View/Generated/QPrototypeRaycastShots.cs"
+    ]
+  },
+  {
+    "type": "Quantum.QPrototypeRegeneration",
+    "abstractType": false,
+    "generic": false,
+    "paths": [
+      "Assets/QuantumUser/View/Generated/QPrototypeRegeneration.cs"
+    ]
+  },
+  {
+    "type": "Quantum.QPrototypeRevivable",
+    "abstractType": false,
+    "generic": false,
+    "paths": [
+      "Assets/QuantumUser/View/Generated/QPrototypeRevivable.cs"
+    ]
+  },
+  {
+    "type": "Quantum.QPrototypeShrinkingCircle",
+    "abstractType": false,
+    "generic": false,
+    "paths": [
+      "Assets/QuantumUser/View/Generated/QPrototypeShrinkingCircle.cs"
+    ]
+  },
+  {
+    "type": "Quantum.QPrototypeSpell",
+    "abstractType": false,
+    "generic": false,
+    "paths": [
+      "Assets/QuantumUser/View/Generated/QPrototypeSpell.cs"
+    ]
+  },
+  {
+    "type": "Quantum.QPrototypeStar",
+    "abstractType": false,
+    "generic": false,
+    "paths": [
+      "Assets/QuantumUser/View/Generated/QPrototypeStar.cs"
+    ]
+  },
+  {
+    "type": "Quantum.QPrototypeStats",
+    "abstractType": false,
+    "generic": false,
+    "paths": [
+      "Assets/QuantumUser/View/Generated/QPrototypeStats.cs"
+    ]
+  },
+  {
+    "type": "Quantum.QPrototypeStormAnchor",
+    "abstractType": false,
+    "generic": false,
+    "paths": [
+      "Assets/QuantumUser/View/Generated/QPrototypeStormAnchor.cs"
+    ]
+  },
+  {
+    "type": "Quantum.QPrototypeStun",
+    "abstractType": false,
+    "generic": false,
+    "paths": [
+      "Assets/QuantumUser/View/Generated/QPrototypeStun.cs"
+    ]
+  },
+  {
+    "type": "Quantum.QPrototypeTargetable",
+    "abstractType": false,
+    "generic": false,
+    "paths": [
+      "Assets/QuantumUser/View/Generated/QPrototypeTargetable.cs"
+    ]
+  },
+  {
+    "type": "Quantum.QPrototypeTeamMember",
+    "abstractType": false,
+    "generic": false,
+    "paths": [
+      "Assets/QuantumUser/View/Generated/QPrototypeTeamMember.cs"
+    ]
+  },
+  {
+    "type": "Quantum.QPrototypeTopDownController",
+    "abstractType": false,
+    "generic": false,
+    "paths": [
+      "Assets/QuantumUser/View/Generated/QPrototypeTopDownController.cs"
+    ]
+  },
+  {
+    "type": "Quantum.QPrototypeTrigger",
+    "abstractType": false,
+    "generic": false,
+    "paths": [
+      "Assets/QuantumUser/View/Generated/QPrototypeTrigger.cs"
+    ]
+  },
+  {
+    "type": "Quantum.QPrototypeTutorialRuntimeData",
+    "abstractType": false,
+    "generic": false,
+    "paths": [
+      "Assets/QuantumUser/View/Generated/QPrototypeTutorialRuntimeData.cs"
+    ]
+  },
+  {
+    "type": "Quantum.QPrototypeVisibilityArea",
+    "abstractType": false,
+    "generic": false,
+    "paths": [
+      "Assets/QuantumUser/View/Generated/QPrototypeVisibilityArea.cs"
+    ]
+  },
+  {
+    "type": "Quantum.Profiling.QuantumGraphProfiler`1",
+    "abstractType": true,
+    "generic": true,
+    "paths": []
+  },
+  {
+    "type": "Quantum.Profiling.QuantumGraphProfilerMarkerSeries",
+    "abstractType": true,
+    "generic": false,
+    "paths": []
+  },
+  {
+    "type": "Quantum.Profiling.QuantumGraphProfilerValueSeries",
+    "abstractType": true,
+    "generic": false,
+    "paths": []
+  },
+  {
+    "type": "Quantum.Profiling.QuantumGraphSeries",
+    "abstractType": true,
+    "generic": false,
+    "paths": []
+  },
+  {
+    "type": "Quantum.Profiling.QuantumGraphProfilerDeltaTime",
+    "abstractType": false,
+    "generic": false,
+    "paths": [
+      "Assets/Photon/Quantum/Runtime/QuantumGraphProfilerDeltaTime.cs"
+    ]
+  },
+  {
+    "type": "Quantum.Profiling.QuantumGraphProfilerFrameTime",
+    "abstractType": false,
+    "generic": false,
+    "paths": [
+      "Assets/Photon/Quantum/Runtime/QuantumGraphProfilerFrameTime.cs"
+    ]
+  },
+  {
+    "type": "Quantum.Profiling.QuantumGraphProfilerGC",
+    "abstractType": false,
+    "generic": false,
+    "paths": [
+      "Assets/Photon/Quantum/Runtime/QuantumGraphProfilerGC.cs"
+    ]
+  },
+  {
+    "type": "Quantum.Profiling.QuantumGraphProfilerMarkers",
+    "abstractType": false,
+    "generic": false,
+    "paths": [
+      "Assets/Photon/Quantum/Runtime/QuantumGraphProfilerMarkers.cs"
+    ]
+  },
+  {
+    "type": "Quantum.Profiling.QuantumGraphProfilerNetworkActivity",
+    "abstractType": false,
+    "generic": false,
+    "paths": [
+      "Assets/Photon/Quantum/Runtime/QuantumGraphProfilerNetworkActivity.cs"
+    ]
+  },
+  {
+    "type": "Quantum.Profiling.QuantumGraphProfilerPing",
+    "abstractType": false,
+    "generic": false,
+    "paths": [
+      "Assets/Photon/Quantum/Runtime/QuantumGraphProfilerPing.cs"
+    ]
+  },
+  {
+    "type": "Quantum.Profiling.QuantumGraphProfilerPredictedFrames",
+    "abstractType": false,
+    "generic": false,
+    "paths": [
+      "Assets/Photon/Quantum/Runtime/QuantumGraphProfilerPredictedFrames.cs"
+    ]
+  },
+  {
+    "type": "Quantum.Profiling.QuantumGraphProfilerRenderTime",
+    "abstractType": false,
+    "generic": false,
+    "paths": [
+      "Assets/Photon/Quantum/Runtime/QuantumGraphProfilerRenderTime.cs"
+    ]
+  },
+  {
+    "type": "Quantum.Profiling.QuantumGraphProfilerSimulationTime",
+    "abstractType": false,
+    "generic": false,
+    "paths": [
+      "Assets/Photon/Quantum/Runtime/QuantumGraphProfilerSimulationTime.cs"
+    ]
+  },
+  {
+    "type": "Quantum.Profiling.QuantumGraphProfilerUserScripts",
+    "abstractType": false,
+    "generic": false,
+    "paths": [
+      "Assets/Photon/Quantum/Runtime/QuantumGraphProfilerUserScripts.cs"
+    ]
+  },
+  {
+    "type": "Quantum.Profiling.QuantumGraphProfilerVerifiedFrames",
+    "abstractType": false,
+    "generic": false,
+    "paths": [
+      "Assets/Photon/Quantum/Runtime/QuantumGraphProfilerVerifiedFrames.cs"
+    ]
+  },
+  {
+    "type": "Quantum.Profiling.QuantumGraphProfilingStatistics",
+    "abstractType": false,
+    "generic": false,
+    "paths": [
+      "Assets/Photon/Quantum/Runtime/QuantumGraphProfilingStatistics.cs"
+    ]
+  },
+  {
+    "type": "Quantum.Profiling.QuantumGraphProfilingTools",
+    "abstractType": false,
+    "generic": false,
+    "paths": [
+      "Assets/Photon/Quantum/Runtime/QuantumGraphProfilingTools.cs"
+    ]
+  },
+  {
+    "type": "Quantum.Profiling.QuantumGraphSeriesMarker",
+    "abstractType": false,
+    "generic": false,
+    "paths": [
+      "Assets/Photon/Quantum/Runtime/QuantumGraphSeriesMarker.cs"
+    ]
+  },
+  {
+    "type": "Quantum.Profiling.QuantumGraphSeriesValue",
+    "abstractType": false,
+    "generic": false,
+    "paths": [
+      "Assets/Photon/Quantum/Runtime/QuantumGraphSeriesValue.cs"
+    ]
+  },
+  {
+    "type": "Quantum.Demo.QuantumSimpleConnectionGUI",
+    "abstractType": false,
+    "generic": false,
+    "paths": [
+      "Assets/Photon/Quantum/Runtime/QuantumSimpleConnectionGUI.cs"
+    ]
+  },
+  {
+    "type": "Quantum.Demo.Legacy.CustomCallbacks",
+    "abstractType": false,
+    "generic": false,
+    "paths": [
+      "Assets/Photon/Quantum/Runtime/CustomCallbacks.cs"
+    ]
+  },
+  {
+    "type": "Quantum.Demo.Legacy.RuntimeConfigContainer",
+    "abstractType": false,
+    "generic": false,
+    "paths": [
+      "Assets/Photon/Quantum/Runtime/RuntimeConfigContainer.cs"
+    ]
+  },
+  {
+    "type": "Quantum.QuantumUnityInputSystemWithLegacyFallback+FallbackEditor",
+    "abstractType": false,
+    "generic": false,
+    "paths": []
+  }
+]

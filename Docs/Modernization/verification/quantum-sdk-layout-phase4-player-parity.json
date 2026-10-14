@@ -1,0 +1,11 @@
+{
+  "Before": ".local/quantum-sdk-layout-audit/phase4-player-before/Quantum.Unity.dll",
+  "After": ".local/quantum-sdk-layout-audit/phase4-player-after/Quantum.Unity.dll",
+  "AssemblyTypeCount": 502,
+  "AssemblyMethodCount": 2231,
+  "AssemblyApiEqual": true,
+  "AssemblyMethodILEqual": true,
+  "RelocatedTypeCount": 1,
+  "Rows": [],
+  "Differences": []
+}

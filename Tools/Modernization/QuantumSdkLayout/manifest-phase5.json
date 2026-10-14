@@ -1,0 +1,47 @@
+{
+  "Version": 1,
+  "Sdk": "Photon Quantum 3.0.14 Stable 2241 after required phase 2 layout",
+  "MergedPath": "Assets/Photon/Quantum/Runtime/QuantumUnityRuntime.cs",
+  "MergedBeforeSha256": "5bd95eedfb4224cb4dd26dc7aa824782cf794d2c02cc3917ef4c3a2e4b2b8ea0",
+  "MergedAfterSha256": "0e5852a8c1d90daa4e9efda6bdfe680ae1c1ed67c5165f72657f98194c08b176",
+  "MergedMetaSha256": "e4ba4868f3e0c2ba23b7c56035ba3fcf27af73f30d109fd0395963a229fa72bc",
+  "BackupDirectory": ".modernization-sdk-layout-phase5-backup",
+  "Targets": [
+    {
+      "Name": "QuantumUnityComponentPrototype",
+      "ExpectedPartial": false,
+      "GenericArity": 0,
+      "MergedDeclarationCount": 1,
+      "RelativePath": "Assets/Photon/Quantum/Runtime/QuantumUnityComponentPrototype.cs",
+      "SourceBeforeSha256": null,
+      "SourceAfterSha256": "b8c05eff77f5cf8ace7490e751ecfbdfbd196c28f04ccbd8a5b1c3c3c80de470",
+      "MetaSha256": null,
+      "NewMetaSha256": "8cb3260434f279d36e90c9427d0e174ae066b4cea32002a07fb8e1664149b3bb",
+      "Guid": "1b09d223bb41421bbce805861b5d4219"
+    },
+    {
+      "Name": "QuantumEntityViewComponent",
+      "ExpectedPartial": false,
+      "GenericArity": 0,
+      "MergedDeclarationCount": 1,
+      "RelativePath": "Assets/Photon/Quantum/Runtime/QuantumEntityViewComponent.cs",
+      "SourceBeforeSha256": null,
+      "SourceAfterSha256": "df0414355901d9063de2f50513e3dc312086b89e533612fb4548ffb0c6433a67",
+      "MetaSha256": null,
+      "NewMetaSha256": "54feb997f976b50a2f69fcc1c54c53b774fc3783757b060f26869e6de053f8dd",
+      "Guid": "0a10ccc73bbb4d63a86eae6521a75bca"
+    },
+    {
+      "Name": "QuantumSceneViewComponent",
+      "ExpectedPartial": false,
+      "GenericArity": 0,
+      "MergedDeclarationCount": 1,
+      "RelativePath": "Assets/Photon/Quantum/Runtime/QuantumSceneViewComponent.cs",
+      "SourceBeforeSha256": null,
+      "SourceAfterSha256": "c574fc867a376e9e6f827da7c923486567987a13065a4d6bd8bc8a5072b9e87e",
+      "MetaSha256": null,
+      "NewMetaSha256": "9800b6beecee8628e5b4dc219b7ef83a29907a1a1c60f52071660732ab92bec2",
+      "Guid": "5400c597a0294ef487e14c963d4c466b"
+    }
+  ]
+}

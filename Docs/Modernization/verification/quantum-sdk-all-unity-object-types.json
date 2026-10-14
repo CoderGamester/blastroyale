@@ -1,0 +1,2992 @@
+{
+  "Assembly": "Quantum.Unity, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+  "Symbols": [
+    "UNITY_6000_3_26",
+    "UNITY_6000_3",
+    "UNITY_6000",
+    "UNITY_5_3_OR_NEWER",
+    "UNITY_5_4_OR_NEWER",
+    "UNITY_5_5_OR_NEWER",
+    "UNITY_5_6_OR_NEWER",
+    "UNITY_2017_1_OR_NEWER",
+    "UNITY_2017_2_OR_NEWER",
+    "UNITY_2017_3_OR_NEWER",
+    "UNITY_2017_4_OR_NEWER",
+    "UNITY_2018_1_OR_NEWER",
+    "UNITY_2018_2_OR_NEWER",
+    "UNITY_2018_3_OR_NEWER",
+    "UNITY_2018_4_OR_NEWER",
+    "UNITY_2019_1_OR_NEWER",
+    "UNITY_2019_2_OR_NEWER",
+    "UNITY_2019_3_OR_NEWER",
+    "UNITY_2019_4_OR_NEWER",
+    "UNITY_2020_1_OR_NEWER",
+    "UNITY_2020_2_OR_NEWER",
+    "UNITY_2020_3_OR_NEWER",
+    "UNITY_2021_1_OR_NEWER",
+    "UNITY_2021_2_OR_NEWER",
+    "UNITY_2021_3_OR_NEWER",
+    "UNITY_2022_1_OR_NEWER",
+    "UNITY_2022_2_OR_NEWER",
+    "UNITY_2022_3_OR_NEWER",
+    "UNITY_2023_1_OR_NEWER",
+    "UNITY_2023_2_OR_NEWER",
+    "UNITY_2023_3_OR_NEWER",
+    "UNITY_6000_0_OR_NEWER",
+    "UNITY_6000_1_OR_NEWER",
+    "UNITY_6000_2_OR_NEWER",
+    "UNITY_6000_3_OR_NEWER",
+    "PLATFORM_ARCH_64",
+    "UNITY_64",
+    "UNITY_INCLUDE_TESTS",
+    "ENABLE_AR",
+    "ENABLE_AUDIO",
+    "ENABLE_AUDIO_SCRIPTABLE_PIPELINE",
+    "ENABLE_CACHING",
+    "ENABLE_CLOTH",
+    "ENABLE_MICROPHONE",
+    "ENABLE_MULTIPLE_DISPLAYS",
+    "ENABLE_PHYSICS",
+    "ENABLE_TEXTURE_STREAMING",
+    "ENABLE_VIRTUALTEXTURING",
+    "ENABLE_LZMA",
+    "ENABLE_UNITYEVENTS",
+    "ENABLE_VR",
+    "ENABLE_WEBCAM",
+    "ENABLE_UNITYWEBREQUEST",
+    "ENABLE_WWW",
+    "ENABLE_CLOUD_SERVICES",
+    "ENABLE_CLOUD_SERVICES_ADS",
+    "ENABLE_CLOUD_SERVICES_USE_WEBREQUEST",
+    "ENABLE_UNITY_CONSENT",
+    "ENABLE_UNITY_CLOUD_IDENTIFIERS",
+    "ENABLE_CLOUD_SERVICES_CRASH_REPORTING",
+    "ENABLE_CLOUD_SERVICES_NATIVE_CRASH_REPORTING",
+    "ENABLE_CLOUD_SERVICES_PURCHASING",
+    "ENABLE_CLOUD_SERVICES_ANALYTICS",
+    "ENABLE_CLOUD_SERVICES_BUILD",
+    "ENABLE_EDITOR_GAME_SERVICES",
+    "ENABLE_UNITY_GAME_SERVICES_ANALYTICS_SUPPORT",
+    "ENABLE_CLOUD_LICENSE",
+    "ENABLE_EDITOR_HUB_LICENSE",
+    "ENABLE_WEBSOCKET_CLIENT",
+    "ENABLE_GENERATE_NATIVE_PLUGINS_FOR_ASSEMBLIES_API",
+    "ENABLE_DIRECTOR_AUDIO",
+    "ENABLE_DIRECTOR_TEXTURE",
+    "ENABLE_MANAGED_JOBS",
+    "ENABLE_MANAGED_TRANSFORM_JOBS",
+    "ENABLE_MANAGED_ANIMATION_JOBS",
+    "ENABLE_MANAGED_AUDIO_JOBS",
+    "ENABLE_MANAGED_UNITYTLS",
+    "INCLUDE_DYNAMIC_GI",
+    "ENABLE_SCRIPTING_GC_WBARRIERS",
+    "PLATFORM_SUPPORTS_MONO",
+    "RENDER_SOFTWARE_CURSOR",
+    "ENABLE_MARSHALLING_TESTS",
+    "ENABLE_VIDEO",
+    "ENABLE_NAVIGATION_OFFMESHLINK_TO_NAVMESHLINK",
+    "ENABLE_ACCELERATOR_CLIENT_DEBUGGING",
+    "ENABLE_ACCESSIBILITY_SCREEN_READER",
+    "TEXTCORE_1_0_OR_NEWER",
+    "EDITOR_ONLY_NAVMESH_BUILDER_DEPRECATED",
+    "PLATFORM_STANDALONE_OSX",
+    "PLATFORM_STANDALONE",
+    "UNITY_STANDALONE_OSX",
+    "UNITY_STANDALONE",
+    "ENABLE_GAMECENTER",
+    "ENABLE_RUNTIME_GI",
+    "ENABLE_MOVIES",
+    "ENABLE_NETWORK",
+    "ENABLE_CRUNCH_TEXTURE_COMPRESSION",
+    "ENABLE_CLOUD_SERVICES_ENGINE_DIAGNOSTICS",
+    "ENABLE_CLUSTER_SYNC",
+    "ENABLE_CLUSTERINPUT",
+    "ENABLE_SPATIALTRACKING",
+    "PLATFORM_HAS_CUSTOM_MUTEX",
+    "PLATFORM_UPDATES_TIME_OUTSIDE_OF_PLAYER_LOOP",
+    "PLATFORM_SUPPORTS_SPLIT_GRAPHICS_JOBS",
+    "ENABLE_MONO",
+    "NET_STANDARD_2_0",
+    "NET_STANDARD",
+    "NET_STANDARD_2_1",
+    "NETSTANDARD",
+    "NETSTANDARD2_1",
+    "ENABLE_PROFILER",
+    "ENABLE_PROFILER_ASSISTANT_INTEGRATION",
+    "DEBUG",
+    "TRACE",
+    "UNITY_ASSERTIONS",
+    "UNITY_EDITOR",
+    "UNITY_EDITOR_64",
+    "UNITY_EDITOR_OSX",
+    "ENABLE_UNITY_COLLECTIONS_CHECKS",
+    "ENABLE_BURST_AOT",
+    "UNITY_TEAM_LICENSE",
+    "UNITY_PRO_LICENSE",
+    "ENABLE_CUSTOM_RENDER_TEXTURE",
+    "ENABLE_DIRECTOR",
+    "ENABLE_LOCALIZATION",
+    "ENABLE_SPRITES",
+    "ENABLE_TERRAIN",
+    "ENABLE_TILEMAP",
+    "ENABLE_TIMELINE",
+    "ENABLE_INPUT_SYSTEM",
+    "TEXTCORE_FONT_ENGINE_1_5_OR_NEWER",
+    "TEXTCORE_TEXT_ENGINE_1_5_OR_NEWER",
+    "TEXTCORE_FONT_ENGINE_1_6_OR_NEWER",
+    "QUANTUM_ADDRESSABLES",
+    "TextMeshPro",
+    "MOREMOUNTAINS_NICEVIBRATIONS",
+    "MOREMOUNTAINS_NICEVIBRATIONS_RUMBLE",
+    "LOG_LEVEL_VERBOSE",
+    "DOTWEEN",
+    "QUANTUM_ODIN_DISABLED",
+    "PHOTON_REALTIME_5_OR_NEWER",
+    "WIRE_EXCLUDE_WEBSOCKETSHARP",
+    "QUANTUM_UNITY",
+    "QUANTUM_ENABLE_ADDRESSABLES",
+    "QUANTUM_ENABLE_PHYSICS3D",
+    "QUANTUM_ENABLE_PHYSICS2D",
+    "QUANTUM_ENABLE_AI",
+    "QUANTUM_ENABLE_TERRAIN",
+    "QUANTUM_ENABLE_NEWTONSOFT",
+    "QUANTUM_ENABLE_TEXTMESHPRO",
+    "QUANTUM_ENABLE_AI_NAVIGATION",
+    "QUANTUM_ENABLE_INPUTSYSTEM",
+    "CSHARP_7_OR_LATER",
+    "CSHARP_7_3_OR_NEWER"
+  ],
+  "UnityObjectDerived": [
+    {
+      "Type": "Quantum.PhotonServerSettings",
+      "BaseChain": [
+        "Quantum.PhotonServerSettings",
+        "Quantum.QuantumGlobalScriptableObject\u00601",
+        "Quantum.QuantumGlobalScriptableObject",
+        "Quantum.QuantumScriptableObject",
+        "UnityEngine.ScriptableObject",
+        "UnityEngine.Object"
+      ],
+      "IsAbstract": false,
+      "GenericArity": 0,
+      "MergedDeclarations": 0,
+      "Declarations": []
+    },
+    {
+      "Type": "Quantum.QPrototypeCharacterController2D",
+      "BaseChain": [
+        "Quantum.QPrototypeCharacterController2D",
+        "Quantum.QuantumUnityComponentPrototype\u00601",
+        "Quantum.QuantumUnityComponentPrototype",
+        "Quantum.QuantumMonoBehaviour",
+        "UnityEngine.MonoBehaviour",
+        "UnityEngine.Behaviour",
+        "UnityEngine.Component",
+        "UnityEngine.Object"
+      ],
+      "IsAbstract": false,
+      "GenericArity": 0,
+      "MergedDeclarations": 0,
+      "Declarations": []
+    },
+    {
+      "Type": "Quantum.QPrototypeCharacterController3D",
+      "BaseChain": [
+        "Quantum.QPrototypeCharacterController3D",
+        "Quantum.QuantumUnityComponentPrototype\u00601",
+        "Quantum.QuantumUnityComponentPrototype",
+        "Quantum.QuantumMonoBehaviour",
+        "UnityEngine.MonoBehaviour",
+        "UnityEngine.Behaviour",
+        "UnityEngine.Component",
+        "UnityEngine.Object"
+      ],
+      "IsAbstract": false,
+      "GenericArity": 0,
+      "MergedDeclarations": 0,
+      "Declarations": []
+    },
+    {
+      "Type": "Quantum.QPrototypeNavMeshAvoidanceAgent",
+      "BaseChain": [
+        "Quantum.QPrototypeNavMeshAvoidanceAgent",
+        "Quantum.QuantumUnityComponentPrototype\u00601",
+        "Quantum.QuantumUnityComponentPrototype",
+        "Quantum.QuantumMonoBehaviour",
+        "UnityEngine.MonoBehaviour",
+        "UnityEngine.Behaviour",
+        "UnityEngine.Component",
+        "UnityEngine.Object"
+      ],
+      "IsAbstract": false,
+      "GenericArity": 0,
+      "MergedDeclarations": 0,
+      "Declarations": []
+    },
+    {
+      "Type": "Quantum.QPrototypeNavMeshAvoidanceObstacle",
+      "BaseChain": [
+        "Quantum.QPrototypeNavMeshAvoidanceObstacle",
+        "Quantum.QuantumUnityComponentPrototype\u00601",
+        "Quantum.QuantumUnityComponentPrototype",
+        "Quantum.QuantumMonoBehaviour",
+        "UnityEngine.MonoBehaviour",
+        "UnityEngine.Behaviour",
+        "UnityEngine.Component",
+        "UnityEngine.Object"
+      ],
+      "IsAbstract": false,
+      "GenericArity": 0,
+      "MergedDeclarations": 0,
+      "Declarations": []
+    },
+    {
+      "Type": "Quantum.QPrototypeNavMeshPathfinder",
+      "BaseChain": [
+        "Quantum.QPrototypeNavMeshPathfinder",
+        "Quantum.QuantumUnityComponentPrototype\u00601",
+        "Quantum.QuantumUnityComponentPrototype",
+        "Quantum.QuantumMonoBehaviour",
+        "UnityEngine.MonoBehaviour",
+        "UnityEngine.Behaviour",
+        "UnityEngine.Component",
+        "UnityEngine.Object"
+      ],
+      "IsAbstract": false,
+      "GenericArity": 0,
+      "MergedDeclarations": 0,
+      "Declarations": []
+    },
+    {
+      "Type": "Quantum.QPrototypeNavMeshSteeringAgent",
+      "BaseChain": [
+        "Quantum.QPrototypeNavMeshSteeringAgent",
+        "Quantum.QuantumUnityComponentPrototype\u00601",
+        "Quantum.QuantumUnityComponentPrototype",
+        "Quantum.QuantumMonoBehaviour",
+        "UnityEngine.MonoBehaviour",
+        "UnityEngine.Behaviour",
+        "UnityEngine.Component",
+        "UnityEngine.Object"
+      ],
+      "IsAbstract": false,
+      "GenericArity": 0,
+      "MergedDeclarations": 0,
+      "Declarations": []
+    },
+    {
+      "Type": "Quantum.QPrototypePhysicsBody2D",
+      "BaseChain": [
+        "Quantum.QPrototypePhysicsBody2D",
+        "Quantum.QuantumUnityComponentPrototype\u00601",
+        "Quantum.QuantumUnityComponentPrototype",
+        "Quantum.QuantumMonoBehaviour",
+        "UnityEngine.MonoBehaviour",
+        "UnityEngine.Behaviour",
+        "UnityEngine.Component",
+        "UnityEngine.Object"
+      ],
+      "IsAbstract": false,
+      "GenericArity": 0,
+      "MergedDeclarations": 0,
+      "Declarations": []
+    },
+    {
+      "Type": "Quantum.QPrototypePhysicsBody3D",
+      "BaseChain": [
+        "Quantum.QPrototypePhysicsBody3D",
+        "Quantum.QuantumUnityComponentPrototype\u00601",
+        "Quantum.QuantumUnityComponentPrototype",
+        "Quantum.QuantumMonoBehaviour",
+        "UnityEngine.MonoBehaviour",
+        "UnityEngine.Behaviour",
+        "UnityEngine.Component",
+        "UnityEngine.Object"
+      ],
+      "IsAbstract": false,
+      "GenericArity": 0,
+      "MergedDeclarations": 0,
+      "Declarations": []
+    },
+    {
+      "Type": "Quantum.QPrototypePhysicsCallbacks2D",
+      "BaseChain": [
+        "Quantum.QPrototypePhysicsCallbacks2D",
+        "Quantum.QuantumUnityComponentPrototype\u00601",
+        "Quantum.QuantumUnityComponentPrototype",
+        "Quantum.QuantumMonoBehaviour",
+        "UnityEngine.MonoBehaviour",
+        "UnityEngine.Behaviour",
+        "UnityEngine.Component",
+        "UnityEngine.Object"
+      ],
+      "IsAbstract": false,
+      "GenericArity": 0,
+      "MergedDeclarations": 0,
+      "Declarations": []
+    },
+    {
+      "Type": "Quantum.QPrototypePhysicsCallbacks3D",
+      "BaseChain": [
+        "Quantum.QPrototypePhysicsCallbacks3D",
+        "Quantum.QuantumUnityComponentPrototype\u00601",
+        "Quantum.QuantumUnityComponentPrototype",
+        "Quantum.QuantumMonoBehaviour",
+        "UnityEngine.MonoBehaviour",
+        "UnityEngine.Behaviour",
+        "UnityEngine.Component",
+        "UnityEngine.Object"
+      ],
+      "IsAbstract": false,
+      "GenericArity": 0,
+      "MergedDeclarations": 0,
+      "Declarations": []
+    },
+    {
+      "Type": "Quantum.QPrototypePhysicsCollider2D",
+      "BaseChain": [
+        "Quantum.QPrototypePhysicsCollider2D",
+        "Quantum.QuantumUnityComponentPrototype\u00601",
+        "Quantum.QuantumUnityComponentPrototype",
+        "Quantum.QuantumMonoBehaviour",
+        "UnityEngine.MonoBehaviour",
+        "UnityEngine.Behaviour",
+        "UnityEngine.Component",
+        "UnityEngine.Object"
+      ],
+      "IsAbstract": false,
+      "GenericArity": 0,
+      "MergedDeclarations": 0,
+      "Declarations": []
+    },
+    {
+      "Type": "Quantum.QPrototypePhysicsCollider3D",
+      "BaseChain": [
+        "Quantum.QPrototypePhysicsCollider3D",
+        "Quantum.QuantumUnityComponentPrototype\u00601",
+        "Quantum.QuantumUnityComponentPrototype",
+        "Quantum.QuantumMonoBehaviour",
+        "UnityEngine.MonoBehaviour",
+        "UnityEngine.Behaviour",
+        "UnityEngine.Component",
+        "UnityEngine.Object"
+      ],
+      "IsAbstract": false,
+      "GenericArity": 0,
+      "MergedDeclarations": 0,
+      "Declarations": []
+    },
+    {
+      "Type": "Quantum.QPrototypePhysicsJoints2D",
+      "BaseChain": [
+        "Quantum.QPrototypePhysicsJoints2D",
+        "Quantum.QuantumUnityComponentPrototype\u00601",
+        "Quantum.QuantumUnityComponentPrototype",
+        "Quantum.QuantumMonoBehaviour",
+        "UnityEngine.MonoBehaviour",
+        "UnityEngine.Behaviour",
+        "UnityEngine.Component",
+        "UnityEngine.Object"
+      ],
+      "IsAbstract": false,
+      "GenericArity": 0,
+      "MergedDeclarations": 0,
+      "Declarations": []
+    },
+    {
+      "Type": "Quantum.QPrototypePhysicsJoints3D",
+      "BaseChain": [
+        "Quantum.QPrototypePhysicsJoints3D",
+        "Quantum.QuantumUnityComponentPrototype\u00601",
+        "Quantum.QuantumUnityComponentPrototype",
+        "Quantum.QuantumMonoBehaviour",
+        "UnityEngine.MonoBehaviour",
+        "UnityEngine.Behaviour",
+        "UnityEngine.Component",
+        "UnityEngine.Object"
+      ],
+      "IsAbstract": false,
+      "GenericArity": 0,
+      "MergedDeclarations": 0,
+      "Declarations": []
+    },
+    {
+      "Type": "Quantum.QPrototypeTransform2D",
+      "BaseChain": [
+        "Quantum.QPrototypeTransform2D",
+        "Quantum.QuantumUnityComponentPrototype\u00601",
+        "Quantum.QuantumUnityComponentPrototype",
+        "Quantum.QuantumMonoBehaviour",
+        "UnityEngine.MonoBehaviour",
+        "UnityEngine.Behaviour",
+        "UnityEngine.Component",
+        "UnityEngine.Object"
+      ],
+      "IsAbstract": false,
+      "GenericArity": 0,
+      "MergedDeclarations": 0,
+      "Declarations": []
+    },
+    {
+      "Type": "Quantum.QPrototypeTransform2DVertical",
+      "BaseChain": [
+        "Quantum.QPrototypeTransform2DVertical",
+        "Quantum.QuantumUnityComponentPrototype\u00601",
+        "Quantum.QuantumUnityComponentPrototype",
+        "Quantum.QuantumMonoBehaviour",
+        "UnityEngine.MonoBehaviour",
+        "UnityEngine.Behaviour",
+        "UnityEngine.Component",
+        "UnityEngine.Object"
+      ],
+      "IsAbstract": false,
+      "GenericArity": 0,
+      "MergedDeclarations": 0,
+      "Declarations": []
+    },
+    {
+      "Type": "Quantum.QPrototypeTransform3D",
+      "BaseChain": [
+        "Quantum.QPrototypeTransform3D",
+        "Quantum.QuantumUnityComponentPrototype\u00601",
+        "Quantum.QuantumUnityComponentPrototype",
+        "Quantum.QuantumMonoBehaviour",
+        "UnityEngine.MonoBehaviour",
+        "UnityEngine.Behaviour",
+        "UnityEngine.Component",
+        "UnityEngine.Object"
+      ],
+      "IsAbstract": false,
+      "GenericArity": 0,
+      "MergedDeclarations": 0,
+      "Declarations": []
+    },
+    {
+      "Type": "Quantum.QPrototypeView",
+      "BaseChain": [
+        "Quantum.QPrototypeView",
+        "Quantum.QuantumUnityComponentPrototype\u00601",
+        "Quantum.QuantumUnityComponentPrototype",
+        "Quantum.QuantumMonoBehaviour",
+        "UnityEngine.MonoBehaviour",
+        "UnityEngine.Behaviour",
+        "UnityEngine.Component",
+        "UnityEngine.Object"
+      ],
+      "IsAbstract": false,
+      "GenericArity": 0,
+      "MergedDeclarations": 0,
+      "Declarations": []
+    },
+    {
+      "Type": "Quantum.QuantumAddRuntimePlayers",
+      "BaseChain": [
+        "Quantum.QuantumAddRuntimePlayers",
+        "Quantum.QuantumMonoBehaviour",
+        "UnityEngine.MonoBehaviour",
+        "UnityEngine.Behaviour",
+        "UnityEngine.Component",
+        "UnityEngine.Object"
+      ],
+      "IsAbstract": false,
+      "GenericArity": 0,
+      "MergedDeclarations": 0,
+      "Declarations": []
+    },
+    {
+      "Type": "Quantum.QuantumDebugInput",
+      "BaseChain": [
+        "Quantum.QuantumDebugInput",
+        "UnityEngine.MonoBehaviour",
+        "UnityEngine.Behaviour",
+        "UnityEngine.Component",
+        "UnityEngine.Object"
+      ],
+      "IsAbstract": false,
+      "GenericArity": 0,
+      "MergedDeclarations": 0,
+      "Declarations": []
+    },
+    {
+      "Type": "Quantum.QuantumDefaultConfigs",
+      "BaseChain": [
+        "Quantum.QuantumDefaultConfigs",
+        "Quantum.QuantumGlobalScriptableObject\u00601",
+        "Quantum.QuantumGlobalScriptableObject",
+        "Quantum.QuantumScriptableObject",
+        "UnityEngine.ScriptableObject",
+        "UnityEngine.Object"
+      ],
+      "IsAbstract": false,
+      "GenericArity": 0,
+      "MergedDeclarations": 0,
+      "Declarations": []
+    },
+    {
+      "Type": "Quantum.QuantumDeterministicSessionConfigAsset",
+      "BaseChain": [
+        "Quantum.QuantumDeterministicSessionConfigAsset",
+        "Quantum.QuantumGlobalScriptableObject\u00601",
+        "Quantum.QuantumGlobalScriptableObject",
+        "Quantum.QuantumScriptableObject",
+        "UnityEngine.ScriptableObject",
+        "UnityEngine.Object"
+      ],
+      "IsAbstract": false,
+      "GenericArity": 0,
+      "MergedDeclarations": 0,
+      "Declarations": []
+    },
+    {
+      "Type": "Quantum.QuantumEntityPrototype",
+      "BaseChain": [
+        "Quantum.QuantumEntityPrototype",
+        "Quantum.QuantumMonoBehaviour",
+        "UnityEngine.MonoBehaviour",
+        "UnityEngine.Behaviour",
+        "UnityEngine.Component",
+        "UnityEngine.Object"
+      ],
+      "IsAbstract": false,
+      "GenericArity": 0,
+      "MergedDeclarations": 0,
+      "Declarations": []
+    },
+    {
+      "Type": "Quantum.QuantumEntityView",
+      "BaseChain": [
+        "Quantum.QuantumEntityView",
+        "Quantum.QuantumMonoBehaviour",
+        "UnityEngine.MonoBehaviour",
+        "UnityEngine.Behaviour",
+        "UnityEngine.Component",
+        "UnityEngine.Object"
+      ],
+      "IsAbstract": false,
+      "GenericArity": 0,
+      "MergedDeclarations": 0,
+      "Declarations": []
+    },
+    {
+      "Type": "Quantum.QuantumEntityViewPool",
+      "BaseChain": [
+        "Quantum.QuantumEntityViewPool",
+        "Quantum.QuantumMonoBehaviour",
+        "UnityEngine.MonoBehaviour",
+        "UnityEngine.Behaviour",
+        "UnityEngine.Component",
+        "UnityEngine.Object"
+      ],
+      "IsAbstract": false,
+      "GenericArity": 0,
+      "MergedDeclarations": 0,
+      "Declarations": []
+    },
+    {
+      "Type": "Quantum.QuantumEntityViewUpdater",
+      "BaseChain": [
+        "Quantum.QuantumEntityViewUpdater",
+        "Quantum.QuantumMonoBehaviour",
+        "UnityEngine.MonoBehaviour",
+        "UnityEngine.Behaviour",
+        "UnityEngine.Component",
+        "UnityEngine.Object"
+      ],
+      "IsAbstract": false,
+      "GenericArity": 0,
+      "MergedDeclarations": 0,
+      "Declarations": []
+    },
+    {
+      "Type": "Quantum.QuantumFrameDiffer",
+      "BaseChain": [
+        "Quantum.QuantumFrameDiffer",
+        "Quantum.QuantumMonoBehaviour",
+        "UnityEngine.MonoBehaviour",
+        "UnityEngine.Behaviour",
+        "UnityEngine.Component",
+        "UnityEngine.Object"
+      ],
+      "IsAbstract": false,
+      "GenericArity": 0,
+      "MergedDeclarations": 0,
+      "Declarations": []
+    },
+    {
+      "Type": "Quantum.QuantumGameGizmosSettingsScriptableObject",
+      "BaseChain": [
+        "Quantum.QuantumGameGizmosSettingsScriptableObject",
+        "Quantum.QuantumGlobalScriptableObject\u00601",
+        "Quantum.QuantumGlobalScriptableObject",
+        "Quantum.QuantumScriptableObject",
+        "UnityEngine.ScriptableObject",
+        "UnityEngine.Object"
+      ],
+      "IsAbstract": false,
+      "GenericArity": 0,
+      "MergedDeclarations": 0,
+      "Declarations": []
+    },
+    {
+      "Type": "Quantum.QuantumGlobalScriptableObject\u00601",
+      "BaseChain": [
+        "Quantum.QuantumGlobalScriptableObject\u00601",
+        "Quantum.QuantumGlobalScriptableObject",
+        "Quantum.QuantumScriptableObject",
+        "UnityEngine.ScriptableObject",
+        "UnityEngine.Object"
+      ],
+      "IsAbstract": true,
+      "GenericArity": 1,
+      "MergedDeclarations": 0,
+      "Declarations": []
+    },
+    {
+      "Type": "Quantum.QuantumInstantReplayDemo",
+      "BaseChain": [
+        "Quantum.QuantumInstantReplayDemo",
+        "Quantum.QuantumMonoBehaviour",
+        "UnityEngine.MonoBehaviour",
+        "UnityEngine.Behaviour",
+        "UnityEngine.Component",
+        "UnityEngine.Object"
+      ],
+      "IsAbstract": false,
+      "GenericArity": 0,
+      "MergedDeclarations": 0,
+      "Declarations": []
+    },
+    {
+      "Type": "Quantum.QuantumLookupTables",
+      "BaseChain": [
+        "Quantum.QuantumLookupTables",
+        "Quantum.QuantumGlobalScriptableObject\u00601",
+        "Quantum.QuantumGlobalScriptableObject",
+        "Quantum.QuantumScriptableObject",
+        "UnityEngine.ScriptableObject",
+        "UnityEngine.Object"
+      ],
+      "IsAbstract": false,
+      "GenericArity": 0,
+      "MergedDeclarations": 0,
+      "Declarations": []
+    },
+    {
+      "Type": "Quantum.QuantumMachineId",
+      "BaseChain": [
+        "Quantum.QuantumMachineId",
+        "Quantum.QuantumScriptableObject",
+        "UnityEngine.ScriptableObject",
+        "UnityEngine.Object"
+      ],
+      "IsAbstract": false,
+      "GenericArity": 0,
+      "MergedDeclarations": 0,
+      "Declarations": []
+    },
+    {
+      "Type": "Quantum.QuantumMapData",
+      "BaseChain": [
+        "Quantum.QuantumMapData",
+        "Quantum.QuantumMonoBehaviour",
+        "UnityEngine.MonoBehaviour",
+        "UnityEngine.Behaviour",
+        "UnityEngine.Component",
+        "UnityEngine.Object"
+      ],
+      "IsAbstract": false,
+      "GenericArity": 0,
+      "MergedDeclarations": 0,
+      "Declarations": []
+    },
+    {
+      "Type": "Quantum.QuantumMapLoader",
+      "BaseChain": [
+        "Quantum.QuantumMapLoader",
+        "Quantum.QuantumMonoBehaviour",
+        "UnityEngine.MonoBehaviour",
+        "UnityEngine.Behaviour",
+        "UnityEngine.Component",
+        "UnityEngine.Object"
+      ],
+      "IsAbstract": false,
+      "GenericArity": 0,
+      "MergedDeclarations": 0,
+      "Declarations": []
+    },
+    {
+      "Type": "Quantum.QuantumMapNavMeshUnity",
+      "BaseChain": [
+        "Quantum.QuantumMapNavMeshUnity",
+        "Quantum.QuantumMonoBehaviour",
+        "UnityEngine.MonoBehaviour",
+        "UnityEngine.Behaviour",
+        "UnityEngine.Component",
+        "UnityEngine.Object"
+      ],
+      "IsAbstract": false,
+      "GenericArity": 0,
+      "MergedDeclarations": 0,
+      "Declarations": []
+    },
+    {
+      "Type": "Quantum.QuantumMemoryStats",
+      "BaseChain": [
+        "Quantum.QuantumMemoryStats",
+        "Quantum.QuantumMonoBehaviour",
+        "UnityEngine.MonoBehaviour",
+        "UnityEngine.Behaviour",
+        "UnityEngine.Component",
+        "UnityEngine.Object"
+      ],
+      "IsAbstract": false,
+      "GenericArity": 0,
+      "MergedDeclarations": 0,
+      "Declarations": []
+    },
+    {
+      "Type": "Quantum.QuantumMenuSceneInfo",
+      "BaseChain": [
+        "Quantum.QuantumMenuSceneInfo",
+        "Quantum.QuantumScriptableObject",
+        "UnityEngine.ScriptableObject",
+        "UnityEngine.Object"
+      ],
+      "IsAbstract": false,
+      "GenericArity": 0,
+      "MergedDeclarations": 0,
+      "Declarations": []
+    },
+    {
+      "Type": "Quantum.QuantumMeshCollection",
+      "BaseChain": [
+        "Quantum.QuantumMeshCollection",
+        "Quantum.QuantumGlobalScriptableObject\u00601",
+        "Quantum.QuantumGlobalScriptableObject",
+        "Quantum.QuantumScriptableObject",
+        "UnityEngine.ScriptableObject",
+        "UnityEngine.Object"
+      ],
+      "IsAbstract": false,
+      "GenericArity": 0,
+      "MergedDeclarations": 0,
+      "Declarations": []
+    },
+    {
+      "Type": "Quantum.QuantumMonoBehaviour",
+      "BaseChain": [
+        "Quantum.QuantumMonoBehaviour",
+        "UnityEngine.MonoBehaviour",
+        "UnityEngine.Behaviour",
+        "UnityEngine.Component",
+        "UnityEngine.Object"
+      ],
+      "IsAbstract": true,
+      "GenericArity": 0,
+      "MergedDeclarations": 0,
+      "Declarations": []
+    },
+    {
+      "Type": "Quantum.QuantumMultiClientPlayer",
+      "BaseChain": [
+        "Quantum.QuantumMultiClientPlayer",
+        "Quantum.QuantumMonoBehaviour",
+        "UnityEngine.MonoBehaviour",
+        "UnityEngine.Behaviour",
+        "UnityEngine.Component",
+        "UnityEngine.Object"
+      ],
+      "IsAbstract": false,
+      "GenericArity": 0,
+      "MergedDeclarations": 0,
+      "Declarations": []
+    },
+    {
+      "Type": "Quantum.QuantumMultiClientPlayerView",
+      "BaseChain": [
+        "Quantum.QuantumMultiClientPlayerView",
+        "Quantum.QuantumMonoBehaviour",
+        "UnityEngine.MonoBehaviour",
+        "UnityEngine.Behaviour",
+        "UnityEngine.Component",
+        "UnityEngine.Object"
+      ],
+      "IsAbstract": false,
+      "GenericArity": 0,
+      "MergedDeclarations": 0,
+      "Declarations": []
+    },
+    {
+      "Type": "Quantum.QuantumMultiClientRunner",
+      "BaseChain": [
+        "Quantum.QuantumMultiClientRunner",
+        "Quantum.QuantumMonoBehaviour",
+        "UnityEngine.MonoBehaviour",
+        "UnityEngine.Behaviour",
+        "UnityEngine.Component",
+        "UnityEngine.Object"
+      ],
+      "IsAbstract": false,
+      "GenericArity": 0,
+      "MergedDeclarations": 0,
+      "Declarations": []
+    },
+    {
+      "Type": "Quantum.QuantumNavMeshDebugDrawer",
+      "BaseChain": [
+        "Quantum.QuantumNavMeshDebugDrawer",
+        "Quantum.QuantumMonoBehaviour",
+        "UnityEngine.MonoBehaviour",
+        "UnityEngine.Behaviour",
+        "UnityEngine.Component",
+        "UnityEngine.Object"
+      ],
+      "IsAbstract": false,
+      "GenericArity": 0,
+      "MergedDeclarations": 0,
+      "Declarations": []
+    },
+    {
+      "Type": "Quantum.QuantumNavMeshRegion",
+      "BaseChain": [
+        "Quantum.QuantumNavMeshRegion",
+        "Quantum.QuantumMonoBehaviour",
+        "UnityEngine.MonoBehaviour",
+        "UnityEngine.Behaviour",
+        "UnityEngine.Component",
+        "UnityEngine.Object"
+      ],
+      "IsAbstract": false,
+      "GenericArity": 0,
+      "MergedDeclarations": 0,
+      "Declarations": []
+    },
+    {
+      "Type": "Quantum.QuantumRunnerBehaviour",
+      "BaseChain": [
+        "Quantum.QuantumRunnerBehaviour",
+        "Quantum.QuantumMonoBehaviour",
+        "UnityEngine.MonoBehaviour",
+        "UnityEngine.Behaviour",
+        "UnityEngine.Component",
+        "UnityEngine.Object"
+      ],
+      "IsAbstract": false,
+      "GenericArity": 0,
+      "MergedDeclarations": 0,
+      "Declarations": []
+    },
+    {
+      "Type": "Quantum.QuantumRunnerLocalDebug",
+      "BaseChain": [
+        "Quantum.QuantumRunnerLocalDebug",
+        "Quantum.QuantumMonoBehaviour",
+        "UnityEngine.MonoBehaviour",
+        "UnityEngine.Behaviour",
+        "UnityEngine.Component",
+        "UnityEngine.Object"
+      ],
+      "IsAbstract": false,
+      "GenericArity": 0,
+      "MergedDeclarations": 0,
+      "Declarations": []
+    },
+    {
+      "Type": "Quantum.QuantumRunnerLocalReplay",
+      "BaseChain": [
+        "Quantum.QuantumRunnerLocalReplay",
+        "Quantum.QuantumMonoBehaviour",
+        "UnityEngine.MonoBehaviour",
+        "UnityEngine.Behaviour",
+        "UnityEngine.Component",
+        "UnityEngine.Object"
+      ],
+      "IsAbstract": false,
+      "GenericArity": 0,
+      "MergedDeclarations": 0,
+      "Declarations": []
+    },
+    {
+      "Type": "Quantum.QuantumRunnerLocalSavegame",
+      "BaseChain": [
+        "Quantum.QuantumRunnerLocalSavegame",
+        "Quantum.QuantumMonoBehaviour",
+        "UnityEngine.MonoBehaviour",
+        "UnityEngine.Behaviour",
+        "UnityEngine.Component",
+        "UnityEngine.Object"
+      ],
+      "IsAbstract": false,
+      "GenericArity": 0,
+      "MergedDeclarations": 0,
+      "Declarations": []
+    },
+    {
+      "Type": "Quantum.QuantumScriptableObject",
+      "BaseChain": [
+        "Quantum.QuantumScriptableObject",
+        "UnityEngine.ScriptableObject",
+        "UnityEngine.Object"
+      ],
+      "IsAbstract": true,
+      "GenericArity": 0,
+      "MergedDeclarations": 0,
+      "Declarations": []
+    },
+    {
+      "Type": "Quantum.QuantumStaticBoxCollider2D",
+      "BaseChain": [
+        "Quantum.QuantumStaticBoxCollider2D",
+        "Quantum.QuantumMonoBehaviour",
+        "UnityEngine.MonoBehaviour",
+        "UnityEngine.Behaviour",
+        "UnityEngine.Component",
+        "UnityEngine.Object"
+      ],
+      "IsAbstract": false,
+      "GenericArity": 0,
+      "MergedDeclarations": 0,
+      "Declarations": []
+    },
+    {
+      "Type": "Quantum.QuantumStaticBoxCollider3D",
+      "BaseChain": [
+        "Quantum.QuantumStaticBoxCollider3D",
+        "Quantum.QuantumMonoBehaviour",
+        "UnityEngine.MonoBehaviour",
+        "UnityEngine.Behaviour",
+        "UnityEngine.Component",
+        "UnityEngine.Object"
+      ],
+      "IsAbstract": false,
+      "GenericArity": 0,
+      "MergedDeclarations": 0,
+      "Declarations": []
+    },
+    {
+      "Type": "Quantum.QuantumStaticCapsuleCollider2D",
+      "BaseChain": [
+        "Quantum.QuantumStaticCapsuleCollider2D",
+        "Quantum.QuantumMonoBehaviour",
+        "UnityEngine.MonoBehaviour",
+        "UnityEngine.Behaviour",
+        "UnityEngine.Component",
+        "UnityEngine.Object"
+      ],
+      "IsAbstract": false,
+      "GenericArity": 0,
+      "MergedDeclarations": 0,
+      "Declarations": []
+    },
+    {
+      "Type": "Quantum.QuantumStaticCapsuleCollider3D",
+      "BaseChain": [
+        "Quantum.QuantumStaticCapsuleCollider3D",
+        "Quantum.QuantumMonoBehaviour",
+        "UnityEngine.MonoBehaviour",
+        "UnityEngine.Behaviour",
+        "UnityEngine.Component",
+        "UnityEngine.Object"
+      ],
+      "IsAbstract": false,
+      "GenericArity": 0,
+      "MergedDeclarations": 0,
+      "Declarations": []
+    },
+    {
+      "Type": "Quantum.QuantumStaticCircleCollider2D",
+      "BaseChain": [
+        "Quantum.QuantumStaticCircleCollider2D",
+        "Quantum.QuantumMonoBehaviour",
+        "UnityEngine.MonoBehaviour",
+        "UnityEngine.Behaviour",
+        "UnityEngine.Component",
+        "UnityEngine.Object"
+      ],
+      "IsAbstract": false,
+      "GenericArity": 0,
+      "MergedDeclarations": 0,
+      "Declarations": []
+    },
+    {
+      "Type": "Quantum.QuantumStaticEdgeCollider2D",
+      "BaseChain": [
+        "Quantum.QuantumStaticEdgeCollider2D",
+        "Quantum.QuantumMonoBehaviour",
+        "UnityEngine.MonoBehaviour",
+        "UnityEngine.Behaviour",
+        "UnityEngine.Component",
+        "UnityEngine.Object"
+      ],
+      "IsAbstract": false,
+      "GenericArity": 0,
+      "MergedDeclarations": 0,
+      "Declarations": []
+    },
+    {
+      "Type": "Quantum.QuantumStaticMeshCollider3D",
+      "BaseChain": [
+        "Quantum.QuantumStaticMeshCollider3D",
+        "Quantum.QuantumMonoBehaviour",
+        "UnityEngine.MonoBehaviour",
+        "UnityEngine.Behaviour",
+        "UnityEngine.Component",
+        "UnityEngine.Object"
+      ],
+      "IsAbstract": false,
+      "GenericArity": 0,
+      "MergedDeclarations": 0,
+      "Declarations": []
+    },
+    {
+      "Type": "Quantum.QuantumStaticPolygonCollider2D",
+      "BaseChain": [
+        "Quantum.QuantumStaticPolygonCollider2D",
+        "Quantum.QuantumMonoBehaviour",
+        "UnityEngine.MonoBehaviour",
+        "UnityEngine.Behaviour",
+        "UnityEngine.Component",
+        "UnityEngine.Object"
+      ],
+      "IsAbstract": false,
+      "GenericArity": 0,
+      "MergedDeclarations": 0,
+      "Declarations": []
+    },
+    {
+      "Type": "Quantum.QuantumStaticSphereCollider3D",
+      "BaseChain": [
+        "Quantum.QuantumStaticSphereCollider3D",
+        "Quantum.QuantumMonoBehaviour",
+        "UnityEngine.MonoBehaviour",
+        "UnityEngine.Behaviour",
+        "UnityEngine.Component",
+        "UnityEngine.Object"
+      ],
+      "IsAbstract": false,
+      "GenericArity": 0,
+      "MergedDeclarations": 0,
+      "Declarations": []
+    },
+    {
+      "Type": "Quantum.QuantumStaticTerrainCollider3D",
+      "BaseChain": [
+        "Quantum.QuantumStaticTerrainCollider3D",
+        "Quantum.QuantumMonoBehaviour",
+        "UnityEngine.MonoBehaviour",
+        "UnityEngine.Behaviour",
+        "UnityEngine.Component",
+        "UnityEngine.Object"
+      ],
+      "IsAbstract": false,
+      "GenericArity": 0,
+      "MergedDeclarations": 0,
+      "Declarations": []
+    },
+    {
+      "Type": "Quantum.QuantumStats",
+      "BaseChain": [
+        "Quantum.QuantumStats",
+        "Quantum.QuantumMonoBehaviour",
+        "UnityEngine.MonoBehaviour",
+        "UnityEngine.Behaviour",
+        "UnityEngine.Component",
+        "UnityEngine.Object"
+      ],
+      "IsAbstract": false,
+      "GenericArity": 0,
+      "MergedDeclarations": 0,
+      "Declarations": []
+    },
+    {
+      "Type": "Quantum.QuantumTaskRunnerJobs",
+      "BaseChain": [
+        "Quantum.QuantumTaskRunnerJobs",
+        "Quantum.QuantumMonoBehaviour",
+        "UnityEngine.MonoBehaviour",
+        "UnityEngine.Behaviour",
+        "UnityEngine.Component",
+        "UnityEngine.Object"
+      ],
+      "IsAbstract": false,
+      "GenericArity": 0,
+      "MergedDeclarations": 0,
+      "Declarations": []
+    },
+    {
+      "Type": "Quantum.QuantumUnityDB",
+      "BaseChain": [
+        "Quantum.QuantumUnityDB",
+        "Quantum.QuantumGlobalScriptableObject\u00601",
+        "Quantum.QuantumGlobalScriptableObject",
+        "Quantum.QuantumScriptableObject",
+        "UnityEngine.ScriptableObject",
+        "UnityEngine.Object"
+      ],
+      "IsAbstract": false,
+      "GenericArity": 0,
+      "MergedDeclarations": 0,
+      "Declarations": []
+    },
+    {
+      "Type": "Quantum.QuantumUnityInputSystemWithLegacyFallback",
+      "BaseChain": [
+        "Quantum.QuantumUnityInputSystemWithLegacyFallback",
+        "UnityEngine.InputSystem.UI.InputSystemUIInputModule",
+        "UnityEngine.EventSystems.BaseInputModule",
+        "UnityEngine.EventSystems.UIBehaviour",
+        "UnityEngine.MonoBehaviour",
+        "UnityEngine.Behaviour",
+        "UnityEngine.Component",
+        "UnityEngine.Object"
+      ],
+      "IsAbstract": false,
+      "GenericArity": 0,
+      "MergedDeclarations": 0,
+      "Declarations": []
+    },
+    {
+      "Type": "Quantum.QuantumUnityInputSystemWithLegacyFallback/FallbackEditor",
+      "BaseChain": [
+        "Quantum.QuantumUnityInputSystemWithLegacyFallback/FallbackEditor",
+        "UnityEditor.Editor",
+        "UnityEngine.ScriptableObject",
+        "UnityEngine.Object"
+      ],
+      "IsAbstract": false,
+      "GenericArity": 0,
+      "MergedDeclarations": 0,
+      "Declarations": []
+    },
+    {
+      "Type": "Quantum.QuantumUnityComponentPrototype",
+      "BaseChain": [
+        "Quantum.QuantumUnityComponentPrototype",
+        "Quantum.QuantumMonoBehaviour",
+        "UnityEngine.MonoBehaviour",
+        "UnityEngine.Behaviour",
+        "UnityEngine.Component",
+        "UnityEngine.Object"
+      ],
+      "IsAbstract": true,
+      "GenericArity": 0,
+      "MergedDeclarations": 1,
+      "Declarations": [
+        {
+          "Line": 60,
+          "Partial": false,
+          "Base": ": QuantumMonoBehaviour",
+          "Modifiers": "public abstract"
+        }
+      ]
+    },
+    {
+      "Type": "Quantum.QuantumUnityComponentPrototype\u00601",
+      "BaseChain": [
+        "Quantum.QuantumUnityComponentPrototype\u00601",
+        "Quantum.QuantumUnityComponentPrototype",
+        "Quantum.QuantumMonoBehaviour",
+        "UnityEngine.MonoBehaviour",
+        "UnityEngine.Behaviour",
+        "UnityEngine.Component",
+        "UnityEngine.Object"
+      ],
+      "IsAbstract": true,
+      "GenericArity": 1,
+      "MergedDeclarations": 1,
+      "Declarations": [
+        {
+          "Line": 115,
+          "Partial": false,
+          "Base": ": QuantumUnityComponentPrototype",
+          "Modifiers": "public abstract"
+        }
+      ]
+    },
+    {
+      "Type": "Quantum.QuantumUnityStaticDispatcherAdapterWorker",
+      "BaseChain": [
+        "Quantum.QuantumUnityStaticDispatcherAdapterWorker",
+        "Quantum.QuantumMonoBehaviour",
+        "UnityEngine.MonoBehaviour",
+        "UnityEngine.Behaviour",
+        "UnityEngine.Component",
+        "UnityEngine.Object"
+      ],
+      "IsAbstract": false,
+      "GenericArity": 0,
+      "MergedDeclarations": 1,
+      "Declarations": [
+        {
+          "Line": 1284,
+          "Partial": false,
+          "Base": ": QuantumMonoBehaviour",
+          "Modifiers": "internal sealed"
+        }
+      ]
+    },
+    {
+      "Type": "Quantum.QuantumEntityViewComponent\u00601",
+      "BaseChain": [
+        "Quantum.QuantumEntityViewComponent\u00601",
+        "Quantum.QuantumViewComponent\u00601",
+        "Quantum.QuantumMonoBehaviour",
+        "UnityEngine.MonoBehaviour",
+        "UnityEngine.Behaviour",
+        "UnityEngine.Component",
+        "UnityEngine.Object"
+      ],
+      "IsAbstract": true,
+      "GenericArity": 1,
+      "MergedDeclarations": 1,
+      "Declarations": [
+        {
+          "Line": 1966,
+          "Partial": false,
+          "Base": ": QuantumViewComponent\u003CT\u003E",
+          "Modifiers": "public abstract"
+        }
+      ]
+    },
+    {
+      "Type": "Quantum.QuantumEntityViewComponent",
+      "BaseChain": [
+        "Quantum.QuantumEntityViewComponent",
+        "Quantum.QuantumEntityViewComponent\u00601",
+        "Quantum.QuantumViewComponent\u00601",
+        "Quantum.QuantumMonoBehaviour",
+        "UnityEngine.MonoBehaviour",
+        "UnityEngine.Behaviour",
+        "UnityEngine.Component",
+        "UnityEngine.Object"
+      ],
+      "IsAbstract": true,
+      "GenericArity": 0,
+      "MergedDeclarations": 1,
+      "Declarations": [
+        {
+          "Line": 2046,
+          "Partial": false,
+          "Base": ": QuantumEntityViewComponent\u003CIQuantumViewContext\u003E",
+          "Modifiers": "public abstract"
+        }
+      ]
+    },
+    {
+      "Type": "Quantum.QuantumSceneViewComponent\u00601",
+      "BaseChain": [
+        "Quantum.QuantumSceneViewComponent\u00601",
+        "Quantum.QuantumViewComponent\u00601",
+        "Quantum.QuantumMonoBehaviour",
+        "UnityEngine.MonoBehaviour",
+        "UnityEngine.Behaviour",
+        "UnityEngine.Component",
+        "UnityEngine.Object"
+      ],
+      "IsAbstract": true,
+      "GenericArity": 1,
+      "MergedDeclarations": 1,
+      "Declarations": [
+        {
+          "Line": 2149,
+          "Partial": false,
+          "Base": ": QuantumViewComponent\u003CT\u003E",
+          "Modifiers": "public abstract"
+        }
+      ]
+    },
+    {
+      "Type": "Quantum.QuantumSceneViewComponent",
+      "BaseChain": [
+        "Quantum.QuantumSceneViewComponent",
+        "Quantum.QuantumSceneViewComponent\u00601",
+        "Quantum.QuantumViewComponent\u00601",
+        "Quantum.QuantumMonoBehaviour",
+        "UnityEngine.MonoBehaviour",
+        "UnityEngine.Behaviour",
+        "UnityEngine.Component",
+        "UnityEngine.Object"
+      ],
+      "IsAbstract": true,
+      "GenericArity": 0,
+      "MergedDeclarations": 1,
+      "Declarations": [
+        {
+          "Line": 2189,
+          "Partial": false,
+          "Base": ": QuantumSceneViewComponent\u003CIQuantumViewContext\u003E",
+          "Modifiers": "public abstract"
+        }
+      ]
+    },
+    {
+      "Type": "Quantum.QuantumViewComponent\u00601",
+      "BaseChain": [
+        "Quantum.QuantumViewComponent\u00601",
+        "Quantum.QuantumMonoBehaviour",
+        "UnityEngine.MonoBehaviour",
+        "UnityEngine.Behaviour",
+        "UnityEngine.Component",
+        "UnityEngine.Object"
+      ],
+      "IsAbstract": true,
+      "GenericArity": 1,
+      "MergedDeclarations": 1,
+      "Declarations": [
+        {
+          "Line": 2366,
+          "Partial": false,
+          "Base": ": QuantumMonoBehaviour, IQuantumViewComponent",
+          "Modifiers": "public abstract"
+        }
+      ]
+    },
+    {
+      "Type": "Quantum.QuantumCallbacks",
+      "BaseChain": [
+        "Quantum.QuantumCallbacks",
+        "Quantum.QuantumMonoBehaviour",
+        "UnityEngine.MonoBehaviour",
+        "UnityEngine.Behaviour",
+        "UnityEngine.Component",
+        "UnityEngine.Object"
+      ],
+      "IsAbstract": true,
+      "GenericArity": 0,
+      "MergedDeclarations": 1,
+      "Declarations": [
+        {
+          "Line": 4286,
+          "Partial": false,
+          "Base": ": QuantumMonoBehaviour",
+          "Modifiers": "public abstract"
+        }
+      ]
+    },
+    {
+      "Type": "Quantum.QuantumGlobalScriptableObject",
+      "BaseChain": [
+        "Quantum.QuantumGlobalScriptableObject",
+        "Quantum.QuantumScriptableObject",
+        "UnityEngine.ScriptableObject",
+        "UnityEngine.Object"
+      ],
+      "IsAbstract": true,
+      "GenericArity": 0,
+      "MergedDeclarations": 1,
+      "Declarations": [
+        {
+          "Line": 18710,
+          "Partial": false,
+          "Base": ": QuantumScriptableObject",
+          "Modifiers": "public abstract"
+        }
+      ]
+    },
+    {
+      "Type": "Quantum.QuantumStartUIConnectionBase",
+      "BaseChain": [
+        "Quantum.QuantumStartUIConnectionBase",
+        "Quantum.QuantumMonoBehaviour",
+        "UnityEngine.MonoBehaviour",
+        "UnityEngine.Behaviour",
+        "UnityEngine.Component",
+        "UnityEngine.Object"
+      ],
+      "IsAbstract": true,
+      "GenericArity": 0,
+      "MergedDeclarations": 0,
+      "Declarations": []
+    },
+    {
+      "Type": "Quantum.QuantumStartUI",
+      "BaseChain": [
+        "Quantum.QuantumStartUI",
+        "Quantum.QuantumMonoBehaviour",
+        "UnityEngine.MonoBehaviour",
+        "UnityEngine.Behaviour",
+        "UnityEngine.Component",
+        "UnityEngine.Object"
+      ],
+      "IsAbstract": false,
+      "GenericArity": 0,
+      "MergedDeclarations": 0,
+      "Declarations": []
+    },
+    {
+      "Type": "Quantum.QuantumStartUIConnection",
+      "BaseChain": [
+        "Quantum.QuantumStartUIConnection",
+        "Quantum.QuantumStartUIConnectionBase",
+        "Quantum.QuantumMonoBehaviour",
+        "UnityEngine.MonoBehaviour",
+        "UnityEngine.Behaviour",
+        "UnityEngine.Component",
+        "UnityEngine.Object"
+      ],
+      "IsAbstract": false,
+      "GenericArity": 0,
+      "MergedDeclarations": 0,
+      "Declarations": []
+    },
+    {
+      "Type": "Quantum.QuantumStartUIRegionDropdown",
+      "BaseChain": [
+        "Quantum.QuantumStartUIRegionDropdown",
+        "TMPro.TMP_Dropdown",
+        "UnityEngine.UI.Selectable",
+        "UnityEngine.EventSystems.UIBehaviour",
+        "UnityEngine.MonoBehaviour",
+        "UnityEngine.Behaviour",
+        "UnityEngine.Component",
+        "UnityEngine.Object"
+      ],
+      "IsAbstract": false,
+      "GenericArity": 0,
+      "MergedDeclarations": 0,
+      "Declarations": []
+    },
+    {
+      "Type": "Quantum.QPrototypeAIBlackboardComponent",
+      "BaseChain": [
+        "Quantum.QPrototypeAIBlackboardComponent",
+        "Quantum.QuantumUnityComponentPrototype\u00601",
+        "Quantum.QuantumUnityComponentPrototype",
+        "Quantum.QuantumMonoBehaviour",
+        "UnityEngine.MonoBehaviour",
+        "UnityEngine.Behaviour",
+        "UnityEngine.Component",
+        "UnityEngine.Object"
+      ],
+      "IsAbstract": false,
+      "GenericArity": 0,
+      "MergedDeclarations": 0,
+      "Declarations": []
+    },
+    {
+      "Type": "Quantum.QPrototypeBTAgent",
+      "BaseChain": [
+        "Quantum.QPrototypeBTAgent",
+        "Quantum.QuantumUnityComponentPrototype\u00601",
+        "Quantum.QuantumUnityComponentPrototype",
+        "Quantum.QuantumMonoBehaviour",
+        "UnityEngine.MonoBehaviour",
+        "UnityEngine.Behaviour",
+        "UnityEngine.Component",
+        "UnityEngine.Object"
+      ],
+      "IsAbstract": false,
+      "GenericArity": 0,
+      "MergedDeclarations": 0,
+      "Declarations": []
+    },
+    {
+      "Type": "Quantum.QPrototypeBotSDKGlobals",
+      "BaseChain": [
+        "Quantum.QPrototypeBotSDKGlobals",
+        "Quantum.QuantumUnityComponentPrototype\u00601",
+        "Quantum.QuantumUnityComponentPrototype",
+        "Quantum.QuantumMonoBehaviour",
+        "UnityEngine.MonoBehaviour",
+        "UnityEngine.Behaviour",
+        "UnityEngine.Component",
+        "UnityEngine.Object"
+      ],
+      "IsAbstract": false,
+      "GenericArity": 0,
+      "MergedDeclarations": 0,
+      "Declarations": []
+    },
+    {
+      "Type": "Quantum.QPrototypeHFSMAgent",
+      "BaseChain": [
+        "Quantum.QPrototypeHFSMAgent",
+        "Quantum.QuantumUnityComponentPrototype\u00601",
+        "Quantum.QuantumUnityComponentPrototype",
+        "Quantum.QuantumMonoBehaviour",
+        "UnityEngine.MonoBehaviour",
+        "UnityEngine.Behaviour",
+        "UnityEngine.Component",
+        "UnityEngine.Object"
+      ],
+      "IsAbstract": false,
+      "GenericArity": 0,
+      "MergedDeclarations": 0,
+      "Declarations": []
+    },
+    {
+      "Type": "Quantum.QPrototypeUTAgent",
+      "BaseChain": [
+        "Quantum.QPrototypeUTAgent",
+        "Quantum.QuantumUnityComponentPrototype\u00601",
+        "Quantum.QuantumUnityComponentPrototype",
+        "Quantum.QuantumMonoBehaviour",
+        "UnityEngine.MonoBehaviour",
+        "UnityEngine.Behaviour",
+        "UnityEngine.Component",
+        "UnityEngine.Object"
+      ],
+      "IsAbstract": false,
+      "GenericArity": 0,
+      "MergedDeclarations": 0,
+      "Declarations": []
+    },
+    {
+      "Type": "Quantum.EntityComponentNavMeshPathfinderLegacy",
+      "BaseChain": [
+        "Quantum.EntityComponentNavMeshPathfinderLegacy",
+        "Quantum.QPrototypeNavMeshPathfinder",
+        "Quantum.QuantumUnityComponentPrototype\u00601",
+        "Quantum.QuantumUnityComponentPrototype",
+        "Quantum.QuantumMonoBehaviour",
+        "UnityEngine.MonoBehaviour",
+        "UnityEngine.Behaviour",
+        "UnityEngine.Component",
+        "UnityEngine.Object"
+      ],
+      "IsAbstract": false,
+      "GenericArity": 0,
+      "MergedDeclarations": 0,
+      "Declarations": []
+    },
+    {
+      "Type": "Quantum.EntityComponentPhysicsBody2DLegacy",
+      "BaseChain": [
+        "Quantum.EntityComponentPhysicsBody2DLegacy",
+        "Quantum.QPrototypePhysicsBody2D",
+        "Quantum.QuantumUnityComponentPrototype\u00601",
+        "Quantum.QuantumUnityComponentPrototype",
+        "Quantum.QuantumMonoBehaviour",
+        "UnityEngine.MonoBehaviour",
+        "UnityEngine.Behaviour",
+        "UnityEngine.Component",
+        "UnityEngine.Object"
+      ],
+      "IsAbstract": false,
+      "GenericArity": 0,
+      "MergedDeclarations": 0,
+      "Declarations": []
+    },
+    {
+      "Type": "Quantum.EntityComponentPhysicsBody3DLegacy",
+      "BaseChain": [
+        "Quantum.EntityComponentPhysicsBody3DLegacy",
+        "Quantum.QPrototypePhysicsBody3D",
+        "Quantum.QuantumUnityComponentPrototype\u00601",
+        "Quantum.QuantumUnityComponentPrototype",
+        "Quantum.QuantumMonoBehaviour",
+        "UnityEngine.MonoBehaviour",
+        "UnityEngine.Behaviour",
+        "UnityEngine.Component",
+        "UnityEngine.Object"
+      ],
+      "IsAbstract": false,
+      "GenericArity": 0,
+      "MergedDeclarations": 0,
+      "Declarations": []
+    },
+    {
+      "Type": "Quantum.EntityComponentPhysicsCallbacks2DLegacy",
+      "BaseChain": [
+        "Quantum.EntityComponentPhysicsCallbacks2DLegacy",
+        "Quantum.QPrototypePhysicsCallbacks2D",
+        "Quantum.QuantumUnityComponentPrototype\u00601",
+        "Quantum.QuantumUnityComponentPrototype",
+        "Quantum.QuantumMonoBehaviour",
+        "UnityEngine.MonoBehaviour",
+        "UnityEngine.Behaviour",
+        "UnityEngine.Component",
+        "UnityEngine.Object"
+      ],
+      "IsAbstract": false,
+      "GenericArity": 0,
+      "MergedDeclarations": 0,
+      "Declarations": []
+    },
+    {
+      "Type": "Quantum.EntityComponentPhysicsCallbacks3DLegacy",
+      "BaseChain": [
+        "Quantum.EntityComponentPhysicsCallbacks3DLegacy",
+        "Quantum.QPrototypePhysicsCallbacks3D",
+        "Quantum.QuantumUnityComponentPrototype\u00601",
+        "Quantum.QuantumUnityComponentPrototype",
+        "Quantum.QuantumMonoBehaviour",
+        "UnityEngine.MonoBehaviour",
+        "UnityEngine.Behaviour",
+        "UnityEngine.Component",
+        "UnityEngine.Object"
+      ],
+      "IsAbstract": false,
+      "GenericArity": 0,
+      "MergedDeclarations": 0,
+      "Declarations": []
+    },
+    {
+      "Type": "Quantum.EntityComponentPhysicsCollider2DLegacy",
+      "BaseChain": [
+        "Quantum.EntityComponentPhysicsCollider2DLegacy",
+        "Quantum.QPrototypePhysicsCollider2D",
+        "Quantum.QuantumUnityComponentPrototype\u00601",
+        "Quantum.QuantumUnityComponentPrototype",
+        "Quantum.QuantumMonoBehaviour",
+        "UnityEngine.MonoBehaviour",
+        "UnityEngine.Behaviour",
+        "UnityEngine.Component",
+        "UnityEngine.Object"
+      ],
+      "IsAbstract": false,
+      "GenericArity": 0,
+      "MergedDeclarations": 0,
+      "Declarations": []
+    },
+    {
+      "Type": "Quantum.EntityComponentPhysicsCollider3DLegacy",
+      "BaseChain": [
+        "Quantum.EntityComponentPhysicsCollider3DLegacy",
+        "Quantum.QPrototypePhysicsCollider3D",
+        "Quantum.QuantumUnityComponentPrototype\u00601",
+        "Quantum.QuantumUnityComponentPrototype",
+        "Quantum.QuantumMonoBehaviour",
+        "UnityEngine.MonoBehaviour",
+        "UnityEngine.Behaviour",
+        "UnityEngine.Component",
+        "UnityEngine.Object"
+      ],
+      "IsAbstract": false,
+      "GenericArity": 0,
+      "MergedDeclarations": 0,
+      "Declarations": []
+    },
+    {
+      "Type": "Quantum.EntityComponentPhysicsJoints2DLegacy",
+      "BaseChain": [
+        "Quantum.EntityComponentPhysicsJoints2DLegacy",
+        "Quantum.QPrototypePhysicsJoints2D",
+        "Quantum.QuantumUnityComponentPrototype\u00601",
+        "Quantum.QuantumUnityComponentPrototype",
+        "Quantum.QuantumMonoBehaviour",
+        "UnityEngine.MonoBehaviour",
+        "UnityEngine.Behaviour",
+        "UnityEngine.Component",
+        "UnityEngine.Object"
+      ],
+      "IsAbstract": false,
+      "GenericArity": 0,
+      "MergedDeclarations": 0,
+      "Declarations": []
+    },
+    {
+      "Type": "Quantum.EntityComponentPhysicsJoints3DLegacy",
+      "BaseChain": [
+        "Quantum.EntityComponentPhysicsJoints3DLegacy",
+        "Quantum.QPrototypePhysicsJoints3D",
+        "Quantum.QuantumUnityComponentPrototype\u00601",
+        "Quantum.QuantumUnityComponentPrototype",
+        "Quantum.QuantumMonoBehaviour",
+        "UnityEngine.MonoBehaviour",
+        "UnityEngine.Behaviour",
+        "UnityEngine.Component",
+        "UnityEngine.Object"
+      ],
+      "IsAbstract": false,
+      "GenericArity": 0,
+      "MergedDeclarations": 0,
+      "Declarations": []
+    },
+    {
+      "Type": "Quantum.EntityComponentTransform2DLegacy",
+      "BaseChain": [
+        "Quantum.EntityComponentTransform2DLegacy",
+        "Quantum.QPrototypeTransform2D",
+        "Quantum.QuantumUnityComponentPrototype\u00601",
+        "Quantum.QuantumUnityComponentPrototype",
+        "Quantum.QuantumMonoBehaviour",
+        "UnityEngine.MonoBehaviour",
+        "UnityEngine.Behaviour",
+        "UnityEngine.Component",
+        "UnityEngine.Object"
+      ],
+      "IsAbstract": false,
+      "GenericArity": 0,
+      "MergedDeclarations": 0,
+      "Declarations": []
+    },
+    {
+      "Type": "Quantum.EntityComponentTransform2DVerticalLegacy",
+      "BaseChain": [
+        "Quantum.EntityComponentTransform2DVerticalLegacy",
+        "Quantum.QPrototypeTransform2DVertical",
+        "Quantum.QuantumUnityComponentPrototype\u00601",
+        "Quantum.QuantumUnityComponentPrototype",
+        "Quantum.QuantumMonoBehaviour",
+        "UnityEngine.MonoBehaviour",
+        "UnityEngine.Behaviour",
+        "UnityEngine.Component",
+        "UnityEngine.Object"
+      ],
+      "IsAbstract": false,
+      "GenericArity": 0,
+      "MergedDeclarations": 0,
+      "Declarations": []
+    },
+    {
+      "Type": "Quantum.EntityComponentTransform3DLegacy",
+      "BaseChain": [
+        "Quantum.EntityComponentTransform3DLegacy",
+        "Quantum.QPrototypeTransform3D",
+        "Quantum.QuantumUnityComponentPrototype\u00601",
+        "Quantum.QuantumUnityComponentPrototype",
+        "Quantum.QuantumMonoBehaviour",
+        "UnityEngine.MonoBehaviour",
+        "UnityEngine.Behaviour",
+        "UnityEngine.Component",
+        "UnityEngine.Object"
+      ],
+      "IsAbstract": false,
+      "GenericArity": 0,
+      "MergedDeclarations": 0,
+      "Declarations": []
+    },
+    {
+      "Type": "Quantum.QPrototypeAfkPlayer",
+      "BaseChain": [
+        "Quantum.QPrototypeAfkPlayer",
+        "Quantum.QuantumUnityComponentPrototype\u00601",
+        "Quantum.QuantumUnityComponentPrototype",
+        "Quantum.QuantumMonoBehaviour",
+        "UnityEngine.MonoBehaviour",
+        "UnityEngine.Behaviour",
+        "UnityEngine.Component",
+        "UnityEngine.Object"
+      ],
+      "IsAbstract": false,
+      "GenericArity": 0,
+      "MergedDeclarations": 0,
+      "Declarations": []
+    },
+    {
+      "Type": "Quantum.QPrototypeAirDrop",
+      "BaseChain": [
+        "Quantum.QPrototypeAirDrop",
+        "Quantum.QuantumUnityComponentPrototype\u00601",
+        "Quantum.QuantumUnityComponentPrototype",
+        "Quantum.QuantumMonoBehaviour",
+        "UnityEngine.MonoBehaviour",
+        "UnityEngine.Behaviour",
+        "UnityEngine.Component",
+        "UnityEngine.Object"
+      ],
+      "IsAbstract": false,
+      "GenericArity": 0,
+      "MergedDeclarations": 0,
+      "Declarations": []
+    },
+    {
+      "Type": "Quantum.QPrototypeAirDropSpawner",
+      "BaseChain": [
+        "Quantum.QPrototypeAirDropSpawner",
+        "Quantum.QuantumUnityComponentPrototype\u00601",
+        "Quantum.QuantumUnityComponentPrototype",
+        "Quantum.QuantumMonoBehaviour",
+        "UnityEngine.MonoBehaviour",
+        "UnityEngine.Behaviour",
+        "UnityEngine.Component",
+        "UnityEngine.Object"
+      ],
+      "IsAbstract": false,
+      "GenericArity": 0,
+      "MergedDeclarations": 0,
+      "Declarations": []
+    },
+    {
+      "Type": "Quantum.QPrototypeAlivePlayerCharacter",
+      "BaseChain": [
+        "Quantum.QPrototypeAlivePlayerCharacter",
+        "Quantum.QuantumUnityComponentPrototype\u00601",
+        "Quantum.QuantumUnityComponentPrototype",
+        "Quantum.QuantumMonoBehaviour",
+        "UnityEngine.MonoBehaviour",
+        "UnityEngine.Behaviour",
+        "UnityEngine.Component",
+        "UnityEngine.Object"
+      ],
+      "IsAbstract": false,
+      "GenericArity": 0,
+      "MergedDeclarations": 0,
+      "Declarations": []
+    },
+    {
+      "Type": "Quantum.QPrototypeBotCharacter",
+      "BaseChain": [
+        "Quantum.QPrototypeBotCharacter",
+        "Quantum.QuantumUnityComponentPrototype\u00601",
+        "Quantum.QuantumUnityComponentPrototype",
+        "Quantum.QuantumMonoBehaviour",
+        "UnityEngine.MonoBehaviour",
+        "UnityEngine.Behaviour",
+        "UnityEngine.Component",
+        "UnityEngine.Object"
+      ],
+      "IsAbstract": false,
+      "GenericArity": 0,
+      "MergedDeclarations": 0,
+      "Declarations": []
+    },
+    {
+      "Type": "Quantum.QPrototypeBotLoadout",
+      "BaseChain": [
+        "Quantum.QPrototypeBotLoadout",
+        "Quantum.QuantumUnityComponentPrototype\u00601",
+        "Quantum.QuantumUnityComponentPrototype",
+        "Quantum.QuantumMonoBehaviour",
+        "UnityEngine.MonoBehaviour",
+        "UnityEngine.Behaviour",
+        "UnityEngine.Component",
+        "UnityEngine.Object"
+      ],
+      "IsAbstract": false,
+      "GenericArity": 0,
+      "MergedDeclarations": 0,
+      "Declarations": []
+    },
+    {
+      "Type": "Quantum.QPrototypeChest",
+      "BaseChain": [
+        "Quantum.QPrototypeChest",
+        "Quantum.QuantumUnityComponentPrototype\u00601",
+        "Quantum.QuantumUnityComponentPrototype",
+        "Quantum.QuantumMonoBehaviour",
+        "UnityEngine.MonoBehaviour",
+        "UnityEngine.Behaviour",
+        "UnityEngine.Component",
+        "UnityEngine.Object"
+      ],
+      "IsAbstract": false,
+      "GenericArity": 0,
+      "MergedDeclarations": 0,
+      "Declarations": []
+    },
+    {
+      "Type": "Quantum.QPrototypeChestContents",
+      "BaseChain": [
+        "Quantum.QPrototypeChestContents",
+        "Quantum.QuantumUnityComponentPrototype\u00601",
+        "Quantum.QuantumUnityComponentPrototype",
+        "Quantum.QuantumMonoBehaviour",
+        "UnityEngine.MonoBehaviour",
+        "UnityEngine.Behaviour",
+        "UnityEngine.Component",
+        "UnityEngine.Object"
+      ],
+      "IsAbstract": false,
+      "GenericArity": 0,
+      "MergedDeclarations": 0,
+      "Declarations": []
+    },
+    {
+      "Type": "Quantum.QPrototypeChunkDebug",
+      "BaseChain": [
+        "Quantum.QPrototypeChunkDebug",
+        "Quantum.QuantumUnityComponentPrototype\u00601",
+        "Quantum.QuantumUnityComponentPrototype",
+        "Quantum.QuantumMonoBehaviour",
+        "UnityEngine.MonoBehaviour",
+        "UnityEngine.Behaviour",
+        "UnityEngine.Component",
+        "UnityEngine.Object"
+      ],
+      "IsAbstract": false,
+      "GenericArity": 0,
+      "MergedDeclarations": 0,
+      "Declarations": []
+    },
+    {
+      "Type": "Quantum.QPrototypeCollectable",
+      "BaseChain": [
+        "Quantum.QPrototypeCollectable",
+        "Quantum.QuantumUnityComponentPrototype\u00601",
+        "Quantum.QuantumUnityComponentPrototype",
+        "Quantum.QuantumMonoBehaviour",
+        "UnityEngine.MonoBehaviour",
+        "UnityEngine.Behaviour",
+        "UnityEngine.Component",
+        "UnityEngine.Object"
+      ],
+      "IsAbstract": false,
+      "GenericArity": 0,
+      "MergedDeclarations": 0,
+      "Declarations": []
+    },
+    {
+      "Type": "Quantum.QPrototypeCollectableChunks",
+      "BaseChain": [
+        "Quantum.QPrototypeCollectableChunks",
+        "Quantum.QuantumUnityComponentPrototype\u00601",
+        "Quantum.QuantumUnityComponentPrototype",
+        "Quantum.QuantumMonoBehaviour",
+        "UnityEngine.MonoBehaviour",
+        "UnityEngine.Behaviour",
+        "UnityEngine.Component",
+        "UnityEngine.Object"
+      ],
+      "IsAbstract": false,
+      "GenericArity": 0,
+      "MergedDeclarations": 0,
+      "Declarations": []
+    },
+    {
+      "Type": "Quantum.QPrototypeCollectablePlatformSpawner",
+      "BaseChain": [
+        "Quantum.QPrototypeCollectablePlatformSpawner",
+        "Quantum.QuantumUnityComponentPrototype\u00601",
+        "Quantum.QuantumUnityComponentPrototype",
+        "Quantum.QuantumMonoBehaviour",
+        "UnityEngine.MonoBehaviour",
+        "UnityEngine.Behaviour",
+        "UnityEngine.Component",
+        "UnityEngine.Object"
+      ],
+      "IsAbstract": false,
+      "GenericArity": 0,
+      "MergedDeclarations": 0,
+      "Declarations": []
+    },
+    {
+      "Type": "Quantum.QPrototypeCollectableTime",
+      "BaseChain": [
+        "Quantum.QPrototypeCollectableTime",
+        "Quantum.QuantumUnityComponentPrototype\u00601",
+        "Quantum.QuantumUnityComponentPrototype",
+        "Quantum.QuantumMonoBehaviour",
+        "UnityEngine.MonoBehaviour",
+        "UnityEngine.Behaviour",
+        "UnityEngine.Component",
+        "UnityEngine.Object"
+      ],
+      "IsAbstract": false,
+      "GenericArity": 0,
+      "MergedDeclarations": 0,
+      "Declarations": []
+    },
+    {
+      "Type": "Quantum.QPrototypeConsumable",
+      "BaseChain": [
+        "Quantum.QPrototypeConsumable",
+        "Quantum.QuantumUnityComponentPrototype\u00601",
+        "Quantum.QuantumUnityComponentPrototype",
+        "Quantum.QuantumMonoBehaviour",
+        "UnityEngine.MonoBehaviour",
+        "UnityEngine.Behaviour",
+        "UnityEngine.Component",
+        "UnityEngine.Object"
+      ],
+      "IsAbstract": false,
+      "GenericArity": 0,
+      "MergedDeclarations": 0,
+      "Declarations": []
+    },
+    {
+      "Type": "Quantum.QPrototypeCosmeticsHolder",
+      "BaseChain": [
+        "Quantum.QPrototypeCosmeticsHolder",
+        "Quantum.QuantumUnityComponentPrototype\u00601",
+        "Quantum.QuantumUnityComponentPrototype",
+        "Quantum.QuantumMonoBehaviour",
+        "UnityEngine.MonoBehaviour",
+        "UnityEngine.Behaviour",
+        "UnityEngine.Component",
+        "UnityEngine.Object"
+      ],
+      "IsAbstract": false,
+      "GenericArity": 0,
+      "MergedDeclarations": 0,
+      "Declarations": []
+    },
+    {
+      "Type": "Quantum.QPrototypeDeadPlayerCharacter",
+      "BaseChain": [
+        "Quantum.QPrototypeDeadPlayerCharacter",
+        "Quantum.QuantumUnityComponentPrototype\u00601",
+        "Quantum.QuantumUnityComponentPrototype",
+        "Quantum.QuantumMonoBehaviour",
+        "UnityEngine.MonoBehaviour",
+        "UnityEngine.Behaviour",
+        "UnityEngine.Component",
+        "UnityEngine.Object"
+      ],
+      "IsAbstract": false,
+      "GenericArity": 0,
+      "MergedDeclarations": 0,
+      "Declarations": []
+    },
+    {
+      "Type": "Quantum.QPrototypeDeathFlag",
+      "BaseChain": [
+        "Quantum.QPrototypeDeathFlag",
+        "Quantum.QuantumUnityComponentPrototype\u00601",
+        "Quantum.QuantumUnityComponentPrototype",
+        "Quantum.QuantumMonoBehaviour",
+        "UnityEngine.MonoBehaviour",
+        "UnityEngine.Behaviour",
+        "UnityEngine.Component",
+        "UnityEngine.Object"
+      ],
+      "IsAbstract": false,
+      "GenericArity": 0,
+      "MergedDeclarations": 0,
+      "Declarations": []
+    },
+    {
+      "Type": "Quantum.QPrototypeDestructible",
+      "BaseChain": [
+        "Quantum.QPrototypeDestructible",
+        "Quantum.QuantumUnityComponentPrototype\u00601",
+        "Quantum.QuantumUnityComponentPrototype",
+        "Quantum.QuantumMonoBehaviour",
+        "UnityEngine.MonoBehaviour",
+        "UnityEngine.Behaviour",
+        "UnityEngine.Component",
+        "UnityEngine.Object"
+      ],
+      "IsAbstract": false,
+      "GenericArity": 0,
+      "MergedDeclarations": 0,
+      "Declarations": []
+    },
+    {
+      "Type": "Quantum.QPrototypeDummyCharacter",
+      "BaseChain": [
+        "Quantum.QPrototypeDummyCharacter",
+        "Quantum.QuantumUnityComponentPrototype\u00601",
+        "Quantum.QuantumUnityComponentPrototype",
+        "Quantum.QuantumMonoBehaviour",
+        "UnityEngine.MonoBehaviour",
+        "UnityEngine.Behaviour",
+        "UnityEngine.Component",
+        "UnityEngine.Object"
+      ],
+      "IsAbstract": false,
+      "GenericArity": 0,
+      "MergedDeclarations": 0,
+      "Declarations": []
+    },
+    {
+      "Type": "Quantum.QPrototypeEntityDestroyer",
+      "BaseChain": [
+        "Quantum.QPrototypeEntityDestroyer",
+        "Quantum.QuantumUnityComponentPrototype\u00601",
+        "Quantum.QuantumUnityComponentPrototype",
+        "Quantum.QuantumMonoBehaviour",
+        "UnityEngine.MonoBehaviour",
+        "UnityEngine.Behaviour",
+        "UnityEngine.Component",
+        "UnityEngine.Object"
+      ],
+      "IsAbstract": false,
+      "GenericArity": 0,
+      "MergedDeclarations": 0,
+      "Declarations": []
+    },
+    {
+      "Type": "Quantum.QPrototypeEntityGroup",
+      "BaseChain": [
+        "Quantum.QPrototypeEntityGroup",
+        "Quantum.QuantumUnityComponentPrototype\u00601",
+        "Quantum.QuantumUnityComponentPrototype",
+        "Quantum.QuantumMonoBehaviour",
+        "UnityEngine.MonoBehaviour",
+        "UnityEngine.Behaviour",
+        "UnityEngine.Component",
+        "UnityEngine.Object"
+      ],
+      "IsAbstract": false,
+      "GenericArity": 0,
+      "MergedDeclarations": 0,
+      "Declarations": []
+    },
+    {
+      "Type": "Quantum.QPrototypeEquipmentCollectable",
+      "BaseChain": [
+        "Quantum.QPrototypeEquipmentCollectable",
+        "Quantum.QuantumUnityComponentPrototype\u00601",
+        "Quantum.QuantumUnityComponentPrototype",
+        "Quantum.QuantumMonoBehaviour",
+        "UnityEngine.MonoBehaviour",
+        "UnityEngine.Behaviour",
+        "UnityEngine.Component",
+        "UnityEngine.Object"
+      ],
+      "IsAbstract": false,
+      "GenericArity": 0,
+      "MergedDeclarations": 0,
+      "Declarations": []
+    },
+    {
+      "Type": "Quantum.QPrototypeGameContainer",
+      "BaseChain": [
+        "Quantum.QPrototypeGameContainer",
+        "Quantum.QuantumUnityComponentPrototype\u00601",
+        "Quantum.QuantumUnityComponentPrototype",
+        "Quantum.QuantumMonoBehaviour",
+        "UnityEngine.MonoBehaviour",
+        "UnityEngine.Behaviour",
+        "UnityEngine.Component",
+        "UnityEngine.Object"
+      ],
+      "IsAbstract": false,
+      "GenericArity": 0,
+      "MergedDeclarations": 0,
+      "Declarations": []
+    },
+    {
+      "Type": "Quantum.QPrototypeGate",
+      "BaseChain": [
+        "Quantum.QPrototypeGate",
+        "Quantum.QuantumUnityComponentPrototype\u00601",
+        "Quantum.QuantumUnityComponentPrototype",
+        "Quantum.QuantumMonoBehaviour",
+        "UnityEngine.MonoBehaviour",
+        "UnityEngine.Behaviour",
+        "UnityEngine.Component",
+        "UnityEngine.Object"
+      ],
+      "IsAbstract": false,
+      "GenericArity": 0,
+      "MergedDeclarations": 0,
+      "Declarations": []
+    },
+    {
+      "Type": "Quantum.QPrototypeHazard",
+      "BaseChain": [
+        "Quantum.QPrototypeHazard",
+        "Quantum.QuantumUnityComponentPrototype\u00601",
+        "Quantum.QuantumUnityComponentPrototype",
+        "Quantum.QuantumMonoBehaviour",
+        "UnityEngine.MonoBehaviour",
+        "UnityEngine.Behaviour",
+        "UnityEngine.Component",
+        "UnityEngine.Object"
+      ],
+      "IsAbstract": false,
+      "GenericArity": 0,
+      "MergedDeclarations": 0,
+      "Declarations": []
+    },
+    {
+      "Type": "Quantum.QPrototypeImmunity",
+      "BaseChain": [
+        "Quantum.QPrototypeImmunity",
+        "Quantum.QuantumUnityComponentPrototype\u00601",
+        "Quantum.QuantumUnityComponentPrototype",
+        "Quantum.QuantumMonoBehaviour",
+        "UnityEngine.MonoBehaviour",
+        "UnityEngine.Behaviour",
+        "UnityEngine.Component",
+        "UnityEngine.Object"
+      ],
+      "IsAbstract": false,
+      "GenericArity": 0,
+      "MergedDeclarations": 0,
+      "Declarations": []
+    },
+    {
+      "Type": "Quantum.QPrototypeInsideVisibilityArea",
+      "BaseChain": [
+        "Quantum.QPrototypeInsideVisibilityArea",
+        "Quantum.QuantumUnityComponentPrototype\u00601",
+        "Quantum.QuantumUnityComponentPrototype",
+        "Quantum.QuantumMonoBehaviour",
+        "UnityEngine.MonoBehaviour",
+        "UnityEngine.Behaviour",
+        "UnityEngine.Component",
+        "UnityEngine.Object"
+      ],
+      "IsAbstract": false,
+      "GenericArity": 0,
+      "MergedDeclarations": 0,
+      "Declarations": []
+    },
+    {
+      "Type": "Quantum.QPrototypeInvisibility",
+      "BaseChain": [
+        "Quantum.QPrototypeInvisibility",
+        "Quantum.QuantumUnityComponentPrototype\u00601",
+        "Quantum.QuantumUnityComponentPrototype",
+        "Quantum.QuantumMonoBehaviour",
+        "UnityEngine.MonoBehaviour",
+        "UnityEngine.Behaviour",
+        "UnityEngine.Component",
+        "UnityEngine.Object"
+      ],
+      "IsAbstract": false,
+      "GenericArity": 0,
+      "MergedDeclarations": 0,
+      "Declarations": []
+    },
+    {
+      "Type": "Quantum.QPrototypeKnockedOut",
+      "BaseChain": [
+        "Quantum.QPrototypeKnockedOut",
+        "Quantum.QuantumUnityComponentPrototype\u00601",
+        "Quantum.QuantumUnityComponentPrototype",
+        "Quantum.QuantumMonoBehaviour",
+        "UnityEngine.MonoBehaviour",
+        "UnityEngine.Behaviour",
+        "UnityEngine.Component",
+        "UnityEngine.Object"
+      ],
+      "IsAbstract": false,
+      "GenericArity": 0,
+      "MergedDeclarations": 0,
+      "Declarations": []
+    },
+    {
+      "Type": "Quantum.QPrototypeKnockedOutCollider",
+      "BaseChain": [
+        "Quantum.QPrototypeKnockedOutCollider",
+        "Quantum.QuantumUnityComponentPrototype\u00601",
+        "Quantum.QuantumUnityComponentPrototype",
+        "Quantum.QuantumMonoBehaviour",
+        "UnityEngine.MonoBehaviour",
+        "UnityEngine.Behaviour",
+        "UnityEngine.Component",
+        "UnityEngine.Object"
+      ],
+      "IsAbstract": false,
+      "GenericArity": 0,
+      "MergedDeclarations": 0,
+      "Declarations": []
+    },
+    {
+      "Type": "Quantum.QPrototypeLandMine",
+      "BaseChain": [
+        "Quantum.QPrototypeLandMine",
+        "Quantum.QuantumUnityComponentPrototype\u00601",
+        "Quantum.QuantumUnityComponentPrototype",
+        "Quantum.QuantumMonoBehaviour",
+        "UnityEngine.MonoBehaviour",
+        "UnityEngine.Behaviour",
+        "UnityEngine.Component",
+        "UnityEngine.Object"
+      ],
+      "IsAbstract": false,
+      "GenericArity": 0,
+      "MergedDeclarations": 0,
+      "Declarations": []
+    },
+    {
+      "Type": "Quantum.QPrototypePlayerCharacter",
+      "BaseChain": [
+        "Quantum.QPrototypePlayerCharacter",
+        "Quantum.QuantumUnityComponentPrototype\u00601",
+        "Quantum.QuantumUnityComponentPrototype",
+        "Quantum.QuantumMonoBehaviour",
+        "UnityEngine.MonoBehaviour",
+        "UnityEngine.Behaviour",
+        "UnityEngine.Component",
+        "UnityEngine.Object"
+      ],
+      "IsAbstract": false,
+      "GenericArity": 0,
+      "MergedDeclarations": 0,
+      "Declarations": []
+    },
+    {
+      "Type": "Quantum.QPrototypePlayerCharging",
+      "BaseChain": [
+        "Quantum.QPrototypePlayerCharging",
+        "Quantum.QuantumUnityComponentPrototype\u00601",
+        "Quantum.QuantumUnityComponentPrototype",
+        "Quantum.QuantumMonoBehaviour",
+        "UnityEngine.MonoBehaviour",
+        "UnityEngine.Behaviour",
+        "UnityEngine.Component",
+        "UnityEngine.Object"
+      ],
+      "IsAbstract": false,
+      "GenericArity": 0,
+      "MergedDeclarations": 0,
+      "Declarations": []
+    },
+    {
+      "Type": "Quantum.QPrototypePlayerInventory",
+      "BaseChain": [
+        "Quantum.QPrototypePlayerInventory",
+        "Quantum.QuantumUnityComponentPrototype\u00601",
+        "Quantum.QuantumUnityComponentPrototype",
+        "Quantum.QuantumMonoBehaviour",
+        "UnityEngine.MonoBehaviour",
+        "UnityEngine.Behaviour",
+        "UnityEngine.Component",
+        "UnityEngine.Object"
+      ],
+      "IsAbstract": false,
+      "GenericArity": 0,
+      "MergedDeclarations": 0,
+      "Declarations": []
+    },
+    {
+      "Type": "Quantum.QPrototypePlayerSpawner",
+      "BaseChain": [
+        "Quantum.QPrototypePlayerSpawner",
+        "Quantum.QuantumUnityComponentPrototype\u00601",
+        "Quantum.QuantumUnityComponentPrototype",
+        "Quantum.QuantumMonoBehaviour",
+        "UnityEngine.MonoBehaviour",
+        "UnityEngine.Behaviour",
+        "UnityEngine.Component",
+        "UnityEngine.Object"
+      ],
+      "IsAbstract": false,
+      "GenericArity": 0,
+      "MergedDeclarations": 0,
+      "Declarations": []
+    },
+    {
+      "Type": "Quantum.QPrototypeProjectile",
+      "BaseChain": [
+        "Quantum.QPrototypeProjectile",
+        "Quantum.QuantumUnityComponentPrototype\u00601",
+        "Quantum.QuantumUnityComponentPrototype",
+        "Quantum.QuantumMonoBehaviour",
+        "UnityEngine.MonoBehaviour",
+        "UnityEngine.Behaviour",
+        "UnityEngine.Component",
+        "UnityEngine.Object"
+      ],
+      "IsAbstract": false,
+      "GenericArity": 0,
+      "MergedDeclarations": 0,
+      "Declarations": []
+    },
+    {
+      "Type": "Quantum.QPrototypeRage",
+      "BaseChain": [
+        "Quantum.QPrototypeRage",
+        "Quantum.QuantumUnityComponentPrototype\u00601",
+        "Quantum.QuantumUnityComponentPrototype",
+        "Quantum.QuantumMonoBehaviour",
+        "UnityEngine.MonoBehaviour",
+        "UnityEngine.Behaviour",
+        "UnityEngine.Component",
+        "UnityEngine.Object"
+      ],
+      "IsAbstract": false,
+      "GenericArity": 0,
+      "MergedDeclarations": 0,
+      "Declarations": []
+    },
+    {
+      "Type": "Quantum.QPrototypeRaycastShots",
+      "BaseChain": [
+        "Quantum.QPrototypeRaycastShots",
+        "Quantum.QuantumUnityComponentPrototype\u00601",
+        "Quantum.QuantumUnityComponentPrototype",
+        "Quantum.QuantumMonoBehaviour",
+        "UnityEngine.MonoBehaviour",
+        "UnityEngine.Behaviour",
+        "UnityEngine.Component",
+        "UnityEngine.Object"
+      ],
+      "IsAbstract": false,
+      "GenericArity": 0,
+      "MergedDeclarations": 0,
+      "Declarations": []
+    },
+    {
+      "Type": "Quantum.QPrototypeRegeneration",
+      "BaseChain": [
+        "Quantum.QPrototypeRegeneration",
+        "Quantum.QuantumUnityComponentPrototype\u00601",
+        "Quantum.QuantumUnityComponentPrototype",
+        "Quantum.QuantumMonoBehaviour",
+        "UnityEngine.MonoBehaviour",
+        "UnityEngine.Behaviour",
+        "UnityEngine.Component",
+        "UnityEngine.Object"
+      ],
+      "IsAbstract": false,
+      "GenericArity": 0,
+      "MergedDeclarations": 0,
+      "Declarations": []
+    },
+    {
+      "Type": "Quantum.QPrototypeRevivable",
+      "BaseChain": [
+        "Quantum.QPrototypeRevivable",
+        "Quantum.QuantumUnityComponentPrototype\u00601",
+        "Quantum.QuantumUnityComponentPrototype",
+        "Quantum.QuantumMonoBehaviour",
+        "UnityEngine.MonoBehaviour",
+        "UnityEngine.Behaviour",
+        "UnityEngine.Component",
+        "UnityEngine.Object"
+      ],
+      "IsAbstract": false,
+      "GenericArity": 0,
+      "MergedDeclarations": 0,
+      "Declarations": []
+    },
+    {
+      "Type": "Quantum.QPrototypeShrinkingCircle",
+      "BaseChain": [
+        "Quantum.QPrototypeShrinkingCircle",
+        "Quantum.QuantumUnityComponentPrototype\u00601",
+        "Quantum.QuantumUnityComponentPrototype",
+        "Quantum.QuantumMonoBehaviour",
+        "UnityEngine.MonoBehaviour",
+        "UnityEngine.Behaviour",
+        "UnityEngine.Component",
+        "UnityEngine.Object"
+      ],
+      "IsAbstract": false,
+      "GenericArity": 0,
+      "MergedDeclarations": 0,
+      "Declarations": []
+    },
+    {
+      "Type": "Quantum.QPrototypeSpell",
+      "BaseChain": [
+        "Quantum.QPrototypeSpell",
+        "Quantum.QuantumUnityComponentPrototype\u00601",
+        "Quantum.QuantumUnityComponentPrototype",
+        "Quantum.QuantumMonoBehaviour",
+        "UnityEngine.MonoBehaviour",
+        "UnityEngine.Behaviour",
+        "UnityEngine.Component",
+        "UnityEngine.Object"
+      ],
+      "IsAbstract": false,
+      "GenericArity": 0,
+      "MergedDeclarations": 0,
+      "Declarations": []
+    },
+    {
+      "Type": "Quantum.QPrototypeStar",
+      "BaseChain": [
+        "Quantum.QPrototypeStar",
+        "Quantum.QuantumUnityComponentPrototype\u00601",
+        "Quantum.QuantumUnityComponentPrototype",
+        "Quantum.QuantumMonoBehaviour",
+        "UnityEngine.MonoBehaviour",
+        "UnityEngine.Behaviour",
+        "UnityEngine.Component",
+        "UnityEngine.Object"
+      ],
+      "IsAbstract": false,
+      "GenericArity": 0,
+      "MergedDeclarations": 0,
+      "Declarations": []
+    },
+    {
+      "Type": "Quantum.QPrototypeStats",
+      "BaseChain": [
+        "Quantum.QPrototypeStats",
+        "Quantum.QuantumUnityComponentPrototype\u00601",
+        "Quantum.QuantumUnityComponentPrototype",
+        "Quantum.QuantumMonoBehaviour",
+        "UnityEngine.MonoBehaviour",
+        "UnityEngine.Behaviour",
+        "UnityEngine.Component",
+        "UnityEngine.Object"
+      ],
+      "IsAbstract": false,
+      "GenericArity": 0,
+      "MergedDeclarations": 0,
+      "Declarations": []
+    },
+    {
+      "Type": "Quantum.QPrototypeStormAnchor",
+      "BaseChain": [
+        "Quantum.QPrototypeStormAnchor",
+        "Quantum.QuantumUnityComponentPrototype\u00601",
+        "Quantum.QuantumUnityComponentPrototype",
+        "Quantum.QuantumMonoBehaviour",
+        "UnityEngine.MonoBehaviour",
+        "UnityEngine.Behaviour",
+        "UnityEngine.Component",
+        "UnityEngine.Object"
+      ],
+      "IsAbstract": false,
+      "GenericArity": 0,
+      "MergedDeclarations": 0,
+      "Declarations": []
+    },
+    {
+      "Type": "Quantum.QPrototypeStun",
+      "BaseChain": [
+        "Quantum.QPrototypeStun",
+        "Quantum.QuantumUnityComponentPrototype\u00601",
+        "Quantum.QuantumUnityComponentPrototype",
+        "Quantum.QuantumMonoBehaviour",
+        "UnityEngine.MonoBehaviour",
+        "UnityEngine.Behaviour",
+        "UnityEngine.Component",
+        "UnityEngine.Object"
+      ],
+      "IsAbstract": false,
+      "GenericArity": 0,
+      "MergedDeclarations": 0,
+      "Declarations": []
+    },
+    {
+      "Type": "Quantum.QPrototypeTargetable",
+      "BaseChain": [
+        "Quantum.QPrototypeTargetable",
+        "Quantum.QuantumUnityComponentPrototype\u00601",
+        "Quantum.QuantumUnityComponentPrototype",
+        "Quantum.QuantumMonoBehaviour",
+        "UnityEngine.MonoBehaviour",
+        "UnityEngine.Behaviour",
+        "UnityEngine.Component",
+        "UnityEngine.Object"
+      ],
+      "IsAbstract": false,
+      "GenericArity": 0,
+      "MergedDeclarations": 0,
+      "Declarations": []
+    },
+    {
+      "Type": "Quantum.QPrototypeTeamMember",
+      "BaseChain": [
+        "Quantum.QPrototypeTeamMember",
+        "Quantum.QuantumUnityComponentPrototype\u00601",
+        "Quantum.QuantumUnityComponentPrototype",
+        "Quantum.QuantumMonoBehaviour",
+        "UnityEngine.MonoBehaviour",
+        "UnityEngine.Behaviour",
+        "UnityEngine.Component",
+        "UnityEngine.Object"
+      ],
+      "IsAbstract": false,
+      "GenericArity": 0,
+      "MergedDeclarations": 0,
+      "Declarations": []
+    },
+    {
+      "Type": "Quantum.QPrototypeTopDownController",
+      "BaseChain": [
+        "Quantum.QPrototypeTopDownController",
+        "Quantum.QuantumUnityComponentPrototype\u00601",
+        "Quantum.QuantumUnityComponentPrototype",
+        "Quantum.QuantumMonoBehaviour",
+        "UnityEngine.MonoBehaviour",
+        "UnityEngine.Behaviour",
+        "UnityEngine.Component",
+        "UnityEngine.Object"
+      ],
+      "IsAbstract": false,
+      "GenericArity": 0,
+      "MergedDeclarations": 0,
+      "Declarations": []
+    },
+    {
+      "Type": "Quantum.QPrototypeTrigger",
+      "BaseChain": [
+        "Quantum.QPrototypeTrigger",
+        "Quantum.QuantumUnityComponentPrototype\u00601",
+        "Quantum.QuantumUnityComponentPrototype",
+        "Quantum.QuantumMonoBehaviour",
+        "UnityEngine.MonoBehaviour",
+        "UnityEngine.Behaviour",
+        "UnityEngine.Component",
+        "UnityEngine.Object"
+      ],
+      "IsAbstract": false,
+      "GenericArity": 0,
+      "MergedDeclarations": 0,
+      "Declarations": []
+    },
+    {
+      "Type": "Quantum.QPrototypeTutorialRuntimeData",
+      "BaseChain": [
+        "Quantum.QPrototypeTutorialRuntimeData",
+        "Quantum.QuantumUnityComponentPrototype\u00601",
+        "Quantum.QuantumUnityComponentPrototype",
+        "Quantum.QuantumMonoBehaviour",
+        "UnityEngine.MonoBehaviour",
+        "UnityEngine.Behaviour",
+        "UnityEngine.Component",
+        "UnityEngine.Object"
+      ],
+      "IsAbstract": false,
+      "GenericArity": 0,
+      "MergedDeclarations": 0,
+      "Declarations": []
+    },
+    {
+      "Type": "Quantum.QPrototypeVisibilityArea",
+      "BaseChain": [
+        "Quantum.QPrototypeVisibilityArea",
+        "Quantum.QuantumUnityComponentPrototype\u00601",
+        "Quantum.QuantumUnityComponentPrototype",
+        "Quantum.QuantumMonoBehaviour",
+        "UnityEngine.MonoBehaviour",
+        "UnityEngine.Behaviour",
+        "UnityEngine.Component",
+        "UnityEngine.Object"
+      ],
+      "IsAbstract": false,
+      "GenericArity": 0,
+      "MergedDeclarations": 0,
+      "Declarations": []
+    },
+    {
+      "Type": "Quantum.Profiling.QuantumGraphProfiler\u00601",
+      "BaseChain": [
+        "Quantum.Profiling.QuantumGraphProfiler\u00601",
+        "Quantum.QuantumMonoBehaviour",
+        "UnityEngine.MonoBehaviour",
+        "UnityEngine.Behaviour",
+        "UnityEngine.Component",
+        "UnityEngine.Object"
+      ],
+      "IsAbstract": true,
+      "GenericArity": 1,
+      "MergedDeclarations": 0,
+      "Declarations": []
+    },
+    {
+      "Type": "Quantum.Profiling.QuantumGraphProfilerMarkerSeries",
+      "BaseChain": [
+        "Quantum.Profiling.QuantumGraphProfilerMarkerSeries",
+        "Quantum.Profiling.QuantumGraphProfiler\u00601",
+        "Quantum.QuantumMonoBehaviour",
+        "UnityEngine.MonoBehaviour",
+        "UnityEngine.Behaviour",
+        "UnityEngine.Component",
+        "UnityEngine.Object"
+      ],
+      "IsAbstract": true,
+      "GenericArity": 0,
+      "MergedDeclarations": 0,
+      "Declarations": []
+    },
+    {
+      "Type": "Quantum.Profiling.QuantumGraphProfilerValueSeries",
+      "BaseChain": [
+        "Quantum.Profiling.QuantumGraphProfilerValueSeries",
+        "Quantum.Profiling.QuantumGraphProfiler\u00601",
+        "Quantum.QuantumMonoBehaviour",
+        "UnityEngine.MonoBehaviour",
+        "UnityEngine.Behaviour",
+        "UnityEngine.Component",
+        "UnityEngine.Object"
+      ],
+      "IsAbstract": true,
+      "GenericArity": 0,
+      "MergedDeclarations": 0,
+      "Declarations": []
+    },
+    {
+      "Type": "Quantum.Profiling.QuantumGraphSeries",
+      "BaseChain": [
+        "Quantum.Profiling.QuantumGraphSeries",
+        "Quantum.QuantumMonoBehaviour",
+        "UnityEngine.MonoBehaviour",
+        "UnityEngine.Behaviour",
+        "UnityEngine.Component",
+        "UnityEngine.Object"
+      ],
+      "IsAbstract": true,
+      "GenericArity": 0,
+      "MergedDeclarations": 0,
+      "Declarations": []
+    },
+    {
+      "Type": "Quantum.Profiling.QuantumGraphProfilerDeltaTime",
+      "BaseChain": [
+        "Quantum.Profiling.QuantumGraphProfilerDeltaTime",
+        "Quantum.Profiling.QuantumGraphProfilerValueSeries",
+        "Quantum.Profiling.QuantumGraphProfiler\u00601",
+        "Quantum.QuantumMonoBehaviour",
+        "UnityEngine.MonoBehaviour",
+        "UnityEngine.Behaviour",
+        "UnityEngine.Component",
+        "UnityEngine.Object"
+      ],
+      "IsAbstract": false,
+      "GenericArity": 0,
+      "MergedDeclarations": 0,
+      "Declarations": []
+    },
+    {
+      "Type": "Quantum.Profiling.QuantumGraphProfilerFrameTime",
+      "BaseChain": [
+        "Quantum.Profiling.QuantumGraphProfilerFrameTime",
+        "Quantum.Profiling.QuantumGraphProfilerValueSeries",
+        "Quantum.Profiling.QuantumGraphProfiler\u00601",
+        "Quantum.QuantumMonoBehaviour",
+        "UnityEngine.MonoBehaviour",
+        "UnityEngine.Behaviour",
+        "UnityEngine.Component",
+        "UnityEngine.Object"
+      ],
+      "IsAbstract": false,
+      "GenericArity": 0,
+      "MergedDeclarations": 0,
+      "Declarations": []
+    },
+    {
+      "Type": "Quantum.Profiling.QuantumGraphProfilerGC",
+      "BaseChain": [
+        "Quantum.Profiling.QuantumGraphProfilerGC",
+        "Quantum.Profiling.QuantumGraphProfilerValueSeries",
+        "Quantum.Profiling.QuantumGraphProfiler\u00601",
+        "Quantum.QuantumMonoBehaviour",
+        "UnityEngine.MonoBehaviour",
+        "UnityEngine.Behaviour",
+        "UnityEngine.Component",
+        "UnityEngine.Object"
+      ],
+      "IsAbstract": false,
+      "GenericArity": 0,
+      "MergedDeclarations": 0,
+      "Declarations": []
+    },
+    {
+      "Type": "Quantum.Profiling.QuantumGraphProfilerMarkers",
+      "BaseChain": [
+        "Quantum.Profiling.QuantumGraphProfilerMarkers",
+        "Quantum.Profiling.QuantumGraphProfilerMarkerSeries",
+        "Quantum.Profiling.QuantumGraphProfiler\u00601",
+        "Quantum.QuantumMonoBehaviour",
+        "UnityEngine.MonoBehaviour",
+        "UnityEngine.Behaviour",
+        "UnityEngine.Component",
+        "UnityEngine.Object"
+      ],
+      "IsAbstract": false,
+      "GenericArity": 0,
+      "MergedDeclarations": 0,
+      "Declarations": []
+    },
+    {
+      "Type": "Quantum.Profiling.QuantumGraphProfilerNetworkActivity",
+      "BaseChain": [
+        "Quantum.Profiling.QuantumGraphProfilerNetworkActivity",
+        "Quantum.Profiling.QuantumGraphProfilerValueSeries",
+        "Quantum.Profiling.QuantumGraphProfiler\u00601",
+        "Quantum.QuantumMonoBehaviour",
+        "UnityEngine.MonoBehaviour",
+        "UnityEngine.Behaviour",
+        "UnityEngine.Component",
+        "UnityEngine.Object"
+      ],
+      "IsAbstract": false,
+      "GenericArity": 0,
+      "MergedDeclarations": 0,
+      "Declarations": []
+    },
+    {
+      "Type": "Quantum.Profiling.QuantumGraphProfilerPing",
+      "BaseChain": [
+        "Quantum.Profiling.QuantumGraphProfilerPing",
+        "Quantum.Profiling.QuantumGraphProfilerValueSeries",
+        "Quantum.Profiling.QuantumGraphProfiler\u00601",
+        "Quantum.QuantumMonoBehaviour",
+        "UnityEngine.MonoBehaviour",
+        "UnityEngine.Behaviour",
+        "UnityEngine.Component",
+        "UnityEngine.Object"
+      ],
+      "IsAbstract": false,
+      "GenericArity": 0,
+      "MergedDeclarations": 0,
+      "Declarations": []
+    },
+    {
+      "Type": "Quantum.Profiling.QuantumGraphProfilerPredictedFrames",
+      "BaseChain": [
+        "Quantum.Profiling.QuantumGraphProfilerPredictedFrames",
+        "Quantum.Profiling.QuantumGraphProfilerValueSeries",
+        "Quantum.Profiling.QuantumGraphProfiler\u00601",
+        "Quantum.QuantumMonoBehaviour",
+        "UnityEngine.MonoBehaviour",
+        "UnityEngine.Behaviour",
+        "UnityEngine.Component",
+        "UnityEngine.Object"
+      ],
+      "IsAbstract": false,
+      "GenericArity": 0,
+      "MergedDeclarations": 0,
+      "Declarations": []
+    },
+    {
+      "Type": "Quantum.Profiling.QuantumGraphProfilerRenderTime",
+      "BaseChain": [
+        "Quantum.Profiling.QuantumGraphProfilerRenderTime",
+        "Quantum.Profiling.QuantumGraphProfilerValueSeries",
+        "Quantum.Profiling.QuantumGraphProfiler\u00601",
+        "Quantum.QuantumMonoBehaviour",
+        "UnityEngine.MonoBehaviour",
+        "UnityEngine.Behaviour",
+        "UnityEngine.Component",
+        "UnityEngine.Object"
+      ],
+      "IsAbstract": false,
+      "GenericArity": 0,
+      "MergedDeclarations": 0,
+      "Declarations": []
+    },
+    {
+      "Type": "Quantum.Profiling.QuantumGraphProfilerSimulationTime",
+      "BaseChain": [
+        "Quantum.Profiling.QuantumGraphProfilerSimulationTime",
+        "Quantum.Profiling.QuantumGraphProfilerValueSeries",
+        "Quantum.Profiling.QuantumGraphProfiler\u00601",
+        "Quantum.QuantumMonoBehaviour",
+        "UnityEngine.MonoBehaviour",
+        "UnityEngine.Behaviour",
+        "UnityEngine.Component",
+        "UnityEngine.Object"
+      ],
+      "IsAbstract": false,
+      "GenericArity": 0,
+      "MergedDeclarations": 0,
+      "Declarations": []
+    },
+    {
+      "Type": "Quantum.Profiling.QuantumGraphProfilerUserScripts",
+      "BaseChain": [
+        "Quantum.Profiling.QuantumGraphProfilerUserScripts",
+        "Quantum.Profiling.QuantumGraphProfilerValueSeries",
+        "Quantum.Profiling.QuantumGraphProfiler\u00601",
+        "Quantum.QuantumMonoBehaviour",
+        "UnityEngine.MonoBehaviour",
+        "UnityEngine.Behaviour",
+        "UnityEngine.Component",
+        "UnityEngine.Object"
+      ],
+      "IsAbstract": false,
+      "GenericArity": 0,
+      "MergedDeclarations": 0,
+      "Declarations": []
+    },
+    {
+      "Type": "Quantum.Profiling.QuantumGraphProfilerVerifiedFrames",
+      "BaseChain": [
+        "Quantum.Profiling.QuantumGraphProfilerVerifiedFrames",
+        "Quantum.Profiling.QuantumGraphProfilerValueSeries",
+        "Quantum.Profiling.QuantumGraphProfiler\u00601",
+        "Quantum.QuantumMonoBehaviour",
+        "UnityEngine.MonoBehaviour",
+        "UnityEngine.Behaviour",
+        "UnityEngine.Component",
+        "UnityEngine.Object"
+      ],
+      "IsAbstract": false,
+      "GenericArity": 0,
+      "MergedDeclarations": 0,
+      "Declarations": []
+    },
+    {
+      "Type": "Quantum.Profiling.QuantumGraphProfilingStatistics",
+      "BaseChain": [
+        "Quantum.Profiling.QuantumGraphProfilingStatistics",
+        "Quantum.QuantumMonoBehaviour",
+        "UnityEngine.MonoBehaviour",
+        "UnityEngine.Behaviour",
+        "UnityEngine.Component",
+        "UnityEngine.Object"
+      ],
+      "IsAbstract": false,
+      "GenericArity": 0,
+      "MergedDeclarations": 0,
+      "Declarations": []
+    },
+    {
+      "Type": "Quantum.Profiling.QuantumGraphProfilingTools",
+      "BaseChain": [
+        "Quantum.Profiling.QuantumGraphProfilingTools",
+        "Quantum.QuantumMonoBehaviour",
+        "UnityEngine.MonoBehaviour",
+        "UnityEngine.Behaviour",
+        "UnityEngine.Component",
+        "UnityEngine.Object"
+      ],
+      "IsAbstract": false,
+      "GenericArity": 0,
+      "MergedDeclarations": 0,
+      "Declarations": []
+    },
+    {
+      "Type": "Quantum.Profiling.QuantumGraphSeriesMarker",
+      "BaseChain": [
+        "Quantum.Profiling.QuantumGraphSeriesMarker",
+        "Quantum.Profiling.QuantumGraphSeries",
+        "Quantum.QuantumMonoBehaviour",
+        "UnityEngine.MonoBehaviour",
+        "UnityEngine.Behaviour",
+        "UnityEngine.Component",
+        "UnityEngine.Object"
+      ],
+      "IsAbstract": false,
+      "GenericArity": 0,
+      "MergedDeclarations": 0,
+      "Declarations": []
+    },
+    {
+      "Type": "Quantum.Profiling.QuantumGraphSeriesValue",
+      "BaseChain": [
+        "Quantum.Profiling.QuantumGraphSeriesValue",
+        "Quantum.Profiling.QuantumGraphSeries",
+        "Quantum.QuantumMonoBehaviour",
+        "UnityEngine.MonoBehaviour",
+        "UnityEngine.Behaviour",
+        "UnityEngine.Component",
+        "UnityEngine.Object"
+      ],
+      "IsAbstract": false,
+      "GenericArity": 0,
+      "MergedDeclarations": 0,
+      "Declarations": []
+    },
+    {
+      "Type": "Quantum.Demo.QuantumSimpleConnectionGUI",
+      "BaseChain": [
+        "Quantum.Demo.QuantumSimpleConnectionGUI",
+        "Quantum.QuantumMonoBehaviour",
+        "UnityEngine.MonoBehaviour",
+        "UnityEngine.Behaviour",
+        "UnityEngine.Component",
+        "UnityEngine.Object"
+      ],
+      "IsAbstract": false,
+      "GenericArity": 0,
+      "MergedDeclarations": 0,
+      "Declarations": []
+    },
+    {
+      "Type": "Quantum.Demo.Legacy.CustomCallbacks",
+      "BaseChain": [
+        "Quantum.Demo.Legacy.CustomCallbacks",
+        "Quantum.QuantumCallbacks",
+        "Quantum.QuantumMonoBehaviour",
+        "UnityEngine.MonoBehaviour",
+        "UnityEngine.Behaviour",
+        "UnityEngine.Component",
+        "UnityEngine.Object"
+      ],
+      "IsAbstract": false,
+      "GenericArity": 0,
+      "MergedDeclarations": 0,
+      "Declarations": []
+    },
+    {
+      "Type": "Quantum.Demo.Legacy.RuntimeConfigContainer",
+      "BaseChain": [
+        "Quantum.Demo.Legacy.RuntimeConfigContainer",
+        "UnityEngine.MonoBehaviour",
+        "UnityEngine.Behaviour",
+        "UnityEngine.Component",
+        "UnityEngine.Object"
+      ],
+      "IsAbstract": false,
+      "GenericArity": 0,
+      "MergedDeclarations": 0,
+      "Declarations": []
+    }
+  ],
+  "ResolveFailures": []
+}

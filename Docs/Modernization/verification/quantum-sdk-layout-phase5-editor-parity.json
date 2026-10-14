@@ -1,0 +1,36 @@
+{
+  "Before": ".local/quantum-sdk-layout-audit/phase5-editor-before/Quantum.Unity.dll",
+  "After": ".local/quantum-sdk-layout-audit/phase5-editor-after/Quantum.Unity.dll",
+  "AssemblyTypeCount": 524,
+  "AssemblyMethodCount": 2416,
+  "AssemblyApiEqual": true,
+  "AssemblyMethodILEqual": true,
+  "RelocatedTypeCount": 3,
+  "Rows": [
+    {
+      "Type": "Quantum.QuantumUnityComponentPrototype",
+      "Fields": 0,
+      "Methods": 11,
+      "AllDeclaredFieldOrderTypesAndAttributesEqual": true,
+      "ApiSha256": "520e11b54942b98485f9646241c6d42e170332a9ea5af937f0c20184576e9b1b",
+      "AllMethodILPreserved": true
+    },
+    {
+      "Type": "Quantum.QuantumEntityViewComponent",
+      "Fields": 0,
+      "Methods": 1,
+      "AllDeclaredFieldOrderTypesAndAttributesEqual": true,
+      "ApiSha256": "a2bb9ad65038940f5e36a3f36141d6b6e93b270008c89b8fa918d5b4fe315075",
+      "AllMethodILPreserved": true
+    },
+    {
+      "Type": "Quantum.QuantumSceneViewComponent",
+      "Fields": 0,
+      "Methods": 1,
+      "AllDeclaredFieldOrderTypesAndAttributesEqual": true,
+      "ApiSha256": "cc8b5a5b223ae61019d77f2968204c5c71d02d120e0eaf74abc0071be390ca21",
+      "AllMethodILPreserved": true
+    }
+  ],
+  "Differences": []
+}

@@ -1,0 +1,40 @@
+{
+  "Status": "Source/API parity passed; remaining native-warning cause unresolved",
+  "SourceManifest": "Tools/Modernization/QuantumSdkLayout/manifest-phase3.json",
+  "Types": [
+    "Quantum.QuantumGameGizmosSettings",
+    "Quantum.QuantumNavMesh",
+    "Quantum.QuantumAssetSourceAddressable`1",
+    "Quantum.QuantumAssetSourceResource`1",
+    "Quantum.QuantumAssetSourceStatic`1",
+    "Quantum.QuantumAssetSourceStaticLazy`1"
+  ],
+  "ExistingMetadata": "Merged source meta unchanged; none of the six standalone canonical source/meta files existed before relocation",
+  "NewPrivateSourceMetas": 6,
+  "MovedDeclarations": 6,
+  "Editor": {
+    "CompileErrors": 0,
+    "CompileWarnings": 0,
+    "AssemblyTypes": 524,
+    "AssemblyMethods": 2416,
+    "ApiGenericConstraintsAndMethodILEqual": true
+  },
+  "Player": {
+    "CompileErrors": 0,
+    "CompileWarnings": 0,
+    "AssemblyTypes": 502,
+    "AssemblyMethods": 2231,
+    "ApiGenericConstraintsAndMethodILEqual": true
+  },
+  "AddressablesDisabled": {
+    "BeforeAfterCompileErrors": 0,
+    "BeforeAfterCompileWarnings": 0,
+    "ApiGenericConstraintsAndMethodILEqual": true,
+    "OriginalCompilationGuardPreserved": true
+  },
+  "DeclaredFieldOrderEqualIncludingNestedTypes": true,
+  "EarlierManifestOutputHashesRecomputedAndUnchanged": true,
+  "MainWritesByThisAgent": false,
+  "NativeWarnings": 6,
+  "NativeWarningConclusion": "Native import did not reduce the remaining six warnings; warning-cause hypothesis disproven"
+}

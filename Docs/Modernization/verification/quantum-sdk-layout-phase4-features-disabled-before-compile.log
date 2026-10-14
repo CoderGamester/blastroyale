@@ -1,0 +1,3 @@
+BlastRoyale/Assets/Photon/Quantum/Runtime/QPrototypePhysicsCollider3D.cs(120,7): error CS0162: Unreachable code detected
+BlastRoyale/Assets/Photon/Quantum/Runtime/QPrototypePhysicsCollider2D.cs(144,7): error CS0162: Unreachable code detected
+BlastRoyale/Assets/Photon/Quantum/Runtime/QuantumUnityRuntime.cs(3699,22): error CS1522: Empty switch block

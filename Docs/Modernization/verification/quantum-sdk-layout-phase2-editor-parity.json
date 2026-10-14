@@ -1,0 +1,28 @@
+{
+  "Before": ".local/quantum-sdk-layout-audit/phase2-editor-before/Quantum.Unity.dll",
+  "After": ".local/quantum-sdk-layout-audit/phase2-editor-after/Quantum.Unity.dll",
+  "AssemblyTypeCount": 524,
+  "AssemblyMethodCount": 2416,
+  "AssemblyApiEqual": true,
+  "AssemblyMethodILEqual": true,
+  "RelocatedTypeCount": 2,
+  "Rows": [
+    {
+      "Type": "Quantum.QuantumMenuSceneInfo",
+      "Fields": 5,
+      "Methods": 7,
+      "AllDeclaredFieldOrderTypesAndAttributesEqual": true,
+      "ApiSha256": "773e4bbf773915e4131dbd2efc41dcc917336125c596125df9002f49b80bfc3a",
+      "AllMethodILPreserved": true
+    },
+    {
+      "Type": "Quantum.QuantumGlobalScriptableObject\u00601",
+      "Fields": 3,
+      "Methods": 22,
+      "AllDeclaredFieldOrderTypesAndAttributesEqual": true,
+      "ApiSha256": "dbe663f74bc2a1c14f13c699b079324923fb9177136fc666373c81b6fffe1cfb",
+      "AllMethodILPreserved": true
+    }
+  ],
+  "Differences": []
+}

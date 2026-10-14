@@ -1,0 +1,40 @@
+{
+  "Status": "Source/API parity passed; remaining native-warning cause unresolved",
+  "SourceManifest": "Tools/Modernization/QuantumSdkLayout/manifest-phase4.json",
+  "Types": [
+    "Quantum.QuantumGameGizmos"
+  ],
+  "MovedDeclarations": 7,
+  "ExistingMetadata": "Merged source meta unchanged; standalone GameGizmos source/meta did not exist",
+  "NewPrivateSourceMetas": 1,
+  "Editor": {
+    "CompileErrors": 0,
+    "CompileWarnings": 0,
+    "AssemblyTypes": 524,
+    "AssemblyMethods": 2416,
+    "FullApiGenericConstraintsAndMethodILEqual": true,
+    "DeclaredFieldOrderIncludingNestedTypesEqual": true
+  },
+  "Player": {
+    "CompileErrors": 0,
+    "CompileWarnings": 0,
+    "AssemblyTypes": 502,
+    "AssemblyMethods": 2231,
+    "FullApiGenericConstraintsAndMethodILEqual": true,
+    "GameGizmosPresent": false,
+    "Reason": "Original and relocated class are Editor-only"
+  },
+  "ConditionalContexts": "Each body retains its original full condition; repeated namespace imports emitted once under union of exact original conditions",
+  "ExtraDisabledFeaturesProbe": {
+    "Status": "Existing SDK optional-feature diagnostics identical before/after; not a passing warnings-as-errors configuration",
+    "Diagnostics": [
+      "CS0162 QPrototypePhysicsCollider2D",
+      "CS0162 QPrototypePhysicsCollider3D",
+      "CS1522 QuantumGameGizmos empty switch"
+    ],
+    "NewDiagnostics": 0
+  },
+  "MainWritesByThisAgent": false,
+  "NativeWarnings": 6,
+  "NativeWarningConclusion": "Native import did not reduce the remaining six warnings; warning-cause hypothesis disproven"
+}

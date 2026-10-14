@@ -1,0 +1,33 @@
+{
+  "Version": 1,
+  "Sdk": "Photon Quantum 3.0.14 Stable 2241 after reviewed eleven-type layout",
+  "MergedPath": "Assets/Photon/Quantum/Runtime/QuantumUnityRuntime.cs",
+  "MergedBeforeSha256": "b69c8592067ccb7baf013ebe1ac2b1badfd66a6743aa79484c8a14e488861655",
+  "MergedAfterSha256": "5bd95eedfb4224cb4dd26dc7aa824782cf794d2c02cc3917ef4c3a2e4b2b8ea0",
+  "MergedMetaSha256": "e4ba4868f3e0c2ba23b7c56035ba3fcf27af73f30d109fd0395963a229fa72bc",
+  "BackupDirectory": ".modernization-sdk-layout-phase2-backup",
+  "Targets": [
+    {
+      "Name": "QuantumMenuSceneInfo",
+      "GenericArity": 0,
+      "MergedDeclarationCount": 1,
+      "RelativePath": "Assets/Photon/Quantum/Runtime/QuantumMenuSceneInfo.cs",
+      "SourceBeforeSha256": "1ab8e32f77b7b77696d660d11ebe6b1f1c030c5dcdfbc72e6dead6fe9c5798bb",
+      "SourceAfterSha256": "fce12a96b6e77fbd89aaf4daa5fee016d30647ceb1d4a7fa593d8d3484f3ebb9",
+      "MetaSha256": "9578e8e8ecb98e5718d647971100006d89ebc8db3d4006f5eea7bce343ce7e80",
+      "NewMetaSha256": null,
+      "Guid": "5ef11b24dd8b636479cc530200469ee2"
+    },
+    {
+      "Name": "QuantumGlobalScriptableObject",
+      "GenericArity": 1,
+      "MergedDeclarationCount": 2,
+      "RelativePath": "Assets/Photon/Quantum/Runtime/QuantumGlobalScriptableObject.cs",
+      "SourceBeforeSha256": null,
+      "SourceAfterSha256": "22b8abb1937fbea72120e21cca1e716434b8b9c6ff5f2dee9c022743399ce504",
+      "MetaSha256": null,
+      "NewMetaSha256": "f2441855d3c919691c467a832e32a72db9ae5ad4996190bd9c8a455bbbcd15ca",
+      "Guid": "db5b21af70d14e01bb842072bf080ff5"
+    }
+  ]
+}

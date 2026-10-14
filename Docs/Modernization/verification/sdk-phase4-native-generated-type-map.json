@@ -1,0 +1,2015 @@
+{
+  "Assembly": "Quantum.Unity, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+  "Rows": [
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/CustomCallbacks.cs",
+      "IsPartial": false,
+      "Type": "Quantum.Demo.Legacy|CustomCallbacks"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/GraphProfilers/QuantumUnityRuntime.GraphProfilers.cs",
+      "IsPartial": false,
+      "Type": "Quantum.Profiling|QuantumGraphPlayerLoopUtility"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/GraphProfilers/QuantumUnityRuntime.GraphProfilers.cs",
+      "IsPartial": false,
+      "Type": "Quantum.Profiling|QuantumGraphPool"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/GraphProfilers/QuantumUnityRuntime.GraphProfilers.cs",
+      "IsPartial": false,
+      "Type": "Quantum.Profiling|QuantumGraphProfiler"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/GraphProfilers/QuantumUnityRuntime.GraphProfilers.cs",
+      "IsPartial": false,
+      "Type": "Quantum.Profiling|QuantumGraphProfilerMarkerSeries"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/GraphProfilers/QuantumUnityRuntime.GraphProfilers.cs",
+      "IsPartial": false,
+      "Type": "Quantum.Profiling|QuantumGraphProfilers"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/GraphProfilers/QuantumUnityRuntime.GraphProfilers.cs",
+      "IsPartial": false,
+      "Type": "Quantum.Profiling|QuantumGraphProfilersUtility"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/GraphProfilers/QuantumUnityRuntime.GraphProfilers.cs",
+      "IsPartial": false,
+      "Type": "Quantum.Profiling|QuantumGraphProfilerValueSeries"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/GraphProfilers/QuantumUnityRuntime.GraphProfilers.cs",
+      "IsPartial": false,
+      "Type": "Quantum.Profiling|QuantumGraphSeries"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/GraphProfilers/QuantumUnityRuntime.GraphProfilers.cs",
+      "IsPartial": false,
+      "Type": "Quantum.Profiling|QuantumGraphTimer"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/PhotonServerSettings.cs",
+      "IsPartial": false,
+      "Type": "Quantum|PhotonServerSettings"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/QPrototypeCharacterController2D.cs",
+      "IsPartial": false,
+      "Type": "Quantum|QPrototypeCharacterController2D"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/QPrototypeCharacterController3D.cs",
+      "IsPartial": false,
+      "Type": "Quantum|QPrototypeCharacterController3D"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/QPrototypeNavMeshAvoidanceAgent.cs",
+      "IsPartial": false,
+      "Type": "Quantum|QPrototypeNavMeshAvoidanceAgent"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/QPrototypeNavMeshAvoidanceObstacle.cs",
+      "IsPartial": false,
+      "Type": "Quantum|QPrototypeNavMeshAvoidanceObstacle"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/QPrototypeNavMeshPathfinder.cs",
+      "IsPartial": false,
+      "Type": "Quantum|QPrototypeNavMeshPathfinder"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/QPrototypeNavMeshSteeringAgent.cs",
+      "IsPartial": false,
+      "Type": "Quantum|QPrototypeNavMeshSteeringAgent"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/QPrototypePhysicsBody2D.cs",
+      "IsPartial": false,
+      "Type": "Quantum|QPrototypePhysicsBody2D"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/QPrototypePhysicsBody3D.cs",
+      "IsPartial": false,
+      "Type": "Quantum|QPrototypePhysicsBody3D"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/QPrototypePhysicsCallbacks2D.cs",
+      "IsPartial": false,
+      "Type": "Quantum|QPrototypePhysicsCallbacks2D"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/QPrototypePhysicsCallbacks3D.cs",
+      "IsPartial": false,
+      "Type": "Quantum|QPrototypePhysicsCallbacks3D"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/QPrototypePhysicsCollider2D.cs",
+      "IsPartial": false,
+      "Type": "Quantum|QPrototypePhysicsCollider2D"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/QPrototypePhysicsCollider3D.cs",
+      "IsPartial": false,
+      "Type": "Quantum|QPrototypePhysicsCollider3D"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/QPrototypePhysicsJoints2D.cs",
+      "IsPartial": false,
+      "Type": "Quantum|QPrototypePhysicsJoints2D"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/QPrototypePhysicsJoints3D.cs",
+      "IsPartial": false,
+      "Type": "Quantum|QPrototypePhysicsJoints3D"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/QPrototypeTransform2D.cs",
+      "IsPartial": false,
+      "Type": "Quantum|QPrototypeTransform2D"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/QPrototypeTransform2DVertical.cs",
+      "IsPartial": false,
+      "Type": "Quantum|QPrototypeTransform2DVertical"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/QPrototypeTransform3D.cs",
+      "IsPartial": false,
+      "Type": "Quantum|QPrototypeTransform3D"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/QPrototypeView.cs",
+      "IsPartial": false,
+      "Type": "Quantum|QPrototypeView"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/QuantumAddRuntimePlayers.cs",
+      "IsPartial": false,
+      "Type": "Quantum|QuantumAddRuntimePlayers"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/QuantumAssetSourceAddressable.cs",
+      "IsPartial": false,
+      "Type": "Quantum|QuantumAssetSourceAddressable"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/QuantumAssetSourceResource.cs",
+      "IsPartial": false,
+      "Type": "Quantum|QuantumAssetSourceResource"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/QuantumAssetSourceStatic.cs",
+      "IsPartial": false,
+      "Type": "Quantum|QuantumAssetSourceStatic"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/QuantumAssetSourceStaticLazy.cs",
+      "IsPartial": false,
+      "Type": "Quantum|QuantumAssetSourceStaticLazy"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/QuantumDebugInput.cs",
+      "IsPartial": false,
+      "Type": "Quantum|QuantumDebugInput"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/QuantumDefaultConfigs.cs",
+      "IsPartial": false,
+      "Type": "Quantum|QuantumDefaultConfigs"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/QuantumDeterministicSessionConfigAsset.cs",
+      "IsPartial": false,
+      "Type": "Quantum|QuantumDeterministicSessionConfigAsset"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/QuantumEntityPrototype.cs",
+      "IsPartial": false,
+      "Type": "Quantum|QuantumEntityPrototype"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/QuantumEntityPrototype.cs",
+      "IsPartial": false,
+      "Type": "Quantum.QuantumEntityPrototype|Transform2DVerticalInfo"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/QuantumEntityPrototype.cs",
+      "IsPartial": false,
+      "Type": "Quantum.QuantumEntityPrototype|SourceShapeGenericSettings"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/QuantumEntityPrototype.cs",
+      "IsPartial": false,
+      "Type": "Quantum.QuantumEntityPrototype|PhysicsColliderGeneric"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/QuantumEntityPrototype.cs",
+      "IsPartial": false,
+      "Type": "Quantum.QuantumEntityPrototype|PhysicsBodyGeneric"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/QuantumEntityPrototype.cs",
+      "IsPartial": false,
+      "Type": "Quantum.QuantumEntityPrototype|NavMeshPathfinderInfo"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/QuantumEntityPrototype.cs",
+      "IsPartial": false,
+      "Type": "Quantum.QuantumEntityPrototype|InitialNavMeshTargetInfo"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/QuantumEntityPrototype.cs",
+      "IsPartial": false,
+      "Type": "Quantum.QuantumEntityPrototype|NavMeshSpec"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/QuantumEntityPrototype.cs",
+      "IsPartial": false,
+      "Type": "Quantum.QuantumEntityPrototype|NavMeshSteeringAgentInfo"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/QuantumEntityPrototype.cs",
+      "IsPartial": false,
+      "Type": "Quantum.QuantumEntityPrototype|OverrideFP"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/QuantumEntityPrototype.cs",
+      "IsPartial": false,
+      "Type": "Quantum.QuantumEntityPrototype|NavMeshAvoidanceAgentInfo"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/QuantumEntityView.cs",
+      "IsPartial": false,
+      "Type": "Quantum|QuantumEntityView"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/QuantumEntityView.cs",
+      "IsPartial": false,
+      "Type": "Quantum.QuantumEntityView|EntityUnityEvent"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/QuantumEntityView.cs",
+      "IsPartial": false,
+      "Type": "Quantum.QuantumEntityView|UpdatePositionParameter"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/QuantumEntityViewPool.cs",
+      "IsPartial": false,
+      "Type": "Quantum|QuantumEntityViewPool"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/QuantumEntityViewPool.cs",
+      "IsPartial": false,
+      "Type": "Quantum.QuantumEntityViewPool|PooledObject"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/QuantumEntityViewPool.cs",
+      "IsPartial": false,
+      "Type": "Quantum.QuantumEntityViewPool|DelayedDestroy"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/QuantumEntityViewUpdater.cs",
+      "IsPartial": false,
+      "Type": "Quantum|QuantumEntityViewUpdater"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/QuantumFrameDiffer.cs",
+      "IsPartial": false,
+      "Type": "Quantum|QuantumFrameDiffer"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/QuantumFrameDiffer.cs",
+      "IsPartial": false,
+      "Type": "Quantum.QuantumFrameDiffer|QuantumFrameDifferGUIRuntime"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/QuantumGameGizmos.cs",
+      "IsPartial": false,
+      "Type": "Quantum|QuantumGameGizmos"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/QuantumGameGizmosSettings.cs",
+      "IsPartial": false,
+      "Type": "Quantum|QuantumGameGizmosSettings"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/QuantumGameGizmosSettingsScriptableObject.cs",
+      "IsPartial": false,
+      "Type": "Quantum|QuantumGameGizmosSettingsScriptableObject"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/QuantumGlobalScriptableObject.cs",
+      "IsPartial": true,
+      "Type": "Quantum|QuantumGlobalScriptableObject"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/QuantumGraphProfilerDeltaTime.cs",
+      "IsPartial": false,
+      "Type": "Quantum.Profiling|QuantumGraphProfilerDeltaTime"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/QuantumGraphProfilerFrameTime.cs",
+      "IsPartial": false,
+      "Type": "Quantum.Profiling|QuantumGraphProfilerFrameTime"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/QuantumGraphProfilerGC.cs",
+      "IsPartial": false,
+      "Type": "Quantum.Profiling|QuantumGraphProfilerGC"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/QuantumGraphProfilerMarkers.cs",
+      "IsPartial": false,
+      "Type": "Quantum.Profiling|QuantumGraphProfilerMarkers"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/QuantumGraphProfilerNetworkActivity.cs",
+      "IsPartial": false,
+      "Type": "Quantum.Profiling|QuantumGraphProfilerNetworkActivity"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/QuantumGraphProfilerPing.cs",
+      "IsPartial": false,
+      "Type": "Quantum.Profiling|QuantumGraphProfilerPing"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/QuantumGraphProfilerPredictedFrames.cs",
+      "IsPartial": false,
+      "Type": "Quantum.Profiling|QuantumGraphProfilerPredictedFrames"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/QuantumGraphProfilerRenderTime.cs",
+      "IsPartial": false,
+      "Type": "Quantum.Profiling|QuantumGraphProfilerRenderTime"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/QuantumGraphProfilerSimulationTime.cs",
+      "IsPartial": false,
+      "Type": "Quantum.Profiling|QuantumGraphProfilerSimulationTime"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/QuantumGraphProfilerUserScripts.cs",
+      "IsPartial": false,
+      "Type": "Quantum.Profiling|QuantumGraphProfilerUserScripts"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/QuantumGraphProfilerVerifiedFrames.cs",
+      "IsPartial": false,
+      "Type": "Quantum.Profiling|QuantumGraphProfilerVerifiedFrames"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/QuantumGraphProfilingStatistics.cs",
+      "IsPartial": false,
+      "Type": "Quantum.Profiling|QuantumGraphProfilingStatistics"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/QuantumGraphProfilingTools.cs",
+      "IsPartial": false,
+      "Type": "Quantum.Profiling|QuantumGraphProfilingTools"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/QuantumGraphSeriesMarker.cs",
+      "IsPartial": false,
+      "Type": "Quantum.Profiling|QuantumGraphSeriesMarker"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/QuantumGraphSeriesValue.cs",
+      "IsPartial": false,
+      "Type": "Quantum.Profiling|QuantumGraphSeriesValue"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/QuantumInstantReplayDemo.cs",
+      "IsPartial": false,
+      "Type": "Quantum|QuantumInstantReplayDemo"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/QuantumLookupTables.cs",
+      "IsPartial": false,
+      "Type": "Quantum|QuantumLookupTables"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/QuantumMachineId.cs",
+      "IsPartial": false,
+      "Type": "Quantum|QuantumMachineId"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/QuantumMapData.cs",
+      "IsPartial": false,
+      "Type": "Quantum|QuantumMapData"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/QuantumMapLoader.cs",
+      "IsPartial": false,
+      "Type": "Quantum|QuantumMapLoader"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/QuantumMapNavMeshUnity.cs",
+      "IsPartial": false,
+      "Type": "Quantum|QuantumMapNavMeshUnity"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/QuantumMemoryStats.cs",
+      "IsPartial": false,
+      "Type": "Quantum|QuantumMemoryStats"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/QuantumMenuSceneInfo.cs",
+      "IsPartial": false,
+      "Type": "Quantum|QuantumMenuSceneInfo"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/QuantumMeshCollection.cs",
+      "IsPartial": false,
+      "Type": "Quantum|QuantumMeshCollection"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/QuantumMonoBehaviour.cs",
+      "IsPartial": false,
+      "Type": "Quantum|QuantumMonoBehaviour"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/QuantumMultiClientPlayer.cs",
+      "IsPartial": false,
+      "Type": "Quantum|QuantumMultiClientPlayer"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/QuantumMultiClientPlayerView.cs",
+      "IsPartial": false,
+      "Type": "Quantum|QuantumMultiClientPlayerView"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/QuantumMultiClientRunner.cs",
+      "IsPartial": false,
+      "Type": "Quantum|QuantumMultiClientRunner"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/QuantumNavMesh.cs",
+      "IsPartial": false,
+      "Type": "Quantum|QuantumNavMesh"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/QuantumNavMesh.cs",
+      "IsPartial": false,
+      "Type": "Quantum.QuantumNavMesh|Vertex"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/QuantumNavMesh.cs",
+      "IsPartial": false,
+      "Type": "Quantum.QuantumNavMesh|ImportSettings"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/QuantumNavMesh.cs",
+      "IsPartial": false,
+      "Type": "Quantum.QuantumNavMesh|ImportUtils"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/QuantumNavMesh.cs",
+      "IsPartial": false,
+      "Type": "Quantum.QuantumNavMesh|NavMeshLinkTemp"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/QuantumNavMesh.cs",
+      "IsPartial": false,
+      "Type": "Quantum.QuantumNavMesh|TriangleGrid"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/QuantumNavMesh.cs",
+      "IsPartial": false,
+      "Type": "Quantum.QuantumNavMesh|Vector2Double"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/QuantumNavMesh.cs",
+      "IsPartial": false,
+      "Type": "Quantum.QuantumNavMesh|Vector3Double"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/QuantumNavMesh.cs",
+      "IsPartial": false,
+      "Type": "Quantum.QuantumNavMesh|DelaunayTriangulation"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/QuantumNavMesh.cs",
+      "IsPartial": false,
+      "Type": "Quantum.QuantumNavMesh\u002BDelaunayTriangulation|HalfEdge"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/QuantumNavMesh.cs",
+      "IsPartial": false,
+      "Type": "Quantum.QuantumNavMesh\u002BDelaunayTriangulation|HalfEdgeVertex"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/QuantumNavMesh.cs",
+      "IsPartial": false,
+      "Type": "Quantum.QuantumNavMesh\u002BDelaunayTriangulation|Triangle"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/QuantumNavMeshDebugDrawer.cs",
+      "IsPartial": false,
+      "Type": "Quantum|QuantumNavMeshDebugDrawer"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/QuantumNavMeshRegion.cs",
+      "IsPartial": false,
+      "Type": "Quantum|QuantumNavMeshRegion"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/QuantumRunnerBehaviour.cs",
+      "IsPartial": false,
+      "Type": "Quantum|QuantumRunnerBehaviour"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/QuantumRunnerLocalDebug.cs",
+      "IsPartial": false,
+      "Type": "Quantum|QuantumRunnerLocalDebug"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/QuantumRunnerLocalDebug.cs",
+      "IsPartial": false,
+      "Type": "Quantum.QuantumRunnerLocalDebug|DynamicAssetDBSettings"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/QuantumRunnerLocalDebug.cs",
+      "IsPartial": false,
+      "Type": "Quantum.QuantumRunnerLocalDebug\u002B|InitialDynamicAssetsRequestedUnityEvent"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/QuantumRunnerLocalReplay.cs",
+      "IsPartial": false,
+      "Type": "Quantum|QuantumRunnerLocalReplay"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/QuantumRunnerLocalSavegame.cs",
+      "IsPartial": false,
+      "Type": "Quantum|QuantumRunnerLocalSavegame"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/QuantumScriptableObject.cs",
+      "IsPartial": false,
+      "Type": "Quantum|QuantumScriptableObject"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/QuantumSimpleConnectionGUI.cs",
+      "IsPartial": false,
+      "Type": "Quantum.Demo|QuantumSimpleConnectionGUI"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/QuantumStaticBoxCollider2D.cs",
+      "IsPartial": false,
+      "Type": "Quantum|QuantumStaticBoxCollider2D"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/QuantumStaticBoxCollider3D.cs",
+      "IsPartial": false,
+      "Type": "Quantum|QuantumStaticBoxCollider3D"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/QuantumStaticCapsuleCollider2D.cs",
+      "IsPartial": false,
+      "Type": "Quantum|QuantumStaticCapsuleCollider2D"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/QuantumStaticCapsuleCollider3D.cs",
+      "IsPartial": false,
+      "Type": "Quantum|QuantumStaticCapsuleCollider3D"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/QuantumStaticCircleCollider2D.cs",
+      "IsPartial": false,
+      "Type": "Quantum|QuantumStaticCircleCollider2D"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/QuantumStaticEdgeCollider2D.cs",
+      "IsPartial": false,
+      "Type": "Quantum|QuantumStaticEdgeCollider2D"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/QuantumStaticMeshCollider3D.cs",
+      "IsPartial": false,
+      "Type": "Quantum|QuantumStaticMeshCollider3D"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/QuantumStaticPolygonCollider2D.cs",
+      "IsPartial": false,
+      "Type": "Quantum|QuantumStaticPolygonCollider2D"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/QuantumStaticSphereCollider3D.cs",
+      "IsPartial": false,
+      "Type": "Quantum|QuantumStaticSphereCollider3D"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/QuantumStaticTerrainCollider3D.cs",
+      "IsPartial": false,
+      "Type": "Quantum|QuantumStaticTerrainCollider3D"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/QuantumStats.cs",
+      "IsPartial": false,
+      "Type": "Quantum|QuantumStats"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/QuantumTaskRunnerJobs.cs",
+      "IsPartial": false,
+      "Type": "Quantum|QuantumTaskRunnerJobs"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/QuantumTaskRunnerJobs.cs",
+      "IsPartial": false,
+      "Type": "Quantum.QuantumTaskRunnerJobs|ActionJob"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/QuantumUnityDB.cs",
+      "IsPartial": false,
+      "Type": "Quantum|QuantumUnityDB"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/QuantumUnityDB.cs",
+      "IsPartial": false,
+      "Type": "Quantum.QuantumUnityDB|Entry"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/QuantumUnityInputSystemWithLegacyFallback.cs",
+      "IsPartial": false,
+      "Type": "Quantum|QuantumUnityInputSystemWithLegacyFallback"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/QuantumUnityInputSystemWithLegacyFallback.cs",
+      "IsPartial": false,
+      "Type": "Quantum.QuantumUnityInputSystemWithLegacyFallback|FallbackEditor"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/QuantumUnityRuntime.cs",
+      "IsPartial": true,
+      "Type": "Quantum|QuantumUnityComponentPrototype"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/QuantumUnityRuntime.cs",
+      "IsPartial": true,
+      "Type": "Quantum|QuantumUnityComponentPrototype"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/QuantumUnityRuntime.cs",
+      "IsPartial": false,
+      "Type": "Quantum|IQuantumUnityPrototypeWrapperForComponent"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/QuantumUnityRuntime.cs",
+      "IsPartial": false,
+      "Type": "Quantum|IQuantumUnityPrototypeAdapter"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/QuantumUnityRuntime.cs",
+      "IsPartial": false,
+      "Type": "Quantum|QuantumUnityPrototypeAdapter"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/QuantumUnityRuntime.cs",
+      "IsPartial": false,
+      "Type": "Quantum|IQuantumPrototypeConvertible"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/QuantumUnityRuntime.cs",
+      "IsPartial": false,
+      "Type": "Quantum|QuantumUnityUnionPrototypeAdapter"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/QuantumUnityRuntime.cs",
+      "IsPartial": false,
+      "Type": "Quantum|IQuantumUnityDispatcher"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/QuantumUnityRuntime.cs",
+      "IsPartial": false,
+      "Type": "Quantum|IQuantumUnityDispatcherExtensions"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/QuantumUnityRuntime.cs",
+      "IsPartial": false,
+      "Type": "Quantum|QuantumCallback"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/QuantumUnityRuntime.cs",
+      "IsPartial": false,
+      "Type": "Quantum|QuantumUnityCallbackDispatcher"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/QuantumUnityRuntime.cs",
+      "IsPartial": false,
+      "Type": "Quantum|QuantumCallbackHandler_DebugDraw"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/QuantumUnityRuntime.cs",
+      "IsPartial": false,
+      "Type": "Quantum.QuantumCallbackHandler_DebugDraw|CompositeDisposable"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/QuantumUnityRuntime.cs",
+      "IsPartial": false,
+      "Type": "Quantum|QuantumCallbackHandler_FrameDiffer"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/QuantumUnityRuntime.cs",
+      "IsPartial": false,
+      "Type": "Quantum|QuantumCallbackHandler_GameResult"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/QuantumUnityRuntime.cs",
+      "IsPartial": false,
+      "Type": "Quantum|QuantumCallbackHandler_LegacyQuantumCallback"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/QuantumUnityRuntime.cs",
+      "IsPartial": false,
+      "Type": "Quantum.QuantumCallbackHandler_LegacyQuantumCallback|CompositeDisposable"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/QuantumUnityRuntime.cs",
+      "IsPartial": false,
+      "Type": "Quantum|QuantumCallbackHandler_StartRecording"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/QuantumUnityRuntime.cs",
+      "IsPartial": false,
+      "Type": "Quantum.QuantumCallbackHandler_StartRecording|CompositeDisposable"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/QuantumUnityRuntime.cs",
+      "IsPartial": false,
+      "Type": "Quantum|QuantumCallbackHandler_UnityCallbacks"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/QuantumUnityRuntime.cs",
+      "IsPartial": false,
+      "Type": "Quantum.QuantumCallbackHandler_UnityCallbacks|GetAddressableScenesResult"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/QuantumUnityRuntime.cs",
+      "IsPartial": false,
+      "Type": "Quantum|ICallbackUnityScene"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/QuantumUnityRuntime.cs",
+      "IsPartial": false,
+      "Type": "Quantum|CallbackUnitySceneLoadBegin"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/QuantumUnityRuntime.cs",
+      "IsPartial": false,
+      "Type": "Quantum|CallbackUnitySceneLoadDone"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/QuantumUnityRuntime.cs",
+      "IsPartial": false,
+      "Type": "Quantum|CallbackUnitySceneUnloadBegin"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/QuantumUnityRuntime.cs",
+      "IsPartial": false,
+      "Type": "Quantum|CallbackUnitySceneUnloadDone"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/QuantumUnityRuntime.cs",
+      "IsPartial": false,
+      "Type": "Quantum|QuantumEvent"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/QuantumUnityRuntime.cs",
+      "IsPartial": false,
+      "Type": "Quantum|QuantumUnityEventDispatcher"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/QuantumUnityRuntime.cs",
+      "IsPartial": false,
+      "Type": "Quantum|QuantumUnityStaticDispatcherAdapterWorker"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/QuantumUnityRuntime.cs",
+      "IsPartial": false,
+      "Type": "Quantum|QuantumUnityStaticDispatcherAdapter"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/QuantumUnityRuntime.cs",
+      "IsPartial": false,
+      "Type": "Quantum|MultiTypeReferenceAttribute"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/QuantumUnityRuntime.cs",
+      "IsPartial": false,
+      "Type": "Quantum|IQuantumEntityViewCulling"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/QuantumUnityRuntime.cs",
+      "IsPartial": false,
+      "Type": "Quantum|IQuantumEntityViewPool"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/QuantumUnityRuntime.cs",
+      "IsPartial": false,
+      "Type": "Quantum|IQuantumViewComponent"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/QuantumUnityRuntime.cs",
+      "IsPartial": false,
+      "Type": "Quantum|IQuantumViewContext"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/QuantumUnityRuntime.cs",
+      "IsPartial": false,
+      "Type": "Quantum|QuantumEntityPrototypeConverter"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/QuantumUnityRuntime.cs",
+      "IsPartial": true,
+      "Type": "Quantum|QuantumEntityViewComponent"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/QuantumUnityRuntime.cs",
+      "IsPartial": true,
+      "Type": "Quantum|QuantumEntityViewComponent"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/QuantumUnityRuntime.cs",
+      "IsPartial": true,
+      "Type": "Quantum|QuantumSceneViewComponent"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/QuantumUnityRuntime.cs",
+      "IsPartial": true,
+      "Type": "Quantum|QuantumSceneViewComponent"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/QuantumUnityRuntime.cs",
+      "IsPartial": false,
+      "Type": "Quantum|QuantumSnapshotInterpolationTimer"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/QuantumUnityRuntime.cs",
+      "IsPartial": false,
+      "Type": "Quantum.QuantumSnapshotInterpolationTimer|QuantumTransformData"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/QuantumUnityRuntime.cs",
+      "IsPartial": false,
+      "Type": "Quantum.QuantumSnapshotInterpolationTimer|InterpolationBuffer"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/QuantumUnityRuntime.cs",
+      "IsPartial": false,
+      "Type": "Quantum|QuantumViewComponent"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/QuantumUnityRuntime.cs",
+      "IsPartial": true,
+      "Type": "Quantum|QUnityComponentPrototypeRef"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/QuantumUnityRuntime.cs",
+      "IsPartial": true,
+      "Type": "Quantum|QUnityComponentPrototypeRef"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/QuantumUnityRuntime.cs",
+      "IsPartial": false,
+      "Type": "Quantum|QUnityEntityPrototypeRef"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/QuantumUnityRuntime.cs",
+      "IsPartial": false,
+      "Type": "Quantum|GizmoIconColorAttribute"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/QuantumUnityRuntime.cs",
+      "IsPartial": false,
+      "Type": "Quantum|QuantumGizmoCallbackAttribute"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/QuantumUnityRuntime.cs",
+      "IsPartial": false,
+      "Type": "Quantum|OptionalGizmoBool"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/QuantumUnityRuntime.cs",
+      "IsPartial": false,
+      "Type": "Quantum|QuantumGizmoEntry"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/QuantumUnityRuntime.cs",
+      "IsPartial": false,
+      "Type": "Quantum|QuantumUserGizmoEntry"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/QuantumUnityRuntime.cs",
+      "IsPartial": false,
+      "Type": "Quantum|PhysicsComponentGizmoEntry"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/QuantumUnityRuntime.cs",
+      "IsPartial": false,
+      "Type": "Quantum|JointGizmoEntry"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/QuantumUnityRuntime.cs",
+      "IsPartial": false,
+      "Type": "Quantum|NavMeshComponentGizmoEntry"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/QuantumUnityRuntime.cs",
+      "IsPartial": false,
+      "Type": "Quantum|NavMeshBorderGizmoEntry"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/QuantumUnityRuntime.cs",
+      "IsPartial": false,
+      "Type": "Quantum|NavMeshLinkGizmoEntry"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/QuantumUnityRuntime.cs",
+      "IsPartial": false,
+      "Type": "Quantum|NavMeshGizmoEntry"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/QuantumUnityRuntime.cs",
+      "IsPartial": false,
+      "Type": "Quantum|GizmoNavmeshData"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/QuantumUnityRuntime.cs",
+      "IsPartial": false,
+      "Type": "Quantum|StaticMeshColliderGizmoData"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/QuantumUnityRuntime.cs",
+      "IsPartial": false,
+      "Type": "Quantum|QuantumGizmosJointInfo"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/QuantumUnityRuntime.cs",
+      "IsPartial": false,
+      "Type": "Quantum|UserGizmoCallback"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/QuantumUnityRuntime.cs",
+      "IsPartial": false,
+      "Type": "Quantum|QuantumGizmoColors"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/QuantumUnityRuntime.cs",
+      "IsPartial": false,
+      "Type": "Quantum|IQuantumAssetObjectSource"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/QuantumUnityRuntime.cs",
+      "IsPartial": false,
+      "Type": "Quantum|QuantumAssetObjectSourceStatic"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/QuantumUnityRuntime.cs",
+      "IsPartial": false,
+      "Type": "Quantum|QuantumAssetObjectSourceStaticLazy"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/QuantumUnityRuntime.cs",
+      "IsPartial": false,
+      "Type": "Quantum|QuantumAssetObjectSourceResource"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/QuantumUnityRuntime.cs",
+      "IsPartial": false,
+      "Type": "Quantum|QuantumAssetObjectSourceAddressable"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/QuantumUnityRuntime.cs",
+      "IsPartial": false,
+      "Type": "Quantum|IQuantumEditorGUI"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/QuantumUnityRuntime.cs",
+      "IsPartial": false,
+      "Type": "Quantum|IQuantumEditorGUIExtensions"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/QuantumUnityRuntime.cs",
+      "IsPartial": true,
+      "Type": "Quantum|QuantumRunner"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/QuantumUnityRuntime.cs",
+      "IsPartial": false,
+      "Type": "Quantum.QuantumRunner|StartParameters"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/QuantumUnityRuntime.cs",
+      "IsPartial": false,
+      "Type": "Quantum|QuantumMapBakeAssemblyAttribute"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/QuantumUnityRuntime.cs",
+      "IsPartial": false,
+      "Type": "Quantum|MapDataBakerCallback"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/QuantumUnityRuntime.cs",
+      "IsPartial": false,
+      "Type": "Quantum|MapDataBakerCallbackAttribute"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/QuantumUnityRuntime.cs",
+      "IsPartial": false,
+      "Type": "Quantum.Prototypes.Unity|PhysicsJoints2DPrototype"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/QuantumUnityRuntime.cs",
+      "IsPartial": false,
+      "Type": "Quantum.Prototypes.Unity|Joint2DConfig"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/QuantumUnityRuntime.cs",
+      "IsPartial": false,
+      "Type": "Quantum.Prototypes.Unity|PhysicsJoints3DPrototype"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/QuantumUnityRuntime.cs",
+      "IsPartial": false,
+      "Type": "Quantum.Prototypes.Unity|Joint3DConfig"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/QuantumUnityRuntime.cs",
+      "IsPartial": false,
+      "Type": "Quantum|QuantumGlobalScriptableObjectAddressAttribute"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/QuantumUnityRuntime.cs",
+      "IsPartial": false,
+      "Type": "Quantum|QuantumGlobalScriptableObjectResourceAttribute"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/QuantumUnityRuntime.cs",
+      "IsPartial": false,
+      "Type": "Quantum|ObjectExtensions"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/QuantumUnityRuntime.cs",
+      "IsPartial": false,
+      "Type": "Quantum|QuantumCallbacks"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/QuantumUnityRuntime.cs",
+      "IsPartial": false,
+      "Type": "Quantum|QuantumFrameDifferGUI"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/QuantumUnityRuntime.cs",
+      "IsPartial": false,
+      "Type": "Quantum.QuantumFrameDifferGUI|LongestCommonSequence"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/QuantumUnityRuntime.cs",
+      "IsPartial": false,
+      "Type": "Quantum.QuantumFrameDifferGUI\u002BLongestCommonSequence|DiffChunk"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/QuantumUnityRuntime.cs",
+      "IsPartial": false,
+      "Type": "Quantum.QuantumFrameDifferGUI|StateEntry"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/QuantumUnityRuntime.cs",
+      "IsPartial": false,
+      "Type": "Quantum.QuantumFrameDifferGUI|FrameData"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/QuantumUnityRuntime.cs",
+      "IsPartial": false,
+      "Type": "Quantum.QuantumFrameDifferGUI|FrameDifferState"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/QuantumUnityRuntime.cs",
+      "IsPartial": false,
+      "Type": "Quantum|QuantumInstantReplay"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/QuantumUnityRuntime.cs",
+      "IsPartial": false,
+      "Type": "Quantum|QuantumLoadBalancingClient"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/QuantumUnityRuntime.cs",
+      "IsPartial": false,
+      "Type": "Quantum|QuantumLogConstants"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/QuantumUnityRuntime.cs",
+      "IsPartial": true,
+      "Type": "Quantum|QuantumLogInitializer"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/QuantumUnityRuntime.cs",
+      "IsPartial": false,
+      "Type": "Quantum|QuantumUnityLogger"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/QuantumUnityRuntime.cs",
+      "IsPartial": false,
+      "Type": "Quantum|QuantumMapDataBaker"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/QuantumUnityRuntime.cs",
+      "IsPartial": false,
+      "Type": "Quantum|QuantumNetworkCommunicator"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/QuantumUnityRuntime.cs",
+      "IsPartial": false,
+      "Type": "Quantum|QuantumProfilingClientConstants"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/QuantumUnityRuntime.cs",
+      "IsPartial": false,
+      "Type": "Quantum|QuantumProfilingClientInfo"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/QuantumUnityRuntime.cs",
+      "IsPartial": false,
+      "Type": "Quantum.QuantumProfilingClientInfo|CustomProperty"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/QuantumUnityRuntime.cs",
+      "IsPartial": false,
+      "Type": "Quantum|QuantumReconnectInformation"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/QuantumUnityRuntime.cs",
+      "IsPartial": true,
+      "Type": "Quantum|QuantumRunner"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/QuantumUnityRuntime.cs",
+      "IsPartial": false,
+      "Type": "Quantum|QuantumRunnerRegistry"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/QuantumUnityRuntime.cs",
+      "IsPartial": false,
+      "Type": "Quantum|QuantumRunnerUnityFactory"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/QuantumUnityRuntime.cs",
+      "IsPartial": false,
+      "Type": "Quantum.Experimental|QuantumSnapshotProviderDemo"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/QuantumUnityRuntime.cs",
+      "IsPartial": false,
+      "Type": "Quantum|QuantumStaticColliderSettings"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/QuantumUnityRuntime.cs",
+      "IsPartial": false,
+      "Type": "Quantum|QuantumUnityHostProfiler"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/QuantumUnityRuntime.cs",
+      "IsPartial": false,
+      "Type": "Quantum|QuantumUnityJsonSerializer"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/QuantumUnityRuntime.cs",
+      "IsPartial": false,
+      "Type": "Quantum.QuantumUnityJsonSerializer|AssetObjectSurrogate"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/QuantumUnityRuntime.cs",
+      "IsPartial": false,
+      "Type": "Quantum.QuantumUnityJsonSerializer|EntityViewSurrogate"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/QuantumUnityRuntime.cs",
+      "IsPartial": false,
+      "Type": "Quantum.QuantumUnityJsonSerializer|BinaryDataSurrogate"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/QuantumUnityRuntime.cs",
+      "IsPartial": false,
+      "Type": "Quantum|QuantumUnityMemoryLayoutVerifierPlatform"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/QuantumUnityRuntime.cs",
+      "IsPartial": false,
+      "Type": "Quantum|QuantumUnityNativeAllocator"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/QuantumUnityRuntime.cs",
+      "IsPartial": false,
+      "Type": "Quantum|QuantumUnityNativeUtility"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/QuantumUnityRuntime.cs",
+      "IsPartial": true,
+      "Type": "Quantum|QuantumGlobalScriptableObject"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/QuantumUnityRuntime.cs",
+      "IsPartial": false,
+      "Type": "Quantum|QuantumGlobalScriptableObjectAttribute"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/QuantumUnityRuntime.cs",
+      "IsPartial": false,
+      "Type": "Quantum|QuantumGlobalScriptableObjectSourceAttribute"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/QuantumUnityRuntime.cs",
+      "IsPartial": false,
+      "Type": "Quantum|QuantumGlobalScriptableObjectLoaderMethodAttribute"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/QuantumUnityRuntime.cs",
+      "IsPartial": false,
+      "Type": "Quantum|QuantumGlobalScriptableObjectLoadResult"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/QuantumUnityRuntime.cs",
+      "IsPartial": false,
+      "Type": "Quantum|QuantumPlayerLoopSystemHandle"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/QuantumUnityRuntime.cs",
+      "IsPartial": false,
+      "Type": "Quantum|QuantumPlayerLoopSystemUtils"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/QuantumUnityRuntime.cs",
+      "IsPartial": false,
+      "Type": "Quantum|JsonUtilityExtensions"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/QuantumUnityRuntime.cs",
+      "IsPartial": false,
+      "Type": "Quantum.JsonUtilityExtensions|TypeNameWrapper"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/QuantumUnityRuntime.cs",
+      "IsPartial": false,
+      "Type": "Quantum|QuantumAddressablesUtils"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/QuantumUnityRuntime.cs",
+      "IsPartial": true,
+      "Type": "Quantum|QuantumLogInitializer"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/QuantumUnityRuntime.cs",
+      "IsPartial": false,
+      "Type": "Quantum|QuantumMppm"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/QuantumUnityRuntime.cs",
+      "IsPartial": false,
+      "Type": "Quantum|QuantumMppmCommand"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/QuantumUnityRuntime.cs",
+      "IsPartial": false,
+      "Type": "Quantum|QuantumMppmRegisterCustomDependencyCommand"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/QuantumUnityRuntime.cs",
+      "IsPartial": false,
+      "Type": "Quantum|QuantumUnityEditorPaths"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/QuantumUnityRuntime.cs",
+      "IsPartial": false,
+      "Type": "Quantum|QuantumUnityExtensions"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/QuantumUnityRuntime.cs",
+      "IsPartial": false,
+      "Type": "Quantum|QuantumUnitySceneManagerUtils"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/QuantumUnityRuntime.cs",
+      "IsPartial": false,
+      "Type": "Quantum.QuantumUnitySceneManagerUtils|SceneEqualityComparer"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/QuantumUnityRuntime.cs",
+      "IsPartial": false,
+      "Type": "Quantum|DebugDraw"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/QuantumUnityRuntime.cs",
+      "IsPartial": false,
+      "Type": "Quantum.DebugDraw|DebugMaterial"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/QuantumUnityRuntime.cs",
+      "IsPartial": false,
+      "Type": "Quantum.DebugDraw\u002B|ColorUseShadingEqualityComparer"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/QuantumUnityRuntime.cs",
+      "IsPartial": false,
+      "Type": "Quantum|DebugMesh"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/QuantumUnityRuntime.cs",
+      "IsPartial": false,
+      "Type": "Quantum|EditorDefines"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/QuantumUnityRuntime.cs",
+      "IsPartial": false,
+      "Type": "Quantum|FloatMinMax"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/QuantumUnityRuntime.cs",
+      "IsPartial": false,
+      "Type": "Quantum|MinMaxSliderAttribute"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/QuantumUnityRuntime.cs",
+      "IsPartial": false,
+      "Type": "Quantum|FPMathUtils"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/QuantumUnityRuntime.cs",
+      "IsPartial": false,
+      "Type": "Quantum|GameObjectUtils"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/QuantumUnityRuntime.cs",
+      "IsPartial": false,
+      "Type": "Quantum|GizmoUtils"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/QuantumUnityRuntime.cs",
+      "IsPartial": false,
+      "Type": "Quantum|QuantumGizmoStyle"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/QuantumUnityRuntime.cs",
+      "IsPartial": false,
+      "Type": "Quantum|NavMeshBakerBenchmarkerProgressBar"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/QuantumUnityRuntime.cs",
+      "IsPartial": false,
+      "Type": "Quantum.NavMeshBakerBenchmarkerProgressBar|BakeSection"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/QuantumUnityRuntime.cs",
+      "IsPartial": false,
+      "Type": "Quantum|ProgressBar"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/QuantumUnityRuntime.cs",
+      "IsPartial": false,
+      "Type": "Quantum|QuantumColor"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/QuantumUnityRuntime.cs",
+      "IsPartial": false,
+      "Type": "Quantum|EditorRectUtils"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/QuantumUnityRuntime.cs",
+      "IsPartial": false,
+      "Type": "Quantum|ReflectionUtils"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/QuantumUnityRuntime.cs",
+      "IsPartial": false,
+      "Type": "Quantum.ReflectionUtils|TypeHierarchyComparer"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/QuantumUnityRuntime.cs",
+      "IsPartial": false,
+      "Type": "Quantum.ReflectionUtils|InstanceAccessor"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/QuantumUnityRuntime.cs",
+      "IsPartial": false,
+      "Type": "Quantum.ReflectionUtils|StaticAccessor"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/QuantumUnityRuntime.cs",
+      "IsPartial": false,
+      "Type": "Quantum.ReflectionUtils|DelegateSwizzle"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/QuantumUnityRuntime.cs",
+      "IsPartial": false,
+      "Type": "Quantum|SerializedObjectExtensions"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/QuantumUnityRuntime.cs",
+      "IsPartial": false,
+      "Type": "Quantum.SerializedObjectExtensions|SerializedPropertyEnumerable"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/QuantumUnityRuntime.cs",
+      "IsPartial": false,
+      "Type": "Quantum.SerializedObjectExtensions|SerializedPropertyEnumerator"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/QuantumUnityRuntime.cs",
+      "IsPartial": false,
+      "Type": "Quantum|SerializedPropertyPathBuilder"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/QuantumUnityRuntime.cs",
+      "IsPartial": false,
+      "Type": "Quantum|SerializedPropertyEqualityComparer"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/RuntimeConfigContainer.cs",
+      "IsPartial": false,
+      "Type": "Quantum.Demo.Legacy|RuntimeConfigContainer"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/StartUI/QuantumStartUI.Common.cs",
+      "IsPartial": false,
+      "Type": "Quantum|QuantumStartUIConnectionBase"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/StartUI/QuantumStartUI.Common.cs",
+      "IsPartial": false,
+      "Type": "Quantum.QuantumStartUIConnectionBase|StartParameter"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/StartUI/QuantumStartUI.Common.cs",
+      "IsPartial": false,
+      "Type": "Quantum|QuantumStartUIMppmCommand"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/StartUI/QuantumStartUI.Common.cs",
+      "IsPartial": false,
+      "Type": "Quantum|QuantumStartUIMppmConnectCommand"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/StartUI/QuantumStartUI.Common.cs",
+      "IsPartial": false,
+      "Type": "Quantum|QuantumStartUIMppmDisconnectCommand"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/StartUI/QuantumStartUI.cs",
+      "IsPartial": false,
+      "Type": "Quantum|QuantumStartUI"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/StartUI/QuantumStartUI.cs",
+      "IsPartial": false,
+      "Type": "Quantum.QuantumStartUI|UIBindings"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/StartUI/QuantumStartUIConnection.cs",
+      "IsPartial": false,
+      "Type": "Quantum|QuantumStartUIConnection"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/StartUI/QuantumStartUIRegionDropdown.Partial.cs",
+      "IsPartial": true,
+      "Type": "Quantum|QuantumStartUIRegionDropdown"
+    },
+    {
+      "Path": "/Assets/Photon/Quantum/Runtime/StartUI/QuantumStartUIRegionDropdown.cs",
+      "IsPartial": true,
+      "Type": "Quantum|QuantumStartUIRegionDropdown"
+    },
+    {
+      "Path": "/Assets/Photon/QuantumAddons/QuantumBotSDK/Runtime/BotSDK.CodeGen.UnityPrototypeAdapters.cs",
+      "IsPartial": false,
+      "Type": "Quantum.Prototypes.Unity|AIBlackboardComponentPrototype"
+    },
+    {
+      "Path": "/Assets/Photon/QuantumAddons/QuantumBotSDK/Runtime/BotSDK.CodeGen.UnityPrototypeAdapters.cs",
+      "IsPartial": false,
+      "Type": "Quantum.Prototypes.Unity|BlackboardEntryPrototype"
+    },
+    {
+      "Path": "/Assets/Photon/QuantumAddons/QuantumBotSDK/Runtime/BotSDK.CodeGen.UnityPrototypeAdapters.cs",
+      "IsPartial": false,
+      "Type": "Quantum.Prototypes.Unity|BlackboardValuePrototype"
+    },
+    {
+      "Path": "/Assets/Photon/QuantumAddons/QuantumBotSDK/Runtime/BotSDK.CodeGen.UnityPrototypeAdapters.cs",
+      "IsPartial": false,
+      "Type": "Quantum.Prototypes.Unity|DictionaryEntry_Int32_BlackboardEntry"
+    },
+    {
+      "Path": "/Assets/Photon/QuantumAddons/QuantumBotSDK/Runtime/QPrototypeAIBlackboardComponent.cs",
+      "IsPartial": false,
+      "Type": "Quantum|QPrototypeAIBlackboardComponent"
+    },
+    {
+      "Path": "/Assets/Photon/QuantumAddons/QuantumBotSDK/Runtime/QPrototypeBTAgent.cs",
+      "IsPartial": false,
+      "Type": "Quantum|QPrototypeBTAgent"
+    },
+    {
+      "Path": "/Assets/Photon/QuantumAddons/QuantumBotSDK/Runtime/QPrototypeBotSDKGlobals.cs",
+      "IsPartial": false,
+      "Type": "Quantum|QPrototypeBotSDKGlobals"
+    },
+    {
+      "Path": "/Assets/Photon/QuantumAddons/QuantumBotSDK/Runtime/QPrototypeHFSMAgent.cs",
+      "IsPartial": false,
+      "Type": "Quantum|QPrototypeHFSMAgent"
+    },
+    {
+      "Path": "/Assets/Photon/QuantumAddons/QuantumBotSDK/Runtime/QPrototypeUTAgent.cs",
+      "IsPartial": false,
+      "Type": "Quantum|QPrototypeUTAgent"
+    },
+    {
+      "Path": "/Assets/Photon/QuantumMigration/Runtime/EntityComponentNavMeshPathfinderLegacy.cs",
+      "IsPartial": false,
+      "Type": "Quantum|EntityComponentNavMeshPathfinderLegacy"
+    },
+    {
+      "Path": "/Assets/Photon/QuantumMigration/Runtime/EntityComponentPhysicsBody2DLegacy.cs",
+      "IsPartial": false,
+      "Type": "Quantum|EntityComponentPhysicsBody2DLegacy"
+    },
+    {
+      "Path": "/Assets/Photon/QuantumMigration/Runtime/EntityComponentPhysicsBody3DLegacy.cs",
+      "IsPartial": false,
+      "Type": "Quantum|EntityComponentPhysicsBody3DLegacy"
+    },
+    {
+      "Path": "/Assets/Photon/QuantumMigration/Runtime/EntityComponentPhysicsCallbacks2DLegacy.cs",
+      "IsPartial": false,
+      "Type": "Quantum|EntityComponentPhysicsCallbacks2DLegacy"
+    },
+    {
+      "Path": "/Assets/Photon/QuantumMigration/Runtime/EntityComponentPhysicsCallbacks3DLegacy.cs",
+      "IsPartial": false,
+      "Type": "Quantum|EntityComponentPhysicsCallbacks3DLegacy"
+    },
+    {
+      "Path": "/Assets/Photon/QuantumMigration/Runtime/EntityComponentPhysicsCollider2DLegacy.cs",
+      "IsPartial": false,
+      "Type": "Quantum|EntityComponentPhysicsCollider2DLegacy"
+    },
+    {
+      "Path": "/Assets/Photon/QuantumMigration/Runtime/EntityComponentPhysicsCollider3DLegacy.cs",
+      "IsPartial": false,
+      "Type": "Quantum|EntityComponentPhysicsCollider3DLegacy"
+    },
+    {
+      "Path": "/Assets/Photon/QuantumMigration/Runtime/EntityComponentPhysicsJoints2DLegacy.cs",
+      "IsPartial": false,
+      "Type": "Quantum|EntityComponentPhysicsJoints2DLegacy"
+    },
+    {
+      "Path": "/Assets/Photon/QuantumMigration/Runtime/EntityComponentPhysicsJoints3DLegacy.cs",
+      "IsPartial": false,
+      "Type": "Quantum|EntityComponentPhysicsJoints3DLegacy"
+    },
+    {
+      "Path": "/Assets/Photon/QuantumMigration/Runtime/EntityComponentTransform2DLegacy.cs",
+      "IsPartial": false,
+      "Type": "Quantum|EntityComponentTransform2DLegacy"
+    },
+    {
+      "Path": "/Assets/Photon/QuantumMigration/Runtime/EntityComponentTransform2DVerticalLegacy.cs",
+      "IsPartial": false,
+      "Type": "Quantum|EntityComponentTransform2DVerticalLegacy"
+    },
+    {
+      "Path": "/Assets/Photon/QuantumMigration/Runtime/EntityComponentTransform3DLegacy.cs",
+      "IsPartial": false,
+      "Type": "Quantum|EntityComponentTransform3DLegacy"
+    },
+    {
+      "Path": "/Assets/Photon/QuantumMigration/Runtime/QuantumInspectorAttribute.cs",
+      "IsPartial": false,
+      "Type": "Quantum|QuantumInspectorAttribute"
+    },
+    {
+      "Path": "/Assets/Photon/QuantumMigration/Runtime/QuantumPropertyAttributeProxyAttribute.cs",
+      "IsPartial": false,
+      "Type": "Quantum|QuantumPropertyAttributeProxyAttribute"
+    },
+    {
+      "Path": "/Assets/QuantumUser/View/Generated/QPrototypeAfkPlayer.cs",
+      "IsPartial": false,
+      "Type": "Quantum|QPrototypeAfkPlayer"
+    },
+    {
+      "Path": "/Assets/QuantumUser/View/Generated/QPrototypeAirDrop.cs",
+      "IsPartial": false,
+      "Type": "Quantum|QPrototypeAirDrop"
+    },
+    {
+      "Path": "/Assets/QuantumUser/View/Generated/QPrototypeAirDropSpawner.cs",
+      "IsPartial": false,
+      "Type": "Quantum|QPrototypeAirDropSpawner"
+    },
+    {
+      "Path": "/Assets/QuantumUser/View/Generated/QPrototypeAlivePlayerCharacter.cs",
+      "IsPartial": false,
+      "Type": "Quantum|QPrototypeAlivePlayerCharacter"
+    },
+    {
+      "Path": "/Assets/QuantumUser/View/Generated/QPrototypeBotCharacter.cs",
+      "IsPartial": false,
+      "Type": "Quantum|QPrototypeBotCharacter"
+    },
+    {
+      "Path": "/Assets/QuantumUser/View/Generated/QPrototypeBotLoadout.cs",
+      "IsPartial": false,
+      "Type": "Quantum|QPrototypeBotLoadout"
+    },
+    {
+      "Path": "/Assets/QuantumUser/View/Generated/QPrototypeChest.cs",
+      "IsPartial": false,
+      "Type": "Quantum|QPrototypeChest"
+    },
+    {
+      "Path": "/Assets/QuantumUser/View/Generated/QPrototypeChestContents.cs",
+      "IsPartial": false,
+      "Type": "Quantum|QPrototypeChestContents"
+    },
+    {
+      "Path": "/Assets/QuantumUser/View/Generated/QPrototypeChunkDebug.cs",
+      "IsPartial": false,
+      "Type": "Quantum|QPrototypeChunkDebug"
+    },
+    {
+      "Path": "/Assets/QuantumUser/View/Generated/QPrototypeCollectable.cs",
+      "IsPartial": false,
+      "Type": "Quantum|QPrototypeCollectable"
+    },
+    {
+      "Path": "/Assets/QuantumUser/View/Generated/QPrototypeCollectableChunks.cs",
+      "IsPartial": false,
+      "Type": "Quantum|QPrototypeCollectableChunks"
+    },
+    {
+      "Path": "/Assets/QuantumUser/View/Generated/QPrototypeCollectablePlatformSpawner.cs",
+      "IsPartial": false,
+      "Type": "Quantum|QPrototypeCollectablePlatformSpawner"
+    },
+    {
+      "Path": "/Assets/QuantumUser/View/Generated/QPrototypeCollectableTime.cs",
+      "IsPartial": false,
+      "Type": "Quantum|QPrototypeCollectableTime"
+    },
+    {
+      "Path": "/Assets/QuantumUser/View/Generated/QPrototypeConsumable.cs",
+      "IsPartial": false,
+      "Type": "Quantum|QPrototypeConsumable"
+    },
+    {
+      "Path": "/Assets/QuantumUser/View/Generated/QPrototypeCosmeticsHolder.cs",
+      "IsPartial": false,
+      "Type": "Quantum|QPrototypeCosmeticsHolder"
+    },
+    {
+      "Path": "/Assets/QuantumUser/View/Generated/QPrototypeDeadPlayerCharacter.cs",
+      "IsPartial": false,
+      "Type": "Quantum|QPrototypeDeadPlayerCharacter"
+    },
+    {
+      "Path": "/Assets/QuantumUser/View/Generated/QPrototypeDeathFlag.cs",
+      "IsPartial": false,
+      "Type": "Quantum|QPrototypeDeathFlag"
+    },
+    {
+      "Path": "/Assets/QuantumUser/View/Generated/QPrototypeDestructible.cs",
+      "IsPartial": false,
+      "Type": "Quantum|QPrototypeDestructible"
+    },
+    {
+      "Path": "/Assets/QuantumUser/View/Generated/QPrototypeDummyCharacter.cs",
+      "IsPartial": false,
+      "Type": "Quantum|QPrototypeDummyCharacter"
+    },
+    {
+      "Path": "/Assets/QuantumUser/View/Generated/QPrototypeEntityDestroyer.cs",
+      "IsPartial": false,
+      "Type": "Quantum|QPrototypeEntityDestroyer"
+    },
+    {
+      "Path": "/Assets/QuantumUser/View/Generated/QPrototypeEntityGroup.cs",
+      "IsPartial": false,
+      "Type": "Quantum|QPrototypeEntityGroup"
+    },
+    {
+      "Path": "/Assets/QuantumUser/View/Generated/QPrototypeEquipmentCollectable.cs",
+      "IsPartial": false,
+      "Type": "Quantum|QPrototypeEquipmentCollectable"
+    },
+    {
+      "Path": "/Assets/QuantumUser/View/Generated/QPrototypeGameContainer.cs",
+      "IsPartial": false,
+      "Type": "Quantum|QPrototypeGameContainer"
+    },
+    {
+      "Path": "/Assets/QuantumUser/View/Generated/QPrototypeGate.cs",
+      "IsPartial": false,
+      "Type": "Quantum|QPrototypeGate"
+    },
+    {
+      "Path": "/Assets/QuantumUser/View/Generated/QPrototypeHazard.cs",
+      "IsPartial": false,
+      "Type": "Quantum|QPrototypeHazard"
+    },
+    {
+      "Path": "/Assets/QuantumUser/View/Generated/QPrototypeImmunity.cs",
+      "IsPartial": false,
+      "Type": "Quantum|QPrototypeImmunity"
+    },
+    {
+      "Path": "/Assets/QuantumUser/View/Generated/QPrototypeInsideVisibilityArea.cs",
+      "IsPartial": false,
+      "Type": "Quantum|QPrototypeInsideVisibilityArea"
+    },
+    {
+      "Path": "/Assets/QuantumUser/View/Generated/QPrototypeInvisibility.cs",
+      "IsPartial": false,
+      "Type": "Quantum|QPrototypeInvisibility"
+    },
+    {
+      "Path": "/Assets/QuantumUser/View/Generated/QPrototypeKnockedOut.cs",
+      "IsPartial": false,
+      "Type": "Quantum|QPrototypeKnockedOut"
+    },
+    {
+      "Path": "/Assets/QuantumUser/View/Generated/QPrototypeKnockedOutCollider.cs",
+      "IsPartial": false,
+      "Type": "Quantum|QPrototypeKnockedOutCollider"
+    },
+    {
+      "Path": "/Assets/QuantumUser/View/Generated/QPrototypeLandMine.cs",
+      "IsPartial": false,
+      "Type": "Quantum|QPrototypeLandMine"
+    },
+    {
+      "Path": "/Assets/QuantumUser/View/Generated/QPrototypePlayerCharacter.cs",
+      "IsPartial": false,
+      "Type": "Quantum|QPrototypePlayerCharacter"
+    },
+    {
+      "Path": "/Assets/QuantumUser/View/Generated/QPrototypePlayerCharging.cs",
+      "IsPartial": false,
+      "Type": "Quantum|QPrototypePlayerCharging"
+    },
+    {
+      "Path": "/Assets/QuantumUser/View/Generated/QPrototypePlayerInventory.cs",
+      "IsPartial": false,
+      "Type": "Quantum|QPrototypePlayerInventory"
+    },
+    {
+      "Path": "/Assets/QuantumUser/View/Generated/QPrototypePlayerSpawner.cs",
+      "IsPartial": false,
+      "Type": "Quantum|QPrototypePlayerSpawner"
+    },
+    {
+      "Path": "/Assets/QuantumUser/View/Generated/QPrototypeProjectile.cs",
+      "IsPartial": false,
+      "Type": "Quantum|QPrototypeProjectile"
+    },
+    {
+      "Path": "/Assets/QuantumUser/View/Generated/QPrototypeRage.cs",
+      "IsPartial": false,
+      "Type": "Quantum|QPrototypeRage"
+    },
+    {
+      "Path": "/Assets/QuantumUser/View/Generated/QPrototypeRaycastShots.cs",
+      "IsPartial": false,
+      "Type": "Quantum|QPrototypeRaycastShots"
+    },
+    {
+      "Path": "/Assets/QuantumUser/View/Generated/QPrototypeRegeneration.cs",
+      "IsPartial": false,
+      "Type": "Quantum|QPrototypeRegeneration"
+    },
+    {
+      "Path": "/Assets/QuantumUser/View/Generated/QPrototypeRevivable.cs",
+      "IsPartial": false,
+      "Type": "Quantum|QPrototypeRevivable"
+    },
+    {
+      "Path": "/Assets/QuantumUser/View/Generated/QPrototypeShrinkingCircle.cs",
+      "IsPartial": false,
+      "Type": "Quantum|QPrototypeShrinkingCircle"
+    },
+    {
+      "Path": "/Assets/QuantumUser/View/Generated/QPrototypeSpell.cs",
+      "IsPartial": false,
+      "Type": "Quantum|QPrototypeSpell"
+    },
+    {
+      "Path": "/Assets/QuantumUser/View/Generated/QPrototypeStar.cs",
+      "IsPartial": false,
+      "Type": "Quantum|QPrototypeStar"
+    },
+    {
+      "Path": "/Assets/QuantumUser/View/Generated/QPrototypeStats.cs",
+      "IsPartial": false,
+      "Type": "Quantum|QPrototypeStats"
+    },
+    {
+      "Path": "/Assets/QuantumUser/View/Generated/QPrototypeStormAnchor.cs",
+      "IsPartial": false,
+      "Type": "Quantum|QPrototypeStormAnchor"
+    },
+    {
+      "Path": "/Assets/QuantumUser/View/Generated/QPrototypeStun.cs",
+      "IsPartial": false,
+      "Type": "Quantum|QPrototypeStun"
+    },
+    {
+      "Path": "/Assets/QuantumUser/View/Generated/QPrototypeTargetable.cs",
+      "IsPartial": false,
+      "Type": "Quantum|QPrototypeTargetable"
+    },
+    {
+      "Path": "/Assets/QuantumUser/View/Generated/QPrototypeTeamMember.cs",
+      "IsPartial": false,
+      "Type": "Quantum|QPrototypeTeamMember"
+    },
+    {
+      "Path": "/Assets/QuantumUser/View/Generated/QPrototypeTopDownController.cs",
+      "IsPartial": false,
+      "Type": "Quantum|QPrototypeTopDownController"
+    },
+    {
+      "Path": "/Assets/QuantumUser/View/Generated/QPrototypeTrigger.cs",
+      "IsPartial": false,
+      "Type": "Quantum|QPrototypeTrigger"
+    },
+    {
+      "Path": "/Assets/QuantumUser/View/Generated/QPrototypeTutorialRuntimeData.cs",
+      "IsPartial": false,
+      "Type": "Quantum|QPrototypeTutorialRuntimeData"
+    },
+    {
+      "Path": "/Assets/QuantumUser/View/Generated/QPrototypeVisibilityArea.cs",
+      "IsPartial": false,
+      "Type": "Quantum|QPrototypeVisibilityArea"
+    },
+    {
+      "Path": "/Assets/QuantumUser/View/Generated/Quantum.CodeGen.UnityPrototypeAdapters.cs",
+      "IsPartial": false,
+      "Type": "Quantum.Prototypes.Unity|BotCharacterPrototype"
+    },
+    {
+      "Path": "/Assets/QuantumUser/View/Generated/Quantum.CodeGen.UnityPrototypeAdapters.cs",
+      "IsPartial": false,
+      "Type": "Quantum.Prototypes.Unity|CollectablePrototype"
+    },
+    {
+      "Path": "/Assets/QuantumUser/View/Generated/Quantum.CodeGen.UnityPrototypeAdapters.cs",
+      "IsPartial": false,
+      "Type": "Quantum.Prototypes.Unity|CollectableChunkPrototype"
+    },
+    {
+      "Path": "/Assets/QuantumUser/View/Generated/Quantum.CodeGen.UnityPrototypeAdapters.cs",
+      "IsPartial": false,
+      "Type": "Quantum.Prototypes.Unity|CollectableChunksPrototype"
+    },
+    {
+      "Path": "/Assets/QuantumUser/View/Generated/Quantum.CodeGen.UnityPrototypeAdapters.cs",
+      "IsPartial": false,
+      "Type": "Quantum.Prototypes.Unity|CollectablePlatformSpawnerPrototype"
+    },
+    {
+      "Path": "/Assets/QuantumUser/View/Generated/Quantum.CodeGen.UnityPrototypeAdapters.cs",
+      "IsPartial": false,
+      "Type": "Quantum.Prototypes.Unity|CollectableTimePrototype"
+    },
+    {
+      "Path": "/Assets/QuantumUser/View/Generated/Quantum.CodeGen.UnityPrototypeAdapters.cs",
+      "IsPartial": false,
+      "Type": "Quantum.Prototypes.Unity|DeadPlayerCharacterPrototype"
+    },
+    {
+      "Path": "/Assets/QuantumUser/View/Generated/Quantum.CodeGen.UnityPrototypeAdapters.cs",
+      "IsPartial": false,
+      "Type": "Quantum.Prototypes.Unity|DestructiblePrototype"
+    },
+    {
+      "Path": "/Assets/QuantumUser/View/Generated/Quantum.CodeGen.UnityPrototypeAdapters.cs",
+      "IsPartial": false,
+      "Type": "Quantum.Prototypes.Unity|EntityGroupPrototype"
+    },
+    {
+      "Path": "/Assets/QuantumUser/View/Generated/Quantum.CodeGen.UnityPrototypeAdapters.cs",
+      "IsPartial": false,
+      "Type": "Quantum.Prototypes.Unity|EntityPairPrototype"
+    },
+    {
+      "Path": "/Assets/QuantumUser/View/Generated/Quantum.CodeGen.UnityPrototypeAdapters.cs",
+      "IsPartial": false,
+      "Type": "Quantum.Prototypes.Unity|GameContainerPrototype"
+    },
+    {
+      "Path": "/Assets/QuantumUser/View/Generated/Quantum.CodeGen.UnityPrototypeAdapters.cs",
+      "IsPartial": false,
+      "Type": "Quantum.Prototypes.Unity|HazardPrototype"
+    },
+    {
+      "Path": "/Assets/QuantumUser/View/Generated/Quantum.CodeGen.UnityPrototypeAdapters.cs",
+      "IsPartial": false,
+      "Type": "Quantum.Prototypes.Unity|InsideVisibilityAreaPrototype"
+    },
+    {
+      "Path": "/Assets/QuantumUser/View/Generated/Quantum.CodeGen.UnityPrototypeAdapters.cs",
+      "IsPartial": false,
+      "Type": "Quantum.Prototypes.Unity|KnockedOutPrototype"
+    },
+    {
+      "Path": "/Assets/QuantumUser/View/Generated/Quantum.CodeGen.UnityPrototypeAdapters.cs",
+      "IsPartial": false,
+      "Type": "Quantum.Prototypes.Unity|KnockedOutColliderPrototype"
+    },
+    {
+      "Path": "/Assets/QuantumUser/View/Generated/Quantum.CodeGen.UnityPrototypeAdapters.cs",
+      "IsPartial": false,
+      "Type": "Quantum.Prototypes.Unity|LandMinePrototype"
+    },
+    {
+      "Path": "/Assets/QuantumUser/View/Generated/Quantum.CodeGen.UnityPrototypeAdapters.cs",
+      "IsPartial": false,
+      "Type": "Quantum.Prototypes.Unity|PlayerMatchDataPrototype"
+    },
+    {
+      "Path": "/Assets/QuantumUser/View/Generated/Quantum.CodeGen.UnityPrototypeAdapters.cs",
+      "IsPartial": false,
+      "Type": "Quantum.Prototypes.Unity|ProjectilePrototype"
+    },
+    {
+      "Path": "/Assets/QuantumUser/View/Generated/Quantum.CodeGen.UnityPrototypeAdapters.cs",
+      "IsPartial": false,
+      "Type": "Quantum.Prototypes.Unity|RaycastShotsPrototype"
+    },
+    {
+      "Path": "/Assets/QuantumUser/View/Generated/Quantum.CodeGen.UnityPrototypeAdapters.cs",
+      "IsPartial": false,
+      "Type": "Quantum.Prototypes.Unity|SpellPrototype"
+    },
+    {
+      "Path": "/Assets/QuantumUser/View/Generated/Quantum.CodeGen.UnityPrototypeAdapters.cs",
+      "IsPartial": false,
+      "Type": "Quantum.Prototypes.Unity|StarPrototype"
+    },
+    {
+      "Path": "/Assets/QuantumUser/View/Generated/Quantum.CodeGen.UnityPrototypeAdapters.cs",
+      "IsPartial": false,
+      "Type": "Quantum.Prototypes.Unity|StatsPrototype"
+    },
+    {
+      "Path": "/Assets/QuantumUser/View/Generated/Quantum.CodeGen.UnityPrototypeAdapters.cs",
+      "IsPartial": false,
+      "Type": "Quantum.Prototypes.Unity|TeamMemberPrototype"
+    },
+    {
+      "Path": "/Assets/QuantumUser/View/Generated/Quantum.CodeGen.UnityPrototypeAdapters.cs",
+      "IsPartial": false,
+      "Type": "Quantum.Prototypes.Unity|TopDownControllerPrototype"
+    },
+    {
+      "Path": "/Assets/QuantumUser/View/Generated/Quantum.CodeGen.UnityPrototypeAdapters.cs",
+      "IsPartial": false,
+      "Type": "Quantum.Prototypes.Unity|TriggerPrototype"
+    },
+    {
+      "Path": "/Assets/QuantumUser/View/Generated/Quantum.CodeGen.UnityPrototypeAdapters.cs",
+      "IsPartial": false,
+      "Type": "Quantum.Prototypes.Unity|TriggerDataPrototype"
+    },
+    {
+      "Path": "/Assets/QuantumUser/View/Generated/Quantum.CodeGen.UnityPrototypeAdapters.cs",
+      "IsPartial": false,
+      "Type": "Quantum.Prototypes.Unity|TutorialRuntimeDataPrototype"
+    },
+    {
+      "Path": "/Assets/QuantumUser/View/Generated/Quantum.CodeGen.UnityPrototypeAdapters.cs",
+      "IsPartial": false,
+      "Type": "Quantum.Prototypes.Unity|VisibilityAreaPrototype"
+    },
+    {
+      "Path": "/Assets/QuantumUser/View/Generated/Quantum.CodeGen.UnityPrototypeAdapters.cs",
+      "IsPartial": false,
+      "Type": "Quantum.Prototypes.Unity|WeaponCollectedTriggerDataPrototype"
+    },
+    {
+      "Path": "/Assets/QuantumUser/View/Generated/Quantum.CodeGen.UnityPrototypeAdapters.cs",
+      "IsPartial": false,
+      "Type": "Quantum.Prototypes.Unity|DictionaryEntry_Int16_CollectableChunk"
+    },
+    {
+      "Path": "/Assets/QuantumUser/View/Generated/Quantum.CodeGen.UnityPrototypeAdapters.cs",
+      "IsPartial": false,
+      "Type": "Quantum.Prototypes.Unity|DictionaryEntry_EntityRef_FP"
+    }
+  ]
+}

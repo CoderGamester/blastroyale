@@ -1,0 +1,77 @@
+{
+  "Version": 1,
+  "Sdk": "Photon Quantum 3.0.14 Stable 2241 after reviewed phase 2 layout",
+  "MergedPath": "Assets/Photon/Quantum/Runtime/QuantumUnityRuntime.cs",
+  "MergedBeforeSha256": "5bd95eedfb4224cb4dd26dc7aa824782cf794d2c02cc3917ef4c3a2e4b2b8ea0",
+  "MergedAfterSha256": "1fb4201b16268c697fb5ff7e01f3aafa9c3226ea00dd26ecc36d94c759e59ee7",
+  "MergedMetaSha256": "e4ba4868f3e0c2ba23b7c56035ba3fcf27af73f30d109fd0395963a229fa72bc",
+  "BackupDirectory": ".modernization-sdk-layout-phase3-backup",
+  "Targets": [
+    {
+      "Name": "QuantumGameGizmosSettings",
+      "GenericArity": 0,
+      "MergedDeclarationCount": 1,
+      "RelativePath": "Assets/Photon/Quantum/Runtime/QuantumGameGizmosSettings.cs",
+      "SourceBeforeSha256": null,
+      "SourceAfterSha256": "ce3056641bd16768cc6025d96cd71d7cd60e158fc3e2235da5ff354110fd5e16",
+      "MetaSha256": null,
+      "NewMetaSha256": "6e0f55f4aec7e1625f37c5a4f9a3896a6f50b37ac09af587231c9672a4df28de",
+      "Guid": "c6a6329482f04b3dae62234b88efbd97"
+    },
+    {
+      "Name": "QuantumNavMesh",
+      "GenericArity": 0,
+      "MergedDeclarationCount": 1,
+      "RelativePath": "Assets/Photon/Quantum/Runtime/QuantumNavMesh.cs",
+      "SourceBeforeSha256": null,
+      "SourceAfterSha256": "0700890997ad5a22e6c02ab96f89c73dfb24370c375a59d78a68c35ce43d9e15",
+      "MetaSha256": null,
+      "NewMetaSha256": "8f2f2eee7e5e41be6634c86803e14070e67fa6570abe481c6a0fe55698756de9",
+      "Guid": "7dcdb1d14e2341dea312f27de041a10b"
+    },
+    {
+      "Name": "QuantumAssetSourceAddressable",
+      "GenericArity": 1,
+      "MergedDeclarationCount": 1,
+      "RelativePath": "Assets/Photon/Quantum/Runtime/QuantumAssetSourceAddressable.cs",
+      "SourceBeforeSha256": null,
+      "SourceAfterSha256": "ffef19ae213f92949ba6f479258dc5f531d6e410494b874729c631435ced4324",
+      "MetaSha256": null,
+      "NewMetaSha256": "117ed86ce1acfa2b952647bf8a2309f07e7b1dbe09747a1b02d49f8b568cf89b",
+      "Guid": "e65e1a58755843159a3b5c6b536f2729"
+    },
+    {
+      "Name": "QuantumAssetSourceResource",
+      "GenericArity": 1,
+      "MergedDeclarationCount": 1,
+      "RelativePath": "Assets/Photon/Quantum/Runtime/QuantumAssetSourceResource.cs",
+      "SourceBeforeSha256": null,
+      "SourceAfterSha256": "acc2b0adc9890605b2091bcabc6f3acd28a4b334fa4417255ac245e1cb1dd366",
+      "MetaSha256": null,
+      "NewMetaSha256": "2fce4441cb1738af377f43a7cb191874b7ea22d93012f0c30d34163ca99b6d70",
+      "Guid": "2f42a31c5538413bb7f903bce62defdd"
+    },
+    {
+      "Name": "QuantumAssetSourceStatic",
+      "GenericArity": 1,
+      "MergedDeclarationCount": 1,
+      "RelativePath": "Assets/Photon/Quantum/Runtime/QuantumAssetSourceStatic.cs",
+      "SourceBeforeSha256": null,
+      "SourceAfterSha256": "14f1fa03d4ae01268499b99d7bdf2557a0ef216bfff11d81e57727e2bc1730fe",
+      "MetaSha256": null,
+      "NewMetaSha256": "654e46de1c06f93f494e5dae41cd68a00e3e286caa0b7107c947299eff65e714",
+      "Guid": "803c7ad056474e839e2b25aa12e06b0e"
+    },
+    {
+      "Name": "QuantumAssetSourceStaticLazy",
+      "GenericArity": 1,
+      "MergedDeclarationCount": 1,
+      "RelativePath": "Assets/Photon/Quantum/Runtime/QuantumAssetSourceStaticLazy.cs",
+      "SourceBeforeSha256": null,
+      "SourceAfterSha256": "1432734ecdfa97633ad764ce506189d75b5f1474ceef86984a1b3c865c5ad1cb",
+      "MetaSha256": null,
+      "NewMetaSha256": "acb1d37597c3636b8a78520670eb115e0edd56598a62a5fa18e84d5a9f31be33",
+      "Guid": "8115895022fc48409afdfd54a3ed73be"
+    }
+  ]
+}

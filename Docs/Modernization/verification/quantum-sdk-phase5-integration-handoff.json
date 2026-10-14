@@ -1,0 +1,20 @@
+{
+  "Version": 1,
+  "MainProject": "BlastRoyale",
+  "MainMustBeClosed": true,
+  "Commands": [
+    "dotnet run --project Tools/Modernization/QuantumSdkLayout/QuantumSdkLayout.csproj -- --project BlastRoyale --manifest Tools/Modernization/QuantumSdkLayout/manifest-phase4.json --rollback",
+    "dotnet run --project Tools/Modernization/QuantumSdkLayout/QuantumSdkLayout.csproj -- --project BlastRoyale --manifest Tools/Modernization/QuantumSdkLayout/manifest-phase3.json --rollback",
+    "dotnet run --project Tools/Modernization/QuantumSdkLayout/QuantumSdkLayout.csproj -- --project BlastRoyale --manifest Tools/Modernization/QuantumSdkLayout/manifest-phase5.json --apply",
+    "dotnet run --project Tools/Modernization/QuantumSdkLayout/QuantumSdkLayout.csproj -- --project BlastRoyale --manifest Tools/Modernization/QuantumSdkLayout/manifest-phase5.json"
+  ],
+  "MainBeforeMergedSHA256": "075f95624b64ca7aa455ebbc92f5f2290c9838c8378d4af660759649b33338c5",
+  "MainAfterMergedSHA256": "0e5852a8c1d90daa4e9efda6bdfe680ae1c1ed67c5165f72657f98194c08b176",
+  "RollbackThenApplyRehearsalExactByteAndMetadataMatch": true,
+  "RehearsalProject": "<repo>/.local/quantum-sdk-layout-audit/phase5-rollback-rehearsal",
+  "RetiredCanonicalTypes": 7,
+  "NewCanonicalTypes": 3,
+  "NativeObjectTypeAndMonoScriptPathInventory": "sdk-phase5-native-object-inventory.json",
+  "Acceptance": "quantum-sdk-warning-causality.json",
+  "GuardedMainApplied": true
+}

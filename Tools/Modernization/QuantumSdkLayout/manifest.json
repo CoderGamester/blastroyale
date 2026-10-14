@@ -1,0 +1,109 @@
+{
+  "Version": 1,
+  "Sdk": "Photon Quantum 3.0.14 Stable 2241",
+  "MergedPath": "Assets/Photon/Quantum/Runtime/QuantumUnityRuntime.cs",
+  "MergedBeforeSha256": "b5e9c7c5236bc75394d6db92a3c755449656b4ab96f25a6a6f75c5986e13cc55",
+  "MergedAfterSha256": "b69c8592067ccb7baf013ebe1ac2b1badfd66a6743aa79484c8a14e488861655",
+  "MergedMetaSha256": "e4ba4868f3e0c2ba23b7c56035ba3fcf27af73f30d109fd0395963a229fa72bc",
+  "Targets": [
+    {
+      "Name": "QPrototypeNavMeshPathfinder",
+      "RelativePath": "Assets/Photon/Quantum/Runtime/QPrototypeNavMeshPathfinder.cs",
+      "SourceBeforeSha256": "2cdc675f43268df1d2f1f359b1f482c132e33c6734ea162e32356a6fcc99ed02",
+      "SourceAfterSha256": "18f6e73a5fefc4839c36c083c74c1d500310d3c549f54c1f49387363985006a2",
+      "MetaSha256": "19462d40e4f059265761ac8892c5179d25e1d3bc6d8d295a3fcb2dd05e09c1c5",
+      "NewMetaSha256": null,
+      "Guid": "c1695c6f0a2badb4b8f81311344db83f"
+    },
+    {
+      "Name": "QPrototypePhysicsCollider2D",
+      "RelativePath": "Assets/Photon/Quantum/Runtime/QPrototypePhysicsCollider2D.cs",
+      "SourceBeforeSha256": "099a8e9c0aacae0247166391e8570cd9b16ce3e05428f502dbcffb4cb514cb48",
+      "SourceAfterSha256": "bec15100d9c6c93d7279b3b33a737a3974d3dc28611bdf0064c345a831703999",
+      "MetaSha256": "308009cda5bb7c90a3d63c64c60f34b345eb8bd127b7e3e2860b8bd75b16cf28",
+      "NewMetaSha256": null,
+      "Guid": "7673f01b7845c5b479f25c395d940007"
+    },
+    {
+      "Name": "QPrototypePhysicsCollider3D",
+      "RelativePath": "Assets/Photon/Quantum/Runtime/QPrototypePhysicsCollider3D.cs",
+      "SourceBeforeSha256": "f38d54b3c37f4343514bc1a1ee5c9073bf1a48e5514ac12de3d6dba05e36eba0",
+      "SourceAfterSha256": "51f4e3c273ee8aee634f3a235d85edaadf89d3e757b702963c83c63dce72a2c3",
+      "MetaSha256": "65e322929b8fdcb348f1c45c908af4144ea9d4283e083e2a177c3243fcb4594c",
+      "NewMetaSha256": null,
+      "Guid": "ca984aa8410585245ad7d8459517e43f"
+    },
+    {
+      "Name": "QPrototypePhysicsJoints2D",
+      "RelativePath": "Assets/Photon/Quantum/Runtime/QPrototypePhysicsJoints2D.cs",
+      "SourceBeforeSha256": "7bca2d36babe0c6584d16109565216799d353b2811b1390052be3008b5e29b8d",
+      "SourceAfterSha256": "151be2715c4e1bd871fd6ad6d04e833dc1ec66352e5b42345641ec4f399ad777",
+      "MetaSha256": "fe4a3c30b6b07999d60dc35901b8125b385fadbfd79927493bd534e3cb6da747",
+      "NewMetaSha256": null,
+      "Guid": "51c12c7749fb4d94296e023103352370"
+    },
+    {
+      "Name": "QPrototypePhysicsJoints3D",
+      "RelativePath": "Assets/Photon/Quantum/Runtime/QPrototypePhysicsJoints3D.cs",
+      "SourceBeforeSha256": "b771990c01377d3dbb5ab4bb6d411b5629a1694c445d501b997f2a65c418533f",
+      "SourceAfterSha256": "7d0f24e23fcda330d1d0b46b0fb0aaea63f4960e2857baf2e0a82b5ed7d9eb7b",
+      "MetaSha256": "532d15300eadb72303687148fb39ba02c485091be03171a17bff5fe76e169af9",
+      "NewMetaSha256": null,
+      "Guid": "1a4f21123fba28543a8e8102a798713e"
+    },
+    {
+      "Name": "QPrototypeTransform2D",
+      "RelativePath": "Assets/Photon/Quantum/Runtime/QPrototypeTransform2D.cs",
+      "SourceBeforeSha256": "427a771b1a8b541696935970102a9c22b816a366d7722bf38e10b3ed58db549e",
+      "SourceAfterSha256": "a70e7ca743fbbbc82f9da8ffa7a40c22c47fc7878ebfb0a8af92b26db7cbd770",
+      "MetaSha256": "25d60313cfc9b75f8e30089ed4d10cc4276b27d6553024eed74778ff8a2a4e0b",
+      "NewMetaSha256": null,
+      "Guid": "04f73d14281d2ec4a815c74fa0930a3e"
+    },
+    {
+      "Name": "QPrototypeTransform2DVertical",
+      "RelativePath": "Assets/Photon/Quantum/Runtime/QPrototypeTransform2DVertical.cs",
+      "SourceBeforeSha256": "d205dba8d0111de42d52fd0930787a70202c9fa533388ee35da967250bcbf8e7",
+      "SourceAfterSha256": "e7011ff1084cbf9b259c6e85c928d75e237e268edee1f26dde99b243d825c1ef",
+      "MetaSha256": "f613e841d62eb83ed2e6a9b61466d4fd3582a2d42e000dc1e00f76fcb658f243",
+      "NewMetaSha256": null,
+      "Guid": "a2d23b7d25f38b14b9cc17e42d27de60"
+    },
+    {
+      "Name": "QPrototypeTransform3D",
+      "RelativePath": "Assets/Photon/Quantum/Runtime/QPrototypeTransform3D.cs",
+      "SourceBeforeSha256": "f2743f1344c22f7a1b9a007fe01b9e0e4e55940ec995a9d60f6af2bc56eb2e2e",
+      "SourceAfterSha256": "426e358b17f13ab64469d55045a3d83fb90e4762a51665b23f942e5cb2fdaacc",
+      "MetaSha256": "df67ec96c663d9240f2a52f5f20b1709f77a950ac1ecd4ec1ef1cceec24387fa",
+      "NewMetaSha256": null,
+      "Guid": "5b92e94e573bf1b449e412b3fe03056c"
+    },
+    {
+      "Name": "QuantumUnityDB",
+      "RelativePath": "Assets/Photon/Quantum/Runtime/QuantumUnityDB.cs",
+      "SourceBeforeSha256": "84c3e9eca6c0cf71e40dc719fa48f3bb9c2ce00f4cd35c19795438ab81bfa7f7",
+      "SourceAfterSha256": "f4a0116c1b6f432047d03d852b70274140ecd85d028516fb8227d505d3cab7e1",
+      "MetaSha256": "5da35b34be675838cb0d72aed268f8a28d0eb3d3bf84101107e0f5813676a9b6",
+      "NewMetaSha256": null,
+      "Guid": "f6a4c4d8bf504c68b7cc3f562897b4d7"
+    },
+    {
+      "Name": "QuantumMonoBehaviour",
+      "RelativePath": "Assets/Photon/Quantum/Runtime/QuantumMonoBehaviour.cs",
+      "SourceBeforeSha256": null,
+      "SourceAfterSha256": "cf3fd76307be4b9dd058138a6e65cc843e924538c5ee3477682eec8869d066ad",
+      "MetaSha256": null,
+      "NewMetaSha256": "0b76ea9788f98bdfaf73ab6ba27d3f49e02589a97df81d7b1a0e1f1d1bfbb1e7",
+      "Guid": "b37a66ea378440bbac2ec48d9d18efc2"
+    },
+    {
+      "Name": "QuantumScriptableObject",
+      "RelativePath": "Assets/Photon/Quantum/Runtime/QuantumScriptableObject.cs",
+      "SourceBeforeSha256": null,
+      "SourceAfterSha256": "6fedad8bf514275d539620e520a798d8412a4a90490c1acaa1c497efbcf7343d",
+      "MetaSha256": null,
+      "NewMetaSha256": "84acc14ab44708e8a073aa0289a12a066b46956f1502c5c1fe27a05ea6b3f3dd",
+      "Guid": "7ffa618c05834a43b4c277aca47c448f"
+    }
+  ]
+}
