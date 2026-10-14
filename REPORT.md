@@ -8,7 +8,7 @@ Checkpoint: **2026-10-14**. Overall status: **Partial**. Work is on `upgrade/cod
 
 | Section | Status | Evidence and remaining work |
 | --- | --- | --- |
-| 1. Unity 6.3 | **Partial** | Exact Editor/recommended pins, current source/API ports, 314 EditMode/6 PlayMode, clean Boot and Metal tutorial/normal match pass. Final bundled Addressables, development Android APK and unsigned iOS export pass. The final Android incremental build has zero warning lines; the first native compile’s two generated clang argument warnings remain historical evidence. |
+| 1. Unity 6.3 | **Partial** | Exact Editor/recommended pins, current source/API ports, 314 EditMode/6 PlayMode, clean Boot, tutorial runner and Metal normal match pass. Final bundled Addressables, development Android APK and unsigned iOS export pass. The final Android incremental build has zero warning lines; the first native compile’s two generated clang argument warnings remain historical evidence. |
 | 2. Photon Quantum | **Done** | Real stable 3.0.14 source/codegen, 213 original assets, ten native maps, Q2→Q3 binary conversions, two genuine session/replay fixtures and actual tutorial/normal match. Device and two-player acceptance remain outside these proofs. |
 | 3. Web3 cleanup | **Done** | Client integrations, transfer flows, UI/config and dependencies removed; ordinary earned currency integer IDs retained. Untouched Backend and historical documentation are explicit exceptions. |
 | 4. GameLovers packages | **Done** | Six current public Git pins, old embedded generic modules removed, actual caller/adapter ports, 124 native package cases and Main gameplay pass. Physical mobile behavior is not verified. |
