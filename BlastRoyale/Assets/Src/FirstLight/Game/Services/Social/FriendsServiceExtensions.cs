@@ -60,14 +60,21 @@ namespace FirstLight.Game.Utils.UCSExtensions
 		public static async UniTask<bool> AddFriendByUnityId(this IFriendsService friendsService, string unityId)
 		{
 			var services = MainInstaller.ResolveServices(); // If a helper need to resolve services then it should be a service itself
+			var account = UgsAccountSession.Capture();
 
 			try
 			{
 				await friendsService.AddFriendAsync(unityId).AsUniTask();
+				account.ThrowIfChanged();
 				FLog.Info($"Friend request sent: {unityId}");
+			}
+			catch (OperationCanceledException) when (!account.IsCurrent)
+			{
+				return false;
 			}
 			catch (FriendsServiceException e)
 			{
+				if (!account.IsCurrent) return false;
 				FLog.Warn("Error adding friend.", e);
 				services.InGameNotificationService.QueueNotification($"Error adding friend, {e.ParseError()}");
 				return false;
@@ -83,6 +90,7 @@ namespace FirstLight.Game.Utils.UCSExtensions
 		public static async UniTask<bool> AddFriendByName(this IFriendsService friendsService, string playerName)
 		{
 			var services = MainInstaller.ResolveServices(); // If a helper need to resolve services then it should be a service itself
+			var account = UgsAccountSession.Capture();
 
 			try
 			{
@@ -97,6 +105,7 @@ namespace FirstLight.Game.Utils.UCSExtensions
 				);
 
 				var foundPlayers = await CloudSaveService.Instance.Data.Player.QueryAsync(query, new Unity.Services.CloudSave.Models.Data.Player.QueryOptions());
+				account.ThrowIfChanged();
 				if (foundPlayers.Count == 0)
 				{
 					services.InGameNotificationService.QueueNotification("Player not found");
@@ -106,12 +115,25 @@ namespace FirstLight.Game.Utils.UCSExtensions
 				var playerId = foundPlayers.First().Id;
 				FLog.Info("Found player id " + playerId);
 				await friendsService.AddFriendAsync(playerId).AsUniTask();
+				account.ThrowIfChanged();
 				FLog.Info($"Friend request sent: {playerName}");
 
 				services.InGameNotificationService.QueueNotification("Friend request sent");
 			}
+			catch (OperationCanceledException) when (!account.IsCurrent)
+			{
+				return false;
+			}
+			catch (CloudSaveException e)
+			{
+				if (!account.IsCurrent) return false;
+				FLog.Warn("Could not look up a player for the friend request.", e);
+				services.InGameNotificationService.QueueNotification("Could not find the player right now. Please try again.");
+				return false;
+			}
 			catch (FriendsServiceException e)
 			{
+				if (!account.IsCurrent) return false;
 				FLog.Warn("Error adding friend.", e);
 				services.InGameNotificationService.QueueNotification($"Error adding friend, {e.ParseError()}");
 				return false;
@@ -123,12 +145,14 @@ namespace FirstLight.Game.Utils.UCSExtensions
 		public static async UniTask<bool> BlockHandled(this IFriendsService friendsService, string playerID)
 		{
 			var services = MainInstaller.ResolveServices(); // If a helper need to resolve services then it should be a service itself
+			var account = UgsAccountSession.Capture();
 
 			try
 			{
 				FLog.Info($"Blocking player: {playerID}");
 
 				await friendsService.AddBlockAsync(playerID).AsUniTask();
+				account.ThrowIfChanged();
 
 				var tasks = new List<UniTask>();
 
@@ -145,13 +169,19 @@ namespace FirstLight.Game.Utils.UCSExtensions
 				}
 
 				await UniTask.WhenAll(tasks);
+				account.ThrowIfChanged();
 
 				FLog.Info($"Player blocked: {playerID}");
 				services.InGameNotificationService.QueueNotification("Player blocked");
 				return true;
 			}
+			catch (OperationCanceledException) when (!account.IsCurrent)
+			{
+				return false;
+			}
 			catch (FriendsServiceException e)
 			{
+				if (!account.IsCurrent) return false;
 				FLog.Warn("Error blocking player", e);
 
 				services.InGameNotificationService.QueueNotification($"Error blocking player, {e.ParseError()}");
@@ -162,17 +192,24 @@ namespace FirstLight.Game.Utils.UCSExtensions
 		public static async UniTask<bool> UnblockHandled(this IFriendsService friendsService, Relationship r)
 		{
 			var services = MainInstaller.ResolveServices(); // If a helper need to resolve services then it should be a service itself
+			var account = UgsAccountSession.Capture();
 
 			try
 			{
 				FLog.Info($"Unblocking player: {r.Member.Id}");
 				await friendsService.DeleteBlockAsync(r.Member.Id).AsUniTask();
+				account.ThrowIfChanged();
 				FLog.Info($"Player unblocked: {r.Member.Id}");
 				services.InGameNotificationService.QueueNotification("Player unblocked");
 				return true;
 			}
+			catch (OperationCanceledException) when (!account.IsCurrent)
+			{
+				return false;
+			}
 			catch (FriendsServiceException e)
 			{
+				if (!account.IsCurrent) return false;
 				FLog.Warn("Error unblocking player.", e);
 				services.InGameNotificationService.QueueNotification($"Error unblocking player, {e.ParseError()}");
 				return false;
@@ -182,15 +219,18 @@ namespace FirstLight.Game.Utils.UCSExtensions
 		public static async UniTask<bool> RemoveRelationshipHandled(this IFriendsService friendsService, Relationship relationship)
 		{
 			var services = MainInstaller.ResolveServices(); // If a helper need to resolve services then it should be a service itself
+			var account = UgsAccountSession.Capture();
 
 			try
 			{
 				await friendsService.DeleteRelationshipAsync(relationship.Id).AsUniTask();
+				account.ThrowIfChanged();
 				if (relationship.Type == RelationshipType.Block)
 				{
 					try
 					{
 						await friendsService.DeleteFriendAsync(relationship.Member.Id).AsUniTask();
+						account.ThrowIfChanged();
 					}
 					catch (Exception e)
 					{
@@ -198,11 +238,17 @@ namespace FirstLight.Game.Utils.UCSExtensions
 					}
 				}
 
+				account.ThrowIfChanged();
 				services.InGameNotificationService.QueueNotification("Player Removed");
 				return true;
 			}
+			catch (OperationCanceledException) when (!account.IsCurrent)
+			{
+				return false;
+			}
 			catch (FriendsServiceException e)
 			{
+				if (!account.IsCurrent) return false;
 				services.InGameNotificationService.QueueNotification($"Error removing player, {e.ErrorCode.ToStringSeparatedWords()}");
 				return false;
 			}

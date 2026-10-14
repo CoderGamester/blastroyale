@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using FirstLight.Game.Utils;
 using Cysharp.Threading.Tasks;
 using FirstLight.FLogger;
 using Unity.Services.CloudSave;
@@ -9,7 +10,7 @@ namespace FirstLight.Game.Utils.UCSExtensions
 {
 	public class UnityPlayerData
 	{
-		public string PlayfabID;
+		public string PlayerName;
 		public string AvatarURL;
 		public int Trophies;
 	}
@@ -19,69 +20,62 @@ namespace FirstLight.Game.Utils.UCSExtensions
 	/// </summary>
 	public static class CloudSaveServiceExtensions
 	{
-		private const string KEY_PLAYFAB_ID = "playfab_id";
+		private const string KEY_PLAYER_NAME = "player_name";
 		private const string KEY_AVATAR_URL = "avatar_url";
 		private const string KEY_TROPHIES = "trophies";
 
-		/// <summary>
-		/// Saves the playfab id for the current user.
-		/// TODO: This should be done on server.
-		/// </summary>
-		public static async UniTask SavePlayfabIDAsync(this ICloudSaveService cloudSave, string playfabID)
-		{
-			await cloudSave.Data.Player.SaveAsync(new Dictionary<string, object>
-			{
-				{KEY_PLAYFAB_ID, playfabID}
-			}, new SaveOptions(new PublicWriteAccessClassOptions()));
-		}
-
-		/// <summary>
-		/// Saves the playfab id for the current user.
-		/// TODO: This should be done on server.
-		/// </summary>
+		/// <summary>Publishes the avatar URL in the current UGS account public profile.</summary>
 		public static async UniTask SaveAvatarURLAsync(this ICloudSaveService cloudSave, string avatarUrl)
 		{
+			var account = UgsAccountSession.Capture();
 			await cloudSave.Data.Player.SaveAsync(new Dictionary<string, object>
 			{
 				{KEY_AVATAR_URL, avatarUrl}
 			}, new SaveOptions(new PublicWriteAccessClassOptions()));
+			account.ThrowIfChanged();
 		}
 
-		public static UniTask SaveTrophiesAsync(this ICloudSaveService cloudSave, uint trophies)
+		public static async UniTask SaveTrophiesAsync(this ICloudSaveService cloudSave, uint trophies)
 		{
-			return cloudSave.Data.Player.SaveAsync(new Dictionary<string, object> { { KEY_TROPHIES, trophies } },
-				new SaveOptions(new PublicWriteAccessClassOptions())).AsUniTask();
+			var account = UgsAccountSession.Capture();
+			await cloudSave.Data.Player.SaveAsync(new Dictionary<string, object> { { KEY_TROPHIES, trophies } },
+				new SaveOptions(new PublicWriteAccessClassOptions()));
+			account.ThrowIfChanged();
 		}
 
-		public static UniTask SavePlayerNameAsync(this ICloudSaveService cloudSave, string playerName)
+		public static async UniTask SavePlayerNameAsync(this ICloudSaveService cloudSave, string playerName)
 		{
-			return cloudSave.Data.Player.SaveAsync(new Dictionary<string, object>
+			var account = UgsAccountSession.Capture();
+			await cloudSave.Data.Player.SaveAsync(new Dictionary<string, object>
 			{
-				{ "player_name", playerName }
-			}, new SaveOptions(new PublicWriteAccessClassOptions())).AsUniTask();
+				{ KEY_PLAYER_NAME, playerName }
+			}, new SaveOptions(new PublicWriteAccessClassOptions()));
+			account.ThrowIfChanged();
 		}
 
 		/// <summary>
-		/// Loads the playfab master id for the given UCS player id. Returns null if it can't find it.
+		/// Loads public profile fields for the given Unity Authentication player ID.
 		/// </summary>
 		public static async UniTask<UnityPlayerData> LoadPlayerDataAsync(this ICloudSaveService cloudSave, string playerID)
 		{
+			var account = UgsAccountSession.Capture();
 			var data = new UnityPlayerData();
 			var loadOptions = new LoadOptions(new PublicReadAccessClassOptions(playerID));
 			var keys = new HashSet<string>
 			{
-				KEY_PLAYFAB_ID, KEY_AVATAR_URL, KEY_TROPHIES
+				KEY_PLAYER_NAME, KEY_AVATAR_URL, KEY_TROPHIES
 			};
 
 			var result = await cloudSave.Data.Player.LoadAsync(keys, loadOptions);
-			if (result.TryGetValue(KEY_PLAYFAB_ID, out var playfabID))
+			account.ThrowIfChanged();
+			if (result.TryGetValue(KEY_PLAYER_NAME, out var playerName))
 			{
-				data.PlayfabID = playfabID.Value.GetAsString();
+				data.PlayerName = playerName.Value.GetAs<string>();
 			}
 
 			if (result.TryGetValue(KEY_AVATAR_URL, out var avatarUrl))
 			{
-				data.AvatarURL = avatarUrl.Value.GetAsString();
+				data.AvatarURL = avatarUrl.Value.GetAs<string>();
 			}
 
 			if (result.TryGetValue(KEY_TROPHIES, out var trophiesString))

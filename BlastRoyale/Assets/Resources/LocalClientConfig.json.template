@@ -1,12 +1,9 @@
 {
-  "PlayFabTitleId": "",
-  "PlayFabRecoveryEmailTemplateId": "",
   "PhotonQuantumAppId": "",
   "UnityProjectId": "",
   "UnityEnvironmentId": "",
   "UnityEnvironmentName": "development",
   "UnityCcdBucketId": "",
   "UseBundledRemoteConfig": true,
-  "UsePlayFabPhotonAuthentication": false,
   "UseBundledShop": true
 }

@@ -23,7 +23,6 @@ using FirstLight.Game.Views;
 using FirstLight.Game.Views.UITK;
 using FirstLight.Game.UI;
 using FirstLight.Game.Localization;
-using PlayFab;
 using PlayFab.ClientModels;
 using Quantum;
 using Unity.Services.Authentication;
@@ -110,7 +109,7 @@ namespace FirstLight.Game.Domains.HomeScreen.UI
 			{
 				var data = new PlayerStatisticsPopupPresenter.StateData
 				{
-					PlayfabID = PlayFabSettings.staticPlayer.PlayFabId,
+					UnityID = AuthenticationService.Instance.PlayerId,
 					OnEditNameClicked = () =>
 					{
 						Data.OnProfileClicked();

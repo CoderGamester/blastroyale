@@ -19,7 +19,6 @@ using FirstLight.Server.SDK.Modules;
 using GameLovers.StatechartMachine;
 using FirstLight.Game.Localization;
 using Photon.Deterministic;
-using PlayFab;
 using Quantum;
 using Quantum.Commands;
 using Quantum.Systems;
@@ -187,6 +186,8 @@ namespace FirstLight.Game.StateMachines
 		{
 			FLog.Verbose("Game Start");
 			SetPlayerMatchData(callback.Game);
+			// Q3 also raises GameStarted after GameResynced; that callback already owns reconnect bootstrap.
+			if (callback.IsResync) return;
 			// paused on Start means waiting for Snapshot
 			if (callback.Game.Session.IsPaused)
 			{
@@ -434,7 +435,7 @@ namespace FirstLight.Game.StateMachines
 			FLog.Info("Sending player runtime data");
 			game.AddPlayer(0, new RuntimePlayer
 			{
-				PlayerId = PlayFabSettings.staticPlayer.PlayFabId,
+				PlayerId = AuthenticationService.Instance.PlayerId,
 				UnityId = AuthenticationService.Instance.PlayerId,
 				PlayerName = _services.AuthService.GetPrettyLocalPlayerName(),
 				Cosmetics = equippedCosmetics,

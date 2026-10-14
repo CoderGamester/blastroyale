@@ -1,3 +1,4 @@
+using Unity.Services.Authentication;
 using MainInstaller = FirstLight.Game.Utils.MainInstaller;
 using System;
 using System.Collections.Generic;
@@ -12,7 +13,6 @@ using FirstLight.Game.Messages;
 using FirstLight.Game.Services.RoomService;
 using FirstLight.Game.Utils;
 using Photon.Realtime;
-using PlayFab;
 using Quantum;
 using UnityEngine;
 using UnityEngine.AddressableAssets;
@@ -108,7 +108,7 @@ namespace FirstLight.Game.Services
 				{"client_version", VersionUtils.VersionInternal},
 				{"total_time", Time.realtimeSinceStartup - time},
 				{"vendor_id", SystemInfo.deviceUniqueIdentifier},
-				{"playfab_player_id", PlayFabSettings.staticPlayer.PlayFabId}
+				{"ugs_player_id", AuthenticationService.Instance.PlayerId}
 			};
 			FLog.Verbose("Completed loading all core assets");
 			_services.MessageBrokerService.PublishSafe(new BenchmarkLoadedMandatoryMatchAssets());

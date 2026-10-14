@@ -20,10 +20,8 @@ using FirstLight.Server.SDK.Models;
 using FirstLight.Game.UI;
 using FirstLightServerSDK.Modules;
 using FirstLight.Game.Localization;
-using PlayFab;
 using Quantum;
 using Unity.Services.Authentication;
-using Unity.Services.CloudSave;
 using UnityEngine.UIElements;
 
 namespace FirstLight.Game.Presenters
@@ -37,7 +35,6 @@ namespace FirstLight.Game.Presenters
 		public class StateData
 		{
 			public string BotName;
-			public string PlayfabID;
 			public string UnityID;
 			public Action OnEditNameClicked;
 			public bool CanOpenLeaderboards;
@@ -72,7 +69,7 @@ namespace FirstLight.Game.Presenters
 			GameId.AvatarBrandmale,
 		};
 
-		private bool IsLocalPlayer => Data.PlayfabID == PlayFabSettings.staticPlayer.PlayFabId;
+		private bool IsLocalPlayer => AuthenticationService.Instance.IsSignedIn && Data.UnityID == AuthenticationService.Instance.PlayerId;
 
 		private void Awake()
 		{
@@ -115,7 +112,7 @@ namespace FirstLight.Game.Presenters
 			var editNameButton = Root.Q<ImageButton>("EditNameButton");
 			if (IsLocalPlayer)
 			{
-				editNameButton.clicked += () => Data.OnEditNameClicked();
+				editNameButton.clicked += () => Data.OnEditNameClicked?.Invoke();
 			}
 			else
 			{
@@ -160,7 +157,12 @@ namespace FirstLight.Game.Presenters
 
 		private void SetStatInfo(int index, PublicPlayerProfile result, string statName, string statLoc)
 		{
-			var stat = result.Statistics.FirstOrDefault(s => s.Name == statName);
+			if (result.Statistics == null || !result.Statistics.Any(s => s.Name == statName))
+			{
+				_statContainers[index].visible = false;
+				return;
+			}
+			var stat = result.Statistics.First(s => s.Name == statName);
 			_statLabels[index].text = statLoc;
 			_statValues[index].text = stat.Value.ToString();
 			_statContainers[index].visible = true;
@@ -213,17 +215,11 @@ namespace FirstLight.Game.Presenters
 			_loadingSpinner.visible = true;
 
 			PublicPlayerProfile result;
-			if (Data.UnityID != null)
-			{
-				// If PlayfabID is null we fetch it from CloudSave.
-				Data.PlayfabID ??= (await CloudSaveService.Instance.LoadPlayerDataAsync(Data.UnityID)).PlayfabID;
-			}
-
-			if (Data.PlayfabID != null)
+			if (!string.IsNullOrEmpty(Data.UnityID))
 			{
 				if (!_services.UIService.IsScreenOpen<PlayerStatisticsPopupPresenter>()) return;
-				result = await _services.ProfileService.GetPlayerPublicProfile(Data.PlayfabID);
-				FLog.Info("Downloading profile for " + Data.PlayfabID);
+				result = await _services.ProfileService.GetPlayerPublicProfile(Data.UnityID);
+				FLog.Info("Downloading UGS public player profile");
 			}
 			else
 			{
@@ -241,7 +237,7 @@ namespace FirstLight.Game.Presenters
 			}
 			else
 			{
-				if (Data.PlayfabID == null) // Bots
+				if (Data.UnityID == null) // Bots
 				{
 					_nameLabel.text = result.Name;
 				}
@@ -267,8 +263,8 @@ namespace FirstLight.Game.Presenters
 			}
 			else
 			{
-				var stat = result.Statistics.FirstOrDefault(s => s.Name == GameConstants.Stats.FAME);
-				_pfpImage.SetLevel((uint) stat.Value);
+				if (result.Statistics != null && result.Statistics.Any(s => s.Name == GameConstants.Stats.FAME))
+					_pfpImage.SetLevel((uint) result.Statistics.First(s => s.Name == GameConstants.Stats.FAME).Value);
 			}
 
 			_pfpImage.RegisterCallback<MouseDownEvent>(e => OpenLeaderboard(ScriptLocalization.General.Level, GameConstants.Stats.FAME));

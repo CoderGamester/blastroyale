@@ -1,3 +1,5 @@
+using FirstLight.Game.Localization;
+using Unity.Services.Authentication;
 using MainInstaller = FirstLight.Game.Utils.MainInstaller;
 using System;
 using System.Collections;
@@ -17,7 +19,6 @@ using FirstLight.Game.Utils.UCSExtensions;
 using FirstLight.Game.Views;
 using FirstLight.Game.UI;
 using JetBrains.Annotations;
-using PlayFab;
 using PlayFab.ClientModels;
 using UnityEngine;
 using UnityEngine.UIElements;
@@ -133,6 +134,20 @@ namespace FirstLight.Game.Presenters
 
 		protected override UniTask OnScreenOpen(bool reload)
 		{
+			if (!_services.LeaderboardService.IsGlobalRankingAvailable || _services.LeaderboardService.Leaderboards.Count == 0)
+			{
+				_loadingSpinner.SetDisplay(false);
+				_leaderboardListView.SetDisplay(false);
+				_fixedLocalPlayerHolder.SetDisplay(false);
+				_leaderboardOptions.SetDisplay(false);
+				_endsInContainer.SetDisplay(false);
+				_rewardsWidget.SetDisplay(false);
+				_extraButtonHolder.SetDisplay(false);
+				_descriptionContainer.SetVisibility(true);
+				_leaderboardTitle.text = GameLocalization.GetTranslation("UITStandings/unavailable_title");
+				_leaderboardDescription.text = GameLocalization.GetTranslation("UITStandings/global_unavailable");
+				return base.OnScreenOpen(reload);
+			}
 			if (Data.ShowSpecificLeaderboard != null)
 			{
 				DisplayLeaderboard(Data.ShowSpecificLeaderboard);
@@ -198,7 +213,7 @@ namespace FirstLight.Game.Presenters
 			var leaderboardEntryView = _leaderboardEntryMap[element];
 			var leaderboardEntry = _playfabLeaderboardEntries[index];
 
-			var isLocalPlayer = leaderboardEntry.PlayFabId == PlayFabSettings.staticPlayer.PlayFabId;
+			var isLocalPlayer = leaderboardEntry.PlayFabId == AuthenticationService.Instance.PlayerId;
 
 			leaderboardEntry.DisplayName ??= NoDisplayNameReplacement;
 
@@ -305,7 +320,7 @@ namespace FirstLight.Game.Presenters
 			FLog.Verbose($"Displaying Leaderboard for metric {board.MetricName}");
 			for (int i = 0; i < resultPos; i++)
 			{
-				if (result.Leaderboard[i].PlayFabId == PlayFabSettings.staticPlayer.PlayFabId)
+				if (result.Leaderboard[i].PlayFabId == AuthenticationService.Instance.PlayerId)
 				{
 					_localPlayerPos = i;
 				}

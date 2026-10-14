@@ -32,8 +32,6 @@ namespace FirstLight.Game.Utils
 		[Serializable]
 		public sealed class ClientConfiguration
 		{
-			public string PlayFabTitleId = "";
-			public string PlayFabRecoveryEmailTemplateId = "";
 			public string PhotonQuantumAppId = "";
 			public string UnityProjectId = "";
 			public string UnityEnvironmentId = "";
@@ -41,7 +39,6 @@ namespace FirstLight.Game.Utils
 			public string UnityCcdBucketId = "";
 			public bool UseBundledRemoteConfig = true;
 			public bool UseBundledShop = true;
-			public bool UsePlayFabPhotonAuthentication = false;
 		}
 
 		private static ClientConfiguration LoadConfiguration()
@@ -60,8 +57,8 @@ namespace FirstLight.Game.Utils
 
 		public static void ValidateClientConfiguration()
 		{
-			if (string.IsNullOrWhiteSpace(Configuration.PlayFabTitleId))
-				throw new InvalidOperationException("Set PlayFabTitleId in Assets/Resources/LocalClientConfig.json. Create a free Development Mode title in PlayFab Game Manager.");
+			if (!Guid.TryParse(Configuration.UnityProjectId, out _))
+				throw new InvalidOperationException("Set UnityProjectId in Assets/Resources/LocalClientConfig.json and link the same free Unity Cloud project in Project Settings > Services.");
 			if (!Guid.TryParse(Configuration.PhotonQuantumAppId, out _))
 				throw new InvalidOperationException("Set PhotonQuantumAppId to your Quantum App ID in Assets/Resources/LocalClientConfig.json.");
 		}
@@ -70,8 +67,6 @@ namespace FirstLight.Game.Utils
 		{
 			private readonly string _name;
 			public string Name => _name;
-			public string PlayFabTitleID => Configuration.PlayFabTitleId;
-			public string PlayFabRecoveryEmailTemplateID => string.IsNullOrWhiteSpace(Configuration.PlayFabRecoveryEmailTemplateId) ? null : Configuration.PlayFabRecoveryEmailTemplateId;
 			public string PhotonAppIDRealtime => Configuration.PhotonQuantumAppId;
 			public string UCSEnvironmentID => Configuration.UnityEnvironmentId;
 			public string UCSEnvironmentName => Configuration.UnityEnvironmentName;

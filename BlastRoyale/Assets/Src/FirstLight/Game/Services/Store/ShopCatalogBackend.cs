@@ -2,7 +2,6 @@ using System;
 using System.Collections.Generic;
 using Cysharp.Threading.Tasks;
 using FirstLight.Game.Data.DataTypes;
-using FirstLight.Game.Utils;
 using FirstLight.Server.SDK.Modules;
 using PlayFab.ClientModels;
 using Quantum;
@@ -16,12 +15,10 @@ namespace FirstLight.Game.Services
 		UniTask<GetStoreItemsResult> GetStore(string catalogName, string storeName);
 	}
 
-	public sealed class PlayFabShopCatalogBackend : IShopCatalogBackend
+	public sealed class BundledShopCatalogBackend : IShopCatalogBackend
 	{
 		public UniTask<GetCatalogItemsResult> GetCatalog(string catalogName)
 		{
-			if (!FLEnvironment.Configuration.UseBundledShop)
-				return AsyncPlayfabAPI.GetCatalogItems(new GetCatalogItemsRequest { CatalogVersion = catalogName });
 			return UniTask.FromResult(new GetCatalogItemsResult
 			{
 				Catalog = new List<CatalogItem>
@@ -39,8 +36,6 @@ namespace FirstLight.Game.Services
 
 		public UniTask<GetStoreItemsResult> GetStore(string catalogName, string storeName)
 		{
-			if (!FLEnvironment.Configuration.UseBundledShop)
-				return AsyncPlayfabAPI.GetStoreItems(new GetStoreItemsRequest { CatalogVersion = catalogName, StoreId = storeName });
 			var items = new List<StoreItem>();
 			if (storeName == "MainShop") items.Add(new StoreItem
 			{

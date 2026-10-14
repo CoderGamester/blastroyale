@@ -31,7 +31,7 @@ namespace FirstLight.Game.Services
 		private IGameBackendService _gameBackend;
 		private Queue<ServerCommandQueueEntry> _queue;
 		private IGameServices _services;
-		private readonly Queue<(string PlayerId, ServerState State)> _clientSaves = new ();
+		private readonly Queue<ClientSaveEntry> _clientSaves = new ();
 		private bool _saving;
 
 		public ServerCommandQueue(IClientDataService data, IGameLogic logic, IGameBackendService gameBackend, IGameServices services)
@@ -107,7 +107,7 @@ namespace FirstLight.Game.Services
 					_clientSaves.Clear();
 					_clientSaves.Enqueue(head);
 				}
-				_clientSaves.Enqueue((PlayFabSettings.staticPlayer.PlayFabId, GameBackendService.CapturePlayerState(_data)));
+				_clientSaves.Enqueue(new ClientSaveEntry(UgsAccountSession.Capture(), GameBackendService.CapturePlayerState(_data)));
 				if (!_saving) SaveClientSnapshots(clientBackend).Forget();
 				return;
 			}
@@ -128,18 +128,26 @@ namespace FirstLight.Game.Services
 				while (_clientSaves.Count > 0)
 				{
 					var snapshot = _clientSaves.Peek();
-					if (snapshot.PlayerId != PlayFabSettings.staticPlayer.PlayFabId)
+					if (!snapshot.Account.IsCurrent)
 					{
 						_clientSaves.Dequeue();
 						continue;
 					}
 					try
 					{
+						snapshot.Account.ThrowIfChanged();
 						await backend.PersistPlayerState(snapshot.State);
-						_clientSaves.Dequeue();
+						snapshot.Account.ThrowIfChanged();
+						// A completion may only remove the exact snapshot it started with.
+						RemoveClientSave(snapshot);
 					}
 					catch (Exception exception)
 					{
+						if (!snapshot.Account.IsCurrent)
+						{
+							RemoveClientSave(snapshot);
+							continue;
+						}
 						// Keep the immutable snapshot queued; the next command retries it before later changes.
 						FLog.Warn("Progression could not be saved. It will retry on the next command; do not close the game before saving succeeds.", exception);
 						break;
@@ -147,6 +155,22 @@ namespace FirstLight.Game.Services
 				}
 			}
 			finally { _saving = false; }
+		}
+
+		private void RemoveClientSave(ClientSaveEntry snapshot)
+		{
+			if (_clientSaves.TryPeek(out var head) && ReferenceEquals(head, snapshot)) _clientSaves.Dequeue();
+		}
+
+		private sealed class ClientSaveEntry
+		{
+			public UgsAccountSession.Snapshot Account { get; }
+			public ServerState State { get; }
+			public ClientSaveEntry(UgsAccountSession.Snapshot account, ServerState state)
+			{
+				Account = account;
+				State = state;
+			}
 		}
 
 		/// <summary>

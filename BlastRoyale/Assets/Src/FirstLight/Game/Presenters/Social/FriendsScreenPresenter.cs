@@ -30,6 +30,9 @@ namespace FirstLight.Game.Presenters
 		}
 
 		private IGameServices _services;
+		private bool _screenActive;
+		private bool _addingFriend;
+		private int _viewGeneration;
 
 		private ListView _friendsList;
 		private ListView _requestsList;
@@ -113,6 +116,9 @@ namespace FirstLight.Game.Presenters
 
 		protected override UniTask OnScreenClose()
 		{
+			_screenActive = false;
+			++_viewGeneration;
+			_addingFriend = false;
 			FriendsService.Instance.RelationshipDeleted -= OnRelationshipDeleted;
 			FriendsService.Instance.RelationshipAdded -= OnRelationshipAdded;
 			FriendsService.Instance.PresenceUpdated -= OnPresenceUpdate;
@@ -123,6 +129,10 @@ namespace FirstLight.Game.Presenters
 
 		protected override UniTask OnScreenOpen(bool reload)
 		{
+			_screenActive = true;
+			++_viewGeneration;
+			_addingFriend = false;
+			_addFriendButton.SetEnabled(true);
 			_yourIDField.text = _services.AuthService.GetLocalPlayerExternalID();
 			RefreshAll();
 
@@ -326,20 +336,38 @@ namespace FirstLight.Game.Presenters
 
 		private async UniTaskVoid AddFriend(string playerID)
 		{
-			if (string.IsNullOrWhiteSpace(playerID)) return;
-
-			_addFriendButton.SetEnabled(false);
-
-			var success = await FriendsService.Instance.AddFriendByName(playerID);
-
-			if (success)
+			if (!_screenActive || _addingFriend || string.IsNullOrWhiteSpace(playerID)) return;
+			var generation = _viewGeneration;
+			var button = _addFriendButton;
+			_addingFriend = true;
+			button.SetEnabled(false);
+			try
 			{
-				RefreshRequests();
-				RefreshFriends(); // In case they already had a request from that friend, it accepts it
+				var success = await FriendsService.Instance.AddFriendByName(playerID);
+				if (this == null || !_screenActive || generation != _viewGeneration) return;
+				if (success)
+				{
+					RefreshRequests();
+					RefreshFriends();
+					_addFriendIDField.value = string.Empty;
+				}
 			}
-
-			_addFriendButton.SetEnabled(true);
-			_addFriendIDField.value = string.Empty;
+			catch (OperationCanceledException) { }
+			catch (Exception exception)
+			{
+				FLog.Warn("Could not send a friend request.", exception);
+				if (this != null && _screenActive && generation == _viewGeneration)
+					_services.InGameNotificationService.QueueNotification("Could not send the friend request. Try again.");
+			}
+			finally
+			{
+				if (this != null && generation == _viewGeneration)
+				{
+					_addingFriend = false;
+					button.SetEnabled(true);
+				}
+			}
 		}
+
 	}
 }

@@ -6,9 +6,6 @@ using FirstLight.Game.Utils;
 using FirstLight.Server.SDK.Models;
 using FirstLight.Server.SDK.Modules;
 using FirstLight.Server.SDK.Modules.Commands;
-using UnityEngine;
-using PlayFab;
-using PlayFab.ClientModels;
 using PlayFab.SharedModels;
 
 // ReSharper disable once CheckNamespace
@@ -21,7 +18,7 @@ namespace FirstLight.Game.Services
 	public interface IPlayerProfileService
 	{
 		/// <summary>
-		/// Query read-only public player profile data
+		/// Query public player profile data by real Unity Authentication player ID
 		/// </summary>
 		UniTask<PublicPlayerProfile> GetPlayerPublicProfile(string playerId);
 	}
@@ -38,10 +35,12 @@ namespace FirstLight.Game.Services
 
 		public async UniTask<PublicPlayerProfile> GetPlayerPublicProfile(string playerId)
 		{
+			var account = UgsAccountSession.Capture();
 			var r = await _backend.CallGenericFunction(CommandNames.GET_PLAYER_PROFILE, new Dictionary<string, string>()
 			{
 				{CommandFields.PlayerId, playerId},
 			});
+			account.ThrowIfChanged();
 			var serverResult = ModelSerializer.Deserialize<PlayFabResult<LogicResult>>(r.FunctionResult.ToString());
 			return ModelSerializer.DeserializeFromData<PublicPlayerProfile>(serverResult.Result.Data);
 		}

@@ -70,6 +70,7 @@ namespace FirstLight.Game.Services.Authentication
 		public UniTask AddUserNamePassword(string email, string username, string password);
 		public UniTask SendAccountRecoveryEmail(string email);
 		public bool CanLoginAutomatically();
+		public UniTask<LoginResult> LoginWithUnityPlayerAccount(bool linkCurrentGuest);
 	}
 
 	public interface ISessionData
@@ -89,7 +90,7 @@ namespace FirstLight.Game.Services.Authentication
 		string RawLocalPlayerName { get; }
 
 		/// <summary>
-		/// It will go through the whole login process with a NEW guest account and link to the device at the end
+		/// It will go through the whole login process with a guest account, reusing the SDK cached session when present
 		/// </summary>
 		/// <returns></returns>
 		UniTask LoginWithGuestAccount();
@@ -99,6 +100,10 @@ namespace FirstLight.Game.Services.Authentication
 		/// </summary>
 		/// <returns></returns>
 		UniTask LoginWithDeviceID();
+
+		/// <summary>Use the SDK hosted account flow; linking preserves the current guest progression.</summary>
+		UniTask LoginWithUnityPlayerAccount(bool linkCurrentGuest);
+		bool CanLoginWithUnityPlayerAccount { get; }
 
 		/// <summary>
 		/// It will go through the whole login process with the email and password provided, it may fail if the input is incorrect
@@ -161,14 +166,14 @@ namespace FirstLight.Game.Services.Authentication
 		public ISessionData SessionData { get; }
 
 		/// <summary>
-		/// Send an recovery account email to the account, this is handled by playfab
+		/// Send an recovery account email to the account, this uses hosted Unity Player Accounts
 		/// </summary>
 		/// <param name="email"></param>
 		/// <returns></returns>
 		UniTask SendAccountRecoveryEmail(string email);
 
 		/// <summary>
-		/// Logout the user and remove it from the authentication data
+		/// Logout the user and end the current session, preserving a guest's cached recovery token
 		/// </summary>
 		/// <returns></returns>
 		UniTask Logout();
@@ -203,7 +208,7 @@ namespace FirstLight.Game.Services.Authentication
 
 	public enum LoginType
 	{
-		Native, LegacyDevice, EmailPass
+		Native = 0, LegacyDevice = 1, EmailPass = 2, UnityAccount = 3
 	}
 
 	public class SessionData : ISessionData
@@ -220,7 +225,9 @@ namespace FirstLight.Game.Services.Authentication
 	{
 		private IGameBackendService _backendService;
 
-		private ILoginProvider _loginProvider;
+		private readonly UnityCloudLoginProvider _loginProvider;
+		private bool _authenticationInProgress;
+		public bool CanLoginWithUnityPlayerAccount => _loginProvider.CanUsePlayerAccounts;
 
 		private INativeGamesLoginProvider _nativeGamesLogin;
 
@@ -238,7 +245,6 @@ namespace FirstLight.Game.Services.Authentication
 		public ISessionData SessionData => _sessionData;
 		private SessionData _sessionData;
 		private bool _logicInitialized;
-		private LoginResult _pendingGuestLogin;
 
 		private List<IAuthenticationHook> _authenticationHooks;
 
@@ -256,25 +262,24 @@ namespace FirstLight.Game.Services.Authentication
 			_msgBroker = msgBroker;
 			_backendService = backendService;
 			_msgBroker = msgBroker;
-			_loginProvider = new PlayfabDeviceLoginProvider();
+			_loginProvider = new UnityCloudLoginProvider();
 			var unityCloudHook = new UnityCloudHook(backendService, dataService, gameRemoteConfigProvider, msgBroker);
-			unityCloudHook.OnSetPlayfabName += OnUnityAuthSetPlayfabName;
+			unityCloudHook.OnSetPlayerName += OnUnityAuthSetPlayerName;
 			_authenticationHooks = new IAuthenticationHook[]
 			{
 				_loginProvider,
 				unityCloudHook,
 				new MigrateTutorialDataHook(dataService, gameCommandService),
 				new ParseFeatureFlagsHook(msgBroker),
-				new AuthenticatePhotonHook(networkService),
-				new UpdateContactEmailHook()
+				new AuthenticatePhotonHook(networkService)
 			}.ToList();
 			_nativeGamesLogin = new NullNativeGamesLogin();
 		}
 
 		/// <summary>
-		/// Called when copying name from unity to playfab, used for name generation
+		/// Called after the real UGS player name has been loaded.
 		/// </summary>
-		private void OnUnityAuthSetPlayfabName(string name)
+		private void OnUnityAuthSetPlayerName(string name)
 		{
 			RawLocalPlayerName = name;
 			_msgBroker.PublishSafe(new DisplayNameChangedMessage()
@@ -285,11 +290,10 @@ namespace FirstLight.Game.Services.Authentication
 
 		public UniTask LoginWithNativeGamesService()
 		{
-			_pendingGuestLogin = null;
 			_sessionData.Email = null;
 			_sessionData.IsAuthenticated = false;
 			_sessionData.IsFirstSession = true;
-			return LoginProcess(_nativeGamesLogin.Authenticate(), false);
+			throw new NotSupportedException("Use Unity Player Accounts for recoverable sign-in.");
 		}
 
 		public async UniTask TryToLinkNativeAccount()
@@ -309,30 +313,44 @@ namespace FirstLight.Game.Services.Authentication
 			return _nativeGamesLogin.CanAuthenticate();
 		}
 
-		public async UniTask LoginWithGuestAccount()
+		public UniTask LoginWithGuestAccount() => LoginProcess(_loginProvider.LoginWithNewGuestAccount);
+
+		public async UniTask LoginWithUnityPlayerAccount(bool linkCurrentGuest)
 		{
-			_sessionData.Email = null;
-			_sessionData.IsAuthenticated = false;
-			_sessionData.IsFirstSession = true;
-			// A retry after a cloud/network failure must reuse the created guest rather than consume another free player slot.
-			_pendingGuestLogin ??= await _loginProvider.LoginWithNewGuestAccount();
-			await LoginProcess(UniTask.FromResult(_pendingGuestLogin), false);
-			_pendingGuestLogin = null;
+			if (!linkCurrentGuest || !_sessionData.IsAuthenticated)
+			{
+				await LoginProcess(() => _loginProvider.LoginWithUnityPlayerAccount(linkCurrentGuest), true);
+				return;
+			}
+			if (_authenticationInProgress) throw new InvalidOperationException("Authentication is already in progress.");
+			_authenticationInProgress = true;
+			try
+			{
+				var account = UgsAccountSession.Capture();
+				var result = await _loginProvider.LoginWithUnityPlayerAccount(true);
+				account.ThrowIfChanged();
+				var info = await AuthenticationService.Instance.GetPlayerInfoAsync();
+				account.ThrowIfChanged();
+				_sessionData.LastLoginResult = result;
+				_sessionData.IsGuest = false;
+				LoginTypes = new HashSet<LoginType> { LoginType.UnityAccount };
+				if (string.IsNullOrEmpty(info.GetUnityId())) throw new InvalidOperationException("Unity account linking did not return a linked identity.");
+				// Linking preserves this exact UGS ID, loaded models and pending saves. Never reload an older cloud snapshot here.
+			}
+			finally { _authenticationInProgress = false; }
 		}
 
 		public UniTask LoginWithDeviceID()
 		{
-			_pendingGuestLogin = null;
 			_sessionData.Email = null;
 			_sessionData.IsAuthenticated = false;
 			_sessionData.IsFirstSession = false;
-			return LoginProcess(_loginProvider.LoginWithDevice(), false);
+			return LoginProcess(_loginProvider.LoginWithDevice, false);
 		}
 
 		public async UniTask LoginWithEmailProcess(string email, string password)
 		{
-			_pendingGuestLogin = null;
-			await LoginProcess(_loginProvider.LoginWithEmailPassword(email, password), true);
+			await LoginProcess(() => _loginProvider.LoginWithEmailPassword(email, password), true);
 		}
 
 		public UniTask<LoginResult> FetchCredentialsWithEmailPassword(string email, string password)
@@ -342,61 +360,63 @@ namespace FirstLight.Game.Services.Authentication
 
 		public UniTask LoginWithExistingResult(LoginResult result)
 		{
-			_pendingGuestLogin = null;
-			return LoginProcess(UniTask.FromResult(result));
+			return LoginProcess(() => UniTask.FromResult(result));
 		}
 
-		private async UniTask LoginProcess(UniTask<LoginResult> task, bool previouslyLoggedIn = false)
+		private async UniTask LoginProcess(Func<UniTask<LoginResult>> login, bool previouslyLoggedIn = false)
 		{
-			await UniTask.WhenAll(_authenticationHooks.Select(a => a.BeforeAuthentication(previouslyLoggedIn)));
-
-			var loginResult = await task;
-			_sessionData.LastLoginResult = loginResult;
-			_sessionData.IsFirstSession = loginResult.NewlyCreated;
-			var hasEmail = !string.IsNullOrWhiteSpace(loginResult.InfoResultPayload.AccountInfo.PrivateInfo?.Email);
-
-			_sessionData.IsGuest = !hasEmail;
-			var logins = new HashSet<LoginType>();
-			if (loginResult.InfoResultPayload.AccountInfo.GameCenterInfo != null || loginResult.InfoResultPayload.AccountInfo.GooglePlayGamesInfo != null)
+			if (_authenticationInProgress) throw new InvalidOperationException("Authentication is already in progress.");
+			_authenticationInProgress = true;
+			var wasAuthenticated = _sessionData.IsAuthenticated;
+			var previous = wasAuthenticated && AuthenticationService.Instance.IsSignedIn ? UgsAccountSession.Capture() : default;
+			_sessionData.IsAuthenticated = false;
+			try
 			{
-				logins.Add(LoginType.Native);
+				await UniTask.WhenAll(_authenticationHooks.Select(a => a.BeforeAuthentication(previouslyLoggedIn)));
+				var loginResult = await login();
+				var account = UgsAccountSession.Capture();
+				if (loginResult == null || loginResult.PlayFabId != account.PlayerId)
+					throw new InvalidOperationException("The login result does not belong to the current Unity account.");
+				var info = await AuthenticationService.Instance.GetPlayerInfoAsync();
+				account.ThrowIfChanged();
+				_sessionData.LastLoginResult = loginResult;
+				_sessionData.IsFirstSession = loginResult.NewlyCreated;
+				_sessionData.IsGuest = (info.Identities == null || info.Identities.Count == 0) && string.IsNullOrEmpty(info.Username);
+				LoginTypes = new HashSet<LoginType>
+				{
+					!string.IsNullOrEmpty(info.GetUnityId()) ? LoginType.UnityAccount : LoginType.LegacyDevice
+				};
+				_sessionData.Email = null; // Hosted identity claims are not an email/password game login.
+				RawLocalPlayerName = AuthenticationService.Instance.PlayerName;
+				await UniTask.WhenAll(_authenticationHooks.Select(h => h.AfterAuthentication(loginResult, previouslyLoggedIn)));
+				account.ThrowIfChanged();
+				var state = await _backendService.FetchServerState();
+				account.ThrowIfChanged();
+				UpdatePlayerDataAndLogic(state, previouslyLoggedIn);
+				await InitializeServerSidePlayer();
+				account.ThrowIfChanged();
+				if (_dataService.GetData<PlayerData>().Flags.HasFlag(PlayerFlags.Deleted))
+					throw new AuthenticationException("This account is deleted!", false);
+				await UniTask.WhenAll(_authenticationHooks.Select(a => a.AfterFetchedState(loginResult)));
+				account.ThrowIfChanged();
+				_sessionData.IsAuthenticated = true;
+				_msgBroker.PublishSafe(new SuccessfullyAuthenticated
+				{
+					SessionData = _sessionData, PreviouslyLoggedIn = previouslyLoggedIn
+				});
 			}
-			if (hasEmail)
+			catch
 			{
-				logins.Add(LoginType.EmailPass);
+				// A canceled hosted link must leave the existing guest usable; switched accounts still require a full reload.
+				_sessionData.IsAuthenticated = wasAuthenticated && previous.IsCurrent;
+				throw;
 			}
-
-			if (!string.IsNullOrEmpty(loginResult.InfoResultPayload.AccountInfo.CustomIdInfo?.CustomId))
-			{
-				logins.Add(LoginType.LegacyDevice);
-			}
-			LoginTypes = logins;
-			_sessionData.Email = loginResult.InfoResultPayload.AccountInfo.PrivateInfo?.Email;
-			RawLocalPlayerName = loginResult.InfoResultPayload.PlayerProfile?.DisplayName;
-			// UGS authenticates directly and loads remote configuration before client initialization commands run.
-			await UniTask.WhenAll(_authenticationHooks.Select(h => h.AfterAuthentication(loginResult, previouslyLoggedIn)));
-			var state = await _backendService.FetchServerState();
-			UpdatePlayerDataAndLogic(state, previouslyLoggedIn);
-			await InitializeServerSidePlayer();
-			// Check for account deleation
-			if (_dataService.GetData<PlayerData>().Flags.HasFlag(PlayerFlags.Deleted))
-			{
-				throw new AuthenticationException("This account is deleted!", false);
-			}
-
-			await UniTask.WhenAll(_authenticationHooks.Select(a => a.AfterFetchedState(loginResult)));
-
-			_sessionData.IsAuthenticated = true;
-			_msgBroker.PublishSafe(new SuccessfullyAuthenticated()
-			{
-				SessionData = _sessionData,
-				PreviouslyLoggedIn = previouslyLoggedIn
-			});
+			finally { _authenticationInProgress = false; }
 		}
 
 		public async UniTask<string> SetDisplayName(string newName)
 		{
-			var newNameTrimmed = newName.Trim();
+			var newNameTrimmed = (newName ?? string.Empty).Trim();
 
 			string errorMessage = null;
 			if (newNameTrimmed.Length < GameConstants.PlayerName.PLAYER_NAME_MIN_LENGTH)
@@ -419,60 +439,25 @@ namespace FirstLight.Game.Services.Authentication
 				return errorMessage;
 			}
 
-			if (newNameTrimmed == this.GetPrettyLocalPlayerName(showTags: false))
-			{
-				return null;
-			}
-
 			newNameTrimmed = AuthServiceNameExtensions.ReplaceSpacesForSpecialChar(newNameTrimmed);
 
-			UpdateUserTitleDisplayNameResult playfabResponse;
 			try
 			{
-				playfabResponse = await AsyncPlayfabAPI.UpdateUserTitleDisplayName(new UpdateUserTitleDisplayNameRequest()
-				{
-					DisplayName = newNameTrimmed
-				});
-				RawLocalPlayerName = playfabResponse.DisplayName;
+				var account = UgsAccountSession.Capture();
+				RawLocalPlayerName = await AuthenticationService.Instance.UpdatePlayerNameAsync(newNameTrimmed);
+				account.ThrowIfChanged();
+				await CloudSaveService.Instance.SavePlayerNameAsync(RawLocalPlayerName);
+				account.ThrowIfChanged();
+				_msgBroker.PublishSafe(new DisplayNameChangedMessage { NewPlayfabDisplayName = RawLocalPlayerName });
+				return null;
 			}
-			catch (WrappedPlayFabException ex)
-			{
-				var description = GetErrorString(ex.Error);
-				if (ex.Error.Error == PlayFabErrorCode.ProfaneDisplayName)
-				{
-					description = ScriptLocalization.UITProfileScreen.username_profanity;
-				}
-
-				return description;
-			}
-
-			try
-			{
-				await AuthenticationService.Instance.UpdatePlayerNameAsync(newNameTrimmed);
-				await CloudSaveService.Instance.SavePlayerNameAsync(playfabResponse.DisplayName);
-			}
-			catch (RequestFailedException e)
-			{
-				return $"Error setting player name: {e.Message}";
-			}
-
-			_msgBroker.PublishSafe(new DisplayNameChangedMessage()
-			{
-				NewPlayfabDisplayName = playfabResponse.DisplayName
-			});
-			return null;
-		}
-
-		private string GetErrorString(PlayFabError error)
-		{
-			var realError = error.ErrorDetails?.Values.FirstOrDefault()?.FirstOrDefault();
-			return realError ?? error.ErrorMessage;
+			catch (Exception error) { return $"Error setting player name: {error.Message}"; }
 		}
 
 		private void UpdatePlayerDataAndLogic(Dictionary<string, string> state, bool previouslyLoggedIn)
 		{
 			// Parse every known model first. Corrupt cloud data must not retain a previous account's models and then overwrite the cloud.
-			var modelTypes = PlayFabPlayerStateBackend.ModelTypes.ToDictionary(type => type.FullName);
+			var modelTypes = UnityCloudPlayerStateBackend.ModelTypes.ToDictionary(type => type.FullName);
 			var parsed = new Dictionary<Type, object>();
 			foreach (var entry in state)
 			{
@@ -522,10 +507,8 @@ namespace FirstLight.Game.Services.Authentication
 
 		public async UniTask Logout()
 		{
-			_pendingGuestLogin = null;
 			await UniTask.WhenAll(_authenticationHooks.Select(a => a.BeforeLogout()));
 			await _loginProvider.Logout();
-			AuthenticationService.Instance.SignOut(true);
 			_sessionData.IsAuthenticated = false;
 			_sessionData.Email = null;
 		}
@@ -546,13 +529,5 @@ namespace FirstLight.Game.Services.Authentication
 			_authenticationHooks.Add(hook);
 		}
 
-		public static GetPlayerCombinedInfoRequestParams StandardLoginInfoRequestParams =>
-			new ()
-			{
-				GetPlayerProfile = true,
-				GetUserAccountInfo = true,
-				GetTitleData = true,
-				GetPlayerStatistics = !FLEnvironment.Configuration.UseBundledRemoteConfig
-			};
 	}
 }

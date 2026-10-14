@@ -23,7 +23,8 @@
         "Unity.Services.Multiplayer",
         "Quantum.Unity",
         "Photon.Realtime",
-        "Quantum.Simulation"
+        "Quantum.Simulation",
+        "Unity.Services.Authentication"
     ],
     "includePlatforms": [
         "Editor"

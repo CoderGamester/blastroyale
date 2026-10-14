@@ -16,7 +16,6 @@ using FirstLight.Game.Utils.UCSExtensions;
 using GameLovers.StatechartMachine;
 using FirstLight.Game.Localization;
 using Photon.Realtime;
-using PlayFab;
 using Quantum;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -99,7 +98,6 @@ namespace FirstLight.Game.StateMachines
 
 		private void SubscribeEvents()
 		{
-			_services.MessageBrokerService.Subscribe<MatchSimulationStartedMessage>(OnSimulationStart);
 			_services.MessageBrokerService.Subscribe<ApplicationQuitMessage>(OnApplicationQuitMessage);
 			_services.MessageBrokerService.Subscribe<SimulationEndedMessage>(OnMatchSimulationEndedMessage);
 			_services.MessageBrokerService.Subscribe<LocalPlayerClickedPlayMessage>(OnPlayerClickedPlay);
@@ -215,7 +213,7 @@ namespace FirstLight.Game.StateMachines
 			_gameDataProvider.AppDataProvider.LastFrameSnapshot.Value = default;
 			_networkService.JoinSource.Value = JoinRoomSource.FirstJoin;
 
-			FLog.Verbose("Using playfab matchmaking!");
+			FLog.Verbose("Using Photon room matchmaking!");
 			_networkService.LastUsedSetup.Value = setup;
 			var isConfigsValid = await IsCurrentConfigsValid(setup);
 			if (!isConfigsValid)
@@ -231,7 +229,7 @@ namespace FirstLight.Game.StateMachines
 			catch (Exception ex)
 			{
 				_services.InGameNotificationService.QueueNotification("Failed to join matchmaking!", InGameNotificationStyle.Error);
-				FLog.Error("Failed to join playfab matchmaking", ex);
+				FLog.Error("Failed to join Photon room matchmaking", ex);
 				_statechartTrigger(CanceledMatchmakingEvent);
 			}
 		}
@@ -272,13 +270,6 @@ namespace FirstLight.Game.StateMachines
 			}
 		}
 
-		private void OnSimulationStart(MatchSimulationStartedMessage message)
-		{
-			if (_services.GameBackendService.RunsSimulationOnServer())
-			{
-				_networkService.SendPlayerToken(PlayFabSettings.staticPlayer.EntityToken);
-			}
-		}
 
 		public void OnConnected()
 		{

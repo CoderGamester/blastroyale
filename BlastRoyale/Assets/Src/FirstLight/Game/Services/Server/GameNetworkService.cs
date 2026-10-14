@@ -76,11 +76,6 @@ namespace FirstLight.Game.Services
 		/// </summary>
 		void DisconnectPhoton();
 
-		/// <summary>
-		/// Sends user token to Quantum Server to prove the user is authenticated and able to send commands.
-		/// </summary>
-		/// <returns>True if the operation was sent successfully</returns>
-		bool SendPlayerToken(string token);
 
 		/// <summary>
 		/// Sets the current room <see cref="Room.IsOpen"/> property, which sets whether it can be joined or not
@@ -498,12 +493,6 @@ namespace FirstLight.Game.Services
 			QuantumClient.Disconnect();
 		}
 
-		public bool SendPlayerToken(string token)
-		{
-			var opt = new RaiseEventArgs {Receivers = ReceiverGroup.All};
-			return QuantumClient.OpRaiseEvent((byte) QuantumCustomEvents.Token, Encoding.UTF8.GetBytes(token), opt,
-				SendOptions.SendReliable);
-		}
 
 		public void ReconnectPhoton(out bool requiresManualReconnection)
 		{
@@ -553,16 +542,14 @@ namespace FirstLight.Game.Services
 			QuantumClient.AuthValues ??= new AuthenticationValues();
 			QuantumClient.AuthValues.UserId = id;
 			QuantumClient.AuthValues.AuthGetParameters = "";
-			if (FLEnvironment.Configuration.UsePlayFabPhotonAuthentication)
-				QuantumClient.AuthValues.AddAuthParameter("username", id);
+			QuantumClient.AuthValues.AuthType = CustomAuthenticationType.None;
 		}
 
 		private void ResetQuantumProperties()
 		{
 			if (QuantumClient.AuthValues != null)
 			{
-				QuantumClient.AuthValues.AuthType = FLEnvironment.Configuration.UsePlayFabPhotonAuthentication
-					? CustomAuthenticationType.Custom : CustomAuthenticationType.None;
+				QuantumClient.AuthValues.AuthType = CustomAuthenticationType.None;
 			}
 		}
 

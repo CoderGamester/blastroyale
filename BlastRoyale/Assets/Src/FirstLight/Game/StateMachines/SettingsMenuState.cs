@@ -11,8 +11,6 @@ using FirstLight.Game.Utils;
 using FirstLight.Server.SDK.Modules.Commands;
 using GameLovers.StatechartMachine;
 using FirstLight.Game.Localization;
-using PlayFab;
-using PlayFab.CloudScriptModels;
 using UnityEngine;
 
 namespace FirstLight.Game.StateMachines
@@ -103,15 +101,15 @@ namespace FirstLight.Game.StateMachines
 
 		private async UniTaskVoid OnDeleteAccountClicked()
 		{
-			await _services.UIService.OpenScreen<LoadingSpinnerScreenPresenter>();
 			try
 			{
+				await _services.UIService.OpenScreen<LoadingSpinnerScreenPresenter>();
 				await _services.AuthService.DeleteAccount();
 				OnLogoutComplete();
 			}
-			catch (WrappedPlayFabException ex)
+			catch (Exception ex)
 			{
-				OnLogoutFail(ex.Error);
+				OnLogoutFail(ex.Message);
 			}
 		}
 
@@ -134,15 +132,15 @@ namespace FirstLight.Game.StateMachines
 
 		private async UniTask TryLogOut()
 		{
-			await _services.UIService.OpenScreen<LoadingSpinnerScreenPresenter>();
 			try
 			{
+				await _services.UIService.OpenScreen<LoadingSpinnerScreenPresenter>();
 				await _services.AuthService.Logout();
 				OnLogoutComplete();
 			}
-			catch (WrappedPlayFabException ex)
+			catch (Exception ex)
 			{
-				OnLogoutFail(ex.Error);
+				OnLogoutFail(ex.Message);
 			}
 		}
 
@@ -162,7 +160,7 @@ namespace FirstLight.Game.StateMachines
 			_services.GenericDialogService.OpenButtonDialog(title, desc, false, confirmButton).Forget();
 		}
 
-		private void OnLogoutFail(PlayFabError error)
+		private void OnLogoutFail(string error)
 		{
 			_services.UIService.CloseScreen<LoadingSpinnerScreenPresenter>().Forget();
 
@@ -172,7 +170,7 @@ namespace FirstLight.Game.StateMachines
 				ButtonOnClick = () => { _services.QuitGame("Failed to log out"); }
 			};
 
-			_services.GenericDialogService.OpenButtonDialog("Logout Fail", error.ErrorMessage, false, confirmButton);
+			_services.GenericDialogService.OpenButtonDialog("Account operation failed", error, false, confirmButton);
 		}
 
 		private void OnServerHttpErrorMessage(ServerHttpErrorMessage msg)
@@ -187,9 +185,5 @@ namespace FirstLight.Game.StateMachines
 				confirmButton);
 		}
 
-		private void OnAccountDeleted(ExecuteFunctionResult res)
-		{
-			TryLogOut().Forget();
-		}
 	}
 }

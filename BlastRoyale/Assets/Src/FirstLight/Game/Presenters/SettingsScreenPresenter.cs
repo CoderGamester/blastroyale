@@ -13,7 +13,6 @@ using Button = UnityEngine.UIElements.Button;
 using Cysharp.Threading.Tasks;
 using FirstLight.Game.Services.Authentication;
 using FirstLight.Game.UI;
-using PlayFab;
 using Unity.Services.Authentication;
 using UnityEngine;
 
@@ -181,17 +180,18 @@ namespace FirstLight.Game.Presenters
 				_connectIdButton.SetDisplay(true);
 				_deleteAccountButton.SetDisplay(false);
 				_logoutButton.SetDisplay(false);
-				_accountStatusLabel.text = string.Format(ScriptLocalization.UITSettings.flg_id_not_connected);
+				_accountStatusLabel.LocalizationKey = "UITAccount/guest";
 			}
 			else
 			{
 				_connectIdButton.SetDisplay(false);
 				_deleteAccountButton.SetDisplay(true);
 				_logoutButton.SetDisplay(true);
-				_accountStatusLabel.text = string.Format(ScriptLocalization.UITSettings.flg_id_connected);
+				_accountStatusLabel.LocalizationKey = "UITAccount/connected";
 			}
 
-			_playerIDField.value = AuthenticationService.Instance.PlayerId + "-" + PlayFabSettings.staticPlayer.PlayFabId;
+			_connectIdButton.LocalizationKey = "UITAccount/link_current_guest";
+			_playerIDField.value = AuthenticationService.Instance.PlayerId;
 		}
 
 		private void OpenCustomizeHud()

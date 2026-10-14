@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using FirstLight.FLogger;
 using FirstLight.Server.SDK.Modules;
-using PlayFab;
 using UnityEngine;
 
 // ReSharper disable RedundantDefaultMemberInitializer
@@ -38,7 +37,7 @@ namespace FirstLight.Game.Utils
 		/// <summary>
 		/// Requests will be routed to local backend. To run, run "StandaloneServer" on backend project.
 		/// </summary>
-		[Description("Use local server")] public bool UseLocalServer = false;
+		[Description("Legacy local server (unavailable)")] public bool UseLocalServer = false;
 
 		/// <summary>
 		/// To use local configurations as opposed to remote configurations.
@@ -260,7 +259,7 @@ namespace FirstLight.Game.Utils
 
 			if (_localConfig.UseLocalServer)
 			{
-				PlayFabSettings.LocalApiServer = "http://localhost:7274";
+				FLog.Warn("The legacy local backend flag is unsupported. Authentication and progression use Unity Gaming Services.");
 			}
 
 			if (_localConfig.Tutorial != FlagOverwrite.None)

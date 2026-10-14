@@ -45,9 +45,16 @@ namespace FirstLight.Game.Services.Social
 
 		private static readonly BatchQueue<CacheHackData> _batchQueue = new (3);
 		private Dictionary<string, CacheHackData> _cacheHack = new ();
+		private long _cacheGeneration = -1;
 
 		public async UniTask<CacheHackData> LoadDataForPlayer(string unityId, string playerName)
 		{
+			var account = UgsAccountSession.Capture();
+			if (_cacheGeneration != account.Generation)
+			{
+				_cacheHack.Clear();
+				_cacheGeneration = account.Generation;
+			}
 			if (_cacheHack.TryGetValue(unityId, out var hackData))
 				return hackData;
 
@@ -55,34 +62,18 @@ namespace FirstLight.Game.Services.Social
 			{
 				var loadedData = await _batchQueue.AddAsync(async () =>
 				{
-					var data = await CloudSaveService.Instance.LoadPlayerDataAsync(unityId);
-					if (data == null)
-					{
-						return null;
-					}
-
-					if (data.AvatarURL != null)
-					{
-						return new CacheHackData()
-						{
-							AvatarUrl = data.AvatarURL,
-							PlayerName = playerName,
-							Trophies = data.Trophies
-						};
-					}
-
-					if (data.PlayfabID == null) return null;
-
-					var profile = await _profileService.GetPlayerPublicProfile(data.PlayfabID);
-					return new CacheHackData()
+					account.ThrowIfChanged();
+					var profile = await _profileService.GetPlayerPublicProfile(unityId);
+					account.ThrowIfChanged();
+					return new CacheHackData
 					{
 						AvatarUrl = profile.AvatarUrl,
 						Trophies = profile.Statistics.Where(st => st.Name == GameConstants.Stats.RANKED_LEADERBOARD_LADDER_NAME)
-							.Select(s => s.Value)
-							.FirstOrDefault(),
-						PlayerName = playerName
+							.Select(st => st.Value).FirstOrDefault(),
+						PlayerName = string.IsNullOrEmpty(profile.Name) ? playerName : profile.Name
 					};
 				});
+				account.ThrowIfChanged();
 				if (loadedData != null)
 				{
 					_cacheHack[unityId] = loadedData;

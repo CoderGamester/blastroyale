@@ -154,7 +154,7 @@ namespace FirstLight.Game.Services
 		public PlayfabStoreService(IGameBackendService backend, IGameCommandService gameCommandService, IGameDataProvider dataProvider, IShopCatalogBackend catalogBackend = null)
 		{
 			_backendService = backend;
-			_catalogBackend = catalogBackend ?? new PlayFabShopCatalogBackend();
+			_catalogBackend = catalogBackend ?? new BundledShopCatalogBackend();
 			_dataProvider = dataProvider;
 			_gameCommandService = gameCommandService;
 			_storeLoadCooldown = new Cooldown(TimeSpan.FromMinutes(1));
@@ -410,55 +410,6 @@ namespace FirstLight.Game.Services
 			_backendService.HandleError(error, null);
 		}
 		
-
-		public void AskBackendForItem(Product product, Action<Product, ItemData> onRewarded)
-		{
-			FLog.Info($"Purchase validated: {product.definition.id}");
-			var data = new Dictionary<string, string>
-			{
-				{"item_id", product.definition.id},
-			};
-
-			_backendService.CallGenericFunction(CommandNames.CONSUME_VALIDATE_PURCHASE, result =>
-			{
-				FLog.Info($"Purchase handled by the server: {product.definition.id}, {result.FunctionName}");
-				var logicResult =
-					JsonConvert.DeserializeObject<PlayFabResult<LogicResult>>(result.FunctionResult.ToString());
-				var item = ModelSerializer.DeserializeFromData<ItemData>(logicResult!.Result.Data);
-				onRewarded.Invoke(product, item);
-			}, HandlePlayfabRequestError, data);
-		}
-
-		
-		public void ValidateReceipt(Product product, Action<Product> onValidated)
-		{
-			var cacheProduct = product;
-			var payload = JsonConvert.DeserializeObject<Dictionary<string, object>>(product.receipt)!["Payload"]
-				.ToString();
-			var currencyCode = product.metadata.isoCurrencyCode;
-			var price = product.metadata.localizedPrice * 100;
-
-#if UNITY_IOS
-			var request = new ValidateIOSReceiptRequest
-			{
-				CurrencyCode = currencyCode,
-				PurchasePrice = (int) price,
-				ReceiptData = payload
-			};
-			PlayFabClientAPI.ValidateIOSReceipt(request, _ => onValidated(cacheProduct), HandlePlayfabRequestError);
-#else
-			
-			var data = JsonConvert.DeserializeObject<Dictionary<string, object>>(payload);
-			var request = new ValidateGooglePlayPurchaseRequest
-			{
-				CurrencyCode = currencyCode,
-				PurchasePrice = (uint) price,
-				ReceiptJson = (string) data["json"],
-				Signature = (string) data["signature"]
-			};
-			PlayFabClientAPI.ValidateGooglePlayPurchase(request, r => onValidated(cacheProduct), HandlePlayfabRequestError);
-#endif
-		}
 
 		public Task<FlgStoreItem> GetItemPrice(string itemId, string dailyDealStore = null)
 		{

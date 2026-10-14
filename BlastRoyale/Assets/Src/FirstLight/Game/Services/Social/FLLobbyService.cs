@@ -17,7 +17,6 @@ using FirstLight.Game.Utils;
 using FirstLight.Game.Utils.UCSExtensions;
 using GameLovers.Services;
 using Newtonsoft.Json;
-using PlayFab;
 using Quantum;
 using Unity.Services.Authentication;
 using Unity.Services.Friends;
@@ -223,7 +222,6 @@ namespace FirstLight.Game.Services
 		public const string KEY_TROHPIES = "trophies";
 		public const string KEY_PLAYER_NAME = "player_name";
 		public const string KEY_READY = "ready";
-		public const string KEY_PLAYFAB_ID = "playfab_id";
 		public const string KEY_AVATAR_URL = "avatar_url";
 		public const string KEY_SPECTATOR = "spectator";
 		public const string KEY_POSITION_REQUEST = "position_request";
@@ -1095,7 +1093,6 @@ namespace FirstLight.Game.Services
 					{KEY_SKIN_ID, new PlayerDataObject(PlayerDataObject.VisibilityOptions.Member, skinID.ToString())},
 					{KEY_MELEE_ID, new PlayerDataObject(PlayerDataObject.VisibilityOptions.Member, meleeID.ToString())},
 					{KEY_READY, new PlayerDataObject(PlayerDataObject.VisibilityOptions.Member, ready.ToString().ToLowerInvariant())},
-					{KEY_PLAYFAB_ID, new PlayerDataObject(PlayerDataObject.VisibilityOptions.Member, PlayFabSettings.staticPlayer.EntityId)},
 					{KEY_SPECTATOR, new PlayerDataObject(PlayerDataObject.VisibilityOptions.Member, spectator.ToString().ToLowerInvariant())},
 					{
 						KEY_TROHPIES,

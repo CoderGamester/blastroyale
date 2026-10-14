@@ -10,52 +10,11 @@ using FirstLight.Game.Logic;
 using FirstLight.Game.Messages;
 using FirstLight.Game.Services;
 using FirstLight.Game.Utils;
-using PlayFab;
 using Quantum;
 using UnityEngine;
 
 public partial class DebugOptions
 {
-#if ENABLE_PLAYFABADMIN_API
-	[Category("Reset Player")]
-	public void ResetPlayer()
-	{
-		var player = PlayFabSettings.staticPlayer;
-		if (player == null || player.PlayFabId == null)
-		{
-			throw new Exception("Not logged in");
-		}
-
-		var services = MainInstaller.Resolve<IGameServices>();
-		var update = new PlayFab.AdminModels.UpdateUserDataRequest()
-		{
-			KeysToRemove = new List<string>()
-			{
-				typeof(PlayerData).FullName,
-				typeof(IdData).FullName,
-				typeof(RngData).FullName,
-				typeof(EquipmentData).FullName,
-			},
-			PlayFabId = player.PlayFabId
-		};
-
-		FLog.Verbose($"Wiping data for account {player.PlayFabId}");
-		PlayFabAdminAPI.UpdateUserReadOnlyData(update, Result, null);
-		PlayerPrefs.DeleteAll();
-
-		void Result(PlayFab.AdminModels.UpdateUserDataResult result)
-		{
-			FLog.Verbose("Server Data Wiped. Re-login to re-build your game-data.");
-#if UNITY_EDITOR
-			if (UnityEditor.EditorApplication.isPlaying)
-			{
-				UnityEditor.EditorApplication.isPlaying = false;
-			}
-#endif
-		}
-	}
-#endif
-
 #if UNITY_EDITOR || DEVELOPMENT_BUILD
 	private static uint _currencyValue = 100;
 

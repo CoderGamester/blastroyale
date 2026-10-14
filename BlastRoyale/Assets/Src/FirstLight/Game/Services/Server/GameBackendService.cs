@@ -32,7 +32,7 @@ using UnityEngine;
 namespace FirstLight.Game.Services
 {
 	/// <summary>
-	/// This service handles general interaction with playfab that are not needed by the server
+	/// This service persists client progression through UGS and adapts existing server-SDK command DTOs
 	/// </summary>
 	public interface IGameBackendService
 	{
@@ -145,7 +145,7 @@ namespace FirstLight.Game.Services
 			_dataService = dataService;
 			_services = services;
 			_leaderboardLadderName = leaderboardLadderName;
-			_playerBackend = playerBackend ?? new PlayFabPlayerStateBackend();
+			_playerBackend = playerBackend ?? new UnityCloudPlayerStateBackend();
 		}
 
 		public async UniTask SetupBackendEnvironment()
@@ -156,7 +156,6 @@ namespace FirstLight.Game.Services
 
 			FLog.Info($"Using environment: {FLEnvironment.Current.UCSEnvironmentName}");
 
-			PlayFabSettings.TitleId = FLEnvironment.Current.PlayFabTitleID;
 			quantumSettings.AppSettings.AppIdRealtime = FLEnvironment.Current.PhotonAppIDRealtime;
 
 			if (FLEnvironment.Current.Name != appData.LastEnvironmentName)
@@ -188,19 +187,24 @@ namespace FirstLight.Game.Services
 
 		public async UniTask PersistPlayerState(ServerState snapshot)
 		{
+			var captured = UgsAccountSession.Capture();
 			await _playerBackend.Save(snapshot);
+			captured.ThrowIfChanged();
 			if (!AuthenticationService.Instance.IsSignedIn || !snapshot.Has<PlayerData>()) return;
-			var player = PlayFabSettings.staticPlayer.PlayFabId;
+			var account = UgsAccountSession.Capture();
+			var player = account.PlayerId;
 			var trophies = snapshot.DeserializeModel<PlayerData>().Trophies;
 			if (_publishedTrophies.HasValue && _publishedTrophies.Value == (player, trophies)) return;
+			account.ThrowIfChanged();
 			await CloudSaveService.Instance.SaveTrophiesAsync(trophies);
+			account.ThrowIfChanged();
 			_publishedTrophies = (player, trophies);
 		}
 
 		public static ServerState CapturePlayerState(IDataProvider data)
 		{
 			var snapshot = new ServerState();
-			foreach (var type in PlayFabPlayerStateBackend.ModelTypes)
+			foreach (var type in UnityCloudPlayerStateBackend.ModelTypes)
 			{
 				if (data.TryGetData(type, out var model)) snapshot.UpdateModel(model);
 			}
@@ -213,7 +217,7 @@ namespace FirstLight.Game.Services
 		/// </summary>
 		public async UniTask<ExecuteFunctionResult> CallGenericFunction(string functionName, Dictionary<string, string> data = null)
 		{
-			var result = new LogicResult { Command = functionName, PlayFabId = PlayFabSettings.staticPlayer.PlayFabId,
+			var result = new LogicResult { Command = functionName, PlayFabId = AuthenticationService.Instance.PlayerId,
 				Data = new Dictionary<string, string>() };
 			if (functionName == CommandNames.GET_PLAYER_DATA)
 			{
@@ -234,11 +238,19 @@ namespace FirstLight.Game.Services
 			}
 			else if (functionName == CommandNames.SYNC_NAME)
 			{
-				// Both SDK profiles are updated explicitly by AuthService and UnityCloudHook.
+				// The UGS profile and public name are updated explicitly by AuthService.
 			}
 			else if (functionName == CommandNames.REMOVE_PLAYER_DATA)
 			{
-				throw new NotSupportedException("Deleting a PlayFab account requires a trusted backend or PlayFab Game Manager. See HUMAN_ACTIONS.md; client credentials must never contain a developer secret.");
+				var account = UgsAccountSession.Capture();
+				await CloudSaveService.Instance.Data.Player.DeleteAllAsync(new Unity.Services.CloudSave.Models.Data.Player.DeleteAllOptions(
+					new Unity.Services.CloudSave.Models.Data.Player.DefaultWriteAccessClassOptions()));
+				account.ThrowIfChanged();
+				await CloudSaveService.Instance.Data.Player.DeleteAllAsync(new Unity.Services.CloudSave.Models.Data.Player.DeleteAllOptions(
+					new Unity.Services.CloudSave.Models.Data.Player.PublicWriteAccessClassOptions()));
+				account.ThrowIfChanged();
+				UgsAccountSession.Invalidate();
+				await AuthenticationService.Instance.DeleteAccountAsync();
 			}
 			else if (functionName == CommandNames.CONSUME_VALIDATE_PURCHASE)
 			{
@@ -262,7 +274,6 @@ namespace FirstLight.Game.Services
 			Action<PlayFabError> onError, Dictionary<string, string> data)
 		{
 			try { onSuccess?.Invoke(await CallGenericFunction(functionName, data)); }
-			catch (WrappedPlayFabException exception) { HandleError(exception.Error, onError); }
 			catch (Exception exception)
 			{
 				HandleError(new PlayFabError { Error = PlayFabErrorCode.Unknown, ErrorMessage = exception.Message }, onError);
@@ -327,7 +338,7 @@ namespace FirstLight.Game.Services
 		private async UniTask FetchState(Action<ServerState> onSuccess, Action<PlayFabError> onError)
 		{
 			try { onSuccess?.Invoke(await FetchServerState()); }
-			catch (WrappedPlayFabException exception) { HandleError(exception.Error, onError); }
+			catch (Exception exception) { HandleError(new PlayFabError { Error = PlayFabErrorCode.Unknown, ErrorMessage = exception.Message }, onError); }
 		}
 
 		public UniTask<ServerState> FetchServerState() => _playerBackend.Load();

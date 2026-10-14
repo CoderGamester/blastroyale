@@ -1,106 +1,49 @@
-using FirstLight.Game.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using Cysharp.Threading.Tasks;
-using FirstLight.FLogger;
 using FirstLight.Game.Data;
-using FirstLight.Game.Messages;
-using FirstLight.Game.Utils;
-using GameLovers.Services;
-using FirstLight.Server.SDK.Modules;
+using Newtonsoft.Json;
 using PlayFab.ClientModels;
+using UnityEngine;
 
 namespace FirstLight.Game.Services
 {
-	/// <summary>
-	/// Handles game news that are driven by server
-	/// </summary>
 	public interface INewsService
 	{
-		/// <summary>
-		/// Gets the latest news
-		/// </summary>
 		UniTask<List<TitleNewsItem>> GetNews();
-
-		/// <summary>
-		/// Checks if there's any news the player never seen
-		/// </summary>
 		UniTask<bool> HasNotSeenNews();
 	}
 
-	public class PlayfabNewsService : INewsService
+	/// <summary>Reads authored news from Resources/BundledNews.json and persists the last viewed article ID.</summary>
+	public sealed class BundledNewsService : INewsService
 	{
-		private ClientDataService _newsLocalData;
-		private NewsData _data;
-		private List<TitleNewsItem> _news;
-		private UniTask _fetchingTask;
-		private DateTime _lastFetch;
+		private readonly ClientDataService _localData = new ClientDataService();
+		private readonly NewsData _data;
+		private readonly List<TitleNewsItem> _news;
 
-		public PlayfabNewsService(IMessageBrokerService service)
+		public BundledNewsService()
 		{
-			_newsLocalData = new ClientDataService();
-			_data = _newsLocalData.LoadData<NewsData>();
-			service.Subscribe<SuccessfullyAuthenticated>(OnAuth);
-			service.Subscribe<MainMenuLoadedMessage>(OnMenuOpen);
+			_data = _localData.LoadData<NewsData>();
+			var catalog = Resources.Load<TextAsset>("BundledNews");
+			if (catalog == null) throw new InvalidOperationException("Resources/BundledNews.json is required for the bundled news service.");
+			_news = (JsonConvert.DeserializeObject<List<TitleNewsItem>>(catalog.text) ?? new List<TitleNewsItem>())
+				.OrderByDescending(article => article.Timestamp).Take(30).ToList();
+			if (_news.Any(article => string.IsNullOrWhiteSpace(article.NewsId) || string.IsNullOrWhiteSpace(article.Body)))
+				throw new InvalidOperationException("Bundled news articles require stable NewsId and authored Body JSON.");
 		}
 
-		private void OnMenuOpen(MainMenuLoadedMessage msg)
+		public UniTask<List<TitleNewsItem>> GetNews()
 		{
-			if (_fetchingTask.Status == UniTaskStatus.Pending) return;
-
-			if (_fetchingTask.Status == UniTaskStatus.Succeeded)
-			{
-				var timeSinceLast = (DateTime.UtcNow - _lastFetch).TotalMinutes;
-				if (timeSinceLast <= 1) return; // max 1 per minute
-			}
-
-			_fetchingTask = FetchNews();
-		}
-
-		private void OnAuth(SuccessfullyAuthenticated msg)
-		{
-			if (msg.PreviouslyLoggedIn) return;
-			_fetchingTask = FetchNews();
-		}
-
-		private async UniTask<List<TitleNewsItem>> FetchNews()
-		{
-			FLog.Info("Fetching All Game News");
-			var response = await AsyncPlayfabAPI.GetNews(new GetTitleNewsRequest()
-			{
-				Count = 30,
-			});
-			FLog.Verbose("News",$"News received: {ModelSerializer.Serialize(response.News).Value}");
-			_news = response.News;
-			_lastFetch = DateTime.UtcNow;
-			return _news;
-		}
-
-		public async UniTask<List<TitleNewsItem>> GetNews()
-		{ ;
-			await WaitPendingFetch();
-			var latest = _news?.FirstOrDefault();
-			if (latest == null) return _news ?? new List<TitleNewsItem>();
-			_data.LastNewsId = latest.NewsId;
-			_newsLocalData.SaveData<NewsData>();
-			return _news;
-		}
-
-		public async UniTask<bool> HasNotSeenNews()
-		{
-			FLog.Info("News", "Checking if has unseen news");
-			await WaitPendingFetch();
-			if (_news == null)
-			{
-				return false;
-			}
 			var latest = _news.FirstOrDefault();
-			return latest != null && _data.LastNewsId != latest.NewsId;
+			if (latest != null)
+			{
+				_data.LastNewsId = latest.NewsId;
+				_localData.SaveData<NewsData>();
+			}
+			return UniTask.FromResult(new List<TitleNewsItem>(_news));
 		}
 
-		private bool FinishedPendingFetch() => _fetchingTask.Status != UniTaskStatus.Pending;
-		private async UniTask WaitPendingFetch() => await UniTask.WaitUntil(FinishedPendingFetch);
-
+		public UniTask<bool> HasNotSeenNews() => UniTask.FromResult(_news.Count > 0 && _data.LastNewsId != _news[0].NewsId);
 	}
 }

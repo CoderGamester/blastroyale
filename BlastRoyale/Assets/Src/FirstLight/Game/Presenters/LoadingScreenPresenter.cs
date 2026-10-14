@@ -35,7 +35,7 @@ namespace FirstLight.Game.Presenters
 			var config = FeatureFlags.GetLocalConfiguration();
 			if (config.UseLocalServer)
 			{
-				_labelsContainer.Add(new Label("Local Server"));
+				_labelsContainer.Add(new Label("Legacy local server unavailable"));
 			}
 
 			if (config.Tutorial != FlagOverwrite.None)

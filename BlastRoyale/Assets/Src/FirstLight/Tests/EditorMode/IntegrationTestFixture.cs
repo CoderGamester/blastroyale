@@ -21,7 +21,6 @@ using FirstLight.UiService;
 using FirstLight.Game.UI;
 using FirstLightServerSDK.Services;
 using NUnit.Framework;
-using PlayFab;
 using Src.FirstLight.Server.ServerServices;
 using UnityEngine;
 using UnityEngine.AddressableAssets;
@@ -106,7 +105,6 @@ namespace FirstLight.Tests.EditorMode
 			integrationAppData.DeviceId = "integration_test";
 			//TestData.SaveData<AppData>();
 
-			PlayFabSettings.staticSettings.TitleId = "***REMOVED***";
 
 			MainInstaller.Bind<IGameDataProvider>(TestLogic);
 			MainInstaller.Bind<IGameServices>(TestServices);

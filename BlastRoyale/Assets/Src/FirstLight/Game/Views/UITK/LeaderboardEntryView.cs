@@ -72,7 +72,7 @@ namespace FirstLight.Game.Views
 			if (_playerId == null) return;
 			_services.UIService.OpenScreen<PlayerStatisticsPopupPresenter>(new PlayerStatisticsPopupPresenter.StateData()
 			{
-				PlayfabID = _playerId
+				UnityID = _playerId
 			}).Forget();
 		}
 

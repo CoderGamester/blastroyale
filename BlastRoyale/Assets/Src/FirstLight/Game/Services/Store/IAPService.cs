@@ -67,7 +67,7 @@ namespace FirstLight.Game.Services
 
 	/// <summary>
 	/// Main entrypoint for our IAP service
-	/// Integrates Unity Store & Playfab Store to allow IAP purchases
+	/// Provides bundled earned-currency purchases; cash purchases require a trusted receipt service
 	/// </summary>
 	public interface IIAPService
 	{
@@ -307,10 +307,6 @@ namespace FirstLight.Game.Services
 		{
 			_playfab.OnStoreLoaded += (playfabProducts, playfabBundles) =>
 			{
-				if (!FLEnvironment.Configuration.UseBundledShop) _unityStore.InitializeUnityCatalog(playfabProducts
-					.Select(i => i.CatalogItem.ItemId)
-					.Union(playfabBundles?.Keys.Select(i => i.CatalogItem.ItemId) ?? Array.Empty<string>())
-					.ToHashSet());
 
 				ResolveCategoryProducts(playfabProducts);
 				ResolveBundles(playfabBundles);
@@ -491,7 +487,7 @@ namespace FirstLight.Game.Services
 				OnPurchaseFailure(new IUnityStoreService.PurchaseFailureData
 				{
 					ProductId = product.ID, Reason = PurchaseFailureReason.ProductUnavailable,
-					Message = "Real money purchases require a trusted receipt and inventory service. See HUMAN_ACTIONS.md."
+					Message = "Cash purchases are unavailable in this build."
 				});
 			}
 		}
@@ -592,92 +588,23 @@ namespace FirstLight.Game.Services
 		}
 
 		/// <summary>
-		/// This is called when Unity finishes processing the purchase.
+		/// This rejects any restored receipt while cash purchases are unavailable.
 		/// This is also called when application starts in case there was a pending transaction
 		///
 		/// https://docs.unity3d.com/Manual/UnityIAPProcessingPurchases.html
 		/// </summary>
 		public PurchaseProcessingResult ProcessPurchase(PurchaseEventArgs purchaseEvent)
 		{
-			var devStore = _gameBackendService.IsDev();
-			var product = purchaseEvent.purchasedProduct;
-			if (purchaseEvent.purchasedProduct.definition.id == BattlePassService.PRODUCT_ID_RM)
+			// A receipt is not proof of a verified purchase. Never grant or confirm it locally.
+			OnPurchaseFailure(new IUnityStoreService.PurchaseFailureData
 			{
-				// Check if the user already have the BP, they could have bought with ingame currency while transaction was processing
-				if (_data.BattlePassDataProvider.HasPurchasedSeason() || _data.RewardDataProvider.HasUnclaimedRewardWithId(GameId.PremiumBattlePass))
-				{
-					// I couldn't find a way to cancel the purchase process, so it will keep returning pending for 3 days then user will get refunded
-					return PurchaseProcessingResult.Pending;
-				}
-			}
-
-			FLog.Info("IAP",
-				$"Purchase processed: {product.definition.id}, Dev store: {devStore}, TransactionId({purchaseEvent.purchasedProduct.transactionID})");
-			if (devStore) _playfab.AskBackendForItem(product, OnServerRewardConfirmed);
-			else _playfab.ValidateReceipt(product, OnPurchaseValidated);
+				ProductId = purchaseEvent.purchasedProduct.definition.id,
+				Reason = PurchaseFailureReason.ProductUnavailable,
+				Message = "Cash purchases are unavailable until a trusted receipt-validation backend is configured."
+			});
 			return PurchaseProcessingResult.Pending;
 		}
 
-		/// <summary>
-		/// This is called when Playfab validate the purchase Unity IAP SDK did
-		/// After confirming in Unity SDK the purchase is flagged as "complete"
-		/// </summary>
-		private void OnPurchaseValidated(Product product)
-		{
-			// This game logic request will trigger the analytics events in the backend
-			// This is all handled inside GameLogic's ShopService
-			_playfab.AskBackendForItem(product, OnServerRewardConfirmed);
-		}
-
-		private void OnServerRewardConfirmed(Product product, ItemData item)
-		{
-			// The first command (client only) syncs up client state with the server, as the
-			// server adds the reward item to UnclaimedRewards on its end, and we have to do the same,
-			//TODO Doc
-			if (item.Id == GameId.Bundle)
-			{
-				//TODO I might need to add some extras check for this one since we dont filter for expired bundles.
-				_availableGameProductBundles.TryGetValue(product.definition.id, out var gameProductsBundle);
-
-				if (gameProductsBundle != null)
-				{
-					var bundleRewards = new List<ItemData>();
-
-					foreach (var bundleProduct in gameProductsBundle.BundleProducts)
-					{
-						bundleRewards.Add(bundleProduct.GameItem);
-					}
-
-					_commandService.ExecuteCommand(new AddIAPBundleRewardLocalCommand() {BundleRewards = bundleRewards.ToArray()});
-				}
-			}
-			else
-			{
-				_commandService.ExecuteCommand(new AddIAPRewardLocalCommand {Reward = item});
-			}
-
-			_unityStore.Controller.ConfirmPendingPurchase(product);
-
-			var availableProduct = _availableProducts.FirstOrDefault(p => p.PlayfabProductConfig.CatalogItem.ItemId.Equals(product.definition.id));
-
-			if (availableProduct == null)
-			{
-				FLog.Warn("IAP",
-					"Product has been purchased but was not found inside _availableProducts for fetching StoreItemData, it's not possible to track the item");
-			}
-			else
-			{
-				_commandService.ExecuteCommand(new UpdatePlayerStoreDataCommand()
-				{
-					CatalogItemId = product.definition.id,
-					StoreItemData = availableProduct.PlayfabProductConfig.StoreItemData
-				});
-			}
-
-			_pending.Remove(product.definition.id);
-			PurchaseFinished?.Invoke(product.definition.id, item, true, null);
-
-		}
 	}
 
 	public static class IAPHelpers

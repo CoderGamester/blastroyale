@@ -22,8 +22,6 @@ using GameLovers.StatechartMachine;
 using FirstLight.Game.UI;
 using FirstLightServerSDK.Services;
 using FirstLight.Game.Localization;
-using Newtonsoft.Json;
-using PlayFab;
 using PlayFab.ClientModels;
 using Unity.Services.UserReporting;
 using Unity.Services.UserReporting.Client;
@@ -134,7 +132,7 @@ namespace FirstLight.Game.StateMachines
 
 		private async Task WaitForSkipTutorialInput(bool loggedIn)
 		{
-			var loggedInWithUserPassword = false;
+			var loggedInWithUnityAccount = false;
 			while (true)
 			{
 				if (loggedIn) // user already finished the tutorial
@@ -157,7 +155,7 @@ namespace FirstLight.Game.StateMachines
 
 				// First time user opening the game lets see if he wants to do the tutorial. I surely don't want to do it again
 				var skipTutorialScreen = await _services.UIService.OpenScreen<SkipTutorialPopupPresenter>();
-				if (loggedInWithUserPassword) // User may have logged in and not finished tutorial so lets remove
+				if (loggedInWithUnityAccount) // User may have logged in and not finished tutorial so lets remove
 				{
 					skipTutorialScreen.DisableLoginOption();
 				}
@@ -171,20 +169,37 @@ namespace FirstLight.Game.StateMachines
 						loggedIn = false;
 					}
 
-					var loginResult = await LoginScreenFlow();
-					if (loginResult == null) // User did not login and closed the screen
+					var wantsAccountLogin = await LoginScreenFlow();
+					if (!wantsAccountLogin) // User continues with the guest path
 					{
 						FLog.Info("User did not login and closed screen");
 						continue;
 					}
 
 					LoadingScreenPresenter.Show();
-					await AuthenticateAndInitializeLogic(() => _services.AuthService.LoginWithExistingResult(loginResult));
+					try
+					{
+						await _services.AuthService.LoginWithUnityPlayerAccount(false);
+						InitializeGameLogic();
+						State.Success = true;
+					}
+					catch (OperationCanceledException)
+					{
+						LoadingScreenPresenter.Hide();
+						continue;
+					}
+					catch (Exception exception)
+					{
+						FLog.Warn("Hosted Unity Account sign-in did not complete", exception);
+						_services.InGameNotificationService.QueueNotification(GameLocalization.GetTranslation("UITAccount/failed"));
+						LoadingScreenPresenter.Hide();
+						continue;
+					}
 					_services.AuthService.CanLoginWithNativeGamesService().ContinueWith(can =>
 					{
 						if(can) _services.AuthService.TryToLinkNativeAccount().Forget();
 					}).Forget();
-					loggedInWithUserPassword = true;
+					loggedInWithUnityAccount = true;
 					loggedIn = true;
 				}
 
@@ -223,70 +238,12 @@ namespace FirstLight.Game.StateMachines
 			await _services.UIService.CloseScreen<PrivacyDialogPresenter>();
 		}
 
-		private async UniTask<LoginResult> LoginScreenFlow()
+		private async UniTask<bool> LoginScreenFlow()
 		{
 			var screen = await _services.UIService.OpenScreen<EmailPasswordLoginPopupPresenter>();
-
-			while (true)
-			{
-				var result = await screen.WaitForResult();
-				screen.ResetResult();
-
-				switch (result.ResultActionType)
-				{
-					case EmailPasswordLoginPopupPresenter.Result.ResultType.Close:
-						await screen.Close();
-						return null;
-					case EmailPasswordLoginPopupPresenter.Result.ResultType.ResetPassword:
-						try
-						{
-							await _services.UIService.OpenScreen<LoadingSpinnerScreenPresenter>();
-							await _services.AuthService.SendAccountRecoveryEmail(result.Email);
-							_services.InGameNotificationService.QueueNotification(ScriptLocalization.UITLoginRegister.reset_password_confirm);
-						}
-						catch (Exception ex)
-						{
-							FLog.Error("Failed to send recovery email", ex);
-							_services.InGameNotificationService.QueueNotification("Failed to send recovery email, try again.");
-						}
-						finally
-						{
-							await _services.UIService.CloseScreen<LoadingSpinnerScreenPresenter>();
-						}
-
-						continue;
-
-					case EmailPasswordLoginPopupPresenter.Result.ResultType.Login:
-						try
-						{
-							await _services.UIService.OpenScreen<LoadingSpinnerScreenPresenter>();
-							var loginResult = await _services.AuthService.FetchCredentialsWithEmailPassword(result.Email, result.Password);
-							await screen.Close();
-							return loginResult;
-						}
-						catch (Exception ex)
-						{
-							if (ex is WrappedPlayFabException playFabException)
-							{
-								screen.ClearPasswordField();
-								_services.InGameNotificationService.QueueNotification(playFabException.Error.ErrorMessage);
-							}
-							else
-							{
-								FLog.Error("Failed to send recovery email", ex);
-								_services.InGameNotificationService.QueueNotification("Failed to login, try again!");
-							}
-
-							continue;
-						}
-						finally
-						{
-							await _services.UIService.CloseScreen<LoadingSpinnerScreenPresenter>();
-						}
-				}
-
-				return null;
-			}
+			var result = await screen.WaitForResult();
+			await screen.Close();
+			return result.ResultActionType == EmailPasswordLoginPopupPresenter.Result.ResultType.Login;
 		}
 
 		private async UniTask AuthenticateAndInitializeLogic(Func<UniTask> loginMethod)
@@ -310,7 +267,7 @@ namespace FirstLight.Game.StateMachines
 					{
 						State.Success = false;
 						OnLoginError(ex);
-						throw ex;
+						throw;
 					}
 
 					FLog.Warn("Auth exception, retrying!", ex);
@@ -319,31 +276,15 @@ namespace FirstLight.Game.StateMachines
 			}
 		}
 
-		private bool IsAuthErrorRecoverable(PlayFabError err)
-		{
-			return err.Error is not (PlayFabErrorCode.AccountDeleted
-				or PlayFabErrorCode.AccountBanned
-				or PlayFabErrorCode.AccountNotFound
-				);
-		}
 
 		private void OnLoginError(Exception exception)
 		{
 			bool recoverable = true;
-			var message = "";
+			var message = exception.Message;
 
 			FLog.Error("Login Error", exception);
 
-			if (exception is WrappedPlayFabException playFabException)
-			{
-				message = playFabException.Error.ErrorMessage;
-				recoverable = IsAuthErrorRecoverable(playFabException.Error);
-				if (playFabException.Error.ErrorDetails != null)
-				{
-					FLog.Error("Authentication Fail - " + JsonConvert.SerializeObject(playFabException.Error.ErrorDetails));
-				}
-			}
-			else if (exception is AuthenticationException authenticationException)
+			if (exception is AuthenticationException authenticationException)
 			{
 				message = authenticationException.Message;
 				recoverable = authenticationException.Recoverable;
@@ -354,7 +295,6 @@ namespace FirstLight.Game.StateMachines
 			{
 				{"report", exception.ToString()},
 				{"device_id", account.DeviceId ?? "null"},
-				{"last_login_email", account.LastLoginEmail ?? "null"},
 				{"recoverable", recoverable},
 			});
 

@@ -23712,6 +23712,102 @@
         "",
         ""
       ]
+    },
+    {
+      "key": "UITAccount/link_title",
+      "translations": [
+        "Unity Account",
+        "Аккаунт Unity",
+        "Conta Unity"
+      ]
+    },
+    {
+      "key": "UITAccount/login_title",
+      "translations": [
+        "Sign in with Unity",
+        "Войти через Unity",
+        "Entrar com Unity"
+      ]
+    },
+    {
+      "key": "UITAccount/link_current_guest",
+      "translations": [
+        "Link this guest account",
+        "Связать этот гостевой аккаунт",
+        "Vincular esta conta de visitante"
+      ]
+    },
+    {
+      "key": "UITAccount/sign_in",
+      "translations": [
+        "Sign in to an existing account",
+        "Войти в существующий аккаунт",
+        "Entrar numa conta existente"
+      ]
+    },
+    {
+      "key": "UITAccount/continue_guest",
+      "translations": [
+        "Continue as guest",
+        "Продолжить как гость",
+        "Continuar como visitante"
+      ]
+    },
+    {
+      "key": "UITAccount/description",
+      "translations": [
+        "Play as a guest or use Unity’s secure sign-in page. Link this guest to keep its progress, or sign in to load another account’s progress.",
+        "Играйте как гость или используйте защищённую страницу входа Unity. Свяжите гостевой аккаунт, чтобы сохранить прогресс, или войдите в другой аккаунт, чтобы загрузить его прогресс.",
+        "Joga como visitante ou utiliza a página segura de acesso da Unity. Vincula esta conta para manter o progresso ou entra noutra conta para carregar o respetivo progresso."
+      ]
+    },
+    {
+      "key": "UITAccount/unavailable",
+      "translations": [
+        "Continue as a guest. Unity Account sign-in is not configured for this build.",
+        "Продолжите как гость. Вход через учётную запись Unity не настроен для этой сборки.",
+        "Continue como convidado. O login com a Conta Unity não está configurado nesta versão."
+      ]
+    },
+    {
+      "key": "UITAccount/failed",
+      "translations": [
+        "Unity Account sign-in could not be completed.",
+        "Не удалось завершить вход в аккаунт Unity.",
+        "Não foi possível concluir o acesso à conta Unity."
+      ]
+    },
+    {
+      "key": "UITAccount/guest",
+      "translations": [
+        "Guest account",
+        "Гостевой аккаунт",
+        "Conta de visitante"
+      ]
+    },
+    {
+      "key": "UITAccount/connected",
+      "translations": [
+        "Unity Account connected",
+        "Аккаунт Unity подключён",
+        "Conta Unity vinculada"
+      ]
+    },
+    {
+      "key": "UITStandings/unavailable_title",
+      "translations": [
+        "Global standings",
+        "Мировой рейтинг",
+        "Classificação global"
+      ]
+    },
+    {
+      "key": "UITStandings/global_unavailable",
+      "translations": [
+        "Global rankings are unavailable in this development build. Your trophies and progression are still saved.",
+        "Мировой рейтинг недоступен в этой тестовой сборке. Ваши трофеи и прогресс сохраняются.",
+        "A classificação global não está disponível nesta versão de desenvolvimento. Seus troféus e progresso continuam salvos."
+      ]
     }
   ]
 }

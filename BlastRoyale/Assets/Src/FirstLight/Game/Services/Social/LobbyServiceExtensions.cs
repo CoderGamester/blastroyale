@@ -26,7 +26,7 @@ namespace FirstLight.Game.Utils.UCSExtensions
 		/// </summary>
 		public static bool IsLocalPlayerHost(this Lobby lobby)
 		{
-			return lobby.HostId == AuthenticationService.Instance.PlayerId;
+			return lobby != null && lobby.HostId == AuthenticationService.Instance.PlayerId;
 		}
 
 		/// <summary>
@@ -112,26 +112,6 @@ namespace FirstLight.Game.Utils.UCSExtensions
 		public static bool IsReady(this Player player)
 		{
 			return player.Data[FLLobbyService.KEY_READY].Value == "true";
-		}
-
-		/// <summary>
-		/// Returns the playfab id of the player.
-		/// </summary>
-		public static string GetPlayfabID(this Player player)
-		{
-			return player.Data[FLLobbyService.KEY_PLAYFAB_ID].Value;
-		}
-
-		/// <summary>
-		/// Converts the provided Player object into an EntityKey object.
-		/// </summary>
-		public static PlayFab.MultiplayerModels.EntityKey ToEntityKey(this Player player)
-		{
-			return new PlayFab.MultiplayerModels.EntityKey
-			{
-				Id = player.GetPlayfabID(),
-				Type = PlayFabConstants.TITLE_PLAYER_ENTITY_TYPE
-			};
 		}
 
 		/// <summary>
