@@ -1,0 +1,2135 @@
+{
+  "Version": 1,
+  "Entries": [
+    {
+      "QuantumGuid": 534549481968428075,
+      "OriginalPath": "AddressableResources/QuantumAssets/Default Config Assets/Default PhysicsMaterialAsset",
+      "NativePath": "AddressableResources/QuantumAssets/Default Config Assets/Default PhysicsMaterialAsset",
+      "UnityPath": "Assets/AddressableResources/QuantumAssets/Default Config Assets/Default PhysicsMaterialAsset.asset",
+      "UnityGuid": "036de61eca99b43519471def7198ff23",
+      "UnityLocalId": 11400000,
+      "SourceSha256": "ffe282ca89d233058d4c8667dfdfe6bef6fc59d02c520014c6a4065c1bbb579a",
+      "Type": "Quantum.PhysicsMaterial"
+    },
+    {
+      "QuantumGuid": 2015630497605358489,
+      "OriginalPath": "AddressableResources/Maps/Cemetery/Cemetery_mesh",
+      "NativePath": "AddressableResources/Maps/Cemetery/Cemetery_mesh",
+      "UnityPath": "Assets/AddressableResources/Maps/Cemetery/Cemetery_mesh.asset",
+      "UnityGuid": "0759143d803912c49aaa25422e712267",
+      "UnityLocalId": 11400000,
+      "SourceSha256": "79f9a89504206a5d0f0f85794ab8b6c368436703910dce60df98ed96ae00079d",
+      "Type": "Quantum.BinaryData"
+    },
+    {
+      "QuantumGuid": 4500954794891978155,
+      "OriginalPath": "AddressableResources/Maps/TestAssets/NavMeshAsset",
+      "NativePath": "AddressableResources/Maps/TestAssets/NavMeshAsset",
+      "UnityPath": "Assets/AddressableResources/Maps/TestAssets/NavMeshAsset.asset",
+      "UnityGuid": "09e3bb56d3e8cbe4ba431b1921ee4285",
+      "UnityLocalId": 11400000,
+      "SourceSha256": "33b99dac4faa8b1d96c432e7612ee950d74da64bc11d731e13fa4a13b0dc0403",
+      "Type": "Quantum.NavMesh"
+    },
+    {
+      "QuantumGuid": 2605633785285790643,
+      "OriginalPath": "AddressableResources/Maps/Test/TestScene",
+      "NativePath": "AddressableResources/Maps/Test/TestScene",
+      "UnityPath": "Assets/AddressableResources/Maps/Test/TestScene.asset",
+      "UnityGuid": "0ea0ea1d7e7e74df5ac657360bbcdb01",
+      "UnityLocalId": 11400000,
+      "SourceSha256": "60e17b29b46bac5625f96bd177b286bd796d066dba6c2335d6b6421ad4ce87da",
+      "Type": "Quantum.Map"
+    },
+    {
+      "QuantumGuid": 2551591651683386162,
+      "OriginalPath": "AddressableResources/Maps/MazeMayhem/MazeMayhem_mesh",
+      "NativePath": "AddressableResources/Maps/MazeMayhem/MazeMayhem_mesh",
+      "UnityPath": "Assets/AddressableResources/Maps/MazeMayhem/MazeMayhem_mesh.asset",
+      "UnityGuid": "1348fe33c54ffa049b3909d4526042cd",
+      "UnityLocalId": 11400000,
+      "SourceSha256": "5512a792be3a351555a6ab59a9a9a155c37b10378a8308e3bc8bdd3b4c854b98",
+      "Type": "Quantum.BinaryData"
+    },
+    {
+      "QuantumGuid": 1550297457877710414,
+      "OriginalPath": "AddressableResources/Configs/BotConfigs",
+      "NativePath": "AddressableResources/Configs/BotConfigs",
+      "UnityPath": "Assets/AddressableResources/Configs/BotConfigs.asset",
+      "UnityGuid": "13f138697ab1a8b44a52d3a8f47f5fce",
+      "UnityLocalId": 11400000,
+      "SourceSha256": "7a1ac7c6837a58f50f943dc2e5f2ea366e5730feee8ccb7db02af8e307229436",
+      "Type": "FirstLight.Game.Configs.BotConfigs"
+    },
+    {
+      "QuantumGuid": 692395575484242622,
+      "OriginalPath": "AddressableResources/QuantumAssets/Default Config Assets/Default CharacterController3DConfigAsset",
+      "NativePath": "AddressableResources/QuantumAssets/Default Config Assets/Default CharacterController3DConfigAsset",
+      "UnityPath": "Assets/AddressableResources/QuantumAssets/Default Config Assets/Default CharacterController3DConfigAsset.asset",
+      "UnityGuid": "1a30a4cbf2e3a48cd813eeeb5e6d3b58",
+      "UnityLocalId": 11400000,
+      "SourceSha256": "ded8d643446b5cedf44f8fc1f4a7f05f953f99fe1c46b3c8fcec50aa3ca36535",
+      "Type": "Quantum.CharacterController3DConfig"
+    },
+    {
+      "QuantumGuid": 855809909992764249,
+      "OriginalPath": "AddressableResources/Maps/Islands/IslandsMap_NavMesh",
+      "NativePath": "AddressableResources/Maps/Islands/IslandsMap_NavMesh",
+      "UnityPath": "Assets/AddressableResources/Maps/Islands/IslandsMap_NavMesh.asset",
+      "UnityGuid": "1eca26ab01112164986677d5d6f8198a",
+      "UnityLocalId": 11400000,
+      "SourceSha256": "de83970f80196a5a4f7d3585fe39e700aff0c838e2e8f8bb4e1f22e7bc267d6f",
+      "Type": "Quantum.NavMesh"
+    },
+    {
+      "QuantumGuid": 2174339006334179964,
+      "OriginalPath": "AddressableResources/Configs/WeaponConfigs",
+      "NativePath": "AddressableResources/Configs/WeaponConfigs",
+      "UnityPath": "Assets/AddressableResources/Configs/WeaponConfigs.asset",
+      "UnityGuid": "213dab06ecc4e4d19ac7a6f73d53d061",
+      "UnityLocalId": 11400000,
+      "SourceSha256": "b7811301d1cbd01ef553f345674593efa95a348c5437c451aed77afea3408e47",
+      "Type": "FirstLight.Game.Configs.WeaponConfigs"
+    },
+    {
+      "QuantumGuid": 3521447524462001825,
+      "OriginalPath": "AddressableResources/Configs/ConsumableConfigs",
+      "NativePath": "AddressableResources/Configs/ConsumableConfigs",
+      "UnityPath": "Assets/AddressableResources/Configs/ConsumableConfigs.asset",
+      "UnityGuid": "2483ad91af88f41da9a803a427177a75",
+      "UnityLocalId": 11400000,
+      "SourceSha256": "3e92cf44cb9c3e0550e830f22792d1df787c4f81da4adc8c1a2cd37d76550e82",
+      "Type": "FirstLight.Game.Configs.ConsumableConfigs"
+    },
+    {
+      "QuantumGuid": 4506913672909982829,
+      "OriginalPath": "AddressableResources/QuantumAssets/Characters/DummyCharacter|EntityView",
+      "NativePath": "AddressableResources/QuantumAssets/Characters/DummyCharacter|EntityView",
+      "UnityPath": "Assets/AddressableResources/QuantumAssets/Characters/DummyCharacter.prefab",
+      "UnityGuid": "28c4f9b0e7b7d2744864abc9dff5fd57",
+      "UnityLocalId": -3041705823161878789,
+      "SourceSha256": "8aa47c2b64b8011b7f8cbcbbe095159645ec2e9f82daa6ccc59c22d18c2383a0",
+      "Type": "Quantum.EntityView"
+    },
+    {
+      "QuantumGuid": 754640765234653046,
+      "OriginalPath": "AddressableResources/QuantumAssets/Characters/DummyCharacter|EntityPrototype",
+      "NativePath": "AddressableResources/QuantumAssets/Characters/DummyCharacterEntityPrototype",
+      "UnityPath": "Assets/AddressableResources/QuantumAssets/Characters/DummyCharacterEntityPrototype.qprototype",
+      "UnityGuid": "e9c8ba7697b3447e0af421c578f6e063",
+      "UnityLocalId": 3097001405596171208,
+      "SourceSha256": "4bc12c7fef9ea3643be8538a45e4afd0fc199b374efc630bd8692c2f94e9837d",
+      "Type": "Quantum.EntityPrototype"
+    },
+    {
+      "QuantumGuid": 4070827363264793974,
+      "OriginalPath": "AddressableResources/QuantumAssets/Collectables/EquipmentPickup|EntityPrototype",
+      "NativePath": "AddressableResources/QuantumAssets/Collectables/EquipmentPickupEntityPrototype",
+      "UnityPath": "Assets/AddressableResources/QuantumAssets/Collectables/EquipmentPickupEntityPrototype.qprototype",
+      "UnityGuid": "6418163a45036409998c57e31d12da76",
+      "UnityLocalId": 3097001405596171208,
+      "SourceSha256": "b791f276736c007e26369c47b2ed15185793301ea4ecae38ddb4854ea28c743f",
+      "Type": "Quantum.EntityPrototype"
+    },
+    {
+      "QuantumGuid": 3715608968879547668,
+      "OriginalPath": "AddressableResources/QuantumAssets/Collectables/EquipmentPickup|EntityView",
+      "NativePath": "AddressableResources/QuantumAssets/Collectables/EquipmentPickup|EntityView",
+      "UnityPath": "Assets/AddressableResources/QuantumAssets/Collectables/EquipmentPickup.prefab",
+      "UnityGuid": "29df067ac53ddf94eafea6eac6385de0",
+      "UnityLocalId": 7845361808403847208,
+      "SourceSha256": "709aba23f3c2dc5b33bda4f84a2e6ab3296cd39fd1dea5b49bb39d2e40beaea5",
+      "Type": "Quantum.EntityView"
+    },
+    {
+      "QuantumGuid": 4343785826901058006,
+      "OriginalPath": "AddressableResources/Maps/IslandOne/IslandOne_Navmesh Baking",
+      "NativePath": "AddressableResources/Maps/IslandOne/IslandOne_Navmesh Baking",
+      "UnityPath": "Assets/AddressableResources/Maps/IslandOne/IslandOne_Navmesh Baking.asset",
+      "UnityGuid": "2bb382b28044f2f408c0a47e4a42429e",
+      "UnityLocalId": 11400000,
+      "SourceSha256": "0bc863d2b9a8b36feea59048f5fdaab61ffce2facb363839d779446f46e8907e",
+      "Type": "Quantum.NavMesh"
+    },
+    {
+      "QuantumGuid": 4318130223778477555,
+      "OriginalPath": "AddressableResources/Maps/IslandOne/IslandOne",
+      "NativePath": "AddressableResources/Maps/IslandOne/IslandOne",
+      "UnityPath": "Assets/AddressableResources/Maps/IslandOne/IslandOne.asset",
+      "UnityGuid": "2d2775ddc60875247af631df98b233d1",
+      "UnityLocalId": 11400000,
+      "SourceSha256": "a94d0bb5f6d64a56488f4f1e080f7f46a288cac5dd41297d036bdad1c2ba6d89",
+      "Type": "Quantum.Map"
+    },
+    {
+      "QuantumGuid": 890067851687444296,
+      "OriginalPath": "AddressableResources/Maps/MazeMayhem/MazeMayhem_Navmesh Baking",
+      "NativePath": "AddressableResources/Maps/MazeMayhem/MazeMayhem_Navmesh Baking",
+      "UnityPath": "Assets/AddressableResources/Maps/MazeMayhem/MazeMayhem_Navmesh Baking.asset",
+      "UnityGuid": "2d682755ee6074f4eacdcd7d2ebc0f44",
+      "UnityLocalId": 11400000,
+      "SourceSha256": "abeaec49b2d359348c63b09175349553a54e3d72db15c65ffd73809d36d98dc0",
+      "Type": "Quantum.NavMesh"
+    },
+    {
+      "QuantumGuid": 3242401771564966650,
+      "OriginalPath": "AddressableResources/Configs/SpecialConfigs",
+      "NativePath": "AddressableResources/Configs/SpecialConfigs",
+      "UnityPath": "Assets/AddressableResources/Configs/SpecialConfigs.asset",
+      "UnityGuid": "2f064f00935de8f4aa9afcd6294486ab",
+      "UnityLocalId": 11400000,
+      "SourceSha256": "12cdde15321692a4bf8f21ecec6ac9d049835b8760f39d6c9f379fbcda58b706",
+      "Type": "FirstLight.Game.Configs.SpecialConfigs"
+    },
+    {
+      "QuantumGuid": 2408532451239495612,
+      "OriginalPath": "AddressableResources/Maps/TestAssets/TestAssetsMap_mesh",
+      "NativePath": "AddressableResources/Maps/TestAssets/TestAssetsMap_mesh",
+      "UnityPath": "Assets/AddressableResources/Maps/TestAssets/TestAssetsMap_mesh.asset",
+      "UnityGuid": "2fe7bceaf86da7c4a88a76791578fb96",
+      "UnityLocalId": 11400000,
+      "SourceSha256": "353b425998a58a3e553e4fe6d4976cec8ca97a0bc1c5226a68343823b690e94f",
+      "Type": "Quantum.BinaryData"
+    },
+    {
+      "QuantumGuid": 1294501418838150284,
+      "OriginalPath": "AddressableResources/Maps/IslandOne/IslandOne_mesh",
+      "NativePath": "AddressableResources/Maps/IslandOne/IslandOne_mesh",
+      "UnityPath": "Assets/AddressableResources/Maps/IslandOne/IslandOne_mesh.asset",
+      "UnityGuid": "34c5c80e07036764e8bcd195d38b71e7",
+      "UnityLocalId": 11400000,
+      "SourceSha256": "a74c1f84c20f503459b1021b664efbd2d8d2283d191bfd7f0a6a48169628a9ca",
+      "Type": "Quantum.BinaryData"
+    },
+    {
+      "QuantumGuid": 2204164627415752385,
+      "OriginalPath": "AddressableResources/QuantumAssets/CircuitExport/Blackboard_Assets/PlayerBlackboard",
+      "NativePath": "AddressableResources/QuantumAssets/CircuitExport/Blackboard_Assets/PlayerBlackboard",
+      "UnityPath": "Assets/AddressableResources/QuantumAssets/CircuitExport/Blackboard_Assets/PlayerBlackboard.asset",
+      "UnityGuid": "39206c3abe0c2488295975e354b232d4",
+      "UnityLocalId": 11400000,
+      "SourceSha256": "f85764511c3612905d3b5503bd535bd80c66e939589f232769fdacb813b3017b",
+      "Type": "Quantum.AIBlackboard"
+    },
+    {
+      "QuantumGuid": 3079226671557161395,
+      "OriginalPath": "AddressableResources/Maps/Fortress/Fortress_NavMesh_data",
+      "NativePath": "AddressableResources/Maps/Fortress/Fortress_NavMesh_data",
+      "UnityPath": "Assets/AddressableResources/Maps/Fortress/Fortress_NavMesh_data.asset",
+      "UnityGuid": "39be59713fb66d64fb8420454fc5518e",
+      "UnityLocalId": 11400000,
+      "SourceSha256": "425bb23e15333b54a30927117006ae36ee7562ea120481e7c7446646c9c03b9f",
+      "Type": "Quantum.BinaryData"
+    },
+    {
+      "QuantumGuid": 818657459238887235,
+      "OriginalPath": "AddressableResources/QuantumAssets/Destructibles/Landmine|EntityView",
+      "NativePath": "AddressableResources/QuantumAssets/Destructibles/Landmine|EntityView",
+      "UnityPath": "Assets/AddressableResources/QuantumAssets/Destructibles/Landmine.prefab",
+      "UnityGuid": "3b005dd2a3b2bdd49b9c4985ea68ced2",
+      "UnityLocalId": -4900543462875793108,
+      "SourceSha256": "36c6c19ebd62baff2114f006c96f32f56b8122151797f7c0422481506063fbb1",
+      "Type": "Quantum.EntityView"
+    },
+    {
+      "QuantumGuid": 182712282339768594,
+      "OriginalPath": "AddressableResources/QuantumAssets/Destructibles/Landmine|EntityPrototype",
+      "NativePath": "AddressableResources/QuantumAssets/Destructibles/LandmineEntityPrototype",
+      "UnityPath": "Assets/AddressableResources/QuantumAssets/Destructibles/LandmineEntityPrototype.qprototype",
+      "UnityGuid": "9dec9553ceb264bfc86a272883ceb71d",
+      "UnityLocalId": 3097001405596171208,
+      "SourceSha256": "8b09e99fbca007471593352dd697d430260b198bbb8116c61fe678bf77037f8f",
+      "Type": "Quantum.EntityPrototype"
+    },
+    {
+      "QuantumGuid": 4132623271473847115,
+      "OriginalPath": "AddressableResources/Maps/Test/TestScene_NavMesh",
+      "NativePath": "AddressableResources/Maps/Test/TestScene_NavMesh",
+      "UnityPath": "Assets/AddressableResources/Maps/Test/TestScene_NavMesh.asset",
+      "UnityGuid": "3e4085152f7804319957443d327e2a91",
+      "UnityLocalId": 11400000,
+      "SourceSha256": "f1832b2692f1ff115211cf354408ceb5aa3932b202820dd500a1ab14ba015d9c",
+      "Type": "Quantum.NavMesh"
+    },
+    {
+      "QuantumGuid": 3727509028776929072,
+      "OriginalPath": "AddressableResources/Maps/FtueDeck/FtueDeck_NavMesh_data",
+      "NativePath": "AddressableResources/Maps/FtueDeck/FtueDeck_NavMesh_data",
+      "UnityPath": "Assets/AddressableResources/Maps/FtueDeck/FtueDeck_NavMesh_data.asset",
+      "UnityGuid": "4081bf72948b29245beaeb37b7045d76",
+      "UnityLocalId": 11400000,
+      "SourceSha256": "c50c880564f1a2cce76cf28ce1cf499be0195b4a34e2a82b3e4f5ca65a64afef",
+      "Type": "Quantum.BinaryData"
+    },
+    {
+      "QuantumGuid": 681132644485897465,
+      "OriginalPath": "AddressableResources/Maps/Test/TestScene_mesh",
+      "NativePath": "AddressableResources/Maps/Test/TestScene_mesh",
+      "UnityPath": "Assets/AddressableResources/Maps/Test/TestScene_mesh.asset",
+      "UnityGuid": "4099cfd2c77164747b2e80e7081edb65",
+      "UnityLocalId": 11400000,
+      "SourceSha256": "bdd20065318597cddc9a2710cef28f179c1973f277d45c6e9527587f34cde257",
+      "Type": "Quantum.BinaryData"
+    },
+    {
+      "QuantumGuid": 3899413888198970482,
+      "OriginalPath": "AddressableResources/Maps/Cemetery/Cemetery_NavMesh_data",
+      "NativePath": "AddressableResources/Maps/Cemetery/Cemetery_NavMesh_data",
+      "UnityPath": "Assets/AddressableResources/Maps/Cemetery/Cemetery_NavMesh_data.asset",
+      "UnityGuid": "46d9c43905afc444b8fa8a18427c2e03",
+      "UnityLocalId": 11400000,
+      "SourceSha256": "810f135a597b25c32a213ce5e2eca8b6c84b920835f58a296ca607ab44734f8d",
+      "Type": "Quantum.BinaryData"
+    },
+    {
+      "QuantumGuid": 1656225088092065763,
+      "OriginalPath": "AddressableResources/Maps/Battlelands/BattlelandsMap",
+      "NativePath": "AddressableResources/Maps/Battlelands/BattlelandsMap",
+      "UnityPath": "Assets/AddressableResources/Maps/Battlelands/BattlelandsMap.asset",
+      "UnityGuid": "47849fde33a339d4c8f9d916ed3a384a",
+      "UnityLocalId": 11400000,
+      "SourceSha256": "e7717e5a2f17a2250225e67abb6ee0a858ebcd44907899cd3b278ad90b8e0e12",
+      "Type": "Quantum.Map"
+    },
+    {
+      "QuantumGuid": 4351006285510731336,
+      "OriginalPath": "AddressableResources/Maps/Fortress/Fortress_NavMesh",
+      "NativePath": "AddressableResources/Maps/Fortress/Fortress_NavMesh",
+      "UnityPath": "Assets/AddressableResources/Maps/Fortress/Fortress_NavMesh.asset",
+      "UnityGuid": "47ce574e081e6164380bf65de45478f4",
+      "UnityLocalId": 11400000,
+      "SourceSha256": "337de43c321c9868b07543d45f80b8d7c0c438b485fc8a94bc86f5e7e0511823",
+      "Type": "Quantum.NavMesh"
+    },
+    {
+      "QuantumGuid": 2575471535425279547,
+      "OriginalPath": "AddressableResources/Maps/District/District_NavMesh",
+      "NativePath": "AddressableResources/Maps/District/District_NavMesh",
+      "UnityPath": "Assets/AddressableResources/Maps/District/District_NavMesh.asset",
+      "UnityGuid": "4bf70333d578d9644800b8c60bf73603",
+      "UnityLocalId": 11400000,
+      "SourceSha256": "059dfe2a1935648bce3b26b050a02057e79c2d4d1c812c6fef5ce46e77490d7a",
+      "Type": "Quantum.NavMesh"
+    },
+    {
+      "QuantumGuid": 2931657409906099456,
+      "OriginalPath": "AddressableResources/Configs/EquipmentMaterialStatConfigs",
+      "NativePath": "AddressableResources/Configs/EquipmentMaterialStatConfigs",
+      "UnityPath": "Assets/AddressableResources/Configs/EquipmentMaterialStatConfigs.asset",
+      "UnityGuid": "5a56c0508ff3dc145891734bd5dbb81a",
+      "UnityLocalId": 11400000,
+      "SourceSha256": "ded5a65e8446be7f58228544940d002e99b7706a2df4ac19655d4b849b895e75",
+      "Type": "FirstLight.Game.Configs.EquipmentMaterialStatConfigs"
+    },
+    {
+      "QuantumGuid": 2284101304238230590,
+      "OriginalPath": "AddressableResources/Maps/IslandOne/IslandOne_Navmesh Baking_data",
+      "NativePath": "AddressableResources/Maps/IslandOne/IslandOne_Navmesh Baking_data",
+      "UnityPath": "Assets/AddressableResources/Maps/IslandOne/IslandOne_Navmesh Baking_data.asset",
+      "UnityGuid": "5cb15f2db6a634343b83d88b8e9f853e",
+      "UnityLocalId": 11400000,
+      "SourceSha256": "f8c49d9e5268a624961bec5bd558b074675a0e4b7ea125e3f961e6112f65ac75",
+      "Type": "Quantum.BinaryData"
+    },
+    {
+      "QuantumGuid": 3423522033009671601,
+      "OriginalPath": "AddressableResources/QuantumAssets/Spawners/LegacyWeaponPlatformSpawner|EntityPrototype",
+      "NativePath": "AddressableResources/QuantumAssets/Spawners/LegacyWeaponPlatformSpawnerEntityPrototype",
+      "UnityPath": "Assets/AddressableResources/QuantumAssets/Spawners/LegacyWeaponPlatformSpawnerEntityPrototype.qprototype",
+      "UnityGuid": "11fa4460041954931a1f4bfc66964097",
+      "UnityLocalId": 3097001405596171208,
+      "SourceSha256": "4132d59b6dc1c91a7d34601cc171d9c9698d3abb8d3ac607f37e8e24b993e319",
+      "Type": "Quantum.EntityPrototype"
+    },
+    {
+      "QuantumGuid": 507213235080836660,
+      "OriginalPath": "AddressableResources/QuantumAssets/Spawners/LegacyWeaponPlatformSpawner|EntityView",
+      "NativePath": "AddressableResources/QuantumAssets/Spawners/LegacyWeaponPlatformSpawner|EntityView",
+      "UnityPath": "Assets/AddressableResources/QuantumAssets/Spawners/LegacyWeaponPlatformSpawner.prefab",
+      "UnityGuid": "5f9ce14d8c057d044bcc7ea98d1d3fe6",
+      "UnityLocalId": 7845361808403847208,
+      "SourceSha256": "deababd5f85f08109bc2678fab4d15289c5aa904a918220dc02b18b1e7acf260",
+      "Type": "Quantum.EntityView"
+    },
+    {
+      "QuantumGuid": 2194276554936782103,
+      "OriginalPath": "AddressableResources/QuantumAssets/Spawners/PlayerSpawner|EntityPrototype",
+      "NativePath": "AddressableResources/QuantumAssets/Spawners/PlayerSpawnerEntityPrototype",
+      "UnityPath": "Assets/AddressableResources/QuantumAssets/Spawners/PlayerSpawnerEntityPrototype.qprototype",
+      "UnityGuid": "86cef7383156e41e1867759650cf30e0",
+      "UnityLocalId": 3097001405596171208,
+      "SourceSha256": "fd4d1f02b8c0f975d332dd85c28d0803865a6c6110a3e781097cd9c3edc5ff88",
+      "Type": "Quantum.EntityPrototype"
+    },
+    {
+      "QuantumGuid": 1469853357981699320,
+      "OriginalPath": "AddressableResources/QuantumAssets/Spawners/PlayerSpawner|EntityView",
+      "NativePath": "AddressableResources/QuantumAssets/Spawners/PlayerSpawner|EntityView",
+      "UnityPath": "Assets/AddressableResources/QuantumAssets/Spawners/PlayerSpawner.prefab",
+      "UnityGuid": "6233bdbfadd874a59a642e8f839182c4",
+      "UnityLocalId": 8281891606988313191,
+      "SourceSha256": "61d0f497886570d5810044e5d8a9e4ec76c003c3b46dcf25a140fd51bd8f6c32",
+      "Type": "Quantum.EntityView"
+    },
+    {
+      "QuantumGuid": 2190570854744983118,
+      "OriginalPath": "AddressableResources/QuantumAssets/Characters/PlayerCharacter|EntityView",
+      "NativePath": "AddressableResources/QuantumAssets/Characters/PlayerCharacter|EntityView",
+      "UnityPath": "Assets/AddressableResources/QuantumAssets/Characters/PlayerCharacter.prefab",
+      "UnityGuid": "736f8955950b80a41a57b75dd2e61fbf",
+      "UnityLocalId": -3041705823161878789,
+      "SourceSha256": "997d99470173c8b7bf0c63b7129cd4c0b701441e556dd798696ea64d0b9acfbe",
+      "Type": "Quantum.EntityView"
+    },
+    {
+      "QuantumGuid": 1494014866598569848,
+      "OriginalPath": "AddressableResources/QuantumAssets/Characters/PlayerCharacter|EntityPrototype",
+      "NativePath": "AddressableResources/QuantumAssets/Characters/PlayerCharacterEntityPrototype",
+      "UnityPath": "Assets/AddressableResources/QuantumAssets/Characters/PlayerCharacterEntityPrototype.qprototype",
+      "UnityGuid": "1ef95269cd2b14b649370eab7c153169",
+      "UnityLocalId": 3097001405596171208,
+      "SourceSha256": "9c55403dcba637ed3b1fda2eba6a212cd4ba079f7c774bff1b9a0432e9423a23",
+      "Type": "Quantum.EntityPrototype"
+    },
+    {
+      "QuantumGuid": 1536258848976152407,
+      "OriginalPath": "AddressableResources/Maps/District/District_mesh",
+      "NativePath": "AddressableResources/Maps/District/District_mesh",
+      "UnityPath": "Assets/AddressableResources/Maps/District/District_mesh.asset",
+      "UnityGuid": "744314671a7bfb047beb380097aae4bb",
+      "UnityLocalId": 11400000,
+      "SourceSha256": "d4f5e67d7a2172cdf9aa0887e6eb7033f89958fad5e978911b7151552118da2c",
+      "Type": "Quantum.BinaryData"
+    },
+    {
+      "QuantumGuid": 3912986414844588615,
+      "OriginalPath": "AddressableResources/Maps/Battlelands/BattlelandsMap_NavMesh",
+      "NativePath": "AddressableResources/Maps/Battlelands/BattlelandsMap_NavMesh",
+      "UnityPath": "Assets/AddressableResources/Maps/Battlelands/BattlelandsMap_NavMesh.asset",
+      "UnityGuid": "7834045e78a102149be45dc7348be29d",
+      "UnityLocalId": 11400000,
+      "SourceSha256": "ecd0190e7311f6eeb372a7d4750e40f13785adff958f474b8afcb4cfca33b6f9",
+      "Type": "Quantum.NavMesh"
+    },
+    {
+      "QuantumGuid": 4344381221028547365,
+      "OriginalPath": "AddressableResources/Maps/District/District",
+      "NativePath": "AddressableResources/Maps/District/District",
+      "UnityPath": "Assets/AddressableResources/Maps/District/District.asset",
+      "UnityGuid": "7b1b5589f93df224881f76f8239b581c",
+      "UnityLocalId": 11400000,
+      "SourceSha256": "2ad4296b0c5847eb1df0a62b02b27e82ae05b7f429f8bf83561bc42af4c70aae",
+      "Type": "Quantum.Map"
+    },
+    {
+      "QuantumGuid": 307490403732720118,
+      "OriginalPath": "AddressableResources/QuantumAssets/Default Config Assets/Default CharacterController2DConfigAsset",
+      "NativePath": "AddressableResources/QuantumAssets/Default Config Assets/Default CharacterController2DConfigAsset",
+      "UnityPath": "Assets/AddressableResources/QuantumAssets/Default Config Assets/Default CharacterController2DConfigAsset.asset",
+      "UnityGuid": "7bf63b5f222694a6e83ba9f8b4ffc0bf",
+      "UnityLocalId": 11400000,
+      "SourceSha256": "67768372c6bab7e0ec155b91506c2d76ac78da8233aadcfd0a928ae603bea4ae",
+      "Type": "Quantum.CharacterController2DConfig"
+    },
+    {
+      "QuantumGuid": 515801528670249359,
+      "OriginalPath": "AddressableResources/QuantumAssets/Collectables/AirDrop|EntityPrototype",
+      "NativePath": "AddressableResources/QuantumAssets/Collectables/AirDropEntityPrototype",
+      "UnityPath": "Assets/AddressableResources/QuantumAssets/Collectables/AirDropEntityPrototype.qprototype",
+      "UnityGuid": "3e792527335db413d86372cba4a117cf",
+      "UnityLocalId": 3097001405596171208,
+      "SourceSha256": "61dfa78f7aae73809c5cfbc1bd2aebe257c142764d8615a2fa147b125a568849",
+      "Type": "Quantum.EntityPrototype"
+    },
+    {
+      "QuantumGuid": 2526948452384311002,
+      "OriginalPath": "AddressableResources/QuantumAssets/Collectables/AirDrop|EntityView",
+      "NativePath": "AddressableResources/QuantumAssets/Collectables/AirDrop|EntityView",
+      "UnityPath": "Assets/AddressableResources/QuantumAssets/Collectables/AirDrop.prefab",
+      "UnityGuid": "7ca1cd881645a4ea797eff60983d68a9",
+      "UnityLocalId": 7845361808403847208,
+      "SourceSha256": "970f0fdfbff41f9d95c3629c22b11670f1c7a503d950c1b6928697b6f4ad02f1",
+      "Type": "Quantum.EntityView"
+    },
+    {
+      "QuantumGuid": 3922240779153377466,
+      "OriginalPath": "AddressableResources/Configs/ReviveConfigs",
+      "NativePath": "AddressableResources/Configs/ReviveConfigs",
+      "UnityPath": "Assets/AddressableResources/Configs/ReviveConfigs.asset",
+      "UnityGuid": "7d7f08b86c12a9043b22fb3d68ceab79",
+      "UnityLocalId": 11400000,
+      "SourceSha256": "aaff1855fe1b7af2c85660b79c63af115cf129adafed85959cd338cceeed8360",
+      "Type": "FirstLight.Game.Configs.ReviveConfigs"
+    },
+    {
+      "QuantumGuid": 1782342916809032400,
+      "OriginalPath": "AddressableResources/Configs/CustomAssetConfigs",
+      "NativePath": "AddressableResources/Configs/CustomAssetConfigs",
+      "UnityPath": "Assets/AddressableResources/Configs/CustomAssetConfigs.asset",
+      "UnityGuid": "827ece7149b514a30803bd53645d56e1",
+      "UnityLocalId": 11400000,
+      "SourceSha256": "2be314a24ff6a67d88cd8a4536716084c32564389d7b656e21bf86cbebaac098",
+      "Type": "FirstLight.Game.Configs.AssetConfigs.CustomAssetConfigs"
+    },
+    {
+      "QuantumGuid": 3325644595429681825,
+      "OriginalPath": "AddressableResources/QuantumAssets/Projectiles/RocketBullet|EntityView",
+      "NativePath": "AddressableResources/QuantumAssets/Projectiles/RocketBullet|EntityView",
+      "UnityPath": "Assets/AddressableResources/QuantumAssets/Projectiles/RocketBullet.prefab",
+      "UnityGuid": "8467487fec16cf74ea9878adff091889",
+      "UnityLocalId": -8452382852626058855,
+      "SourceSha256": "aec801d9fc064091dc8f26f59369bd229b60dbe54106e692e26b8a6be2e060ea",
+      "Type": "Quantum.EntityView"
+    },
+    {
+      "QuantumGuid": 1613285068775141220,
+      "OriginalPath": "AddressableResources/QuantumAssets/Projectiles/RocketBullet|EntityPrototype",
+      "NativePath": "AddressableResources/QuantumAssets/Projectiles/RocketBulletEntityPrototype",
+      "UnityPath": "Assets/AddressableResources/QuantumAssets/Projectiles/RocketBulletEntityPrototype.qprototype",
+      "UnityGuid": "4775c93b946034e5db7d33769200cf93",
+      "UnityLocalId": 3097001405596171208,
+      "SourceSha256": "818e1908dda8cd14be393e557c945904661e5dfa7bf421c47bfafb72b201301f",
+      "Type": "Quantum.EntityPrototype"
+    },
+    {
+      "QuantumGuid": 302926518594886766,
+      "OriginalPath": "AddressableResources/Maps/MazeMayhem/MazeMayhem_Navmesh Baking_data",
+      "NativePath": "AddressableResources/Maps/MazeMayhem/MazeMayhem_Navmesh Baking_data",
+      "UnityPath": "Assets/AddressableResources/Maps/MazeMayhem/MazeMayhem_Navmesh Baking_data.asset",
+      "UnityGuid": "865cd3e269fe1544298faf896c5441c0",
+      "UnityLocalId": 11400000,
+      "SourceSha256": "f91cfc1d04b6995e721ce1827a36d0d24847973c716b6fd8da0f683dc26d9f17",
+      "Type": "Quantum.BinaryData"
+    },
+    {
+      "QuantumGuid": 1595361790544170013,
+      "OriginalPath": "AddressableResources/Configs/GameModeConfigs",
+      "NativePath": "AddressableResources/Configs/GameModeConfigs",
+      "UnityPath": "Assets/AddressableResources/Configs/GameModeConfigs.asset",
+      "UnityGuid": "8b259a843a29c4b9d8fe150c041d6ea6",
+      "UnityLocalId": 11400000,
+      "SourceSha256": "67f0e31afcc9e19f0442ec41f8d2c79f93e677bfcc324297a4065b6b2ad242d9",
+      "Type": "FirstLight.Game.Configs.GameModeConfigs"
+    },
+    {
+      "QuantumGuid": 4100866902722562598,
+      "OriginalPath": "AddressableResources/Configs/ChestConfigs",
+      "NativePath": "AddressableResources/Configs/ChestConfigs",
+      "UnityPath": "Assets/AddressableResources/Configs/ChestConfigs.asset",
+      "UnityGuid": "9027533e70e004840935d30b8674b258",
+      "UnityLocalId": 11400000,
+      "SourceSha256": "a79f21f1eb60e2b07c528b09de85f39936032dd1d40e04927bf42f69b709cded",
+      "Type": "FirstLight.Game.Configs.ChestConfigs"
+    },
+    {
+      "QuantumGuid": 3083889286552435639,
+      "OriginalPath": "AddressableResources/Configs/ShrinkingCircleConfigs",
+      "NativePath": "AddressableResources/Configs/ShrinkingCircleConfigs",
+      "UnityPath": "Assets/AddressableResources/Configs/ShrinkingCircleConfigs.asset",
+      "UnityGuid": "90db60559d0b34f4cbff5951fbbadd29",
+      "UnityLocalId": 11400000,
+      "SourceSha256": "1303658afdf5229d2196bf398708dadf712f59219d24cb2b954b70ddc76cbc36",
+      "Type": "FirstLight.Game.Configs.ShrinkingCircleConfigs"
+    },
+    {
+      "QuantumGuid": 642761047244750205,
+      "OriginalPath": "AddressableResources/Maps/FtueDeck/FtueDeck_mesh",
+      "NativePath": "AddressableResources/Maps/FtueDeck/FtueDeck_mesh",
+      "UnityPath": "Assets/AddressableResources/Maps/FtueDeck/FtueDeck_mesh.asset",
+      "UnityGuid": "910a721b5e946bc44839716659df4881",
+      "UnityLocalId": 11400000,
+      "SourceSha256": "c11228fed616a0e91ea6510333a20a4b1bccc397ce8c43c3639c23d0292060c9",
+      "Type": "Quantum.BinaryData"
+    },
+    {
+      "QuantumGuid": 2106855069082239478,
+      "OriginalPath": "AddressableResources/Maps/FtueDeck/FtueDeck",
+      "NativePath": "AddressableResources/Maps/FtueDeck/FtueDeck",
+      "UnityPath": "Assets/AddressableResources/Maps/FtueDeck/FtueDeck.asset",
+      "UnityGuid": "91389158269995f4f8b5e35f5cb3f394",
+      "UnityLocalId": 11400000,
+      "SourceSha256": "2619522eb16faea33b72f64bb011d3b237f0b8a9a62960083469ad53ebcfb5e4",
+      "Type": "Quantum.Map"
+    },
+    {
+      "QuantumGuid": 534712889589439825,
+      "OriginalPath": "AddressableResources/Maps/MazeMayhem/MazeMayhem",
+      "NativePath": "AddressableResources/Maps/MazeMayhem/MazeMayhem",
+      "UnityPath": "Assets/AddressableResources/Maps/MazeMayhem/MazeMayhem.asset",
+      "UnityGuid": "9a64727ee7300524ca22c7fa8d7626f4",
+      "UnityLocalId": 11400000,
+      "SourceSha256": "eca0a2e56418666e9e8ad08f33b1e3e06603e19ddefbd53a63396574342511b2",
+      "Type": "Quantum.Map"
+    },
+    {
+      "QuantumGuid": 3982788431232669379,
+      "OriginalPath": "AddressableResources/Maps/TestAssets/TestAssetsMap",
+      "NativePath": "AddressableResources/Maps/TestAssets/TestAssetsMap",
+      "UnityPath": "Assets/AddressableResources/Maps/TestAssets/TestAssetsMap.asset",
+      "UnityGuid": "9bfa9a785ff474344bfff77e72c8a71a",
+      "UnityLocalId": 11400000,
+      "SourceSha256": "48616bff2782ed8d73bab24b90efd3cc67a12a004c20d97976332fa507291942",
+      "Type": "Quantum.Map"
+    },
+    {
+      "QuantumGuid": 737112216968780775,
+      "OriginalPath": "AddressableResources/QuantumAssets/Projectiles/RocketExplosion|EntityView",
+      "NativePath": "AddressableResources/QuantumAssets/Projectiles/RocketExplosion|EntityView",
+      "UnityPath": "Assets/AddressableResources/QuantumAssets/Projectiles/RocketExplosion.prefab",
+      "UnityGuid": "9c0b2073d73bf473987227b0fcb59243",
+      "UnityLocalId": -8452382852626058855,
+      "SourceSha256": "3c4cfd80e4d7456fac8dc016e31126929f6c73b495f5deb20a8ece85b334fc95",
+      "Type": "Quantum.EntityView"
+    },
+    {
+      "QuantumGuid": 382184530423860433,
+      "OriginalPath": "AddressableResources/QuantumAssets/Projectiles/RocketExplosion|EntityPrototype",
+      "NativePath": "AddressableResources/QuantumAssets/Projectiles/RocketExplosionEntityPrototype",
+      "UnityPath": "Assets/AddressableResources/QuantumAssets/Projectiles/RocketExplosionEntityPrototype.qprototype",
+      "UnityGuid": "e4dfd2fe920f14800b9f0e091e011190",
+      "UnityLocalId": 3097001405596171208,
+      "SourceSha256": "64d7e080b8f78fbb510caaa1256efef99e2f411a95fecb4eec59f89aa5887055",
+      "Type": "Quantum.EntityPrototype"
+    },
+    {
+      "QuantumGuid": 3005366737582492223,
+      "OriginalPath": "AddressableResources/Maps/District/District_NavMesh_data",
+      "NativePath": "AddressableResources/Maps/District/District_NavMesh_data",
+      "UnityPath": "Assets/AddressableResources/Maps/District/District_NavMesh_data.asset",
+      "UnityGuid": "a6a46262dfce3b04bbaf4bb4da6a4ab9",
+      "UnityLocalId": 11400000,
+      "SourceSha256": "79d9b601535c5ddc7013c34dcfec193bea1362095eb866660a0fe7a874325625",
+      "Type": "Quantum.BinaryData"
+    },
+    {
+      "QuantumGuid": 3179881957922959982,
+      "OriginalPath": "AddressableResources/Maps/Fortress/Fortress_mesh",
+      "NativePath": "AddressableResources/Maps/Fortress/Fortress_mesh",
+      "UnityPath": "Assets/AddressableResources/Maps/Fortress/Fortress_mesh.asset",
+      "UnityGuid": "a84a980793be79747941ecac4e1e0670",
+      "UnityLocalId": 11400000,
+      "SourceSha256": "ec8116ba83d3cdec2d551a936467f1e56025ce70ecf3b05ea87b0b9a0e6ff49a",
+      "Type": "Quantum.BinaryData"
+    },
+    {
+      "QuantumGuid": 4377612866467515236,
+      "OriginalPath": "AddressableResources/Maps/Islands/IslandsMap_mesh",
+      "NativePath": "AddressableResources/Maps/Islands/IslandsMap_mesh",
+      "UnityPath": "Assets/AddressableResources/Maps/Islands/IslandsMap_mesh.asset",
+      "UnityGuid": "ab327563cc129494c8a2af42b74ef8cb",
+      "UnityLocalId": 11400000,
+      "SourceSha256": "e4c3f7c2d39c993fe805c26ce0efdf559633b1fb0900ebc3ffad540765e51668",
+      "Type": "Quantum.BinaryData"
+    },
+    {
+      "QuantumGuid": 3566144576847955563,
+      "OriginalPath": "AddressableResources/QuantumAssets/Projectiles/MainBullet|EntityView",
+      "NativePath": "AddressableResources/QuantumAssets/Projectiles/MainBullet|EntityView",
+      "UnityPath": "Assets/AddressableResources/QuantumAssets/Projectiles/MainBullet.prefab",
+      "UnityGuid": "ad5d2090886ec8746bd362e80ed8e9fd",
+      "UnityLocalId": -8452382852626058855,
+      "SourceSha256": "74e303bb50645052dcfb02e19a601a17b9cafe08965818e15d9dac1f64fe6eba",
+      "Type": "Quantum.EntityView"
+    },
+    {
+      "QuantumGuid": 148021496798672150,
+      "OriginalPath": "AddressableResources/QuantumAssets/Projectiles/MainBullet|EntityPrototype",
+      "NativePath": "AddressableResources/QuantumAssets/Projectiles/MainBulletEntityPrototype",
+      "UnityPath": "Assets/AddressableResources/QuantumAssets/Projectiles/MainBulletEntityPrototype.qprototype",
+      "UnityGuid": "5e42b94d4935e464fb7b7f7dcd58b4f0",
+      "UnityLocalId": 3097001405596171208,
+      "SourceSha256": "92245eb67b0fca8c980fbfeeffdc4fe9a049390b87acec38952c998c57c9fb15",
+      "Type": "Quantum.EntityPrototype"
+    },
+    {
+      "QuantumGuid": 3351158279772585640,
+      "OriginalPath": "AddressableResources/QuantumAssets/Projectiles/HammerHit|EntityView",
+      "NativePath": "AddressableResources/QuantumAssets/Projectiles/HammerHit|EntityView",
+      "UnityPath": "Assets/AddressableResources/QuantumAssets/Projectiles/HammerHit.prefab",
+      "UnityGuid": "adb0b5ca3743d48c3a630e691e540239",
+      "UnityLocalId": -8452382852626058855,
+      "SourceSha256": "4d8b2754f38954a04d45840ffa66c6a6426a185691274fada7c0eca9cdf81645",
+      "Type": "Quantum.EntityView"
+    },
+    {
+      "QuantumGuid": 1722351953338325886,
+      "OriginalPath": "AddressableResources/QuantumAssets/Projectiles/HammerHit|EntityPrototype",
+      "NativePath": "AddressableResources/QuantumAssets/Projectiles/HammerHitEntityPrototype",
+      "UnityPath": "Assets/AddressableResources/QuantumAssets/Projectiles/HammerHitEntityPrototype.qprototype",
+      "UnityGuid": "df392506c66fd4e9486b7366a12f88c6",
+      "UnityLocalId": 3097001405596171208,
+      "SourceSha256": "518db34ded1f7e4009d3cd2dc323e1369ef48cc5bd39b0268d8f2fe809ac4713",
+      "Type": "Quantum.EntityPrototype"
+    },
+    {
+      "QuantumGuid": 3078609414033823315,
+      "OriginalPath": "AddressableResources/MatchAssets/MapObjects/Bush Small|EntityView",
+      "NativePath": "AddressableResources/MatchAssets/MapObjects/Bush Small|EntityView",
+      "UnityPath": "Assets/AddressableResources/MatchAssets/MapObjects/Bush Small.prefab",
+      "UnityGuid": "aefcba77bff9a494abc7729306a990b1",
+      "UnityLocalId": -8226625531942892954,
+      "SourceSha256": "e55ef87233395d24dad12dfd6ef1e6ddce00ffd6197ffa161d8ef63bcb352d5f",
+      "Type": "Quantum.EntityView"
+    },
+    {
+      "QuantumGuid": 2647440195271570113,
+      "OriginalPath": "AddressableResources/MatchAssets/MapObjects/Bush Small|EntityPrototype",
+      "NativePath": "AddressableResources/MatchAssets/MapObjects/Bush SmallEntityPrototype",
+      "UnityPath": "Assets/AddressableResources/MatchAssets/MapObjects/Bush SmallEntityPrototype.qprototype",
+      "UnityGuid": "0bbf0a123e5034cb0be337c19ad27f52",
+      "UnityLocalId": 3097001405596171208,
+      "SourceSha256": "91e462415ecdab2faf5c0d8dc810ed9816b9cbfb193ef0b7b404c2ad3bc9efd3",
+      "Type": "Quantum.EntityPrototype"
+    },
+    {
+      "QuantumGuid": 2926812260290138366,
+      "OriginalPath": "AddressableResources/QuantumAssets/Others/DeathFlagPrototype|EntityPrototype",
+      "NativePath": "AddressableResources/QuantumAssets/Others/DeathFlagPrototypeEntityPrototype",
+      "UnityPath": "Assets/AddressableResources/QuantumAssets/Others/DeathFlagPrototypeEntityPrototype.qprototype",
+      "UnityGuid": "72f8353259c4e4645a31647331b89ad1",
+      "UnityLocalId": 3097001405596171208,
+      "SourceSha256": "1bb913697f68bf7cd0c0315a8478b08e51c62e3745f08d329bb77ed615cec0a6",
+      "Type": "Quantum.EntityPrototype"
+    },
+    {
+      "QuantumGuid": 452268884930367831,
+      "OriginalPath": "AddressableResources/QuantumAssets/Others/DeathFlagPrototype|EntityView",
+      "NativePath": "AddressableResources/QuantumAssets/Others/DeathFlagPrototype|EntityView",
+      "UnityPath": "Assets/AddressableResources/QuantumAssets/Others/DeathFlagPrototype.prefab",
+      "UnityGuid": "b019c412d5dbdf046ac098bf7cde3bcc",
+      "UnityLocalId": -904598757417271593,
+      "SourceSha256": "40b4155679dce20a416d4ca58eda7d5f3b845bd8bab3ee1a674898952dd52b55",
+      "Type": "Quantum.EntityView"
+    },
+    {
+      "QuantumGuid": 4487114524772037996,
+      "OriginalPath": "AddressableResources/Maps/Cemetery/Cemetery",
+      "NativePath": "AddressableResources/Maps/Cemetery/Cemetery",
+      "UnityPath": "Assets/AddressableResources/Maps/Cemetery/Cemetery.asset",
+      "UnityGuid": "b51f52af67f04c14ba5c00465c5e400b",
+      "UnityLocalId": 11400000,
+      "SourceSha256": "18e935e1bdaaf24b55d2999587a4420f7da5d12c126f9b5a954cc9cbebbaab5d",
+      "Type": "Quantum.Map"
+    },
+    {
+      "QuantumGuid": 4427458006344599318,
+      "OriginalPath": "AddressableResources/QuantumAssets/Default Config Assets/Default NavMeshAgentConfigAsset",
+      "NativePath": "AddressableResources/QuantumAssets/Default Config Assets/Default NavMeshAgentConfigAsset",
+      "UnityPath": "Assets/AddressableResources/QuantumAssets/Default Config Assets/Default NavMeshAgentConfigAsset.asset",
+      "UnityGuid": "b623bdc9b0234483a9b9189e34b86e4f",
+      "UnityLocalId": 11400000,
+      "SourceSha256": "9fcfa36ba61bbcfe5ec9f9e61a5f9ffd779a82bbbc97f3bcb89809a77865844c",
+      "Type": "Quantum.NavMeshAgentConfig"
+    },
+    {
+      "QuantumGuid": 1093005050644660195,
+      "OriginalPath": "AddressableResources/QuantumAssets/Physics Config Assets/Bot NavMeshAgentConfig",
+      "NativePath": "AddressableResources/QuantumAssets/Physics Config Assets/Bot NavMeshAgentConfig",
+      "UnityPath": "Assets/AddressableResources/QuantumAssets/Physics Config Assets/Bot NavMeshAgentConfig.asset",
+      "UnityGuid": "b65b4996139c84c09b17ee2360ddad9a",
+      "UnityLocalId": 11400000,
+      "SourceSha256": "7b249c68f78e37736fe3fb1a4aff45a6da89eb677da21d9f0d6236bed44dae86",
+      "Type": "Quantum.NavMeshAgentConfig"
+    },
+    {
+      "QuantumGuid": 1797316582330333553,
+      "OriginalPath": "AddressableResources/QuantumAssets/CircuitExport/Blackboard_Assets/PlayerBlackboardInitializer",
+      "NativePath": "AddressableResources/QuantumAssets/CircuitExport/Blackboard_Assets/PlayerBlackboardInitializer",
+      "UnityPath": "Assets/AddressableResources/QuantumAssets/CircuitExport/Blackboard_Assets/PlayerBlackboardInitializer.asset",
+      "UnityGuid": "b6a0323fd32a641318f6abee0c10ab0d",
+      "UnityLocalId": 11400000,
+      "SourceSha256": "dac94f9b583e0241baa0ef3e322f9df2aa163b60a37fa616f583c2aba9838c2a",
+      "Type": "Quantum.AIBlackboardInitializer"
+    },
+    {
+      "QuantumGuid": 2168878361177007176,
+      "OriginalPath": "AddressableResources/Configs/GameConfigs",
+      "NativePath": "AddressableResources/Configs/GameConfigs",
+      "UnityPath": "Assets/AddressableResources/Configs/GameConfigs.asset",
+      "UnityGuid": "bd24af2dbe6d601409cb9f0046080ef5",
+      "UnityLocalId": 11400000,
+      "SourceSha256": "5b222a4bbb05020b3f51b5053135836778fc779ada42e0156e65bf1d9bafbf36",
+      "Type": "FirstLight.Game.Configs.GameConfigs"
+    },
+    {
+      "QuantumGuid": 3635319050582391121,
+      "OriginalPath": "AddressableResources/Maps/Fortress/Fortress",
+      "NativePath": "AddressableResources/Maps/Fortress/Fortress",
+      "UnityPath": "Assets/AddressableResources/Maps/Fortress/Fortress.asset",
+      "UnityGuid": "c574b52272fab56478a156045fbe9bf3",
+      "UnityLocalId": 11400000,
+      "SourceSha256": "c2d649d719b2e6be8fce21bad0f2333b9f6ca3606ae0a6e979792058e94ed2de",
+      "Type": "Quantum.Map"
+    },
+    {
+      "QuantumGuid": 724045998517328729,
+      "OriginalPath": "AddressableResources/Maps/Test/TestScene_NavMesh_data",
+      "NativePath": "AddressableResources/Maps/Test/TestScene_NavMesh_data",
+      "UnityPath": "Assets/AddressableResources/Maps/Test/TestScene_NavMesh_data.asset",
+      "UnityGuid": "c5a252b13338f4e5a8deb0efb00b68bb",
+      "UnityLocalId": 11400000,
+      "SourceSha256": "7d29b1687b6e30ae646aee24561a83ecd1bd4dfbf80b2f32d552b87cbae1a343",
+      "Type": "Quantum.BinaryData"
+    },
+    {
+      "QuantumGuid": 1837168948990186834,
+      "OriginalPath": "AddressableResources/Maps/Cemetery/Cemetery_NavMesh",
+      "NativePath": "AddressableResources/Maps/Cemetery/Cemetery_NavMesh",
+      "UnityPath": "Assets/AddressableResources/Maps/Cemetery/Cemetery_NavMesh.asset",
+      "UnityGuid": "c61b927cfcf02184b8cfb4eebcf52cec",
+      "UnityLocalId": 11400000,
+      "SourceSha256": "e9339bce820d3672f6c9882712de1876b98446022bdd01527fad042bfb6eef2b",
+      "Type": "Quantum.NavMesh"
+    },
+    {
+      "QuantumGuid": 4583162008677401733,
+      "OriginalPath": "AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player|SetBlackboardBool_3",
+      "NativePath": "AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player|SetBlackboardBool_3",
+      "UnityPath": "Assets/AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player.asset",
+      "UnityGuid": "c821bf527a77a4970aa1c8944d8e3e50",
+      "UnityLocalId": -1343662970221280322,
+      "SourceSha256": "df74afec6423fbeb279e95e4f6ff677a10e473ba3ce92c27883e2c1c50f94008",
+      "Type": "Quantum.SetBlackboardBool"
+    },
+    {
+      "QuantumGuid": 921026657203260951,
+      "OriginalPath": "AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player|TransformPositionFunction_1",
+      "NativePath": "AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player|TransformPositionFunction_1",
+      "UnityPath": "Assets/AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player.asset",
+      "UnityGuid": "c821bf527a77a4970aa1c8944d8e3e50",
+      "UnityLocalId": -1406205570744726462,
+      "SourceSha256": "df74afec6423fbeb279e95e4f6ff677a10e473ba3ce92c27883e2c1c50f94008",
+      "Type": "Quantum.TransformPositionFunction"
+    },
+    {
+      "QuantumGuid": 290408045908008783,
+      "OriginalPath": "AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player|CurrentFrameTimeFunction_3",
+      "NativePath": "AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player|CurrentFrameTimeFunction_3",
+      "UnityPath": "Assets/AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player.asset",
+      "UnityGuid": "c821bf527a77a4970aa1c8944d8e3e50",
+      "UnityLocalId": -1570732449180233013,
+      "SourceSha256": "df74afec6423fbeb279e95e4f6ff677a10e473ba3ce92c27883e2c1c50f94008",
+      "Type": "Quantum.CurrentFrameTimeFunction"
+    },
+    {
+      "QuantumGuid": 1290780386109179055,
+      "OriginalPath": "AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player|HFSMAndDecision_5",
+      "NativePath": "AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player|HFSMAndDecision_5",
+      "UnityPath": "Assets/AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player.asset",
+      "UnityGuid": "c821bf527a77a4970aa1c8944d8e3e50",
+      "UnityLocalId": -1762803212664250981,
+      "SourceSha256": "df74afec6423fbeb279e95e4f6ff677a10e473ba3ce92c27883e2c1c50f94008",
+      "Type": "Quantum.HFSMAndDecision"
+    },
+    {
+      "QuantumGuid": 1433292725654733562,
+      "OriginalPath": "AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player|Stunned_6",
+      "NativePath": "AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player|Stunned_6",
+      "UnityPath": "Assets/AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player.asset",
+      "UnityGuid": "c821bf527a77a4970aa1c8944d8e3e50",
+      "UnityLocalId": -1772896618801690500,
+      "SourceSha256": "df74afec6423fbeb279e95e4f6ff677a10e473ba3ce92c27883e2c1c50f94008",
+      "Type": "Quantum.HFSMState"
+    },
+    {
+      "QuantumGuid": 335395005883216676,
+      "OriginalPath": "AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player|PlayerStopAttackAction_19",
+      "NativePath": "AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player|PlayerStopAttackAction_19",
+      "UnityPath": "Assets/AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player.asset",
+      "UnityGuid": "c821bf527a77a4970aa1c8944d8e3e50",
+      "UnityLocalId": -2216713233779952681,
+      "SourceSha256": "df74afec6423fbeb279e95e4f6ff677a10e473ba3ce92c27883e2c1c50f94008",
+      "Type": "Quantum.PlayerStopAttackAction"
+    },
+    {
+      "QuantumGuid": 1599967694158015135,
+      "OriginalPath": "AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player|TeleportSpawn_5",
+      "NativePath": "AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player|TeleportSpawn_5",
+      "UnityPath": "Assets/AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player.asset",
+      "UnityGuid": "c821bf527a77a4970aa1c8944d8e3e50",
+      "UnityLocalId": -2596744259391476365,
+      "SourceSha256": "df74afec6423fbeb279e95e4f6ff677a10e473ba3ce92c27883e2c1c50f94008",
+      "Type": "Quantum.HFSMState"
+    },
+    {
+      "QuantumGuid": 293828422263463376,
+      "OriginalPath": "AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player|SkydivePLFAction_21",
+      "NativePath": "AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player|SkydivePLFAction_21",
+      "UnityPath": "Assets/AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player.asset",
+      "UnityGuid": "c821bf527a77a4970aa1c8944d8e3e50",
+      "UnityLocalId": -2653098979966010036,
+      "SourceSha256": "df74afec6423fbeb279e95e4f6ff677a10e473ba3ce92c27883e2c1c50f94008",
+      "Type": "Quantum.SkydivePLFAction"
+    },
+    {
+      "QuantumGuid": 1074080942021792359,
+      "OriginalPath": "AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player|CheckBlackboardBool_12",
+      "NativePath": "AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player|CheckBlackboardBool_12",
+      "UnityPath": "Assets/AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player.asset",
+      "UnityGuid": "c821bf527a77a4970aa1c8944d8e3e50",
+      "UnityLocalId": -2797255484507514395,
+      "SourceSha256": "df74afec6423fbeb279e95e4f6ff677a10e473ba3ce92c27883e2c1c50f94008",
+      "Type": "Quantum.CheckBlackboardBool"
+    },
+    {
+      "QuantumGuid": 2042043813626114928,
+      "OriginalPath": "AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player|IsCharacterGroundedDecision_32",
+      "NativePath": "AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player|IsCharacterGroundedDecision_32",
+      "UnityPath": "Assets/AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player.asset",
+      "UnityGuid": "c821bf527a77a4970aa1c8944d8e3e50",
+      "UnityLocalId": -2996807041557552467,
+      "SourceSha256": "df74afec6423fbeb279e95e4f6ff677a10e473ba3ce92c27883e2c1c50f94008",
+      "Type": "Quantum.IsCharacterGroundedDecision"
+    },
+    {
+      "QuantumGuid": 1963650605532987192,
+      "OriginalPath": "AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player|GetMagShotCountFunction_2",
+      "NativePath": "AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player|GetMagShotCountFunction_2",
+      "UnityPath": "Assets/AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player.asset",
+      "UnityGuid": "c821bf527a77a4970aa1c8944d8e3e50",
+      "UnityLocalId": -3439489583380295715,
+      "SourceSha256": "df74afec6423fbeb279e95e4f6ff677a10e473ba3ce92c27883e2c1c50f94008",
+      "Type": "Quantum.GetMagShotCountFunction"
+    },
+    {
+      "QuantumGuid": 3090339244532597528,
+      "OriginalPath": "AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player|PlayerPhysicsAction_20",
+      "NativePath": "AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player|PlayerPhysicsAction_20",
+      "UnityPath": "Assets/AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player.asset",
+      "UnityGuid": "c821bf527a77a4970aa1c8944d8e3e50",
+      "UnityLocalId": -3771769023592945860,
+      "SourceSha256": "df74afec6423fbeb279e95e4f6ff677a10e473ba3ce92c27883e2c1c50f94008",
+      "Type": "Quantum.PlayerPhysicsAction"
+    },
+    {
+      "QuantumGuid": 1466123722707053255,
+      "OriginalPath": "AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player|ShouldPerformSkydiveDecision_29",
+      "NativePath": "AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player|ShouldPerformSkydiveDecision_29",
+      "UnityPath": "Assets/AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player.asset",
+      "UnityGuid": "c821bf527a77a4970aa1c8944d8e3e50",
+      "UnityLocalId": -4204825566138434513,
+      "SourceSha256": "df74afec6423fbeb279e95e4f6ff677a10e473ba3ce92c27883e2c1c50f94008",
+      "Type": "Quantum.ShouldPerformSkydiveDecision"
+    },
+    {
+      "QuantumGuid": 2049629665663902866,
+      "OriginalPath": "AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player|CheckBlackboardBool_2",
+      "NativePath": "AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player|CheckBlackboardBool_2",
+      "UnityPath": "Assets/AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player.asset",
+      "UnityGuid": "c821bf527a77a4970aa1c8944d8e3e50",
+      "UnityLocalId": -4737296310486209800,
+      "SourceSha256": "df74afec6423fbeb279e95e4f6ff677a10e473ba3ce92c27883e2c1c50f94008",
+      "Type": "Quantum.CheckBlackboardBool"
+    },
+    {
+      "QuantumGuid": 855484753883037958,
+      "OriginalPath": "AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player|PlayerProjectileAttackAction_0",
+      "NativePath": "AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player|PlayerProjectileAttackAction_0",
+      "UnityPath": "Assets/AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player.asset",
+      "UnityGuid": "c821bf527a77a4970aa1c8944d8e3e50",
+      "UnityLocalId": -4774257026112660960,
+      "SourceSha256": "df74afec6423fbeb279e95e4f6ff677a10e473ba3ce92c27883e2c1c50f94008",
+      "Type": "Quantum.PlayerProjectileAttackAction"
+    },
+    {
+      "QuantumGuid": 802778647459596964,
+      "OriginalPath": "AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player|GetAmmoCountFunction_6",
+      "NativePath": "AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player|GetAmmoCountFunction_6",
+      "UnityPath": "Assets/AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player.asset",
+      "UnityGuid": "c821bf527a77a4970aa1c8944d8e3e50",
+      "UnityLocalId": -5456400771105215940,
+      "SourceSha256": "df74afec6423fbeb279e95e4f6ff677a10e473ba3ce92c27883e2c1c50f94008",
+      "Type": "Quantum.GetAmmoCountFunction"
+    },
+    {
+      "QuantumGuid": 4353102384583738815,
+      "OriginalPath": "AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player|StartReload_13",
+      "NativePath": "AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player|StartReload_13",
+      "UnityPath": "Assets/AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player.asset",
+      "UnityGuid": "c821bf527a77a4970aa1c8944d8e3e50",
+      "UnityLocalId": -5809286484300280176,
+      "SourceSha256": "df74afec6423fbeb279e95e4f6ff677a10e473ba3ce92c27883e2c1c50f94008",
+      "Type": "Quantum.HFSMState"
+    },
+    {
+      "QuantumGuid": 3440888157079060277,
+      "OriginalPath": "AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player|HFSMAndDecision_37",
+      "NativePath": "AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player|HFSMAndDecision_37",
+      "UnityPath": "Assets/AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player.asset",
+      "UnityGuid": "c821bf527a77a4970aa1c8944d8e3e50",
+      "UnityLocalId": -5868797330161540366,
+      "SourceSha256": "df74afec6423fbeb279e95e4f6ff677a10e473ba3ce92c27883e2c1c50f94008",
+      "Type": "Quantum.HFSMAndDecision"
+    },
+    {
+      "QuantumGuid": 965192924174409124,
+      "OriginalPath": "AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player|HFSMOrDecision_0",
+      "NativePath": "AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player|HFSMOrDecision_0",
+      "UnityPath": "Assets/AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player.asset",
+      "UnityGuid": "c821bf527a77a4970aa1c8944d8e3e50",
+      "UnityLocalId": -5957329280307309712,
+      "SourceSha256": "df74afec6423fbeb279e95e4f6ff677a10e473ba3ce92c27883e2c1c50f94008",
+      "Type": "Quantum.HFSMOrDecision"
+    },
+    {
+      "QuantumGuid": 508845791030205329,
+      "OriginalPath": "AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player|GetMagShotCountFunction_8",
+      "NativePath": "AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player|GetMagShotCountFunction_8",
+      "UnityPath": "Assets/AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player.asset",
+      "UnityGuid": "c821bf527a77a4970aa1c8944d8e3e50",
+      "UnityLocalId": -6207003175677404490,
+      "SourceSha256": "df74afec6423fbeb279e95e4f6ff677a10e473ba3ce92c27883e2c1c50f94008",
+      "Type": "Quantum.GetMagShotCountFunction"
+    },
+    {
+      "QuantumGuid": 3965381450261516040,
+      "OriginalPath": "AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player|SetBlackboardFP_15",
+      "NativePath": "AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player|SetBlackboardFP_15",
+      "UnityPath": "Assets/AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player.asset",
+      "UnityGuid": "c821bf527a77a4970aa1c8944d8e3e50",
+      "UnityLocalId": -6824082360276184649,
+      "SourceSha256": "df74afec6423fbeb279e95e4f6ff677a10e473ba3ce92c27883e2c1c50f94008",
+      "Type": "Quantum.SetBlackboardFP"
+    },
+    {
+      "QuantumGuid": 1907932267063602682,
+      "OriginalPath": "AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player|CheckBlackboardBool_19",
+      "NativePath": "AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player|CheckBlackboardBool_19",
+      "UnityPath": "Assets/AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player.asset",
+      "UnityGuid": "c821bf527a77a4970aa1c8944d8e3e50",
+      "UnityLocalId": -6887201281207349059,
+      "SourceSha256": "df74afec6423fbeb279e95e4f6ff677a10e473ba3ce92c27883e2c1c50f94008",
+      "Type": "Quantum.CheckBlackboardBool"
+    },
+    {
+      "QuantumGuid": 2088995045313192023,
+      "OriginalPath": "AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player|TimerDecision_27",
+      "NativePath": "AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player|TimerDecision_27",
+      "UnityPath": "Assets/AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player.asset",
+      "UnityGuid": "c821bf527a77a4970aa1c8944d8e3e50",
+      "UnityLocalId": -6891795007655545388,
+      "SourceSha256": "df74afec6423fbeb279e95e4f6ff677a10e473ba3ce92c27883e2c1c50f94008",
+      "Type": "Quantum.TimerDecision"
+    },
+    {
+      "QuantumGuid": 746158031798872146,
+      "OriginalPath": "AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player|CheckBlackboardBool_39",
+      "NativePath": "AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player|CheckBlackboardBool_39",
+      "UnityPath": "Assets/AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player.asset",
+      "UnityGuid": "c821bf527a77a4970aa1c8944d8e3e50",
+      "UnityLocalId": -7071055235222560277,
+      "SourceSha256": "df74afec6423fbeb279e95e4f6ff677a10e473ba3ce92c27883e2c1c50f94008",
+      "Type": "Quantum.CheckBlackboardBool"
+    },
+    {
+      "QuantumGuid": 3938094616932178092,
+      "OriginalPath": "AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player|CheckIntDecision_8",
+      "NativePath": "AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player|CheckIntDecision_8",
+      "UnityPath": "Assets/AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player.asset",
+      "UnityGuid": "c821bf527a77a4970aa1c8944d8e3e50",
+      "UnityLocalId": -7086115695499748632,
+      "SourceSha256": "df74afec6423fbeb279e95e4f6ff677a10e473ba3ce92c27883e2c1c50f94008",
+      "Type": "Quantum.CheckIntDecision"
+    },
+    {
+      "QuantumGuid": 1975221382551009861,
+      "OriginalPath": "AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player|PlayerTeleportSpawnAction_11",
+      "NativePath": "AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player|PlayerTeleportSpawnAction_11",
+      "UnityPath": "Assets/AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player.asset",
+      "UnityGuid": "c821bf527a77a4970aa1c8944d8e3e50",
+      "UnityLocalId": -7187773350198499050,
+      "SourceSha256": "df74afec6423fbeb279e95e4f6ff677a10e473ba3ce92c27883e2c1c50f94008",
+      "Type": "Quantum.PlayerTeleportSpawnAction"
+    },
+    {
+      "QuantumGuid": 4097228057481564961,
+      "OriginalPath": "AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player|TimerDecision_40",
+      "NativePath": "AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player|TimerDecision_40",
+      "UnityPath": "Assets/AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player.asset",
+      "UnityGuid": "c821bf527a77a4970aa1c8944d8e3e50",
+      "UnityLocalId": -7232808556366669771,
+      "SourceSha256": "df74afec6423fbeb279e95e4f6ff677a10e473ba3ce92c27883e2c1c50f94008",
+      "Type": "Quantum.TimerDecision"
+    },
+    {
+      "QuantumGuid": 3976978988907550274,
+      "OriginalPath": "AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player|PlayerOnBurstCompleteAction_17",
+      "NativePath": "AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player|PlayerOnBurstCompleteAction_17",
+      "UnityPath": "Assets/AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player.asset",
+      "UnityGuid": "c821bf527a77a4970aa1c8944d8e3e50",
+      "UnityLocalId": -7544042157600426088,
+      "SourceSha256": "df74afec6423fbeb279e95e4f6ff677a10e473ba3ce92c27883e2c1c50f94008",
+      "Type": "Quantum.PlayerOnBurstCompleteAction"
+    },
+    {
+      "QuantumGuid": 4093219791189788724,
+      "OriginalPath": "AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player|CheckFPDecision_44",
+      "NativePath": "AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player|CheckFPDecision_44",
+      "UnityPath": "Assets/AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player.asset",
+      "UnityGuid": "c821bf527a77a4970aa1c8944d8e3e50",
+      "UnityLocalId": -7808666893133217904,
+      "SourceSha256": "df74afec6423fbeb279e95e4f6ff677a10e473ba3ce92c27883e2c1c50f94008",
+      "Type": "Quantum.CheckFPDecision"
+    },
+    {
+      "QuantumGuid": 4161164444418834386,
+      "OriginalPath": "AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player|HFSMAndDecision_20",
+      "NativePath": "AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player|HFSMAndDecision_20",
+      "UnityPath": "Assets/AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player.asset",
+      "UnityGuid": "c821bf527a77a4970aa1c8944d8e3e50",
+      "UnityLocalId": -7834754548148996653,
+      "SourceSha256": "df74afec6423fbeb279e95e4f6ff677a10e473ba3ce92c27883e2c1c50f94008",
+      "Type": "Quantum.HFSMAndDecision"
+    },
+    {
+      "QuantumGuid": 3413757101321741467,
+      "OriginalPath": "AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player|HFSMOrDecision_35",
+      "NativePath": "AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player|HFSMOrDecision_35",
+      "UnityPath": "Assets/AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player.asset",
+      "UnityGuid": "c821bf527a77a4970aa1c8944d8e3e50",
+      "UnityLocalId": -7929931234425794593,
+      "SourceSha256": "df74afec6423fbeb279e95e4f6ff677a10e473ba3ce92c27883e2c1c50f94008",
+      "Type": "Quantum.HFSMOrDecision"
+    },
+    {
+      "QuantumGuid": 2810939606480379146,
+      "OriginalPath": "AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player|PlayerReloadAction_8",
+      "NativePath": "AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player|PlayerReloadAction_8",
+      "UnityPath": "Assets/AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player.asset",
+      "UnityGuid": "c821bf527a77a4970aa1c8944d8e3e50",
+      "UnityLocalId": -7966575879534877650,
+      "SourceSha256": "df74afec6423fbeb279e95e4f6ff677a10e473ba3ce92c27883e2c1c50f94008",
+      "Type": "Quantum.PlayerReloadAction"
+    },
+    {
+      "QuantumGuid": 4043390264200087105,
+      "OriginalPath": "AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player|HFSMAndDecision_33",
+      "NativePath": "AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player|HFSMAndDecision_33",
+      "UnityPath": "Assets/AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player.asset",
+      "UnityGuid": "c821bf527a77a4970aa1c8944d8e3e50",
+      "UnityLocalId": -8317026087294036492,
+      "SourceSha256": "df74afec6423fbeb279e95e4f6ff677a10e473ba3ce92c27883e2c1c50f94008",
+      "Type": "Quantum.HFSMAndDecision"
+    },
+    {
+      "QuantumGuid": 4048897233734562604,
+      "OriginalPath": "AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player|TimerDecision_24",
+      "NativePath": "AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player|TimerDecision_24",
+      "UnityPath": "Assets/AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player.asset",
+      "UnityGuid": "c821bf527a77a4970aa1c8944d8e3e50",
+      "UnityLocalId": -8355234086768075766,
+      "SourceSha256": "df74afec6423fbeb279e95e4f6ff677a10e473ba3ce92c27883e2c1c50f94008",
+      "Type": "Quantum.TimerDecision"
+    },
+    {
+      "QuantumGuid": 2019940667193210099,
+      "OriginalPath": "AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player|StartShot_11",
+      "NativePath": "AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player|StartShot_11",
+      "UnityPath": "Assets/AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player.asset",
+      "UnityGuid": "c821bf527a77a4970aa1c8944d8e3e50",
+      "UnityLocalId": -8373341964630843367,
+      "SourceSha256": "df74afec6423fbeb279e95e4f6ff677a10e473ba3ce92c27883e2c1c50f94008",
+      "Type": "Quantum.HFSMState"
+    },
+    {
+      "QuantumGuid": 4262575919214397651,
+      "OriginalPath": "AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player|TimerDecision_22",
+      "NativePath": "AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player|TimerDecision_22",
+      "UnityPath": "Assets/AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player.asset",
+      "UnityGuid": "c821bf527a77a4970aa1c8944d8e3e50",
+      "UnityLocalId": -8390148085723422555,
+      "SourceSha256": "df74afec6423fbeb279e95e4f6ff677a10e473ba3ce92c27883e2c1c50f94008",
+      "Type": "Quantum.TimerDecision"
+    },
+    {
+      "QuantumGuid": 4387084225825083206,
+      "OriginalPath": "AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player|HFSMNotDecision_30",
+      "NativePath": "AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player|HFSMNotDecision_30",
+      "UnityPath": "Assets/AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player.asset",
+      "UnityGuid": "c821bf527a77a4970aa1c8944d8e3e50",
+      "UnityLocalId": -8431980978094670605,
+      "SourceSha256": "df74afec6423fbeb279e95e4f6ff677a10e473ba3ce92c27883e2c1c50f94008",
+      "Type": "Quantum.HFSMNotDecision"
+    },
+    {
+      "QuantumGuid": 43388560871973795,
+      "OriginalPath": "AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player|CurrentFrameTimeFunction_5",
+      "NativePath": "AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player|CurrentFrameTimeFunction_5",
+      "UnityPath": "Assets/AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player.asset",
+      "UnityGuid": "c821bf527a77a4970aa1c8944d8e3e50",
+      "UnityLocalId": -844600764642098052,
+      "SourceSha256": "df74afec6423fbeb279e95e4f6ff677a10e473ba3ce92c27883e2c1c50f94008",
+      "Type": "Quantum.CurrentFrameTimeFunction"
+    },
+    {
+      "QuantumGuid": 3122741104057302799,
+      "OriginalPath": "AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player|Activate_4",
+      "NativePath": "AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player|Activate_4",
+      "UnityPath": "Assets/AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player.asset",
+      "UnityGuid": "c821bf527a77a4970aa1c8944d8e3e50",
+      "UnityLocalId": -872380705297973396,
+      "SourceSha256": "df74afec6423fbeb279e95e4f6ff677a10e473ba3ce92c27883e2c1c50f94008",
+      "Type": "Quantum.HFSMState"
+    },
+    {
+      "QuantumGuid": 831933581762424219,
+      "OriginalPath": "AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player|CheckBlackboardBool_9",
+      "NativePath": "AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player|CheckBlackboardBool_9",
+      "UnityPath": "Assets/AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player.asset",
+      "UnityGuid": "c821bf527a77a4970aa1c8944d8e3e50",
+      "UnityLocalId": -87427281571555243,
+      "SourceSha256": "df74afec6423fbeb279e95e4f6ff677a10e473ba3ce92c27883e2c1c50f94008",
+      "Type": "Quantum.CheckBlackboardBool"
+    },
+    {
+      "QuantumGuid": 735283581775416184,
+      "OriginalPath": "AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player|TrueDecision_46",
+      "NativePath": "AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player|TrueDecision_46",
+      "UnityPath": "Assets/AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player.asset",
+      "UnityGuid": "c821bf527a77a4970aa1c8944d8e3e50",
+      "UnityLocalId": -903942038224543337,
+      "SourceSha256": "df74afec6423fbeb279e95e4f6ff677a10e473ba3ce92c27883e2c1c50f94008",
+      "Type": "Quantum.TrueDecision"
+    },
+    {
+      "QuantumGuid": 3154801819037977363,
+      "OriginalPath": "AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player|TryReload_8",
+      "NativePath": "AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player|TryReload_8",
+      "UnityPath": "Assets/AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player.asset",
+      "UnityGuid": "c821bf527a77a4970aa1c8944d8e3e50",
+      "UnityLocalId": -9213426028803648193,
+      "SourceSha256": "df74afec6423fbeb279e95e4f6ff677a10e473ba3ce92c27883e2c1c50f94008",
+      "Type": "Quantum.HFSMState"
+    },
+    {
+      "QuantumGuid": 4207929906429185876,
+      "OriginalPath": "AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player|GetAmmoCountFunction_9",
+      "NativePath": "AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player|GetAmmoCountFunction_9",
+      "UnityPath": "Assets/AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player.asset",
+      "UnityGuid": "c821bf527a77a4970aa1c8944d8e3e50",
+      "UnityLocalId": 1075083683323273458,
+      "SourceSha256": "df74afec6423fbeb279e95e4f6ff677a10e473ba3ce92c27883e2c1c50f94008",
+      "Type": "Quantum.GetAmmoCountFunction"
+    },
+    {
+      "QuantumGuid": 4254173332751555565,
+      "OriginalPath": "AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player",
+      "NativePath": "AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player",
+      "UnityPath": "Assets/AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player.asset",
+      "UnityGuid": "c821bf527a77a4970aa1c8944d8e3e50",
+      "UnityLocalId": 11400000,
+      "SourceSha256": "df74afec6423fbeb279e95e4f6ff677a10e473ba3ce92c27883e2c1c50f94008",
+      "Type": "Quantum.HFSMRoot"
+    },
+    {
+      "QuantumGuid": 4095820793653773758,
+      "OriginalPath": "AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player|FPSumFunction_0",
+      "NativePath": "AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player|FPSumFunction_0",
+      "UnityPath": "Assets/AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player.asset",
+      "UnityGuid": "c821bf527a77a4970aa1c8944d8e3e50",
+      "UnityLocalId": 1303910904238730336,
+      "SourceSha256": "df74afec6423fbeb279e95e4f6ff677a10e473ba3ce92c27883e2c1c50f94008",
+      "Type": "Quantum.FPSumFunction"
+    },
+    {
+      "QuantumGuid": 4114084746910684070,
+      "OriginalPath": "AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player|Spawn_10",
+      "NativePath": "AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player|Spawn_10",
+      "UnityPath": "Assets/AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player.asset",
+      "UnityGuid": "c821bf527a77a4970aa1c8944d8e3e50",
+      "UnityLocalId": 1401008348044177782,
+      "SourceSha256": "df74afec6423fbeb279e95e4f6ff677a10e473ba3ce92c27883e2c1c50f94008",
+      "Type": "Quantum.HFSMState"
+    },
+    {
+      "QuantumGuid": 376634616520152049,
+      "OriginalPath": "AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player|CheckIntDecision_4",
+      "NativePath": "AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player|CheckIntDecision_4",
+      "UnityPath": "Assets/AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player.asset",
+      "UnityGuid": "c821bf527a77a4970aa1c8944d8e3e50",
+      "UnityLocalId": 1430089748349045284,
+      "SourceSha256": "df74afec6423fbeb279e95e4f6ff677a10e473ba3ce92c27883e2c1c50f94008",
+      "Type": "Quantum.CheckIntDecision"
+    },
+    {
+      "QuantumGuid": 3077347310472761641,
+      "OriginalPath": "AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player|CurrentFrameTimeFunction_11",
+      "NativePath": "AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player|CurrentFrameTimeFunction_11",
+      "UnityPath": "Assets/AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player.asset",
+      "UnityGuid": "c821bf527a77a4970aa1c8944d8e3e50",
+      "UnityLocalId": 1579854937920836754,
+      "SourceSha256": "df74afec6423fbeb279e95e4f6ff677a10e473ba3ce92c27883e2c1c50f94008",
+      "Type": "Quantum.CurrentFrameTimeFunction"
+    },
+    {
+      "QuantumGuid": 3022734410312452063,
+      "OriginalPath": "AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player|SkydiveDrop_2",
+      "NativePath": "AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player|SkydiveDrop_2",
+      "UnityPath": "Assets/AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player.asset",
+      "UnityGuid": "c821bf527a77a4970aa1c8944d8e3e50",
+      "UnityLocalId": 1616914334422587827,
+      "SourceSha256": "df74afec6423fbeb279e95e4f6ff677a10e473ba3ce92c27883e2c1c50f94008",
+      "Type": "Quantum.HFSMState"
+    },
+    {
+      "QuantumGuid": 1865816817293988045,
+      "OriginalPath": "AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player|PlayerActivateAction_9",
+      "NativePath": "AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player|PlayerActivateAction_9",
+      "UnityPath": "Assets/AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player.asset",
+      "UnityGuid": "c821bf527a77a4970aa1c8944d8e3e50",
+      "UnityLocalId": 1691945088589768782,
+      "SourceSha256": "df74afec6423fbeb279e95e4f6ff677a10e473ba3ce92c27883e2c1c50f94008",
+      "Type": "Quantum.PlayerActivateAction"
+    },
+    {
+      "QuantumGuid": 994130492505007734,
+      "OriginalPath": "AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player|SkydiveStopAction_10",
+      "NativePath": "AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player|SkydiveStopAction_10",
+      "UnityPath": "Assets/AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player.asset",
+      "UnityGuid": "c821bf527a77a4970aa1c8944d8e3e50",
+      "UnityLocalId": 1780467018747567959,
+      "SourceSha256": "df74afec6423fbeb279e95e4f6ff677a10e473ba3ce92c27883e2c1c50f94008",
+      "Type": "Quantum.SkydiveStopAction"
+    },
+    {
+      "QuantumGuid": 4473536403197623322,
+      "OriginalPath": "AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player|HFSMAndDecision_6",
+      "NativePath": "AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player|HFSMAndDecision_6",
+      "UnityPath": "Assets/AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player.asset",
+      "UnityGuid": "c821bf527a77a4970aa1c8944d8e3e50",
+      "UnityLocalId": 1867046578155579707,
+      "SourceSha256": "df74afec6423fbeb279e95e4f6ff677a10e473ba3ce92c27883e2c1c50f94008",
+      "Type": "Quantum.HFSMAndDecision"
+    },
+    {
+      "QuantumGuid": 2063248758344102719,
+      "OriginalPath": "AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player|PlayerRaycastAttackAction_16",
+      "NativePath": "AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player|PlayerRaycastAttackAction_16",
+      "UnityPath": "Assets/AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player.asset",
+      "UnityGuid": "c821bf527a77a4970aa1c8944d8e3e50",
+      "UnityLocalId": 2130775180373130710,
+      "SourceSha256": "df74afec6423fbeb279e95e4f6ff677a10e473ba3ce92c27883e2c1c50f94008",
+      "Type": "Quantum.PlayerRaycastAttackAction"
+    },
+    {
+      "QuantumGuid": 502817633119717663,
+      "OriginalPath": "AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player|AttackProjectile_0",
+      "NativePath": "AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player|AttackProjectile_0",
+      "UnityPath": "Assets/AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player.asset",
+      "UnityGuid": "c821bf527a77a4970aa1c8944d8e3e50",
+      "UnityLocalId": 2153041125595850118,
+      "SourceSha256": "df74afec6423fbeb279e95e4f6ff677a10e473ba3ce92c27883e2c1c50f94008",
+      "Type": "Quantum.HFSMState"
+    },
+    {
+      "QuantumGuid": 2476499677884316498,
+      "OriginalPath": "AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player|FPSumFunction_14",
+      "NativePath": "AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player|FPSumFunction_14",
+      "UnityPath": "Assets/AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player.asset",
+      "UnityGuid": "c821bf527a77a4970aa1c8944d8e3e50",
+      "UnityLocalId": 2521362289885459785,
+      "SourceSha256": "df74afec6423fbeb279e95e4f6ff677a10e473ba3ce92c27883e2c1c50f94008",
+      "Type": "Quantum.FPSumFunction"
+    },
+    {
+      "QuantumGuid": 4259213499484636470,
+      "OriginalPath": "AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player|SkydivePLF_15",
+      "NativePath": "AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player|SkydivePLF_15",
+      "UnityPath": "Assets/AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player.asset",
+      "UnityGuid": "c821bf527a77a4970aa1c8944d8e3e50",
+      "UnityLocalId": 2545233989659796673,
+      "SourceSha256": "df74afec6423fbeb279e95e4f6ff677a10e473ba3ce92c27883e2c1c50f94008",
+      "Type": "Quantum.HFSMState"
+    },
+    {
+      "QuantumGuid": 2443248317284241773,
+      "OriginalPath": "AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player|CheckFPDecision_25",
+      "NativePath": "AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player|CheckFPDecision_25",
+      "UnityPath": "Assets/AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player.asset",
+      "UnityGuid": "c821bf527a77a4970aa1c8944d8e3e50",
+      "UnityLocalId": 2715476704377367950,
+      "SourceSha256": "df74afec6423fbeb279e95e4f6ff677a10e473ba3ce92c27883e2c1c50f94008",
+      "Type": "Quantum.CheckFPDecision"
+    },
+    {
+      "QuantumGuid": 2987106604845511688,
+      "OriginalPath": "AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player|SetBlackboardBool_7",
+      "NativePath": "AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player|SetBlackboardBool_7",
+      "UnityPath": "Assets/AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player.asset",
+      "UnityGuid": "c821bf527a77a4970aa1c8944d8e3e50",
+      "UnityLocalId": 2727823224606118901,
+      "SourceSha256": "df74afec6423fbeb279e95e4f6ff677a10e473ba3ce92c27883e2c1c50f94008",
+      "Type": "Quantum.SetBlackboardBool"
+    },
+    {
+      "QuantumGuid": 3054022343341149241,
+      "OriginalPath": "AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player|PlayerStopAttackAction_23",
+      "NativePath": "AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player|PlayerStopAttackAction_23",
+      "UnityPath": "Assets/AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player.asset",
+      "UnityGuid": "c821bf527a77a4970aa1c8944d8e3e50",
+      "UnityLocalId": 2924349407157326657,
+      "SourceSha256": "df74afec6423fbeb279e95e4f6ff677a10e473ba3ce92c27883e2c1c50f94008",
+      "Type": "Quantum.PlayerStopAttackAction"
+    },
+    {
+      "QuantumGuid": 562045426505754909,
+      "OriginalPath": "AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player|TimerDecision_34",
+      "NativePath": "AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player|TimerDecision_34",
+      "UnityPath": "Assets/AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player.asset",
+      "UnityGuid": "c821bf527a77a4970aa1c8944d8e3e50",
+      "UnityLocalId": 3202604787884047030,
+      "SourceSha256": "df74afec6423fbeb279e95e4f6ff677a10e473ba3ce92c27883e2c1c50f94008",
+      "Type": "Quantum.TimerDecision"
+    },
+    {
+      "QuantumGuid": 1708266808066318151,
+      "OriginalPath": "AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player|TrueDecision_41",
+      "NativePath": "AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player|TrueDecision_41",
+      "UnityPath": "Assets/AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player.asset",
+      "UnityGuid": "c821bf527a77a4970aa1c8944d8e3e50",
+      "UnityLocalId": 3208719884866465578,
+      "SourceSha256": "df74afec6423fbeb279e95e4f6ff677a10e473ba3ce92c27883e2c1c50f94008",
+      "Type": "Quantum.TrueDecision"
+    },
+    {
+      "QuantumGuid": 4232359617591875465,
+      "OriginalPath": "AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player|CheckBlackboardBool_11",
+      "NativePath": "AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player|CheckBlackboardBool_11",
+      "UnityPath": "Assets/AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player.asset",
+      "UnityGuid": "c821bf527a77a4970aa1c8944d8e3e50",
+      "UnityLocalId": 3460384256231007655,
+      "SourceSha256": "df74afec6423fbeb279e95e4f6ff677a10e473ba3ce92c27883e2c1c50f94008",
+      "Type": "Quantum.CheckBlackboardBool"
+    },
+    {
+      "QuantumGuid": 4559404907382965178,
+      "OriginalPath": "AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player|CurrentFrameTimeFunction_10",
+      "NativePath": "AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player|CurrentFrameTimeFunction_10",
+      "UnityPath": "Assets/AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player.asset",
+      "UnityGuid": "c821bf527a77a4970aa1c8944d8e3e50",
+      "UnityLocalId": 3516070131383652706,
+      "SourceSha256": "df74afec6423fbeb279e95e4f6ff677a10e473ba3ce92c27883e2c1c50f94008",
+      "Type": "Quantum.CurrentFrameTimeFunction"
+    },
+    {
+      "QuantumGuid": 1454921894917327888,
+      "OriginalPath": "AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player|HFSMNotDecision_45",
+      "NativePath": "AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player|HFSMNotDecision_45",
+      "UnityPath": "Assets/AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player.asset",
+      "UnityGuid": "c821bf527a77a4970aa1c8944d8e3e50",
+      "UnityLocalId": 3537418207383752678,
+      "SourceSha256": "df74afec6423fbeb279e95e4f6ff677a10e473ba3ce92c27883e2c1c50f94008",
+      "Type": "Quantum.HFSMNotDecision"
+    },
+    {
+      "QuantumGuid": 425486652379797895,
+      "OriginalPath": "AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player|FPVector3SumFunction_7",
+      "NativePath": "AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player|FPVector3SumFunction_7",
+      "UnityPath": "Assets/AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player.asset",
+      "UnityGuid": "c821bf527a77a4970aa1c8944d8e3e50",
+      "UnityLocalId": 4340765278018028988,
+      "SourceSha256": "df74afec6423fbeb279e95e4f6ff677a10e473ba3ce92c27883e2c1c50f94008",
+      "Type": "Quantum.FPVector3SumFunction"
+    },
+    {
+      "QuantumGuid": 939365328679155702,
+      "OriginalPath": "AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player|SkydiveStartAction_4",
+      "NativePath": "AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player|SkydiveStartAction_4",
+      "UnityPath": "Assets/AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player.asset",
+      "UnityGuid": "c821bf527a77a4970aa1c8944d8e3e50",
+      "UnityLocalId": 4356356052645534289,
+      "SourceSha256": "df74afec6423fbeb279e95e4f6ff677a10e473ba3ce92c27883e2c1c50f94008",
+      "Type": "Quantum.SkydiveStartAction"
+    },
+    {
+      "QuantumGuid": 344788493933926436,
+      "OriginalPath": "AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player|NotShooting_17",
+      "NativePath": "AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player|NotShooting_17",
+      "UnityPath": "Assets/AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player.asset",
+      "UnityGuid": "c821bf527a77a4970aa1c8944d8e3e50",
+      "UnityLocalId": 4429682984740457975,
+      "SourceSha256": "df74afec6423fbeb279e95e4f6ff677a10e473ba3ce92c27883e2c1c50f94008",
+      "Type": "Quantum.HFSMState"
+    },
+    {
+      "QuantumGuid": 434800705800386188,
+      "OriginalPath": "AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player|CurrentFrameTimeFunction_4",
+      "NativePath": "AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player|CurrentFrameTimeFunction_4",
+      "UnityPath": "Assets/AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player.asset",
+      "UnityGuid": "c821bf527a77a4970aa1c8944d8e3e50",
+      "UnityLocalId": 4477156081952560621,
+      "SourceSha256": "df74afec6423fbeb279e95e4f6ff677a10e473ba3ce92c27883e2c1c50f94008",
+      "Type": "Quantum.CurrentFrameTimeFunction"
+    },
+    {
+      "QuantumGuid": 1813435176672350993,
+      "OriginalPath": "AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player|PlayerOnBurstCompleteAction_1",
+      "NativePath": "AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player|PlayerOnBurstCompleteAction_1",
+      "UnityPath": "Assets/AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player.asset",
+      "UnityGuid": "c821bf527a77a4970aa1c8944d8e3e50",
+      "UnityLocalId": 4607876707733457021,
+      "SourceSha256": "df74afec6423fbeb279e95e4f6ff677a10e473ba3ce92c27883e2c1c50f94008",
+      "Type": "Quantum.PlayerOnBurstCompleteAction"
+    },
+    {
+      "QuantumGuid": 2838018030188143315,
+      "OriginalPath": "AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player|GetMagShotCountFunction_15",
+      "NativePath": "AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player|GetMagShotCountFunction_15",
+      "UnityPath": "Assets/AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player.asset",
+      "UnityGuid": "c821bf527a77a4970aa1c8944d8e3e50",
+      "UnityLocalId": 4744454796942036086,
+      "SourceSha256": "df74afec6423fbeb279e95e4f6ff677a10e473ba3ce92c27883e2c1c50f94008",
+      "Type": "Quantum.GetMagShotCountFunction"
+    },
+    {
+      "QuantumGuid": 4011090174305468770,
+      "OriginalPath": "AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player|SetBlackboardFP_2",
+      "NativePath": "AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player|SetBlackboardFP_2",
+      "UnityPath": "Assets/AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player.asset",
+      "UnityGuid": "c821bf527a77a4970aa1c8944d8e3e50",
+      "UnityLocalId": 476963039554459479,
+      "SourceSha256": "df74afec6423fbeb279e95e4f6ff677a10e473ba3ce92c27883e2c1c50f94008",
+      "Type": "Quantum.SetBlackboardFP"
+    },
+    {
+      "QuantumGuid": 1044893520518403950,
+      "OriginalPath": "AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player|SetBlackboardBool_5",
+      "NativePath": "AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player|SetBlackboardBool_5",
+      "UnityPath": "Assets/AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player.asset",
+      "UnityGuid": "c821bf527a77a4970aa1c8944d8e3e50",
+      "UnityLocalId": 5044269209192990166,
+      "SourceSha256": "df74afec6423fbeb279e95e4f6ff677a10e473ba3ce92c27883e2c1c50f94008",
+      "Type": "Quantum.SetBlackboardBool"
+    },
+    {
+      "QuantumGuid": 1937396995285773716,
+      "OriginalPath": "AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player|CheckFPDecision_7",
+      "NativePath": "AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player|CheckFPDecision_7",
+      "UnityPath": "Assets/AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player.asset",
+      "UnityGuid": "c821bf527a77a4970aa1c8944d8e3e50",
+      "UnityLocalId": 5220637731608722254,
+      "SourceSha256": "df74afec6423fbeb279e95e4f6ff677a10e473ba3ce92c27883e2c1c50f94008",
+      "Type": "Quantum.CheckFPDecision"
+    },
+    {
+      "QuantumGuid": 1833622622204030874,
+      "OriginalPath": "AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player|GetMagShotCountFunction_12",
+      "NativePath": "AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player|GetMagShotCountFunction_12",
+      "UnityPath": "Assets/AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player.asset",
+      "UnityGuid": "c821bf527a77a4970aa1c8944d8e3e50",
+      "UnityLocalId": 5222582650504244582,
+      "SourceSha256": "df74afec6423fbeb279e95e4f6ff677a10e473ba3ce92c27883e2c1c50f94008",
+      "Type": "Quantum.GetMagShotCountFunction"
+    },
+    {
+      "QuantumGuid": 1867448010216857276,
+      "OriginalPath": "AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player|HFSMAndDecision_16",
+      "NativePath": "AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player|HFSMAndDecision_16",
+      "UnityPath": "Assets/AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player.asset",
+      "UnityGuid": "c821bf527a77a4970aa1c8944d8e3e50",
+      "UnityLocalId": 5314946579081050945,
+      "SourceSha256": "df74afec6423fbeb279e95e4f6ff677a10e473ba3ce92c27883e2c1c50f94008",
+      "Type": "Quantum.HFSMAndDecision"
+    },
+    {
+      "QuantumGuid": 3533206314671626963,
+      "OriginalPath": "AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player|TimerDecision_18",
+      "NativePath": "AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player|TimerDecision_18",
+      "UnityPath": "Assets/AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player.asset",
+      "UnityGuid": "c821bf527a77a4970aa1c8944d8e3e50",
+      "UnityLocalId": 5407655618165404125,
+      "SourceSha256": "df74afec6423fbeb279e95e4f6ff677a10e473ba3ce92c27883e2c1c50f94008",
+      "Type": "Quantum.TimerDecision"
+    },
+    {
+      "QuantumGuid": 3810624336601686864,
+      "OriginalPath": "AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player|CheckIntDecision_15",
+      "NativePath": "AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player|CheckIntDecision_15",
+      "UnityPath": "Assets/AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player.asset",
+      "UnityGuid": "c821bf527a77a4970aa1c8944d8e3e50",
+      "UnityLocalId": 5572212983080753873,
+      "SourceSha256": "df74afec6423fbeb279e95e4f6ff677a10e473ba3ce92c27883e2c1c50f94008",
+      "Type": "Quantum.CheckIntDecision"
+    },
+    {
+      "QuantumGuid": 3252184656170638239,
+      "OriginalPath": "AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player|Gun Raise_1",
+      "NativePath": "AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player|Gun Raise_1",
+      "UnityPath": "Assets/AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player.asset",
+      "UnityGuid": "c821bf527a77a4970aa1c8944d8e3e50",
+      "UnityLocalId": 5680980200969899325,
+      "SourceSha256": "df74afec6423fbeb279e95e4f6ff677a10e473ba3ce92c27883e2c1c50f94008",
+      "Type": "Quantum.HFSMState"
+    },
+    {
+      "QuantumGuid": 1398700407390186350,
+      "OriginalPath": "AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player|CheckBlackboardFP_21",
+      "NativePath": "AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player|CheckBlackboardFP_21",
+      "UnityPath": "Assets/AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player.asset",
+      "UnityGuid": "c821bf527a77a4970aa1c8944d8e3e50",
+      "UnityLocalId": 5727903876067980556,
+      "SourceSha256": "df74afec6423fbeb279e95e4f6ff677a10e473ba3ce92c27883e2c1c50f94008",
+      "Type": "Quantum.CheckBlackboardFP"
+    },
+    {
+      "QuantumGuid": 3666565994759780499,
+      "OriginalPath": "AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player|TimerDecision_28",
+      "NativePath": "AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player|TimerDecision_28",
+      "UnityPath": "Assets/AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player.asset",
+      "UnityGuid": "c821bf527a77a4970aa1c8944d8e3e50",
+      "UnityLocalId": 5881340899684056539,
+      "SourceSha256": "df74afec6423fbeb279e95e4f6ff677a10e473ba3ce92c27883e2c1c50f94008",
+      "Type": "Quantum.TimerDecision"
+    },
+    {
+      "QuantumGuid": 2794687721108520062,
+      "OriginalPath": "AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player|CheckBlackboardBool_3",
+      "NativePath": "AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player|CheckBlackboardBool_3",
+      "UnityPath": "Assets/AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player.asset",
+      "UnityGuid": "c821bf527a77a4970aa1c8944d8e3e50",
+      "UnityLocalId": 5947056659405738044,
+      "SourceSha256": "df74afec6423fbeb279e95e4f6ff677a10e473ba3ce92c27883e2c1c50f94008",
+      "Type": "Quantum.CheckBlackboardBool"
+    },
+    {
+      "QuantumGuid": 4386268491898331410,
+      "OriginalPath": "AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player|AttackShape_12",
+      "NativePath": "AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player|AttackShape_12",
+      "UnityPath": "Assets/AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player.asset",
+      "UnityGuid": "c821bf527a77a4970aa1c8944d8e3e50",
+      "UnityLocalId": 6283553951306341222,
+      "SourceSha256": "df74afec6423fbeb279e95e4f6ff677a10e473ba3ce92c27883e2c1c50f94008",
+      "Type": "Quantum.HFSMState"
+    },
+    {
+      "QuantumGuid": 4082208694593017240,
+      "OriginalPath": "AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player|Spawning_9",
+      "NativePath": "AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player|Spawning_9",
+      "UnityPath": "Assets/AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player.asset",
+      "UnityGuid": "c821bf527a77a4970aa1c8944d8e3e50",
+      "UnityLocalId": 6304858076802937875,
+      "SourceSha256": "df74afec6423fbeb279e95e4f6ff677a10e473ba3ce92c27883e2c1c50f94008",
+      "Type": "Quantum.HFSMState"
+    },
+    {
+      "QuantumGuid": 2802501609337082210,
+      "OriginalPath": "AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player|HFSMAndDecision_10",
+      "NativePath": "AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player|HFSMAndDecision_10",
+      "UnityPath": "Assets/AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player.asset",
+      "UnityGuid": "c821bf527a77a4970aa1c8944d8e3e50",
+      "UnityLocalId": 6591999485944818129,
+      "SourceSha256": "df74afec6423fbeb279e95e4f6ff677a10e473ba3ce92c27883e2c1c50f94008",
+      "Type": "Quantum.HFSMAndDecision"
+    },
+    {
+      "QuantumGuid": 261474022001638259,
+      "OriginalPath": "AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player|CheckFPDecision_23",
+      "NativePath": "AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player|CheckFPDecision_23",
+      "UnityPath": "Assets/AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player.asset",
+      "UnityGuid": "c821bf527a77a4970aa1c8944d8e3e50",
+      "UnityLocalId": 6651256915364433773,
+      "SourceSha256": "df74afec6423fbeb279e95e4f6ff677a10e473ba3ce92c27883e2c1c50f94008",
+      "Type": "Quantum.CheckFPDecision"
+    },
+    {
+      "QuantumGuid": 1181736976140049685,
+      "OriginalPath": "AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player|Attacking_7",
+      "NativePath": "AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player|Attacking_7",
+      "UnityPath": "Assets/AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player.asset",
+      "UnityGuid": "c821bf527a77a4970aa1c8944d8e3e50",
+      "UnityLocalId": 6720480240802014259,
+      "SourceSha256": "df74afec6423fbeb279e95e4f6ff677a10e473ba3ce92c27883e2c1c50f94008",
+      "Type": "Quantum.HFSMState"
+    },
+    {
+      "QuantumGuid": 1628267810515087164,
+      "OriginalPath": "AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player|SetBlackboardFP_13",
+      "NativePath": "AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player|SetBlackboardFP_13",
+      "UnityPath": "Assets/AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player.asset",
+      "UnityGuid": "c821bf527a77a4970aa1c8944d8e3e50",
+      "UnityLocalId": 6927973651968724158,
+      "SourceSha256": "df74afec6423fbeb279e95e4f6ff677a10e473ba3ce92c27883e2c1c50f94008",
+      "Type": "Quantum.SetBlackboardFP"
+    },
+    {
+      "QuantumGuid": 4447278863549580665,
+      "OriginalPath": "AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player|HFSMNotDecision_14",
+      "NativePath": "AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player|HFSMNotDecision_14",
+      "UnityPath": "Assets/AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player.asset",
+      "UnityGuid": "c821bf527a77a4970aa1c8944d8e3e50",
+      "UnityLocalId": 6936696768157021309,
+      "SourceSha256": "df74afec6423fbeb279e95e4f6ff677a10e473ba3ce92c27883e2c1c50f94008",
+      "Type": "Quantum.HFSMNotDecision"
+    },
+    {
+      "QuantumGuid": 1542539032981085844,
+      "OriginalPath": "AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player|CheckBlackboardFP_13",
+      "NativePath": "AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player|CheckBlackboardFP_13",
+      "UnityPath": "Assets/AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player.asset",
+      "UnityGuid": "c821bf527a77a4970aa1c8944d8e3e50",
+      "UnityLocalId": 7024839026394937840,
+      "SourceSha256": "df74afec6423fbeb279e95e4f6ff677a10e473ba3ce92c27883e2c1c50f94008",
+      "Type": "Quantum.CheckBlackboardFP"
+    },
+    {
+      "QuantumGuid": 3137482318558404872,
+      "OriginalPath": "AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player|TrueDecision_47",
+      "NativePath": "AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player|TrueDecision_47",
+      "UnityPath": "Assets/AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player.asset",
+      "UnityGuid": "c821bf527a77a4970aa1c8944d8e3e50",
+      "UnityLocalId": 7033261505447588063,
+      "SourceSha256": "df74afec6423fbeb279e95e4f6ff677a10e473ba3ce92c27883e2c1c50f94008",
+      "Type": "Quantum.TrueDecision"
+    },
+    {
+      "QuantumGuid": 3099479157294283995,
+      "OriginalPath": "AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player|Reload_3",
+      "NativePath": "AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player|Reload_3",
+      "UnityPath": "Assets/AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player.asset",
+      "UnityGuid": "c821bf527a77a4970aa1c8944d8e3e50",
+      "UnityLocalId": 7256901728721325364,
+      "SourceSha256": "df74afec6423fbeb279e95e4f6ff677a10e473ba3ce92c27883e2c1c50f94008",
+      "Type": "Quantum.HFSMState"
+    },
+    {
+      "QuantumGuid": 884576220807429317,
+      "OriginalPath": "AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player|CheckFiringMode_36",
+      "NativePath": "AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player|CheckFiringMode_36",
+      "UnityPath": "Assets/AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player.asset",
+      "UnityGuid": "c821bf527a77a4970aa1c8944d8e3e50",
+      "UnityLocalId": 7370012979764876819,
+      "SourceSha256": "df74afec6423fbeb279e95e4f6ff677a10e473ba3ce92c27883e2c1c50f94008",
+      "Type": "Quantum.CheckFiringMode"
+    },
+    {
+      "QuantumGuid": 602376439807427076,
+      "OriginalPath": "AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player|CheckFiringMode_38",
+      "NativePath": "AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player|CheckFiringMode_38",
+      "UnityPath": "Assets/AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player.asset",
+      "UnityGuid": "c821bf527a77a4970aa1c8944d8e3e50",
+      "UnityLocalId": 7607025802186693570,
+      "SourceSha256": "df74afec6423fbeb279e95e4f6ff677a10e473ba3ce92c27883e2c1c50f94008",
+      "Type": "Quantum.CheckFiringMode"
+    },
+    {
+      "QuantumGuid": 679108917589745186,
+      "OriginalPath": "AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player|CheckBlackboardInt_43",
+      "NativePath": "AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player|CheckBlackboardInt_43",
+      "UnityPath": "Assets/AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player.asset",
+      "UnityGuid": "c821bf527a77a4970aa1c8944d8e3e50",
+      "UnityLocalId": 7675922132041681445,
+      "SourceSha256": "df74afec6423fbeb279e95e4f6ff677a10e473ba3ce92c27883e2c1c50f94008",
+      "Type": "Quantum.CheckBlackboardInt"
+    },
+    {
+      "QuantumGuid": 3001958099177705209,
+      "OriginalPath": "AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player|Out Of Ammo_14",
+      "NativePath": "AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player|Out Of Ammo_14",
+      "UnityPath": "Assets/AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player.asset",
+      "UnityGuid": "c821bf527a77a4970aa1c8944d8e3e50",
+      "UnityLocalId": 7694079264097751687,
+      "SourceSha256": "df74afec6423fbeb279e95e4f6ff677a10e473ba3ce92c27883e2c1c50f94008",
+      "Type": "Quantum.HFSMState"
+    },
+    {
+      "QuantumGuid": 2481301340742268525,
+      "OriginalPath": "AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player|CheckBlackboardFP_17",
+      "NativePath": "AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player|CheckBlackboardFP_17",
+      "UnityPath": "Assets/AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player.asset",
+      "UnityGuid": "c821bf527a77a4970aa1c8944d8e3e50",
+      "UnityLocalId": 8077585751587654744,
+      "SourceSha256": "df74afec6423fbeb279e95e4f6ff677a10e473ba3ce92c27883e2c1c50f94008",
+      "Type": "Quantum.CheckBlackboardFP"
+    },
+    {
+      "QuantumGuid": 26889481899913688,
+      "OriginalPath": "AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player|PlayerAmmoEmptyAction_18",
+      "NativePath": "AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player|PlayerAmmoEmptyAction_18",
+      "UnityPath": "Assets/AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player.asset",
+      "UnityGuid": "c821bf527a77a4970aa1c8944d8e3e50",
+      "UnityLocalId": 8105072487977364901,
+      "SourceSha256": "df74afec6423fbeb279e95e4f6ff677a10e473ba3ce92c27883e2c1c50f94008",
+      "Type": "Quantum.PlayerAmmoEmptyAction"
+    },
+    {
+      "QuantumGuid": 725308320563937207,
+      "OriginalPath": "AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player|SkydiveFullyGroundedAction_22",
+      "NativePath": "AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player|SkydiveFullyGroundedAction_22",
+      "UnityPath": "Assets/AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player.asset",
+      "UnityGuid": "c821bf527a77a4970aa1c8944d8e3e50",
+      "UnityLocalId": 8304130724289799222,
+      "SourceSha256": "df74afec6423fbeb279e95e4f6ff677a10e473ba3ce92c27883e2c1c50f94008",
+      "Type": "Quantum.SkydiveFullyGroundedAction"
+    },
+    {
+      "QuantumGuid": 3420939274319096629,
+      "OriginalPath": "AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player|HFSMAndDecision_42",
+      "NativePath": "AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player|HFSMAndDecision_42",
+      "UnityPath": "Assets/AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player.asset",
+      "UnityGuid": "c821bf527a77a4970aa1c8944d8e3e50",
+      "UnityLocalId": 8363381641498504278,
+      "SourceSha256": "df74afec6423fbeb279e95e4f6ff677a10e473ba3ce92c27883e2c1c50f94008",
+      "Type": "Quantum.HFSMAndDecision"
+    },
+    {
+      "QuantumGuid": 1501081643659677846,
+      "OriginalPath": "AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player|CurrentFrameTimeFunction_16",
+      "NativePath": "AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player|CurrentFrameTimeFunction_16",
+      "UnityPath": "Assets/AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player.asset",
+      "UnityGuid": "c821bf527a77a4970aa1c8944d8e3e50",
+      "UnityLocalId": 8463950858420915083,
+      "SourceSha256": "df74afec6423fbeb279e95e4f6ff677a10e473ba3ce92c27883e2c1c50f94008",
+      "Type": "Quantum.CurrentFrameTimeFunction"
+    },
+    {
+      "QuantumGuid": 2772928941845369772,
+      "OriginalPath": "AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player|ShouldPerformSkydiveDecision_31",
+      "NativePath": "AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player|ShouldPerformSkydiveDecision_31",
+      "UnityPath": "Assets/AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player.asset",
+      "UnityGuid": "c821bf527a77a4970aa1c8944d8e3e50",
+      "UnityLocalId": 8496757166183365169,
+      "SourceSha256": "df74afec6423fbeb279e95e4f6ff677a10e473ba3ce92c27883e2c1c50f94008",
+      "Type": "Quantum.ShouldPerformSkydiveDecision"
+    },
+    {
+      "QuantumGuid": 376012687733590757,
+      "OriginalPath": "AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player|TimerDecision_26",
+      "NativePath": "AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player|TimerDecision_26",
+      "UnityPath": "Assets/AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player.asset",
+      "UnityGuid": "c821bf527a77a4970aa1c8944d8e3e50",
+      "UnityLocalId": 8539850788571542541,
+      "SourceSha256": "df74afec6423fbeb279e95e4f6ff677a10e473ba3ce92c27883e2c1c50f94008",
+      "Type": "Quantum.TimerDecision"
+    },
+    {
+      "QuantumGuid": 128173641673653426,
+      "OriginalPath": "AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player|GetAmmoCountFunction_13",
+      "NativePath": "AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player|GetAmmoCountFunction_13",
+      "UnityPath": "Assets/AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player.asset",
+      "UnityGuid": "c821bf527a77a4970aa1c8944d8e3e50",
+      "UnityLocalId": 8581802898922686051,
+      "SourceSha256": "df74afec6423fbeb279e95e4f6ff677a10e473ba3ce92c27883e2c1c50f94008",
+      "Type": "Quantum.GetAmmoCountFunction"
+    },
+    {
+      "QuantumGuid": 2132765868743718177,
+      "OriginalPath": "AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player|Death_16",
+      "NativePath": "AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player|Death_16",
+      "UnityPath": "Assets/AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player.asset",
+      "UnityGuid": "c821bf527a77a4970aa1c8944d8e3e50",
+      "UnityLocalId": 8605636011491532881,
+      "SourceSha256": "df74afec6423fbeb279e95e4f6ff677a10e473ba3ce92c27883e2c1c50f94008",
+      "Type": "Quantum.HFSMState"
+    },
+    {
+      "QuantumGuid": 643489516016099705,
+      "OriginalPath": "AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player|HFSMAndDecision_1",
+      "NativePath": "AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player|HFSMAndDecision_1",
+      "UnityPath": "Assets/AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player.asset",
+      "UnityGuid": "c821bf527a77a4970aa1c8944d8e3e50",
+      "UnityLocalId": 8912209020791736529,
+      "SourceSha256": "df74afec6423fbeb279e95e4f6ff677a10e473ba3ce92c27883e2c1c50f94008",
+      "Type": "Quantum.HFSMAndDecision"
+    },
+    {
+      "QuantumGuid": 772538730822870571,
+      "OriginalPath": "AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player|PlayerStartReloadAction_12",
+      "NativePath": "AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player|PlayerStartReloadAction_12",
+      "UnityPath": "Assets/AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player.asset",
+      "UnityGuid": "c821bf527a77a4970aa1c8944d8e3e50",
+      "UnityLocalId": 9135807760782809843,
+      "SourceSha256": "df74afec6423fbeb279e95e4f6ff677a10e473ba3ce92c27883e2c1c50f94008",
+      "Type": "Quantum.PlayerStartReloadAction"
+    },
+    {
+      "QuantumGuid": 4209794222652380530,
+      "OriginalPath": "AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player|SkydiveStopAction_6",
+      "NativePath": "AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player|SkydiveStopAction_6",
+      "UnityPath": "Assets/AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player.asset",
+      "UnityGuid": "c821bf527a77a4970aa1c8944d8e3e50",
+      "UnityLocalId": 9139697404611716925,
+      "SourceSha256": "df74afec6423fbeb279e95e4f6ff677a10e473ba3ce92c27883e2c1c50f94008",
+      "Type": "Quantum.SkydiveStopAction"
+    },
+    {
+      "QuantumGuid": 2118060195476778747,
+      "OriginalPath": "AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player|SetBlackboardFP_14",
+      "NativePath": "AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player|SetBlackboardFP_14",
+      "UnityPath": "Assets/AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player.asset",
+      "UnityGuid": "c821bf527a77a4970aa1c8944d8e3e50",
+      "UnityLocalId": 9214198762711728367,
+      "SourceSha256": "df74afec6423fbeb279e95e4f6ff677a10e473ba3ce92c27883e2c1c50f94008",
+      "Type": "Quantum.SetBlackboardFP"
+    },
+    {
+      "QuantumGuid": 3151734064632607498,
+      "OriginalPath": "AddressableResources/Maps/Battlelands/BattlelandsMap_mesh",
+      "NativePath": "AddressableResources/Maps/Battlelands/BattlelandsMap_mesh",
+      "UnityPath": "Assets/AddressableResources/Maps/Battlelands/BattlelandsMap_mesh.asset",
+      "UnityGuid": "c976dd1365d63e0409b2d1a29859cd83",
+      "UnityLocalId": 11400000,
+      "SourceSha256": "efc24867f78aec2b6974bed10676aa6a371ff04f7440f9ef75d03f5f3d669297",
+      "Type": "Quantum.BinaryData"
+    },
+    {
+      "QuantumGuid": 2403753126067035639,
+      "OriginalPath": "AddressableResources/QuantumAssets/Spawners/PlatformSpawner|EntityPrototype",
+      "NativePath": "AddressableResources/QuantumAssets/Spawners/PlatformSpawnerEntityPrototype",
+      "UnityPath": "Assets/AddressableResources/QuantumAssets/Spawners/PlatformSpawnerEntityPrototype.qprototype",
+      "UnityGuid": "7f1fed0577b69481b97433f0e2ad984e",
+      "UnityLocalId": 3097001405596171208,
+      "SourceSha256": "0bc5d9ea98508ac359e9739f1f382e6857e0b594a57e98e7f82624590193d875",
+      "Type": "Quantum.EntityPrototype"
+    },
+    {
+      "QuantumGuid": 2816390206062133565,
+      "OriginalPath": "AddressableResources/QuantumAssets/Spawners/PlatformSpawner|EntityView",
+      "NativePath": "AddressableResources/QuantumAssets/Spawners/PlatformSpawner|EntityView",
+      "UnityPath": "Assets/AddressableResources/QuantumAssets/Spawners/PlatformSpawner.prefab",
+      "UnityGuid": "cc57b1527e755ed4dadb1db569e4f507",
+      "UnityLocalId": 7845361808403847208,
+      "SourceSha256": "6d89331c12ec0cabcaee21613fd5b5d88664c9cd6457964f74626ab6d13ff02e",
+      "Type": "Quantum.EntityView"
+    },
+    {
+      "QuantumGuid": 1461361185191240749,
+      "OriginalPath": "AddressableResources/Configs/BaseEquipmentStatConfigs",
+      "NativePath": "AddressableResources/Configs/BaseEquipmentStatConfigs",
+      "UnityPath": "Assets/AddressableResources/Configs/BaseEquipmentStatConfigs.asset",
+      "UnityGuid": "cce42c611f6104cf58fc1f5386cc068b",
+      "UnityLocalId": 11400000,
+      "SourceSha256": "5f2fe9fda330b95f5ae22c5a4463517a13b2009af03782e1881dd72754377e38",
+      "Type": "FirstLight.Game.Configs.BaseEquipmentStatConfigs"
+    },
+    {
+      "QuantumGuid": 645733108213557161,
+      "OriginalPath": "AddressableResources/Maps/FtueDeck/FtueDeck_NavMesh",
+      "NativePath": "AddressableResources/Maps/FtueDeck/FtueDeck_NavMesh",
+      "UnityPath": "Assets/AddressableResources/Maps/FtueDeck/FtueDeck_NavMesh.asset",
+      "UnityGuid": "cdfd0694dcef8c041baec8eddb294a07",
+      "UnityLocalId": 11400000,
+      "SourceSha256": "4afebd09cad1194a55e1fd563a39bd8bab5bd6d21c4e63af16ee3a100817d912",
+      "Type": "Quantum.NavMesh"
+    },
+    {
+      "QuantumGuid": 3359083247742784915,
+      "OriginalPath": "AddressableResources/Maps/Islands/IslandsMap_NavMesh_data",
+      "NativePath": "AddressableResources/Maps/Islands/IslandsMap_NavMesh_data",
+      "UnityPath": "Assets/AddressableResources/Maps/Islands/IslandsMap_NavMesh_data.asset",
+      "UnityGuid": "d01d0237a4105d440b80a669fe09f894",
+      "UnityLocalId": 11400000,
+      "SourceSha256": "d95b50ee37f05338f9962dd4d04cb8c81ff05ceb5939acde4ca6770dac356c1a",
+      "Type": "Quantum.BinaryData"
+    },
+    {
+      "QuantumGuid": 676307946006492234,
+      "OriginalPath": "AddressableResources/Configs/BotDifficultyConfigs",
+      "NativePath": "AddressableResources/Configs/BotDifficultyConfigs",
+      "UnityPath": "Assets/AddressableResources/Configs/BotDifficultyConfigs.asset",
+      "UnityGuid": "d35749d7814d74c8689f1af279ba7c4f",
+      "UnityLocalId": 11400000,
+      "SourceSha256": "50f66a4099495ab1319ef0a2f49007ffd5b2a043d2d20042a14c9cba3f8dfc92",
+      "Type": "FirstLight.Game.Configs.BotDifficultyConfigs"
+    },
+    {
+      "QuantumGuid": 2044373238692490151,
+      "OriginalPath": "AddressableResources/Configs/EquipmentStatConfigs",
+      "NativePath": "AddressableResources/Configs/EquipmentStatConfigs",
+      "UnityPath": "Assets/AddressableResources/Configs/EquipmentStatConfigs.asset",
+      "UnityGuid": "d37efb7232f27413798989efa1b17414",
+      "UnityLocalId": 11400000,
+      "SourceSha256": "43c8068052e0f4553e91eac8c0f5ee11875ed4f69d126cf352833a7765c19e03",
+      "Type": "FirstLight.Game.Configs.EquipmentStatConfigs"
+    },
+    {
+      "QuantumGuid": 240296495379453662,
+      "OriginalPath": "AddressableResources/QuantumAssets/Collectables/ConsumablePickup|EntityPrototype",
+      "NativePath": "AddressableResources/QuantumAssets/Collectables/ConsumablePickupEntityPrototype",
+      "UnityPath": "Assets/AddressableResources/QuantumAssets/Collectables/ConsumablePickupEntityPrototype.qprototype",
+      "UnityGuid": "88c31ef4b35be4509b6cdf3f7b03397f",
+      "UnityLocalId": 3097001405596171208,
+      "SourceSha256": "ec18e4fcc60961854a5891400c0e82be683f6999724727d1277d410dacd3052e",
+      "Type": "Quantum.EntityPrototype"
+    },
+    {
+      "QuantumGuid": 3726627970685454479,
+      "OriginalPath": "AddressableResources/QuantumAssets/Collectables/ConsumablePickup|EntityView",
+      "NativePath": "AddressableResources/QuantumAssets/Collectables/ConsumablePickup|EntityView",
+      "UnityPath": "Assets/AddressableResources/QuantumAssets/Collectables/ConsumablePickup.prefab",
+      "UnityGuid": "d477e4d4278ff924abacdace84f6fe5f",
+      "UnityLocalId": 7845361808403847208,
+      "SourceSha256": "b93db9d641af43b85e55797bbfd2af87ba2dd69df57bdc2613e69e6f27e1450f",
+      "Type": "Quantum.EntityView"
+    },
+    {
+      "QuantumGuid": 4298551067525067090,
+      "OriginalPath": "AddressableResources/QuantumAssets/Gates/GateBarrierEntity|EntityView",
+      "NativePath": "AddressableResources/QuantumAssets/Gates/GateBarrierEntity|EntityView",
+      "UnityPath": "Assets/AddressableResources/QuantumAssets/Gates/GateBarrierEntity.prefab",
+      "UnityGuid": "d5426c3fac8b24e60a53f05aefc8a78c",
+      "UnityLocalId": -1120451371767905211,
+      "SourceSha256": "931075260cc98a904d46a365652fddebf8d341d0c59ee76e2120caecbe1cb9e4",
+      "Type": "Quantum.EntityView"
+    },
+    {
+      "QuantumGuid": 1861340466526697177,
+      "OriginalPath": "AddressableResources/QuantumAssets/Gates/GateBarrierEntity|EntityPrototype",
+      "NativePath": "AddressableResources/QuantumAssets/Gates/GateBarrierEntityEntityPrototype",
+      "UnityPath": "Assets/AddressableResources/QuantumAssets/Gates/GateBarrierEntityEntityPrototype.qprototype",
+      "UnityGuid": "3a2d241e3697045f0bd6312c4e52e402",
+      "UnityLocalId": 3097001405596171208,
+      "SourceSha256": "a0dc28cb8c39d8c7d0e9125d505cbfd28e4ba460583c5aec0a0cc490f7d5b497",
+      "Type": "Quantum.EntityPrototype"
+    },
+    {
+      "QuantumGuid": 3261590140356491151,
+      "OriginalPath": "AddressableResources/Configs/BuffConfigs",
+      "NativePath": "AddressableResources/Configs/BuffConfigs",
+      "UnityPath": "Assets/AddressableResources/Configs/BuffConfigs.asset",
+      "UnityGuid": "dbfe1e0a3bc804920a83877d90a262d1",
+      "UnityLocalId": 11400000,
+      "SourceSha256": "f72f64d39c6890a0afa7683d09d868bdbfa6438ab927943e65f56e16f3cc1332",
+      "Type": "FirstLight.Game.Configs.BuffConfigs"
+    },
+    {
+      "QuantumGuid": 2131404972551470056,
+      "OriginalPath": "AddressableResources/MatchAssets/MapObjects/Bush|EntityView",
+      "NativePath": "AddressableResources/MatchAssets/MapObjects/Bush|EntityView",
+      "UnityPath": "Assets/AddressableResources/MatchAssets/MapObjects/Bush.prefab",
+      "UnityGuid": "dfd27a40403a84768a44bdcbdea2c52f",
+      "UnityLocalId": -8226625531942892954,
+      "SourceSha256": "33986be42a57b7d11e74fac66631ba6ab595e7d96fb07324d039b83cd91c8049",
+      "Type": "Quantum.EntityView"
+    },
+    {
+      "QuantumGuid": 1187171314464035236,
+      "OriginalPath": "AddressableResources/MatchAssets/MapObjects/Bush|EntityPrototype",
+      "NativePath": "AddressableResources/MatchAssets/MapObjects/BushEntityPrototype",
+      "UnityPath": "Assets/AddressableResources/MatchAssets/MapObjects/BushEntityPrototype.qprototype",
+      "UnityGuid": "36e70287b0fa948ab8127ec9cb7b3603",
+      "UnityLocalId": 3097001405596171208,
+      "SourceSha256": "4f866c48e40d36bf3d12c524d41d9a32f88f3a334fe8abb61d8a49dd753f883c",
+      "Type": "Quantum.EntityPrototype"
+    },
+    {
+      "QuantumGuid": 4393632908210870598,
+      "OriginalPath": "AddressableResources/Configs/DestructibleConfigs",
+      "NativePath": "AddressableResources/Configs/DestructibleConfigs",
+      "UnityPath": "Assets/AddressableResources/Configs/DestructibleConfigs.asset",
+      "UnityGuid": "e2913d60cbd9dd9449e7125ff9c059fa",
+      "UnityLocalId": 11400000,
+      "SourceSha256": "56772f3af8052bb22f4b31c7893720ed724216068144b49c3352441bce1a82ea",
+      "Type": "FirstLight.Game.Configs.DestructibleConfigs"
+    },
+    {
+      "QuantumGuid": 1255118517591299658,
+      "OriginalPath": "AddressableResources/Maps/Islands/IslandsMap",
+      "NativePath": "AddressableResources/Maps/Islands/IslandsMap",
+      "UnityPath": "Assets/AddressableResources/Maps/Islands/IslandsMap.asset",
+      "UnityGuid": "e580edb6d7f1bdc46929e14e6f38d6e9",
+      "UnityLocalId": 11400000,
+      "SourceSha256": "af18d69e3a72d71374d5f8138f77cfd43bbfa64a133928814ba4fe59ed5a7a2d",
+      "Type": "Quantum.Map"
+    },
+    {
+      "QuantumGuid": 951672781246580630,
+      "OriginalPath": "AddressableResources/QuantumAssets/Projectiles/MainSmallBullet|EntityView",
+      "NativePath": "AddressableResources/QuantumAssets/Projectiles/MainSmallBullet|EntityView",
+      "UnityPath": "Assets/AddressableResources/QuantumAssets/Projectiles/MainSmallBullet.prefab",
+      "UnityGuid": "e6c6304b0283c6f449a550c27202254d",
+      "UnityLocalId": -8452382852626058855,
+      "SourceSha256": "e8ff8ca61197a060952f399a84b3d01cece40d8797e95d57a7c0afad00c26c26",
+      "Type": "Quantum.EntityView"
+    },
+    {
+      "QuantumGuid": 3582668498530828953,
+      "OriginalPath": "AddressableResources/QuantumAssets/Projectiles/MainSmallBullet|EntityPrototype",
+      "NativePath": "AddressableResources/QuantumAssets/Projectiles/MainSmallBulletEntityPrototype",
+      "UnityPath": "Assets/AddressableResources/QuantumAssets/Projectiles/MainSmallBulletEntityPrototype.qprototype",
+      "UnityGuid": "173aa5ed14de9436ca5a67b9c833df2f",
+      "UnityLocalId": 3097001405596171208,
+      "SourceSha256": "42c3765b4341b6f14a592ac93e183b9d481351662a0f4cd4723788f453b00bdb",
+      "Type": "Quantum.EntityPrototype"
+    },
+    {
+      "QuantumGuid": 4486983998464243699,
+      "OriginalPath": "AddressableResources/QuantumAssets/Collectables/ChestPickup|EntityPrototype",
+      "NativePath": "AddressableResources/QuantumAssets/Collectables/ChestPickupEntityPrototype",
+      "UnityPath": "Assets/AddressableResources/QuantumAssets/Collectables/ChestPickupEntityPrototype.qprototype",
+      "UnityGuid": "f4735e82b6fd1436eb48251cb1f5e1cd",
+      "UnityLocalId": 3097001405596171208,
+      "SourceSha256": "b81f542be9a4f0b7083a41e518c9968414ea0fb55fc60a1fab33318c914d0024",
+      "Type": "Quantum.EntityPrototype"
+    },
+    {
+      "QuantumGuid": 701952959705295376,
+      "OriginalPath": "AddressableResources/QuantumAssets/Collectables/ChestPickup|EntityView",
+      "NativePath": "AddressableResources/QuantumAssets/Collectables/ChestPickup|EntityView",
+      "UnityPath": "Assets/AddressableResources/QuantumAssets/Collectables/ChestPickup.prefab",
+      "UnityGuid": "e8a365095d0e942f2bda425288273a5f",
+      "UnityLocalId": 7845361808403847208,
+      "SourceSha256": "118d7931409387be89ab146a98158441ab2efc5e2d8d8e354cc1d903a17c7d4b",
+      "Type": "Quantum.EntityView"
+    },
+    {
+      "QuantumGuid": 654199445895457431,
+      "OriginalPath": "AddressableResources/Configs/StatConfigs",
+      "NativePath": "AddressableResources/Configs/StatConfigs",
+      "UnityPath": "Assets/AddressableResources/Configs/StatConfigs.asset",
+      "UnityGuid": "e8e4ab7332fb4874f96df25d47c4b871",
+      "UnityLocalId": 11400000,
+      "SourceSha256": "3b5c96543a4cc8694db3fbedd47e63748801c1e25034feb829ff12424ff71f91",
+      "Type": "FirstLight.Game.Configs.StatConfigs"
+    },
+    {
+      "QuantumGuid": 1565542650131154954,
+      "OriginalPath": "AddressableResources/Configs/Settings/SimulationConfig",
+      "NativePath": "AddressableResources/Configs/Settings/SimulationConfig",
+      "UnityPath": "Assets/AddressableResources/Configs/Settings/SimulationConfig.asset",
+      "UnityGuid": "f049cdc5a814148d1ab51494e79d40e4",
+      "UnityLocalId": 11400000,
+      "SourceSha256": "d79f608cd7c5bfb1f16863da4db192c16cb94248bbeef443598d48b68eee1054",
+      "Type": "Quantum.SimulationConfig"
+    },
+    {
+      "QuantumGuid": 3072854346747122385,
+      "OriginalPath": "AddressableResources/Configs/QuantumMapConfigs",
+      "NativePath": "AddressableResources/Configs/QuantumMapConfigs",
+      "UnityPath": "Assets/AddressableResources/Configs/QuantumMapConfigs.asset",
+      "UnityGuid": "f0d9bcc08e239214b9f652458396205c",
+      "UnityLocalId": 11400000,
+      "SourceSha256": "2ed402e44714679a2fe087ef3a4e381cd417f34aaef2ecc2fba1f7b04499fa04",
+      "Type": "FirstLight.Game.Configs.MapConfigs"
+    },
+    {
+      "QuantumGuid": 2283147842969910057,
+      "OriginalPath": "AddressableResources/MatchAssets/MapObjects/VisVolume|EntityView",
+      "NativePath": "AddressableResources/MatchAssets/MapObjects/VisVolume|EntityView",
+      "UnityPath": "Assets/AddressableResources/MatchAssets/MapObjects/VisVolume.prefab",
+      "UnityGuid": "f10471cd83ee5114fa891b9130f390dd",
+      "UnityLocalId": -8226625531942892954,
+      "SourceSha256": "4d3091d8a9778a9fd4ab395f28cc9bfb6c6c1888e76daba6779089ee2125a73c",
+      "Type": "Quantum.EntityView"
+    },
+    {
+      "QuantumGuid": 2338948153490005447,
+      "OriginalPath": "AddressableResources/MatchAssets/MapObjects/VisVolume|EntityPrototype",
+      "NativePath": "AddressableResources/MatchAssets/MapObjects/VisVolumeEntityPrototype",
+      "UnityPath": "Assets/AddressableResources/MatchAssets/MapObjects/VisVolumeEntityPrototype.qprototype",
+      "UnityGuid": "1f72fdb02a2c94fcca5c980e5715035d",
+      "UnityLocalId": 3097001405596171208,
+      "SourceSha256": "f31d330ce4f6947a0e95beabb28b2e668878c17b7c6595325f7c668157112d38",
+      "Type": "Quantum.EntityPrototype"
+    },
+    {
+      "QuantumGuid": 1167231962424191134,
+      "OriginalPath": "AddressableResources/Maps/Battlelands/BattlelandsMap_NavMesh_data",
+      "NativePath": "AddressableResources/Maps/Battlelands/BattlelandsMap_NavMesh_data",
+      "UnityPath": "Assets/AddressableResources/Maps/Battlelands/BattlelandsMap_NavMesh_data.asset",
+      "UnityGuid": "fd8a3472b5ee2374da306a1ea8efd3f8",
+      "UnityLocalId": 11400000,
+      "SourceSha256": "eb06d80b3c14e6beeb6bd59445dd1f0becfe9ba22cf19198dbbafd3ad27e75bb",
+      "Type": "Quantum.BinaryData"
+    }
+  ]
+}

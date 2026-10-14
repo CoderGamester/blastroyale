@@ -1,0 +1,41 @@
+[Map Recovery] starting BattlelandsMapScene
+[Map Recovery] BattlelandsMapScene source IDs verified, missing roots=0
+[Map Recovery] BattlelandsMapScene original native snapshot complete
+[Map Recovery] BattlelandsMapScene native unpack and unit boxes complete
+[Map Recovery] starting CemeteryScene
+[Map Recovery] CemeteryScene source IDs verified, missing roots=138
+[Map Recovery] CemeteryScene original native snapshot complete
+[Map Recovery] CemeteryScene native unpack and unit boxes complete
+[Map Recovery] starting DistrictScene
+[Map Recovery] DistrictScene source IDs verified, missing roots=263
+[Map Recovery] DistrictScene original native snapshot complete
+[Map Recovery] DistrictScene native unpack and unit boxes complete
+[Map Recovery] starting FortressScene
+[Map Recovery] FortressScene source IDs verified, missing roots=202
+[Map Recovery] FortressScene original native snapshot complete
+[Map Recovery] FortressScene native unpack and unit boxes complete
+[Map Recovery] starting IslandOneScene
+[Map Recovery] IslandOneScene source IDs verified, missing roots=3027
+[Map Recovery] IslandOneScene original native snapshot complete
+[Map Recovery] IslandOneScene native unpack and unit boxes complete
+[Map Recovery] starting IslandsMapScene
+[Map Recovery] IslandsMapScene source IDs verified, missing roots=0
+[Map Recovery] IslandsMapScene original native snapshot complete
+[Map Recovery] IslandsMapScene native unpack and unit boxes complete
+[Map Recovery] starting TestScene_Scene
+[Map Recovery] TestScene_Scene source IDs verified, missing roots=11
+[Map Recovery] TestScene_Scene original native snapshot complete
+[Map Recovery] TestScene_Scene native unpack and unit boxes complete
+[Map Recovery] starting TestAssetsMap
+[Map Recovery] TestAssetsMap source IDs verified, missing roots=458
+[Map Recovery] TestAssetsMap original native snapshot complete
+[Map Recovery] TestAssetsMap native unpack and unit boxes complete
+[Map Source/Original GUID Proof] passed BattlelandsMapScene
+[Map Source/Original GUID Proof] passed CemeteryScene
+[Map Source/Original GUID Proof] passed DistrictScene
+[Map Source/Original GUID Proof] passed FortressScene
+[Map Source/Original GUID Proof] passed IslandOneScene
+[Map Source/Original GUID Proof] passed IslandsMapScene
+[Map Source/Original GUID Proof] passed TestScene_Scene
+[Map Source/Original GUID Proof] passed TestAssetsMap
+[Map Postrestart Proof] 8 restored maps and 10 exact native map cache fingerprints passed

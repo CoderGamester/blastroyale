@@ -11,7 +11,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: -1722638350, guid: b156eeaae3f741b40af66649a4748430, type: 3}
   m_Name: TestAssetsMap
-  m_EditorClassIdentifier:
+  m_EditorClassIdentifier: 
   Identifier:
     Path: AddressableResources/Maps/TestAssets/TestAssetsMap
     Guid:
@@ -85,8 +85,278 @@ MonoBehaviour:
       IsTrigger: 0
       ColliderIndex: 0
       MutableMode: 0
-  MapEntities: []
+  MapEntities:
+  - Components:
+    - rid: 183034186699898880
+    - rid: 183034186699898881
+  - Components:
+    - rid: 4218608429654081536
+    - rid: 4218608429654081537
+  - Components:
+    - rid: 8191167554538962944
+    - rid: 8191167554538962945
+  - Components:
+    - rid: 249866338841919488
+    - rid: 249866338841919489
+  - Components:
+    - rid: 4493183285853159424
+    - rid: 4493183285853159425
+  - Components:
+    - rid: 9165806583744036864
+    - rid: 9165806583744036865
+  - Components:
+    - rid: 6698319664994320384
+    - rid: 6698319664994320385
+  - Components:
+    - rid: 7233993472972161024
+    - rid: 7233993472972161025
+  - Components:
+    - rid: 8747021547677417472
+    - rid: 8747021547677417473
+  - Components:
+    - rid: 41818649157173248
+    - rid: 41818649157173249
   SerializedTriangleDataUncompressedSize: 8
   references:
     version: 2
-    RefIds: []
+    RefIds:
+    - rid: 41818649157173248
+      type: {class: Transform3DPrototype, ns: Quantum.Prototypes, asm: Quantum.Engine}
+      data:
+        Position:
+          X:
+            RawValue: 82451
+          Y:
+            RawValue: 66846
+          Z:
+            RawValue: -126964
+        Rotation:
+          X:
+            RawValue: 0
+          Y:
+            RawValue: 21430272
+          Z:
+            RawValue: 0
+    - rid: 41818649157173249
+      type: {class: PlayerSpawnerPrototype, ns: Quantum.Prototypes, asm: Quantum.Simulation}
+      data:
+        SpawnerType:
+          Value: 0
+        BehaviourType:
+          Value: 0
+    - rid: 183034186699898880
+      type: {class: Transform3DPrototype, ns: Quantum.Prototypes, asm: Quantum.Engine}
+      data:
+        Position:
+          X:
+            RawValue: 82451
+          Y:
+            RawValue: 66846
+          Z:
+            RawValue: -126964
+        Rotation:
+          X:
+            RawValue: 0
+          Y:
+            RawValue: 21430272
+          Z:
+            RawValue: 0
+    - rid: 183034186699898881
+      type: {class: PlayerSpawnerPrototype, ns: Quantum.Prototypes, asm: Quantum.Simulation}
+      data:
+        SpawnerType:
+          Value: 0
+        BehaviourType:
+          Value: 0
+    - rid: 249866338841919488
+      type: {class: Transform3DPrototype, ns: Quantum.Prototypes, asm: Quantum.Engine}
+      data:
+        Position:
+          X:
+            RawValue: 494675
+          Y:
+            RawValue: 66846
+          Z:
+            RawValue: 140736
+        Rotation:
+          X:
+            RawValue: 0
+          Y:
+            RawValue: 21430272
+          Z:
+            RawValue: 0
+    - rid: 249866338841919489
+      type: {class: PlayerSpawnerPrototype, ns: Quantum.Prototypes, asm: Quantum.Simulation}
+      data:
+        SpawnerType:
+          Value: 0
+        BehaviourType:
+          Value: 0
+    - rid: 4218608429654081536
+      type: {class: Transform3DPrototype, ns: Quantum.Prototypes, asm: Quantum.Engine}
+      data:
+        Position:
+          X:
+            RawValue: 632083
+          Y:
+            RawValue: 66846
+          Z:
+            RawValue: 229969
+        Rotation:
+          X:
+            RawValue: 0
+          Y:
+            RawValue: 21430272
+          Z:
+            RawValue: 0
+    - rid: 4218608429654081537
+      type: {class: PlayerSpawnerPrototype, ns: Quantum.Prototypes, asm: Quantum.Simulation}
+      data:
+        SpawnerType:
+          Value: 0
+        BehaviourType:
+          Value: 0
+    - rid: 4493183285853159424
+      type: {class: Transform3DPrototype, ns: Quantum.Prototypes, asm: Quantum.Engine}
+      data:
+        Position:
+          X:
+            RawValue: 425971
+          Y:
+            RawValue: 66846
+          Z:
+            RawValue: 96119
+        Rotation:
+          X:
+            RawValue: 0
+          Y:
+            RawValue: 21430272
+          Z:
+            RawValue: 0
+    - rid: 4493183285853159425
+      type: {class: PlayerSpawnerPrototype, ns: Quantum.Prototypes, asm: Quantum.Simulation}
+      data:
+        SpawnerType:
+          Value: 0
+        BehaviourType:
+          Value: 0
+    - rid: 6698319664994320384
+      type: {class: Transform3DPrototype, ns: Quantum.Prototypes, asm: Quantum.Engine}
+      data:
+        Position:
+          X:
+            RawValue: 288563
+          Y:
+            RawValue: 66846
+          Z:
+            RawValue: 6885
+        Rotation:
+          X:
+            RawValue: 0
+          Y:
+            RawValue: 21430272
+          Z:
+            RawValue: 0
+    - rid: 6698319664994320385
+      type: {class: PlayerSpawnerPrototype, ns: Quantum.Prototypes, asm: Quantum.Simulation}
+      data:
+        SpawnerType:
+          Value: 0
+        BehaviourType:
+          Value: 0
+    - rid: 7233993472972161024
+      type: {class: Transform3DPrototype, ns: Quantum.Prototypes, asm: Quantum.Engine}
+      data:
+        Position:
+          X:
+            RawValue: 219859
+          Y:
+            RawValue: 66846
+          Z:
+            RawValue: -37731
+        Rotation:
+          X:
+            RawValue: 0
+          Y:
+            RawValue: 21430272
+          Z:
+            RawValue: 0
+    - rid: 7233993472972161025
+      type: {class: PlayerSpawnerPrototype, ns: Quantum.Prototypes, asm: Quantum.Simulation}
+      data:
+        SpawnerType:
+          Value: 0
+        BehaviourType:
+          Value: 0
+    - rid: 8191167554538962944
+      type: {class: Transform3DPrototype, ns: Quantum.Prototypes, asm: Quantum.Engine}
+      data:
+        Position:
+          X:
+            RawValue: 563379
+          Y:
+            RawValue: 66846
+          Z:
+            RawValue: 185353
+        Rotation:
+          X:
+            RawValue: 0
+          Y:
+            RawValue: 21430272
+          Z:
+            RawValue: 0
+    - rid: 8191167554538962945
+      type: {class: PlayerSpawnerPrototype, ns: Quantum.Prototypes, asm: Quantum.Simulation}
+      data:
+        SpawnerType:
+          Value: 0
+        BehaviourType:
+          Value: 0
+    - rid: 8747021547677417472
+      type: {class: Transform3DPrototype, ns: Quantum.Prototypes, asm: Quantum.Engine}
+      data:
+        Position:
+          X:
+            RawValue: 151155
+          Y:
+            RawValue: 66846
+          Z:
+            RawValue: -82347
+        Rotation:
+          X:
+            RawValue: 0
+          Y:
+            RawValue: 21430272
+          Z:
+            RawValue: 0
+    - rid: 8747021547677417473
+      type: {class: PlayerSpawnerPrototype, ns: Quantum.Prototypes, asm: Quantum.Simulation}
+      data:
+        SpawnerType:
+          Value: 0
+        BehaviourType:
+          Value: 0
+    - rid: 9165806583744036864
+      type: {class: Transform3DPrototype, ns: Quantum.Prototypes, asm: Quantum.Engine}
+      data:
+        Position:
+          X:
+            RawValue: 357267
+          Y:
+            RawValue: 66846
+          Z:
+            RawValue: 51502
+        Rotation:
+          X:
+            RawValue: 0
+          Y:
+            RawValue: 21430272
+          Z:
+            RawValue: 0
+    - rid: 9165806583744036865
+      type: {class: PlayerSpawnerPrototype, ns: Quantum.Prototypes, asm: Quantum.Simulation}
+      data:
+        SpawnerType:
+          Value: 0
+        BehaviourType:
+          Value: 0
