@@ -1,3 +1,4 @@
+using FirstLight.Game.Services;
 using FirstLight.Game.Commands;
 using FirstLight.Game.Data;
 using FirstLight.Game.Ids;
@@ -24,7 +25,7 @@ namespace FirstLight.Tests.EditorMode.Commands
 			UniqueIdLogic.DidNotReceive().GenerateNewUniqueId(Arg.Any<GameId>());
 			EquipmentLogic.DidNotReceive().AddToInventory(Arg.Any<EquipmentData>());
 			LootBoxLogic.DidNotReceive().OpenLootBox(Arg.Any<uint>());
-			MessageBrokerService.Received().Publish(Arg.Is<RewardCollectedMessage>(t => t.Reward.Equals(reward)));
+			MessageBrokerService.Received().PublishSafe(Arg.Is<RewardCollectedMessage>(t => t.Reward.Equals(reward)));
 		}
 		
 		[Test]
@@ -41,7 +42,7 @@ namespace FirstLight.Tests.EditorMode.Commands
 			UniqueIdLogic.Received().GenerateNewUniqueId(reward.RewardId);
 			EquipmentLogic.Received().AddToInventory(Arg.Any<EquipmentData>());
 			LootBoxLogic.DidNotReceive().OpenLootBox(Arg.Any<uint>());
-			MessageBrokerService.Received().Publish(Arg.Is<RewardCollectedMessage>(t => t.Reward.Equals(reward)));
+			MessageBrokerService.Received().PublishSafe(Arg.Is<RewardCollectedMessage>(t => t.Reward.Equals(reward)));
 		}
 		
 		[Test]
@@ -60,7 +61,7 @@ namespace FirstLight.Tests.EditorMode.Commands
 			UniqueIdLogic.DidNotReceive().GenerateNewUniqueId(Arg.Any<GameId>());
 			EquipmentLogic.DidNotReceive().AddToInventory(Arg.Any<EquipmentData>());
 			LootBoxLogic.Received().OpenLootBox(reward.Data);
-			MessageBrokerService.Received().Publish(Arg.Is<RewardCollectedMessage>(t => t.Reward.Equals(lootBoxReward)));
+			MessageBrokerService.Received().PublishSafe(Arg.Is<RewardCollectedMessage>(t => t.Reward.Equals(lootBoxReward)));
 		}
 		
 		[Test]

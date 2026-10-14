@@ -5,14 +5,14 @@
         "UnityEngine.TestRunner",
         "UnityEditor.TestRunner",
         "FirstLight.Game",
-        "FirstLight.AddressablesExtensions",
-        "FirstLight.UiService",
+        "GameLovers.Services",
         "Unity.Addressables",
-        "Unity.ResourceManager"
+        "Unity.ResourceManager",
+        "GameLovers.GameData",
+        "GameLovers.Statechart",
+        "GameLovers.GoogleSheetImporter"
     ],
-    "includePlatforms": [
-        "Editor"
-    ],
+    "includePlatforms": [],
     "excludePlatforms": [],
     "allowUnsafeCode": false,
     "overrideReferences": true,

@@ -7,7 +7,6 @@ namespace FirstLight.Tests.EditorMode.Services
 {
 	public class GameNetworkServiceTest
 	{
-		private GameNetworkService _gameNetworkService;
 
 		[SetUp]
 		public void Init()

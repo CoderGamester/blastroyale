@@ -1,12 +1,13 @@
+using GameLovers.Services.Pooling;
+using IAssetResolverService = FirstLight.Game.Services.IAssetResolverService;
 using System;
 using System.Collections.Generic;
 using FirstLight.Game.Data;
 using FirstLight.Game.Ids;
 using FirstLight.Game.Logic;
 using FirstLight.Game.Services;
-using FirstLight.SDK.Services;
+using GameLovers.Services;
 using FirstLight.Server.SDK.Modules.GameConfiguration;
-using FirstLight.Services;
 using FirstLightServerSDK.Services;
 using NSubstitute;
 using NUnit.Framework;
@@ -42,7 +43,7 @@ namespace FirstLight.Tests.EditorMode
 	{
 		// Services
 		protected IGameServices GameServices;
-		protected IDataService DataService;
+		protected IClientDataService DataService;
 		protected IInternalGameNetworkService NetworkService;
 		protected IMessageBrokerService MessageBrokerService;
 		protected IGameCommandService CommandService;
@@ -71,7 +72,7 @@ namespace FirstLight.Tests.EditorMode
 		{
 			// Services
 			GameServices = Substitute.For<IGameServices>();
-			DataService = Substitute.For<IDataService>();
+			DataService = Substitute.For<IClientDataService>();
 			NetworkService = Substitute.For<IInternalGameNetworkService>();
 			MessageBrokerService = Substitute.For<IMessageBrokerService>();
 			CommandService = Substitute.For<IGameCommandService>();

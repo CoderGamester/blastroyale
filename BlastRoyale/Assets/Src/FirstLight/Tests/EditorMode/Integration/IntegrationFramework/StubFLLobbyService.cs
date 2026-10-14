@@ -12,7 +12,7 @@ namespace FirstLight.Tests.EditorMode
 {
 	public class StubFLLobbyService : IFLLobbyService
 	{
-		private IReadOnlyList<PartyInvite> _sentPartyInvites;
+		private IReadOnlyList<PartyInvite> _sentPartyInvites = System.Array.Empty<PartyInvite>();
 		public Lobby CurrentPartyLobby { get; }
 		public FLLobbyEventCallbacks CurrentPartyCallbacks => new ();
 

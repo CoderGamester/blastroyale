@@ -1,3 +1,5 @@
+using FirstLight.Game.Services;
+using GameLovers.GameData;
 using System;
 using System.Collections.Generic;
 using FirstLight.Game.Configs;
@@ -31,7 +33,7 @@ namespace FirstLight.Tests.EditorMode.Logic
 
 			TestData.Inventory.Add(_item.Key, _item.Value);
 			mockStatsConfigs.GetConfig(Arg.Do<Equipment>(_ => new QuantumEquipmentStatConfig()));
-			InitConfigData(new QuantumGameConfig {NftDurabilityDropDays = 7, NonNftDurabilityDropDays = 7});
+			InitConfigData(new QuantumGameConfig());
 			InitConfigData(mockStatsConfigs);
 			InitConfigData(new QuantumWeaponConfig {});
 			InitConfigData(new ScrapConfig
@@ -188,13 +190,7 @@ namespace FirstLight.Tests.EditorMode.Logic
 			Assert.Throws<KeyNotFoundException>(() => _equipmentLogic.Scrap(UniqueId.Invalid));
 		}
 
-		[Test]
-		public void ScrapItem_NFTItem_ThrowsException()
-		{
-			TestData.NftInventory.Add(_item.Key, new NftEquipmentData());
 
-			Assert.Throws<LogicException>(() => _equipmentLogic.Scrap(_item.Key));
-		}
 
 		[Test]
 		public void UpgradeItemCheck()
@@ -210,13 +206,7 @@ namespace FirstLight.Tests.EditorMode.Logic
 			Assert.Throws<KeyNotFoundException>(() => _equipmentLogic.Upgrade(UniqueId.Invalid));
 		}
 
-		[Test]
-		public void UpgradeItem_NFTItem_ThrowsException()
-		{
-			TestData.NftInventory.Add(_item.Key, new NftEquipmentData());
 
-			Assert.Throws<LogicException>(() => _equipmentLogic.Upgrade(_item.Key));
-		}
 
 		[Test]
 		public void UpgradeItem_MaxLevel_ThrowsException()

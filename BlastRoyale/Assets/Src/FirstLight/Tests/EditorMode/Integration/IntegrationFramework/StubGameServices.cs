@@ -1,3 +1,7 @@
+using GameLovers.Services.Pooling;
+using IAssetResolverService = FirstLight.Game.Services.IAssetResolverService;
+using FirstLight.Game.Services.Infrastructure;
+using IDataProvider = FirstLight.Server.SDK.Models.IDataProvider;
 using FirstLight.Game.Domains.HomeScreen;
 using FirstLight.Game.Domains.VFX;
 using FirstLight.Game.Ids;
@@ -11,19 +15,18 @@ using FirstLight.Game.Services.Party;
 using FirstLight.Game.Services.RoomService;
 using FirstLight.Game.Services.Social;
 using FirstLight.Game.StateMachines;
-using FirstLight.SDK.Services;
+using GameLovers.Services;
 using FirstLight.Server.SDK.Models;
 using FirstLight.Server.SDK.Modules.GameConfiguration;
-using FirstLight.Services;
-using FirstLight.UIService;
+using FirstLight.Game.UI;
 using NSubstitute;
 
 namespace FirstLight.Tests.EditorMode
 {
 	public class StubGameServices : IGameServices
 	{
-		public virtual IDataSaver DataSaver { get; }
-		public IDataService DataService { get; }
+		public virtual IClientDataSaver DataSaver { get; }
+		public IClientDataService DataService { get; }
 		public virtual IConfigsProvider ConfigsProvider { get; }
 		public virtual IGuidService GuidService { get; }
 		public virtual IGameNetworkService NetworkService { get; }
@@ -47,7 +50,7 @@ namespace FirstLight.Tests.EditorMode
 		public virtual IMatchmakingService MatchmakingService { get; }
 		public virtual IIAPService IAPService { get; }
 		public RateAndReviewService RateAndReviewService { get; }
-		public UIService.UIService UIService { get; }
+		public FirstLight.Game.UI.UIService UIService { get; }
 		public UIVFXService UIVFXService { get; }
 		public ICollectionService CollectionService { get; }
 		public IControlSetupService ControlsSetup { get; set; }
@@ -79,7 +82,7 @@ namespace FirstLight.Tests.EditorMode
 		}
 
 		public StubGameServices(IInternalGameNetworkService networkService, IMessageBrokerService messageBrokerService,
-								ITimeService timeService, IDataService dataService, IConfigsProvider configsProvider,
+								ITimeService timeService, IClientDataService dataService, IConfigsProvider configsProvider,
 								IGameLogic gameLogic, IDataProvider dataProvider,
 								IAssetResolverService assetResolverService, IInternalTutorialService tutorialService)
 		{
@@ -110,7 +113,7 @@ namespace FirstLight.Tests.EditorMode
 			PoolService = new PoolService();
 			TickService = new StubTickService();
 			FLLobbyService = new StubFLLobbyService();
-			CoroutineService = new StubCoroutineService();
+			CoroutineService = Substitute.For<ICoroutineService>();
 			HomeScreenService = new HomeScreenService(gameLogic, UIService, MessageBrokerService, RoomService, CommandService, GameBackendService,
 				GenericDialogService);
 			RemoteTextureService = new RemoteTextureService(CoroutineService, ThreadService);

@@ -1,3 +1,5 @@
+using GameLovers.Services.Commands;
+using IDataProvider = FirstLight.Server.SDK.Models.IDataProvider;
 using System;
 using System.Security.Cryptography;
 using FirstLight.Game.Commands;
@@ -6,7 +8,7 @@ using FirstLight.Game.Services;
 using FirstLight.Server.SDK.Models;
 using FirstLight.Server.SDK.Modules;
 using FirstLight.Server.SDK.Modules.Commands;
-using FirstLight.Services;
+using GameLovers.Services;
 
 namespace FirstLight.Tests.EditorMode
 {

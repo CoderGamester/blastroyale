@@ -60,7 +60,7 @@ namespace FirstLight.Tests.EditorMode.Integration
 		{
 			var equip = new Equipment() {GameId = GameId.HockeyHelmet, Level = 1};
 			var itemUniqueId = TestLogic.EquipmentLogic.AddToInventory(equip);
-			var reward = TestLogic.EquipmentLogic.GetScrappingReward(equip, false);
+			var reward = TestLogic.EquipmentLogic.GetScrappingReward(equip);
 			var data = TestData.GetData<PlayerData>();
 
 			TestServices.CommandService.ExecuteCommand(new ScrapItemCommand()
@@ -80,7 +80,7 @@ namespace FirstLight.Tests.EditorMode.Integration
 		{
 			var equip = new Equipment() {GameId = GameId.HockeyHelmet, Level = 1};
 			var itemUniqueId = TestLogic.EquipmentLogic.AddToInventory(equip);
-			var cost = TestLogic.EquipmentLogic.GetUpgradeCost(equip, false);
+			var cost = TestLogic.EquipmentLogic.GetUpgradeCost(equip);
 			var data = TestData.GetData<PlayerData>();
 
 			data.Currencies[cost.Key] = cost.Value;

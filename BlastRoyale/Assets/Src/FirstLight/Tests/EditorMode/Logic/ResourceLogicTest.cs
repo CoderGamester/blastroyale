@@ -1,3 +1,5 @@
+using FirstLight.Game.Services;
+using GameLovers.GameData;
 using System;
 using System.Collections.Generic;
 using FirstLight.Game.Configs;
@@ -110,7 +112,7 @@ namespace FirstLight.Tests.EditorMode.Logic
 
 		private void SetupPoolConfigs()
 		{
-			var nftList = new List<EquipmentInfo>
+			var additionalEquipment = new List<EquipmentInfo>
 			{
 				new()
 				{
@@ -144,7 +146,7 @@ namespace FirstLight.Tests.EditorMode.Logic
 				},
 			};
 
-			var nonNftList = new List<EquipmentInfo>
+			var ordinaryEquipment = new List<EquipmentInfo>
 			{
 				new()
 				{
@@ -179,8 +181,8 @@ namespace FirstLight.Tests.EditorMode.Logic
 			};
 
 			var bothList = new List<EquipmentInfo>();
-			bothList.AddRange(nftList);
-			bothList.AddRange(nonNftList);
+			bothList.AddRange(additionalEquipment);
+			bothList.AddRange(ordinaryEquipment);
 
 			_poolConfig = new ResourcePoolConfig
 			{
@@ -198,18 +200,14 @@ namespace FirstLight.Tests.EditorMode.Logic
 			};
 
 			GameLogic.PlayerLogic.Trophies.Returns(new ObservableField<uint>(1000));
-			GameLogic.EquipmentLogic.Loadout.Count.Returns(nftList.Count);
-			EquipmentLogic.GetInventoryEquipmentInfo(EquipmentFilter.NftOnlyNotOnCooldown).Returns(nftList);
-			EquipmentLogic.GetLoadoutEquipmentInfo(EquipmentFilter.NftOnlyNotOnCooldown).Returns(nftList);
-			EquipmentLogic.GetInventoryEquipmentInfo(EquipmentFilter.NoNftOnly).Returns(nonNftList);
-			EquipmentLogic.GetLoadoutEquipmentInfo(EquipmentFilter.NoNftOnly).Returns(nonNftList);
+			GameLogic.EquipmentLogic.Loadout.Count.Returns(additionalEquipment.Count);
 			EquipmentLogic.GetInventoryEquipmentInfo(EquipmentFilter.All).Returns(bothList);
 			EquipmentLogic.GetLoadoutEquipmentInfo(EquipmentFilter.All).Returns(bothList);
 
 			InitConfigData(_poolConfig);
 			InitConfigData(new QuantumGameConfig
 			{
-				NftAssumedOwned = 40, MinNftForPoolSizeBonus = 3,
+
 				EarningsAugmentationStrengthSteepnessMod = FP.FromString("3"),
 				EarningsAugmentationStrengthDropMod = FP.FromString("0.08")
 			});

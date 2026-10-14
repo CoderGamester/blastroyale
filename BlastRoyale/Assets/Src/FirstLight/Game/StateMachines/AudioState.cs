@@ -1,3 +1,4 @@
+using MainInstaller = FirstLight.Game.Utils.MainInstaller;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -11,8 +12,8 @@ using FirstLight.Game.MonoComponent.EntityPrototypes;
 using FirstLight.Game.MonoComponent.EntityViews;
 using FirstLight.Game.Services;
 using FirstLight.Game.Utils;
-using FirstLight.Services;
-using FirstLight.Statechart;
+using GameLovers.Services;
+using GameLovers.StatechartMachine;
 using Quantum;
 using UnityEngine;
 
@@ -69,7 +70,7 @@ namespace FirstLight.Game.StateMachines
 			var mainMenuStart = stateFactory.Transition("AUDIO - Main Menu Start");
 			var mainMenuLoop = stateFactory.State("AUDIO - Main Menu Loop");
 			var matchmaking = stateFactory.State("AUDIO - Matchmaking");
-			var gameModeCheck = stateFactory.Choice("AUDIO - Game Mode Check");
+			var gameModeCheck = stateFactory.Transition("AUDIO - Game Mode Check");
 			var battleRoyale = stateFactory.State("AUDIO - Battle Royale");
 			var postGame = stateFactory.State("AUDIO - Post Game");
 			var disconnected = stateFactory.State("AUDIO - Disconnected");

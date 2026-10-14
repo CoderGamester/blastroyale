@@ -1,5 +1,5 @@
 using System;
-using FirstLight.Services;
+using GameLovers.Services;
 
 namespace FirstLight.Tests.EditorMode
 {

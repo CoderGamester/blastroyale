@@ -1,3 +1,4 @@
+using MainInstaller = FirstLight.Game.Utils.MainInstaller;
 using System;
 using System.Diagnostics;
 using System.Linq;
@@ -15,8 +16,8 @@ using FirstLight.Game.TestCases;
 using FirstLight.Game.Utils;
 using FirstLight.Game.Utils.UCSExtensions;
 using FirstLight.Server.SDK.Modules;
-using FirstLight.Statechart;
-using I2.Loc;
+using GameLovers.StatechartMachine;
+using FirstLight.Game.Localization;
 using Photon.Deterministic;
 using PlayFab;
 using Quantum;
@@ -65,7 +66,7 @@ namespace FirstLight.Game.StateMachines
 			var battleRoyale = stateFactory.Nest("Battle Royale Mode");
 			var startSimulation = stateFactory.State("Start Simulation");
 			var stopSimulationForDisconnection = stateFactory.State("Stop Simulation");
-			var simulationInitializationError = stateFactory.Choice("Stop Simulation Initialization Error");
+			var simulationInitializationError = stateFactory.Transition("Stop Simulation Initialization Error");
 			var disconnected = stateFactory.State("Disconnected");
 			var disconnectedCritical = stateFactory.State("Disconnected Critical");
 
@@ -153,7 +154,7 @@ namespace FirstLight.Game.StateMachines
 					InGameNotificationDuration.Long);
 			}
 
-			_services.MessageBrokerService.Publish(new QuantumServerSimulationDisconnectedMessage()
+			_services.MessageBrokerService.PublishSafe(new QuantumServerSimulationDisconnectedMessage()
 			{
 				Reason = callback.Reason
 			});
@@ -213,7 +214,7 @@ namespace FirstLight.Game.StateMachines
 			{
 				if (!pc.RealPlayer)
 				{
-					_services.MessageBrokerService.Publish(new LeftBeforeMatchFinishedMessage());
+					_services.MessageBrokerService.PublishSafe(new LeftBeforeMatchFinishedMessage());
 					_statechartTrigger(LocalPlayerExitEvent);
 				}
 			}
@@ -321,7 +322,7 @@ namespace FirstLight.Game.StateMachines
 
 			QuantumRunner.StartGame(_services.NetworkService.UserId, startParams);
 
-			_services.MessageBrokerService.Publish(new MatchSimulationStartedMessage());
+			_services.MessageBrokerService.PublishSafe(new MatchSimulationStartedMessage());
 		}
 
 		private void CleanupFrame()
@@ -343,7 +344,7 @@ namespace FirstLight.Game.StateMachines
 				return;
 			}
 
-			_services.MessageBrokerService.Publish(new SimulationEndedMessage
+			_services.MessageBrokerService.PublishSafe(new SimulationEndedMessage
 			{
 				Game = QuantumRunner.Default.Game,
 				Reason = SimulationEndReason.Disconnected
@@ -362,7 +363,7 @@ namespace FirstLight.Game.StateMachines
 
 			await UniTask.WaitUntil(IsSimulationReady);
 
-			_services.MessageBrokerService.Publish(new MatchStartedMessage {Game = game, IsResync = isResync});
+			_services.MessageBrokerService.PublishSafe(new MatchStartedMessage {Game = game, IsResync = isResync});
 		}
 
 		private unsafe bool IsSimulationReady()
@@ -423,9 +424,9 @@ namespace FirstLight.Game.StateMachines
 			var useBotBehaviour = (FLGTestRunner.Instance.IsRunning() && FLGTestRunner.Instance.UseBotBehaviour) ||
 				FeatureFlags.GetLocalConfiguration().UseBotBehaviour;
 
-#if UNITY_EDITOR || (DEVELOPMENT_BUILD && !DISABLE_SRDEBUGGER)
+#if UNITY_EDITOR || DEVELOPMENT_BUILD
 
-			if (SROptions.Current != null && SROptions.Current.DontSendPlayerData)
+			if (DebugOptions.Current != null && DebugOptions.Current.DontSendPlayerData)
 			{
 				FLog.Warn("Not sending runtime player data. This is a hack for the local player, not an exception!");
 				return;

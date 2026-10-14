@@ -1,3 +1,6 @@
+using MainInstaller = FirstLight.Game.Utils.MainInstaller;
+using AssetResolverService = FirstLight.Game.Services.AssetResolverService;
+using RngData = FirstLight.Game.Data.RngData;
 using System;
 using System.IO;
 using System.Threading.Tasks;
@@ -12,9 +15,9 @@ using FirstLight.Game.StateMachines;
 using FirstLight.Game.Utils;
 using FirstLight.SDK.Modules;
 using FirstLight.Server.SDK.Modules.GameConfiguration;
-using FirstLight.Services;
+using GameLovers.Services;
 using FirstLight.UiService;
-using FirstLight.UIService;
+using FirstLight.Game.UI;
 using FirstLightServerSDK.Services;
 using NUnit.Framework;
 using PlayFab;
@@ -38,7 +41,7 @@ namespace FirstLight.Tests.EditorMode
 		protected ITimeManipulator TimeService;
 		protected IRemoteConfigProvider RemoteConfigProvider;
 		protected GameLogic TestLogic;
-		protected DataService TestData;
+		protected ClientDataService TestData;
 		protected ConfigsProvider TestConfigs;
 		protected GameStateMachine TestStates;
 		protected GameNetworkService TestNetwork;
@@ -60,7 +63,7 @@ namespace FirstLight.Tests.EditorMode
 		[SetUp]
 		public void Setup()
 		{
-			var messageBroker = new InMemoryMessageBrokerService();
+			var messageBroker = new MessageBrokerService();
 			TimeService = new TimeService();
 			RemoteConfigProvider = new UnityRemoteConfigProvider();
 			TestNetwork = new GameNetworkService(TestConfigs);
@@ -76,9 +79,6 @@ namespace FirstLight.Tests.EditorMode
 			TestLogic.Init();
 
 			TestStates = new GameStateMachine(TestLogic, TestServices, TestNetwork, TestAssetResolver);
-#if DEVELOPMENT_BUILD
-			Statechart.Statechart.OnStateTimed = null;
-#endif
 
 			FLog.Init();
 
@@ -108,12 +108,12 @@ namespace FirstLight.Tests.EditorMode
 			}
 		}
 
-		private DataService SetupPlayer(IConfigsProvider configs)
+		private ClientDataService SetupPlayer(IConfigsProvider configs)
 		{
 			TestPlayerId = Guid.NewGuid().ToString();
 			var playerSetup = new BlastRoyalePlayerSetup(configs);
 			var initialServerState = playerSetup.GetInitialState(TestPlayerId);
-			var data = new DataService();
+			var data = new ClientDataService();
 			data.AddData(initialServerState.DeserializeModel<PlayerData>());
 			data.AddData(initialServerState.DeserializeModel<EquipmentData>());
 			data.AddData(initialServerState.DeserializeModel<RngData>());
