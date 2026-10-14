@@ -45,7 +45,7 @@ AnimationClip:
     attribute: Rotation
     path: 
     classID: 114
-    script: {fileID: 11500000, guid: aa0453509f1a04d22ab32566f2dabfff, type: 3}
+    script: {fileID: 11500000, guid: 70739973d5a54145a36e1e370ebc7a87, type: 3}
     flags: 16
   m_PPtrCurves: []
   m_SampleRate: 60
@@ -105,7 +105,7 @@ AnimationClip:
     attribute: Rotation
     path: 
     classID: 114
-    script: {fileID: 11500000, guid: aa0453509f1a04d22ab32566f2dabfff, type: 3}
+    script: {fileID: 11500000, guid: 70739973d5a54145a36e1e370ebc7a87, type: 3}
     flags: 16
   m_EulerEditorCurves: []
   m_HasGenericRootTransform: 0
@@ -120,7 +120,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa0453509f1a04d22ab32566f2dabfff, type: 3}
+  m_Script: {fileID: 11500000, guid: 70739973d5a54145a36e1e370ebc7a87, type: 3}
   m_Name: UITRotationClip(Clone)(Clone)
   m_EditorClassIdentifier: 
   _template:
@@ -134,7 +134,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 597970daea4104996808b5e9505d5b58, type: 3}
+  m_Script: {fileID: 11500000, guid: 6685b7e72b8843e99db0cfbb86a78ac5, type: 3}
   m_Name: .paid-pass-icon__spark-small
   m_EditorClassIdentifier: 
   m_Version: 3
@@ -227,7 +227,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 597970daea4104996808b5e9505d5b58, type: 3}
+  m_Script: {fileID: 11500000, guid: 6685b7e72b8843e99db0cfbb86a78ac5, type: 3}
   m_Name: .paid-pass-icon
   m_EditorClassIdentifier: 
   m_Version: 3
@@ -356,7 +356,7 @@ AnimationClip:
     attribute: Rotation
     path: 
     classID: 114
-    script: {fileID: 11500000, guid: aa0453509f1a04d22ab32566f2dabfff, type: 3}
+    script: {fileID: 11500000, guid: 70739973d5a54145a36e1e370ebc7a87, type: 3}
     flags: 16
   m_PPtrCurves: []
   m_SampleRate: 60
@@ -416,7 +416,7 @@ AnimationClip:
     attribute: Rotation
     path: 
     classID: 114
-    script: {fileID: 11500000, guid: aa0453509f1a04d22ab32566f2dabfff, type: 3}
+    script: {fileID: 11500000, guid: 70739973d5a54145a36e1e370ebc7a87, type: 3}
     flags: 16
   m_EulerEditorCurves: []
   m_HasGenericRootTransform: 0
@@ -431,7 +431,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa0453509f1a04d22ab32566f2dabfff, type: 3}
+  m_Script: {fileID: 11500000, guid: 70739973d5a54145a36e1e370ebc7a87, type: 3}
   m_Name: UITRotationClip
   m_EditorClassIdentifier: 
   _template:
@@ -445,7 +445,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa3563c4c1576499f8f4740733a3495e, type: 3}
+  m_Script: {fileID: 11500000, guid: f4803d5894ab4403812457ce41049513, type: 3}
   m_Name: UITScaleClip(Clone)(Clone)(Clone)
   m_EditorClassIdentifier: 
   _template:
@@ -545,7 +545,7 @@ AnimationClip:
     attribute: Scale.y
     path: 
     classID: 114
-    script: {fileID: 11500000, guid: aa3563c4c1576499f8f4740733a3495e, type: 3}
+    script: {fileID: 11500000, guid: f4803d5894ab4403812457ce41049513, type: 3}
     flags: 16
   - serializedVersion: 2
     curve:
@@ -602,7 +602,7 @@ AnimationClip:
     attribute: Scale.x
     path: 
     classID: 114
-    script: {fileID: 11500000, guid: aa3563c4c1576499f8f4740733a3495e, type: 3}
+    script: {fileID: 11500000, guid: f4803d5894ab4403812457ce41049513, type: 3}
     flags: 16
   m_PPtrCurves: []
   m_SampleRate: 60
@@ -689,7 +689,7 @@ AnimationClip:
     attribute: Scale.y
     path: 
     classID: 114
-    script: {fileID: 11500000, guid: aa3563c4c1576499f8f4740733a3495e, type: 3}
+    script: {fileID: 11500000, guid: f4803d5894ab4403812457ce41049513, type: 3}
     flags: 16
   - serializedVersion: 2
     curve:
@@ -746,7 +746,7 @@ AnimationClip:
     attribute: Scale.x
     path: 
     classID: 114
-    script: {fileID: 11500000, guid: aa3563c4c1576499f8f4740733a3495e, type: 3}
+    script: {fileID: 11500000, guid: f4803d5894ab4403812457ce41049513, type: 3}
     flags: 16
   m_EulerEditorCurves: []
   m_HasGenericRootTransform: 0
@@ -761,7 +761,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 597970daea4104996808b5e9505d5b58, type: 3}
+  m_Script: {fileID: 11500000, guid: 6685b7e72b8843e99db0cfbb86a78ac5, type: 3}
   m_Name: .paid-pass-icon__spark-big
   m_EditorClassIdentifier: 
   m_Version: 3
@@ -855,7 +855,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0711fd2f2a50a4e80a194230787b64a8, type: 3}
+  m_Script: {fileID: 11500000, guid: 4c53469668944603b7823ea5a6e548cd, type: 3}
   m_Name: UITDisplayClip
   m_EditorClassIdentifier: 
   _template:
@@ -869,7 +869,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 597970daea4104996808b5e9505d5b58, type: 3}
+  m_Script: {fileID: 11500000, guid: 6685b7e72b8843e99db0cfbb86a78ac5, type: 3}
   m_Name: Layer 1
   m_EditorClassIdentifier: 
   m_Version: 3

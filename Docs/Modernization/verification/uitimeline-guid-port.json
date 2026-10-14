@@ -1,0 +1,389 @@
+{
+  "PinnedPublicPackage": "68e9114b94ba4a9123a4612d6fd6ce9fc98a7868",
+  "Applied": true,
+  "Mappings": [
+    {
+      "Type": "UITScaleClip",
+      "OldGuid": "aa3563c4c1576499f8f4740733a3495e",
+      "NativeGuid": "f4803d5894ab4403812457ce41049513"
+    },
+    {
+      "Type": "UITPositionClip",
+      "OldGuid": "fa3678c8e5d8241d8a144107daae27f3",
+      "NativeGuid": "01c49e5bbc074a0d9ce85b31c6cf16bb"
+    },
+    {
+      "Type": "UITOpacityClip",
+      "OldGuid": "cc53655b7c6ad47fe82d3435fd9e98c9",
+      "NativeGuid": "27556e11d4ef4f2eab9fc6e073a441e3"
+    },
+    {
+      "Type": "UITRotationClip",
+      "OldGuid": "aa0453509f1a04d22ab32566f2dabfff",
+      "NativeGuid": "70739973d5a54145a36e1e370ebc7a87"
+    },
+    {
+      "Type": "UITDisplayClip",
+      "OldGuid": "0711fd2f2a50a4e80a194230787b64a8",
+      "NativeGuid": "4c53469668944603b7823ea5a6e548cd"
+    },
+    {
+      "Type": "UITVisibilityClip",
+      "OldGuid": "d42d320888fca4d4aa04ce5f462925ff",
+      "NativeGuid": "9648ccf374d543dba9f532201fb9966d"
+    },
+    {
+      "Type": "UITVisualElementTrack",
+      "OldGuid": "597970daea4104996808b5e9505d5b58",
+      "NativeGuid": "6685b7e72b8843e99db0cfbb86a78ac5"
+    },
+    {
+      "Type": "DelayedPlayOnAwake",
+      "OldGuid": "0b70f5de3afb146aaa3619b2751db448",
+      "NativeGuid": "6eb16891808144bea2830016a0ed3700"
+    }
+  ],
+  "Files": [
+    {
+      "Path": "BlastRoyale/Assets/AddressableResources/UI/BattlePassScreen.prefab",
+      "BeforeSha256": "74c3294ffd838b19737a98372aef200ca466640787cbcca12d270681598b766e",
+      "AfterSha256": "27e6e1576dc28a0fe11745105e58a50bf58d9dca96136f35268aaea1613b6310",
+      "UnchangedMetaSha256": "497878529bd0f2e8c47c19708c5906a99dc3cf16ebdf61f86b458e71dafc9445",
+      "ReferenceCounts": {
+        "0b70f5de3afb146aaa3619b2751db448": 1
+      },
+      "AllOtherBytesUnchanged": true
+    },
+    {
+      "Path": "BlastRoyale/Assets/AddressableResources/UI/BattlePassSeasonBanner.prefab",
+      "BeforeSha256": "fd50485d2699b5bb0c60db9d54c1fc96a1ad01cf909414a0015ac162d0520f2e",
+      "AfterSha256": "715936be1cd36db3c90e202f9a8b63ea94a346d6b0f58710cc0861a42ca60d83",
+      "UnchangedMetaSha256": "c328e467a76641f7e87d332fc7872a046b4becae566710d1f88377cec39588bb",
+      "ReferenceCounts": {
+        "0b70f5de3afb146aaa3619b2751db448": 1
+      },
+      "AllOtherBytesUnchanged": true
+    },
+    {
+      "Path": "BlastRoyale/Assets/AddressableResources/UI/BattlePassSeasonBannerNew.prefab",
+      "BeforeSha256": "7751f41f2b6eecd5100d20c38043e176baa710946e4fee3aaebda70d9a1f2e9b",
+      "AfterSha256": "282195dfc77b4a8fae0a4fdcc4b75f2e741802cd6c0508af3b08a1863bbc0a76",
+      "UnchangedMetaSha256": "b2044af2ed5eae8a0bfd0a3abba95569b01ccfe55237e9d905d6de32c5c10d95",
+      "ReferenceCounts": {
+        "0b70f5de3afb146aaa3619b2751db448": 1
+      },
+      "AllOtherBytesUnchanged": true
+    },
+    {
+      "Path": "BlastRoyale/Assets/AddressableResources/UI/PreGameLoadingScreen.prefab",
+      "BeforeSha256": "fc77103ca788f8f569d2027da1365152784bbb0d0b60010b45362bab1034fb61",
+      "AfterSha256": "23903eb3fd5627c4ecab02de29fe8d54c720c89f3ce7904a3da053a0320fe112",
+      "UnchangedMetaSha256": "30100ddf01a147ca319da6cdd126db7dc3c1790efe742001108c12b9e05b8e45",
+      "ReferenceCounts": {
+        "0b70f5de3afb146aaa3619b2751db448": 1
+      },
+      "AllOtherBytesUnchanged": true
+    },
+    {
+      "Path": "BlastRoyale/Assets/AddressableResources/UI/ProductsBundleBanner.prefab",
+      "BeforeSha256": "e1dbc179a08e231c68cd88329ec400286775bd3f1f3888979f07ed92253f9bec",
+      "AfterSha256": "f0376e20dac58f42f848939c0cbd8686224b9bd8e2279eb8d68439b8597e34ed",
+      "UnchangedMetaSha256": "8eabd9c8c269d9f682e67149ff17e41a8a95799437938bfe6ed4c8280408e043",
+      "ReferenceCounts": {
+        "0b70f5de3afb146aaa3619b2751db448": 1
+      },
+      "AllOtherBytesUnchanged": true
+    },
+    {
+      "Path": "BlastRoyale/Assets/Art/Timelines/UI/PreGameLoadingScreenAnimationTimeline.playable",
+      "BeforeSha256": "3614c9c28eda9ebb413164ab6d793a521f2b6927ac2da242b2b9743742271483",
+      "AfterSha256": "916ed964ad5e6ce9f353ea310e85a9a0ed14f6b76fc233041b97f747d2a7b1e7",
+      "UnchangedMetaSha256": "3ee4670e8b26974948ed19ffcab38796d50aacd1fa65e2f99892fcf7cf9e681a",
+      "ReferenceCounts": {
+        "aa3563c4c1576499f8f4740733a3495e": 9,
+        "fa3678c8e5d8241d8a144107daae27f3": 3,
+        "cc53655b7c6ad47fe82d3435fd9e98c9": 10,
+        "0711fd2f2a50a4e80a194230787b64a8": 1,
+        "597970daea4104996808b5e9505d5b58": 8
+      },
+      "AllOtherBytesUnchanged": true
+    },
+    {
+      "Path": "BlastRoyale/Assets/Art/UI/Animations/AreaShrinkingTimeline.playable",
+      "BeforeSha256": "4b2ae9360155b806ed04d9cb28a857a53ee2ed32dc4773b6174ab10e877b0794",
+      "AfterSha256": "e6d83a58c2fbc59808f5a96c242be1a67a81afb3337d25ce594760b70a961111",
+      "UnchangedMetaSha256": "3af8f581ccac5f2f9a8c8a4d5629b0e3732ad249d46f92104668ae4076025af7",
+      "ReferenceCounts": {
+        "aa3563c4c1576499f8f4740733a3495e": 3,
+        "fa3678c8e5d8241d8a144107daae27f3": 3,
+        "cc53655b7c6ad47fe82d3435fd9e98c9": 3,
+        "0711fd2f2a50a4e80a194230787b64a8": 1,
+        "597970daea4104996808b5e9505d5b58": 4
+      },
+      "AllOtherBytesUnchanged": true
+    },
+    {
+      "Path": "BlastRoyale/Assets/Art/UI/Animations/BattlePassAnimationTimeline.playable",
+      "BeforeSha256": "0411c52c1325432e9a6d97469e2feea2347985fc7b5d3581d8b4d1fc127dfbad",
+      "AfterSha256": "170f4d31e23957825b4aea6d634c08e74a81a444f0004f04d1b6eb68bfe2a273",
+      "UnchangedMetaSha256": "44dcfb55c866a8166aa04939bec0faf8a48e3fe2fe385c75101b293e90cf45a6",
+      "ReferenceCounts": {
+        "aa3563c4c1576499f8f4740733a3495e": 5,
+        "aa0453509f1a04d22ab32566f2dabfff": 6,
+        "0711fd2f2a50a4e80a194230787b64a8": 1,
+        "597970daea4104996808b5e9505d5b58": 4
+      },
+      "AllOtherBytesUnchanged": true
+    },
+    {
+      "Path": "BlastRoyale/Assets/Art/UI/Animations/GameModeNewEvent.playable",
+      "BeforeSha256": "6c259ff2cd56dc9917becf35f7c12329be8afac8bde392bd10f8a8f0a00060e2",
+      "AfterSha256": "32cef92d98ef12592ef6c0ec5630af5257dd73f5288c4be3d1a535b32d3b42c6",
+      "UnchangedMetaSha256": "942e820d3934d902534cb407a40026ad0d8c781ca112b90c9aceb3f23b1a231e",
+      "ReferenceCounts": {
+        "aa3563c4c1576499f8f4740733a3495e": 9,
+        "fa3678c8e5d8241d8a144107daae27f3": 7,
+        "cc53655b7c6ad47fe82d3435fd9e98c9": 15,
+        "0711fd2f2a50a4e80a194230787b64a8": 2,
+        "d42d320888fca4d4aa04ce5f462925ff": 2,
+        "597970daea4104996808b5e9505d5b58": 16
+      },
+      "AllOtherBytesUnchanged": true
+    },
+    {
+      "Path": "BlastRoyale/Assets/Art/UI/Animations/Kill-1Timeline.playable",
+      "BeforeSha256": "a1bb188925d1e590207723c4bd97903cc1da91f34fe888b77deb65cc076f4340",
+      "AfterSha256": "948e234f88e3d47329565ecd201408366cb048d824a90472555892bc9d378c42",
+      "UnchangedMetaSha256": "d04fdfb71f19118a13d46bbe956dcccfbbcff4d8fc71060b10b4c7fd69528b95",
+      "ReferenceCounts": {
+        "aa3563c4c1576499f8f4740733a3495e": 9,
+        "fa3678c8e5d8241d8a144107daae27f3": 17,
+        "cc53655b7c6ad47fe82d3435fd9e98c9": 17,
+        "aa0453509f1a04d22ab32566f2dabfff": 5,
+        "0711fd2f2a50a4e80a194230787b64a8": 1,
+        "597970daea4104996808b5e9505d5b58": 21
+      },
+      "AllOtherBytesUnchanged": true
+    },
+    {
+      "Path": "BlastRoyale/Assets/Art/UI/Animations/Kill-2Timeline.playable",
+      "BeforeSha256": "f67ffd9154a41301eaa557fb765cf675b099e813744c0aefdf1bd71a30cc006f",
+      "AfterSha256": "01e2277e2dcb65260721d2b1f88743ed64cd8838996059b5bd166f81ef1f6baf",
+      "UnchangedMetaSha256": "d7e46a596582229b657ad7157d7db6a520abd2f4a6e46305eafe80b73f02c18b",
+      "ReferenceCounts": {
+        "aa3563c4c1576499f8f4740733a3495e": 14,
+        "fa3678c8e5d8241d8a144107daae27f3": 21,
+        "cc53655b7c6ad47fe82d3435fd9e98c9": 23,
+        "aa0453509f1a04d22ab32566f2dabfff": 7,
+        "0711fd2f2a50a4e80a194230787b64a8": 2,
+        "597970daea4104996808b5e9505d5b58": 30
+      },
+      "AllOtherBytesUnchanged": true
+    },
+    {
+      "Path": "BlastRoyale/Assets/Art/UI/Animations/Kill-3Timeline.playable",
+      "BeforeSha256": "f15af7f49b0aeaa91eb7fe30efb539c53f02c2a49362c2cbe7199ace5c622b41",
+      "AfterSha256": "9e179f75aa57fc4eda1bb848f957b0d8f2c8090069aca2205f459c6493447654",
+      "UnchangedMetaSha256": "facfc98d6cc0e60846ad15e3141d1fa9d59bee86f945cc13166927c28e3fd477",
+      "ReferenceCounts": {
+        "aa3563c4c1576499f8f4740733a3495e": 16,
+        "fa3678c8e5d8241d8a144107daae27f3": 24,
+        "cc53655b7c6ad47fe82d3435fd9e98c9": 30,
+        "aa0453509f1a04d22ab32566f2dabfff": 8,
+        "0711fd2f2a50a4e80a194230787b64a8": 3,
+        "597970daea4104996808b5e9505d5b58": 33
+      },
+      "AllOtherBytesUnchanged": true
+    },
+    {
+      "Path": "BlastRoyale/Assets/Art/UI/Animations/KillBeast-Timeline.playable",
+      "BeforeSha256": "750e07f241e5056983e82c0eb497f0bd538d1d3838f16d069f4c9e8c9a47f5a9",
+      "AfterSha256": "e78d16a987c7f5e64c946583efd2a7cc95514951bf9026bf2c71ba3a73581803",
+      "UnchangedMetaSha256": "e029c1b53cf9d32ac26bcf311a43f2e55e2eaa65726d997e356bfa05e059c811",
+      "ReferenceCounts": {
+        "aa3563c4c1576499f8f4740733a3495e": 14,
+        "fa3678c8e5d8241d8a144107daae27f3": 28,
+        "cc53655b7c6ad47fe82d3435fd9e98c9": 36,
+        "aa0453509f1a04d22ab32566f2dabfff": 15,
+        "0711fd2f2a50a4e80a194230787b64a8": 6,
+        "597970daea4104996808b5e9505d5b58": 45
+      },
+      "AllOtherBytesUnchanged": true
+    },
+    {
+      "Path": "BlastRoyale/Assets/Art/UI/Animations/KnockedOutTimeline.playable",
+      "BeforeSha256": "ebeb6955523f1a316c75c0be6db0fbdfc9793e885a23f1d0feb2f2723dd156a2",
+      "AfterSha256": "663a32538d6780e0b38cdd1e47981971df010149c023aebe2ef0971c7f9a6888",
+      "UnchangedMetaSha256": "3931c75f8c03fb1d0761b9047ccf3ca75162d488e8ac09fec49c26bbfeed248a",
+      "ReferenceCounts": {
+        "aa3563c4c1576499f8f4740733a3495e": 13,
+        "cc53655b7c6ad47fe82d3435fd9e98c9": 9,
+        "0711fd2f2a50a4e80a194230787b64a8": 1,
+        "597970daea4104996808b5e9505d5b58": 8
+      },
+      "AllOtherBytesUnchanged": true
+    },
+    {
+      "Path": "BlastRoyale/Assets/Art/UI/Animations/LevelUpNotificationTimeline.playable",
+      "BeforeSha256": "83f2b35b872e9b0cfa4296ae1f1ede81f9f37f2d7abb3dd10802bc3afa3aa46c",
+      "AfterSha256": "6bd02f3b8e350100f8790eb8763a61816a7e1ffd50d4a39a7ee48bb8fedf30cd",
+      "UnchangedMetaSha256": "fa56177ee75c70cff06efe413013a40cd4ab491fe3f1e9d8fdc2fd24862147f5",
+      "ReferenceCounts": {
+        "aa3563c4c1576499f8f4740733a3495e": 16,
+        "fa3678c8e5d8241d8a144107daae27f3": 9,
+        "cc53655b7c6ad47fe82d3435fd9e98c9": 15,
+        "aa0453509f1a04d22ab32566f2dabfff": 5,
+        "0711fd2f2a50a4e80a194230787b64a8": 6,
+        "597970daea4104996808b5e9505d5b58": 19
+      },
+      "AllOtherBytesUnchanged": true
+    },
+    {
+      "Path": "BlastRoyale/Assets/Art/UI/Animations/LoadingScreenAnimationTimeline.playable",
+      "BeforeSha256": "7bd0217b95d97f603471cd8ff1cac9709746fd72e2823387636ed2ead1107d69",
+      "AfterSha256": "91bb8748b1dd97ff44b2b8097f82428087801fbbd9af19b2e8970b3d0b27ec96",
+      "UnchangedMetaSha256": "016bf5abe90ea3de1ca7f6e542da57f3ff3eabac494ec9ea0d0a56e7156410f5",
+      "ReferenceCounts": {
+        "aa3563c4c1576499f8f4740733a3495e": 10,
+        "597970daea4104996808b5e9505d5b58": 2
+      },
+      "AllOtherBytesUnchanged": true
+    },
+    {
+      "Path": "BlastRoyale/Assets/Art/UI/Animations/MatchEndAnimations-Blasted.playable",
+      "BeforeSha256": "904f4d962c610341e473134794fe11f74c9c32375bb8b18bd14ca155f5bf4eab",
+      "AfterSha256": "9bd1654020209301102fb535e9623a2e8ebf0072deaff11e2b4bf86e023f30c3",
+      "UnchangedMetaSha256": "b4efd1d2aa1b6ccf1487662e59adb581f0ffa4cc3d89d3a9cacfb7a2b5111af4",
+      "ReferenceCounts": {
+        "aa3563c4c1576499f8f4740733a3495e": 6,
+        "fa3678c8e5d8241d8a144107daae27f3": 5,
+        "cc53655b7c6ad47fe82d3435fd9e98c9": 14,
+        "0711fd2f2a50a4e80a194230787b64a8": 1,
+        "597970daea4104996808b5e9505d5b58": 9
+      },
+      "AllOtherBytesUnchanged": true
+    },
+    {
+      "Path": "BlastRoyale/Assets/Art/UI/Animations/MatchEndAnimations-Win.playable",
+      "BeforeSha256": "a23e38521026adf5e69564d09e678a3130b07d3aba8546453cb057ebb08de167",
+      "AfterSha256": "aef51829991a9f2d54809296c1614b6cc92ddb7a6905c137729f702c4e9dbbd2",
+      "UnchangedMetaSha256": "1df276199b0d79cb2cc9f52b5dfee3b41540407f5ffb0d9e7c79312b6a0b0757",
+      "ReferenceCounts": {
+        "aa3563c4c1576499f8f4740733a3495e": 6,
+        "fa3678c8e5d8241d8a144107daae27f3": 12,
+        "cc53655b7c6ad47fe82d3435fd9e98c9": 34,
+        "aa0453509f1a04d22ab32566f2dabfff": 10,
+        "0711fd2f2a50a4e80a194230787b64a8": 3,
+        "597970daea4104996808b5e9505d5b58": 21
+      },
+      "AllOtherBytesUnchanged": true
+    },
+    {
+      "Path": "BlastRoyale/Assets/Art/UI/Animations/MaxConsumablesTimeline.playable",
+      "BeforeSha256": "28a4f7749e516c7fee87474ba5c96ad94dab165e77eb6f50caee38fe0060ce03",
+      "AfterSha256": "bbc775a1d55fc93ecd6134e19bfcdafbc089c66ec9f0a3cbd45e8d1a58b39f25",
+      "UnchangedMetaSha256": "2af16eb90026843d2a9ad631e3be31cbaf0a16ca80517c6ebfd88a533ab9c526",
+      "ReferenceCounts": {
+        "fa3678c8e5d8241d8a144107daae27f3": 3,
+        "cc53655b7c6ad47fe82d3435fd9e98c9": 3,
+        "0711fd2f2a50a4e80a194230787b64a8": 1,
+        "597970daea4104996808b5e9505d5b58": 3
+      },
+      "AllOtherBytesUnchanged": true
+    },
+    {
+      "Path": "BlastRoyale/Assets/Art/UI/Animations/ProductBundleBannerAnimation.playable",
+      "BeforeSha256": "d6bc67dc24828d7622173928b13ab894d70dd720be640435cbdd2a928cbedf32",
+      "AfterSha256": "7453b903e145b0bd2c05377b8113c0567144d4da46312aaab7968d90a5d4a434",
+      "UnchangedMetaSha256": "594abc96c844694409a371375d17e19804f5c5f2f085ce5f70a580ce14ac05f1",
+      "ReferenceCounts": {
+        "fa3678c8e5d8241d8a144107daae27f3": 6,
+        "cc53655b7c6ad47fe82d3435fd9e98c9": 16,
+        "597970daea4104996808b5e9505d5b58": 12
+      },
+      "AllOtherBytesUnchanged": true
+    },
+    {
+      "Path": "BlastRoyale/Assets/Art/UI/Animations/Rewards-Equipment.playable",
+      "BeforeSha256": "65d7d1c3dc6eb6255b0c8c24c10b3453ac1e3f4f211778c191a55d0b4f5cf854",
+      "AfterSha256": "f7cae796300833db604d89ad034cd1415d936f538b5ddae07937312b9e1444c0",
+      "UnchangedMetaSha256": "4288754d811b16bf9368bd26204949b19d165b2fff8988fb022e3fa75d2d53e2",
+      "ReferenceCounts": {
+        "aa3563c4c1576499f8f4740733a3495e": 67,
+        "fa3678c8e5d8241d8a144107daae27f3": 31,
+        "cc53655b7c6ad47fe82d3435fd9e98c9": 39,
+        "aa0453509f1a04d22ab32566f2dabfff": 9,
+        "0711fd2f2a50a4e80a194230787b64a8": 3,
+        "597970daea4104996808b5e9505d5b58": 46
+      },
+      "AllOtherBytesUnchanged": true
+    },
+    {
+      "Path": "BlastRoyale/Assets/Art/UI/Animations/Rewards-One.playable",
+      "BeforeSha256": "5c7d16843443dbfc0e5d31c5d146be5818458a5f2a864a45262358dcab473260",
+      "AfterSha256": "57731caf010da8539b2365e53192aad5fd8e49759c0e06999b33e518d6cf6f13",
+      "UnchangedMetaSha256": "0d9b6ebae88e4e958bf105b39f3228565c9ccc5f4fe31e136854b8bc107ce686",
+      "ReferenceCounts": {
+        "aa3563c4c1576499f8f4740733a3495e": 17,
+        "fa3678c8e5d8241d8a144107daae27f3": 10,
+        "cc53655b7c6ad47fe82d3435fd9e98c9": 19,
+        "aa0453509f1a04d22ab32566f2dabfff": 5,
+        "597970daea4104996808b5e9505d5b58": 25
+      },
+      "AllOtherBytesUnchanged": true
+    },
+    {
+      "Path": "BlastRoyale/Assets/Art/UI/Animations/Rewards-summary.playable",
+      "BeforeSha256": "4999f34b0adff2250023ee8f51b092f5d40fc5e0f94e56aaffbae0dfa92d7f80",
+      "AfterSha256": "cc8e91512fd5febce6729d171431c1f6ab4dc9fcb646d18defd7a1fdae9291c2",
+      "UnchangedMetaSha256": "5ca76668b91834af13aaa2c7ed1a8dfe3a5e0da22642b25fd8620e497ca34eff",
+      "ReferenceCounts": {
+        "fa3678c8e5d8241d8a144107daae27f3": 8,
+        "cc53655b7c6ad47fe82d3435fd9e98c9": 10,
+        "aa0453509f1a04d22ab32566f2dabfff": 3,
+        "d42d320888fca4d4aa04ce5f462925ff": 1,
+        "597970daea4104996808b5e9505d5b58": 11
+      },
+      "AllOtherBytesUnchanged": true
+    },
+    {
+      "Path": "BlastRoyale/Assets/Art/UI/Animations/SeasonBannerAnimation.playable",
+      "BeforeSha256": "30adc468e2744dba2963a5da0661bfeadd57d5246bff5ab0e3fe48c0254f2e61",
+      "AfterSha256": "44c7ab44e52fd44e01b3f7c12012077ab6e14782498b8814e2efae547a568a18",
+      "UnchangedMetaSha256": "febfa0361eb924364f252b4d17b1a02f4780b29d6dd3eed78ddfdf7a00a1143e",
+      "ReferenceCounts": {
+        "aa3563c4c1576499f8f4740733a3495e": 10,
+        "fa3678c8e5d8241d8a144107daae27f3": 24,
+        "cc53655b7c6ad47fe82d3435fd9e98c9": 24,
+        "597970daea4104996808b5e9505d5b58": 24
+      },
+      "AllOtherBytesUnchanged": true
+    },
+    {
+      "Path": "BlastRoyale/Assets/Art/UI/Animations/TeammateNeedsHelp.playable",
+      "BeforeSha256": "b0e04063781488703a2e3acdc1ea45c37fadbe65f352c62e5a072cd3dee22e00",
+      "AfterSha256": "8d555e94acfe1746d628af86a8de3f60b1b97ac043d47d07627fd87d354ccf6a",
+      "UnchangedMetaSha256": "d37eacec3df9ee4f1c3c3635630c06f0be6f700c1b2f19892887033c752b5385",
+      "ReferenceCounts": {
+        "aa3563c4c1576499f8f4740733a3495e": 12,
+        "cc53655b7c6ad47fe82d3435fd9e98c9": 9,
+        "0711fd2f2a50a4e80a194230787b64a8": 1,
+        "597970daea4104996808b5e9505d5b58": 8
+      },
+      "AllOtherBytesUnchanged": true
+    },
+    {
+      "Path": "BlastRoyale/Assets/Scenes/LoadingScreen.prefab",
+      "BeforeSha256": "a0e02a0256f14c409fe8901e770d53437d0e4d334809ea53df1c33ca66f7a805",
+      "AfterSha256": "bc9ceae2532646aaafcf7c4e212febf6bc65e73093242214f545447755906671",
+      "UnchangedMetaSha256": "74a10feb348a86c3c802abc12a27aad03785763b664459cf9a592695950dc4ab",
+      "ReferenceCounts": {
+        "0b70f5de3afb146aaa3619b2751db448": 1
+      },
+      "AllOtherBytesUnchanged": true
+    }
+  ],
+  "FileCount": 26,
+  "ReferenceCount": 1237,
+  "NativePlaybackAcceptance": "Separate native Editor run required"
+}
