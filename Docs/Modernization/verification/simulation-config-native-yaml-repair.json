@@ -1,0 +1,7 @@
+{
+  "Reason": "Restore native Unity required trailing separators on twenty empty Physics.Layers scalars after actual asset parser failure in Boot-to-match. All other bytes unchanged.",
+  "UnityPath": "Assets/AddressableResources/Configs/Settings/SimulationConfig.asset",
+  "BeforeSha256": "fbc747d24158780d9959e0f4defa0437584f3d066eba06e66c166431638966aa",
+  "AfterSha256": "d79f608cd7c5bfb1f16863da4db192c16cb94248bbeef443598d48b68eee1054",
+  "QuantumGuidUnchanged": 1565542650131154954
+}
