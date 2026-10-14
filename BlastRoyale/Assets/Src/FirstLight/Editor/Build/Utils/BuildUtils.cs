@@ -1,11 +1,8 @@
 using System;
-using System.Diagnostics;
-using System.IO;
 using FirstLight.Game.Utils;
 using JetBrains.Annotations;
 using UnityEditor;
 using UnityEngine;
-using Debug = UnityEngine.Debug;
 
 namespace FirstLight.Editor.Build.Utils
 {
@@ -33,7 +30,7 @@ namespace FirstLight.Editor.Build.Utils
 			GetEnvironment() == FLEnvironment.DEVELOPMENT.Name ? DateTime.UtcNow.ToString("yyyy.MM.dd.hh.mm.ss") : PlayerSettings.bundleVersion;
 
 		/// <summary>
-		/// Gets the current UCS / Backend environment, defaults to development.
+		/// Gets the configured client environment, defaults to development.
 		/// </summary>
 		public static string GetEnvironment()
 		{
@@ -42,7 +39,7 @@ namespace FirstLight.Editor.Build.Utils
 		}
 
 		/// <summary>
-		/// Gets the current build number. In UCS DevOps this is ADDED to the DevOps build number.
+		/// Gets the current build number. Defaults to 1 for local development.
 		/// </summary>
 		public static int GetBuildNumber()
 		{
@@ -65,17 +62,9 @@ namespace FirstLight.Editor.Build.Utils
 			return bool.Parse(Environment.GetEnvironmentVariable(ENVAR_REMOTE_ADDRESSABLES) ?? GetCMDArgument(ARG_REMOTE_ADDRESSABLES) ?? "false");
 		}
 
-		public static BuildTarget GetBuildTarget()
-		{
-			var buildTarget = BuildTarget.NoTarget;
-#if UNITY_ANDROID
-			buildTarget = BuildTarget.Android;
-#elif UNITY_IOS
-			buildTarget = BuildTarget.iOS;
-#endif
+		public static BuildTarget GetBuildTarget() => EditorUserBuildSettings.activeBuildTarget;
 
-			return buildTarget;
-		}
+		public static string GetOutputPath() => GetCMDArgument("-FLOutputPath");
 
 		private static string GetCMDArgument(string argumentName)
 		{
@@ -91,49 +80,5 @@ namespace FirstLight.Editor.Build.Utils
 			return null;
 		}
 
-		[UsedImplicitly]
-		[Conditional("UNITY_CLOUD_BUILD")]
-		public static void PreExport(UnityEngine.CloudBuild.BuildManifestObject manifest)
-		{
-			// In UCS DevOps we add the ENV build number to the cloud build number
-			var buildNumber = manifest.GetValue<int>("buildNumber") + GetBuildNumber();
-			Debug.Log("Setting build number to " + buildNumber);
-			PlayerSettings.Android.bundleVersionCode = buildNumber;
-			PlayerSettings.iOS.buildNumber = buildNumber.ToString();
-		}
-
-		public static void UpdateCloudDiagnosticEnable(bool enabled)
-		{
-			var projectDir = Path.GetDirectoryName(Application.dataPath) ?? "";
-			var assetFile = Path.Combine(projectDir, "ProjectSettings", "UnityConnectSettings.asset");
-			if (!File.Exists(assetFile))
-			{
-				Debug.LogError($"CloudBuildSettingsHelper._UpdateCloudDiagnosticEnable({enabled}) -> file {assetFile} does not exists");
-				return;
-			}
-
-			var lines = File.ReadAllLines(assetFile);
-			var isCrashReporting = false;
-			for (var i = 0; i < lines.Length; i++)
-			{
-				var line = lines[i];
-				if (isCrashReporting && line is "    m_Enabled: 1" or "    m_Enabled: 0")
-				{
-					var isEnabled = line == "    m_Enabled: 1";
-					if (isEnabled != enabled)
-					{
-						lines[i] = enabled ? "    m_Enabled: 1" : "    m_Enabled: 0";
-						File.WriteAllLines(assetFile, lines);
-					}
-
-					break;
-				}
-
-				if (line == "  CrashReportingSettings:")
-				{
-					isCrashReporting = true;
-				}
-			}
-		}
 	}
 }

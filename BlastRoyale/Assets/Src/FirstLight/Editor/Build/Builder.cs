@@ -1,6 +1,5 @@
 using System;
 using System.Collections.Generic;
-using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using FirstLight.Editor.Build.Utils;
@@ -56,7 +55,6 @@ namespace FirstLight.Editor.Build
 				BuildTarget = BuildUtils.GetBuildTarget(),
 				DevelopmentBuild = BuildUtils.GetIsDevelopmentBuild(),
 				RemoteAddressables = BuildUtils.GetUseRemoteAddressables(),
-				UploadSymbolsToUnity = true,
 			});
 
 			if (buildReport.summary.result != BuildResult.Succeeded)
@@ -71,7 +69,6 @@ namespace FirstLight.Editor.Build
 			public int BuildNumber;
 			public bool DevelopmentBuild;
 			public bool RemoteAddressables;
-			public bool UploadSymbolsToUnity;
 			public BuildOptions AdditionalOptions;
 		}
 
@@ -82,10 +79,15 @@ namespace FirstLight.Editor.Build
 			SetupBuildNumber(@params.BuildNumber);
 			SetupDevelopmentBuild(@params.DevelopmentBuild, ref buildConfig);
 			SetupAddressables(@params.RemoteAddressables);
-			SetupAndroidKeystore();
+			// Development APKs use Unity's debug keystore; store signing is separate.
+			if (@params.BuildTarget == BuildTarget.Android)
+			{
+				PlayerSettings.Android.useCustomKeystore = false;
+				EditorUserBuildSettings.buildAppBundle = false;
+				PlayerSettings.Android.splitApplicationBinary = false;
+			}
 			SetupScenes(ref buildConfig);
 			SetupPath(ref buildConfig, @params.BuildTarget);
-			BuildUtils.UpdateCloudDiagnosticEnable(@params.UploadSymbolsToUnity);
 			BuildAddressables(@params.DevelopmentBuild);
 
 			AssetDatabase.Refresh();
@@ -100,15 +102,14 @@ namespace FirstLight.Editor.Build
 
 		private static void SetupPath(ref BuildPlayerOptions buildConfig, BuildTarget buildTarget)
 		{
-			switch (buildTarget)
+			var directory = BuildUtils.GetOutputPath() ?? "Builds/" + buildTarget;
+			Directory.CreateDirectory(directory);
+			buildConfig.locationPathName = buildTarget switch
 			{
-				case BuildTarget.Android:
-					buildConfig.locationPathName = "BlastRoyale." + (EditorUserBuildSettings.buildAppBundle ? "aab" : "apk");
-					break;
-				case BuildTarget.iOS:
-					buildConfig.locationPathName = "BlastRoyale";
-					break;
-			}
+				BuildTarget.Android => Path.Combine(directory, "BlastRoyale.apk"),
+				BuildTarget.iOS => Path.Combine(directory, "BlastRoyale-Xcode"),
+				_ => throw new NotSupportedException("Select Android or iOS before building the mobile client.")
+			};
 		}
 
 		private static void SetupScenes(ref BuildPlayerOptions buildConfig)
@@ -130,50 +131,35 @@ namespace FirstLight.Editor.Build
 
 			var profileId = addressableSettings.profileSettings.GetProfileId(remoteAddressables ? "CCD" : "Default");
 
-			AddressableAssetSettingsDefaultObject.Settings.activeProfileId = profileId;
+			if (string.IsNullOrEmpty(profileId))
+				throw new InvalidOperationException("The selected Addressables profile does not exist.");
+			addressableSettings.activeProfileId = profileId;
 		}
 
 		internal static void BuildAddressables(bool enableDebugPackages)
 		{
-			if (!enableDebugPackages) RemoveDebugBundles();
-			AddressableAssetSettings.BuildPlayerContent(out var result);
-			if (!enableDebugPackages) AddDebugBundlesBack();
-			if (!string.IsNullOrEmpty(result.Error))
+			var settings = AddressableAssetSettingsDefaultObject.Settings;
+			if (settings == null) throw new InvalidOperationException("Addressables settings are missing.");
+			var changed = new Dictionary<BundledAssetGroupSchema, bool>();
+			try
 			{
-				throw new Exception(result.Error);
+				if (!enableDebugPackages)
+				{
+					foreach (var group in settings.groups)
+					{
+						if (group == null || group.ReadOnly || !(group.name.EndsWith("_Dev") || group.name.StartsWith("Dev_"))) continue;
+						var schema = group.GetSchema<BundledAssetGroupSchema>();
+						if (schema == null) continue;
+						changed.Add(schema, schema.IncludeInBuild);
+						schema.IncludeInBuild = false;
+					}
+				}
+				AddressableAssetSettings.BuildPlayerContent(out var result);
+				if (!string.IsNullOrEmpty(result.Error)) throw new InvalidOperationException(result.Error);
 			}
-		}
-
-		private static bool IsDebugGroup(AddressableAssetGroup assetGroup)
-		{
-			return !assetGroup.ReadOnly && (assetGroup.name.EndsWith("_Dev") || assetGroup.name.StartsWith("Dev_"));
-		}
-
-		private static void RemoveDebugBundles()
-		{
-			foreach (var group in AddressableAssetSettingsDefaultObject.Settings.groups)
+			finally
 			{
-				if (!IsDebugGroup(group)) continue;
-				var schema = group.GetSchema<BundledAssetGroupSchema>();
-				schema.IncludeInBuild = false;
-				schema.IncludeAddressInCatalog = false;
-				schema.IncludeLabelsInCatalog = false;
-				schema.IncludeGUIDInCatalog = false;
-				EditorUtility.SetDirty(schema);
-			}
-		}
-
-		private static void AddDebugBundlesBack()
-		{
-			foreach (var group in AddressableAssetSettingsDefaultObject.Settings.groups)
-			{
-				if (!IsDebugGroup(group)) continue;
-				var schema = group.GetSchema<BundledAssetGroupSchema>();
-				schema.IncludeInBuild = true;
-				schema.IncludeAddressInCatalog = true;
-				schema.IncludeLabelsInCatalog = false;
-				schema.IncludeGUIDInCatalog = true;
-				EditorUtility.SetDirty(schema);
+				foreach (var pair in changed) pair.Key.IncludeInBuild = pair.Value;
 			}
 		}
 
@@ -183,15 +169,5 @@ namespace FirstLight.Editor.Build
 			PlayerSettings.iOS.buildNumber = buildNumber.ToString();
 		}
 
-		[Conditional("UNITY_ANDROID")]
-		private static void SetupAndroidKeystore()
-		{
-			PlayerSettings.Android.useCustomKeystore = true;
-			PlayerSettings.Android.keystoreName =
-				Path.GetFullPath(Path.Combine(Application.dataPath, "..", "..", "Certificates", "firstlightgames.keystore"));
-			PlayerSettings.Android.keystorePass = "***REMOVED***";
-			PlayerSettings.Android.keyaliasName = "blastroyale";
-			PlayerSettings.Android.keyaliasPass = "***REMOVED***";
-		}
 	}
 }

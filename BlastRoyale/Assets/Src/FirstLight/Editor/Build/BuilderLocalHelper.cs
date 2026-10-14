@@ -55,8 +55,7 @@ namespace FirstLight.Editor.Build
 				BuildNumber = 1,
 				BuildTarget = BuildUtils.GetBuildTarget(),
 				DevelopmentBuild = false,
-				RemoteAddressables = true,
-				UploadSymbolsToUnity = true,
+				RemoteAddressables = false,
 			});
 		}
 
@@ -72,8 +71,7 @@ namespace FirstLight.Editor.Build
 				BuildNumber = 1,
 				BuildTarget = BuildUtils.GetBuildTarget(),
 				DevelopmentBuild = false,
-				RemoteAddressables = true,
-				UploadSymbolsToUnity = true,
+				RemoteAddressables = false,
 			});
 		}
 
@@ -84,10 +82,9 @@ namespace FirstLight.Editor.Build
 				BuildNumber = 1,
 				BuildTarget = BuildUtils.GetBuildTarget(),
 				DevelopmentBuild = true,
-				RemoteAddressables = true,
+				RemoteAddressables = false,
 				AdditionalOptions = BuildOptions.ConnectWithProfiler | BuildOptions.AutoRunPlayer | BuildOptions.WaitForPlayerConnection |
 					additionalFlags,
-				UploadSymbolsToUnity = false,
 			});
 		}
 	}

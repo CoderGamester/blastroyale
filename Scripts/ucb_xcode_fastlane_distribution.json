@@ -1,8 +1,0 @@
-{
-    "fastfile": "../Scripts/FastfileDist",
-    "gymfile": "../Scripts/GymfileDist",
-    "lanes": {
-        "pre_build": "use_notificationservice_profile",
-        "post_build": ""
-    }
-}
