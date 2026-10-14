@@ -1,0 +1,15 @@
+{
+  "Result": "Passed",
+  "NativeProcessExit": 0,
+  "Unity": "6000.3.26f1",
+  "UnsignedXcodeProject": true,
+  "Il2CppSources": true,
+  "CSharpErrors": 0,
+  "CSharpWarnings": 0,
+  "AuthoredUIImporterWarnings": 0,
+  "MobileScannerWarnings": 0,
+  "Addressables": "Passed",
+  "XcodeCompilation": "Not run",
+  "Signing": "Not run",
+  "DeviceTest": "Not run"
+}

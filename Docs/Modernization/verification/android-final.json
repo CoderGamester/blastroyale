@@ -1,0 +1,19 @@
+{
+  "Result": "Passed",
+  "NativeProcessExit": 0,
+  "Unity": "6000.3.26f1",
+  "Target": "Android",
+  "Development": true,
+  "ApkBytes": 454728221,
+  "ApkSha256": "ccae85aed5b4966b6578b19eae6751524c51976893c3619b52a59bf5c7471e0b",
+  "CSharpErrors": 0,
+  "CSharpWarnings": 0,
+  "UITKImportWarnings": 0,
+  "MobileScannerWarnings": 0,
+  "BundledAddressables": "Passed",
+  "DeviceTest": "Not run",
+  "RemainingNativeBuildWarnings": [],
+  "FinalBuildWarningLines": 0,
+  "AdaptiveIcons": "Allnativeadaptive layers populated; legacy/round overrides cleared",
+  "Scope": "Final incrementalAndroid afternativeicons/orphans/signals/UPMscanner; fullfirstnativecompilehad2Unitygeneratedclang argumentwarnings retainedhistorically"
+}
