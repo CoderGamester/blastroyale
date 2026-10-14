@@ -200,3 +200,9 @@ BlastRoyale/Quantum3MigrationAssets/
 BlastRoyale/Assets/QuantumUser/Editor/Generated/
 BlastRoyale/Assets/QuantumUser/View/Generated/
 __pycache__/
+
+# Local validation output; validation project source remains reviewable.
+Tools/Validation/**/bin/
+Tools/Validation/**/obj/
+Tools/Validation/**/generated/
+!Tools/Validation/**/*.csproj

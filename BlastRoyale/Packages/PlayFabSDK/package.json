@@ -1,0 +1,8 @@
+{
+  "name": "com.playfab.sdk",
+  "version": "2.244.260922",
+  "displayName": "PlayFab SDK",
+  "description": "Official Apache-2.0 PlayFab Unity SDK, source pinned to upstream commit 04e73b3a78ce1afbba9f3e003f3fe51ba77bd8bd.",
+  "unity": "2021.3",
+  "license": "Apache-2.0"
+}
