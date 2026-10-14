@@ -1,0 +1,2311 @@
+[
+  {
+    "Path": "AddressableResources/QuantumAssets/Characters/DummyCharacterEntityPrototype",
+    "Guid": 754640765234653046,
+    "Components": [
+      {
+        "Type": "Quantum.Prototypes.Transform2DPrototype",
+        "Data": {
+          "Position": {
+            "X": {
+              "RawValue": 0
+            },
+            "Y": {
+              "RawValue": 0
+            }
+          },
+          "Rotation": {
+            "RawValue": 0
+          }
+        }
+      },
+      {
+        "Type": "Quantum.Prototypes.PhysicsCollider2DPrototype",
+        "Data": {
+          "ShapeConfig": {
+            "ShapeType": 1,
+            "PolygonCollider": {
+              "Id": {
+                "Value": 0
+              }
+            },
+            "CircleRadius": {
+              "RawValue": 32768
+            },
+            "CapsuleSize": {
+              "X": {
+                "RawValue": 65536
+              },
+              "Y": {
+                "RawValue": 131072
+              }
+            },
+            "EdgeExtent": {
+              "RawValue": 0
+            },
+            "BoxExtents": {
+              "X": {
+                "RawValue": 26214
+              },
+              "Y": {
+                "RawValue": 26214
+              }
+            },
+            "PositionOffset": {
+              "X": {
+                "RawValue": 0
+              },
+              "Y": {
+                "RawValue": 0
+              }
+            },
+            "RotationOffset": {
+              "RawValue": 0
+            },
+            "UserTag": 0,
+            "IsPersistent": true,
+            "CompoundShapes": []
+          },
+          "Layer": 9,
+          "IsTrigger": false,
+          "PhysicsMaterial": {
+            "Id": {
+              "Value": 0
+            }
+          }
+        }
+      },
+      {
+        "Type": "Quantum.Prototypes.PhysicsCallbacks2DPrototype",
+        "Data": {
+          "CallbackFlags": {
+            "Value": 448
+          }
+        }
+      },
+      {
+        "Type": "Quantum.Prototypes.ViewPrototype",
+        "Data": {
+          "Current": {
+            "Id": {
+              "Value": 4506913672909982829
+            }
+          }
+        }
+      },
+      {
+        "Type": "Quantum.Prototypes.DummyCharacterPrototype",
+        "Data": {
+          "Health": {
+            "RawValue": 6553600
+          },
+          "Shields": {
+            "RawValue": 0
+          },
+          "PlayerReference": 0
+        }
+      }
+    ],
+    "CanonicalStorageMatchesNativeSourceReconstruction": true
+  },
+  {
+    "Path": "AddressableResources/QuantumAssets/Collectables/EquipmentPickupEntityPrototype",
+    "Guid": 4070827363264793974,
+    "Components": [
+      {
+        "Type": "Quantum.Prototypes.Transform2DPrototype",
+        "Data": {
+          "Position": {
+            "X": {
+              "RawValue": 0
+            },
+            "Y": {
+              "RawValue": 0
+            }
+          },
+          "Rotation": {
+            "RawValue": 0
+          }
+        }
+      },
+      {
+        "Type": "Quantum.Prototypes.PhysicsCollider2DPrototype",
+        "Data": {
+          "ShapeConfig": {
+            "ShapeType": 1,
+            "PolygonCollider": {
+              "Id": {
+                "Value": 0
+              }
+            },
+            "CircleRadius": {
+              "RawValue": 0
+            },
+            "CapsuleSize": {
+              "X": {
+                "RawValue": 65536
+              },
+              "Y": {
+                "RawValue": 131072
+              }
+            },
+            "EdgeExtent": {
+              "RawValue": 0
+            },
+            "BoxExtents": {
+              "X": {
+                "RawValue": 0
+              },
+              "Y": {
+                "RawValue": 0
+              }
+            },
+            "PositionOffset": {
+              "X": {
+                "RawValue": 0
+              },
+              "Y": {
+                "RawValue": 0
+              }
+            },
+            "RotationOffset": {
+              "RawValue": 0
+            },
+            "UserTag": 0,
+            "IsPersistent": true,
+            "CompoundShapes": []
+          },
+          "Layer": 11,
+          "IsTrigger": true,
+          "PhysicsMaterial": {
+            "Id": {
+              "Value": 0
+            }
+          }
+        }
+      },
+      {
+        "Type": "Quantum.Prototypes.PhysicsCallbacks2DPrototype",
+        "Data": {
+          "CallbackFlags": {
+            "Value": 0
+          }
+        }
+      },
+      {
+        "Type": "Quantum.Prototypes.ViewPrototype",
+        "Data": {
+          "Current": {
+            "Id": {
+              "Value": 3715608968879547668
+            }
+          }
+        }
+      },
+      {
+        "Type": "Quantum.Prototypes.EquipmentCollectablePrototype",
+        "Data": {
+          "Item": {
+            "GameId": {
+              "Value": 0
+            },
+            "Rarity": {
+              "Value": 0
+            },
+            "Material": {
+              "Value": 0
+            },
+            "Level": 0,
+            "Edition": {
+              "Value": 0
+            },
+            "Grade": {
+              "Value": 0
+            },
+            "Faction": {
+              "Value": 0
+            },
+            "Adjective": {
+              "Value": 0
+            }
+          },
+          "Owner": {
+            "_index": 0
+          }
+        }
+      }
+    ],
+    "CanonicalStorageMatchesNativeSourceReconstruction": true
+  },
+  {
+    "Path": "AddressableResources/QuantumAssets/Destructibles/LandmineEntityPrototype",
+    "Guid": 182712282339768594,
+    "Components": [
+      {
+        "Type": "Quantum.Prototypes.Transform2DPrototype",
+        "Data": {
+          "Position": {
+            "X": {
+              "RawValue": 0
+            },
+            "Y": {
+              "RawValue": 0
+            }
+          },
+          "Rotation": {
+            "RawValue": 0
+          }
+        }
+      },
+      {
+        "Type": "Quantum.Prototypes.PhysicsCollider2DPrototype",
+        "Data": {
+          "ShapeConfig": {
+            "ShapeType": 1,
+            "PolygonCollider": {
+              "Id": {
+                "Value": 0
+              }
+            },
+            "CircleRadius": {
+              "RawValue": 30801
+            },
+            "CapsuleSize": {
+              "X": {
+                "RawValue": 65536
+              },
+              "Y": {
+                "RawValue": 131072
+              }
+            },
+            "EdgeExtent": {
+              "RawValue": 0
+            },
+            "BoxExtents": {
+              "X": {
+                "RawValue": 0
+              },
+              "Y": {
+                "RawValue": 0
+              }
+            },
+            "PositionOffset": {
+              "X": {
+                "RawValue": 0
+              },
+              "Y": {
+                "RawValue": 0
+              }
+            },
+            "RotationOffset": {
+              "RawValue": 0
+            },
+            "UserTag": 0,
+            "IsPersistent": true,
+            "CompoundShapes": []
+          },
+          "Layer": 0,
+          "IsTrigger": true,
+          "PhysicsMaterial": {
+            "Id": {
+              "Value": 0
+            }
+          }
+        }
+      },
+      {
+        "Type": "Quantum.Prototypes.PhysicsCallbacks2DPrototype",
+        "Data": {
+          "CallbackFlags": {
+            "Value": 128
+          }
+        }
+      },
+      {
+        "Type": "Quantum.Prototypes.ViewPrototype",
+        "Data": {
+          "Current": {
+            "Id": {
+              "Value": 818657459238887235
+            }
+          }
+        }
+      },
+      {
+        "Type": "Quantum.Prototypes.LandMinePrototype",
+        "Data": {
+          "Owner": {
+            "SceneIndexPlusOne": 0
+          },
+          "TriggeredTime": {
+            "RawValue": 0
+          },
+          "TriggerableAfter": {
+            "RawValue": 0
+          },
+          "Radius": {
+            "RawValue": 0
+          },
+          "Damage": 0,
+          "AutoTrigerred": {
+            "Value": 0
+          }
+        }
+      }
+    ],
+    "CanonicalStorageMatchesNativeSourceReconstruction": true
+  },
+  {
+    "Path": "AddressableResources/QuantumAssets/Spawners/LegacyWeaponPlatformSpawnerEntityPrototype",
+    "Guid": 3423522033009671601,
+    "Components": [
+      {
+        "Type": "Quantum.Prototypes.Transform2DPrototype",
+        "Data": {
+          "Position": {
+            "X": {
+              "RawValue": 0
+            },
+            "Y": {
+              "RawValue": 0
+            }
+          },
+          "Rotation": {
+            "RawValue": 0
+          }
+        }
+      },
+      {
+        "Type": "Quantum.Prototypes.ViewPrototype",
+        "Data": {
+          "Current": {
+            "Id": {
+              "Value": 507213235080836660
+            }
+          }
+        }
+      },
+      {
+        "Type": "Quantum.Prototypes.CollectablePlatformSpawnerPrototype",
+        "Data": {
+          "Collectable": {
+            "SceneIndexPlusOne": 0
+          },
+          "NextSpawnTime": {
+            "RawValue": 0
+          },
+          "SpawnCount": 0,
+          "RespawnTimeInSec": 10,
+          "InitialSpawnDelayInSec": 5,
+          "GameId": {
+            "Value": 0
+          },
+          "RarityModifier": 0,
+          "Disabled": {
+            "Value": 0
+          },
+          "DoNotDestroy": {
+            "Value": 0
+          }
+        }
+      }
+    ],
+    "CanonicalStorageMatchesNativeSourceReconstruction": true
+  },
+  {
+    "Path": "AddressableResources/QuantumAssets/Spawners/PlayerSpawnerEntityPrototype",
+    "Guid": 2194276554936782103,
+    "Components": [
+      {
+        "Type": "Quantum.Prototypes.Transform2DPrototype",
+        "Data": {
+          "Position": {
+            "X": {
+              "RawValue": -1605632
+            },
+            "Y": {
+              "RawValue": 147456
+            }
+          },
+          "Rotation": {
+            "RawValue": 0
+          }
+        }
+      },
+      {
+        "Type": "Quantum.Prototypes.ViewPrototype",
+        "Data": {
+          "Current": {
+            "Id": {
+              "Value": 1469853357981699320
+            }
+          }
+        }
+      },
+      {
+        "Type": "Quantum.Prototypes.PlayerSpawnerPrototype",
+        "Data": {
+          "SpawnerType": {
+            "Value": 0
+          },
+          "BehaviourType": {
+            "Value": 0
+          }
+        }
+      }
+    ],
+    "CanonicalStorageMatchesNativeSourceReconstruction": true
+  },
+  {
+    "Path": "AddressableResources/QuantumAssets/Characters/PlayerCharacterEntityPrototype",
+    "Guid": 1494014866598569848,
+    "Components": [
+      {
+        "Type": "Quantum.Prototypes.Transform2DPrototype",
+        "Data": {
+          "Position": {
+            "X": {
+              "RawValue": 0
+            },
+            "Y": {
+              "RawValue": 0
+            }
+          },
+          "Rotation": {
+            "RawValue": 0
+          }
+        }
+      },
+      {
+        "Type": "Quantum.Prototypes.PhysicsCollider2DPrototype",
+        "Data": {
+          "ShapeConfig": {
+            "ShapeType": 4,
+            "PolygonCollider": {
+              "Id": {
+                "Value": 0
+              }
+            },
+            "CircleRadius": {
+              "RawValue": 22937
+            },
+            "CapsuleSize": {
+              "X": {
+                "RawValue": 65536
+              },
+              "Y": {
+                "RawValue": 131072
+              }
+            },
+            "EdgeExtent": {
+              "RawValue": 0
+            },
+            "BoxExtents": {
+              "X": {
+                "RawValue": 34734
+              },
+              "Y": {
+                "RawValue": 20971
+              }
+            },
+            "PositionOffset": {
+              "X": {
+                "RawValue": 10485
+              },
+              "Y": {
+                "RawValue": 15073
+              }
+            },
+            "RotationOffset": {
+              "RawValue": -7760773
+            },
+            "UserTag": 0,
+            "IsPersistent": true,
+            "CompoundShapes": [
+              {
+                "ShapeType": 1,
+                "PolygonCollider": {
+                  "Id": {
+                    "Value": 0
+                  }
+                },
+                "CircleRadius": {
+                  "RawValue": 26214
+                },
+                "CapsuleSize": {
+                  "X": {
+                    "RawValue": 0
+                  },
+                  "Y": {
+                    "RawValue": 0
+                  }
+                },
+                "EdgeExtent": {
+                  "RawValue": 0
+                },
+                "BoxExtents": {
+                  "X": {
+                    "RawValue": 0
+                  },
+                  "Y": {
+                    "RawValue": 0
+                  }
+                },
+                "PositionOffset": {
+                  "X": {
+                    "RawValue": 0
+                  },
+                  "Y": {
+                    "RawValue": 0
+                  }
+                },
+                "RotationOffset": {
+                  "RawValue": 0
+                },
+                "UserTag": 0,
+                "IsSetFromSourceCollider": false
+              },
+              {
+                "ShapeType": 1,
+                "PolygonCollider": {
+                  "Id": {
+                    "Value": 0
+                  }
+                },
+                "CircleRadius": {
+                  "RawValue": 24903
+                },
+                "CapsuleSize": {
+                  "X": {
+                    "RawValue": 0
+                  },
+                  "Y": {
+                    "RawValue": 0
+                  }
+                },
+                "EdgeExtent": {
+                  "RawValue": 0
+                },
+                "BoxExtents": {
+                  "X": {
+                    "RawValue": 0
+                  },
+                  "Y": {
+                    "RawValue": 0
+                  }
+                },
+                "PositionOffset": {
+                  "X": {
+                    "RawValue": 16384
+                  },
+                  "Y": {
+                    "RawValue": 28835
+                  }
+                },
+                "RotationOffset": {
+                  "RawValue": 0
+                },
+                "UserTag": 0,
+                "IsSetFromSourceCollider": false
+              }
+            ]
+          },
+          "Layer": 12,
+          "IsTrigger": false,
+          "PhysicsMaterial": {
+            "Id": {
+              "Value": 0
+            }
+          }
+        }
+      },
+      {
+        "Type": "Quantum.Prototypes.PhysicsCallbacks2DPrototype",
+        "Data": {
+          "CallbackFlags": {
+            "Value": 448
+          }
+        }
+      },
+      {
+        "Type": "Quantum.Prototypes.ViewPrototype",
+        "Data": {
+          "Current": {
+            "Id": {
+              "Value": 2190570854744983118
+            }
+          }
+        }
+      },
+      {
+        "Type": "Quantum.Prototypes.PlayerCharacterPrototype",
+        "Data": {
+          "HfsmRootRef": {
+            "Id": {
+              "Value": 4254173332751555565
+            }
+          },
+          "BlackboardRef": {
+            "Id": {
+              "Value": 2204164627415752385
+            }
+          },
+          "ProjectileSpawnOffset": {
+            "X": {
+              "RawValue": 0
+            },
+            "Y": {
+              "RawValue": 26214
+            }
+          },
+          "Player": {
+            "_index": 0
+          },
+          "TeamId": 0,
+          "CurrentWeaponSlot": 0,
+          "WeaponSlots": [
+            {
+              "Weapon": {
+                "GameId": {
+                  "Value": 0
+                },
+                "Rarity": {
+                  "Value": 0
+                },
+                "Material": {
+                  "Value": 0
+                },
+                "Level": 0,
+                "Edition": {
+                  "Value": 0
+                },
+                "Grade": {
+                  "Value": 0
+                },
+                "Faction": {
+                  "Value": 0
+                },
+                "Adjective": {
+                  "Value": 0
+                }
+              },
+              "MagazineShotCount": 0,
+              "MagazineSize": 0,
+              "ReloadTime": {
+                "RawValue": 0
+              }
+            },
+            {
+              "Weapon": {
+                "GameId": {
+                  "Value": 0
+                },
+                "Rarity": {
+                  "Value": 0
+                },
+                "Material": {
+                  "Value": 0
+                },
+                "Level": 0,
+                "Edition": {
+                  "Value": 0
+                },
+                "Grade": {
+                  "Value": 0
+                },
+                "Faction": {
+                  "Value": 0
+                },
+                "Adjective": {
+                  "Value": 0
+                }
+              },
+              "MagazineShotCount": 0,
+              "MagazineSize": 0,
+              "ReloadTime": {
+                "RawValue": 0
+              }
+            },
+            {
+              "Weapon": {
+                "GameId": {
+                  "Value": 0
+                },
+                "Rarity": {
+                  "Value": 0
+                },
+                "Material": {
+                  "Value": 0
+                },
+                "Level": 0,
+                "Edition": {
+                  "Value": 0
+                },
+                "Grade": {
+                  "Value": 0
+                },
+                "Faction": {
+                  "Value": 0
+                },
+                "Adjective": {
+                  "Value": 0
+                }
+              },
+              "MagazineShotCount": 0,
+              "MagazineSize": 0,
+              "ReloadTime": {
+                "RawValue": 0
+              }
+            }
+          ],
+          "RealPlayer": {
+            "Value": 0
+          },
+          "InputSnapshot": 0,
+          "LastNoInputTimeSnapshot": {
+            "RawValue": 0
+          }
+        }
+      },
+      {
+        "Type": "Quantum.Prototypes.PlayerInventoryPrototype",
+        "Data": {
+          "Specials": [
+            {
+              "SpecialId": {
+                "Value": 0
+              },
+              "SpecialType": {
+                "Value": 0
+              },
+              "InitialCooldown": {
+                "RawValue": 0
+              },
+              "Cooldown": {
+                "RawValue": 0
+              },
+              "Radius": {
+                "RawValue": 0
+              },
+              "SpecialPower": {
+                "RawValue": 0
+              },
+              "Speed": {
+                "RawValue": 0
+              },
+              "MinRange": {
+                "RawValue": 0
+              },
+              "MaxRange": {
+                "RawValue": 0
+              },
+              "AvailableTime": {
+                "RawValue": 0
+              },
+              "Charges": 0,
+              "Knockback": 0
+            },
+            {
+              "SpecialId": {
+                "Value": 0
+              },
+              "SpecialType": {
+                "Value": 0
+              },
+              "InitialCooldown": {
+                "RawValue": 0
+              },
+              "Cooldown": {
+                "RawValue": 0
+              },
+              "Radius": {
+                "RawValue": 0
+              },
+              "SpecialPower": {
+                "RawValue": 0
+              },
+              "Speed": {
+                "RawValue": 0
+              },
+              "MinRange": {
+                "RawValue": 0
+              },
+              "MaxRange": {
+                "RawValue": 0
+              },
+              "AvailableTime": {
+                "RawValue": 0
+              },
+              "Charges": 0,
+              "Knockback": 0
+            }
+          ]
+        }
+      },
+      {
+        "Type": "Quantum.Prototypes.RevivablePrototype",
+        "Data": {
+          "TimesKnockedOut": 0,
+          "RecoverMoveSpeedAfter": {
+            "RawValue": 0
+          }
+        }
+      }
+    ],
+    "CanonicalStorageMatchesNativeSourceReconstruction": true
+  },
+  {
+    "Path": "AddressableResources/QuantumAssets/Collectables/AirDropEntityPrototype",
+    "Guid": 515801528670249359,
+    "Components": [
+      {
+        "Type": "Quantum.Prototypes.Transform2DPrototype",
+        "Data": {
+          "Position": {
+            "X": {
+              "RawValue": 0
+            },
+            "Y": {
+              "RawValue": 0
+            }
+          },
+          "Rotation": {
+            "RawValue": 0
+          }
+        }
+      },
+      {
+        "Type": "Quantum.Prototypes.PhysicsCollider2DPrototype",
+        "Data": {
+          "ShapeConfig": {
+            "ShapeType": 1,
+            "PolygonCollider": {
+              "Id": {
+                "Value": 0
+              }
+            },
+            "CircleRadius": {
+              "RawValue": 65536
+            },
+            "CapsuleSize": {
+              "X": {
+                "RawValue": 65536
+              },
+              "Y": {
+                "RawValue": 131072
+              }
+            },
+            "EdgeExtent": {
+              "RawValue": 0
+            },
+            "BoxExtents": {
+              "X": {
+                "RawValue": 0
+              },
+              "Y": {
+                "RawValue": 0
+              }
+            },
+            "PositionOffset": {
+              "X": {
+                "RawValue": 0
+              },
+              "Y": {
+                "RawValue": 0
+              }
+            },
+            "RotationOffset": {
+              "RawValue": 0
+            },
+            "UserTag": 0,
+            "IsPersistent": true,
+            "CompoundShapes": []
+          },
+          "Layer": 11,
+          "IsTrigger": true,
+          "PhysicsMaterial": {
+            "Id": {
+              "Value": 0
+            }
+          }
+        }
+      },
+      {
+        "Type": "Quantum.Prototypes.PhysicsCallbacks2DPrototype",
+        "Data": {
+          "CallbackFlags": {
+            "Value": 448
+          }
+        }
+      },
+      {
+        "Type": "Quantum.Prototypes.ViewPrototype",
+        "Data": {
+          "Current": {
+            "Id": {
+              "Value": 2526948452384311002
+            }
+          }
+        }
+      }
+    ],
+    "CanonicalStorageMatchesNativeSourceReconstruction": true
+  },
+  {
+    "Path": "AddressableResources/QuantumAssets/Projectiles/RocketBulletEntityPrototype",
+    "Guid": 1613285068775141220,
+    "Components": [
+      {
+        "Type": "Quantum.Prototypes.Transform2DPrototype",
+        "Data": {
+          "Position": {
+            "X": {
+              "RawValue": 0
+            },
+            "Y": {
+              "RawValue": -655
+            }
+          },
+          "Rotation": {
+            "RawValue": 0
+          }
+        }
+      },
+      {
+        "Type": "Quantum.Prototypes.PhysicsCollider2DPrototype",
+        "Data": {
+          "ShapeConfig": {
+            "ShapeType": 4,
+            "PolygonCollider": {
+              "Id": {
+                "Value": 0
+              }
+            },
+            "CircleRadius": {
+              "RawValue": 0
+            },
+            "CapsuleSize": {
+              "X": {
+                "RawValue": 65536
+              },
+              "Y": {
+                "RawValue": 131072
+              }
+            },
+            "EdgeExtent": {
+              "RawValue": 0
+            },
+            "BoxExtents": {
+              "X": {
+                "RawValue": 11769
+              },
+              "Y": {
+                "RawValue": 52425
+              }
+            },
+            "PositionOffset": {
+              "X": {
+                "RawValue": 0
+              },
+              "Y": {
+                "RawValue": 0
+              }
+            },
+            "RotationOffset": {
+              "RawValue": 0
+            },
+            "UserTag": 0,
+            "IsPersistent": true,
+            "CompoundShapes": []
+          },
+          "Layer": 7,
+          "IsTrigger": true,
+          "PhysicsMaterial": {
+            "Id": {
+              "Value": 0
+            }
+          }
+        }
+      },
+      {
+        "Type": "Quantum.Prototypes.PhysicsCallbacks2DPrototype",
+        "Data": {
+          "CallbackFlags": {
+            "Value": 1152
+          }
+        }
+      },
+      {
+        "Type": "Quantum.Prototypes.ViewPrototype",
+        "Data": {
+          "Current": {
+            "Id": {
+              "Value": 3325644595429681825
+            }
+          }
+        }
+      }
+    ],
+    "CanonicalStorageMatchesNativeSourceReconstruction": true
+  },
+  {
+    "Path": "AddressableResources/QuantumAssets/Projectiles/RocketExplosionEntityPrototype",
+    "Guid": 382184530423860433,
+    "Components": [
+      {
+        "Type": "Quantum.Prototypes.Transform2DPrototype",
+        "Data": {
+          "Position": {
+            "X": {
+              "RawValue": 0
+            },
+            "Y": {
+              "RawValue": 0
+            }
+          },
+          "Rotation": {
+            "RawValue": 0
+          }
+        }
+      },
+      {
+        "Type": "Quantum.Prototypes.PhysicsCollider2DPrototype",
+        "Data": {
+          "ShapeConfig": {
+            "ShapeType": 1,
+            "PolygonCollider": {
+              "Id": {
+                "Value": 0
+              }
+            },
+            "CircleRadius": {
+              "RawValue": 157286
+            },
+            "CapsuleSize": {
+              "X": {
+                "RawValue": 65536
+              },
+              "Y": {
+                "RawValue": 131072
+              }
+            },
+            "EdgeExtent": {
+              "RawValue": 0
+            },
+            "BoxExtents": {
+              "X": {
+                "RawValue": 6553
+              },
+              "Y": {
+                "RawValue": 26214
+              }
+            },
+            "PositionOffset": {
+              "X": {
+                "RawValue": 0
+              },
+              "Y": {
+                "RawValue": 0
+              }
+            },
+            "RotationOffset": {
+              "RawValue": 0
+            },
+            "UserTag": 0,
+            "IsPersistent": true,
+            "CompoundShapes": []
+          },
+          "Layer": 10,
+          "IsTrigger": true,
+          "PhysicsMaterial": {
+            "Id": {
+              "Value": 0
+            }
+          }
+        }
+      },
+      {
+        "Type": "Quantum.Prototypes.PhysicsCallbacks2DPrototype",
+        "Data": {
+          "CallbackFlags": {
+            "Value": 1152
+          }
+        }
+      },
+      {
+        "Type": "Quantum.Prototypes.ViewPrototype",
+        "Data": {
+          "Current": {
+            "Id": {
+              "Value": 737112216968780775
+            }
+          }
+        }
+      }
+    ],
+    "CanonicalStorageMatchesNativeSourceReconstruction": true
+  },
+  {
+    "Path": "AddressableResources/QuantumAssets/Projectiles/MainBulletEntityPrototype",
+    "Guid": 148021496798672150,
+    "Components": [
+      {
+        "Type": "Quantum.Prototypes.Transform2DPrototype",
+        "Data": {
+          "Position": {
+            "X": {
+              "RawValue": 0
+            },
+            "Y": {
+              "RawValue": 0
+            }
+          },
+          "Rotation": {
+            "RawValue": 0
+          }
+        }
+      },
+      {
+        "Type": "Quantum.Prototypes.PhysicsCollider2DPrototype",
+        "Data": {
+          "ShapeConfig": {
+            "ShapeType": 4,
+            "PolygonCollider": {
+              "Id": {
+                "Value": 0
+              }
+            },
+            "CircleRadius": {
+              "RawValue": 0
+            },
+            "CapsuleSize": {
+              "X": {
+                "RawValue": 65536
+              },
+              "Y": {
+                "RawValue": 131072
+              }
+            },
+            "EdgeExtent": {
+              "RawValue": 0
+            },
+            "BoxExtents": {
+              "X": {
+                "RawValue": 7863
+              },
+              "Y": {
+                "RawValue": 64225
+              }
+            },
+            "PositionOffset": {
+              "X": {
+                "RawValue": 0
+              },
+              "Y": {
+                "RawValue": -17039
+              }
+            },
+            "RotationOffset": {
+              "RawValue": 0
+            },
+            "UserTag": 0,
+            "IsPersistent": true,
+            "CompoundShapes": []
+          },
+          "Layer": 7,
+          "IsTrigger": true,
+          "PhysicsMaterial": {
+            "Id": {
+              "Value": 0
+            }
+          }
+        }
+      },
+      {
+        "Type": "Quantum.Prototypes.PhysicsCallbacks2DPrototype",
+        "Data": {
+          "CallbackFlags": {
+            "Value": 1152
+          }
+        }
+      },
+      {
+        "Type": "Quantum.Prototypes.ViewPrototype",
+        "Data": {
+          "Current": {
+            "Id": {
+              "Value": 3566144576847955563
+            }
+          }
+        }
+      }
+    ],
+    "CanonicalStorageMatchesNativeSourceReconstruction": true
+  },
+  {
+    "Path": "AddressableResources/QuantumAssets/Projectiles/HammerHitEntityPrototype",
+    "Guid": 1722351953338325886,
+    "Components": [
+      {
+        "Type": "Quantum.Prototypes.Transform2DPrototype",
+        "Data": {
+          "Position": {
+            "X": {
+              "RawValue": 0
+            },
+            "Y": {
+              "RawValue": 0
+            }
+          },
+          "Rotation": {
+            "RawValue": 0
+          }
+        }
+      },
+      {
+        "Type": "Quantum.Prototypes.PhysicsCollider2DPrototype",
+        "Data": {
+          "ShapeConfig": {
+            "ShapeType": 1,
+            "PolygonCollider": {
+              "Id": {
+                "Value": 0
+              }
+            },
+            "CircleRadius": {
+              "RawValue": 39321
+            },
+            "CapsuleSize": {
+              "X": {
+                "RawValue": 65536
+              },
+              "Y": {
+                "RawValue": 131072
+              }
+            },
+            "EdgeExtent": {
+              "RawValue": 0
+            },
+            "BoxExtents": {
+              "X": {
+                "RawValue": 6553
+              },
+              "Y": {
+                "RawValue": 26214
+              }
+            },
+            "PositionOffset": {
+              "X": {
+                "RawValue": 0
+              },
+              "Y": {
+                "RawValue": 0
+              }
+            },
+            "RotationOffset": {
+              "RawValue": 0
+            },
+            "UserTag": 0,
+            "IsPersistent": true,
+            "CompoundShapes": []
+          },
+          "Layer": 0,
+          "IsTrigger": true,
+          "PhysicsMaterial": {
+            "Id": {
+              "Value": 0
+            }
+          }
+        }
+      },
+      {
+        "Type": "Quantum.Prototypes.PhysicsCallbacks2DPrototype",
+        "Data": {
+          "CallbackFlags": {
+            "Value": 1152
+          }
+        }
+      },
+      {
+        "Type": "Quantum.Prototypes.ViewPrototype",
+        "Data": {
+          "Current": {
+            "Id": {
+              "Value": 3351158279772585640
+            }
+          }
+        }
+      }
+    ],
+    "CanonicalStorageMatchesNativeSourceReconstruction": true
+  },
+  {
+    "Path": "AddressableResources/MatchAssets/MapObjects/Bush SmallEntityPrototype",
+    "Guid": 2647440195271570113,
+    "Components": [
+      {
+        "Type": "Quantum.Prototypes.Transform2DPrototype",
+        "Data": {
+          "Position": {
+            "X": {
+              "RawValue": 0
+            },
+            "Y": {
+              "RawValue": 0
+            }
+          },
+          "Rotation": {
+            "RawValue": 0
+          }
+        }
+      },
+      {
+        "Type": "Quantum.Prototypes.PhysicsCollider2DPrototype",
+        "Data": {
+          "ShapeConfig": {
+            "ShapeType": 4,
+            "PolygonCollider": {
+              "Id": {
+                "Value": 0
+              }
+            },
+            "CircleRadius": {
+              "RawValue": 0
+            },
+            "CapsuleSize": {
+              "X": {
+                "RawValue": 65536
+              },
+              "Y": {
+                "RawValue": 131072
+              }
+            },
+            "EdgeExtent": {
+              "RawValue": 0
+            },
+            "BoxExtents": {
+              "X": {
+                "RawValue": 98304
+              },
+              "Y": {
+                "RawValue": 98304
+              }
+            },
+            "PositionOffset": {
+              "X": {
+                "RawValue": 0
+              },
+              "Y": {
+                "RawValue": 0
+              }
+            },
+            "RotationOffset": {
+              "RawValue": 0
+            },
+            "UserTag": 0,
+            "IsPersistent": true,
+            "CompoundShapes": []
+          },
+          "Layer": 9,
+          "IsTrigger": true,
+          "PhysicsMaterial": {
+            "Id": {
+              "Value": 0
+            }
+          }
+        }
+      },
+      {
+        "Type": "Quantum.Prototypes.PhysicsCallbacks2DPrototype",
+        "Data": {
+          "CallbackFlags": {
+            "Value": 455
+          }
+        }
+      },
+      {
+        "Type": "Quantum.Prototypes.ViewPrototype",
+        "Data": {
+          "Current": {
+            "Id": {
+              "Value": 3078609414033823315
+            }
+          }
+        }
+      },
+      {
+        "Type": "Quantum.Prototypes.VisibilityAreaPrototype",
+        "Data": {
+          "AreaType": {
+            "Value": 0
+          },
+          "EntitiesIn": []
+        }
+      }
+    ],
+    "CanonicalStorageMatchesNativeSourceReconstruction": true
+  },
+  {
+    "Path": "AddressableResources/QuantumAssets/Others/DeathFlagPrototypeEntityPrototype",
+    "Guid": 2926812260290138366,
+    "Components": [
+      {
+        "Type": "Quantum.Prototypes.Transform2DPrototype",
+        "Data": {
+          "Position": {
+            "X": {
+              "RawValue": 0
+            },
+            "Y": {
+              "RawValue": 0
+            }
+          },
+          "Rotation": {
+            "RawValue": 0
+          }
+        }
+      },
+      {
+        "Type": "Quantum.Prototypes.ViewPrototype",
+        "Data": {
+          "Current": {
+            "Id": {
+              "Value": 452268884930367831
+            }
+          }
+        }
+      },
+      {
+        "Type": "Quantum.Prototypes.DeathFlagPrototype",
+        "Data": {
+          "ID": {
+            "Value": 25
+          }
+        }
+      }
+    ],
+    "CanonicalStorageMatchesNativeSourceReconstruction": true
+  },
+  {
+    "Path": "AddressableResources/QuantumAssets/Spawners/PlatformSpawnerEntityPrototype",
+    "Guid": 2403753126067035639,
+    "Components": [
+      {
+        "Type": "Quantum.Prototypes.Transform2DPrototype",
+        "Data": {
+          "Position": {
+            "X": {
+              "RawValue": 0
+            },
+            "Y": {
+              "RawValue": 0
+            }
+          },
+          "Rotation": {
+            "RawValue": 0
+          }
+        }
+      },
+      {
+        "Type": "Quantum.Prototypes.ViewPrototype",
+        "Data": {
+          "Current": {
+            "Id": {
+              "Value": 2816390206062133565
+            }
+          }
+        }
+      },
+      {
+        "Type": "Quantum.Prototypes.CollectablePlatformSpawnerPrototype",
+        "Data": {
+          "Collectable": {
+            "SceneIndexPlusOne": 0
+          },
+          "NextSpawnTime": {
+            "RawValue": 0
+          },
+          "SpawnCount": 0,
+          "RespawnTimeInSec": 10,
+          "InitialSpawnDelayInSec": 5,
+          "GameId": {
+            "Value": 0
+          },
+          "RarityModifier": 0,
+          "Disabled": {
+            "Value": 0
+          },
+          "DoNotDestroy": {
+            "Value": 0
+          }
+        }
+      }
+    ],
+    "CanonicalStorageMatchesNativeSourceReconstruction": true
+  },
+  {
+    "Path": "AddressableResources/QuantumAssets/Collectables/ConsumablePickupEntityPrototype",
+    "Guid": 240296495379453662,
+    "Components": [
+      {
+        "Type": "Quantum.Prototypes.Transform2DPrototype",
+        "Data": {
+          "Position": {
+            "X": {
+              "RawValue": 0
+            },
+            "Y": {
+              "RawValue": 0
+            }
+          },
+          "Rotation": {
+            "RawValue": 0
+          }
+        }
+      },
+      {
+        "Type": "Quantum.Prototypes.PhysicsCollider2DPrototype",
+        "Data": {
+          "ShapeConfig": {
+            "ShapeType": 1,
+            "PolygonCollider": {
+              "Id": {
+                "Value": 0
+              }
+            },
+            "CircleRadius": {
+              "RawValue": 65536
+            },
+            "CapsuleSize": {
+              "X": {
+                "RawValue": 65536
+              },
+              "Y": {
+                "RawValue": 131072
+              }
+            },
+            "EdgeExtent": {
+              "RawValue": 0
+            },
+            "BoxExtents": {
+              "X": {
+                "RawValue": 0
+              },
+              "Y": {
+                "RawValue": 0
+              }
+            },
+            "PositionOffset": {
+              "X": {
+                "RawValue": 0
+              },
+              "Y": {
+                "RawValue": 0
+              }
+            },
+            "RotationOffset": {
+              "RawValue": 0
+            },
+            "UserTag": 0,
+            "IsPersistent": true,
+            "CompoundShapes": []
+          },
+          "Layer": 11,
+          "IsTrigger": true,
+          "PhysicsMaterial": {
+            "Id": {
+              "Value": 0
+            }
+          }
+        }
+      },
+      {
+        "Type": "Quantum.Prototypes.PhysicsCallbacks2DPrototype",
+        "Data": {
+          "CallbackFlags": {
+            "Value": 0
+          }
+        }
+      },
+      {
+        "Type": "Quantum.Prototypes.ViewPrototype",
+        "Data": {
+          "Current": {
+            "Id": {
+              "Value": 3726627970685454479
+            }
+          }
+        }
+      },
+      {
+        "Type": "Quantum.Prototypes.ConsumablePrototype",
+        "Data": {
+          "ConsumableType": {
+            "Value": 0
+          }
+        }
+      }
+    ],
+    "CanonicalStorageMatchesNativeSourceReconstruction": true
+  },
+  {
+    "Path": "AddressableResources/QuantumAssets/Gates/GateBarrierEntityEntityPrototype",
+    "Guid": 1861340466526697177,
+    "Components": [
+      {
+        "Type": "Quantum.Prototypes.Transform2DPrototype",
+        "Data": {
+          "Position": {
+            "X": {
+              "RawValue": -218661
+            },
+            "Y": {
+              "RawValue": 491420
+            }
+          },
+          "Rotation": {
+            "RawValue": 0
+          }
+        }
+      },
+      {
+        "Type": "Quantum.Prototypes.PhysicsCollider2DPrototype",
+        "Data": {
+          "ShapeConfig": {
+            "ShapeType": 4,
+            "PolygonCollider": {
+              "Id": {
+                "Value": 0
+              }
+            },
+            "CircleRadius": {
+              "RawValue": 0
+            },
+            "CapsuleSize": {
+              "X": {
+                "RawValue": 65536
+              },
+              "Y": {
+                "RawValue": 131072
+              }
+            },
+            "EdgeExtent": {
+              "RawValue": 0
+            },
+            "BoxExtents": {
+              "X": {
+                "RawValue": 85196
+              },
+              "Y": {
+                "RawValue": 13107
+              }
+            },
+            "PositionOffset": {
+              "X": {
+                "RawValue": 0
+              },
+              "Y": {
+                "RawValue": 0
+              }
+            },
+            "RotationOffset": {
+              "RawValue": 0
+            },
+            "UserTag": 0,
+            "IsPersistent": true,
+            "CompoundShapes": []
+          },
+          "Layer": 0,
+          "IsTrigger": false,
+          "PhysicsMaterial": {
+            "Id": {
+              "Value": 0
+            }
+          }
+        }
+      },
+      {
+        "Type": "Quantum.Prototypes.PhysicsCallbacks2DPrototype",
+        "Data": {
+          "CallbackFlags": {
+            "Value": 0
+          }
+        }
+      },
+      {
+        "Type": "Quantum.Prototypes.ViewPrototype",
+        "Data": {
+          "Current": {
+            "Id": {
+              "Value": 4298551067525067090
+            }
+          }
+        }
+      },
+      {
+        "Type": "Quantum.Prototypes.GatePrototype",
+        "Data": {
+          "IsOpening": {
+            "Value": 0
+          },
+          "TimeToOpen": {
+            "RawValue": 0
+          },
+          "OpeningTime": {
+            "RawValue": 131072
+          }
+        }
+      },
+      {
+        "Type": "Quantum.Prototypes.TriggerPrototype",
+        "Data": {
+          "Target": {
+            "SceneIndexPlusOne": 1
+          },
+          "Data": {
+            "_field_used_": "PLAYERSALIVETRIGGERDATA",
+            "PlayersAliveTriggerData": {
+              "PlayersAlive": 2
+            },
+            "ChestOpenTriggerData": {
+              "_empty_prototype_dummy_field_": 0
+            },
+            "WeaponCollectedTriggerData": {
+              "WeaponSpawner": {
+                "SceneIndexPlusOne": 0
+              }
+            }
+          }
+        }
+      }
+    ],
+    "CanonicalStorageMatchesNativeSourceReconstruction": true
+  },
+  {
+    "Path": "AddressableResources/MatchAssets/MapObjects/BushEntityPrototype",
+    "Guid": 1187171314464035236,
+    "Components": [
+      {
+        "Type": "Quantum.Prototypes.Transform2DPrototype",
+        "Data": {
+          "Position": {
+            "X": {
+              "RawValue": 0
+            },
+            "Y": {
+              "RawValue": 0
+            }
+          },
+          "Rotation": {
+            "RawValue": 0
+          }
+        }
+      },
+      {
+        "Type": "Quantum.Prototypes.PhysicsCollider2DPrototype",
+        "Data": {
+          "ShapeConfig": {
+            "ShapeType": 4,
+            "PolygonCollider": {
+              "Id": {
+                "Value": 0
+              }
+            },
+            "CircleRadius": {
+              "RawValue": 0
+            },
+            "CapsuleSize": {
+              "X": {
+                "RawValue": 65536
+              },
+              "Y": {
+                "RawValue": 131072
+              }
+            },
+            "EdgeExtent": {
+              "RawValue": 0
+            },
+            "BoxExtents": {
+              "X": {
+                "RawValue": 163840
+              },
+              "Y": {
+                "RawValue": 163840
+              }
+            },
+            "PositionOffset": {
+              "X": {
+                "RawValue": 0
+              },
+              "Y": {
+                "RawValue": 0
+              }
+            },
+            "RotationOffset": {
+              "RawValue": 0
+            },
+            "UserTag": 0,
+            "IsPersistent": true,
+            "CompoundShapes": [
+              {
+                "ShapeType": 4,
+                "PolygonCollider": {
+                  "Id": {
+                    "Value": 0
+                  }
+                },
+                "CircleRadius": {
+                  "RawValue": 0
+                },
+                "CapsuleSize": {
+                  "X": {
+                    "RawValue": 0
+                  },
+                  "Y": {
+                    "RawValue": 0
+                  }
+                },
+                "EdgeExtent": {
+                  "RawValue": 0
+                },
+                "BoxExtents": {
+                  "X": {
+                    "RawValue": 163840
+                  },
+                  "Y": {
+                    "RawValue": 163840
+                  }
+                },
+                "PositionOffset": {
+                  "X": {
+                    "RawValue": 0
+                  },
+                  "Y": {
+                    "RawValue": 0
+                  }
+                },
+                "RotationOffset": {
+                  "RawValue": 0
+                },
+                "UserTag": 0,
+                "IsSetFromSourceCollider": false
+              }
+            ]
+          },
+          "Layer": 0,
+          "IsTrigger": true,
+          "PhysicsMaterial": {
+            "Id": {
+              "Value": 0
+            }
+          }
+        }
+      },
+      {
+        "Type": "Quantum.Prototypes.PhysicsCallbacks2DPrototype",
+        "Data": {
+          "CallbackFlags": {
+            "Value": 455
+          }
+        }
+      },
+      {
+        "Type": "Quantum.Prototypes.ViewPrototype",
+        "Data": {
+          "Current": {
+            "Id": {
+              "Value": 2131404972551470056
+            }
+          }
+        }
+      },
+      {
+        "Type": "Quantum.Prototypes.VisibilityAreaPrototype",
+        "Data": {
+          "AreaType": {
+            "Value": 0
+          },
+          "EntitiesIn": []
+        }
+      }
+    ],
+    "CanonicalStorageMatchesNativeSourceReconstruction": true
+  },
+  {
+    "Path": "AddressableResources/QuantumAssets/Projectiles/MainSmallBulletEntityPrototype",
+    "Guid": 3582668498530828953,
+    "Components": [
+      {
+        "Type": "Quantum.Prototypes.Transform2DPrototype",
+        "Data": {
+          "Position": {
+            "X": {
+              "RawValue": 0
+            },
+            "Y": {
+              "RawValue": 0
+            }
+          },
+          "Rotation": {
+            "RawValue": 0
+          }
+        }
+      },
+      {
+        "Type": "Quantum.Prototypes.PhysicsCollider2DPrototype",
+        "Data": {
+          "ShapeConfig": {
+            "ShapeType": 4,
+            "PolygonCollider": {
+              "Id": {
+                "Value": 0
+              }
+            },
+            "CircleRadius": {
+              "RawValue": 0
+            },
+            "CapsuleSize": {
+              "X": {
+                "RawValue": 65536
+              },
+              "Y": {
+                "RawValue": 131072
+              }
+            },
+            "EdgeExtent": {
+              "RawValue": 0
+            },
+            "BoxExtents": {
+              "X": {
+                "RawValue": 5438
+              },
+              "Y": {
+                "RawValue": 45219
+              }
+            },
+            "PositionOffset": {
+              "X": {
+                "RawValue": 0
+              },
+              "Y": {
+                "RawValue": 3932
+              }
+            },
+            "RotationOffset": {
+              "RawValue": 0
+            },
+            "UserTag": 0,
+            "IsPersistent": true,
+            "CompoundShapes": []
+          },
+          "Layer": 7,
+          "IsTrigger": true,
+          "PhysicsMaterial": {
+            "Id": {
+              "Value": 0
+            }
+          }
+        }
+      },
+      {
+        "Type": "Quantum.Prototypes.PhysicsCallbacks2DPrototype",
+        "Data": {
+          "CallbackFlags": {
+            "Value": 1152
+          }
+        }
+      },
+      {
+        "Type": "Quantum.Prototypes.ViewPrototype",
+        "Data": {
+          "Current": {
+            "Id": {
+              "Value": 951672781246580630
+            }
+          }
+        }
+      }
+    ],
+    "CanonicalStorageMatchesNativeSourceReconstruction": true
+  },
+  {
+    "Path": "AddressableResources/QuantumAssets/Collectables/ChestPickupEntityPrototype",
+    "Guid": 4486983998464243699,
+    "Components": [
+      {
+        "Type": "Quantum.Prototypes.Transform2DPrototype",
+        "Data": {
+          "Position": {
+            "X": {
+              "RawValue": 0
+            },
+            "Y": {
+              "RawValue": 0
+            }
+          },
+          "Rotation": {
+            "RawValue": 0
+          }
+        }
+      },
+      {
+        "Type": "Quantum.Prototypes.PhysicsCollider2DPrototype",
+        "Data": {
+          "ShapeConfig": {
+            "ShapeType": 1,
+            "PolygonCollider": {
+              "Id": {
+                "Value": 0
+              }
+            },
+            "CircleRadius": {
+              "RawValue": 117964
+            },
+            "CapsuleSize": {
+              "X": {
+                "RawValue": 65536
+              },
+              "Y": {
+                "RawValue": 131072
+              }
+            },
+            "EdgeExtent": {
+              "RawValue": 0
+            },
+            "BoxExtents": {
+              "X": {
+                "RawValue": 0
+              },
+              "Y": {
+                "RawValue": 0
+              }
+            },
+            "PositionOffset": {
+              "X": {
+                "RawValue": 0
+              },
+              "Y": {
+                "RawValue": 0
+              }
+            },
+            "RotationOffset": {
+              "RawValue": 0
+            },
+            "UserTag": 0,
+            "IsPersistent": true,
+            "CompoundShapes": []
+          },
+          "Layer": 11,
+          "IsTrigger": true,
+          "PhysicsMaterial": {
+            "Id": {
+              "Value": 0
+            }
+          }
+        }
+      },
+      {
+        "Type": "Quantum.Prototypes.PhysicsCallbacks2DPrototype",
+        "Data": {
+          "CallbackFlags": {
+            "Value": 0
+          }
+        }
+      },
+      {
+        "Type": "Quantum.Prototypes.ViewPrototype",
+        "Data": {
+          "Current": {
+            "Id": {
+              "Value": 701952959705295376
+            }
+          }
+        }
+      },
+      {
+        "Type": "Quantum.Prototypes.ChestPrototype",
+        "Data": {
+          "Id": {
+            "Value": 0
+          },
+          "ChestType": {
+            "Value": 0
+          },
+          "CollectTime": {
+            "RawValue": 0
+          }
+        }
+      }
+    ],
+    "CanonicalStorageMatchesNativeSourceReconstruction": true
+  },
+  {
+    "Path": "AddressableResources/MatchAssets/MapObjects/VisVolumeEntityPrototype",
+    "Guid": 2338948153490005447,
+    "Components": [
+      {
+        "Type": "Quantum.Prototypes.Transform3DPrototype",
+        "Data": {
+          "Position": {
+            "X": {
+              "RawValue": 0
+            },
+            "Y": {
+              "RawValue": 0
+            },
+            "Z": {
+              "RawValue": 0
+            }
+          },
+          "Rotation": {
+            "X": {
+              "RawValue": 0
+            },
+            "Y": {
+              "RawValue": 0
+            },
+            "Z": {
+              "RawValue": 0
+            }
+          }
+        }
+      },
+      {
+        "Type": "Quantum.Prototypes.PhysicsCollider3DPrototype",
+        "Data": {
+          "ShapeConfig": {
+            "ShapeType": 16,
+            "SphereRadius": {
+              "RawValue": 0
+            },
+            "CapsuleRadius": {
+              "RawValue": 32768
+            },
+            "CapsuleHeight": {
+              "RawValue": 131072
+            },
+            "PositionOffset": {
+              "X": {
+                "RawValue": 0
+              },
+              "Y": {
+                "RawValue": 0
+              },
+              "Z": {
+                "RawValue": 0
+              }
+            },
+            "BoxExtents": {
+              "X": {
+                "RawValue": 163840
+              },
+              "Y": {
+                "RawValue": 32768
+              },
+              "Z": {
+                "RawValue": 163840
+              }
+            },
+            "RotationOffset": {
+              "X": {
+                "RawValue": 0
+              },
+              "Y": {
+                "RawValue": 0
+              },
+              "Z": {
+                "RawValue": 0
+              }
+            },
+            "UserTag": 0,
+            "IsPersistent": true,
+            "CompoundShapes": [
+              {
+                "ShapeType": 2,
+                "SphereRadius": {
+                  "RawValue": 0
+                },
+                "CapsuleRadius": {
+                  "RawValue": 0
+                },
+                "CapsuleHeight": {
+                  "RawValue": 0
+                },
+                "PositionOffset": {
+                  "X": {
+                    "RawValue": 0
+                  },
+                  "Y": {
+                    "RawValue": 65536
+                  },
+                  "Z": {
+                    "RawValue": 0
+                  }
+                },
+                "BoxExtents": {
+                  "X": {
+                    "RawValue": 131072
+                  },
+                  "Y": {
+                    "RawValue": 131072
+                  },
+                  "Z": {
+                    "RawValue": 131072
+                  }
+                },
+                "RotationOffset": {
+                  "X": {
+                    "RawValue": 0
+                  },
+                  "Y": {
+                    "RawValue": 0
+                  },
+                  "Z": {
+                    "RawValue": 0
+                  }
+                },
+                "UserTag": 0,
+                "IsSetFromSourceCollider": false
+              }
+            ]
+          },
+          "Layer": 9,
+          "IsTrigger": true,
+          "PhysicsMaterial": {
+            "Id": {
+              "Value": 0
+            }
+          }
+        }
+      },
+      {
+        "Type": "Quantum.Prototypes.PhysicsCallbacks3DPrototype",
+        "Data": {
+          "CallbackFlags": {
+            "Value": 455
+          }
+        }
+      },
+      {
+        "Type": "Quantum.Prototypes.ViewPrototype",
+        "Data": {
+          "Current": {
+            "Id": {
+              "Value": 2283147842969910057
+            }
+          }
+        }
+      },
+      {
+        "Type": "Quantum.Prototypes.VisibilityAreaPrototype",
+        "Data": {
+          "AreaType": {
+            "Value": 1
+          },
+          "EntitiesIn": []
+        }
+      }
+    ],
+    "CanonicalStorageMatchesNativeSourceReconstruction": true
+  }
+]

@@ -1,0 +1,14 @@
+{
+  "Result": "Passed",
+  "NativeProcessExit": 0,
+  "Maps": 10,
+  "PrototypeSlots": 5563,
+  "AllActualSdkSourceViewsMatch": true,
+  "NoSceneMapMetaWrites": true,
+  "ValidationPhaseExceptions": 0,
+  "CSharpErrors": 0,
+  "CSharpWarnings": 0,
+  "FixtureImportLimit": "Isolated fresh copied host had160unrelated importerNullReferenceExceptions before validation; finalMainimport/suites/match separatelyclean",
+  "Native213CanonicalResult": "Passed",
+  "Native20PrototypeSourceCacheResult": "Passed"
+}
