@@ -1,62 +1,62 @@
 <?xml version="1.0" encoding="utf-8"?>
-<test-run id="2" testcasecount="6" result="Passed" total="6" passed="6" failed="0" inconclusive="0" skipped="0" asserts="0" engine-version="3.5.0.0" clr-version="4.0.30319.42000" start-time="2026-10-14 17:28:23Z" end-time="2026-10-14 17:28:24Z" duration="0.3380429">
-  <test-suite type="TestSuite" id="1015" name="Blast Royale" fullname="Blast Royale" runstate="Runnable" testcasecount="6" result="Passed" start-time="2026-10-14 17:28:23Z" end-time="2026-10-14 17:28:24Z" duration="0.338043" total="6" passed="6" failed="0" inconclusive="0" skipped="0" asserts="0">
+<test-run id="2" testcasecount="6" result="Passed" total="6" passed="6" failed="0" inconclusive="0" skipped="0" asserts="0" engine-version="3.5.0.0" clr-version="4.0.30319.42000" start-time="2026-10-14 17:56:26Z" end-time="2026-10-14 17:56:26Z" duration="0.3200371">
+  <test-suite type="TestSuite" id="1015" name="Blast Royale" fullname="Blast Royale" runstate="Runnable" testcasecount="6" result="Passed" start-time="2026-10-14 17:56:26Z" end-time="2026-10-14 17:56:26Z" duration="0.320037" total="6" passed="6" failed="0" inconclusive="0" skipped="0" asserts="0">
     <properties>
       <property name="platform" value="PlayMode" />
     </properties>
-    <test-suite type="Assembly" id="1008" name="FirstLight.Game.Tests.dll" fullname="<repo>/BlastRoyale/Library/ScriptAssemblies/FirstLight.Game.Tests.dll" runstate="Runnable" testcasecount="6" result="Passed" start-time="2026-10-14 17:28:23Z" end-time="2026-10-14 17:28:24Z" duration="0.323526" total="6" passed="6" failed="0" inconclusive="0" skipped="0" asserts="0">
+    <test-suite type="Assembly" id="1008" name="FirstLight.Game.Tests.dll" fullname="<repo>/BlastRoyale/Library/ScriptAssemblies/FirstLight.Game.Tests.dll" runstate="Runnable" testcasecount="6" result="Passed" start-time="2026-10-14 17:56:26Z" end-time="2026-10-14 17:56:26Z" duration="0.316586" total="6" passed="6" failed="0" inconclusive="0" skipped="0" asserts="0">
       <properties>
-        <property name="_PID" value="13450" />
+        <property name="_PID" value="33487" />
         <property name="_APPDOMAIN" value="Unity Child Domain" />
         <property name="platform" value="PlayMode" />
         <property name="EditorOnly" value="False" />
       </properties>
-      <test-suite type="TestSuite" id="1009" name="FirstLightEditor" fullname="FirstLightEditor" runstate="Runnable" testcasecount="6" result="Passed" start-time="2026-10-14 17:28:23Z" end-time="2026-10-14 17:28:24Z" duration="0.323106" total="6" passed="6" failed="0" inconclusive="0" skipped="0" asserts="0">
+      <test-suite type="TestSuite" id="1009" name="FirstLightEditor" fullname="FirstLightEditor" runstate="Runnable" testcasecount="6" result="Passed" start-time="2026-10-14 17:56:26Z" end-time="2026-10-14 17:56:26Z" duration="0.316412" total="6" passed="6" failed="0" inconclusive="0" skipped="0" asserts="0">
         <properties />
-        <test-suite type="TestSuite" id="1010" name="Services" fullname="FirstLightEditor.Services" runstate="Runnable" testcasecount="6" result="Passed" start-time="2026-10-14 17:28:23Z" end-time="2026-10-14 17:28:24Z" duration="0.322998" total="6" passed="6" failed="0" inconclusive="0" skipped="0" asserts="0">
+        <test-suite type="TestSuite" id="1010" name="Services" fullname="FirstLightEditor.Services" runstate="Runnable" testcasecount="6" result="Passed" start-time="2026-10-14 17:56:26Z" end-time="2026-10-14 17:56:26Z" duration="0.316321" total="6" passed="6" failed="0" inconclusive="0" skipped="0" asserts="0">
           <properties />
-          <test-suite type="TestSuite" id="1011" name="Tests" fullname="FirstLightEditor.Services.Tests" runstate="Runnable" testcasecount="6" result="Passed" start-time="2026-10-14 17:28:23Z" end-time="2026-10-14 17:28:24Z" duration="0.322885" total="6" passed="6" failed="0" inconclusive="0" skipped="0" asserts="0">
+          <test-suite type="TestSuite" id="1011" name="Tests" fullname="FirstLightEditor.Services.Tests" runstate="Runnable" testcasecount="6" result="Passed" start-time="2026-10-14 17:56:26Z" end-time="2026-10-14 17:56:26Z" duration="0.316222" total="6" passed="6" failed="0" inconclusive="0" skipped="0" asserts="0">
             <properties />
-            <test-suite type="TestFixture" id="1001" name="CoroutineServiceTest" fullname="FirstLightEditor.Services.Tests.CoroutineServiceTest" classname="FirstLightEditor.Services.Tests.CoroutineServiceTest" runstate="Runnable" testcasecount="6" result="Passed" start-time="2026-10-14 17:28:23Z" end-time="2026-10-14 17:28:24Z" duration="0.322394" total="6" passed="6" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <test-suite type="TestFixture" id="1001" name="CoroutineServiceTest" fullname="FirstLightEditor.Services.Tests.CoroutineServiceTest" classname="FirstLightEditor.Services.Tests.CoroutineServiceTest" runstate="Runnable" testcasecount="6" result="Passed" start-time="2026-10-14 17:56:26Z" end-time="2026-10-14 17:56:26Z" duration="0.315782" total="6" passed="6" failed="0" inconclusive="0" skipped="0" asserts="0">
               <properties>
                 <property name="Category" value="PlayMode" />
               </properties>
-              <test-case id="1003" name="StartAsyncCoroutine_Successfully" fullname="FirstLightEditor.Services.Tests.CoroutineServiceTest.StartAsyncCoroutine_Successfully" methodname="StartAsyncCoroutine_Successfully" classname="FirstLightEditor.Services.Tests.CoroutineServiceTest" runstate="Runnable" seed="35119706" result="Passed" start-time="2026-10-14 17:28:23Z" end-time="2026-10-14 17:28:23Z" duration="0.011204" asserts="0">
+              <test-case id="1003" name="StartAsyncCoroutine_Successfully" fullname="FirstLightEditor.Services.Tests.CoroutineServiceTest.StartAsyncCoroutine_Successfully" methodname="StartAsyncCoroutine_Successfully" classname="FirstLightEditor.Services.Tests.CoroutineServiceTest" runstate="Runnable" seed="1077918493" result="Passed" start-time="2026-10-14 17:56:26Z" end-time="2026-10-14 17:56:26Z" duration="0.008137" asserts="0">
                 <properties>
                   <property name="_JOINTYPE" value="UnityCombinatorial" />
                   <property name="retryIteration" value="0" />
                   <property name="repeatIteration" value="0" />
                 </properties>
               </test-case>
-              <test-case id="1004" name="StartAsyncCoroutine_WithData_Successfully" fullname="FirstLightEditor.Services.Tests.CoroutineServiceTest.StartAsyncCoroutine_WithData_Successfully" methodname="StartAsyncCoroutine_WithData_Successfully" classname="FirstLightEditor.Services.Tests.CoroutineServiceTest" runstate="Runnable" seed="1900878075" result="Passed" start-time="2026-10-14 17:28:23Z" end-time="2026-10-14 17:28:23Z" duration="0.000975" asserts="0">
+              <test-case id="1004" name="StartAsyncCoroutine_WithData_Successfully" fullname="FirstLightEditor.Services.Tests.CoroutineServiceTest.StartAsyncCoroutine_WithData_Successfully" methodname="StartAsyncCoroutine_WithData_Successfully" classname="FirstLightEditor.Services.Tests.CoroutineServiceTest" runstate="Runnable" seed="435858821" result="Passed" start-time="2026-10-14 17:56:26Z" end-time="2026-10-14 17:56:26Z" duration="0.000633" asserts="0">
                 <properties>
                   <property name="_JOINTYPE" value="UnityCombinatorial" />
                   <property name="retryIteration" value="0" />
                   <property name="repeatIteration" value="0" />
                 </properties>
               </test-case>
-              <test-case id="1002" name="StartCoroutine_Successfully" fullname="FirstLightEditor.Services.Tests.CoroutineServiceTest.StartCoroutine_Successfully" methodname="StartCoroutine_Successfully" classname="FirstLightEditor.Services.Tests.CoroutineServiceTest" runstate="Runnable" seed="352910668" result="Passed" start-time="2026-10-14 17:28:23Z" end-time="2026-10-14 17:28:23Z" duration="0.000344" asserts="0">
+              <test-case id="1002" name="StartCoroutine_Successfully" fullname="FirstLightEditor.Services.Tests.CoroutineServiceTest.StartCoroutine_Successfully" methodname="StartCoroutine_Successfully" classname="FirstLightEditor.Services.Tests.CoroutineServiceTest" runstate="Runnable" seed="1219164631" result="Passed" start-time="2026-10-14 17:56:26Z" end-time="2026-10-14 17:56:26Z" duration="0.000300" asserts="0">
                 <properties>
                   <property name="_JOINTYPE" value="UnityCombinatorial" />
                   <property name="retryIteration" value="0" />
                   <property name="repeatIteration" value="0" />
                 </properties>
               </test-case>
-              <test-case id="1007" name="StopAllCoroutines_Successfully" fullname="FirstLightEditor.Services.Tests.CoroutineServiceTest.StopAllCoroutines_Successfully" methodname="StopAllCoroutines_Successfully" classname="FirstLightEditor.Services.Tests.CoroutineServiceTest" runstate="Runnable" seed="183289335" result="Passed" start-time="2026-10-14 17:28:23Z" end-time="2026-10-14 17:28:24Z" duration="0.101824" asserts="0">
+              <test-case id="1007" name="StopAllCoroutines_Successfully" fullname="FirstLightEditor.Services.Tests.CoroutineServiceTest.StopAllCoroutines_Successfully" methodname="StopAllCoroutines_Successfully" classname="FirstLightEditor.Services.Tests.CoroutineServiceTest" runstate="Runnable" seed="409689984" result="Passed" start-time="2026-10-14 17:56:26Z" end-time="2026-10-14 17:56:26Z" duration="0.100338" asserts="0">
                 <properties>
                   <property name="_JOINTYPE" value="UnityCombinatorial" />
                   <property name="retryIteration" value="0" />
                   <property name="repeatIteration" value="0" />
                 </properties>
               </test-case>
-              <test-case id="1006" name="StopAsyncCoroutine_Successfully" fullname="FirstLightEditor.Services.Tests.CoroutineServiceTest.StopAsyncCoroutine_Successfully" methodname="StopAsyncCoroutine_Successfully" classname="FirstLightEditor.Services.Tests.CoroutineServiceTest" runstate="Runnable" seed="9932867" result="Passed" start-time="2026-10-14 17:28:24Z" end-time="2026-10-14 17:28:24Z" duration="0.100516" asserts="0">
+              <test-case id="1006" name="StopAsyncCoroutine_Successfully" fullname="FirstLightEditor.Services.Tests.CoroutineServiceTest.StopAsyncCoroutine_Successfully" methodname="StopAsyncCoroutine_Successfully" classname="FirstLightEditor.Services.Tests.CoroutineServiceTest" runstate="Runnable" seed="520641764" result="Passed" start-time="2026-10-14 17:56:26Z" end-time="2026-10-14 17:56:26Z" duration="0.100393" asserts="0">
                 <properties>
                   <property name="_JOINTYPE" value="UnityCombinatorial" />
                   <property name="retryIteration" value="0" />
                   <property name="repeatIteration" value="0" />
                 </properties>
               </test-case>
-              <test-case id="1005" name="StopCoroutine_Successfully" fullname="FirstLightEditor.Services.Tests.CoroutineServiceTest.StopCoroutine_Successfully" methodname="StopCoroutine_Successfully" classname="FirstLightEditor.Services.Tests.CoroutineServiceTest" runstate="Runnable" seed="325781975" result="Passed" start-time="2026-10-14 17:28:24Z" end-time="2026-10-14 17:28:24Z" duration="0.100463" asserts="0">
+              <test-case id="1005" name="StopCoroutine_Successfully" fullname="FirstLightEditor.Services.Tests.CoroutineServiceTest.StopCoroutine_Successfully" methodname="StopCoroutine_Successfully" classname="FirstLightEditor.Services.Tests.CoroutineServiceTest" runstate="Runnable" seed="1998556096" result="Passed" start-time="2026-10-14 17:56:26Z" end-time="2026-10-14 17:56:26Z" duration="0.100416" asserts="0">
                 <properties>
                   <property name="_JOINTYPE" value="UnityCombinatorial" />
                   <property name="retryIteration" value="0" />
