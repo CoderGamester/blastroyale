@@ -228,8 +228,8 @@
 
 .reward-display-text--currency {
     position: absolute;
-    bottom: 5;
-    right: 15;
+    bottom: 5px;
+    right: 15px;
 }
 
 .reward-display-text_item-category {
@@ -253,8 +253,8 @@
     justify-content: center;
     background-image: var(--sprite-home__banner-ribbon-copper);
     rotate: 40deg;
-    top: 55;
-    right: -330;
+    top: 55px;
+    right: -330px;
 }
 
 .ribbon-text {
@@ -278,7 +278,7 @@
 
 .purchase-bundle-button-container {
     position: absolute;
-    bottom: 100;
+    bottom: 100px;
     align-self: center;
     justify-content: flex-start;
 }

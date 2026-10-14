@@ -1,0 +1,425 @@
+{
+  "scope": "49 actual Unity6.3 USS/UXML importer warnings, 11 authored files; one native marked diagonal mask",
+  "files": [
+    {
+      "path": "BlastRoyale/Assets/Art/UI/Screens/HudCustomizationScreenStyle.uss",
+      "before_sha256": "de2d054efbfdbb201e64487e0a0c3210ff4b9b1b61ddaf5aaba0b3d45aac11ec",
+      "after_sha256": "ef6cd40ae293ea8fb8afd45ad6f2dfc3e2efcba3778182c00675fb3c5bb4f56e",
+      "preserve_meta": true,
+      "meta_sha256": "9b9cbb96093fc301b95aa89b39fcba224322c11a4dffeae705a02f3f5508eb02"
+    },
+    {
+      "path": "BlastRoyale/Assets/Art/UI/Screens/PassSeasonBanner.uss",
+      "before_sha256": "4b27ae3831d0a96f91cf873379a176392d54ac492c7199fa450e0d8832b171f2",
+      "after_sha256": "35d3b3c2e2538421f145232d412b1cd7d0a5839e0e4f29db9813481087354288",
+      "preserve_meta": true,
+      "meta_sha256": "98cddd78b47f972925d150bb18c7c8db65311a75e51bcc03043ad45207ed0238"
+    },
+    {
+      "path": "BlastRoyale/Assets/Art/UI/Screens/PassSeasonBannerNew.uss",
+      "before_sha256": "6c282d3c3eea276935fb8ef57f77b4749d140518ada822cb9165bc8f2c3bcc04",
+      "after_sha256": "77afc5b5870f4154dbb3bb1c5c921a571d9fe45a7dfbc18e0b4d9a3c6cde3cd1",
+      "preserve_meta": true,
+      "meta_sha256": "f1e31cf81457d266dba229f6614e7b5cb507b2e42350585b86b5b98a564395bd"
+    },
+    {
+      "path": "BlastRoyale/Assets/Art/UI/Screens/ProductBundleBanner.uss",
+      "before_sha256": "dd87a3ff4d713d7af2becc338f15aebcb3f9415af81cceb5d85baa82848325a8",
+      "after_sha256": "1eaf7ef6f90839a7983df07fb62a75531ba0a446bfa3ef5781f5f866588427c0",
+      "preserve_meta": true,
+      "meta_sha256": "277aa16d1418e0b0fd0278353befd29e13007e240ac040638f058249a2e9b27b"
+    },
+    {
+      "path": "BlastRoyale/Assets/Art/UI/Screens/ProductBundleBanner.uxml",
+      "before_sha256": "828b3ddb88196ede479dd6416f56b4fb71a6b8905708ef8694e491067a9623e9",
+      "after_sha256": "edbd6b9ab9d217572ca23a7adb2874ce7bd335bd55c120f3f4baed3e8b75c25b",
+      "preserve_meta": true,
+      "meta_sha256": "69495d0e6c14de77291c7676a91e1bc20ec411b50eaa23419be7149836a5644d"
+    },
+    {
+      "path": "BlastRoyale/Assets/Art/UI/Styles/CommonStyle.uss",
+      "before_sha256": "efd85badf048082959a3a30be61e5d3462f2c25eb04fddd5c92660ec32cb1fb4",
+      "after_sha256": "d680e82d7ec88f6b0c6346faf42ffde7d6ddd4816227d860ddc751fed0434817",
+      "preserve_meta": true,
+      "meta_sha256": "6ca066165a3ea7daaf40bb85d29b9b44c9e9057c2894d4b51163fc6b429ceb03"
+    },
+    {
+      "path": "BlastRoyale/Assets/Art/UI/Styles/Elements/FButton.uss",
+      "before_sha256": "f41890ee166a8188616023fd68f7d9854200f65d3092532239d323c3ca828eb4",
+      "after_sha256": "88633ab49633b88be1a1099fa2a5e0c72fbf21a668902baeac89eebd2323187c",
+      "preserve_meta": true,
+      "meta_sha256": "dc88e6bf64222e698c11757806bfe80ec1409e27617d1bfcb9113e1678bf2ef2"
+    },
+    {
+      "path": "BlastRoyale/Assets/Art/UI/Styles/GenericDialogStyle.uss",
+      "before_sha256": "3c5ab116cbbe625e28039a12159c87396ca8b6387bb0115eb16b83a9e7e76795",
+      "after_sha256": "8cca16eec4fbe719bfd0600868398047bb0480eb8da871257371cfbb847f1581",
+      "preserve_meta": true,
+      "meta_sha256": "0ca3b313277cc7a847755d4df7c3ffb280d6af8af8c66d00d9a83004b6dad57f"
+    },
+    {
+      "path": "BlastRoyale/Assets/Art/UI/Templates/Popups/TeamPopupStyle.uss",
+      "before_sha256": "c75554f60ab66e1eeb53afdbd178fe9c8f913dcb1e69a9a2d66ee020dc8a540a",
+      "after_sha256": "fd45ee01c03f71feb2a3bae12572da37099bd33227df764a0509ca069feb1f50",
+      "preserve_meta": true,
+      "meta_sha256": "5118a5de929480d1e83ed1f8cabe796b569e0aa7cf039855e270a6850fe7749e"
+    },
+    {
+      "path": "BlastRoyale/Assets/Art/UI/Templates/StoreGameProduct.uss",
+      "before_sha256": "9488f6fcac6fe263651492fa1a66e0471691cb17623820f45c177608314efa5e",
+      "after_sha256": "92b6bdd3f45113358fd7fb7802db363fc1884a0a57db596fca13c5c825091b87",
+      "preserve_meta": true,
+      "meta_sha256": "f8cd3f80c060a3d3932a4b10efca1765b60cdff6ba4b718890f6e40ab3c1e562"
+    },
+    {
+      "path": "BlastRoyale/Assets/Src/FirstLight/Game/Presenters/BattlePass/Resources/BattlepassSegmentButtonElement.uss",
+      "before_sha256": "2b57757f2a948745f926904e39b7ddcf9b7e435fb1dace8daedeee6942fe0a6a",
+      "after_sha256": "9af414d4060ad8f22a6c3d9d9fa8fd3a0e771fc8e4a01bbcdd52b70d30fc4795",
+      "preserve_meta": true,
+      "meta_sha256": "e19f53537eb4fa3e2a8b00b6d69669537a508b3972d1467eb363e161a7acc415"
+    },
+    {
+      "path": "BlastRoyale/Assets/Art/ModernizationPlaceholders/Sprites/PLACEHOLDER_DiagonalWiper.png",
+      "before_sha256": null,
+      "after_sha256": "01a04daa39d8e62769695e6a5e1d778f8e14d7814f20da1809595c5b40d58d3f"
+    },
+    {
+      "path": "BlastRoyale/Assets/Art/ModernizationPlaceholders/Sprites/PLACEHOLDER_DiagonalWiper.png.meta",
+      "before_sha256": null,
+      "after_sha256": "45741a8cbed37c684bec0c6a9c5dc64d10a486f68cee5e9172df6de3c007106b"
+    },
+    {
+      "path": "BlastRoyale/Assets/Art/ModernizationPlaceholders/Sprites.meta",
+      "before_sha256": null,
+      "after_sha256": "eadc85605d285b0b4464c256627afa265b8dcccd12d533326f9daebc42338107"
+    }
+  ],
+  "warnings": [
+    {
+      "path": "Assets/Art/UI/Styles/GenericDialogStyle.uss",
+      "line": 341,
+      "log_line": 16107,
+      "message": "Invalid asset path: 'Assets/Art/UI/Sprites/GenericPurchaseDialog/background.png'"
+    },
+    {
+      "path": "Assets/Art/UI/Styles/Elements/FButton.uss",
+      "line": 2,
+      "log_line": 16109,
+      "message": "Expected (<length-percentage> | auto) but found '374'"
+    },
+    {
+      "path": "Assets/Art/UI/Styles/Elements/FButton.uss",
+      "line": 3,
+      "log_line": 16111,
+      "message": "Expected (<length-percentage> | auto) but found '122'"
+    },
+    {
+      "path": "Assets/Art/UI/Styles/Elements/FButton.uss",
+      "line": 11,
+      "log_line": 16113,
+      "message": "Unknown property 'text-shadow-offset-x' (did you mean 'text-shadow'?)"
+    },
+    {
+      "path": "Assets/Art/UI/Styles/Elements/FButton.uss",
+      "line": 12,
+      "log_line": 16115,
+      "message": "Unknown property 'text-shadow-offset-y' (did you mean 'text-shadow'?)"
+    },
+    {
+      "path": "Assets/Art/UI/Styles/Elements/FButton.uss",
+      "line": 34,
+      "log_line": 16117,
+      "message": "Expected (<length-percentage> | auto) but found '5'"
+    },
+    {
+      "path": "Assets/Art/UI/Styles/Elements/FButton.uss",
+      "line": 35,
+      "log_line": 16119,
+      "message": "Expected (<length-percentage> | auto) but found '21'"
+    },
+    {
+      "path": "Assets/Art/UI/Styles/Elements/FButton.uss",
+      "line": 41,
+      "log_line": 16121,
+      "message": "Unknown property 'text-shadow-color' (did you mean 'text-shadow'?)"
+    },
+    {
+      "path": "Assets/Art/UI/Styles/Elements/FButton.uss",
+      "line": 47,
+      "log_line": 16123,
+      "message": "Unknown property 'text-shadow-color' (did you mean 'text-shadow'?)"
+    },
+    {
+      "path": "Assets/Art/UI/Styles/Elements/FButton.uss",
+      "line": 53,
+      "log_line": 16125,
+      "message": "Unknown property 'text-shadow-color' (did you mean 'text-shadow'?)"
+    },
+    {
+      "path": "Assets/Art/UI/Styles/Elements/FButton.uss",
+      "line": 58,
+      "log_line": 16127,
+      "message": "Unknown property 'text-shadow-color' (did you mean 'text-shadow'?)"
+    },
+    {
+      "path": "Assets/Art/UI/Styles/Elements/FButton.uss",
+      "line": 65,
+      "log_line": 16129,
+      "message": "Unknown property 'text-shadow-color' (did you mean 'text-shadow'?)"
+    },
+    {
+      "path": "Assets/Art/UI/Styles/Elements/FButton.uss",
+      "line": 72,
+      "log_line": 16131,
+      "message": "Unknown property 'text-shadow-color' (did you mean 'text-shadow'?)"
+    },
+    {
+      "path": "Assets/Art/UI/Styles/CommonStyle.uss",
+      "line": 164,
+      "log_line": 16135,
+      "message": "Expected (<length-percentage> | auto) but found '10'"
+    },
+    {
+      "path": "Assets/Art/UI/Styles/CommonStyle.uss",
+      "line": 401,
+      "log_line": 16137,
+      "message": "Unknown property '-unity-text-algn' (did you mean '-unity-text-align'?)"
+    },
+    {
+      "path": "Assets/Art/UI/Styles/CommonStyle.uss",
+      "line": 411,
+      "log_line": 16139,
+      "message": "Unknown property '-unity-text-algn' (did you mean '-unity-text-align'?)"
+    },
+    {
+      "path": "Assets/Art/UI/Styles/CommonStyle.uss",
+      "line": 422,
+      "log_line": 16141,
+      "message": "Unknown property '-unity-text-algn' (did you mean '-unity-text-align'?)"
+    },
+    {
+      "path": "Assets/Art/UI/Screens/ProductBundleBanner.uss",
+      "line": 231,
+      "log_line": 16144,
+      "message": "Expected (<length-percentage> | auto) but found '5'"
+    },
+    {
+      "path": "Assets/Art/UI/Screens/ProductBundleBanner.uss",
+      "line": 232,
+      "log_line": 16146,
+      "message": "Expected (<length-percentage> | auto) but found '15'"
+    },
+    {
+      "path": "Assets/Art/UI/Screens/ProductBundleBanner.uss",
+      "line": 256,
+      "log_line": 16148,
+      "message": "Expected (<length-percentage> | auto) but found '55'"
+    },
+    {
+      "path": "Assets/Art/UI/Screens/ProductBundleBanner.uss",
+      "line": 257,
+      "log_line": 16150,
+      "message": "Expected (<length-percentage> | auto) but found '-330'"
+    },
+    {
+      "path": "Assets/Art/UI/Screens/ProductBundleBanner.uss",
+      "line": 281,
+      "log_line": 16152,
+      "message": "Expected (<length-percentage> | auto) but found '100'"
+    },
+    {
+      "path": "Assets/Art/UI/Templates/Popups/TeamPopupStyle.uss",
+      "line": 207,
+      "log_line": 16155,
+      "message": "Could not resolve asset with GUID '3bc3ad1e198a6444988135065ef91d04' and file ID '21300000' from URL 'project://database/Assets/Art/UI/Sprites/Home/background-pending-party-invite.png?fileID=21300000&guid=3bc3ad1e198a6444988135065ef91d04&type=3'. Using asset path 'Assets/Art/UI/Sprites/Home/background-pending-party-invite.png' instead. Update the URL to remove this warning."
+    },
+    {
+      "path": "Assets/Art/UI/Screens/HudCustomizationScreenStyle.uss",
+      "line": 75,
+      "log_line": 16158,
+      "message": "Expected (<length>{2,3} && <color>?) but found '1 1 1 rgb(0, 0, 0)'"
+    },
+    {
+      "path": "Assets/Src/FirstLight/Game/Presenters/BattlePass/Resources/BattlepassSegmentButtonElement.uss",
+      "line": 440,
+      "log_line": 16164,
+      "message": "Expected (<length-percentage> | auto) but found '1'"
+    },
+    {
+      "path": "Assets/Src/FirstLight/Game/Presenters/BattlePass/Resources/BattlepassSegmentButtonElement.uss",
+      "line": 441,
+      "log_line": 16166,
+      "message": "Expected (<length-percentage> | auto) but found '2'"
+    },
+    {
+      "path": "Assets/Art/UI/Screens/PassSeasonBanner.uss",
+      "line": 31,
+      "log_line": 16173,
+      "message": "Invalid asset path hint \"Assets/Art/Textures/Ui/AdventureHud/321Countdown/DiagonalWiper.png\" for referenced asset GUID \"f26621d71421141298a9a8cf0dc80574\""
+    },
+    {
+      "path": "Assets/Art/UI/Screens/PassSeasonBanner.uss",
+      "line": 31,
+      "log_line": 16174,
+      "message": "Invalid asset path: 'project://database/Assets/Art/Textures/Ui/AdventureHud/321Countdown/DiagonalWiper.png?fileID=21300000&guid=f26621d71421141298a9a8cf0dc80574&type=3#DiagonalWiper'"
+    },
+    {
+      "path": "Assets/Art/UI/Screens/PassSeasonBanner.uss",
+      "line": 42,
+      "log_line": 16175,
+      "message": "Invalid asset path hint \"Assets/Art/Textures/Ui/AdventureHud/321Countdown/DiagonalWiper.png\" for referenced asset GUID \"f26621d71421141298a9a8cf0dc80574\""
+    },
+    {
+      "path": "Assets/Art/UI/Screens/PassSeasonBanner.uss",
+      "line": 42,
+      "log_line": 16176,
+      "message": "Invalid asset path: 'project://database/Assets/Art/Textures/Ui/AdventureHud/321Countdown/DiagonalWiper.png?fileID=21300000&guid=f26621d71421141298a9a8cf0dc80574&type=3#DiagonalWiper'"
+    },
+    {
+      "path": "Assets/Art/UI/Screens/PassSeasonBanner.uss",
+      "line": 78,
+      "log_line": 16177,
+      "message": "Invalid asset path hint \"Assets/Art/Textures/Ui/AdventureHud/321Countdown/DiagonalWiper.png\" for referenced asset GUID \"f26621d71421141298a9a8cf0dc80574\""
+    },
+    {
+      "path": "Assets/Art/UI/Screens/PassSeasonBanner.uss",
+      "line": 78,
+      "log_line": 16178,
+      "message": "Invalid asset path: 'project://database/Assets/Art/Textures/Ui/AdventureHud/321Countdown/DiagonalWiper.png?fileID=21300000&guid=f26621d71421141298a9a8cf0dc80574&type=3#DiagonalWiper'"
+    },
+    {
+      "path": "Assets/Art/UI/Screens/PassSeasonBanner.uss",
+      "line": 88,
+      "log_line": 16179,
+      "message": "Invalid asset path hint \"Assets/Art/Textures/Ui/AdventureHud/321Countdown/DiagonalWiper.png\" for referenced asset GUID \"f26621d71421141298a9a8cf0dc80574\""
+    },
+    {
+      "path": "Assets/Art/UI/Screens/PassSeasonBanner.uss",
+      "line": 88,
+      "log_line": 16180,
+      "message": "Invalid asset path: 'project://database/Assets/Art/Textures/Ui/AdventureHud/321Countdown/DiagonalWiper.png?fileID=21300000&guid=f26621d71421141298a9a8cf0dc80574&type=3#DiagonalWiper'"
+    },
+    {
+      "path": "Assets/Art/UI/Screens/PassSeasonBanner.uss",
+      "line": 260,
+      "log_line": 16181,
+      "message": "Invalid asset path hint \"Assets/Art/UI/Sprites/Home/flag-demon.png\" for referenced asset GUID \"200f11153aed542e3aeb0adb534ade89\""
+    },
+    {
+      "path": "Assets/Art/UI/Screens/PassSeasonBanner.uss",
+      "line": 260,
+      "log_line": 16182,
+      "message": "Invalid asset path: 'project://database/Assets/Art/UI/Sprites/Home/flag-demon.png?fileID=21300000&guid=200f11153aed542e3aeb0adb534ade89&type=3#flag-demon'"
+    },
+    {
+      "path": "Assets/Art/UI/Screens/PassSeasonBanner.uss",
+      "line": 312,
+      "log_line": 16183,
+      "message": "Invalid asset path hint \"Assets/AddressableResources/Collections/CharacterSkins/PunkFemale/character-femalepunk.png\" for referenced asset GUID \"d59bff88338df8840a6fbb2bccfa8122\""
+    },
+    {
+      "path": "Assets/Art/UI/Screens/PassSeasonBanner.uss",
+      "line": 312,
+      "log_line": 16184,
+      "message": "Invalid asset path: 'project://database/Assets/AddressableResources/Collections/CharacterSkins/PunkFemale/character-femalepunk.png?fileID=21300000&guid=d59bff88338df8840a6fbb2bccfa8122&type=3#character-femalepunk'"
+    },
+    {
+      "path": "Assets/Art/UI/Screens/PassSeasonBannerNew.uss",
+      "line": 108,
+      "log_line": 16191,
+      "message": "Invalid asset path hint \"Assets/AddressableResources/Collections/Flags/old flags/old_demon/flag-demon.png\" for referenced asset GUID \"200f11153aed542e3aeb0adb534ade89\""
+    },
+    {
+      "path": "Assets/Art/UI/Screens/PassSeasonBannerNew.uss",
+      "line": 108,
+      "log_line": 16192,
+      "message": "Invalid asset path: 'project://database/Assets/AddressableResources/Collections/Flags/old%20flags/old_demon/flag-demon.png?fileID=21300000&guid=200f11153aed542e3aeb0adb534ade89&type=3#flag-demon'"
+    },
+    {
+      "path": "Assets/Art/UI/Templates/StoreGameProduct.uss",
+      "line": 248,
+      "log_line": 16194,
+      "message": "Expected (<length-percentage> | auto) but found '15'"
+    },
+    {
+      "path": "Assets/Art/UI/Templates/StoreGameProduct.uss",
+      "line": 249,
+      "log_line": 16196,
+      "message": "Expected (<length-percentage> | auto) but found '15'"
+    },
+    {
+      "path": "Assets/Art/UI/Templates/StoreGameProduct.uss",
+      "line": 272,
+      "log_line": 16198,
+      "message": "Expected (<length-percentage> | auto) but found '14'"
+    },
+    {
+      "path": "Assets/Art/UI/Templates/StoreGameProduct.uss",
+      "line": 286,
+      "log_line": 16200,
+      "message": "Expected (<length-percentage> | auto) but found '15'"
+    },
+    {
+      "path": "Assets/Art/UI/Templates/StoreGameProduct.uss",
+      "line": 287,
+      "log_line": 16202,
+      "message": "Expected (<length-percentage> | auto) but found '15'"
+    },
+    {
+      "path": "Assets/Art/UI/Templates/StoreGameProduct.uss",
+      "line": 304,
+      "log_line": 16204,
+      "message": "Expected (<length-percentage> | auto) but found '13'"
+    },
+    {
+      "path": "Assets/Art/UI/Templates/StoreGameProduct.uss",
+      "line": 349,
+      "log_line": 16206,
+      "message": "Expected (<length-percentage> | auto) but found '-5'"
+    },
+    {
+      "path": "Assets/Art/UI/Templates/StoreGameProduct.uss",
+      "line": 350,
+      "log_line": 16208,
+      "message": "Expected (<length-percentage> | auto) but found '5'"
+    },
+    {
+      "path": "Assets/Art/UI/Screens/ProductBundleBanner.uxml",
+      "line": 1,
+      "log_line": 16219,
+      "message": "Semantic - The specified URI does not exist in the current project : Asset reference to GUID '61940b38786c2a742985d802960e4a9e' and file ID '9197481963319205126' was renamed from 'TemplateRewardDIsplay' to 'TemplateRewardDisplayContainer'. Update the URL 'project://database/Assets/Art/UI/Templates/Resources/TemplateRewardDIsplay.uxml?fileID=9197481963319205126&guid=61940b38786c2a742985d802960e4a9e&type=3#TemplateRewardDIsplay' to remove this warning."
+    }
+  ],
+  "units": "Original pixel values retained with px; unitless text-shadow components ported to real shorthand",
+  "template_alias": "TemplateRewardDIsplay alias retained; only source URI repaired",
+  "visual_replacements": "Existing genuine icons for same Flag_Demon/PunkFemale items and authored generic popup background; one marked native diagonal mask; original art not claimed",
+  "native_proof": "Docs/Modernization/verification/uitk-importer-warning-native-proof.json",
+  "asset_identity_proof": "Docs/Modernization/verification/uitk-repair-native-asset-inventory.json",
+  "native_probe_result": {
+    "status": "pass",
+    "editor": "6000.3.26f1",
+    "main_fresh_ios_import_warning_rows": 49,
+    "authored_files": 11,
+    "overlay_files": 14,
+    "probe_scope": "force-synchronous native imports of the eleven actual authored USS/UXML assets; source syntax/URIs and native asset identities; rendered UI acceptance separate",
+    "original_clone_note": "native generated diagonal mask already resolves original GUID, so four duplicate invalid-path warnings collapse to path-hint warnings before URI repair",
+    "cases": [
+      {
+        "stage": "original",
+        "actual_imported_assets": 11,
+        "native_import_warning_rows": 45,
+        "csharp_diagnostics": 0,
+        "native_exceptions": 0,
+        "process_exit_code": 0
+      },
+      {
+        "stage": "patched",
+        "actual_imported_assets": 11,
+        "native_import_warning_rows": 0,
+        "csharp_diagnostics": 0,
+        "native_exceptions": 0,
+        "process_exit_code": 0
+      }
+    ]
+  }
+}

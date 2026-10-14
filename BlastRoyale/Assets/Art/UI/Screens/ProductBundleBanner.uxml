@@ -1,5 +1,5 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
-    <ui:Template name="TemplateRewardDIsplay" src="project://database/Assets/Art/UI/Templates/Resources/TemplateRewardDIsplay.uxml?fileID=9197481963319205126&amp;guid=61940b38786c2a742985d802960e4a9e&amp;type=3#TemplateRewardDIsplay" />
+    <ui:Template name="TemplateRewardDIsplay" src="project://database/Assets/Art/UI/Templates/Resources/TemplateRewardDisplayContainer.uxml?fileID=9197481963319205126&amp;guid=61940b38786c2a742985d802960e4a9e&amp;type=3#TemplateRewardDisplayContainer" />
     <Style src="project://database/Assets/Art/UI/Screens/ProductBundleBanner.uss?fileID=7433441132597879392&amp;guid=722e2d582722687418d9b320cb47e3e7&amp;type=3#ProductBundleBanner" />
     <Style src="project://database/Assets/Art/UI/Styles/Kit/ButtonsNew.uss?fileID=7433441132597879392&amp;guid=dd84415d17f77de48b05cef3a874fca2&amp;type=3#ButtonsNew" />
     <ui:VisualElement name="root" class="banner-root">

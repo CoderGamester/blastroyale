@@ -338,7 +338,7 @@
 
 .purchase-confirmation__background-image {
     flex-grow: 0;
-    background-image: url('project://database/Assets/Art/UI/Sprites/GenericPurchaseDialog/background.png?fileID=2800000&amp;guid=4cb250eba39458044ab28897d3200b17&amp;type=3#background');
+    background-image: url('project://database/Assets/Art/UI/Sprites/Home/background-popup-generic.png?fileID=2800000&guid=d1b088eb567bf4ca3bb036959657419b&type=3#background-popup-generic');
     position: absolute;
     left: 0;
     right: 0;

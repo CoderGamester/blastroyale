@@ -1,6 +1,6 @@
 .fbutton {
-    width: 374;
-    height: 122;
+    width: 374px;
+    height: 122px;
     border-radius: 17px;
     color: rgb(255, 255, 255);
     -unity-text-align: middle-center;
@@ -8,8 +8,6 @@
     -unity-text-outline-width: 4px;
     -unity-text-outline-color: rgb(62, 62, 62);
     font-size: 48px;
-    text-shadow-offset-x: 4;
-    text-shadow-offset-y: 4;
     transition-property: top;
     transition-duration: 0.12s;
     transition-timing-function: ease-out-cubic;
@@ -31,45 +29,45 @@
 .fbutton__label {
     left: 0;
     right: 0;
-    top: 5;
-    bottom: 21;
+    top: 5px;
+    bottom: 21px;
     position: absolute;
 }
 
 .fbutton--primary {
     -unity-text-outline-color: rgb(156, 36, 12);
-    text-shadow-color: rgb(156, 36, 12);
+    text-shadow: 4px 4px 0 rgb(156, 36, 12);
     background-image: var(--sprite-elements__button-primary-bg);
 }
 
 .fbutton--secondary {
     -unity-text-outline-color: rgb(58, 13, 121);
-    text-shadow-color: rgb(58, 13, 121);
+    text-shadow: 4px 4px 0 rgb(58, 13, 121);
     background-image: var(--sprite-elements__button-secondary-bg);
 }
 
 .fbutton--tertiary {
     -unity-text-outline-color: rgb(20, 43, 163);
-    text-shadow-color: rgb(20, 43, 163);
+    text-shadow: 4px 4px 0 rgb(20, 43, 163);
     background-image: var(--sprite-elements__button-tertiary-bg);
 }
 
 .fbutton--error {
-    text-shadow-color: rgb(106, 11, 11);
+    text-shadow: 4px 4px 0 rgb(106, 11, 11);
     -unity-text-outline-color: rgb(106, 11, 11);
     background-image: var(--sprite-elements__button-error-bg);
 }
 
 .fbutton--success {
     -unity-text-outline-color: rgb(29, 75, 0);
-    text-shadow-color: rgb(29, 75, 0);
+    text-shadow: 4px 4px 0 rgb(29, 75, 0);
     background-image: var(--sprite-elements__button-success-bg);
 }
 
 .fbutton:disabled {
     opacity: 1;
     -unity-text-outline-color: rgb(55, 51, 65);
-    text-shadow-color: rgb(55, 51, 65);
+    text-shadow: 4px 4px 0 rgb(55, 51, 65);
     background-image: var(--sprite-elements__button-disabled-bg);
 }
 

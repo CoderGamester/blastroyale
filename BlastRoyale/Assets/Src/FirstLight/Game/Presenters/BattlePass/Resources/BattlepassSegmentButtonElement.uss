@@ -437,8 +437,8 @@
 }
 
 .bar__buy-button:active > .bar__buy-button--content {
-    left: 1;
-    top: 2;
+    left: 1px;
+    top: 2px;
 }
 
 .reward__lock {

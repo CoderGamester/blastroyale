@@ -204,7 +204,7 @@
     width: 379px;
     height: 114px;
     display: flex;
-    background-image: url("project://database/Assets/Art/UI/Sprites/Home/background-pending-party-invite.png?fileID=21300000&guid=3bc3ad1e198a6444988135065ef91d04&type=3#background-pending-party-invite");
+    background-image: url("project://database/Assets/Art/UI/Sprites/Home/background-pending-party-invite.png?fileID=21300000&guid=db63f3211fd0f264ba61e62469b8c588&type=3#background-pending-party-invite");
     align-self: auto;
     align-items: flex-start;
     padding: 25px;

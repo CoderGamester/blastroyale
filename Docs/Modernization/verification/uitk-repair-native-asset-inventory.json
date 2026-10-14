@@ -1,0 +1,86 @@
+[
+  {
+    "path": "Assets/Art/ModernizationPlaceholders/Sprites/PLACEHOLDER_DiagonalWiper.png",
+    "guid": "f26621d71421141298a9a8cf0dc80574",
+    "fileId": 2800000,
+    "name": "PLACEHOLDER_DiagonalWiper",
+    "type": "UnityEngine.Texture2D"
+  },
+  {
+    "path": "Assets/Art/ModernizationPlaceholders/Sprites/PLACEHOLDER_DiagonalWiper.png",
+    "guid": "f26621d71421141298a9a8cf0dc80574",
+    "fileId": 21300000,
+    "name": "PLACEHOLDER_DiagonalWiper",
+    "type": "UnityEngine.Sprite"
+  },
+  {
+    "path": "Assets/AddressableResources/Collections/Flags/Flag_Demon/Icon_Flag_Demon.png",
+    "guid": "1fdfaaef645b4c2498fc5c58a2931cc7",
+    "fileId": 2800000,
+    "name": "Icon_Flag_Demon",
+    "type": "UnityEngine.Texture2D"
+  },
+  {
+    "path": "Assets/AddressableResources/Collections/Flags/Flag_Demon/Icon_Flag_Demon.png",
+    "guid": "1fdfaaef645b4c2498fc5c58a2931cc7",
+    "fileId": 21300000,
+    "name": "Icon_Flag_Demon",
+    "type": "UnityEngine.Sprite"
+  },
+  {
+    "path": "Assets/AddressableResources/Collections/CharacterSkins/PunkFemale/Icon_Char_PunkFemale.png",
+    "guid": "3522f27be9980524392ef07a05bb1f91",
+    "fileId": 2800000,
+    "name": "Icon_Char_PunkFemale",
+    "type": "UnityEngine.Texture2D"
+  },
+  {
+    "path": "Assets/AddressableResources/Collections/CharacterSkins/PunkFemale/Icon_Char_PunkFemale.png",
+    "guid": "3522f27be9980524392ef07a05bb1f91",
+    "fileId": 21300000,
+    "name": "Icon_Char_PunkFemale",
+    "type": "UnityEngine.Sprite"
+  },
+  {
+    "path": "Assets/Art/UI/Sprites/Home/background-popup-generic.png",
+    "guid": "d1b088eb567bf4ca3bb036959657419b",
+    "fileId": 2800000,
+    "name": "background-popup-generic",
+    "type": "UnityEngine.Texture2D"
+  },
+  {
+    "path": "Assets/Art/UI/Sprites/Home/background-popup-generic.png",
+    "guid": "d1b088eb567bf4ca3bb036959657419b",
+    "fileId": 21300000,
+    "name": "background-popup-generic",
+    "type": "UnityEngine.Sprite"
+  },
+  {
+    "path": "Assets/Art/UI/Sprites/Home/background-pending-party-invite.png",
+    "guid": "db63f3211fd0f264ba61e62469b8c588",
+    "fileId": 2800000,
+    "name": "background-pending-party-invite",
+    "type": "UnityEngine.Texture2D"
+  },
+  {
+    "path": "Assets/Art/UI/Sprites/Home/background-pending-party-invite.png",
+    "guid": "db63f3211fd0f264ba61e62469b8c588",
+    "fileId": 21300000,
+    "name": "background-pending-party-invite",
+    "type": "UnityEngine.Sprite"
+  },
+  {
+    "path": "Assets/Art/UI/Templates/Resources/TemplateRewardDisplayContainer.uxml",
+    "guid": "61940b38786c2a742985d802960e4a9e",
+    "fileId": 9197481963319205126,
+    "name": "TemplateRewardDisplayContainer",
+    "type": "UnityEngine.UIElements.VisualTreeAsset"
+  },
+  {
+    "path": "Assets/Art/UI/Templates/Resources/TemplateRewardDisplayContainer.uxml",
+    "guid": "61940b38786c2a742985d802960e4a9e",
+    "fileId": 1068529831357515114,
+    "name": "inlineStyle",
+    "type": "UnityEngine.UIElements.StyleSheet"
+  }
+]

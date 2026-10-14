@@ -1,0 +1,27 @@
+{
+  "status": "pass",
+  "editor": "6000.3.26f1",
+  "main_fresh_ios_import_warning_rows": 49,
+  "authored_files": 11,
+  "overlay_files": 14,
+  "probe_scope": "force-synchronous native imports of the eleven actual authored USS/UXML assets; source syntax/URIs and native asset identities; rendered UI acceptance separate",
+  "original_clone_note": "native generated diagonal mask already resolves original GUID, so four duplicate invalid-path warnings collapse to path-hint warnings before URI repair",
+  "cases": [
+    {
+      "stage": "original",
+      "actual_imported_assets": 11,
+      "native_import_warning_rows": 45,
+      "csharp_diagnostics": 0,
+      "native_exceptions": 0,
+      "process_exit_code": 0
+    },
+    {
+      "stage": "patched",
+      "actual_imported_assets": 11,
+      "native_import_warning_rows": 0,
+      "csharp_diagnostics": 0,
+      "native_exceptions": 0,
+      "process_exit_code": 0
+    }
+  ]
+}
