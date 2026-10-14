@@ -1,0 +1,18 @@
+{
+  "result": "passed",
+  "unity": "6000.3.26f1",
+  "target": "iOS",
+  "development": true,
+  "export_exit_code": 0,
+  "xcode_project_present": true,
+  "il2cpp_source_present": true,
+  "CSharp_errors": 0,
+  "CSharp_warnings": 0,
+  "addressables_result": "passed",
+  "signing": "not_run",
+  "xcode_compilation": "not_run",
+  "device_test": "not_run",
+  "content_import_warning_lines": 49,
+  "mobile_source_scanner_warnings": 8,
+  "scope": "UGS export checkpoint before final remaining-map, Boot retirement, and authored UI import fixes"
+}
