@@ -10,6 +10,5 @@ BlastRoyale/Assets/Src/FirstLight/Game/Utils/NetworkUtils.cs @@ServerNerds
 BlastRoyale/Assets/Src/FirstLight/Game/StateMachines/NetworkState.cs @@ServerNerds
 BlastRoyale/Assets/Libs/Photon/ @@ServerNerds
 
-Pipelines/ @"Carlos"
 
 AllGroupsCheck(1)
