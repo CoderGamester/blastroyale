@@ -1,0 +1,142 @@
+{
+  "source": "Unity 6000.3.26f1 bundled PackageManager/Editor/manifest.json",
+  "editorRevision": "de8167e7440c",
+  "changed": [
+    {
+      "name": "com.unity.2d.animation",
+      "before": "10.1.4",
+      "after": "13.0.6"
+    },
+    {
+      "name": "com.unity.addressables",
+      "before": "2.2.2",
+      "after": "2.10.3"
+    },
+    {
+      "name": "com.unity.ads.ios-support",
+      "before": "1.0.0",
+      "after": "1.0.1"
+    },
+    {
+      "name": "com.unity.ai.navigation",
+      "before": "2.0.6",
+      "after": "2.0.15"
+    },
+    {
+      "name": "com.unity.asset-manager-for-unity",
+      "before": "1.2.1",
+      "after": "1.12.0"
+    },
+    {
+      "name": "com.unity.cinemachine",
+      "before": "2.10.3",
+      "after": "2.10.7"
+    },
+    {
+      "name": "com.unity.device-simulator.devices",
+      "before": "1.0.0",
+      "after": "1.0.1"
+    },
+    {
+      "name": "com.unity.ide.rider",
+      "before": "3.0.34",
+      "after": "3.0.40"
+    },
+    {
+      "name": "com.unity.ide.visualstudio",
+      "before": "2.0.22",
+      "after": "2.0.26"
+    },
+    {
+      "name": "com.unity.inputsystem",
+      "before": "1.13.0",
+      "after": "1.20.0"
+    },
+    {
+      "name": "com.unity.memoryprofiler",
+      "before": "1.1.4",
+      "after": "1.1.12"
+    },
+    {
+      "name": "com.unity.mobile.android-logcat",
+      "before": "1.4.4",
+      "after": "1.4.7"
+    },
+    {
+      "name": "com.unity.nuget.newtonsoft-json",
+      "before": "3.2.1",
+      "after": "3.2.2"
+    },
+    {
+      "name": "com.unity.probuilder",
+      "before": "6.0.4",
+      "after": "6.1.2"
+    },
+    {
+      "name": "com.unity.purchasing",
+      "before": "4.12.2",
+      "after": "4.15.1"
+    },
+    {
+      "name": "com.unity.remote-config",
+      "before": "4.1.1",
+      "after": "4.2.5"
+    },
+    {
+      "name": "com.unity.render-pipelines.universal",
+      "before": "17.0.3",
+      "after": "17.3.0"
+    },
+    {
+      "name": "com.unity.services.analytics",
+      "before": "6.0.2",
+      "after": "6.3.0"
+    },
+    {
+      "name": "com.unity.services.authentication",
+      "before": "3.4.0",
+      "after": "3.8.0"
+    },
+    {
+      "name": "com.unity.services.cloud-diagnostics",
+      "before": "1.0.10",
+      "after": "1.0.12"
+    },
+    {
+      "name": "com.unity.services.cloudsave",
+      "before": "3.2.0",
+      "after": "3.4.0"
+    },
+    {
+      "name": "com.unity.services.friends",
+      "before": "1.1.0",
+      "after": "1.3.0"
+    },
+    {
+      "name": "com.unity.services.user-reporting",
+      "before": "2.0.11",
+      "after": "2.0.15"
+    },
+    {
+      "name": "com.unity.services.wire",
+      "before": "1.2.7",
+      "after": "1.6.0"
+    },
+    {
+      "name": "com.unity.timeline",
+      "before": "1.8.7",
+      "after": "1.8.13"
+    }
+  ],
+  "removed": [
+    "com.google.external-dependency-manager",
+    "com.google.firebase.analytics",
+    "com.google.firebase.app",
+    "com.nethereum.unity",
+    "xyz.0xsequence.waas-unity",
+    "com.unity.services.push-notifications",
+    "com.unity.services.cloud-build",
+    "com.unity.ui",
+    "com.unity.ui.builder"
+  ]
+}
