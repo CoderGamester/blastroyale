@@ -1,0 +1,11 @@
+{
+  "Restart": false,
+  "ProfileIsolatedFromGame": true,
+  "NativeAuthorized": true,
+  "SavedModelCount": 12,
+  "TwelveModelReloadMatches": true,
+  "PublicProfileMatches": true,
+  "NativeExistingKeyConflictRejected": true,
+  "ProbeDataRestoredAfterConflict": true,
+  "Passed": true
+}

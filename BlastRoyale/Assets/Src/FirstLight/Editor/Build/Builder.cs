@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Reflection;
 using FirstLight.Editor.Build.Utils;
 using FirstLight.Game.Utils;
 using JetBrains.Annotations;
@@ -75,6 +76,7 @@ namespace FirstLight.Editor.Build
 		internal static BuildReport Build(BuildParameters @params)
 		{
 			var buildConfig = new BuildPlayerOptions();
+			ConfigureCloudProjectFromLocalConfiguration();
 
 			SetupBuildNumber(@params.BuildNumber);
 			SetupDevelopmentBuild(@params.DevelopmentBuild, ref buildConfig);
@@ -98,6 +100,20 @@ namespace FirstLight.Editor.Build
 			buildConfig.options |= @params.AdditionalOptions;
 
 			return BuildPipeline.BuildPlayer(buildConfig);
+		}
+
+		internal static void ConfigureCloudProjectFromLocalConfiguration()
+		{
+			FLEnvironment.ValidateClientConfiguration();
+			var project = FLEnvironment.Configuration.UnityProjectId;
+			// CI restores the ignored JSON; the public checkout intentionally has no linked account ID.
+			// Use the same native setting as Project Settings > Services so UGS in the player receives it.
+			var setter = typeof(PlayerSettings).GetMethod("SetCloudProjectId", BindingFlags.NonPublic | BindingFlags.Static);
+			if (setter == null) throw new MissingMethodException("Unity 6.3 native cloud project configuration API unavailable.");
+			setter.Invoke(null, new object[] { project });
+			if (!string.Equals(Application.cloudProjectId, project, StringComparison.OrdinalIgnoreCase))
+				throw new InvalidOperationException("The native player project does not match ignored local configuration.");
+			AssetDatabase.SaveAssets();
 		}
 
 		private static void SetupPath(ref BuildPlayerOptions buildConfig, BuildTarget buildTarget)
