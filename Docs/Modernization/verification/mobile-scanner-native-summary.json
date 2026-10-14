@@ -1,0 +1,39 @@
+{
+  "status": "pass",
+  "editor": "6000.3.26f1",
+  "scope": "actual pinned scanner invocation and player-compilation metadata filter; no warning suppression",
+  "upstream_git_pin": "8ce2d7295afd200895179c981e5e43e60ce11d18",
+  "original_sha256": "b5cc297b31c934cd3511c51bb41910f32c137845ef60425f26c6528244037cb2",
+  "patched_sha256": "8c81c07400a05d41d229d07bcc3bb485efb7a38ffe4607ed67cc5ed8d4cefee9",
+  "cases": [
+    {
+      "stage": "original",
+      "configuration_warnings": 8,
+      "usesAtt": true,
+      "permissions": [
+        "Camera",
+        "Microphone",
+        "LocationWhenInUse",
+        "LocationAlways",
+        "PhotoLibrary",
+        "PhotoLibraryAddOnly",
+        "Notifications"
+      ],
+      "csharp_diagnostics": 0,
+      "native_exceptions": 0,
+      "process_exit_code": 0
+    },
+    {
+      "stage": "patched",
+      "configuration_warnings": 0,
+      "usesAtt": false,
+      "permissions": [],
+      "csharp_diagnostics": 0,
+      "native_exceptions": 0,
+      "process_exit_code": 0
+    }
+  ],
+  "culprit": "GameLovers.MobileServices.Editor.Explorer.DeviceSimulatorPanel.MobileServicesDeviceSimulatorPlugin._permissions/_att, not FirstLight runtime calls",
+  "configuration_scope": "Clone generic Android scheme was the first native input; final Main configuration is host-constrained friend with existing party/match manifest declarations preserved by root.",
+  "PositiveControl": "Actual runtime player permission service field remains detected:7permissions/6usagewarnings"
+}
