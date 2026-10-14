@@ -1,0 +1,10 @@
+{
+  "Result": "PASS",
+  "NativeProcessExit": 0,
+  "CompilerErrors": 0,
+  "CompilerWarnings": 0,
+  "NativeBuildCompleted": true,
+  "Scope": "UGS, phase5 native SDK layout, shadergraph migration and retired purchasing SDK. Before remaining-map and tint content integration.",
+  "Log": "artifacts/main-addressables-ugs-first.log",
+  "OtherContentWarningsPresent": true
+}
