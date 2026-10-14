@@ -1,0 +1,17 @@
+{
+  "Result": "Passed",
+  "Total": 314,
+  "Passed": 314,
+  "Failed": 0,
+  "Skipped": 0,
+  "NativeQueueSessionCases": 5,
+  "NativePartyReservationCases": 9,
+  "NativeMovementBotsPhysicsReplayCases": 2,
+  "ProcessExit": 0,
+  "CompilerErrors": 0,
+  "CompilerWarnings": 0,
+  "XmlSha256": "f944492540307fae6be75269a731655e4ffae54ae8e9a20c895983d7d4b5d4f7",
+  "SDKImportWarnings": 0,
+  "LiveCloudAcceptance": "Passed: real12model/publicprofile/writeconflict/restart; normalHome match acceptance pending synchronousdispatch fix",
+  "SourceCheckpoint": "after genuine DTO transport reduction and purchasing retirement"
+}

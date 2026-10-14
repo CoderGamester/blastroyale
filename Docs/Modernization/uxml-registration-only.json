@@ -1,0 +1,220 @@
+{
+  "registration_only_classes": [
+    {
+      "path": "BlastRoyale/Assets/Src/FirstLight/Game/UIElements/SpecialButtonElement.cs",
+      "class": "SpecialButtonElement",
+      "metadata_sha256": "c6024955d221f7d1fdd0286c86ac649a5c12335be0c386a32ca0dc91fac89f3b"
+    },
+    {
+      "path": "BlastRoyale/Assets/Src/FirstLight/Game/UIElements/CurrencyRewardSummaryItemElement.cs",
+      "class": "CurrencyRewardSummaryItemElement",
+      "metadata_sha256": "bda711822998455fb5793990513e834a6e6c152c8722eb541f924ddfa0e326cc"
+    },
+    {
+      "path": "BlastRoyale/Assets/Src/FirstLight/Game/UIElements/AngledContainerElement.cs",
+      "class": "AngledContainerElement",
+      "metadata_sha256": "9025e93c2251323651392c192564d538e856ffa4913677167ffb7d7ba8122101"
+    },
+    {
+      "path": "BlastRoyale/Assets/Src/FirstLight/Game/UIElements/SquadMemberElement.cs",
+      "class": "SquadMemberElement",
+      "metadata_sha256": "be8813141541455f6113ddc9da44a3a7bb531f902661f39de92bd334a20e58a1"
+    },
+    {
+      "path": "BlastRoyale/Assets/Src/FirstLight/Game/UIElements/TabbedView.cs",
+      "class": "TabbedView",
+      "metadata_sha256": "38839c2695bb6e3c36f86985c9d3c6d35e2b2f96acbba57fdd030b79defe40f7"
+    },
+    {
+      "path": "BlastRoyale/Assets/Src/FirstLight/Game/UIElements/GameIdIconSummaryItemElement.cs",
+      "class": "GameIdIconSummaryItemElement",
+      "metadata_sha256": "227bdb65cfced8b8c82e9ca703a88f9b57d1861bf7d6a859bffe4b57c6ab5ca0"
+    },
+    {
+      "path": "BlastRoyale/Assets/Src/FirstLight/Game/UIElements/HealthStatusBarElement.cs",
+      "class": "HealthStatusBarElement",
+      "metadata_sha256": "a511735f565873101c92e18ea94bc73a3c647ba17857647b5be96de621ca43b4"
+    },
+    {
+      "path": "BlastRoyale/Assets/Src/FirstLight/Game/Presenters/Store/StoreCreatorCodeElement.cs",
+      "class": "StoreCreatorCodeElement",
+      "metadata_sha256": "45bc7f7ad4dff7089ce2fccd7781409054f8733c6c458c0d36e23253f8b33ce5"
+    },
+    {
+      "path": "BlastRoyale/Assets/Src/FirstLight/Game/UIElements/PlayerMemberElement.cs",
+      "class": "PlayerMemberElement",
+      "metadata_sha256": "93abb9b4b55754b27f7da45c880c1a16d6c97c8db3df935b7786d6735be4c36e"
+    },
+    {
+      "path": "BlastRoyale/Assets/Src/FirstLight/Game/Presenters/BattlePass/BattlepassLevelColumnElement.cs",
+      "class": "BattlepassLevelColumnElement",
+      "metadata_sha256": "9be359489d052ac9479db0ddfe0a862fffc0b2100d18ebbd3caa58ae65c875e8"
+    },
+    {
+      "path": "BlastRoyale/Assets/Src/FirstLight/Game/UIElements/UnlockRewardSummaryItemElement.cs",
+      "class": "UnlockRewardSummaryElement",
+      "metadata_sha256": "d7535f7984d1670eb52304ec7c7b858ed524ba4c650dd6610f16428d67c232cd"
+    },
+    {
+      "path": "BlastRoyale/Assets/Src/FirstLight/Game/Presenters/ProductsBundle/RewardDisplayContainerElement.cs",
+      "class": "RewardDisplayContainerElement",
+      "metadata_sha256": "c6598ac6841dc37001b82473ab0fe453632d56185616fb77565329fab56a4d5d"
+    },
+    {
+      "path": "BlastRoyale/Assets/Src/FirstLight/Game/UIElements/CollectionRewardSummaryItemElement.cs",
+      "class": "CollectionRewardsSummaryElement",
+      "metadata_sha256": "9669187948fca8a7aa11afa204f14e2b872c733d9a14549632fee0f948d5b071"
+    },
+    {
+      "path": "BlastRoyale/Assets/Src/FirstLight/Game/UIElements/PlayerHealthShieldElement.cs",
+      "class": "PlayerHealthShieldElement",
+      "metadata_sha256": "bf0dad88a447450154d3da437f416c2654b6fd1b8d91bed92041219db927888b"
+    },
+    {
+      "path": "BlastRoyale/Assets/Src/FirstLight/Game/UIElements/InGamePlayerAvatar.cs",
+      "class": "InGamePlayerAvatar",
+      "metadata_sha256": "33f6525d49daf5dc55a60791ace434dc9e94860975bee59aee52aa5927d06bee"
+    },
+    {
+      "path": "BlastRoyale/Assets/Src/FirstLight/Game/UIElements/RewardSummaryItemElement.cs",
+      "class": "RewardSummaryItemElement",
+      "metadata_sha256": "33b0207c25f62a12f15f12b4612153d3008890a974e86495445cf71f79debd4d"
+    },
+    {
+      "path": "BlastRoyale/Assets/Src/FirstLight/Game/UIElements/PlayerStatusBarElement.cs",
+      "class": "PlayerStatusBarElement",
+      "metadata_sha256": "383c6964acbf305e705e6c016f46e42e29fd49f27c9c34fe7702269d0d1c35ad"
+    },
+    {
+      "path": "BlastRoyale/Assets/Src/FirstLight/Game/UIElements/DeathNotificationElement.cs",
+      "class": "DeathNotificationElement",
+      "metadata_sha256": "d478d0c48d0e04df0e477126f2bddc0766b5a59667a1851183cf2ad3db4a4880"
+    },
+    {
+      "path": "BlastRoyale/Assets/Src/FirstLight/Game/UIElements/FriendListElement.cs",
+      "class": "FriendListElement",
+      "metadata_sha256": "24bdbe9d92dea49c973b8ce3c880344fe6ddc1dea60c5c6a22b6073d0b9490ee"
+    },
+    {
+      "path": "BlastRoyale/Assets/Src/FirstLight/Game/UIElements/ProfilePictureRewardSummaryItemElement.cs",
+      "class": "ProfilePictureRewardSummaryItemElement",
+      "metadata_sha256": "fcecaaa8cc639184f7f5414aaa4cfac9e90ad00574720228131a5ab5ddb680d0"
+    },
+    {
+      "path": "BlastRoyale/Assets/Src/FirstLight/Game/UIElements/DotsLoadingElement.cs",
+      "class": "DotsLoadingElement",
+      "metadata_sha256": "bd601d4243b155470e6bda0379bf515e399d920cf32b4d0077c899cb3550a61b"
+    },
+    {
+      "path": "BlastRoyale/Assets/Src/FirstLight/Game/UIElements/PlayerAvatarElement.cs",
+      "class": "PlayerAvatarElement",
+      "metadata_sha256": "46a0dbf04eedb8e35a0bf4755dca2292ce273bbf0b25ee7e2f080b1fa33a0813"
+    },
+    {
+      "path": "BlastRoyale/Assets/Src/FirstLight/Game/UIElements/RemoteAvatarElement.cs",
+      "class": "RemoteAvatarElement",
+      "metadata_sha256": "c7c029267e5714d22590804a196e3c152f24619b2b46d5037176aa5f88e91217"
+    },
+    {
+      "path": "BlastRoyale/Assets/Src/FirstLight/Game/UIElements/JoystickElement.cs",
+      "class": "JoystickElement",
+      "metadata_sha256": "c707932a2cc1d94a69fed8ba15f14960ffb4024a552e4d7551cb48b446522402"
+    },
+    {
+      "path": "BlastRoyale/Assets/Src/FirstLight/Game/UIElements/ButtonOutlined.cs",
+      "class": "ButtonOutlined",
+      "metadata_sha256": "5babebdd64d16565a94278a2c37f2ff3164cbd3998fc6231d115d086b92b8c6e"
+    },
+    {
+      "path": "BlastRoyale/Assets/Src/FirstLight/Game/Presenters/Social/Team/PendingInviteElement.cs",
+      "class": "PendingInviteElement",
+      "metadata_sha256": "7516e054cf9e2ad5ad96cdfba4da6b3a68d9339666b7dffc5dfb84e4edf24a40"
+    },
+    {
+      "path": "BlastRoyale/Assets/Src/FirstLight/Game/UIElements/MightElement.cs",
+      "class": "MightElement",
+      "metadata_sha256": "07eb080a7570278d1cdd76d4c6dd2aadac3c086d1ee87c39321944ec54969a16"
+    },
+    {
+      "path": "BlastRoyale/Assets/Src/FirstLight/Game/Presenters/Social/Elements/MatchLobbyItemElement.cs",
+      "class": "MatchLobbyItemElement",
+      "metadata_sha256": "15ecb0e8e5649d85dd37ac37ce5656327796be3580a88f5e6d0bec4d02cb89eb"
+    },
+    {
+      "path": "BlastRoyale/Assets/Src/FirstLight/Game/Presenters/Social/Elements/MatchLobbyPlayerElement.cs",
+      "class": "MatchLobbyPlayerElement",
+      "metadata_sha256": "8817b0a6bbd07280a89f049ff24a61e9a576c42d4b5f461f13893e0e4634a52d"
+    }
+  ],
+  "incorrect_old_factory_types": [
+    {
+      "path": "BlastRoyale/Assets/Src/FirstLight/Game/UIElements/CurrencyRewardSummaryItemElement.cs",
+      "class": "CurrencyRewardSummaryItemElement",
+      "old_registered_type": "RewardSummaryItemElement"
+    },
+    {
+      "path": "BlastRoyale/Assets/Src/FirstLight/Game/UIElements/GameIdIconSummaryItemElement.cs",
+      "class": "GameIdIconSummaryItemElement",
+      "old_registered_type": "CollectionRewardsSummaryElement"
+    },
+    {
+      "path": "BlastRoyale/Assets/Src/FirstLight/Game/Presenters/Store/StoreCreatorCodeElement.cs",
+      "class": "StoreCreatorCodeElement",
+      "old_registered_type": "StoreGameProductElement"
+    },
+    {
+      "path": "BlastRoyale/Assets/Src/FirstLight/Game/UIElements/ProfilePictureRewardSummaryItemElement.cs",
+      "class": "ProfilePictureRewardSummaryItemElement",
+      "old_registered_type": "CollectionRewardsSummaryElement"
+    }
+  ],
+  "constructor_obsolete_removed": [
+    "ButtonOutlined"
+  ],
+  "followup_classes": [
+    {
+      "path": "BlastRoyale/Assets/Src/FirstLight/Game/UIElements/GradientElement.cs",
+      "class": "GradientElement",
+      "metadata_sha256": "db6f61b44a5ea678260c3a117e878626aac9f126025695a7a964d6e16a25e3aa"
+    },
+    {
+      "path": "BlastRoyale/Assets/Src/FirstLight/Game/UIElements/CollectionCardElement.cs",
+      "class": "CollectionCardElement",
+      "metadata_sha256": "d5cd8b1d51b0e7d522284d66b7123944260164b41298b7112e5161fb5a12a0dd"
+    },
+    {
+      "path": "BlastRoyale/Assets/Src/FirstLight/Game/UIElements/CollectionCategoryElement.cs",
+      "class": "CollectionCategoryElement",
+      "metadata_sha256": "22501515ecd0e9a85272c3447921179242733d24af44e5b1fcf87090b4ab7815"
+    }
+  ],
+  "followup_semantics": {
+    "GradientElement": "Private vertical UxmlAttribute retains explicit vertical tag and bool false default",
+    "CollectionCardElement": "Inherits modern ImageButton focus behavior",
+    "CollectionCategoryElement": "Inherits modern ImageButton focus behavior"
+  },
+  "misregistered_tag_compatibility": {
+    "matching_assets_tags": {
+      "RewardSummaryItemElement": 4
+    },
+    "new_class_names_used_in_assets_uxml": [],
+    "aliases_required": false,
+    "uxml_rewritten": false
+  },
+  "unity6_transform_followup": {
+    "files": [
+      "JoystickElement",
+      "SpecialButtonElement",
+      "PlayerStatusBarElement",
+      "AngledContainerElement"
+    ],
+    "JoystickElement": "Resolved Vector3 translation reads; inline pixel Translate writes; Rotate uses original atan2 normalized degrees plus 90; initial z restored",
+    "SpecialButtonElement": "VisualElement stick translation and reset use pixel Translate",
+    "PlayerStatusBarElement": "VisualElement damage-number translation uses pixel Translate; 2D Scale preserves legacy ITransform forcing z to 1",
+    "AngledContainerElement": "Unused _contentContainer removed; contentContainer still returns _mask",
+    "static_checks": "Pass: no obsolete transform access in four files; all 32 registration metadata SHA256 values unchanged; scoped git diff check passes",
+    "source_generator_compilation": "Pending isolated warnings-as-errors build owned by backend agent",
+    "interaction_validation": "Not run; original-project Quantum migration validation owned by root",
+    "official_api_evidence": "https://github.com/Unity-Technologies/UnityCsReference/blob/6000.3/Modules/UIElements/Core/VisualElement.cs#L768-L803"
+  }
+}

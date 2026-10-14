@@ -1,0 +1,871 @@
+{
+  "editor": "6000.3.26f1",
+  "date": "2026-10-14",
+  "registered_controls": 64,
+  "modern_attributes": 75,
+  "source_metadata_unchanged": true,
+  "syntax_files": 126,
+  "syntax_errors": 0,
+  "isolated_generated_controls": 30,
+  "isolated_compiler_warnings": 0,
+  "isolated_compiler_errors": 0,
+  "isolated_compile_command": "dotnet build Tools/Validation/UxmlIsolation/UxmlIsolation.csproj -v:q",
+  "compile_only_collaborators": [
+    "UI extension helpers AddClass/SetDisplay/LocalizeKey",
+    "UIUtils clipboard helper",
+    "UIService backwards-click constant",
+    "empty Photon.Realtime namespace for an unused import"
+  ],
+  "not_verified": [
+    "full game compilation",
+    "Unity UI Builder/default extraction",
+    "UXML importer and Addressables rebuild",
+    "runtime panel rendering/input/localization/native bridges"
+  ],
+  "classes": [
+    {
+      "class": "SpecialButtonElement",
+      "path": "BlastRoyale/Assets/Src/FirstLight/Game/UIElements/SpecialButtonElement.cs",
+      "source_sha256": "3fa3d31bb1da73b9b868151dcc3b3c5bb7dff937bd2322d90e37b16a063a962d",
+      "meta_sha256": "c6024955d221f7d1fdd0286c86ac649a5c12335be0c386a32ca0dc91fac89f3b",
+      "legacy_attribute_names": [],
+      "modern_attribute_names": []
+    },
+    {
+      "class": "LocalizedButton",
+      "path": "BlastRoyale/Assets/Src/FirstLight/Game/UIElements/LocalizedButton.cs",
+      "source_sha256": "42c5670d342081cffe516e2c4f8ca837f8a2fe023bddc763648d7ef3ebaad7f1",
+      "meta_sha256": "24bf74fa843ae11f92b93f2cc7679010c2f27bb714c75683c3f092b3abab802f",
+      "legacy_attribute_names": [
+        "localization-key"
+      ],
+      "modern_attribute_names": [
+        "localization-key"
+      ]
+    },
+    {
+      "class": "CurrencyRewardSummaryItemElement",
+      "path": "BlastRoyale/Assets/Src/FirstLight/Game/UIElements/CurrencyRewardSummaryItemElement.cs",
+      "source_sha256": "934fdb72a1f697a98d085a4a4721ff32ea25c6380a9b3bc956b185152c32c77c",
+      "meta_sha256": "bda711822998455fb5793990513e834a6e6c152c8722eb541f924ddfa0e326cc",
+      "legacy_attribute_names": [],
+      "modern_attribute_names": []
+    },
+    {
+      "class": "GenericPopupElement",
+      "path": "BlastRoyale/Assets/Src/FirstLight/Game/UIElements/GenericPopupElement.cs",
+      "source_sha256": "8d30f977a8dac655caef14e268b5fb8648b1384f4fe6be2c80a24ed3655e864f",
+      "meta_sha256": "16376b4a74b635ef9a753207af951a0c66d94a41bd9abf5adc3ad3fb8c907375",
+      "legacy_attribute_names": [
+        "title-localization-key",
+        "glow-effect",
+        "disable-close-button"
+      ],
+      "modern_attribute_names": [
+        "title-localization-key",
+        "glow-effect",
+        "disable-close-button"
+      ]
+    },
+    {
+      "class": "LocalizedDropDown",
+      "path": "BlastRoyale/Assets/Src/FirstLight/Game/UIElements/LocalizedDropDown.cs",
+      "source_sha256": "4d626d7a0cd3c420a7dbeac0c8c2c95e422d8788a43171e3d93d8157ce72704d",
+      "meta_sha256": "b6ab164343cd6f21d0bed1e1fa4d133aa7dbb6c66db655ef6c432c24000738ab",
+      "legacy_attribute_names": [
+        "localization-key"
+      ],
+      "modern_attribute_names": [
+        "localization-key"
+      ]
+    },
+    {
+      "class": "GradientElement",
+      "path": "BlastRoyale/Assets/Src/FirstLight/Game/UIElements/GradientElement.cs",
+      "source_sha256": "dd3b2fd551ea16ec03864ff7e34cdf77d505a6bc7fe3ddc5b19330f90794c06c",
+      "meta_sha256": "db6f61b44a5ea678260c3a117e878626aac9f126025695a7a964d6e16a25e3aa",
+      "legacy_attribute_names": [],
+      "modern_attribute_names": [
+        "vertical"
+      ]
+    },
+    {
+      "class": "AngledContainerElement",
+      "path": "BlastRoyale/Assets/Src/FirstLight/Game/UIElements/AngledContainerElement.cs",
+      "source_sha256": "2df090edbb672019442a23b24b9d3e9afdecda0938714bd8587f1f93a42e540d",
+      "meta_sha256": "9025e93c2251323651392c192564d538e856ffa4913677167ffb7d7ba8122101",
+      "legacy_attribute_names": [],
+      "modern_attribute_names": []
+    },
+    {
+      "class": "LocalizedRadioButtonGroup",
+      "path": "BlastRoyale/Assets/Src/FirstLight/Game/UIElements/LocalizedRadioButtonGroup.cs",
+      "source_sha256": "dc6cd5584f4e22a2ff18eaabb58cd5ca3ec7d49dd08123be5e6ce27cd8b20df5",
+      "meta_sha256": "3fe97498d446fbcc4bc7a760a828010d85cfd76f5a18ecf702947ed1c96c58a0",
+      "legacy_attribute_names": [
+        "localization-key"
+      ],
+      "modern_attribute_names": [
+        "localization-key"
+      ]
+    },
+    {
+      "class": "StoreCategoryElement",
+      "path": "BlastRoyale/Assets/Src/FirstLight/Game/Presenters/Store/StoreCategoryElement.cs",
+      "source_sha256": "eb438e90ef7c51bd0059549e87cbe841d304cb62d3acb19d28ed78d34f589cc6",
+      "meta_sha256": "4f8480829ddf9163b35ac6e60123aa931811a8477c027d7711fc70862f1b4d34",
+      "legacy_attribute_names": [],
+      "modern_attribute_names": []
+    },
+    {
+      "class": "SquadMemberElement",
+      "path": "BlastRoyale/Assets/Src/FirstLight/Game/UIElements/SquadMemberElement.cs",
+      "source_sha256": "2b161f4cc3ed34bc26e281eee8f6f40e22f88bcb528d3ac2f4bd37ae8d67af61",
+      "meta_sha256": "be8813141541455f6113ddc9da44a3a7bb531f902661f39de92bd334a20e58a1",
+      "legacy_attribute_names": [],
+      "modern_attribute_names": []
+    },
+    {
+      "class": "StoreGameProductElement",
+      "path": "BlastRoyale/Assets/Src/FirstLight/Game/Presenters/Store/StoreGameProductElement.cs",
+      "source_sha256": "c2f25349c9cd337cc00abec115e03b5ebfe0e6380aef70eeb25912cbe22e3830",
+      "meta_sha256": "54fdbe38cfe707cb8f1114addcae28a681596621876f4aeeab6e54db7069ac09",
+      "legacy_attribute_names": [
+        "small",
+        "game-id",
+        "image-overwrite"
+      ],
+      "modern_attribute_names": [
+        "small",
+        "game-id",
+        "image-overwrite"
+      ]
+    },
+    {
+      "class": "PopupElement",
+      "path": "BlastRoyale/Assets/Src/FirstLight/Game/UIElements/PopupElement.cs",
+      "source_sha256": "e3d7a235dd37edbef65068f03eda3771885a34f45cbd95fb7df602b2fcd9145e",
+      "meta_sha256": "67a81b95caad6e2b980257e7afd88e9bf1f16e79210b06fa000ebc915d643b6f",
+      "legacy_attribute_names": [
+        "title-localization-key"
+      ],
+      "modern_attribute_names": [
+        "title-localization-key"
+      ]
+    },
+    {
+      "class": "TabbedView",
+      "path": "BlastRoyale/Assets/Src/FirstLight/Game/UIElements/TabbedView.cs",
+      "source_sha256": "2ee280d0951a98c22d248889d37dadb40f70a4fe68326dc32d77f97ff6c0feca",
+      "meta_sha256": "38839c2695bb6e3c36f86985c9d3c6d35e2b2f96acbba57fdd030b79defe40f7",
+      "legacy_attribute_names": [],
+      "modern_attribute_names": []
+    },
+    {
+      "class": "GameIdIconSummaryItemElement",
+      "path": "BlastRoyale/Assets/Src/FirstLight/Game/UIElements/GameIdIconSummaryItemElement.cs",
+      "source_sha256": "c356208b85086bf0a9670e02421d7dbd1f82b7db83024c7eee01913d6818548f",
+      "meta_sha256": "227bdb65cfced8b8c82e9ca703a88f9b57d1861bf7d6a859bffe4b57c6ab5ca0",
+      "legacy_attribute_names": [],
+      "modern_attribute_names": []
+    },
+    {
+      "class": "HealthStatusBarElement",
+      "path": "BlastRoyale/Assets/Src/FirstLight/Game/UIElements/HealthStatusBarElement.cs",
+      "source_sha256": "28139d196cbbe827b9d7b74935208e73a2d09d29ac61e828d0cf4b2ed97febaf",
+      "meta_sha256": "a511735f565873101c92e18ea94bc73a3c647ba17857647b5be96de621ca43b4",
+      "legacy_attribute_names": [],
+      "modern_attribute_names": []
+    },
+    {
+      "class": "StoreCreatorCodeElement",
+      "path": "BlastRoyale/Assets/Src/FirstLight/Game/Presenters/Store/StoreCreatorCodeElement.cs",
+      "source_sha256": "dbc44f0fb90cffce38cc86f24329c7c6b7163627ddcacaaf71a404f8fdbba010",
+      "meta_sha256": "45bc7f7ad4dff7089ce2fccd7781409054f8733c6c458c0d36e23253f8b33ce5",
+      "legacy_attribute_names": [],
+      "modern_attribute_names": []
+    },
+    {
+      "class": "NewsItemElement",
+      "path": "BlastRoyale/Assets/Src/FirstLight/Game/Presenters/News/NewsItemElement.cs",
+      "source_sha256": "f808036cf48aecba6ccf2cd011520c6f6d6102f39ecd9778dd67538a538ce0ad",
+      "meta_sha256": "559bdd72ebb76497197bf7884ffc9eea6883e1c25447726887f936182d328a06",
+      "legacy_attribute_names": [
+        "title",
+        "text",
+        "date",
+        "image-url",
+        "category"
+      ],
+      "modern_attribute_names": [
+        "title",
+        "text",
+        "image-url",
+        "category",
+        "date"
+      ]
+    },
+    {
+      "class": "AutoSizeLabel",
+      "path": "BlastRoyale/Assets/Src/FirstLight/Game/UIElements/AutoSizeLabel.cs",
+      "source_sha256": "54a88a173b7726bd6f7f2d9b8f3c575c84b54ea81be7905fff96a87ac442152f",
+      "meta_sha256": "33cac228192150abed5f3c589080b53b0e065c4e7ae50a39dc40891433d9a9ff",
+      "legacy_attribute_names": [
+        "min-font-size",
+        "max-font-size"
+      ],
+      "modern_attribute_names": [
+        "min-font-size",
+        "max-font-size"
+      ]
+    },
+    {
+      "class": "PlayerMemberElement",
+      "path": "BlastRoyale/Assets/Src/FirstLight/Game/UIElements/PlayerMemberElement.cs",
+      "source_sha256": "e174b865544393cbd411885cd19e682d2e56448db606aa9f2a28bd9d766b5ecd",
+      "meta_sha256": "93abb9b4b55754b27f7da45c880c1a16d6c97c8db3df935b7786d6735be4c36e",
+      "legacy_attribute_names": [],
+      "modern_attribute_names": []
+    },
+    {
+      "class": "PasswordFieldElement",
+      "path": "BlastRoyale/Assets/Src/FirstLight/Game/UIElements/PasswordFieldElement.cs",
+      "source_sha256": "bc2136113fa72b02f0ac1e79752db7414743e6bc10c669520bfe38a6f255c85e",
+      "meta_sha256": "f28efefa8889facf55b4cc3cfe2beaf4ce0c99ac2f070f9be4185cad1d58d1ab",
+      "legacy_attribute_names": [],
+      "modern_attribute_names": []
+    },
+    {
+      "class": "TooltipElement",
+      "path": "BlastRoyale/Assets/Src/FirstLight/Game/UIElements/TooltipElement.cs",
+      "source_sha256": "d796124b28f22e690264e78b0136d70e373eded775b3b123650b7243e584bf6c",
+      "meta_sha256": "d020db27dbbc8d71393fad3646cc4546e8aad981cf8e98bcc87a326a4147a65b",
+      "legacy_attribute_names": [
+        "tip-position"
+      ],
+      "modern_attribute_names": [
+        "tip-position"
+      ]
+    },
+    {
+      "class": "BattlepassLevelColumnElement",
+      "path": "BlastRoyale/Assets/Src/FirstLight/Game/Presenters/BattlePass/BattlepassLevelColumnElement.cs",
+      "source_sha256": "a9979a4d1e5092c52f2c03b51b7bce9d93ad1d5004ecb13cb836e84db534c253",
+      "meta_sha256": "9be359489d052ac9479db0ddfe0a862fffc0b2100d18ebbd3caa58ae65c875e8",
+      "legacy_attribute_names": [],
+      "modern_attribute_names": []
+    },
+    {
+      "class": "GlintElement",
+      "path": "BlastRoyale/Assets/Src/FirstLight/Game/UIElements/GlintElement.cs",
+      "source_sha256": "c3c18ced2853bb2d6a8edfd2f5c9274401a02cf222697f4989f9669a7a51c49d",
+      "meta_sha256": "70b9bfdd0f7ca7c94cedd57b7444e97e6388d22a8add096d8bc4f77351ac1f4b",
+      "legacy_attribute_names": [
+        "auto-start"
+      ],
+      "modern_attribute_names": [
+        "auto-start"
+      ]
+    },
+    {
+      "class": "UnlockRewardSummaryElement",
+      "path": "BlastRoyale/Assets/Src/FirstLight/Game/UIElements/UnlockRewardSummaryItemElement.cs",
+      "source_sha256": "a02059aaeb1b30d353c674d26b72f9e7944eb31f2c72f6a678aa54f958587c01",
+      "meta_sha256": "d7535f7984d1670eb52304ec7c7b858ed524ba4c650dd6610f16428d67c232cd",
+      "legacy_attribute_names": [],
+      "modern_attribute_names": []
+    },
+    {
+      "class": "RewardDisplayContainerElement",
+      "path": "BlastRoyale/Assets/Src/FirstLight/Game/Presenters/ProductsBundle/RewardDisplayContainerElement.cs",
+      "source_sha256": "1deea8c3f8b3568c0d90d04e5561493c63bb4d07a4f6d77a36f422a468ef3238",
+      "meta_sha256": "c6598ac6841dc37001b82473ab0fe453632d56185616fb77565329fab56a4d5d",
+      "legacy_attribute_names": [],
+      "modern_attribute_names": []
+    },
+    {
+      "class": "TabButton",
+      "path": "BlastRoyale/Assets/Src/FirstLight/Game/UIElements/TabButton.cs",
+      "source_sha256": "78d3bd73d4c654020b2584f7f27619de3380fd8ca4c7780811620a07a81d5720",
+      "meta_sha256": "2f7234fc476f8eabe42c3d3008fe99975cf518f9babe4210bc6c0a74a7c01bca",
+      "legacy_attribute_names": [
+        "text",
+        "target",
+        "localization-key"
+      ],
+      "modern_attribute_names": [
+        "text",
+        "target",
+        "localization-key"
+      ]
+    },
+    {
+      "class": "CollectionCategoryElement",
+      "path": "BlastRoyale/Assets/Src/FirstLight/Game/UIElements/CollectionCategoryElement.cs",
+      "source_sha256": "65db7bfce886b3ad3afbe6fbb01d8517583e770ec1e1e50f56baebed59fead05",
+      "meta_sha256": "22501515ecd0e9a85272c3447921179242733d24af44e5b1fcf87090b4ab7815",
+      "legacy_attribute_names": [],
+      "modern_attribute_names": []
+    },
+    {
+      "class": "SliderIntWithButtons",
+      "path": "BlastRoyale/Assets/Src/FirstLight/Game/UIElements/SliderIntWithButtons.cs",
+      "source_sha256": "bdf09cf363ca431006064bb59431c07cba3e36c13b987e6886209d7f17948b60",
+      "meta_sha256": "385ae9c31e4a21f4ca567316cf879e9253bfdd2494581c967076228d4497e13b",
+      "legacy_attribute_names": [
+        "use-plus-minus-symbols"
+      ],
+      "modern_attribute_names": [
+        "use-plus-minus-symbols"
+      ]
+    },
+    {
+      "class": "ScreenHeaderElement",
+      "path": "BlastRoyale/Assets/Src/FirstLight/Game/UIElements/ScreenHeaderElement.cs",
+      "source_sha256": "9bbcf0daea6500e1183c7ea90ebb98bc714c1e6ae058569a0f74a069e33b996d",
+      "meta_sha256": "03cabc3c5421cb75509e4ef7159a1bab438941eef4200e532da331c7923c8e2a",
+      "legacy_attribute_names": [
+        "title-key",
+        "subtitle-key"
+      ],
+      "modern_attribute_names": [
+        "title-key",
+        "subtitle-key"
+      ]
+    },
+    {
+      "class": "RadialProgressElement",
+      "path": "BlastRoyale/Assets/Src/FirstLight/Game/UIElements/RadialProgressElement.cs",
+      "source_sha256": "d1a42ad5186c2bca1183da7f0069d0ec939f7eae1582049ca05a82e535f2dc6e",
+      "meta_sha256": "e26079044a280c8308289af8bec89a9b8d6be68ce5e138c1516ac2bff6e48b37",
+      "legacy_attribute_names": [
+        "progress"
+      ],
+      "modern_attribute_names": [
+        "progress"
+      ]
+    },
+    {
+      "class": "CurrencyDisplayElement",
+      "path": "BlastRoyale/Assets/Src/FirstLight/Game/UIElements/CurrencyDisplayElement.cs",
+      "source_sha256": "1279e767ddfc7f35c6bff487eb59e1de58859549e98870c56f8c94ac2d900411",
+      "meta_sha256": "8f51c346b3ed8d306c25a7a9a20d73a58680e0b87df3e11fe933b062e6bfad9f",
+      "legacy_attribute_names": [
+        "currency"
+      ],
+      "modern_attribute_names": [
+        "currency"
+      ]
+    },
+    {
+      "class": "CollectionRewardsSummaryElement",
+      "path": "BlastRoyale/Assets/Src/FirstLight/Game/UIElements/CollectionRewardSummaryItemElement.cs",
+      "source_sha256": "663690e54be69378ed4aae02dbf2e60b08d33e2ac4eb69d2d0a4376a5c89c8d6",
+      "meta_sha256": "9669187948fca8a7aa11afa204f14e2b872c733d9a14549632fee0f948d5b071",
+      "legacy_attribute_names": [],
+      "modern_attribute_names": []
+    },
+    {
+      "class": "BattlepassSegmentButtonElement",
+      "path": "BlastRoyale/Assets/Src/FirstLight/Game/Presenters/BattlePass/BattlepassSegmentButtonElement.cs",
+      "source_sha256": "1a2df3f5e038bbc2e2d83b5fa3e010cec6df4fd418b848ae07f495bc2ceebcf8",
+      "meta_sha256": "1eefeee7bc1021dfebe471b59d63acd110e24ad3d333544900460150984b6438",
+      "legacy_attribute_names": [
+        "debug-mode",
+        "state",
+        "unlocked-premium",
+        "reward",
+        "pass-type"
+      ],
+      "modern_attribute_names": [
+        "unlocked-premium",
+        "state",
+        "pass-type",
+        "reward",
+        "debug-mode"
+      ]
+    },
+    {
+      "class": "SafeAreaElement",
+      "path": "BlastRoyale/Assets/Src/FirstLight/Game/UIElements/SafeAreaElement.cs",
+      "source_sha256": "d40999af7fc89e62c72f01a74c34e43f4de690de8173be4cca8e0876754be4f4",
+      "meta_sha256": "6d63f4c782fd406346f455758990767df5e5514bf7b8c86ee1dadae6fc4f01bc",
+      "legacy_attribute_names": [
+        "apply-top",
+        "apply-bottom",
+        "apply-left",
+        "apply-right",
+        "invert"
+      ],
+      "modern_attribute_names": [
+        "apply-top",
+        "apply-bottom",
+        "apply-left",
+        "apply-right",
+        "invert"
+      ]
+    },
+    {
+      "class": "PlayerHealthShieldElement",
+      "path": "BlastRoyale/Assets/Src/FirstLight/Game/UIElements/PlayerHealthShieldElement.cs",
+      "source_sha256": "2358fb6afbdeb8b86a4ba0f788d041a3d7b08ff09b4469a161b3ae1ded3abb54",
+      "meta_sha256": "bf0dad88a447450154d3da437f416c2654b6fd1b8d91bed92041219db927888b",
+      "legacy_attribute_names": [],
+      "modern_attribute_names": []
+    },
+    {
+      "class": "ImageButton",
+      "path": "BlastRoyale/Assets/Src/FirstLight/Game/UIElements/ImageButton.cs",
+      "source_sha256": "947d3f41b5eb31b4608fb20086661021103203e8da80fd7c20d763cba480c6ac",
+      "meta_sha256": "32300325140d3b446c6f376c8478aa9150542c2ea8cd41dcd035f2d1689389ef",
+      "legacy_attribute_names": [
+        "enabled"
+      ],
+      "modern_attribute_names": [
+        "enabled"
+      ]
+    },
+    {
+      "class": "CollectionCardElement",
+      "path": "BlastRoyale/Assets/Src/FirstLight/Game/UIElements/CollectionCardElement.cs",
+      "source_sha256": "d94ea5c3755c40c9a7e9a25886368f1d967a8fe512b25b1ea4443e7bccff2932",
+      "meta_sha256": "d5cd8b1d51b0e7d522284d66b7123944260164b41298b7112e5161fb5a12a0dd",
+      "legacy_attribute_names": [],
+      "modern_attribute_names": []
+    },
+    {
+      "class": "InGamePlayerAvatar",
+      "path": "BlastRoyale/Assets/Src/FirstLight/Game/UIElements/InGamePlayerAvatar.cs",
+      "source_sha256": "923b82934b56ee81b8b2799446f815b4d69fdc1c0bdb0ba5f81745a601ac8f29",
+      "meta_sha256": "33f6525d49daf5dc55a60791ace434dc9e94860975bee59aee52aa5927d06bee",
+      "legacy_attribute_names": [],
+      "modern_attribute_names": []
+    },
+    {
+      "class": "RewardSummaryItemElement",
+      "path": "BlastRoyale/Assets/Src/FirstLight/Game/UIElements/RewardSummaryItemElement.cs",
+      "source_sha256": "e0c3f682b6ee99dc730cbb809a7cc5649181caeeb2c573fe4b1bf45c2704b9f4",
+      "meta_sha256": "33b0207c25f62a12f15f12b4612153d3008890a974e86495445cf71f79debd4d",
+      "legacy_attribute_names": [],
+      "modern_attribute_names": []
+    },
+    {
+      "class": "KitButton",
+      "path": "BlastRoyale/Assets/Src/FirstLight/Game/UIElements/Kit/KitButton.cs",
+      "source_sha256": "1566b6eb38626c1626252c9502798a489cdaf2898162f68349b2c2185028c2b0",
+      "meta_sha256": "d9963fefdf20fcbe37f2b9c54d56b2afa7295dcfa21b678225076dc677a5b506",
+      "legacy_attribute_names": [
+        "btn-shape",
+        "btn-color",
+        "btn-style",
+        "btn-icon",
+        "btn-text"
+      ],
+      "modern_attribute_names": [
+        "btn-style",
+        "btn-color",
+        "btn-shape",
+        "btn-icon",
+        "btn-text"
+      ]
+    },
+    {
+      "class": "PlayerStatusBarElement",
+      "path": "BlastRoyale/Assets/Src/FirstLight/Game/UIElements/PlayerStatusBarElement.cs",
+      "source_sha256": "aa0add5b2f7ae8579dcaecb99ae0e23792d3b062ae4ee4638724cb4f2f3cf880",
+      "meta_sha256": "383c6964acbf305e705e6c016f46e42e29fd49f27c9c34fe7702269d0d1c35ad",
+      "legacy_attribute_names": [],
+      "modern_attribute_names": []
+    },
+    {
+      "class": "LabelOutlined",
+      "path": "BlastRoyale/Assets/Src/FirstLight/Game/UIElements/LabelOutlined.cs",
+      "source_sha256": "cd8f5e7acbf1f334df2f3f0a89aa85578168a65a89a9916f976fe19e42892fce",
+      "meta_sha256": "0a25361735214bb7283f14d4f8322c06767b5e6011105fff07957172ae037233",
+      "legacy_attribute_names": [
+        "outline-hack"
+      ],
+      "modern_attribute_names": [
+        "outline-hack"
+      ]
+    },
+    {
+      "class": "DeathNotificationElement",
+      "path": "BlastRoyale/Assets/Src/FirstLight/Game/UIElements/DeathNotificationElement.cs",
+      "source_sha256": "00f8079c79c8666e2e998edaa3db4d35ea9e7e8dfe9af8a0ff6ce9021dbc9835",
+      "meta_sha256": "d478d0c48d0e04df0e477126f2bddc0766b5a59667a1851183cf2ad3db4a4880",
+      "legacy_attribute_names": [],
+      "modern_attribute_names": []
+    },
+    {
+      "class": "FriendListElement",
+      "path": "BlastRoyale/Assets/Src/FirstLight/Game/UIElements/FriendListElement.cs",
+      "source_sha256": "0722bfb994d97d8727c46a29974ff0f55d33f0231eb973168c1d0b57206b3350",
+      "meta_sha256": "24bdbe9d92dea49c973b8ce3c880344fe6ddc1dea60c5c6a22b6073d0b9490ee",
+      "legacy_attribute_names": [],
+      "modern_attribute_names": []
+    },
+    {
+      "class": "ProfilePictureRewardSummaryItemElement",
+      "path": "BlastRoyale/Assets/Src/FirstLight/Game/UIElements/ProfilePictureRewardSummaryItemElement.cs",
+      "source_sha256": "86b1a308aedd01e87e19c11d0372d439d3e549b8a9738cdf550ac9cdceb43f6a",
+      "meta_sha256": "fcecaaa8cc639184f7f5414aaa4cfac9e90ad00574720228131a5ab5ddb680d0",
+      "legacy_attribute_names": [],
+      "modern_attribute_names": []
+    },
+    {
+      "class": "DotsLoadingElement",
+      "path": "BlastRoyale/Assets/Src/FirstLight/Game/UIElements/DotsLoadingElement.cs",
+      "source_sha256": "fec15e811d9e6c1b134ee1fb54a7f070c2d401b3ff6ecb0ba4532f76918ea633",
+      "meta_sha256": "bd601d4243b155470e6bda0379bf515e399d920cf32b4d0077c899cb3550a61b",
+      "legacy_attribute_names": [],
+      "modern_attribute_names": []
+    },
+    {
+      "class": "LocalizedLabel",
+      "path": "BlastRoyale/Assets/Src/FirstLight/Game/UIElements/LocalizedLabel.cs",
+      "source_sha256": "aff8ba02d7f43ad80562c1905b5f31020d991487fa9198bffec047a68750961d",
+      "meta_sha256": "a8e5c8e3f2470343e151ca3fd1ab6477ee56e10cd1579cd3cf305f89d8384aad",
+      "legacy_attribute_names": [
+        "localization-key"
+      ],
+      "modern_attribute_names": [
+        "localization-key"
+      ]
+    },
+    {
+      "class": "PlayerAvatarElement",
+      "path": "BlastRoyale/Assets/Src/FirstLight/Game/UIElements/PlayerAvatarElement.cs",
+      "source_sha256": "4bca8cc6a0444f51c042425ad19f04de8deb3d9326fd2c286367e2e0e04a8bbe",
+      "meta_sha256": "46a0dbf04eedb8e35a0bf4755dca2292ce273bbf0b25ee7e2f080b1fa33a0813",
+      "legacy_attribute_names": [],
+      "modern_attribute_names": []
+    },
+    {
+      "class": "RemoteAvatarElement",
+      "path": "BlastRoyale/Assets/Src/FirstLight/Game/UIElements/RemoteAvatarElement.cs",
+      "source_sha256": "fae118dd56e625a574a604881283937c8192564d14fd68eba5bba758471c08f9",
+      "meta_sha256": "c7c029267e5714d22590804a196e3c152f24619b2b46d5037176aa5f88e91217",
+      "legacy_attribute_names": [],
+      "modern_attribute_names": []
+    },
+    {
+      "class": "LocalizedSliderInt",
+      "path": "BlastRoyale/Assets/Src/FirstLight/Game/UIElements/LocalizedSliderInt.cs",
+      "source_sha256": "326076d87787f6e7edc28c3966e147afe25076ec71bacb6279ca21f325df8e7c",
+      "meta_sha256": "76d270cdebd8acae2ecfa9f414caedd81824476fd652e966e1f9e598764f6955",
+      "legacy_attribute_names": [
+        "localization-key"
+      ],
+      "modern_attribute_names": [
+        "localization-key"
+      ]
+    },
+    {
+      "class": "JoystickElement",
+      "path": "BlastRoyale/Assets/Src/FirstLight/Game/UIElements/JoystickElement.cs",
+      "source_sha256": "271c5e0349861fb3f0eaacd33e5fa296d36c93fd5ec08b6a9a1d1d4ad2bb8dfa",
+      "meta_sha256": "c707932a2cc1d94a69fed8ba15f14960ffb4024a552e4d7551cb48b446522402",
+      "legacy_attribute_names": [],
+      "modern_attribute_names": []
+    },
+    {
+      "class": "LocalizedToggle",
+      "path": "BlastRoyale/Assets/Src/FirstLight/Game/UIElements/LocalizedToggle.cs",
+      "source_sha256": "e5aa8c2228cdaced7a7d472fd991672d560ca329932f5c7dd35588964e8469be",
+      "meta_sha256": "ccc1de4723f240bc7d810037d76af9f989992346b86ca40ce4014dbaac428a15",
+      "legacy_attribute_names": [
+        "localization-key"
+      ],
+      "modern_attribute_names": [
+        "localization-key"
+      ]
+    },
+    {
+      "class": "LocalizedRadioButton",
+      "path": "BlastRoyale/Assets/Src/FirstLight/Game/UIElements/LocalizedRadioButton.cs",
+      "source_sha256": "cff263c1c8ba0c5a5c74c27a90f2669c8cad189cc6b0f05de60cc1ffe993ce6e",
+      "meta_sha256": "9635ee4b02891a379677cc80d4c09af994ac4ccb91a13a2781a79015eab57290",
+      "legacy_attribute_names": [
+        "localization-key"
+      ],
+      "modern_attribute_names": [
+        "localization-key"
+      ]
+    },
+    {
+      "class": "ButtonOutlined",
+      "path": "BlastRoyale/Assets/Src/FirstLight/Game/UIElements/ButtonOutlined.cs",
+      "source_sha256": "c1d3a145c616ee92a465b04ce57d7b7b96cd632d93983c53a6bda1c911e78643",
+      "meta_sha256": "5babebdd64d16565a94278a2c37f2ff3164cbd3998fc6231d115d086b92b8c6e",
+      "legacy_attribute_names": [],
+      "modern_attribute_names": []
+    },
+    {
+      "class": "AnimatedImageElement",
+      "path": "BlastRoyale/Assets/Src/FirstLight/Game/UIElements/AnimatedImageElement.cs",
+      "source_sha256": "29150f335ef91411962a8c8bfad1feafe44f24d15325f4225ffbc8cba18456db",
+      "meta_sha256": "ec2cd202e90ae7792356aaa3ba543f07dc05d3a210c30bbc023b154486c44edf",
+      "legacy_attribute_names": [
+        "rotations-per-second",
+        "rand-pos-min-x",
+        "rand-pos-min-x",
+        "rand-pos-max-x",
+        "rand-pos-max-y",
+        "rand-pos-duration-ms",
+        "rand-pos-lerp-factor",
+        "sine-wave-pos-min-x",
+        "sine-wave-pos-min-y",
+        "sine-wave-pos-max-x",
+        "sine-wave-pos-max-y",
+        "sine-wave-pos-x-offset",
+        "sine-wave-pos-y-offset",
+        "sine-wave-pos-x-frequency",
+        "sine-wave-pos-y-frequency",
+        "sine-wave-scale-min",
+        "sine-wave-scale-max",
+        "sine-wave-scale-frequency"
+      ],
+      "modern_attribute_names": [
+        "rotations-per-second",
+        "rand-pos-min-x",
+        "rand-pos-min-y",
+        "rand-pos-max-x",
+        "rand-pos-max-y",
+        "rand-pos-duration-ms",
+        "rand-pos-lerp-factor",
+        "sine-wave-pos-min-x",
+        "sine-wave-pos-min-y",
+        "sine-wave-pos-max-x",
+        "sine-wave-pos-max-y",
+        "sine-wave-pos-x-offset",
+        "sine-wave-pos-y-offset",
+        "sine-wave-pos-x-frequency",
+        "sine-wave-pos-y-frequency",
+        "sine-wave-scale-min",
+        "sine-wave-scale-max",
+        "sine-wave-scale-frequency"
+      ]
+    },
+    {
+      "class": "MultiPriceButton",
+      "path": "BlastRoyale/Assets/Src/FirstLight/Game/UIElements/MultiPriceButton.cs",
+      "source_sha256": "7c9b248bb7e7c2ccb6a5115787fb4da58ae432c3e4cd687899c28771dbd20e70",
+      "meta_sha256": "7ad1d27047ff871d9a0f043e152448a4ddaad9143211f3545de787df756511aa",
+      "legacy_attribute_names": [
+        "localization-key"
+      ],
+      "modern_attribute_names": [
+        "localization-key"
+      ]
+    },
+    {
+      "class": "PendingInviteElement",
+      "path": "BlastRoyale/Assets/Src/FirstLight/Game/Presenters/Social/Team/PendingInviteElement.cs",
+      "source_sha256": "d535b296655d7ae0b366b876db8ba476b053c32a86df1ddab317e1608ec26a3d",
+      "meta_sha256": "7516e054cf9e2ad5ad96cdfba4da6b3a68d9339666b7dffc5dfb84e4edf24a40",
+      "legacy_attribute_names": [],
+      "modern_attribute_names": []
+    },
+    {
+      "class": "PriceButton",
+      "path": "BlastRoyale/Assets/Src/FirstLight/Game/UIElements/PriceButton.cs",
+      "source_sha256": "ef738ebbc039fba22a226932cbdfbf1fa338aa7e1d4362735768e2628432f96f",
+      "meta_sha256": "bdf9f3659d4dcd6f4444e98d403a768386bea34fedd9db488e05bcd4c55ca214",
+      "legacy_attribute_names": [
+        "localization-key"
+      ],
+      "modern_attribute_names": [
+        "localization-key"
+      ]
+    },
+    {
+      "class": "LocalizedTextField",
+      "path": "BlastRoyale/Assets/Src/FirstLight/Game/UIElements/LocalizedTextField.cs",
+      "source_sha256": "158e81fd8942e654d38d3a593771cb78924781c43325b4886aae313114b0e829",
+      "meta_sha256": "1b6cafca529a0c29229ca3b07d49ef01023370d895fc9e898ad974058177a300",
+      "legacy_attribute_names": [
+        "label-localization-key",
+        "show-copy-button"
+      ],
+      "modern_attribute_names": [
+        "label-localization-key",
+        "show-copy-button"
+      ]
+    },
+    {
+      "class": "MightElement",
+      "path": "BlastRoyale/Assets/Src/FirstLight/Game/UIElements/MightElement.cs",
+      "source_sha256": "a403b4488d973b964c9910326aa909c4d5a63f599e8f73edda6fe9168498b994",
+      "meta_sha256": "07eb080a7570278d1cdd76d4c6dd2aadac3c086d1ee87c39321944ec54969a16",
+      "legacy_attribute_names": [],
+      "modern_attribute_names": []
+    },
+    {
+      "class": "MatchSettingsSelectionElement",
+      "path": "BlastRoyale/Assets/Src/FirstLight/Game/Presenters/Social/Elements/MatchSettingsSelectionElement.cs",
+      "source_sha256": "eb4c1fc124185fa24a05a1578971a54f2a8ee025a5b59ff517e2fa72543f4ed1",
+      "meta_sha256": "fcfd15c91872e01397cdb2a08a4bf92160a3d95a6de1c1b5867de8a392df3431",
+      "legacy_attribute_names": [
+        "title-localization-key",
+        "subtitle-localization-key"
+      ],
+      "modern_attribute_names": [
+        "title-localization-key",
+        "subtitle-localization-key"
+      ]
+    },
+    {
+      "class": "MatchLobbyItemElement",
+      "path": "BlastRoyale/Assets/Src/FirstLight/Game/Presenters/Social/Elements/MatchLobbyItemElement.cs",
+      "source_sha256": "f6f6bd3607b3bc11202880de45a2814e7f56110057b2785cc10906b76ff9231f",
+      "meta_sha256": "15ecb0e8e5649d85dd37ac37ce5656327796be3580a88f5e6d0bec4d02cb89eb",
+      "legacy_attribute_names": [],
+      "modern_attribute_names": []
+    },
+    {
+      "class": "MatchSettingsButtonElement",
+      "path": "BlastRoyale/Assets/Src/FirstLight/Game/Presenters/Social/Elements/MatchSettingsButtonElement.cs",
+      "source_sha256": "5cf96d9079c8d663201ffb45aa69a7966bf5921c5692433c02a5cfdf6987abed",
+      "meta_sha256": "d14b6465284f4bbad77bf012b52a85b66fbb053dd07f52e38d924367b00f80ff",
+      "legacy_attribute_names": [
+        "numerical",
+        "title-localization-key"
+      ],
+      "modern_attribute_names": [
+        "numerical",
+        "title-localization-key"
+      ]
+    },
+    {
+      "class": "MatchLobbyPlayerElement",
+      "path": "BlastRoyale/Assets/Src/FirstLight/Game/Presenters/Social/Elements/MatchLobbyPlayerElement.cs",
+      "source_sha256": "972698bbb6d7124c40d8e3b92bf2fb9844e53f35805c61b08bb442a980542220",
+      "meta_sha256": "8817b0a6bbd07280a89f049ff24a61e9a576c42d4b5f461f13893e0e4634a52d",
+      "legacy_attribute_names": [],
+      "modern_attribute_names": []
+    }
+  ],
+  "generated_files": [
+    {
+      "file": "FirstLight.Game.UIElements.ImageButton.gen.cs",
+      "sha256": "783872de2242cd8b3412e83716fd518447b0c6821dd6188b5b1d6f00ceca0f27"
+    },
+    {
+      "file": "FirstLight.Game.UIElements.DotsLoadingElement.gen.cs",
+      "sha256": "48547e2e2e2af745a89bf08fcc752461fe0c8a22460a705637031e8d4da43192"
+    },
+    {
+      "file": "FirstLight.Game.UIElements.LocalizedButton.gen.cs",
+      "sha256": "41c7ca8db05b9bc7918742129a2f158c5f8ab7e4b02e7804138554d4693237f1"
+    },
+    {
+      "file": "FirstLight.Game.UIElements.MatchSettingsSelectionElement.gen.cs",
+      "sha256": "f517f32f7e8af3bff5927e4a0fdee9359e812dbfe37fef1b8f2bfc289de83e4f"
+    },
+    {
+      "file": "FirstLight.Game.UIElements.PasswordFieldElement.gen.cs",
+      "sha256": "bc6e59c27f022f280fe2339eb69f83f608ea29257aeb01d9045ebf7209f1de00"
+    },
+    {
+      "file": "FirstLight.Game.UIElements.ScreenHeaderElement.gen.cs",
+      "sha256": "1b1433bf89b864247696f2c7b1d8dd74932af145201ccc49520e9287f1ba090a"
+    },
+    {
+      "file": "FirstLight.Game.UIElements.GlintElement.gen.cs",
+      "sha256": "f32a71774438be66ca8e6694a531271e1187ed158d9f91f0e261821fcfe9847e"
+    },
+    {
+      "file": "FirstLight.Game.UIElements.AnimatedImageElement.gen.cs",
+      "sha256": "b6d22b8c184e744a43a4f01c92ca336bf5306f489fd4c804819cb9d19b07016e"
+    },
+    {
+      "file": "FirstLight.Game.UIElements.AutoSizeLabel.gen.cs",
+      "sha256": "8a8792703174d22d2a5ccacab492633a299db86fa09754d01a71c41d099db0f9"
+    },
+    {
+      "file": "FirstLight.Game.UIElements.GenericPopupElement.gen.cs",
+      "sha256": "f7b7cc4a6b4ed03942627a720b913edd11607fee167fde97bad8426532e3e0bd"
+    },
+    {
+      "file": "FirstLight.Game.UIElements.PopupElement.gen.cs",
+      "sha256": "f167f3dfcc1104ec6fd3c1ecd4857bfa87afe34e519facf5c274821d141d9285"
+    },
+    {
+      "file": "FirstLight.Game.UIElements.LabelOutlined.gen.cs",
+      "sha256": "d7fcde49205c4b01fa7fa0ce9d917159c02b81b8419b91748c26099a8c53d825"
+    },
+    {
+      "file": "FirstLight.Game.UIElements.LocalizedToggle.gen.cs",
+      "sha256": "cc85debbcb54f3f9a1964570398de5077aeaf4c6dab0ebef4d1498a9c5700cda"
+    },
+    {
+      "file": "FirstLight.Game.UIElements.LocalizedTextField.gen.cs",
+      "sha256": "226cbd52122ae054f7e4c63afc1b6769c4ae1c5428f698550e447dd991f0b8d0"
+    },
+    {
+      "file": "FirstLight.Game.UIElements.SliderIntWithButtons.gen.cs",
+      "sha256": "b062d993dca3342e7a579275e8bb4e7d5e5710f381d5691b512022ed71da6ce2"
+    },
+    {
+      "file": "FirstLight.Game.UIElements.GradientElement.gen.cs",
+      "sha256": "e199bcdbe543a51100e3b002bdbc6f53c06dc0df4e8be2dc899f6219192a516b"
+    },
+    {
+      "file": "FirstLight.Game.UIElements.TooltipElement.gen.cs",
+      "sha256": "e4ed6c8a307221fbbce050527f43fe36160af30ad4e5c8d4d30ac93295761b37"
+    },
+    {
+      "file": "FirstLight.Game.UIElements.RadialProgressElement.gen.cs",
+      "sha256": "901ef200c7c19c4fc4438210a1f30cb9df33e48512f9f2cc411c26ac9cfbb3c0"
+    },
+    {
+      "file": "FirstLight.Game.UIElements.AngledContainerElement.gen.cs",
+      "sha256": "56e310f05ddc4a658746e33a2004b548cd2d1a7dabb68e199366be5ff7b5aab1"
+    },
+    {
+      "file": "FirstLight.Game.UIElements.LocalizedRadioButtonGroup.gen.cs",
+      "sha256": "000d6718ca1e2ec8ccf1377fad7a505b4b6d760a313676d74dbddcef54f89013"
+    },
+    {
+      "file": "FirstLight.Game.UIElements.LocalizedDropDown.gen.cs",
+      "sha256": "70e15668068191d34f03b8301002b1b30195a041fe174b3366e81e4cfb3654b2"
+    },
+    {
+      "file": "FirstLight.Game.UIElements.Kit.KitButton.gen.cs",
+      "sha256": "9fe397d19ffdb61c61a2fea8b4a4af41717d63eb002b6b7f033f2e5aa7f79630"
+    },
+    {
+      "file": "FirstLight.Game.UIElements.LocalizedLabel.gen.cs",
+      "sha256": "a663f33389b0a18b3a4acc3e8613be4562b6aab44e6f948b2e93b0025ccccfca"
+    },
+    {
+      "file": "FirstLight.Game.UIElements.LocalizedRadioButton.gen.cs",
+      "sha256": "3a9d651dcc6d2259c1c11e603e7731b4094b2a94eb4ee0f0a2300636d6e82481"
+    },
+    {
+      "file": "FirstLight.Game.UIElements.LocalizedSliderInt.gen.cs",
+      "sha256": "40f3ed64ba9b433b59047c14468e9e64957bed07a00ec15d673a6183d2c2b1f6"
+    },
+    {
+      "file": "FirstLight.Game.UIElements.JoystickElement.gen.cs",
+      "sha256": "531f9e22ea2b48803c46df1a5b81551134595fe13585ba2624d0c8dcd6fd7511"
+    },
+    {
+      "file": "FirstLight.Game.UIElements.SafeAreaElement.gen.cs",
+      "sha256": "5e418c38689dec8be64a4b7590625930ddcd62c939ecd31ff8ade861c285006c"
+    },
+    {
+      "file": "FirstLight.Game.UIElements.MatchSettingsButtonElement.gen.cs",
+      "sha256": "c095aef74d1ecf32849cd4b018b8c3f55629ab5228336cf196d2709030969585"
+    },
+    {
+      "file": "FirstLight.Game.UIElements.TabButton.gen.cs",
+      "sha256": "f5eed0e849fed01a9785efd28032a9be498306629f0654852341249a7374a290"
+    },
+    {
+      "file": "FirstLight.Game.UIElements.ButtonOutlined.gen.cs",
+      "sha256": "664a21e8d795a36f9814dcccece3d3072d6283ee2e9895cecd4a5eaa8324fea6"
+    }
+  ]
+}

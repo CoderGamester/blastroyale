@@ -138,5 +138,12 @@
     "com.unity.services.cloud-build",
     "com.unity.ui",
     "com.unity.ui.builder"
+  ],
+  "additional_changes": [
+    "Replace deprecated com.unity.services.lobby with recommended com.unity.services.multiplayer 2.3.3",
+    "Remove deprecated cloud-diagnostics (no retained API usage)",
+    "Remove external preview vectorgraphics; Unity6.3 builtin modules contain SVGImporter/VectorUtils and caused duplicate types with the old package",
+    "Use exact bundled mobile-notifications2.5.0",
+    "Pin public git dependencies to hashes resolved by the Editor"
   ]
 }
