@@ -6,6 +6,7 @@ using System.Linq;
 using FirstLight.Game.Data;
 using FirstLight.Game.Data.DataTypes;
 using FirstLight.Game.Services;
+using FirstLight.Game.Utils;
 using FirstLight.Server.SDK.Models;
 
 namespace FirstLight.Game.Logic
@@ -68,7 +69,7 @@ namespace FirstLight.Game.Logic
 	public class PlayerStoreLogic : AbstractBaseLogic<PlayerStoreData>, IPlayerStoreLogic, IGameLogicInitializer
 	{
 
-		private IObservableList<StorePurchaseData> _trackedPlayerPurchases;
+		private ObservableList<StorePurchaseData> _trackedPlayerPurchases;
 		public IObservableListReader<StorePurchaseData> TrackedPlayerPurchases => _trackedPlayerPurchases;
 
 		public PlayerStoreLogic(IGameLogic gameLogic, IDataProvider dataProvider) : base(gameLogic, dataProvider)
@@ -83,6 +84,8 @@ namespace FirstLight.Game.Logic
 
 		public void ReInit()
 		{
+			_trackedPlayerPurchases.Rebind(Data.TrackedStorePurchases);
+			_trackedPlayerPurchases.NotifyAll();
 		}
 
 		public List<StorePurchaseData> GetTrackedPlayerPurchases()

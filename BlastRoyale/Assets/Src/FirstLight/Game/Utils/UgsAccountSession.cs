@@ -40,8 +40,8 @@ namespace FirstLight.Game.Utils
 		public static Snapshot Capture()
 		{
 			var authentication = Subscribe();
-			if (!authentication.IsSignedIn || string.IsNullOrEmpty(authentication.PlayerId))
-				throw new InvalidOperationException("A signed-in Unity account is required for cloud player data.");
+			if (!authentication.IsAuthorized || string.IsNullOrEmpty(authentication.PlayerId))
+				throw new InvalidOperationException("An authorized Unity account is required for cloud player data.");
 			var snapshot = new Snapshot(authentication.PlayerId, Interlocked.Read(ref _generation));
 			snapshot.ThrowIfChanged();
 			return snapshot;
@@ -62,7 +62,7 @@ namespace FirstLight.Game.Utils
 				get
 				{
 					var authentication = Subscribe();
-					return authentication.IsSignedIn && authentication.PlayerId == PlayerId &&
+					return authentication.IsAuthorized && authentication.PlayerId == PlayerId &&
 						Interlocked.Read(ref _generation) == Generation;
 				}
 			}

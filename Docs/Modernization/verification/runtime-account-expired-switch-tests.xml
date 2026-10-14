@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test-run id="2" testcasecount="5" result="Passed" total="5" passed="5" failed="0" inconclusive="0" skipped="0" asserts="0" engine-version="3.5.0.0" clr-version="4.0.30319.42000" start-time="2026-10-14 16:49:17Z" end-time="2026-10-14 16:49:18Z" duration="0.3624247">
+  <test-suite type="TestSuite" id="1000" name="runtime-account-project" fullname="runtime-account-project" runstate="Runnable" testcasecount="6" result="Passed" start-time="2026-10-14 16:49:17Z" end-time="2026-10-14 16:49:18Z" duration="0.362425" total="5" passed="5" failed="0" inconclusive="0" skipped="0" asserts="0">
+    <properties>
+      <property name="platform" value="EditMode" />
+    </properties>
+    <test-suite type="Assembly" id="1017" name="Unity.Services.Authentication.Tests.dll" fullname="<repo>/.local/runtime-account-project/Library/ScriptAssemblies/Unity.Services.Authentication.Tests.dll" runstate="Runnable" testcasecount="5" result="Passed" start-time="2026-10-14 16:49:17Z" end-time="2026-10-14 16:49:18Z" duration="0.358876" total="5" passed="5" failed="0" inconclusive="0" skipped="0" asserts="0">
+      <properties>
+        <property name="_PID" value="64074" />
+        <property name="_APPDOMAIN" value="Unity Child Domain" />
+        <property name="platform" value="EditMode" />
+        <property name="EditorOnly" value="True" />
+      </properties>
+      <test-suite type="TestSuite" id="1018" name="FirstLight" fullname="FirstLight" runstate="Runnable" testcasecount="5" result="Passed" start-time="2026-10-14 16:49:17Z" end-time="2026-10-14 16:49:18Z" duration="0.358663" total="5" passed="5" failed="0" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <test-suite type="TestSuite" id="1019" name="Tests" fullname="FirstLight.Tests" runstate="Runnable" testcasecount="5" result="Passed" start-time="2026-10-14 16:49:17Z" end-time="2026-10-14 16:49:18Z" duration="0.358533" total="5" passed="5" failed="0" inconclusive="0" skipped="0" asserts="0">
+          <properties />
+          <test-suite type="TestSuite" id="1020" name="EditorMode" fullname="FirstLight.Tests.EditorMode" runstate="Runnable" testcasecount="5" result="Passed" start-time="2026-10-14 16:49:17Z" end-time="2026-10-14 16:49:18Z" duration="0.358211" total="5" passed="5" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-suite type="TestSuite" id="1021" name="Authentication" fullname="FirstLight.Tests.EditorMode.Authentication" runstate="Runnable" testcasecount="5" result="Passed" start-time="2026-10-14 16:49:17Z" end-time="2026-10-14 16:49:18Z" duration="0.357914" total="5" passed="5" failed="0" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <test-suite type="TestFixture" id="1009" name="AccountStateIsolationTests" fullname="FirstLight.Tests.EditorMode.Authentication.AccountStateIsolationTests" classname="FirstLight.Tests.EditorMode.Authentication.AccountStateIsolationTests" runstate="Runnable" testcasecount="4" result="Passed" start-time="2026-10-14 16:49:17Z" end-time="2026-10-14 16:49:18Z" duration="0.328172" total="4" passed="4" failed="0" inconclusive="0" skipped="0" asserts="0">
+                <properties />
+                <test-suite type="ParameterizedMethod" id="1014" name="DifferentLoadedAccountDoesNotInheritPreviousTutorialCompletion" fullname="FirstLight.Tests.EditorMode.Authentication.AccountStateIsolationTests.DifferentLoadedAccountDoesNotInheritPreviousTutorialCompletion" classname="FirstLight.Tests.EditorMode.Authentication.AccountStateIsolationTests" runstate="Runnable" testcasecount="2" result="Passed" start-time="2026-10-14 16:49:17Z" end-time="2026-10-14 16:49:18Z" duration="0.314774" total="2" passed="2" failed="0" inconclusive="0" skipped="0" asserts="0">
+                  <properties />
+                  <test-case id="1012" name="DifferentLoadedAccountDoesNotInheritPreviousTutorialCompletion(False)" fullname="FirstLight.Tests.EditorMode.Authentication.AccountStateIsolationTests.DifferentLoadedAccountDoesNotInheritPreviousTutorialCompletion(False)" methodname="DifferentLoadedAccountDoesNotInheritPreviousTutorialCompletion" classname="FirstLight.Tests.EditorMode.Authentication.AccountStateIsolationTests" runstate="Runnable" seed="1954188499" result="Passed" start-time="2026-10-14 16:49:17Z" end-time="2026-10-14 16:49:18Z" duration="0.299649" asserts="0">
+                    <properties>
+                      <property name="retryIteration" value="0" />
+                      <property name="repeatIteration" value="0" />
+                    </properties>
+                    <output><![CDATA[ (T1 F4)  [FeatureFlags] Setting title flag QUANTUM_CUSTOM_SERVER to false
+ (T1 F4)  [FeatureFlags] Disabling flag STORE_ENABLED
+ (T1 F4)  [FeatureFlags] Disabling flag DESYNC_DETECTION
+ (T1 F4)  [FeatureFlags] Disabling flag TUTORIAL
+ (T1 F4)  [FeatureFlags] Disabling flag TUTORIAL_BATTLE
+ (T1 F4)  [FeatureFlags] Disabling flag PAUSE_FREEZE
+ (T1 F4)  [FeatureFlags] Setting title flag WAIT_REWARD_SYNC to false
+]]></output>
+                  </test-case>
+                  <test-case id="1013" name="DifferentLoadedAccountDoesNotInheritPreviousTutorialCompletion(True)" fullname="FirstLight.Tests.EditorMode.Authentication.AccountStateIsolationTests.DifferentLoadedAccountDoesNotInheritPreviousTutorialCompletion(True)" methodname="DifferentLoadedAccountDoesNotInheritPreviousTutorialCompletion" classname="FirstLight.Tests.EditorMode.Authentication.AccountStateIsolationTests" runstate="Runnable" seed="1782183020" result="Passed" start-time="2026-10-14 16:49:18Z" end-time="2026-10-14 16:49:18Z" duration="0.011982" asserts="0">
+                    <properties>
+                      <property name="retryIteration" value="0" />
+                      <property name="repeatIteration" value="0" />
+                    </properties>
+                    <output><![CDATA[ (T1 F4)  [FeatureFlags] Setting title flag QUANTUM_CUSTOM_SERVER to false
+ (T1 F4)  [FeatureFlags] Disabling flag STORE_ENABLED
+ (T1 F4)  [FeatureFlags] Disabling flag DESYNC_DETECTION
+ (T1 F4)  [FeatureFlags] Disabling flag TUTORIAL
+ (T1 F4)  [FeatureFlags] Disabling flag TUTORIAL_BATTLE
+ (T1 F4)  [FeatureFlags] Disabling flag PAUSE_FREEZE
+ (T1 F4)  [FeatureFlags] Setting title flag WAIT_REWARD_SYNC to false
+]]></output>
+                  </test-case>
+                </test-suite>
+                <test-case id="1010" name="StoreAccountSwitchRebindsPurchasePolicyToNewAccount" fullname="FirstLight.Tests.EditorMode.Authentication.AccountStateIsolationTests.StoreAccountSwitchRebindsPurchasePolicyToNewAccount" methodname="StoreAccountSwitchRebindsPurchasePolicyToNewAccount" classname="FirstLight.Tests.EditorMode.Authentication.AccountStateIsolationTests" runstate="Runnable" seed="33994191" result="Passed" start-time="2026-10-14 16:49:18Z" end-time="2026-10-14 16:49:18Z" duration="0.003203" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+                <test-case id="1011" name="StoreAccountSwitchRetainsSubscribersAndPublishesNewBackingData" fullname="FirstLight.Tests.EditorMode.Authentication.AccountStateIsolationTests.StoreAccountSwitchRetainsSubscribersAndPublishesNewBackingData" methodname="StoreAccountSwitchRetainsSubscribersAndPublishesNewBackingData" classname="FirstLight.Tests.EditorMode.Authentication.AccountStateIsolationTests" runstate="Runnable" seed="510027669" result="Passed" start-time="2026-10-14 16:49:18Z" end-time="2026-10-14 16:49:18Z" duration="0.001874" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+              </test-suite>
+              <test-suite type="TestFixture" id="1015" name="ExpiredAccountSwitchTests" fullname="FirstLight.Tests.EditorMode.Authentication.ExpiredAccountSwitchTests" classname="FirstLight.Tests.EditorMode.Authentication.ExpiredAccountSwitchTests" runstate="Runnable" testcasecount="1" result="Passed" start-time="2026-10-14 16:49:18Z" end-time="2026-10-14 16:49:18Z" duration="0.028701" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+                <properties />
+                <test-case id="1016" name="ExpiredNativeAccountSwitchCancellationReleasesGateAndAllowsCachedProviderRetry" fullname="FirstLight.Tests.EditorMode.Authentication.ExpiredAccountSwitchTests.ExpiredNativeAccountSwitchCancellationReleasesGateAndAllowsCachedProviderRetry" methodname="ExpiredNativeAccountSwitchCancellationReleasesGateAndAllowsCachedProviderRetry" classname="FirstLight.Tests.EditorMode.Authentication.ExpiredAccountSwitchTests" runstate="Runnable" seed="789544921" result="Passed" start-time="2026-10-14 16:49:18Z" end-time="2026-10-14 16:49:18Z" duration="0.027640" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                  <output><![CDATA[Saving results to: <user>/Library/Application Support/DefaultCompany/runtime-account-project/TestResults.xml
+]]></output>
+                </test-case>
+              </test-suite>
+            </test-suite>
+          </test-suite>
+        </test-suite>
+      </test-suite>
+    </test-suite>
+  </test-suite>
+</test-run>

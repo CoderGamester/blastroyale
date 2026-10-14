@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test-run id="2" testcasecount="2" result="Failed(Child)" total="2" passed="0" failed="2" inconclusive="0" skipped="0" asserts="0" engine-version="3.5.0.0" clr-version="4.0.30319.42000" start-time="2026-10-14 15:24:35Z" end-time="2026-10-14 15:24:35Z" duration="0.0925653">
+  <test-suite type="TestSuite" id="1000" name="ugs-auth-lifecycle-project" fullname="ugs-auth-lifecycle-project" runstate="Runnable" testcasecount="5" result="Failed" site="Child" start-time="2026-10-14 15:24:35Z" end-time="2026-10-14 15:24:35Z" duration="0.092565" total="2" passed="0" failed="2" inconclusive="0" skipped="0" asserts="0">
+    <properties>
+      <property name="platform" value="EditMode" />
+    </properties>
+    <failure>
+      <message><![CDATA[One or more child tests had errors]]></message>
+    </failure>
+    <test-suite type="Assembly" id="1008" name="Unity.Services.Authentication.Tests.dll" fullname="<repo>/.local/ugs-auth-lifecycle-project/Library/ScriptAssemblies/Unity.Services.Authentication.Tests.dll" runstate="Runnable" testcasecount="5" result="Failed" site="Child" start-time="2026-10-14 15:24:35Z" end-time="2026-10-14 15:24:35Z" duration="0.089206" total="2" passed="0" failed="2" inconclusive="0" skipped="0" asserts="0">
+      <properties>
+        <property name="_PID" value="92331" />
+        <property name="_APPDOMAIN" value="Unity Child Domain" />
+        <property name="platform" value="EditMode" />
+        <property name="EditorOnly" value="True" />
+      </properties>
+      <failure>
+        <message><![CDATA[One or more child tests had errors]]></message>
+      </failure>
+      <test-suite type="TestSuite" id="1009" name="FirstLight" fullname="FirstLight" runstate="Runnable" testcasecount="5" result="Failed" site="Child" start-time="2026-10-14 15:24:35Z" end-time="2026-10-14 15:24:35Z" duration="0.089052" total="2" passed="0" failed="2" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <failure>
+          <message><![CDATA[One or more child tests had errors]]></message>
+        </failure>
+        <test-suite type="TestSuite" id="1010" name="Tests" fullname="FirstLight.Tests" runstate="Runnable" testcasecount="5" result="Failed" site="Child" start-time="2026-10-14 15:24:35Z" end-time="2026-10-14 15:24:35Z" duration="0.088963" total="2" passed="0" failed="2" inconclusive="0" skipped="0" asserts="0">
+          <properties />
+          <failure>
+            <message><![CDATA[One or more child tests had errors]]></message>
+          </failure>
+          <test-suite type="TestSuite" id="1011" name="EditorMode" fullname="FirstLight.Tests.EditorMode" runstate="Runnable" testcasecount="5" result="Failed" site="Child" start-time="2026-10-14 15:24:35Z" end-time="2026-10-14 15:24:35Z" duration="0.088878" total="2" passed="0" failed="2" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <failure>
+              <message><![CDATA[One or more child tests had errors]]></message>
+            </failure>
+            <test-suite type="TestSuite" id="1012" name="Authentication" fullname="FirstLight.Tests.EditorMode.Authentication" runstate="Runnable" testcasecount="5" result="Failed" site="Child" start-time="2026-10-14 15:24:35Z" end-time="2026-10-14 15:24:35Z" duration="0.088779" total="2" passed="0" failed="2" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <failure>
+                <message><![CDATA[One or more child tests had errors]]></message>
+              </failure>
+              <test-suite type="TestFixture" id="1001" name="UgsAuthenticationLifecycleTests" fullname="FirstLight.Tests.EditorMode.Authentication.UgsAuthenticationLifecycleTests" classname="FirstLight.Tests.EditorMode.Authentication.UgsAuthenticationLifecycleTests" runstate="Runnable" testcasecount="5" result="Failed" site="Child" start-time="2026-10-14 15:24:35Z" end-time="2026-10-14 15:24:35Z" duration="0.088515" total="2" passed="0" failed="2" inconclusive="0" skipped="0" asserts="0">
+                <properties />
+                <failure>
+                  <message><![CDATA[One or more child tests had errors]]></message>
+                </failure>
+                <test-suite type="ParameterizedMethod" id="1004" name="ExpiredCachedSessionReauthenticatesThroughActualProvider" fullname="FirstLight.Tests.EditorMode.Authentication.UgsAuthenticationLifecycleTests.ExpiredCachedSessionReauthenticatesThroughActualProvider" classname="FirstLight.Tests.EditorMode.Authentication.UgsAuthenticationLifecycleTests" runstate="Runnable" testcasecount="2" result="Failed" site="Child" start-time="2026-10-14 15:24:35Z" end-time="2026-10-14 15:24:35Z" duration="0.086991" total="2" passed="0" failed="2" inconclusive="0" skipped="0" asserts="0">
+                  <properties />
+                  <failure>
+                    <message><![CDATA[One or more child tests had errors]]></message>
+                  </failure>
+                  <test-case id="1002" name="ExpiredCachedSessionReauthenticatesThroughActualProvider(&quot;LoginWithDevice&quot;)" fullname="FirstLight.Tests.EditorMode.Authentication.UgsAuthenticationLifecycleTests.ExpiredCachedSessionReauthenticatesThroughActualProvider(&quot;LoginWithDevice&quot;)" methodname="ExpiredCachedSessionReauthenticatesThroughActualProvider" classname="FirstLight.Tests.EditorMode.Authentication.UgsAuthenticationLifecycleTests" runstate="Runnable" seed="2109953838" result="Failed" label="Error" start-time="2026-10-14 15:24:35Z" end-time="2026-10-14 15:24:35Z" duration="0.078909" asserts="0">
+                    <properties>
+                      <property name="retryIteration" value="0" />
+                      <property name="repeatIteration" value="0" />
+                    </properties>
+                    <failure>
+                      <message><![CDATA[Unity.Services.Authentication.AuthenticationException : Invalid state for this operation. The player session has expired.]]></message>
+                      <stack-trace><![CDATA[  at Unity.Services.Authentication.AuthenticationServiceInternal.GetPlayerNameAsync (System.Boolean autoGenerate) [0x0013b] in <ecda1b1280f64c5ab473fb50d423164c>:0 
+  at FirstLight.Game.Services.Authentication.UnityCloudLoginProvider.ProjectLoginResult (System.Boolean newlyCreated) [0x00026] in <repo>/.local/ugs-auth-lifecycle-project/Assets/Tests/NativeUnityCloudLoginProvider.cs:95 
+  at Cysharp.Threading.Tasks.UniTask+ExceptionResultSource`1[T].GetResult (System.Int16 token) [0x00015] in <c455cac094f442b4ad680c5f41f0da3a>:0 
+  at FirstLight.Game.Services.Authentication.UnityCloudLoginProvider.LoginWithDevice () [0x0008d] in <repo>/.local/ugs-auth-lifecycle-project/Assets/Tests/NativeUnityCloudLoginProvider.cs:35 
+  at Cysharp.Threading.Tasks.UniTask+ExceptionResultSource`1[T].GetResult (System.Int16 token) [0x00015] in <c455cac094f442b4ad680c5f41f0da3a>:0 
+  at FirstLight.Tests.EditorMode.Authentication.UgsAuthenticationLifecycleTests.Login (System.String method) [0x00037] in <repo>/.local/ugs-auth-lifecycle-project/Assets/Tests/UgsAuthenticationLifecycleTests.cs:44 
+  at FirstLight.Tests.EditorMode.Authentication.UgsAuthenticationLifecycleTests.ExpiredCachedSessionReauthenticatesThroughActualProvider (System.String method) [0x000ff] in <repo>/.local/ugs-auth-lifecycle-project/Assets/Tests/UgsAuthenticationLifecycleTests.cs:56 
+  at UnityEngine.TestTools.TestRunner.TestTaskWrapper+<Execute>d__2.MoveNext () [0x00063] in ./Library/PackageCache/com.unity.test-framework@bd7f943e9647/UnityEngine.TestRunner/TestRunner/TestTaskWrapper.cs:31 
+  at UnityEngine.TestTools.TestEnumerator+<Execute>d__7.MoveNext () [0x0003a] in ./Library/PackageCache/com.unity.test-framework@bd7f943e9647/UnityEngine.TestRunner/NUnitExtensions/Attributes/TestEnumerator.cs:44 ]]></stack-trace>
+                    </failure>
+                  </test-case>
+                  <test-case id="1003" name="ExpiredCachedSessionReauthenticatesThroughActualProvider(&quot;LoginWithNewGuestAccount&quot;)" fullname="FirstLight.Tests.EditorMode.Authentication.UgsAuthenticationLifecycleTests.ExpiredCachedSessionReauthenticatesThroughActualProvider(&quot;LoginWithNewGuestAccount&quot;)" methodname="ExpiredCachedSessionReauthenticatesThroughActualProvider" classname="FirstLight.Tests.EditorMode.Authentication.UgsAuthenticationLifecycleTests" runstate="Runnable" seed="1204359577" result="Failed" label="Error" start-time="2026-10-14 15:24:35Z" end-time="2026-10-14 15:24:35Z" duration="0.004485" asserts="0">
+                    <properties>
+                      <property name="retryIteration" value="0" />
+                      <property name="repeatIteration" value="0" />
+                    </properties>
+                    <failure>
+                      <message><![CDATA[Unity.Services.Authentication.AuthenticationException : Invalid state for this operation. The player session has expired.]]></message>
+                      <stack-trace><![CDATA[  at Unity.Services.Authentication.AuthenticationServiceInternal.GetPlayerNameAsync (System.Boolean autoGenerate) [0x0013b] in <ecda1b1280f64c5ab473fb50d423164c>:0 
+  at FirstLight.Game.Services.Authentication.UnityCloudLoginProvider.ProjectLoginResult (System.Boolean newlyCreated) [0x00026] in <repo>/.local/ugs-auth-lifecycle-project/Assets/Tests/NativeUnityCloudLoginProvider.cs:95 
+  at Cysharp.Threading.Tasks.UniTask+ExceptionResultSource`1[T].GetResult (System.Int16 token) [0x00015] in <c455cac094f442b4ad680c5f41f0da3a>:0 
+  at FirstLight.Game.Services.Authentication.UnityCloudLoginProvider.LoginWithNewGuestAccount () [0x000a5] in <repo>/.local/ugs-auth-lifecycle-project/Assets/Tests/NativeUnityCloudLoginProvider.cs:45 
+  at Cysharp.Threading.Tasks.UniTask+ExceptionResultSource`1[T].GetResult (System.Int16 token) [0x00015] in <c455cac094f442b4ad680c5f41f0da3a>:0 
+  at FirstLight.Tests.EditorMode.Authentication.UgsAuthenticationLifecycleTests.Login (System.String method) [0x00037] in <repo>/.local/ugs-auth-lifecycle-project/Assets/Tests/UgsAuthenticationLifecycleTests.cs:44 
+  at FirstLight.Tests.EditorMode.Authentication.UgsAuthenticationLifecycleTests.ExpiredCachedSessionReauthenticatesThroughActualProvider (System.String method) [0x000ff] in <repo>/.local/ugs-auth-lifecycle-project/Assets/Tests/UgsAuthenticationLifecycleTests.cs:56 
+  at UnityEngine.TestTools.TestRunner.TestTaskWrapper+<Execute>d__2.MoveNext () [0x00063] in ./Library/PackageCache/com.unity.test-framework@bd7f943e9647/UnityEngine.TestRunner/TestRunner/TestTaskWrapper.cs:31 
+  at UnityEngine.TestTools.TestEnumerator+<Execute>d__7.MoveNext () [0x0003a] in ./Library/PackageCache/com.unity.test-framework@bd7f943e9647/UnityEngine.TestRunner/NUnitExtensions/Attributes/TestEnumerator.cs:44 ]]></stack-trace>
+                    </failure>
+                    <output><![CDATA[Saving results to: <repo>/artifacts/ugs-auth-lifecycle-before-fix-tests.xml
+]]></output>
+                  </test-case>
+                </test-suite>
+              </test-suite>
+            </test-suite>
+          </test-suite>
+        </test-suite>
+      </test-suite>
+    </test-suite>
+  </test-suite>
+</test-run>

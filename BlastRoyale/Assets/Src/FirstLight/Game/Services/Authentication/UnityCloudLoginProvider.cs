@@ -107,11 +107,16 @@ namespace FirstLight.Game.Services.Authentication
 			};
 		}
 
-		public UniTask Logout()
+		public UniTask Logout(bool clearRecoverableCredentials = false)
 		{
 			UgsAccountSession.Invalidate();
-			// Preserve the cached guest session. Clearing it can permanently orphan an unlinked guest's progress.
-			if (AuthenticationService.Instance.IsSignedIn) AuthenticationService.Instance.SignOut();
+			var authentication = AuthenticationService.Instance;
+			// Only the explicit Settings logout requests credential clearing. The native
+			// linked Unity identity proves this account can be recovered through hosted login.
+			// Anonymous or unknown identities must keep their sole recovery credential.
+			var clearCredentials = clearRecoverableCredentials && authentication.PlayerInfo != null &&
+				!string.IsNullOrEmpty(authentication.PlayerInfo.GetUnityId());
+			if (authentication.IsSignedIn) authentication.SignOut(clearCredentials);
 			if (CanUsePlayerAccounts && PlayerAccountService.Instance.IsSignedIn) PlayerAccountService.Instance.SignOut();
 			return UniTask.CompletedTask;
 		}

@@ -1,0 +1,163 @@
+{
+  "UnityVersion": "6000.3.26f1",
+  "Manifest": {
+    "Files": [
+      {
+        "Path": "BlastRoyale/Assets/Src/FirstLight/Game/Utils/UgsAccountSession.cs",
+        "OverlayPath": ".local/ugs-session-guard-patches/BlastRoyale/Assets/Src/FirstLight/Game/Utils/UgsAccountSession.cs",
+        "BeforeSHA256": "64a33f3761ba64d9227547c050c0df29097049c079ec8f60b5a0d605dfcb0556",
+        "AfterSHA256": "f175c1d1e68bcd3c969271c00a08e65adfaa468e4fa0b978f02ccee325493544",
+        "PreservedMetadataSHA256": "7b438fe5c2d6b9f57647f0d88c481562ee4ec39c4e23709c7bb0bc46d76ddb03"
+      }
+    ]
+  },
+  "WholeGameNativeCompile": {
+    "ExitCode": 0,
+    "CSharpDiagnostics": 0,
+    "Log": "artifacts/session-guard-overlay-firstlight.game-compile.log"
+  },
+  "Tests": {
+    "Total": 10,
+    "Passed": 10,
+    "Failed": 0,
+    "ExitCode": 0,
+    "Cases": [
+      {
+        "Name": "ExpiredCachedSessionReauthenticatesThroughActualProvider(\"LoginWithDevice\")",
+        "Result": "Passed"
+      },
+      {
+        "Name": "ExpiredCachedSessionReauthenticatesThroughActualProvider(\"LoginWithNewGuestAccount\")",
+        "Result": "Passed"
+      },
+      {
+        "Name": "ExpiredNativeSessionRejectsNewCloudSnapshot",
+        "Result": "Passed"
+      },
+      {
+        "Name": "ExplicitGuestLogoutPreservesSoleRecoveryCredentialAndSamePlayerId",
+        "Result": "Passed"
+      },
+      {
+        "Name": "ExplicitHostedLogoutClearsCachedSessionAndAutomaticLoginEligibility",
+        "Result": "Passed"
+      },
+      {
+        "Name": "FreshGuestCreatesExactlyOneNativeAnonymousSession",
+        "Result": "Passed"
+      },
+      {
+        "Name": "NativeScheduledRefreshPreservesGenerationAndAvoidsRedundantProviderSignin",
+        "Result": "Passed"
+      },
+      {
+        "Name": "OrdinaryHostedSignoutKeepsSessionForRecoveryOrEnvironmentSwitch",
+        "Result": "Passed"
+      },
+      {
+        "Name": "SignedOutCachedSessionRestoresSameIdAndInvalidatesOldGeneration",
+        "Result": "Passed"
+      },
+      {
+        "Name": "UnknownNativeIdentityCannotClearAnUnlinkedGuestCredential",
+        "Result": "Passed"
+      }
+    ],
+    "XML": "Docs/Modernization/verification/ugs-auth-authorization-guard-tests.xml",
+    "Log": "artifacts/ugs-auth-authorization-guard-final-tests.log"
+  },
+  "NativeInputs": [
+    {
+      "Source": ".local/runtime-account-patches/BlastRoyale/Assets/Src/FirstLight/Game/Services/Authentication/UnityCloudLoginProvider.cs",
+      "Target": "NativeUnityCloudLoginProvider.cs",
+      "SHA256": "8587d9cfb6d0ba43ad0aa0f8b0dd937fc72f24d66d868fc739fe17a99ac48062"
+    },
+    {
+      "Source": ".local/ugs-session-guard-patches/BlastRoyale/Assets/Src/FirstLight/Game/Utils/UgsAccountSession.cs",
+      "Target": "NativeUgsAccountSession.cs",
+      "SHA256": "f175c1d1e68bcd3c969271c00a08e65adfaa468e4fa0b978f02ccee325493544"
+    },
+    {
+      "Source": ".local/runtime-account-patches/BlastRoyale/Assets/Src/FirstLight/Game/Services/Authentication/AuthService.cs",
+      "ExtractedContracts": [
+        "IAuthenticationHook",
+        "ILoginProvider"
+      ],
+      "SHA256": "91e217613924958b72578f5fdf4fe6c708ba6330bbc36c93cc91010f65d36a8d"
+    },
+    {
+      "NativeAssembly": "Unity.Services.Authentication.dll",
+      "SHA256": "d567ee9010b1cdae70b68fb47f3bcb87820bda5c34b9597ecd805ca186d0ee37"
+    },
+    {
+      "NativeAssembly": "Unity.Services.Authentication.PlayerAccounts.dll",
+      "SHA256": "d0c82cdc3461f56e01d7d0b2daf6bae5758390e87b949eb5d9be2d7328bb73c1"
+    },
+    {
+      "NativeAssembly": "UniTask.dll",
+      "SHA256": "48f0a3dad710c9ed3856f0e713065362f889891323ef546fbc3a3d4bd01c1277"
+    },
+    {
+      "NativeAssembly": "PlayFab.dll",
+      "SHA256": "7c780c1f680fa09417cf0270dc0e48ba530d61feb406a4b2de6ae64d50867740"
+    },
+    {
+      "NativeAssembly": "UnityEngine.UI.dll",
+      "SHA256": "7560f032bf51837debd8148d83f3c4ea1978a5d40ca829eb1d4c600b508eb27c"
+    },
+    {
+      "NativeAssembly": "Unity.Services.Core.Device.dll",
+      "SHA256": "c88adbe0471eefa8acb7d1486c61242665b86c82b27de79617982fed4f0246ac"
+    },
+    {
+      "NativeAssembly": "Unity.Services.Core.Registration.dll",
+      "SHA256": "5bb04d592aed5fbae16286d29d5666019ba0049d9a08f607fb4a6118aa29b69b"
+    },
+    {
+      "NativeAssembly": "Unity.Services.Core.Components.dll",
+      "SHA256": "e6ad6ec311a8ec71531758e12f2fcc6fb92a270e39641db226510bb7f4d9e197"
+    },
+    {
+      "NativeAssembly": "Unity.Services.Core.Analytics.dll",
+      "SHA256": "ac1a452fcd96a2f312a93142cde83477e48869a73de491148c0b5b95887c6e9f"
+    },
+    {
+      "NativeAssembly": "Unity.Services.Core.Scheduler.dll",
+      "SHA256": "647a550bee7c4e01f76feba73080b47295ea8724f4a721d2c93e8e4770f6c53b"
+    },
+    {
+      "NativeAssembly": "Unity.Services.Core.Environments.dll",
+      "SHA256": "4fca2b0c74b8d8effad74673e403a73e1eef0064f50864fbd1e6ee73d2c2be33"
+    },
+    {
+      "NativeAssembly": "Unity.Services.Core.Configuration.dll",
+      "SHA256": "9303c15068349816ed18f4516b8659ad75002783d69944ba44e0b827a462e66d"
+    },
+    {
+      "NativeAssembly": "Unity.Services.Core.Internal.dll",
+      "SHA256": "dc4772120e2bbcd3477ffea31e2d72a02bf641c78a4610b84288f6569bff3c7d"
+    },
+    {
+      "NativeAssembly": "Unity.Services.Core.dll",
+      "SHA256": "9cb794b5d9716b10817417d22bd2762018ebcf0741e9dae67e3a67fcc25820a5"
+    },
+    {
+      "NativeAssembly": "Unity.Services.Core.Networking.dll",
+      "SHA256": "9552c8bd310d9a475d552cbd5ff0920c5e4e6c6b27cb197a290468204953e1bd"
+    },
+    {
+      "NativeAssembly": "Unity.Services.Core.Environments.Internal.dll",
+      "SHA256": "5399cbc7f0ac0556d91f5bc4fbbad8b99d88dfa331bd89af24b24c244699cca5"
+    },
+    {
+      "NativeAssembly": "Unity.Services.Core.Threading.dll",
+      "SHA256": "c572ce27c47560cfe5a5ed9d7d465deafe0c52cbec3659f8a1e5b20e6e4ee744"
+    },
+    {
+      "NativeAssembly": "Unity.Services.Core.Telemetry.dll",
+      "SHA256": "62e3281ce504be3fd401a74ab83a36fad91efb0b91d85675b3115b4859196c3d"
+    }
+  ],
+  "TestSourceSHA256": "3deb24c09173890597588ed6f69b989ec75ee6d43c4fa94881228fa4b1bf08cf",
+  "Scope": "Native Auth3.8 scheduled expiration and refresh, exact game provider/session guard; synthetic local network/cache collaborators; no cloud requests."
+}

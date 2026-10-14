@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test-run id="2" testcasecount="1" result="Failed(Child)" total="1" passed="0" failed="1" inconclusive="0" skipped="0" asserts="0" engine-version="3.5.0.0" clr-version="4.0.30319.42000" start-time="2026-10-14 16:48:25Z" end-time="2026-10-14 16:48:25Z" duration="0.1336271">
+  <test-suite type="TestSuite" id="1000" name="runtime-account-project" fullname="runtime-account-project" runstate="Runnable" testcasecount="6" result="Failed" site="Child" start-time="2026-10-14 16:48:25Z" end-time="2026-10-14 16:48:25Z" duration="0.133627" total="1" passed="0" failed="1" inconclusive="0" skipped="0" asserts="0">
+    <properties>
+      <property name="platform" value="EditMode" />
+    </properties>
+    <failure>
+      <message><![CDATA[One or more child tests had errors]]></message>
+    </failure>
+    <test-suite type="Assembly" id="1017" name="Unity.Services.Authentication.Tests.dll" fullname="<repo>/.local/runtime-account-project/Library/ScriptAssemblies/Unity.Services.Authentication.Tests.dll" runstate="Runnable" testcasecount="5" result="Failed" site="Child" start-time="2026-10-14 16:48:25Z" end-time="2026-10-14 16:48:25Z" duration="0.129611" total="1" passed="0" failed="1" inconclusive="0" skipped="0" asserts="0">
+      <properties>
+        <property name="_PID" value="61764" />
+        <property name="_APPDOMAIN" value="Unity Child Domain" />
+        <property name="platform" value="EditMode" />
+        <property name="EditorOnly" value="True" />
+      </properties>
+      <failure>
+        <message><![CDATA[One or more child tests had errors]]></message>
+      </failure>
+      <test-suite type="TestSuite" id="1018" name="FirstLight" fullname="FirstLight" runstate="Runnable" testcasecount="5" result="Failed" site="Child" start-time="2026-10-14 16:48:25Z" end-time="2026-10-14 16:48:25Z" duration="0.129041" total="1" passed="0" failed="1" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <failure>
+          <message><![CDATA[One or more child tests had errors]]></message>
+        </failure>
+        <test-suite type="TestSuite" id="1019" name="Tests" fullname="FirstLight.Tests" runstate="Runnable" testcasecount="5" result="Failed" site="Child" start-time="2026-10-14 16:48:25Z" end-time="2026-10-14 16:48:25Z" duration="0.128688" total="1" passed="0" failed="1" inconclusive="0" skipped="0" asserts="0">
+          <properties />
+          <failure>
+            <message><![CDATA[One or more child tests had errors]]></message>
+          </failure>
+          <test-suite type="TestSuite" id="1020" name="EditorMode" fullname="FirstLight.Tests.EditorMode" runstate="Runnable" testcasecount="5" result="Failed" site="Child" start-time="2026-10-14 16:48:25Z" end-time="2026-10-14 16:48:25Z" duration="0.128371" total="1" passed="0" failed="1" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <failure>
+              <message><![CDATA[One or more child tests had errors]]></message>
+            </failure>
+            <test-suite type="TestSuite" id="1021" name="Authentication" fullname="FirstLight.Tests.EditorMode.Authentication" runstate="Runnable" testcasecount="5" result="Failed" site="Child" start-time="2026-10-14 16:48:25Z" end-time="2026-10-14 16:48:25Z" duration="0.127865" total="1" passed="0" failed="1" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <failure>
+                <message><![CDATA[One or more child tests had errors]]></message>
+              </failure>
+              <test-suite type="TestFixture" id="1015" name="ExpiredAccountSwitchTests" fullname="FirstLight.Tests.EditorMode.Authentication.ExpiredAccountSwitchTests" classname="FirstLight.Tests.EditorMode.Authentication.ExpiredAccountSwitchTests" runstate="Runnable" testcasecount="1" result="Failed" site="Child" start-time="2026-10-14 16:48:25Z" end-time="2026-10-14 16:48:25Z" duration="0.126913" total="1" passed="0" failed="1" inconclusive="0" skipped="0" asserts="0">
+                <properties />
+                <failure>
+                  <message><![CDATA[One or more child tests had errors]]></message>
+                </failure>
+                <test-case id="1016" name="ExpiredNativeAccountSwitchCancellationReleasesGateAndAllowsCachedProviderRetry" fullname="FirstLight.Tests.EditorMode.Authentication.ExpiredAccountSwitchTests.ExpiredNativeAccountSwitchCancellationReleasesGateAndAllowsCachedProviderRetry" methodname="ExpiredNativeAccountSwitchCancellationReleasesGateAndAllowsCachedProviderRetry" classname="FirstLight.Tests.EditorMode.Authentication.ExpiredAccountSwitchTests" runstate="Runnable" seed="291463823" result="Failed" start-time="2026-10-14 16:48:25Z" end-time="2026-10-14 16:48:25Z" duration="0.120640" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                  <failure>
+                    <message><![CDATA[  Expected: <System.OperationCanceledException>
+  But was:  <System.InvalidOperationException>
+]]></message>
+                    <stack-trace><![CDATA[at FirstLight.Tests.EditorMode.Authentication.ExpiredAccountSwitchTests.ExpiredNativeAccountSwitchCancellationReleasesGateAndAllowsCachedProviderRetry () [0x0023c] in <repo>/.local/runtime-account-project/Assets/Tests/ExpiredAccountSwitchTests.cs:43
+at UnityEngine.TestTools.TestRunner.TestTaskWrapper+<Execute>d__2.MoveNext () [0x00063] in ./Library/PackageCache/com.unity.test-framework@bd7f943e9647/UnityEngine.TestRunner/TestRunner/TestTaskWrapper.cs:31
+at UnityEngine.TestTools.TestEnumerator+<Execute>d__7.MoveNext () [0x0003a] in ./Library/PackageCache/com.unity.test-framework@bd7f943e9647/UnityEngine.TestRunner/NUnitExtensions/Attributes/TestEnumerator.cs:44
+]]></stack-trace>
+                  </failure>
+                  <output><![CDATA[Saving results to: <user>/Library/Application Support/DefaultCompany/runtime-account-project/TestResults.xml
+]]></output>
+                </test-case>
+              </test-suite>
+            </test-suite>
+          </test-suite>
+        </test-suite>
+      </test-suite>
+    </test-suite>
+  </test-suite>
+</test-run>

@@ -1,0 +1,141 @@
+{
+  "SDK": "actual imported Unity Authentication3.8",
+  "Unity": "6000.3.26f1",
+  "NativeTypes": "AuthenticationServiceInternal, native components/JwtDecoder/state/events and scheduled refresh",
+  "ApplicationSources": "exact UnityCloudLoginProvider/UgsAccountSession; exact IAuthenticationHook/ILoginProvider extracted from AuthService.cs",
+  "TestCollaborators": "Only local network/cache/scheduler/telemetry implement real imported SDK interfaces; no SDK/Frame/Unity engine types redefined",
+  "Cases": 5,
+  "Passed": 5,
+  "Failed": 0,
+  "UnityExitCode": 0,
+  "BeforeFix": {
+    "Cases": 2,
+    "Failed": 2,
+    "Failure": "Native AuthenticationException: player session has expired",
+    "Mutation": "Only the two source IsAuthorized conditions changed back to prior IsSignedIn in the ignored probe"
+  },
+  "CloudWrites": false,
+  "MainWrites": false,
+  "Coverage": [
+    "expired cached device sign-in",
+    "expired cached guest retry",
+    "authorized/Refreshing avoids redundant sign-in and native scheduled refresh preserves generation",
+    "signed-out cached same-ID resumes and invalidates prior generation",
+    "fresh guest exactly one native anonymous request"
+  ],
+  "Limits": [
+    "No live authentication/network/cache/device proof",
+    "Full AuthService state/logic initialization is source-connected but not mocked by this fixture",
+    "Dedicated isolated SDK test-friend assembly, not copied into main test assembly"
+  ],
+  "Evidence": [
+    {
+      "Path": "artifacts/ugs-auth-lifecycle-final-tests.xml",
+      "SHA256": "7560349a4fa38dd7b92600b591af1454a5d8a05882217d4ec1366c6d3778a1b7"
+    },
+    {
+      "Path": "artifacts/ugs-auth-lifecycle-before-fix-tests.xml",
+      "SHA256": "da77a4f322e863851571379b578bfd0321d8d659ab23e90550f195d141bf6cb1"
+    },
+    {
+      "Path": "artifacts/ugs-auth-lifecycle-final-tests.log",
+      "SHA256": "5aebe1ca6bc98b0b6c08eedfb557baff21d8f8300c57d13f8ab68c48eb3ea549"
+    },
+    {
+      "Path": "artifacts/ugs-auth-lifecycle-before-fix-tests.log",
+      "SHA256": "2d8d761c3dbe3b660d62c2d81b982ee7f8d5b86f0e90b9788938665988f5a6bd"
+    }
+  ],
+  "Inputs": [
+    {
+      "Source": "BlastRoyale/Assets/Src/FirstLight/Game/Services/Authentication/UnityCloudLoginProvider.cs",
+      "Target": "NativeUnityCloudLoginProvider.cs",
+      "SHA256": "d5bb557ac614a64de194ed37fc1176600d387d26e2a7b62c3a2b450c882c5067"
+    },
+    {
+      "Source": "BlastRoyale/Assets/Src/FirstLight/Game/Utils/UgsAccountSession.cs",
+      "Target": "NativeUgsAccountSession.cs",
+      "SHA256": "64a33f3761ba64d9227547c050c0df29097049c079ec8f60b5a0d605dfcb0556"
+    },
+    {
+      "Source": "BlastRoyale/Assets/Src/FirstLight/Game/Services/Authentication/AuthService.cs",
+      "ExtractedContracts": [
+        "IAuthenticationHook",
+        "ILoginProvider"
+      ],
+      "SHA256": "7ae574072f5c8e3faf304c4cd531e97480ed606cd2aa20e42ec922d3cc6f397b"
+    },
+    {
+      "NativeAssembly": "Unity.Services.Authentication.dll",
+      "SHA256": "3f5e875a5a1dabfeef552c862df1170d31825f743bca8ef6c5a0fc842bb7cddf"
+    },
+    {
+      "NativeAssembly": "Unity.Services.Authentication.PlayerAccounts.dll",
+      "SHA256": "17154087d2ebe031fcfc38bf39dac9892bdc357abd7f6713d81d53f66a1109aa"
+    },
+    {
+      "NativeAssembly": "UniTask.dll",
+      "SHA256": "319411509ef16df2f14c33da9109f973653582b1edabc423c8ad754701040d02"
+    },
+    {
+      "NativeAssembly": "PlayFab.dll",
+      "SHA256": "68709842702c59c9c6d232091872b1d8eae1580fe7a36b0e6c6cbc73bfdfab8c"
+    },
+    {
+      "NativeAssembly": "UnityEngine.UI.dll",
+      "SHA256": "4552ae78cbe4485b927dc9980ce0a6067b09baeac2e0057b0fe370a9a56c8d60"
+    },
+    {
+      "NativeAssembly": "Unity.Services.Core.Device.dll",
+      "SHA256": "5837d7595fd921b95fc627315ce018cabd8209af57018bb317e8f846c4aa567e"
+    },
+    {
+      "NativeAssembly": "Unity.Services.Core.Registration.dll",
+      "SHA256": "1e75d65678655cc764567fb02452487616dc56f389bb739f063a6eb59f9cdd08"
+    },
+    {
+      "NativeAssembly": "Unity.Services.Core.Components.dll",
+      "SHA256": "93f3b20fbb86b86e76574a37ccebacbdae15775a71013ee24bc060cb5e745606"
+    },
+    {
+      "NativeAssembly": "Unity.Services.Core.Analytics.dll",
+      "SHA256": "3e64830f97e0931c4141b45e3aab3b98dcf8acc7cf40dead559727adfb486b79"
+    },
+    {
+      "NativeAssembly": "Unity.Services.Core.Scheduler.dll",
+      "SHA256": "bf0dd0b1f6ed5d53c9ca622a5ca4ede36fbbea141a37f2cd216649f230176ec3"
+    },
+    {
+      "NativeAssembly": "Unity.Services.Core.Environments.dll",
+      "SHA256": "40106f9f0d3560998deb1e188af86b15864b58dde67cae27ce1fbc08e8dbde50"
+    },
+    {
+      "NativeAssembly": "Unity.Services.Core.Configuration.dll",
+      "SHA256": "bd73d022526b823b32c5873b8685a6acee2f4d4c106f258b315f1dbf7b809470"
+    },
+    {
+      "NativeAssembly": "Unity.Services.Core.Internal.dll",
+      "SHA256": "a5c63a3269b8eb7f62d7de7c289ef8c937a2763c6dab8c24a4f99a34b6ab7745"
+    },
+    {
+      "NativeAssembly": "Unity.Services.Core.dll",
+      "SHA256": "20fd30c0e35703c29a1ef71eacdfd24d54718a9daa49a56e5a0bacb43eb60b24"
+    },
+    {
+      "NativeAssembly": "Unity.Services.Core.Networking.dll",
+      "SHA256": "1b71e435dddb0bf14a96b729da3066a98172cb151dec04407367cd839f450cb5"
+    },
+    {
+      "NativeAssembly": "Unity.Services.Core.Environments.Internal.dll",
+      "SHA256": "52232b133a3a67cbbfee7f2c0abd3d71588dd1f950bb5414f67c50bfe13b6bd8"
+    },
+    {
+      "NativeAssembly": "Unity.Services.Core.Threading.dll",
+      "SHA256": "80d3f842666304d2c7bf8190eed32c3c4d61d12d2890d724e42fc1260e591624"
+    },
+    {
+      "NativeAssembly": "Unity.Services.Core.Telemetry.dll",
+      "SHA256": "5d1db655589a5f1ff12d0e7464cc4d9590312703cfe9a4061b7210dc9178af58"
+    }
+  ]
+}

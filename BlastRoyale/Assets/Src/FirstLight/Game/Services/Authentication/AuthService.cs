@@ -63,7 +63,7 @@ namespace FirstLight.Game.Services.Authentication
 
 	internal interface ILoginProvider : IAuthenticationHook
 	{
-		public UniTask Logout();
+		public UniTask Logout(bool clearRecoverableCredentials = false);
 		public UniTask<LoginResult> LoginWithEmailPassword(string email, string password);
 		public UniTask<LoginResult> LoginWithDevice();
 		public UniTask<LoginResult> LoginWithNewGuestAccount();
@@ -176,7 +176,7 @@ namespace FirstLight.Game.Services.Authentication
 		/// Logout the user and end the current session, preserving a guest's cached recovery token
 		/// </summary>
 		/// <returns></returns>
-		UniTask Logout();
+		UniTask Logout(bool clearRecoverableCredentials = false);
 
 		/// <summary>
 		/// Delete the current account and logout
@@ -269,7 +269,6 @@ namespace FirstLight.Game.Services.Authentication
 			{
 				_loginProvider,
 				unityCloudHook,
-				new MigrateTutorialDataHook(dataService, gameCommandService),
 				new ParseFeatureFlagsHook(msgBroker),
 				new AuthenticatePhotonHook(networkService)
 			}.ToList();
@@ -368,10 +367,12 @@ namespace FirstLight.Game.Services.Authentication
 			if (_authenticationInProgress) throw new InvalidOperationException("Authentication is already in progress.");
 			_authenticationInProgress = true;
 			var wasAuthenticated = _sessionData.IsAuthenticated;
-			var previous = wasAuthenticated && AuthenticationService.Instance.IsSignedIn ? UgsAccountSession.Capture() : default;
-			_sessionData.IsAuthenticated = false;
+			var previous = default(UgsAccountSession.Snapshot);
 			try
 			{
+				// Expired SDK sessions remain signed in. Capturing may fail, and must never latch this gate.
+				if (wasAuthenticated && AuthenticationService.Instance.IsAuthorized) previous = UgsAccountSession.Capture();
+				_sessionData.IsAuthenticated = false;
 				await UniTask.WhenAll(_authenticationHooks.Select(a => a.BeforeAuthentication(previouslyLoggedIn)));
 				var loginResult = await login();
 				var account = UgsAccountSession.Capture();
@@ -505,10 +506,10 @@ namespace FirstLight.Game.Services.Authentication
 			return _loginProvider.SendAccountRecoveryEmail(email);
 		}
 
-		public async UniTask Logout()
+		public async UniTask Logout(bool clearRecoverableCredentials = false)
 		{
 			await UniTask.WhenAll(_authenticationHooks.Select(a => a.BeforeLogout()));
-			await _loginProvider.Logout();
+			await _loginProvider.Logout(clearRecoverableCredentials);
 			_sessionData.IsAuthenticated = false;
 			_sessionData.Email = null;
 		}

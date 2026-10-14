@@ -1,0 +1,43 @@
+{
+  "Unity": "6000.3.26f1",
+  "NativeAuthentication": "3.8.0 imported Main assembly",
+  "GameCompilation": {
+    "Warnings": 0,
+    "Errors": 0,
+    "Log": "artifacts/auth-final-review-firstlight.game-compile.log"
+  },
+  "ActualAccountTests": {
+    "Total": 5,
+    "Passed": 5,
+    "Failed": 0
+  },
+  "NegativeActualPriorAuthSource": {
+    "Total": 1,
+    "Passed": 0,
+    "Failed": 1,
+    "ExpectedFailure": "Native Expired Capture throws InvalidOperationException before switch callback; AuthService login gate remains set",
+    "Source": ".local/runtime-account-patches/BlastRoyale/Assets/Src/FirstLight/Game/Services/Authentication/AuthService.cs",
+    "SourceSHA256": "9c6a8de2d4460d7442c818755cb3a56bc7b554d86ad6959ffb7555411d4db8ab"
+  },
+  "Coverage": [
+    "Actual imported AuthService.LoginProcess on native scheduled Auth3.8 expiry",
+    "Canceled hosted-switch callback releases gate",
+    "Following actual UnityCloudLoginProvider.LoginWithDevice performs native cached-token request and restores authorization",
+    "Failure before backend load releases gate on retry",
+    "Previous four real model/account rebind regressions still pass"
+  ],
+  "Limit": "Native SDK test-network/cache/scheduler collaborators use synthetic local responses. This does not claim hosted browser/cloud/backend model load acceptance. Native provider/state machines and game orchestration are actual imported code.",
+  "NativeDLLInputs": 89,
+  "RetiredPurchasingDLLs": 12,
+  "RetiredReferencesVerifiedAbsent": true,
+  "MainModifiedByThisTask": false,
+  "SourceHashes": {
+    "BlastRoyale/Assets/Src/FirstLight/Game/Services/Authentication/AuthService.cs": "5a4330881756e5bdb5bf41b4b4c9ae49b198573740da9807924ee03d0e06231e",
+    "BlastRoyale/Assets/Src/FirstLight/Game/Services/Authentication/UnityCloudLoginProvider.cs": "8587d9cfb6d0ba43ad0aa0f8b0dd937fc72f24d66d868fc739fe17a99ac48062",
+    "BlastRoyale/Assets/Src/FirstLight/Game/Utils/UgsAccountSession.cs": "f175c1d1e68bcd3c969271c00a08e65adfaa468e4fa0b978f02ccee325493544",
+    "Tools/Validation/AccountStateIsolation/ExpiredAccountSwitchTests.cs": "68c86832bf2cca60119c8b4f64a459d129a8567f3914156bae65ad7a6dd530ec",
+    "Tools/Validation/AccountStateIsolation/prepare_account_state_project.py": "f0a0025fb826a28165f20ce256827f8f3df7f55d8e1ebf48f126ebd49fc8dcce",
+    "Tools/Validation/AccountStateIsolation/native-assembly-names.json": "44bb749bd45ff618bfa6f78c47101ae65aed53846d1b18925f5cef60a5ecd63c"
+  },
+  "CompiledGameSHA256": "f6810475554383b43037a2da3730bb7f513260ce9f83ee7140da4651075ddaa9"
+}

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test-run id="2" testcasecount="4" result="Passed" total="4" passed="4" failed="0" inconclusive="0" skipped="0" asserts="0" engine-version="3.5.0.0" clr-version="4.0.30319.42000" start-time="2026-10-14 16:18:14Z" end-time="2026-10-14 16:18:15Z" duration="0.123327">
+  <test-suite type="TestSuite" id="1000" name="runtime-account-project" fullname="runtime-account-project" runstate="Runnable" testcasecount="5" result="Passed" start-time="2026-10-14 16:18:14Z" end-time="2026-10-14 16:18:15Z" duration="0.123327" total="4" passed="4" failed="0" inconclusive="0" skipped="0" asserts="0">
+    <properties>
+      <property name="platform" value="EditMode" />
+    </properties>
+    <test-suite type="Assembly" id="1007" name="FirstLight.AccountState.Tests.dll" fullname="<repo>/.local/runtime-account-project/Library/ScriptAssemblies/FirstLight.AccountState.Tests.dll" runstate="Runnable" testcasecount="4" result="Passed" start-time="2026-10-14 16:18:14Z" end-time="2026-10-14 16:18:15Z" duration="0.119506" total="4" passed="4" failed="0" inconclusive="0" skipped="0" asserts="0">
+      <properties>
+        <property name="_PID" value="34710" />
+        <property name="_APPDOMAIN" value="Unity Child Domain" />
+        <property name="platform" value="EditMode" />
+        <property name="EditorOnly" value="True" />
+      </properties>
+      <test-suite type="TestSuite" id="1008" name="FirstLight" fullname="FirstLight" runstate="Runnable" testcasecount="4" result="Passed" start-time="2026-10-14 16:18:14Z" end-time="2026-10-14 16:18:15Z" duration="0.119152" total="4" passed="4" failed="0" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <test-suite type="TestSuite" id="1009" name="Tests" fullname="FirstLight.Tests" runstate="Runnable" testcasecount="4" result="Passed" start-time="2026-10-14 16:18:14Z" end-time="2026-10-14 16:18:15Z" duration="0.118937" total="4" passed="4" failed="0" inconclusive="0" skipped="0" asserts="0">
+          <properties />
+          <test-suite type="TestSuite" id="1010" name="EditorMode" fullname="FirstLight.Tests.EditorMode" runstate="Runnable" testcasecount="4" result="Passed" start-time="2026-10-14 16:18:14Z" end-time="2026-10-14 16:18:15Z" duration="0.118720" total="4" passed="4" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-suite type="TestSuite" id="1011" name="Authentication" fullname="FirstLight.Tests.EditorMode.Authentication" runstate="Runnable" testcasecount="4" result="Passed" start-time="2026-10-14 16:18:14Z" end-time="2026-10-14 16:18:15Z" duration="0.118508" total="4" passed="4" failed="0" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <test-suite type="TestFixture" id="1001" name="AccountStateIsolationTests" fullname="FirstLight.Tests.EditorMode.Authentication.AccountStateIsolationTests" classname="FirstLight.Tests.EditorMode.Authentication.AccountStateIsolationTests" runstate="Runnable" testcasecount="4" result="Passed" start-time="2026-10-14 16:18:14Z" end-time="2026-10-14 16:18:15Z" duration="0.118160" total="4" passed="4" failed="0" inconclusive="0" skipped="0" asserts="0">
+                <properties />
+                <test-suite type="ParameterizedMethod" id="1006" name="DifferentLoadedAccountDoesNotInheritPreviousTutorialCompletion" fullname="FirstLight.Tests.EditorMode.Authentication.AccountStateIsolationTests.DifferentLoadedAccountDoesNotInheritPreviousTutorialCompletion" classname="FirstLight.Tests.EditorMode.Authentication.AccountStateIsolationTests" runstate="Runnable" testcasecount="2" result="Passed" start-time="2026-10-14 16:18:14Z" end-time="2026-10-14 16:18:15Z" duration="0.105797" total="2" passed="2" failed="0" inconclusive="0" skipped="0" asserts="0">
+                  <properties />
+                  <test-case id="1004" name="DifferentLoadedAccountDoesNotInheritPreviousTutorialCompletion(False)" fullname="FirstLight.Tests.EditorMode.Authentication.AccountStateIsolationTests.DifferentLoadedAccountDoesNotInheritPreviousTutorialCompletion(False)" methodname="DifferentLoadedAccountDoesNotInheritPreviousTutorialCompletion" classname="FirstLight.Tests.EditorMode.Authentication.AccountStateIsolationTests" runstate="Runnable" seed="64345628" result="Passed" start-time="2026-10-14 16:18:14Z" end-time="2026-10-14 16:18:15Z" duration="0.097221" asserts="0">
+                    <properties>
+                      <property name="retryIteration" value="0" />
+                      <property name="repeatIteration" value="0" />
+                    </properties>
+                    <output><![CDATA[ (T1 F4)  [FeatureFlags] Setting title flag QUANTUM_CUSTOM_SERVER to false
+ (T1 F4)  [FeatureFlags] Disabling flag STORE_ENABLED
+ (T1 F4)  [FeatureFlags] Disabling flag DESYNC_DETECTION
+ (T1 F4)  [FeatureFlags] Disabling flag TUTORIAL
+ (T1 F4)  [FeatureFlags] Disabling flag TUTORIAL_BATTLE
+ (T1 F4)  [FeatureFlags] Disabling flag PAUSE_FREEZE
+ (T1 F4)  [FeatureFlags] Setting title flag WAIT_REWARD_SYNC to false
+]]></output>
+                  </test-case>
+                  <test-case id="1005" name="DifferentLoadedAccountDoesNotInheritPreviousTutorialCompletion(True)" fullname="FirstLight.Tests.EditorMode.Authentication.AccountStateIsolationTests.DifferentLoadedAccountDoesNotInheritPreviousTutorialCompletion(True)" methodname="DifferentLoadedAccountDoesNotInheritPreviousTutorialCompletion" classname="FirstLight.Tests.EditorMode.Authentication.AccountStateIsolationTests" runstate="Runnable" seed="313323423" result="Passed" start-time="2026-10-14 16:18:15Z" end-time="2026-10-14 16:18:15Z" duration="0.005862" asserts="0">
+                    <properties>
+                      <property name="retryIteration" value="0" />
+                      <property name="repeatIteration" value="0" />
+                    </properties>
+                    <output><![CDATA[ (T1 F4)  [FeatureFlags] Setting title flag QUANTUM_CUSTOM_SERVER to false
+ (T1 F4)  [FeatureFlags] Disabling flag STORE_ENABLED
+ (T1 F4)  [FeatureFlags] Disabling flag DESYNC_DETECTION
+ (T1 F4)  [FeatureFlags] Disabling flag TUTORIAL
+ (T1 F4)  [FeatureFlags] Disabling flag TUTORIAL_BATTLE
+ (T1 F4)  [FeatureFlags] Disabling flag PAUSE_FREEZE
+ (T1 F4)  [FeatureFlags] Setting title flag WAIT_REWARD_SYNC to false
+]]></output>
+                  </test-case>
+                </test-suite>
+                <test-case id="1002" name="StoreAccountSwitchRebindsPurchasePolicyToNewAccount" fullname="FirstLight.Tests.EditorMode.Authentication.AccountStateIsolationTests.StoreAccountSwitchRebindsPurchasePolicyToNewAccount" methodname="StoreAccountSwitchRebindsPurchasePolicyToNewAccount" classname="FirstLight.Tests.EditorMode.Authentication.AccountStateIsolationTests" runstate="Runnable" seed="1695588180" result="Passed" start-time="2026-10-14 16:18:15Z" end-time="2026-10-14 16:18:15Z" duration="0.001875" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+                <test-case id="1003" name="StoreAccountSwitchRetainsSubscribersAndPublishesNewBackingData" fullname="FirstLight.Tests.EditorMode.Authentication.AccountStateIsolationTests.StoreAccountSwitchRetainsSubscribersAndPublishesNewBackingData" methodname="StoreAccountSwitchRetainsSubscribersAndPublishesNewBackingData" classname="FirstLight.Tests.EditorMode.Authentication.AccountStateIsolationTests" runstate="Runnable" seed="33625711" result="Passed" start-time="2026-10-14 16:18:15Z" end-time="2026-10-14 16:18:15Z" duration="0.001103" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                  <output><![CDATA[Saving results to: <user>/Library/Application Support/DefaultCompany/runtime-account-project/TestResults.xml
+]]></output>
+                </test-case>
+              </test-suite>
+            </test-suite>
+          </test-suite>
+        </test-suite>
+      </test-suite>
+    </test-suite>
+  </test-suite>
+</test-run>

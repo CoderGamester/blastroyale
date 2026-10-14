@@ -1,0 +1,765 @@
+{
+  "UnityVersion": "6000.3.26f1",
+  "Manifest": {
+    "Files": [
+      {
+        "Path": "BlastRoyale/Assets/Src/FirstLight/Game/Logic/PlayerStoreLogic.cs",
+        "BeforeSHA256": "3d1de24b133a838300ec561cd4da0dc9ae1de1c80787983710653904d0553bc1",
+        "OverlayPath": ".local/runtime-account-patches/BlastRoyale/Assets/Src/FirstLight/Game/Logic/PlayerStoreLogic.cs",
+        "AfterSHA256": "cb00cc9a24f0a4fca100fb88b085168e763cfc541ad7064fc54120974093c033",
+        "PreservedMetadataSHA256": "8fef236cdba156590b0ff43570f16c6d73199294adaf193a120c5a70177492c5"
+      },
+      {
+        "Path": "BlastRoyale/Assets/Src/FirstLight/Game/Services/Authentication/AuthService.cs",
+        "BeforeSHA256": "783a9bded4f930310f99566d5eef653719f249fec8e3dc933eee6bec34ff4546",
+        "OverlayPath": ".local/runtime-account-patches/BlastRoyale/Assets/Src/FirstLight/Game/Services/Authentication/AuthService.cs",
+        "AfterSHA256": "9c6a8de2d4460d7442c818755cb3a56bc7b554d86ad6959ffb7555411d4db8ab",
+        "PreservedMetadataSHA256": "d783faa0ed45f6e990ca6ca671150077072d8f1600917019dcf8920fea34e0d6"
+      },
+      {
+        "Path": "BlastRoyale/Assets/Src/FirstLight/Game/Services/Authentication/UnityCloudLoginProvider.cs",
+        "BeforeSHA256": "d5bb557ac614a64de194ed37fc1176600d387d26e2a7b62c3a2b450c882c5067",
+        "OverlayPath": ".local/runtime-account-patches/BlastRoyale/Assets/Src/FirstLight/Game/Services/Authentication/UnityCloudLoginProvider.cs",
+        "AfterSHA256": "8587d9cfb6d0ba43ad0aa0f8b0dd937fc72f24d66d868fc739fe17a99ac48062",
+        "PreservedMetadataSHA256": "73e436831c4ae82440aa239739ee3ee624e8b802ed9b27c3e4f3386e72488221"
+      },
+      {
+        "Path": "BlastRoyale/Assets/Src/FirstLight/Game/StateMachines/SettingsMenuState.cs",
+        "BeforeSHA256": "3f07077d89f42c1834136b8f89a33c8451c138bb3958fc2232d31b2638eddcc3",
+        "OverlayPath": ".local/runtime-account-patches/BlastRoyale/Assets/Src/FirstLight/Game/StateMachines/SettingsMenuState.cs",
+        "AfterSHA256": "c7b2866f0552315478bf7784a101c55ed49530bbe8f54127775fe069d72f0561",
+        "PreservedMetadataSHA256": "7d82b932320436f042f4f6be4f902b82edad8bd31a455eae70510b42ae755ac4"
+      }
+    ],
+    "Retirements": [
+      {
+        "Path": "BlastRoyale/Assets/Src/FirstLight/Game/Services/Authentication/Hooks/MigrateTutorialDataHook.cs",
+        "SHA256": "33ffa17f43a5a9dd6ffd8714b5da7d9501bd9b65dce140a0875de8a6b01d2254"
+      },
+      {
+        "Path": "BlastRoyale/Assets/Src/FirstLight/Game/Services/Authentication/Hooks/MigrateTutorialDataHook.cs.meta",
+        "SHA256": "e27bd699f960821ea1b6e124f7305dbf788e234a358dc463ce5b3758ad68aeb2"
+      }
+    ]
+  },
+  "WholeGameNativeCompile": {
+    "ExitCode": 0,
+    "CSharpDiagnostics": 0,
+    "Assemblies": [
+      "FirstLight.Game",
+      "FirstLight.Inspector"
+    ],
+    "Log": "artifacts/runtime-account-overlay-firstlight.game-compile.log"
+  },
+  "AccountState": {
+    "SourceXML": "artifacts/runtime-account-isolation-final-tests.xml",
+    "Total": 4,
+    "Passed": 4,
+    "Failed": 0,
+    "Cases": [
+      {
+        "Name": "DifferentLoadedAccountDoesNotInheritPreviousTutorialCompletion(False)",
+        "Result": "Passed",
+        "Failure": null
+      },
+      {
+        "Name": "DifferentLoadedAccountDoesNotInheritPreviousTutorialCompletion(True)",
+        "Result": "Passed",
+        "Failure": null
+      },
+      {
+        "Name": "StoreAccountSwitchRebindsPurchasePolicyToNewAccount",
+        "Result": "Passed",
+        "Failure": null
+      },
+      {
+        "Name": "StoreAccountSwitchRetainsSubscribersAndPublishesNewBackingData",
+        "Result": "Passed",
+        "Failure": null
+      }
+    ]
+  },
+  "BeforeFixActualMainAssembly": {
+    "SourceXML": "artifacts/runtime-account-isolation-before-fix-tests.xml",
+    "Total": 4,
+    "Passed": 0,
+    "Failed": 4,
+    "Cases": [
+      {
+        "Name": "DifferentLoadedAccountDoesNotInheritPreviousTutorialCompletion(False)",
+        "Result": "Failed",
+        "Failure": "  Expected: NONE\n  But was:  FIRST_GUIDE_MATCH\n"
+      },
+      {
+        "Name": "DifferentLoadedAccountDoesNotInheritPreviousTutorialCompletion(True)",
+        "Result": "Failed",
+        "Failure": "  Expected: NONE\n  But was:  FIRST_GUIDE_MATCH\n"
+      },
+      {
+        "Name": "StoreAccountSwitchRebindsPurchasePolicyToNewAccount",
+        "Result": "Failed",
+        "Failure": "  Expected: <empty>\n  But was:  < <FirstLight.Game.Data.DataTypes.StorePurchaseData> >\n"
+      },
+      {
+        "Name": "StoreAccountSwitchRetainsSubscribersAndPublishesNewBackingData",
+        "Result": "Failed",
+        "Failure": "  Expected is <System.String[1]>, actual is <System.Collections.Generic.List`1[System.String]> with 0 elements\n  Values differ at index [0]\n  Missing:  < \"b-product\" >"
+      }
+    ]
+  },
+  "NativeAuthenticationLifecycle": {
+    "SourceXML": "artifacts/ugs-auth-logout-lifecycle-tests.xml",
+    "Total": 9,
+    "Passed": 9,
+    "Failed": 0,
+    "Cases": [
+      {
+        "Name": "ExpiredCachedSessionReauthenticatesThroughActualProvider(\"LoginWithDevice\")",
+        "Result": "Passed",
+        "Failure": null
+      },
+      {
+        "Name": "ExpiredCachedSessionReauthenticatesThroughActualProvider(\"LoginWithNewGuestAccount\")",
+        "Result": "Passed",
+        "Failure": null
+      },
+      {
+        "Name": "ExplicitGuestLogoutPreservesSoleRecoveryCredentialAndSamePlayerId",
+        "Result": "Passed",
+        "Failure": null
+      },
+      {
+        "Name": "ExplicitHostedLogoutClearsCachedSessionAndAutomaticLoginEligibility",
+        "Result": "Passed",
+        "Failure": null
+      },
+      {
+        "Name": "FreshGuestCreatesExactlyOneNativeAnonymousSession",
+        "Result": "Passed",
+        "Failure": null
+      },
+      {
+        "Name": "NativeScheduledRefreshPreservesGenerationAndAvoidsRedundantProviderSignin",
+        "Result": "Passed",
+        "Failure": null
+      },
+      {
+        "Name": "OrdinaryHostedSignoutKeepsSessionForRecoveryOrEnvironmentSwitch",
+        "Result": "Passed",
+        "Failure": null
+      },
+      {
+        "Name": "SignedOutCachedSessionRestoresSameIdAndInvalidatesOldGeneration",
+        "Result": "Passed",
+        "Failure": null
+      },
+      {
+        "Name": "UnknownNativeIdentityCannotClearAnUnlinkedGuestCredential",
+        "Result": "Passed",
+        "Failure": null
+      }
+    ]
+  },
+  "GameAssemblySHA256": "b39ffaa8c938f5a82f16d2324434a8a8d349714d6a07212757686eaf9020ede7",
+  "NativeInputs": [
+    {
+      "Source": "BlastRoyale/Library/ScriptAssemblies/AppIconChanger.dll",
+      "Name": "AppIconChanger.dll",
+      "SHA256": "7818fd9a53643fd7d382d05a9263c59b8a2618fd78f93b26297936dbd319c462"
+    },
+    {
+      "Source": "BlastRoyale/Library/ScriptAssemblies/Cinemachine.dll",
+      "Name": "Cinemachine.dll",
+      "SHA256": "1f89943fe2f610714d817473902827103244201b5d9d8ba9417866dab9a4c1d5"
+    },
+    {
+      "Source": "BlastRoyale/Library/ScriptAssemblies/DOTween.Modules.dll",
+      "Name": "DOTween.Modules.dll",
+      "SHA256": "3bb433ed170d9e09a92d85d423c822c3497363718f450dc86c0df89deeb7da30"
+    },
+    {
+      "Source": "BlastRoyale/Assets/Plugins/Demigiant/DOTween/DOTween.dll",
+      "Name": "DOTween.dll",
+      "SHA256": "c51b065925bb37c308f9a05a776cdf09f49a97a6f7c2393b4fb3b3f01c045232"
+    },
+    {
+      "Source": "BlastRoyale/Library/ScriptAssemblies/DebugUI.dll",
+      "Name": "DebugUI.dll",
+      "SHA256": "d908d29a3da24d99f1c37952aa0a06d6a4e2438be2a86e1ee885501c8e562ff8"
+    },
+    {
+      "Source": "BlastRoyale/Library/ScriptAssemblies/FirstLight.FLogger.dll",
+      "Name": "FirstLight.FLogger.dll",
+      "SHA256": "21dcfadae00b4625c762e73ee22619b2da0861843d080594271b497a2c9cb2d1"
+    },
+    {
+      "Source": ".local/runtime-account-compile/FirstLight.Game.dll",
+      "Name": "FirstLight.Game.dll",
+      "SHA256": "b39ffaa8c938f5a82f16d2324434a8a8d349714d6a07212757686eaf9020ede7"
+    },
+    {
+      "Source": "BlastRoyale/Library/ScriptAssemblies/FirstLight.Inspector.dll",
+      "Name": "FirstLight.Inspector.dll",
+      "SHA256": "69802cf8aed8416aa231316aafa8f05374ad0dcd38bb12bc42e9ef88cddd9a6b"
+    },
+    {
+      "Source": "BlastRoyale/Library/ScriptAssemblies/FirstLight.Models.dll",
+      "Name": "FirstLight.Models.dll",
+      "SHA256": "74040cd2eed74ad10819725ea8fb6ca05d0af231e217a4a2ba3a5a3212435ae4"
+    },
+    {
+      "Source": "BlastRoyale/Assets/Src/FirstLight/Server/Plugin/net48/FirstLightServerSDK.dll",
+      "Name": "FirstLightServerSDK.dll",
+      "SHA256": "15752a6369b834061a83fe1a2281afc5e83486999ddae341eae6586a33aaafb7"
+    },
+    {
+      "Source": "BlastRoyale/Library/ScriptAssemblies/GameLovers.GameData.dll",
+      "Name": "GameLovers.GameData.dll",
+      "SHA256": "efa1498062d9eacae0c308e50c8c68f25783bec0686821030d763ddb0a3c98f3"
+    },
+    {
+      "Source": "BlastRoyale/Library/ScriptAssemblies/GameLovers.GoogleSheetImporter.dll",
+      "Name": "GameLovers.GoogleSheetImporter.dll",
+      "SHA256": "e748b0a0efb3e0c37fd0bd6573f9cb5f1b46551bdee368931939f16b87646e00"
+    },
+    {
+      "Source": "BlastRoyale/Library/ScriptAssemblies/GameLovers.MobileServices.dll",
+      "Name": "GameLovers.MobileServices.dll",
+      "SHA256": "1e81d0c6f96b35a8d75ff8ca768b0f8ef30264eab3eba345472f934b0760a0ee"
+    },
+    {
+      "Source": "BlastRoyale/Library/ScriptAssemblies/GameLovers.Services.dll",
+      "Name": "GameLovers.Services.dll",
+      "SHA256": "642dc35f63f6f05309d138e79e1008d04cc8e10431f85dbb8f78a5f43b9385d8"
+    },
+    {
+      "Source": "BlastRoyale/Library/ScriptAssemblies/GameLovers.Statechart.dll",
+      "Name": "GameLovers.Statechart.dll",
+      "SHA256": "50508b9ac329d30e8e1e857d7fb08775e11156277d4cd3353aa7259e940416d1"
+    },
+    {
+      "Source": "BlastRoyale/Library/ScriptAssemblies/GameLovers.UiService.dll",
+      "Name": "GameLovers.UiService.dll",
+      "SHA256": "0ad7f155a7c6aa1ea698f9d838e8c89ef5de7c098d7e21109aad8969b1c89809"
+    },
+    {
+      "Source": "BlastRoyale/Library/ScriptAssemblies/IAPResolver.dll",
+      "Name": "IAPResolver.dll",
+      "SHA256": "0cc5b9ea1df877ccfb7d33af0e138bd1a4a08a6001673825bf79187de308a781"
+    },
+    {
+      "Source": "BlastRoyale/Library/ScriptAssemblies/Lofelt.NiceVibrations.dll",
+      "Name": "Lofelt.NiceVibrations.dll",
+      "SHA256": "0214f38d2dd92c22e3ea11c307e6e03e476e3af6819c88a74712f719de4ef4e5"
+    },
+    {
+      "Source": "BlastRoyale/Assets/Src/FirstLight/Server/Plugin/net48/MessagePack.Annotations.dll",
+      "Name": "MessagePack.Annotations.dll",
+      "SHA256": "3c11d559b96554ff3389725412531cae07ff9c8fcb39bf4c400a1695ffa53db9"
+    },
+    {
+      "Source": "BlastRoyale/Assets/Src/FirstLight/Server/Plugin/net48/MessagePack.dll",
+      "Name": "MessagePack.dll",
+      "SHA256": "ae0284726ec89e4a7650ce2d4b7dc340d432d3ea875b542ecf9e18d0ae8294c7"
+    },
+    {
+      "Source": "BlastRoyale/Assets/Src/FirstLight/Server/Plugin/net48/Microsoft.Bcl.AsyncInterfaces.dll",
+      "Name": "Microsoft.Bcl.AsyncInterfaces.dll",
+      "SHA256": "295af2142d9214f3fd84eafe4778dca119be7e0229f14b6ba8d5269c2f1e2e78"
+    },
+    {
+      "Source": "BlastRoyale/Assets/Src/FirstLight/Server/Plugin/net48/Microsoft.NET.StringTools.dll",
+      "Name": "Microsoft.NET.StringTools.dll",
+      "SHA256": "0598538758046ded29e8ad24cfc8980b129c7db9c608b26e9936aa79750c3d94"
+    },
+    {
+      "Source": "BlastRoyale/Library/ScriptAssemblies/Photon.Realtime.dll",
+      "Name": "Photon.Realtime.dll",
+      "SHA256": "779c729eb06d04be6cb54922ab3f63ee597d55616c5b969938a1b0db1ce9861a"
+    },
+    {
+      "Source": "BlastRoyale/Assets/Photon/PhotonLibs/netstandard2.0/debug/PhotonClient.dll",
+      "Name": "PhotonClient.dll",
+      "SHA256": "dcf9c6715b3f0aba8848f6a297e502f8de5f2aa112c7ed290fe5ac720d1d3c5a"
+    },
+    {
+      "Source": "BlastRoyale/Library/ScriptAssemblies/PlayFab.dll",
+      "Name": "PlayFab.dll",
+      "SHA256": "7c780c1f680fa09417cf0270dc0e48ba530d61feb406a4b2de6ae64d50867740"
+    },
+    {
+      "Source": "BlastRoyale/Library/ScriptAssemblies/Purchasing.Common.dll",
+      "Name": "Purchasing.Common.dll",
+      "SHA256": "038b7572cf38a69748940d7141b123a75459bf62ec313a8b99e5bde985686441"
+    },
+    {
+      "Source": "BlastRoyale/Assets/Photon/QuantumAddons/QuantumBotSDK/Assemblies/Quantum.BotSDK.Core.dll",
+      "Name": "Quantum.BotSDK.Core.dll",
+      "SHA256": "b8ce17894e107f7ceb686c4c7d4a0beae1f4f976b2289f7206fb667468c2d81e"
+    },
+    {
+      "Source": "BlastRoyale/Assets/Photon/Quantum/Assemblies/Quantum.Deterministic.dll",
+      "Name": "Quantum.Deterministic.dll",
+      "SHA256": "f0cb63df2b5beffa32ef2e1b3c37f5deb50d23adf35416040f613b32a5112250"
+    },
+    {
+      "Source": "BlastRoyale/Assets/Photon/Quantum/Assemblies/Quantum.Engine.dll",
+      "Name": "Quantum.Engine.dll",
+      "SHA256": "2d0a0c53738b39c8fec0f0d6f9bffac72245fd16f3e8e4cdb84cb204bc969129"
+    },
+    {
+      "Source": "BlastRoyale/Assets/Photon/Quantum/Assemblies/Quantum.Log.dll",
+      "Name": "Quantum.Log.dll",
+      "SHA256": "828aff10fdd0a3484af0335db55f4bd813ed45a521a23a29663ad6b76ae1776a"
+    },
+    {
+      "Source": "BlastRoyale/Library/ScriptAssemblies/Quantum.Simulation.dll",
+      "Name": "Quantum.Simulation.dll",
+      "SHA256": "1768c818ed7e368499aa3b5ac8037db1f9295cff3f58a733f318f06a5c912267"
+    },
+    {
+      "Source": "BlastRoyale/Library/ScriptAssemblies/Quantum.Unity.dll",
+      "Name": "Quantum.Unity.dll",
+      "SHA256": "7f703f902ab9b315782722d892c548fd1408624aad7371dd7dab46c75ea8aa0d"
+    },
+    {
+      "Source": "BlastRoyale/Library/ScriptAssemblies/QuickEye.UIToolkit.dll",
+      "Name": "QuickEye.UIToolkit.dll",
+      "SHA256": "59f7ff99050d24421f0107d27da1bfc9e5eb2733709a3c41e04e1aa29eee1c4c"
+    },
+    {
+      "Source": "BlastRoyale/Library/ScriptAssemblies/QuickEye.UssExporter.dll",
+      "Name": "QuickEye.UssExporter.dll",
+      "SHA256": "72646ecc6f814a7a06dc4c0f769dfe4f3fc9783123c37b00d003707e83110efa"
+    },
+    {
+      "Source": "BlastRoyale/Library/ScriptAssemblies/QuickEye.UxmlBridgeGen.dll",
+      "Name": "QuickEye.UxmlBridgeGen.dll",
+      "SHA256": "56d79c23f23de626e06d00bbb87a0c91a1557d1b944d9471692f3b01b8e99730"
+    },
+    {
+      "Source": "BlastRoyale/Library/ScriptAssemblies/ScriptablePacker.dll",
+      "Name": "ScriptablePacker.dll",
+      "SHA256": "c3ccbf7dd04ca9f68c848fed63a22a5bdb008f7b9aa641b967c95fdbbe0c9fdf"
+    },
+    {
+      "Source": "BlastRoyale/Assets/Src/FirstLight/Server/Plugin/net48/System.Buffers.dll",
+      "Name": "System.Buffers.dll",
+      "SHA256": "accccfbe45d9f08ffeed9916e37b33e98c65be012cfff6e7fa7b67210ce1fefb"
+    },
+    {
+      "Source": "BlastRoyale/Assets/Src/FirstLight/Server/Plugin/net48/System.Collections.Immutable.dll",
+      "Name": "System.Collections.Immutable.dll",
+      "SHA256": "69e57ac412200e47fe7b5f933a30c594e1fc1517498c88920aabc702f5ea00a7"
+    },
+    {
+      "Source": "BlastRoyale/Assets/Src/FirstLight/Server/Plugin/net48/System.Memory.dll",
+      "Name": "System.Memory.dll",
+      "SHA256": "bf3fb84664f4097f1a8a9bc71a51dcf8cf1a905d4080a4d290da1730866e856f"
+    },
+    {
+      "Source": "BlastRoyale/Assets/Src/FirstLight/Server/Plugin/net48/System.Numerics.Vectors.dll",
+      "Name": "System.Numerics.Vectors.dll",
+      "SHA256": "1d3ef8698281e7cf7371d1554afef5872b39f96c26da772210a33da041ba1183"
+    },
+    {
+      "Source": "BlastRoyale/Assets/Src/FirstLight/Server/Plugin/net48/System.Runtime.CompilerServices.Unsafe.dll",
+      "Name": "System.Runtime.CompilerServices.Unsafe.dll",
+      "SHA256": "37768488e8ef45729bc7d9a2677633c6450042975bb96516e186da6cb9cd0dcf"
+    },
+    {
+      "Source": "BlastRoyale/Assets/Src/FirstLight/Server/Plugin/net48/System.Threading.Tasks.Extensions.dll",
+      "Name": "System.Threading.Tasks.Extensions.dll",
+      "SHA256": "4f81ffd0dc7204db75afc35ea4291769b07c440592f28894260eea76626a23c6"
+    },
+    {
+      "Source": "BlastRoyale/Library/ScriptAssemblies/UITTimeline.dll",
+      "Name": "UITTimeline.dll",
+      "SHA256": "3a4c0aa24d6c3302fe755ee71a09a8393b854f3c778aa1e8cd5e30152d410b99"
+    },
+    {
+      "Source": "BlastRoyale/Library/ScriptAssemblies/Unity.2D.Animation.Runtime.dll",
+      "Name": "Unity.2D.Animation.Runtime.dll",
+      "SHA256": "4181937a909fb0c22e3d04eb359801593b63af20026a152d9fa1054a1f520d3c"
+    },
+    {
+      "Source": "BlastRoyale/Library/ScriptAssemblies/Unity.2D.Common.Runtime.dll",
+      "Name": "Unity.2D.Common.Runtime.dll",
+      "SHA256": "c9a28fd6a1cb86fcf6f2630fcee059dcdf05b54f62ca4a54a1bc4cc3cd427fc6"
+    },
+    {
+      "Source": "BlastRoyale/Library/ScriptAssemblies/Unity.2D.IK.Runtime.dll",
+      "Name": "Unity.2D.IK.Runtime.dll",
+      "SHA256": "d618f2baff39ef3a372f30e55d52812a5f96cc1f1bce0006bc0464ad3e18179f"
+    },
+    {
+      "Source": "BlastRoyale/Library/ScriptAssemblies/Unity.Advertisement.IosSupport.dll",
+      "Name": "Unity.Advertisement.IosSupport.dll",
+      "SHA256": "ca37856febb45eac5a9fba976b1dd4ca3ab78eb102b0e51f78cb546baa61ea34"
+    },
+    {
+      "Source": "BlastRoyale/Library/ScriptAssemblies/Unity.Cloud.AppLinking.Embedded.dll",
+      "Name": "Unity.Cloud.AppLinking.Embedded.dll",
+      "SHA256": "d3c86a4609a0f1e104b9f73d214e3a3bb543442469d6a7b0c86617f55a395687"
+    },
+    {
+      "Source": "BlastRoyale/Library/ScriptAssemblies/Unity.Cloud.AppLinking.Runtime.Embedded.dll",
+      "Name": "Unity.Cloud.AppLinking.Runtime.Embedded.dll",
+      "SHA256": "4f8cbfe73a2414dfdbaeb8f8daf08903d504f0fba55915acea7a977ed790747b"
+    },
+    {
+      "Source": "BlastRoyale/Library/ScriptAssemblies/Unity.Cloud.Assets.Embedded.dll",
+      "Name": "Unity.Cloud.Assets.Embedded.dll",
+      "SHA256": "4e6fae7ffa411024d417cb3e68ec4248a62f420868f53c731d3d0be939b09682"
+    },
+    {
+      "Source": "BlastRoyale/Library/ScriptAssemblies/Unity.Cloud.Assets.Runtime.Embedded.dll",
+      "Name": "Unity.Cloud.Assets.Runtime.Embedded.dll",
+      "SHA256": "8d7858faad17f82c261891b8808787467e4018202386a02b4d55e35a197db4a2"
+    },
+    {
+      "Source": "BlastRoyale/Library/ScriptAssemblies/Unity.Cloud.Common.Embedded.dll",
+      "Name": "Unity.Cloud.Common.Embedded.dll",
+      "SHA256": "43574cbb80100abaff6e1ba5f25b33dfa6afd604b8c7c8fce8c8480db3730bea"
+    },
+    {
+      "Source": "BlastRoyale/Library/ScriptAssemblies/Unity.Cloud.Common.Runtime.Embedded.dll",
+      "Name": "Unity.Cloud.Common.Runtime.Embedded.dll",
+      "SHA256": "7667481a7a228f9a74a0f451434e027c14740c85a234f82390711ea7c2d0ca96"
+    },
+    {
+      "Source": "BlastRoyale/Library/ScriptAssemblies/Unity.Cloud.Identity.Embedded.dll",
+      "Name": "Unity.Cloud.Identity.Embedded.dll",
+      "SHA256": "5193f9d782ad772c05409cbff113fecac10c0009c79f13514158a44f59a50578"
+    },
+    {
+      "Source": "BlastRoyale/Library/ScriptAssemblies/Unity.Cloud.Identity.Runtime.Embedded.dll",
+      "Name": "Unity.Cloud.Identity.Runtime.Embedded.dll",
+      "SHA256": "3ef3bac891140738647a1b7e6d25d7c21c1dcacbc65b5c7fe6763d7a47946808"
+    },
+    {
+      "Source": "BlastRoyale/Library/ScriptAssemblies/Unity.InternalAPIEngineBridge.001.dll",
+      "Name": "Unity.InternalAPIEngineBridge.001.dll",
+      "SHA256": "db9bf1d99d4ff266f833df2b4e4e7894957c05c76bc6c545cd6d6a45497fb890"
+    },
+    {
+      "Source": "BlastRoyale/Library/ScriptAssemblies/Unity.MemoryProfiler.dll",
+      "Name": "Unity.MemoryProfiler.dll",
+      "SHA256": "a088085936b2a127ebc9794d49d103dac1c297eb8cfea5f836132df2f4308379"
+    },
+    {
+      "Source": "BlastRoyale/Library/ScriptAssemblies/Unity.Networking.Transport.dll",
+      "Name": "Unity.Networking.Transport.dll",
+      "SHA256": "5f550465b7e16f10bb2e7b5432f6a2c61fc52046f063f6b8d5f26fbecf8b730b"
+    },
+    {
+      "Source": "BlastRoyale/Library/ScriptAssemblies/Unity.Notifications.Android.dll",
+      "Name": "Unity.Notifications.Android.dll",
+      "SHA256": "25b4f39dbceacd55205a141777b9b09ae2da39b8703b1adea2d135bebb707c80"
+    },
+    {
+      "Source": "BlastRoyale/Library/ScriptAssemblies/Unity.Notifications.Unified.dll",
+      "Name": "Unity.Notifications.Unified.dll",
+      "SHA256": "af63e893d1f1c065cbfe51159975d11490e13362188e89bf23238a26cc439bfb"
+    },
+    {
+      "Source": "BlastRoyale/Library/ScriptAssemblies/Unity.Notifications.dll",
+      "Name": "Unity.Notifications.dll",
+      "SHA256": "4963974c78ed052e0ffc2d9545a9d12dfc6bf3dd1b197df55365881e81e05466"
+    },
+    {
+      "Source": "BlastRoyale/Library/ScriptAssemblies/Unity.Notifications.iOS.dll",
+      "Name": "Unity.Notifications.iOS.dll",
+      "SHA256": "9a50136fab7c881c5aa0552d49038c30fbbbff5bc9bca3701369e2d60a063ec5"
+    },
+    {
+      "Source": "BlastRoyale/Library/ScriptAssemblies/Unity.Services.Analytics.dll",
+      "Name": "Unity.Services.Analytics.dll",
+      "SHA256": "2db58471a0b38e905ba3433da2c1ae7849648047f118d920215649d0e0328592"
+    },
+    {
+      "Source": "BlastRoyale/Library/ScriptAssemblies/Unity.Services.Authentication.PlayerAccounts.dll",
+      "Name": "Unity.Services.Authentication.PlayerAccounts.dll",
+      "SHA256": "d0c82cdc3461f56e01d7d0b2daf6bae5758390e87b949eb5d9be2d7328bb73c1"
+    },
+    {
+      "Source": "BlastRoyale/Library/ScriptAssemblies/Unity.Services.Authentication.Server.dll",
+      "Name": "Unity.Services.Authentication.Server.dll",
+      "SHA256": "2d8c595482448f0e52f37063d213f8a9c4794fd8d790f27fac46b4c6da11574e"
+    },
+    {
+      "Source": "BlastRoyale/Library/ScriptAssemblies/Unity.Services.Authentication.dll",
+      "Name": "Unity.Services.Authentication.dll",
+      "SHA256": "d567ee9010b1cdae70b68fb47f3bcb87820bda5c34b9597ecd805ca186d0ee37"
+    },
+    {
+      "Source": "BlastRoyale/Library/ScriptAssemblies/Unity.Services.CloudSave.dll",
+      "Name": "Unity.Services.CloudSave.dll",
+      "SHA256": "eb47ab3fbe014f868638e1a63cf1a703d395d5282dce0020a898c65f58f67db1"
+    },
+    {
+      "Source": "BlastRoyale/Library/ScriptAssemblies/Unity.Services.Core.Analytics.dll",
+      "Name": "Unity.Services.Core.Analytics.dll",
+      "SHA256": "ac1a452fcd96a2f312a93142cde83477e48869a73de491148c0b5b95887c6e9f"
+    },
+    {
+      "Source": "BlastRoyale/Library/ScriptAssemblies/Unity.Services.Core.Components.dll",
+      "Name": "Unity.Services.Core.Components.dll",
+      "SHA256": "e6ad6ec311a8ec71531758e12f2fcc6fb92a270e39641db226510bb7f4d9e197"
+    },
+    {
+      "Source": "BlastRoyale/Library/ScriptAssemblies/Unity.Services.Core.Configuration.dll",
+      "Name": "Unity.Services.Core.Configuration.dll",
+      "SHA256": "9303c15068349816ed18f4516b8659ad75002783d69944ba44e0b827a462e66d"
+    },
+    {
+      "Source": "BlastRoyale/Library/ScriptAssemblies/Unity.Services.Core.Device.dll",
+      "Name": "Unity.Services.Core.Device.dll",
+      "SHA256": "c88adbe0471eefa8acb7d1486c61242665b86c82b27de79617982fed4f0246ac"
+    },
+    {
+      "Source": "BlastRoyale/Library/ScriptAssemblies/Unity.Services.Core.Environments.Internal.dll",
+      "Name": "Unity.Services.Core.Environments.Internal.dll",
+      "SHA256": "5399cbc7f0ac0556d91f5bc4fbbad8b99d88dfa331bd89af24b24c244699cca5"
+    },
+    {
+      "Source": "BlastRoyale/Library/ScriptAssemblies/Unity.Services.Core.Environments.dll",
+      "Name": "Unity.Services.Core.Environments.dll",
+      "SHA256": "4fca2b0c74b8d8effad74673e403a73e1eef0064f50864fbd1e6ee73d2c2be33"
+    },
+    {
+      "Source": "BlastRoyale/Library/ScriptAssemblies/Unity.Services.Core.Internal.dll",
+      "Name": "Unity.Services.Core.Internal.dll",
+      "SHA256": "dc4772120e2bbcd3477ffea31e2d72a02bf641c78a4610b84288f6569bff3c7d"
+    },
+    {
+      "Source": "BlastRoyale/Library/ScriptAssemblies/Unity.Services.Core.Networking.dll",
+      "Name": "Unity.Services.Core.Networking.dll",
+      "SHA256": "9552c8bd310d9a475d552cbd5ff0920c5e4e6c6b27cb197a290468204953e1bd"
+    },
+    {
+      "Source": "BlastRoyale/Library/ScriptAssemblies/Unity.Services.Core.Registration.dll",
+      "Name": "Unity.Services.Core.Registration.dll",
+      "SHA256": "5bb04d592aed5fbae16286d29d5666019ba0049d9a08f607fb4a6118aa29b69b"
+    },
+    {
+      "Source": "BlastRoyale/Library/ScriptAssemblies/Unity.Services.Core.Scheduler.dll",
+      "Name": "Unity.Services.Core.Scheduler.dll",
+      "SHA256": "647a550bee7c4e01f76feba73080b47295ea8724f4a721d2c93e8e4770f6c53b"
+    },
+    {
+      "Source": "BlastRoyale/Library/ScriptAssemblies/Unity.Services.Core.Telemetry.dll",
+      "Name": "Unity.Services.Core.Telemetry.dll",
+      "SHA256": "62e3281ce504be3fd401a74ab83a36fad91efb0b91d85675b3115b4859196c3d"
+    },
+    {
+      "Source": "BlastRoyale/Library/ScriptAssemblies/Unity.Services.Core.Threading.dll",
+      "Name": "Unity.Services.Core.Threading.dll",
+      "SHA256": "c572ce27c47560cfe5a5ed9d7d465deafe0c52cbec3659f8a1e5b20e6e4ee744"
+    },
+    {
+      "Source": "BlastRoyale/Library/ScriptAssemblies/Unity.Services.Core.dll",
+      "Name": "Unity.Services.Core.dll",
+      "SHA256": "9cb794b5d9716b10817417d22bd2762018ebcf0741e9dae67e3a67fcc25820a5"
+    },
+    {
+      "Source": "BlastRoyale/Library/ScriptAssemblies/Unity.Services.Deployment.Core.dll",
+      "Name": "Unity.Services.Deployment.Core.dll",
+      "SHA256": "52ed247f5eb023239ed5078726ec820fb87a4775dfb8448a083bd28df1e761bc"
+    },
+    {
+      "Source": "BlastRoyale/Library/ScriptAssemblies/Unity.Services.DeploymentApi.dll",
+      "Name": "Unity.Services.DeploymentApi.dll",
+      "SHA256": "e19172e6a467c57e85ca5e303f6c16414ad7850d0be85410639c4dcd4641f879"
+    },
+    {
+      "Source": "BlastRoyale/Library/ScriptAssemblies/Unity.Services.Friends.Internal.dll",
+      "Name": "Unity.Services.Friends.Internal.dll",
+      "SHA256": "bfb2b989b531dcfbb5ce2020f29293c4905c8e1a8282f74e16a8c27f884b0057"
+    },
+    {
+      "Source": "BlastRoyale/Library/ScriptAssemblies/Unity.Services.Friends.dll",
+      "Name": "Unity.Services.Friends.dll",
+      "SHA256": "b515a0adc2d408bffe788b15e7be65a0146f6eafa78dd126dab5cb0e4be7917d"
+    },
+    {
+      "Source": "BlastRoyale/Library/ScriptAssemblies/Unity.Services.Multiplayer.dll",
+      "Name": "Unity.Services.Multiplayer.dll",
+      "SHA256": "5cac964dafa8b80ec928a75d63def3e487a173702b8045a387997525813c01bc"
+    },
+    {
+      "Source": "BlastRoyale/Library/ScriptAssemblies/Unity.Services.QoS.dll",
+      "Name": "Unity.Services.QoS.dll",
+      "SHA256": "633a9bfd4eb35947eebe458c21f7132cae6eb697555e23db87011375a8d99ea7"
+    },
+    {
+      "Source": "BlastRoyale/Library/ScriptAssemblies/Unity.Services.RemoteConfig.dll",
+      "Name": "Unity.Services.RemoteConfig.dll",
+      "SHA256": "ce78da2bdc2fbc36e9eff7567157f5c9e9eebd0936130d770f50199904c52112"
+    },
+    {
+      "Source": "BlastRoyale/Library/ScriptAssemblies/Unity.Services.UserReporting.dll",
+      "Name": "Unity.Services.UserReporting.dll",
+      "SHA256": "81b30c29dda4fcc9af811fdcc505f9d55bf69fd2b54b04c32cfa48863e6a0c9b"
+    },
+    {
+      "Source": "BlastRoyale/Library/ScriptAssemblies/Unity.Services.Wire.Internal.dll",
+      "Name": "Unity.Services.Wire.Internal.dll",
+      "SHA256": "f1034a32c2ab4d5dfabc737f5e2afe4760e6e6ed53ff04d86d07be0a23cb22c4"
+    },
+    {
+      "Source": "BlastRoyale/Library/ScriptAssemblies/Unity.Timeline.dll",
+      "Name": "Unity.Timeline.dll",
+      "SHA256": "2315d26198fd420bca39ea87c2f57ce47ef7c11c47b94905cd7e3f4174c9b173"
+    },
+    {
+      "Source": "BlastRoyale/Library/ScriptAssemblies/UnityEngine.Purchasing.AppleCore.dll",
+      "Name": "UnityEngine.Purchasing.AppleCore.dll",
+      "SHA256": "2e47d7a26da3ed58f3b338ae691a7ae8261e6f63e73906b6c7b470d52c48ea13"
+    },
+    {
+      "Source": "BlastRoyale/Library/ScriptAssemblies/UnityEngine.Purchasing.AppleMacosStub.dll",
+      "Name": "UnityEngine.Purchasing.AppleMacosStub.dll",
+      "SHA256": "3c571f7eaf94392f44ff2c24fd312daeef75eed4855957d1d1c84ec448181a4b"
+    },
+    {
+      "Source": "BlastRoyale/Library/ScriptAssemblies/UnityEngine.Purchasing.AppleStub.dll",
+      "Name": "UnityEngine.Purchasing.AppleStub.dll",
+      "SHA256": "f35ff8358098ef5e9f1c1f76cb41eae8e23b212b9ee4b91bf1f13771d224690a"
+    },
+    {
+      "Source": "BlastRoyale/Library/ScriptAssemblies/UnityEngine.Purchasing.Codeless.dll",
+      "Name": "UnityEngine.Purchasing.Codeless.dll",
+      "SHA256": "a53819039d7a922113de79e113a237a80e7fb15456bdaba2c1f3fde810364183"
+    },
+    {
+      "Source": "BlastRoyale/Library/ScriptAssemblies/UnityEngine.Purchasing.SecurityCore.dll",
+      "Name": "UnityEngine.Purchasing.SecurityCore.dll",
+      "SHA256": "595e5fc6e20d62e932f8a373586b5dc90a3739a0acf2e38a288ea9ab2910b50a"
+    },
+    {
+      "Source": "BlastRoyale/Library/ScriptAssemblies/UnityEngine.Purchasing.SecurityStub.dll",
+      "Name": "UnityEngine.Purchasing.SecurityStub.dll",
+      "SHA256": "8f632457a931e902fa5891f7f0d6f75f3de1f963fe9e2666fcc52c8ab94b0dfb"
+    },
+    {
+      "Source": "BlastRoyale/Library/ScriptAssemblies/UnityEngine.Purchasing.Stores.dll",
+      "Name": "UnityEngine.Purchasing.Stores.dll",
+      "SHA256": "973aaaf2caa902d49b476c3e749e926bef3c016c0f7cef576190c68d14ca47c0"
+    },
+    {
+      "Source": "BlastRoyale/Library/ScriptAssemblies/UnityEngine.Purchasing.WinRTCore.dll",
+      "Name": "UnityEngine.Purchasing.WinRTCore.dll",
+      "SHA256": "74a49e814b351505178c4ba8efca734012b5c36a9c5c2ff81051b01e9ac344d9"
+    },
+    {
+      "Source": "BlastRoyale/Library/ScriptAssemblies/UnityEngine.Purchasing.WinRTStub.dll",
+      "Name": "UnityEngine.Purchasing.WinRTStub.dll",
+      "SHA256": "afd7899c5e88815f134e0d12fb231996d0e8713c5a1d1f54101b55b8bf40d23d"
+    },
+    {
+      "Source": "BlastRoyale/Library/ScriptAssemblies/UnityEngine.Purchasing.dll",
+      "Name": "UnityEngine.Purchasing.dll",
+      "SHA256": "bf6838f02a1f6524b6aced18cef4bbe26e2cb4565a5db2ee3d47189a5f1abdb8"
+    },
+    {
+      "Source": "BlastRoyale/Library/ScriptAssemblies/unity-websocket-sharp.dll",
+      "Name": "unity-websocket-sharp.dll",
+      "SHA256": "615521591909d6bee678254bc3cf9f4e5b66f2bb8ad898ae5bf6f188519d921f"
+    }
+  ],
+  "NativeAuthInputs": [
+    {
+      "Source": ".local/runtime-account-patches/BlastRoyale/Assets/Src/FirstLight/Game/Services/Authentication/UnityCloudLoginProvider.cs",
+      "Target": "NativeUnityCloudLoginProvider.cs",
+      "SHA256": "8587d9cfb6d0ba43ad0aa0f8b0dd937fc72f24d66d868fc739fe17a99ac48062"
+    },
+    {
+      "Source": "BlastRoyale/Assets/Src/FirstLight/Game/Utils/UgsAccountSession.cs",
+      "Target": "NativeUgsAccountSession.cs",
+      "SHA256": "64a33f3761ba64d9227547c050c0df29097049c079ec8f60b5a0d605dfcb0556"
+    },
+    {
+      "Source": ".local/runtime-account-patches/BlastRoyale/Assets/Src/FirstLight/Game/Services/Authentication/AuthService.cs",
+      "ExtractedContracts": [
+        "IAuthenticationHook",
+        "ILoginProvider"
+      ],
+      "SHA256": "91e217613924958b72578f5fdf4fe6c708ba6330bbc36c93cc91010f65d36a8d"
+    },
+    {
+      "NativeAssembly": "Unity.Services.Authentication.dll",
+      "SHA256": "d567ee9010b1cdae70b68fb47f3bcb87820bda5c34b9597ecd805ca186d0ee37"
+    },
+    {
+      "NativeAssembly": "Unity.Services.Authentication.PlayerAccounts.dll",
+      "SHA256": "d0c82cdc3461f56e01d7d0b2daf6bae5758390e87b949eb5d9be2d7328bb73c1"
+    },
+    {
+      "NativeAssembly": "UniTask.dll",
+      "SHA256": "48f0a3dad710c9ed3856f0e713065362f889891323ef546fbc3a3d4bd01c1277"
+    },
+    {
+      "NativeAssembly": "PlayFab.dll",
+      "SHA256": "7c780c1f680fa09417cf0270dc0e48ba530d61feb406a4b2de6ae64d50867740"
+    },
+    {
+      "NativeAssembly": "UnityEngine.UI.dll",
+      "SHA256": "7560f032bf51837debd8148d83f3c4ea1978a5d40ca829eb1d4c600b508eb27c"
+    },
+    {
+      "NativeAssembly": "Unity.Services.Core.Device.dll",
+      "SHA256": "c88adbe0471eefa8acb7d1486c61242665b86c82b27de79617982fed4f0246ac"
+    },
+    {
+      "NativeAssembly": "Unity.Services.Core.Registration.dll",
+      "SHA256": "5bb04d592aed5fbae16286d29d5666019ba0049d9a08f607fb4a6118aa29b69b"
+    },
+    {
+      "NativeAssembly": "Unity.Services.Core.Components.dll",
+      "SHA256": "e6ad6ec311a8ec71531758e12f2fcc6fb92a270e39641db226510bb7f4d9e197"
+    },
+    {
+      "NativeAssembly": "Unity.Services.Core.Analytics.dll",
+      "SHA256": "ac1a452fcd96a2f312a93142cde83477e48869a73de491148c0b5b95887c6e9f"
+    },
+    {
+      "NativeAssembly": "Unity.Services.Core.Scheduler.dll",
+      "SHA256": "647a550bee7c4e01f76feba73080b47295ea8724f4a721d2c93e8e4770f6c53b"
+    },
+    {
+      "NativeAssembly": "Unity.Services.Core.Environments.dll",
+      "SHA256": "4fca2b0c74b8d8effad74673e403a73e1eef0064f50864fbd1e6ee73d2c2be33"
+    },
+    {
+      "NativeAssembly": "Unity.Services.Core.Configuration.dll",
+      "SHA256": "9303c15068349816ed18f4516b8659ad75002783d69944ba44e0b827a462e66d"
+    },
+    {
+      "NativeAssembly": "Unity.Services.Core.Internal.dll",
+      "SHA256": "dc4772120e2bbcd3477ffea31e2d72a02bf641c78a4610b84288f6569bff3c7d"
+    },
+    {
+      "NativeAssembly": "Unity.Services.Core.dll",
+      "SHA256": "9cb794b5d9716b10817417d22bd2762018ebcf0741e9dae67e3a67fcc25820a5"
+    },
+    {
+      "NativeAssembly": "Unity.Services.Core.Networking.dll",
+      "SHA256": "9552c8bd310d9a475d552cbd5ff0920c5e4e6c6b27cb197a290468204953e1bd"
+    },
+    {
+      "NativeAssembly": "Unity.Services.Core.Environments.Internal.dll",
+      "SHA256": "5399cbc7f0ac0556d91f5bc4fbbad8b99d88dfa331bd89af24b24c244699cca5"
+    },
+    {
+      "NativeAssembly": "Unity.Services.Core.Threading.dll",
+      "SHA256": "c572ce27c47560cfe5a5ed9d7d465deafe0c52cbec3659f8a1e5b20e6e4ee744"
+    },
+    {
+      "NativeAssembly": "Unity.Services.Core.Telemetry.dll",
+      "SHA256": "62e3281ce504be3fd401a74ab83a36fad91efb0b91d85675b3115b4859196c3d"
+    }
+  ],
+  "Scope": "Actual native compiled game/SDK/package interfaces and local model/hook ordering; synthetic local auth transport. No Main process/write, live hosted browser, cloud or full match claim.",
+  "NativeAuthInputNote": "The 9-case logout run used the original session guard; subsequent authorization-guard staging has separate evidence and is not attributed to this 9-case run."
+}

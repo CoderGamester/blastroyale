@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test-run id="2" testcasecount="4" result="Failed(Child)" total="4" passed="0" failed="4" inconclusive="0" skipped="0" asserts="0" engine-version="3.5.0.0" clr-version="4.0.30319.42000" start-time="2026-10-14 16:16:17Z" end-time="2026-10-14 16:16:17Z" duration="0.1713561">
+  <test-suite type="TestSuite" id="1000" name="runtime-account-project" fullname="runtime-account-project" runstate="Runnable" testcasecount="5" result="Failed" site="Child" start-time="2026-10-14 16:16:17Z" end-time="2026-10-14 16:16:17Z" duration="0.171356" total="4" passed="0" failed="4" inconclusive="0" skipped="0" asserts="0">
+    <properties>
+      <property name="platform" value="EditMode" />
+    </properties>
+    <failure>
+      <message><![CDATA[One or more child tests had errors]]></message>
+    </failure>
+    <test-suite type="Assembly" id="1007" name="FirstLight.AccountState.Tests.dll" fullname="<repo>/.local/runtime-account-project/Library/ScriptAssemblies/FirstLight.AccountState.Tests.dll" runstate="Runnable" testcasecount="4" result="Failed" site="Child" start-time="2026-10-14 16:16:17Z" end-time="2026-10-14 16:16:17Z" duration="0.168147" total="4" passed="0" failed="4" inconclusive="0" skipped="0" asserts="0">
+      <properties>
+        <property name="_PID" value="32876" />
+        <property name="_APPDOMAIN" value="Unity Child Domain" />
+        <property name="platform" value="EditMode" />
+        <property name="EditorOnly" value="True" />
+      </properties>
+      <failure>
+        <message><![CDATA[One or more child tests had errors]]></message>
+      </failure>
+      <test-suite type="TestSuite" id="1008" name="FirstLight" fullname="FirstLight" runstate="Runnable" testcasecount="4" result="Failed" site="Child" start-time="2026-10-14 16:16:17Z" end-time="2026-10-14 16:16:17Z" duration="0.167946" total="4" passed="0" failed="4" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <failure>
+          <message><![CDATA[One or more child tests had errors]]></message>
+        </failure>
+        <test-suite type="TestSuite" id="1009" name="Tests" fullname="FirstLight.Tests" runstate="Runnable" testcasecount="4" result="Failed" site="Child" start-time="2026-10-14 16:16:17Z" end-time="2026-10-14 16:16:17Z" duration="0.167710" total="4" passed="0" failed="4" inconclusive="0" skipped="0" asserts="0">
+          <properties />
+          <failure>
+            <message><![CDATA[One or more child tests had errors]]></message>
+          </failure>
+          <test-suite type="TestSuite" id="1010" name="EditorMode" fullname="FirstLight.Tests.EditorMode" runstate="Runnable" testcasecount="4" result="Failed" site="Child" start-time="2026-10-14 16:16:17Z" end-time="2026-10-14 16:16:17Z" duration="0.167464" total="4" passed="0" failed="4" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <failure>
+              <message><![CDATA[One or more child tests had errors]]></message>
+            </failure>
+            <test-suite type="TestSuite" id="1011" name="Authentication" fullname="FirstLight.Tests.EditorMode.Authentication" runstate="Runnable" testcasecount="4" result="Failed" site="Child" start-time="2026-10-14 16:16:17Z" end-time="2026-10-14 16:16:17Z" duration="0.167229" total="4" passed="0" failed="4" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <failure>
+                <message><![CDATA[One or more child tests had errors]]></message>
+              </failure>
+              <test-suite type="TestFixture" id="1001" name="AccountStateIsolationTests" fullname="FirstLight.Tests.EditorMode.Authentication.AccountStateIsolationTests" classname="FirstLight.Tests.EditorMode.Authentication.AccountStateIsolationTests" runstate="Runnable" testcasecount="4" result="Failed" site="Child" start-time="2026-10-14 16:16:17Z" end-time="2026-10-14 16:16:17Z" duration="0.166815" total="4" passed="0" failed="4" inconclusive="0" skipped="0" asserts="0">
+                <properties />
+                <failure>
+                  <message><![CDATA[One or more child tests had errors]]></message>
+                </failure>
+                <test-suite type="ParameterizedMethod" id="1006" name="DifferentLoadedAccountDoesNotInheritPreviousTutorialCompletion" fullname="FirstLight.Tests.EditorMode.Authentication.AccountStateIsolationTests.DifferentLoadedAccountDoesNotInheritPreviousTutorialCompletion" classname="FirstLight.Tests.EditorMode.Authentication.AccountStateIsolationTests" runstate="Runnable" testcasecount="2" result="Failed" site="Child" start-time="2026-10-14 16:16:17Z" end-time="2026-10-14 16:16:17Z" duration="0.155833" total="2" passed="0" failed="2" inconclusive="0" skipped="0" asserts="0">
+                  <properties />
+                  <failure>
+                    <message><![CDATA[One or more child tests had errors]]></message>
+                  </failure>
+                  <test-case id="1004" name="DifferentLoadedAccountDoesNotInheritPreviousTutorialCompletion(False)" fullname="FirstLight.Tests.EditorMode.Authentication.AccountStateIsolationTests.DifferentLoadedAccountDoesNotInheritPreviousTutorialCompletion(False)" methodname="DifferentLoadedAccountDoesNotInheritPreviousTutorialCompletion" classname="FirstLight.Tests.EditorMode.Authentication.AccountStateIsolationTests" runstate="Runnable" seed="1412618412" result="Failed" start-time="2026-10-14 16:16:17Z" end-time="2026-10-14 16:16:17Z" duration="0.106552" asserts="0">
+                    <properties>
+                      <property name="retryIteration" value="0" />
+                      <property name="repeatIteration" value="0" />
+                    </properties>
+                    <failure>
+                      <message><![CDATA[  Expected: NONE
+  But was:  FIRST_GUIDE_MATCH
+]]></message>
+                      <stack-trace><![CDATA[at FirstLight.Tests.EditorMode.Authentication.AccountStateIsolationTests.DifferentLoadedAccountDoesNotInheritPreviousTutorialCompletion (System.Boolean newGuest) [0x0025d] in <repo>/.local/runtime-account-project/Assets/Tests/AccountStateIsolationTests.cs:92
+at UnityEngine.TestTools.TestRunner.TestTaskWrapper+<Execute>d__2.MoveNext () [0x00063] in ./Library/PackageCache/com.unity.test-framework@bd7f943e9647/UnityEngine.TestRunner/TestRunner/TestTaskWrapper.cs:31
+at UnityEngine.TestTools.TestEnumerator+<Execute>d__7.MoveNext () [0x0003a] in ./Library/PackageCache/com.unity.test-framework@bd7f943e9647/UnityEngine.TestRunner/NUnitExtensions/Attributes/TestEnumerator.cs:44
+]]></stack-trace>
+                    </failure>
+                    <output><![CDATA[ (T1 F4)  [FeatureFlags] Setting title flag QUANTUM_CUSTOM_SERVER to false
+ (T1 F4)  [FeatureFlags] Disabling flag STORE_ENABLED
+ (T1 F4)  [FeatureFlags] Disabling flag DESYNC_DETECTION
+ (T1 F4)  [FeatureFlags] Disabling flag TUTORIAL
+ (T1 F4)  [FeatureFlags] Disabling flag TUTORIAL_BATTLE
+ (T1 F4)  [FeatureFlags] Disabling flag PAUSE_FREEZE
+ (T1 F4)  [FeatureFlags] Setting title flag WAIT_REWARD_SYNC to false
+]]></output>
+                  </test-case>
+                  <test-case id="1005" name="DifferentLoadedAccountDoesNotInheritPreviousTutorialCompletion(True)" fullname="FirstLight.Tests.EditorMode.Authentication.AccountStateIsolationTests.DifferentLoadedAccountDoesNotInheritPreviousTutorialCompletion(True)" methodname="DifferentLoadedAccountDoesNotInheritPreviousTutorialCompletion" classname="FirstLight.Tests.EditorMode.Authentication.AccountStateIsolationTests" runstate="Runnable" seed="439700398" result="Failed" start-time="2026-10-14 16:16:17Z" end-time="2026-10-14 16:16:17Z" duration="0.046228" asserts="0">
+                    <properties>
+                      <property name="retryIteration" value="0" />
+                      <property name="repeatIteration" value="0" />
+                    </properties>
+                    <failure>
+                      <message><![CDATA[  Expected: NONE
+  But was:  FIRST_GUIDE_MATCH
+]]></message>
+                      <stack-trace><![CDATA[at FirstLight.Tests.EditorMode.Authentication.AccountStateIsolationTests.DifferentLoadedAccountDoesNotInheritPreviousTutorialCompletion (System.Boolean newGuest) [0x0025d] in <repo>/.local/runtime-account-project/Assets/Tests/AccountStateIsolationTests.cs:92
+at UnityEngine.TestTools.TestRunner.TestTaskWrapper+<Execute>d__2.MoveNext () [0x00063] in ./Library/PackageCache/com.unity.test-framework@bd7f943e9647/UnityEngine.TestRunner/TestRunner/TestTaskWrapper.cs:31
+at UnityEngine.TestTools.TestEnumerator+<Execute>d__7.MoveNext () [0x0003a] in ./Library/PackageCache/com.unity.test-framework@bd7f943e9647/UnityEngine.TestRunner/NUnitExtensions/Attributes/TestEnumerator.cs:44
+]]></stack-trace>
+                    </failure>
+                    <output><![CDATA[ (T1 F4)  [FeatureFlags] Setting title flag QUANTUM_CUSTOM_SERVER to false
+ (T1 F4)  [FeatureFlags] Disabling flag STORE_ENABLED
+ (T1 F4)  [FeatureFlags] Disabling flag DESYNC_DETECTION
+ (T1 F4)  [FeatureFlags] Disabling flag TUTORIAL
+ (T1 F4)  [FeatureFlags] Disabling flag TUTORIAL_BATTLE
+ (T1 F4)  [FeatureFlags] Disabling flag PAUSE_FREEZE
+ (T1 F4)  [FeatureFlags] Setting title flag WAIT_REWARD_SYNC to false
+]]></output>
+                  </test-case>
+                </test-suite>
+                <test-case id="1002" name="StoreAccountSwitchRebindsPurchasePolicyToNewAccount" fullname="FirstLight.Tests.EditorMode.Authentication.AccountStateIsolationTests.StoreAccountSwitchRebindsPurchasePolicyToNewAccount" methodname="StoreAccountSwitchRebindsPurchasePolicyToNewAccount" classname="FirstLight.Tests.EditorMode.Authentication.AccountStateIsolationTests" runstate="Runnable" seed="530426888" result="Failed" start-time="2026-10-14 16:16:17Z" end-time="2026-10-14 16:16:17Z" duration="0.002364" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                  <failure>
+                    <message><![CDATA[  Expected: <empty>
+  But was:  < <FirstLight.Game.Data.DataTypes.StorePurchaseData> >
+]]></message>
+                    <stack-trace><![CDATA[at FirstLight.Tests.EditorMode.Authentication.AccountStateIsolationTests.StoreAccountSwitchRebindsPurchasePolicyToNewAccount () [0x00088] in <repo>/.local/runtime-account-project/Assets/Tests/AccountStateIsolationTests.cs:41
+]]></stack-trace>
+                  </failure>
+                </test-case>
+                <test-case id="1003" name="StoreAccountSwitchRetainsSubscribersAndPublishesNewBackingData" fullname="FirstLight.Tests.EditorMode.Authentication.AccountStateIsolationTests.StoreAccountSwitchRetainsSubscribersAndPublishesNewBackingData" methodname="StoreAccountSwitchRetainsSubscribersAndPublishesNewBackingData" classname="FirstLight.Tests.EditorMode.Authentication.AccountStateIsolationTests" runstate="Runnable" seed="416223785" result="Failed" start-time="2026-10-14 16:16:17Z" end-time="2026-10-14 16:16:17Z" duration="0.001637" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                  <failure>
+                    <message><![CDATA[  Expected is <System.String[1]>, actual is <System.Collections.Generic.List`1[System.String]> with 0 elements
+  Values differ at index [0]
+  Missing:  < "b-product" >]]></message>
+                    <stack-trace><![CDATA[at FirstLight.Tests.EditorMode.Authentication.AccountStateIsolationTests.StoreAccountSwitchRetainsSubscribersAndPublishesNewBackingData () [0x000a3] in <repo>/.local/runtime-account-project/Assets/Tests/AccountStateIsolationTests.cs:65
+]]></stack-trace>
+                  </failure>
+                  <output><![CDATA[Saving results to: <user>/Library/Application Support/DefaultCompany/runtime-account-project/TestResults.xml
+]]></output>
+                </test-case>
+              </test-suite>
+            </test-suite>
+          </test-suite>
+        </test-suite>
+      </test-suite>
+    </test-suite>
+  </test-suite>
+</test-run>

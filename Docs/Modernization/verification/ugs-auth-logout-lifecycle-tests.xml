@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test-run id="2" testcasecount="9" result="Passed" total="9" passed="9" failed="0" inconclusive="0" skipped="0" asserts="0" engine-version="3.5.0.0" clr-version="4.0.30319.42000" start-time="2026-10-14 15:59:51Z" end-time="2026-10-14 15:59:51Z" duration="0.0755636">
+  <test-suite type="TestSuite" id="1000" name="ugs-auth-lifecycle-project" fullname="ugs-auth-lifecycle-project" runstate="Runnable" testcasecount="9" result="Passed" start-time="2026-10-14 15:59:51Z" end-time="2026-10-14 15:59:51Z" duration="0.075564" total="9" passed="9" failed="0" inconclusive="0" skipped="0" asserts="0">
+    <properties>
+      <property name="platform" value="EditMode" />
+    </properties>
+    <test-suite type="Assembly" id="1012" name="Unity.Services.Authentication.Tests.dll" fullname="<repo>/.local/ugs-auth-lifecycle-project/Library/ScriptAssemblies/Unity.Services.Authentication.Tests.dll" runstate="Runnable" testcasecount="9" result="Passed" start-time="2026-10-14 15:59:51Z" end-time="2026-10-14 15:59:51Z" duration="0.071299" total="9" passed="9" failed="0" inconclusive="0" skipped="0" asserts="0">
+      <properties>
+        <property name="_PID" value="17735" />
+        <property name="_APPDOMAIN" value="Unity Child Domain" />
+        <property name="platform" value="EditMode" />
+        <property name="EditorOnly" value="True" />
+      </properties>
+      <test-suite type="TestSuite" id="1013" name="FirstLight" fullname="FirstLight" runstate="Runnable" testcasecount="9" result="Passed" start-time="2026-10-14 15:59:51Z" end-time="2026-10-14 15:59:51Z" duration="0.071041" total="9" passed="9" failed="0" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <test-suite type="TestSuite" id="1014" name="Tests" fullname="FirstLight.Tests" runstate="Runnable" testcasecount="9" result="Passed" start-time="2026-10-14 15:59:51Z" end-time="2026-10-14 15:59:51Z" duration="0.070941" total="9" passed="9" failed="0" inconclusive="0" skipped="0" asserts="0">
+          <properties />
+          <test-suite type="TestSuite" id="1015" name="EditorMode" fullname="FirstLight.Tests.EditorMode" runstate="Runnable" testcasecount="9" result="Passed" start-time="2026-10-14 15:59:51Z" end-time="2026-10-14 15:59:51Z" duration="0.070827" total="9" passed="9" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-suite type="TestSuite" id="1016" name="Authentication" fullname="FirstLight.Tests.EditorMode.Authentication" runstate="Runnable" testcasecount="9" result="Passed" start-time="2026-10-14 15:59:51Z" end-time="2026-10-14 15:59:51Z" duration="0.070693" total="9" passed="9" failed="0" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <test-suite type="TestFixture" id="1001" name="UgsAuthenticationLifecycleTests" fullname="FirstLight.Tests.EditorMode.Authentication.UgsAuthenticationLifecycleTests" classname="FirstLight.Tests.EditorMode.Authentication.UgsAuthenticationLifecycleTests" runstate="Runnable" testcasecount="9" result="Passed" start-time="2026-10-14 15:59:51Z" end-time="2026-10-14 15:59:51Z" duration="0.070335" total="9" passed="9" failed="0" inconclusive="0" skipped="0" asserts="0">
+                <properties />
+                <test-suite type="ParameterizedMethod" id="1004" name="ExpiredCachedSessionReauthenticatesThroughActualProvider" fullname="FirstLight.Tests.EditorMode.Authentication.UgsAuthenticationLifecycleTests.ExpiredCachedSessionReauthenticatesThroughActualProvider" classname="FirstLight.Tests.EditorMode.Authentication.UgsAuthenticationLifecycleTests" runstate="Runnable" testcasecount="2" result="Passed" start-time="2026-10-14 15:59:51Z" end-time="2026-10-14 15:59:51Z" duration="0.058796" total="2" passed="2" failed="0" inconclusive="0" skipped="0" asserts="0">
+                  <properties />
+                  <test-case id="1002" name="ExpiredCachedSessionReauthenticatesThroughActualProvider(&quot;LoginWithDevice&quot;)" fullname="FirstLight.Tests.EditorMode.Authentication.UgsAuthenticationLifecycleTests.ExpiredCachedSessionReauthenticatesThroughActualProvider(&quot;LoginWithDevice&quot;)" methodname="ExpiredCachedSessionReauthenticatesThroughActualProvider" classname="FirstLight.Tests.EditorMode.Authentication.UgsAuthenticationLifecycleTests" runstate="Runnable" seed="420329541" result="Passed" start-time="2026-10-14 15:59:51Z" end-time="2026-10-14 15:59:51Z" duration="0.055234" asserts="0">
+                    <properties>
+                      <property name="retryIteration" value="0" />
+                      <property name="repeatIteration" value="0" />
+                    </properties>
+                  </test-case>
+                  <test-case id="1003" name="ExpiredCachedSessionReauthenticatesThroughActualProvider(&quot;LoginWithNewGuestAccount&quot;)" fullname="FirstLight.Tests.EditorMode.Authentication.UgsAuthenticationLifecycleTests.ExpiredCachedSessionReauthenticatesThroughActualProvider(&quot;LoginWithNewGuestAccount&quot;)" methodname="ExpiredCachedSessionReauthenticatesThroughActualProvider" classname="FirstLight.Tests.EditorMode.Authentication.UgsAuthenticationLifecycleTests" runstate="Runnable" seed="871897472" result="Passed" start-time="2026-10-14 15:59:51Z" end-time="2026-10-14 15:59:51Z" duration="0.001206" asserts="0">
+                    <properties>
+                      <property name="retryIteration" value="0" />
+                      <property name="repeatIteration" value="0" />
+                    </properties>
+                  </test-case>
+                </test-suite>
+                <test-case id="1009" name="ExplicitGuestLogoutPreservesSoleRecoveryCredentialAndSamePlayerId" fullname="FirstLight.Tests.EditorMode.Authentication.UgsAuthenticationLifecycleTests.ExplicitGuestLogoutPreservesSoleRecoveryCredentialAndSamePlayerId" methodname="ExplicitGuestLogoutPreservesSoleRecoveryCredentialAndSamePlayerId" classname="FirstLight.Tests.EditorMode.Authentication.UgsAuthenticationLifecycleTests" runstate="Runnable" seed="1194055196" result="Passed" start-time="2026-10-14 15:59:51Z" end-time="2026-10-14 15:59:51Z" duration="0.001659" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+                <test-case id="1008" name="ExplicitHostedLogoutClearsCachedSessionAndAutomaticLoginEligibility" fullname="FirstLight.Tests.EditorMode.Authentication.UgsAuthenticationLifecycleTests.ExplicitHostedLogoutClearsCachedSessionAndAutomaticLoginEligibility" methodname="ExplicitHostedLogoutClearsCachedSessionAndAutomaticLoginEligibility" classname="FirstLight.Tests.EditorMode.Authentication.UgsAuthenticationLifecycleTests" runstate="Runnable" seed="43490904" result="Passed" start-time="2026-10-14 15:59:51Z" end-time="2026-10-14 15:59:51Z" duration="0.001314" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+                <test-case id="1007" name="FreshGuestCreatesExactlyOneNativeAnonymousSession" fullname="FirstLight.Tests.EditorMode.Authentication.UgsAuthenticationLifecycleTests.FreshGuestCreatesExactlyOneNativeAnonymousSession" methodname="FreshGuestCreatesExactlyOneNativeAnonymousSession" classname="FirstLight.Tests.EditorMode.Authentication.UgsAuthenticationLifecycleTests" runstate="Runnable" seed="900900115" result="Passed" start-time="2026-10-14 15:59:51Z" end-time="2026-10-14 15:59:51Z" duration="0.000757" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+                <test-case id="1005" name="NativeScheduledRefreshPreservesGenerationAndAvoidsRedundantProviderSignin" fullname="FirstLight.Tests.EditorMode.Authentication.UgsAuthenticationLifecycleTests.NativeScheduledRefreshPreservesGenerationAndAvoidsRedundantProviderSignin" methodname="NativeScheduledRefreshPreservesGenerationAndAvoidsRedundantProviderSignin" classname="FirstLight.Tests.EditorMode.Authentication.UgsAuthenticationLifecycleTests" runstate="Runnable" seed="1167719724" result="Passed" start-time="2026-10-14 15:59:51Z" end-time="2026-10-14 15:59:51Z" duration="0.001366" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+                <test-case id="1010" name="OrdinaryHostedSignoutKeepsSessionForRecoveryOrEnvironmentSwitch" fullname="FirstLight.Tests.EditorMode.Authentication.UgsAuthenticationLifecycleTests.OrdinaryHostedSignoutKeepsSessionForRecoveryOrEnvironmentSwitch" methodname="OrdinaryHostedSignoutKeepsSessionForRecoveryOrEnvironmentSwitch" classname="FirstLight.Tests.EditorMode.Authentication.UgsAuthenticationLifecycleTests" runstate="Runnable" seed="258539439" result="Passed" start-time="2026-10-14 15:59:51Z" end-time="2026-10-14 15:59:51Z" duration="0.000741" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+                <test-case id="1006" name="SignedOutCachedSessionRestoresSameIdAndInvalidatesOldGeneration" fullname="FirstLight.Tests.EditorMode.Authentication.UgsAuthenticationLifecycleTests.SignedOutCachedSessionRestoresSameIdAndInvalidatesOldGeneration" methodname="SignedOutCachedSessionRestoresSameIdAndInvalidatesOldGeneration" classname="FirstLight.Tests.EditorMode.Authentication.UgsAuthenticationLifecycleTests" runstate="Runnable" seed="1836587585" result="Passed" start-time="2026-10-14 15:59:51Z" end-time="2026-10-14 15:59:51Z" duration="0.000984" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+                <test-case id="1011" name="UnknownNativeIdentityCannotClearAnUnlinkedGuestCredential" fullname="FirstLight.Tests.EditorMode.Authentication.UgsAuthenticationLifecycleTests.UnknownNativeIdentityCannotClearAnUnlinkedGuestCredential" methodname="UnknownNativeIdentityCannotClearAnUnlinkedGuestCredential" classname="FirstLight.Tests.EditorMode.Authentication.UgsAuthenticationLifecycleTests" runstate="Runnable" seed="961931229" result="Passed" start-time="2026-10-14 15:59:51Z" end-time="2026-10-14 15:59:51Z" duration="0.000738" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                  <output><![CDATA[Saving results to: <repo>/artifacts/ugs-auth-logout-lifecycle-tests.xml
+]]></output>
+                </test-case>
+              </test-suite>
+            </test-suite>
+          </test-suite>
+        </test-suite>
+      </test-suite>
+    </test-suite>
+  </test-suite>
+</test-run>

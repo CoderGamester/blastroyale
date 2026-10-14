@@ -135,7 +135,7 @@ namespace FirstLight.Game.StateMachines
 			try
 			{
 				await _services.UIService.OpenScreen<LoadingSpinnerScreenPresenter>();
-				await _services.AuthService.Logout();
+				await _services.AuthService.Logout(clearRecoverableCredentials: true);
 				OnLogoutComplete();
 			}
 			catch (Exception ex)
