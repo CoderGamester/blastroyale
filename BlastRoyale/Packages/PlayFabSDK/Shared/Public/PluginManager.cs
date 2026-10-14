@@ -54,9 +54,7 @@ namespace PlayFab
                         plugin = this.CreatePlugin<PlayFab.Json.SimpleJsonInstance>();
                         break;
                     case PluginContract.PlayFab_Transport:
-                        plugin = this.CreatePlayFabTransportPlugin();
-                        break;
-                    default:
+                        throw new NotSupportedException("PlayFab transport is retired; the client uses Unity Services.");                    default:
                         throw new ArgumentException("This contract is not supported", "contract");
                 }
 
@@ -80,31 +78,6 @@ namespace PlayFab
         private IPlayFabPlugin CreatePlugin<T>() where T : IPlayFabPlugin, new()
         {
             return (IPlayFabPlugin)System.Activator.CreateInstance(typeof(T));
-        }
-
-        private ITransportPlugin CreatePlayFabTransportPlugin()
-        {
-            ITransportPlugin transport = null;
-#if !UNITY_WSA && !UNITY_WP8
-            if (PlayFabSettings.RequestType == WebRequestType.HttpWebRequest)
-                transport = new PlayFabWebRequest();
-#endif
-
-#if UNITY_2018_2_OR_NEWER // PlayFabWww will throw warnings as Unity has deprecated Www
-            if (transport == null)
-                transport = new PlayFabUnityHttp();
-#elif UNITY_2017_2_OR_NEWER
-            if (PlayFabSettings.RequestType == WebRequestType.UnityWww)
-                transport = new PlayFabWww();
-
-            if (transport == null)
-                transport = new PlayFabUnityHttp();
-#else
-            if (transport == null)
-                transport = new PlayFabWww();
-#endif
-
-            return transport;
         }
     }
 }

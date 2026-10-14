@@ -1,0 +1,26 @@
+{
+  "Passed": 4,
+  "Failed": 0,
+  "Cases": [
+    {
+      "Case": "LoginResult",
+      "OriginalNativeJsonEqualsSubset": true,
+      "SubsetNativeRoundtrip": true
+    },
+    {
+      "Case": "CatalogItem",
+      "OriginalNativeJsonEqualsSubset": true,
+      "SubsetNativeRoundtrip": true
+    },
+    {
+      "Case": "StoreResult",
+      "OriginalNativeJsonEqualsSubset": true,
+      "SubsetNativeRoundtrip": true
+    },
+    {
+      "Case": "FunctionResult",
+      "OriginalNativeJsonEqualsSubset": true,
+      "SubsetNativeRoundtrip": true
+    }
+  ]
+}

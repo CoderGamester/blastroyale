@@ -1,0 +1,86 @@
+{
+  "Passed": true,
+  "ComparedTopLevelTypes": 99,
+  "PreservedFieldSignatures": 1768,
+  "PreservedPublicProtectedMethods": 177,
+  "Enums": [
+    {
+      "Type": "PlayFab.ClientModels.ContinentCode",
+      "Retained": 8,
+      "ValuesUnchanged": true
+    },
+    {
+      "Type": "PlayFab.ClientModels.CountryCode",
+      "Retained": 250,
+      "ValuesUnchanged": true
+    },
+    {
+      "Type": "PlayFab.ClientModels.Currency",
+      "Retained": 162,
+      "ValuesUnchanged": true
+    },
+    {
+      "Type": "PlayFab.ClientModels.EmailVerificationStatus",
+      "Retained": 3,
+      "ValuesUnchanged": true
+    },
+    {
+      "Type": "PlayFab.ClientModels.LoginIdentityProvider",
+      "Retained": 23,
+      "ValuesUnchanged": true
+    },
+    {
+      "Type": "PlayFab.ClientModels.PushNotificationPlatform",
+      "Retained": 2,
+      "ValuesUnchanged": true
+    },
+    {
+      "Type": "PlayFab.ClientModels.SourceType",
+      "Retained": 7,
+      "ValuesUnchanged": true
+    },
+    {
+      "Type": "PlayFab.ClientModels.SubscriptionProviderStatus",
+      "Retained": 8,
+      "ValuesUnchanged": true
+    },
+    {
+      "Type": "PlayFab.ClientModels.TitleActivationStatus",
+      "Retained": 5,
+      "ValuesUnchanged": true
+    },
+    {
+      "Type": "PlayFab.ClientModels.UserDataPermission",
+      "Retained": 2,
+      "ValuesUnchanged": true
+    },
+    {
+      "Type": "PlayFab.ClientModels.UserOrigination",
+      "Retained": 25,
+      "ValuesUnchanged": true
+    },
+    {
+      "Type": "PlayFab.Json.NullValueHandling",
+      "Retained": 2,
+      "ValuesUnchanged": true
+    },
+    {
+      "Type": "PlayFab.PlayFabErrorCode",
+      "Retained": 940,
+      "ValuesUnchanged": true
+    },
+    {
+      "Type": "PlayFab.PlayFabExceptionCode",
+      "Retained": 6,
+      "ValuesUnchanged": true
+    },
+    {
+      "Type": "PlayFab.PluginContract",
+      "Retained": 2,
+      "ValuesUnchanged": true
+    }
+  ],
+  "RemovedExplicitErrorSymbols": 11,
+  "EndpointHttpSettingsTypes": [],
+  "Failures": []
+}

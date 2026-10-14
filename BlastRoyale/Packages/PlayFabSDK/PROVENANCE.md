@@ -1,18 +1,15 @@
-# PlayFab Unity SDK source
+# PlayFab data-contract compatibility subset
 
 Source: https://github.com/PlayFab/UnitySDK/tree/04e73b3a78ce1afbba9f3e003f3fe51ba77bd8bd/ExampleTestProject/Assets/PlayFabSDK
 
-Upstream build identifier: `adobuild_unitysdk_167`, SDK `2.244.260922`. Apache-2.0 source and original `.meta` files were copied from this exact commit. No proprietary binary or Asset Store package is included.
+Upstream build `adobuild_unitysdk_167`, SDK `2.244.260922`, Apache-2.0. The original license, assembly name and retained source-file metadata are preserved. This package is a local source subset rather than the full upstream service SDK.
 
-Local reductions and Unity 6 fixes:
+The game authenticates and persists through Unity Services and uses Photon rooms. It still exposes original PlayFab DTO names at its legacy login, catalog, profile, leaderboard and local command-result boundaries. No PlayFab title, service session, endpoint API, request factory, HTTP implementation, shared settings asset or Editor integration is retained. The server SDK binary is unchanged and has no PlayFab assembly dependency.
 
-- Omit the sample Resources/PlayFabSharedSettings asset and directory metadata; the game owns one blank settings asset in Assets/Resources.
-- Remove the unused Facebook/Facebook Instant Games endpoints, DTOs, fields, event dispatch branches and provider/error enum symbols. No game caller used these surfaces. A Roslyn syntax-tree rewrite removed 227 members/branches. Every surviving numeric value in the 16 affected enums was checked against the original source and is explicit, so provider/error wire IDs do not shift.
-- Omit the legacy Matchmaker folder: its upstream API methods are marked `Obsolete("No longer available", true)`, none is called by the game, and the dead event declarations cause eight unused-event compiler warnings. The game uses Photon rooms and Unity Lobby for matchmaking.
-- Replace the SDK singleton search with Unity 6 `FindFirstObjectByType<T>()`, preserving the existing first-object behavior while removing the deprecated API.
-- Change one generic documentation adjective from “singular” to “single” to keep automated removed-service scans unambiguous.
-- Add the local UPM wrapper (`package.json`), this provenance file and `LICENSE.md`.
+The subset contains 14 original source files with 99 top-level types. A native assembly dependency walk started from actual imported game/test references, then retained complete source declarations and their field/base/member dependencies. DTO fields were not replaced, renamed or fabricated. The native JSON serializer and its supporting interfaces/utilities remain original source. The unused private transport factory and its unused interface were removed; requesting the transport plugin now throws a descriptive unsupported-operation error. Existing serializer-plugin registration and `ToJson` behavior remain intact.
 
-Validation: syntax parse succeeded. A standalone .NET Standard 2.1 compilation against the installed Unity 6000.3.26f1 managed assemblies enabled the Client, Admin, Server, Entity, Authentication, Addon, Economy, Multiplayer and Progression source paths. It is a source compilation check, not an Editor import, network test or player build.
+Eleven unused Azure error enum symbols were removed only after checking they all had explicit numeric values and no owned caller. Every retained enum integer is unchanged. Obsolete provider references had already been removed in the previous local source reduction; surviving source contains no Azure, Facebook or Firebase reference. Function-result DTO names remain solely as data envelopes for local commands; their obsolete service-specific comments were updated.
 
-When upgrading the SDK, repeat these reductions from upstream source and re-check the numeric enums, game call sites and Unity compilation. Do not replace this locally reduced package with an unreviewed copy from upstream.
+Verification: 99 retained top-level types preserve 1,768 field signatures and 177 public/protected method signatures. All 15 retained enum schemas keep their numeric values. Four native original-versus-subset serialization and roundtrip comparisons pass. The subset plus current whole game, client server-plugin assembly, Editor, EditMode test source and PlayMode test source compile against actual Unity/SDK/package assemblies with zero C# warnings/errors. This is isolated source/serialization evidence; Main Editor import, tests and player builds after promotion are separate checks.
+
+Evidence: `Docs/Modernization/playfab-dto-compatibility.md` and `Docs/Modernization/verification/playfab-dto-subset-*.json`. Repeat the source closure, complete-type extraction, enum integer checks and native compilation when changing the compatibility boundary. Do not restore the full upstream endpoint SDK as a routine update.

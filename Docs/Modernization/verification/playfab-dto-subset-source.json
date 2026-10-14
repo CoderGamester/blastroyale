@@ -1,0 +1,152 @@
+{
+  "SourceTypes": [
+    "PlayFab.ClientModels.AdCampaignAttributionModel",
+    "PlayFab.ClientModels.AddOrUpdateContactEmailResult",
+    "PlayFab.ClientModels.CatalogItem",
+    "PlayFab.ClientModels.CatalogItemBundleInfo",
+    "PlayFab.ClientModels.CatalogItemConsumableInfo",
+    "PlayFab.ClientModels.CatalogItemContainerInfo",
+    "PlayFab.ClientModels.CharacterInventory",
+    "PlayFab.ClientModels.CharacterResult",
+    "PlayFab.ClientModels.ContactEmailInfoModel",
+    "PlayFab.ClientModels.ContinentCode",
+    "PlayFab.ClientModels.CountryCode",
+    "PlayFab.ClientModels.Currency",
+    "PlayFab.ClientModels.EmailVerificationStatus",
+    "PlayFab.ClientModels.EntityKey",
+    "PlayFab.ClientModels.EntityTokenResponse",
+    "PlayFab.ClientModels.GetCatalogItemsResult",
+    "PlayFab.ClientModels.GetLeaderboardAroundPlayerResult",
+    "PlayFab.ClientModels.GetLeaderboardResult",
+    "PlayFab.ClientModels.GetPlayerCombinedInfoResultPayload",
+    "PlayFab.ClientModels.GetSegmentResult",
+    "PlayFab.ClientModels.GetStoreItemsResult",
+    "PlayFab.ClientModels.ItemInstance",
+    "PlayFab.ClientModels.LinkedPlatformAccountModel",
+    "PlayFab.ClientModels.LocationModel",
+    "PlayFab.ClientModels.LoginIdentityProvider",
+    "PlayFab.ClientModels.LoginResult",
+    "PlayFab.ClientModels.MembershipModel",
+    "PlayFab.ClientModels.PlayerLeaderboardEntry",
+    "PlayFab.ClientModels.PlayerProfileModel",
+    "PlayFab.ClientModels.PushNotificationPlatform",
+    "PlayFab.ClientModels.PushNotificationRegistrationModel",
+    "PlayFab.ClientModels.SourceType",
+    "PlayFab.ClientModels.StatisticModel",
+    "PlayFab.ClientModels.StatisticValue",
+    "PlayFab.ClientModels.StoreItem",
+    "PlayFab.ClientModels.StoreMarketingModel",
+    "PlayFab.ClientModels.SubscriptionModel",
+    "PlayFab.ClientModels.SubscriptionProviderStatus",
+    "PlayFab.ClientModels.TagModel",
+    "PlayFab.ClientModels.TitleActivationStatus",
+    "PlayFab.ClientModels.TitleNewsItem",
+    "PlayFab.ClientModels.TreatmentAssignment",
+    "PlayFab.ClientModels.UpdateUserTitleDisplayNameResult",
+    "PlayFab.ClientModels.UserAccountInfo",
+    "PlayFab.ClientModels.UserAndroidDeviceInfo",
+    "PlayFab.ClientModels.UserAppleIdInfo",
+    "PlayFab.ClientModels.UserBattleNetInfo",
+    "PlayFab.ClientModels.UserCustomIdInfo",
+    "PlayFab.ClientModels.UserDataPermission",
+    "PlayFab.ClientModels.UserDataRecord",
+    "PlayFab.ClientModels.UserGameCenterInfo",
+    "PlayFab.ClientModels.UserGoogleInfo",
+    "PlayFab.ClientModels.UserGooglePlayGamesInfo",
+    "PlayFab.ClientModels.UserIosDeviceInfo",
+    "PlayFab.ClientModels.UserKongregateInfo",
+    "PlayFab.ClientModels.UserNintendoSwitchAccountIdInfo",
+    "PlayFab.ClientModels.UserNintendoSwitchDeviceIdInfo",
+    "PlayFab.ClientModels.UserOpenIdInfo",
+    "PlayFab.ClientModels.UserOrigination",
+    "PlayFab.ClientModels.UserPrivateAccountInfo",
+    "PlayFab.ClientModels.UserPsnInfo",
+    "PlayFab.ClientModels.UserServerCustomIdInfo",
+    "PlayFab.ClientModels.UserSettings",
+    "PlayFab.ClientModels.UserSteamInfo",
+    "PlayFab.ClientModels.UserTitleInfo",
+    "PlayFab.ClientModels.UserTwitchInfo",
+    "PlayFab.ClientModels.UserXboxInfo",
+    "PlayFab.ClientModels.ValueToDateModel",
+    "PlayFab.ClientModels.Variable",
+    "PlayFab.ClientModels.VirtualCurrencyRechargeTime",
+    "PlayFab.CloudScriptModels.ExecuteFunctionResult",
+    "PlayFab.CloudScriptModels.FunctionExecutionError",
+    "PlayFab.Internal.PlayFabUtil",
+    "PlayFab.IPlayFabPlugin",
+    "PlayFab.ISerializerPlugin",
+    "PlayFab.Json.IJsonSerializerStrategy",
+    "PlayFab.Json.JsonArray",
+    "PlayFab.Json.JsonObject",
+    "PlayFab.Json.JsonProperty",
+    "PlayFab.Json.NullValueHandling",
+    "PlayFab.Json.PlayFabSimpleJson",
+    "PlayFab.Json.PocoJsonSerializerStrategy",
+    "PlayFab.Json.ReflectionUtils",
+    "PlayFab.Json.SimpleJsonInstance",
+    "PlayFab.PlayFabAuthenticationContext",
+    "PlayFab.PlayFabError",
+    "PlayFab.PlayFabErrorCode",
+    "PlayFab.PlayFabException",
+    "PlayFab.PlayFabExceptionCode",
+    "PlayFab.PluginContract",
+    "PlayFab.PluginContractKey",
+    "PlayFab.PluginContractKeyComparator",
+    "PlayFab.PluginManager",
+    "PlayFab.SharedModels.PlayFabBaseModel",
+    "PlayFab.SharedModels.PlayFabLoginResultCommon",
+    "PlayFab.SharedModels.PlayFabRequestCommon",
+    "PlayFab.SharedModels.PlayFabResult`1",
+    "PlayFab.SharedModels.PlayFabResultCommon",
+    "PlayFab.WsaReflectionExtensions"
+  ],
+  "RemovedAzureErrorConstants": [
+    {
+      "Name": "CloudScriptAzureFunctionsExecutionTimeLimitExceeded",
+      "Value": "1470"
+    },
+    {
+      "Name": "CloudScriptAzureFunctionsArgumentSizeExceeded",
+      "Value": "1471"
+    },
+    {
+      "Name": "CloudScriptAzureFunctionsReturnSizeExceeded",
+      "Value": "1472"
+    },
+    {
+      "Name": "CloudScriptAzureFunctionsHTTPRequestError",
+      "Value": "1473"
+    },
+    {
+      "Name": "CloudScriptAzureFunctionsQueueRequestError",
+      "Value": "1494"
+    },
+    {
+      "Name": "AzureTitleCreationInProgress",
+      "Value": "1522"
+    },
+    {
+      "Name": "AzureResourceConcurrentOperationInProgress",
+      "Value": "1529"
+    },
+    {
+      "Name": "AzureResourceManagerNotSupportedInStamp",
+      "Value": "1531"
+    },
+    {
+      "Name": "ApiNotIncludedInAzurePlayFabFeatureSet",
+      "Value": "1532"
+    },
+    {
+      "Name": "CloudScriptAzureFunctionsEventHubRequestError",
+      "Value": "1579"
+    },
+    {
+      "Name": "AzureSubscriptionNotEligibleForLinking",
+      "Value": "1614"
+    }
+  ],
+  "DeletedFiles": 191,
+  "RetainedCSharp": 14,
+  "AdditionalRetirement": "Private transport factory and unreferenced ITransportPlugin interface"
+}

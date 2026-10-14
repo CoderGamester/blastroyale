@@ -2,12 +2,6 @@ using PlayFab.Internal;
 
 namespace PlayFab.SharedModels
 {
-    public class HttpResponseObject
-    {
-        public int code;
-        public string status;
-        public object data;
-    }
 
     public class PlayFabBaseModel
     {
@@ -17,8 +11,6 @@ namespace PlayFab.SharedModels
             return json.SerializeObject(this);
         }
     }
-
-    public interface IPlayFabInstanceApi { }
 
     public class PlayFabRequestCommon : PlayFabBaseModel
     {

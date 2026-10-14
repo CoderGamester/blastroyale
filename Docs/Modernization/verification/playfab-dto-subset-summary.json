@@ -1,0 +1,825 @@
+{
+  "Passed": true,
+  "RetainedCSharpFiles": 14,
+  "RetainedTopLevelSourceTypes": 99,
+  "OriginalImportedAssemblyTypes": 1276,
+  "DirectGameRoots": 19,
+  "DirectEditorTestRoots": 9,
+  "FirstLightServerSDKAssemblyDependencies": [
+    "Microsoft.Bcl.AsyncInterfaces",
+    "mscorlib",
+    "Newtonsoft.Json",
+    "System.Core",
+    "System.Numerics",
+    "System.Threading.Tasks.Extensions",
+    "UniTask"
+  ],
+  "FirstLightServerSDKHasPlayFabDependency": false,
+  "DeletedFilesIncludingMetadataAndResources": 191,
+  "RemovedExplicitAzureErrorConstants": 11,
+  "BannedSourceReferences": {
+    "Azure": 0,
+    "Facebook": 0,
+    "Firebase": 0
+  },
+  "CompilerAssemblies": [
+    "PlayFab",
+    "FirstLight.Game",
+    "FirstLight.Game.Server",
+    "FirstLight.Editor",
+    "FirstLight.Game.Editor.Tests",
+    "FirstLight.Game.Tests"
+  ],
+  "CSharpErrors": 0,
+  "CSharpWarnings": 0,
+  "NativeSerializerParityCases": 4,
+  "NativeSerializerParityFailures": 0,
+  "RetainedResourceSettingsAsset": false,
+  "MainImportTestsBuildAfterPromotion": "Not run by this agent",
+  "AssemblySHA256": "d91f5974747e82b0fd6730e5974640e8f1587a6361a51da1d3c016f31b2e91c5",
+  "SourceHashes": {
+    "BlastRoyale/Packages/PlayFabSDK/CloudScript/PlayFabCloudScriptModels.cs": "2eb23564b1a013c82df8bc1ae2e0ec66d3ea24a3823ce09e80f22b7450c8cef7",
+    "BlastRoyale/Packages/PlayFabSDK/Client/PlayFabClientModels.cs": "a453d0828170f1a52a12e2e1bf1303465f0dc92eac630704fe556d8da56ce6f8",
+    "BlastRoyale/Packages/PlayFabSDK/Shared/Internal/Util.cs": "a142800a6f435e2f2b54d95fe5cfd319d440b67fb2b536988f3747388f5491e7",
+    "BlastRoyale/Packages/PlayFabSDK/Shared/Internal/SimpleJson.cs": "ac4a8e63e96b8afd15213a403b50565e3571accb3eeb0703dc8786a7f3c11b67",
+    "BlastRoyale/Packages/PlayFabSDK/Shared/Internal/ISerializer.cs": "80d3be9ba5d7530c68b3d5a3364b5f6fe0f27d2994e69a50559b02b4077630c8",
+    "BlastRoyale/Packages/PlayFabSDK/Shared/Internal/wsaReflectionExtensions.cs": "14305e88ebfdf929afc1bd020b22e17b48edc72473b140c8b8ab5f653918fb04",
+    "BlastRoyale/Packages/PlayFabSDK/Shared/Internal/PlayFabErrors.cs": "e01d1fc5aaff314336608ea1ac713696709e9e7cfe3e46cda7f7e55e5236f776",
+    "BlastRoyale/Packages/PlayFabSDK/Shared/Models/SharedModels.cs": "94a9ee2768724b30302944148c9bbec57c6bbf1eb91f93f5c3317fe7c5d74484",
+    "BlastRoyale/Packages/PlayFabSDK/Shared/Public/PlayFabAuthenticationContext.cs": "f7acd37333465b4caea7c0300b3384ff41e50cb94a3ab7d0a71b5083b67ae93f",
+    "BlastRoyale/Packages/PlayFabSDK/Shared/Public/IPlayFabPlugin.cs": "038f69716b200c6ed69e01a1e16d5a0f08ef77c232f1d4fc8237c6aa2c59f451",
+    "BlastRoyale/Packages/PlayFabSDK/Shared/Public/PluginContract.cs": "dbfb0b36473c1748f62499f8806ad8eb66395bd765c4d47312063af8ae1dd915",
+    "BlastRoyale/Packages/PlayFabSDK/Shared/Public/PluginContractKey.cs": "143c8d4a45009864da5ab091c52b0a13fc598d3387e9b5262f0a63cc75a1137a",
+    "BlastRoyale/Packages/PlayFabSDK/Shared/Public/ISerializerPlugin.cs": "42b14677df2ab804d819124939949f72a7b33b3d420458e443cd0c667ff5d883",
+    "BlastRoyale/Packages/PlayFabSDK/Shared/Public/PluginManager.cs": "ff0f694312f4d1c574f48f70bf7f5305177a13666d303505972e0708388c1b73",
+    "BlastRoyale/Assets/Src/FirstLight/Tests/EditorMode/Integration/IntegrationFramework/StubFLLobbyService.cs": "00f4137b5002a20a439acbde120ebab66aa0e9e1f4e10fc07b5602c88b4601bf",
+    "BlastRoyale/Packages/PlayFabSDK/package.json": "944cde2b5ff2beac02384070568229e4f3539ec2aeca9c43ba893d4007a2f7f9",
+    "BlastRoyale/Packages/PlayFabSDK/PROVENANCE.md": "40db81dce08cfd43be64abdeb677933944f6e0b7ddb1b5c319827e92c137e6c1"
+  },
+  "Retirements": [
+    {
+      "Path": "BlastRoyale/Packages/PlayFabSDK/link.xml.meta",
+      "BeforeSHA256": "755d19d94e91d85ad427d61a24292d9ec5d3a0f29da61ed85adba10d23404027"
+    },
+    {
+      "Path": "BlastRoyale/Packages/PlayFabSDK/link.xml",
+      "BeforeSHA256": "2f50c19b335826db9b6b21b331ee49f408ec2de501f4ec476b42d5a566cd96f7"
+    },
+    {
+      "Path": "BlastRoyale/Packages/PlayFabSDK/Admin.meta",
+      "BeforeSHA256": "7f89b1196b7282227248c26f86d51df0a7bbaf1ed5a8d8f8a4664726732a2089"
+    },
+    {
+      "Path": "BlastRoyale/Packages/PlayFabSDK/Groups.meta",
+      "BeforeSHA256": "262063355cc84fba138233e18f7ebde1a2c46d2afe54188db55087bde964a14c"
+    },
+    {
+      "Path": "BlastRoyale/Packages/PlayFabSDK/Experimentation.meta",
+      "BeforeSHA256": "6e6b1c6cdce6c0191430322538dc06d73a2dab54a485a950b960fdc3e5ed162e"
+    },
+    {
+      "Path": "BlastRoyale/Packages/PlayFabSDK/PROVENANCE.md.meta",
+      "BeforeSHA256": "937687c08e8af1eb9eea9ab6295d4bf43f5ab37ae20ebff23ffe746888233fb6"
+    },
+    {
+      "Path": "BlastRoyale/Packages/PlayFabSDK/Progression.meta",
+      "BeforeSHA256": "f8f42963c01b4911f5a1bbe7cab3776d343fbcb810bfc92de5812f9a71da0330"
+    },
+    {
+      "Path": "BlastRoyale/Packages/PlayFabSDK/Data.meta",
+      "BeforeSHA256": "6f05f6a5efda9dd24bdcec79d678505ab780afd59d484143592535d98eb3eaf1"
+    },
+    {
+      "Path": "BlastRoyale/Packages/PlayFabSDK/Authentication.meta",
+      "BeforeSHA256": "a378ee9f4c2743ba92d4d4296f60d7bdb475a890e296a5dfb0426a6e49a0fdb7"
+    },
+    {
+      "Path": "BlastRoyale/Packages/PlayFabSDK/Profiles.meta",
+      "BeforeSHA256": "9ae16eddef54035ef1d06e82773107be7999f2a11fb951e4d8d99956ddee2c62"
+    },
+    {
+      "Path": "BlastRoyale/Packages/PlayFabSDK/.gitignore",
+      "BeforeSHA256": "4aaf9349e033ba08b931aef3c285ca7e3d59b33d7f8667d6d0c5bee7ce0c2c61"
+    },
+    {
+      "Path": "BlastRoyale/Packages/PlayFabSDK/Server.meta",
+      "BeforeSHA256": "beb72fd9cb39e91e36737d80397a30f65b59c87df4e6f80df6a1383136a232ed"
+    },
+    {
+      "Path": "BlastRoyale/Packages/PlayFabSDK/Events.meta",
+      "BeforeSHA256": "fba98a58563e229a6d74b9153bba2dce791bc0e5d99b7685e6238c9b3c495dfe"
+    },
+    {
+      "Path": "BlastRoyale/Packages/PlayFabSDK/Entity.meta",
+      "BeforeSHA256": "de13e11529d104d65f663d3657def8457647ad70923f1032eab74b7846564ca3"
+    },
+    {
+      "Path": "BlastRoyale/Packages/PlayFabSDK/Insights.meta",
+      "BeforeSHA256": "4c34b7f925c75d24e97b576bc7cb70a1cc62d027eb5ea48f0a8d12a8bbf95727"
+    },
+    {
+      "Path": "BlastRoyale/Packages/PlayFabSDK/Multiplayer.meta",
+      "BeforeSHA256": "275903686643229cb8cc7c86e02c7a4875f8241f61426391d09c26e84310c7ad"
+    },
+    {
+      "Path": "BlastRoyale/Packages/PlayFabSDK/Localization.meta",
+      "BeforeSHA256": "a3ed5d6edab94831237a1a584bc60e8e3071c3b008c634123ecc930caa03eed8"
+    },
+    {
+      "Path": "BlastRoyale/Packages/PlayFabSDK/Addon.meta",
+      "BeforeSHA256": "91e40bfd6552e610eb336dd7ab71f836de2adc444dbb69922b43910a93ee533c"
+    },
+    {
+      "Path": "BlastRoyale/Packages/PlayFabSDK/Leaderboards.meta",
+      "BeforeSHA256": "42148bc5a81ca3b8b30ab3d43c019d8655af1783cecd97d0d3dab3aec1585515"
+    },
+    {
+      "Path": "BlastRoyale/Packages/PlayFabSDK/Economy.meta",
+      "BeforeSHA256": "9494ebff60ab1b8ec8931a100a0b85361771d7a9e3c6ae4a7e226a9347784db9"
+    },
+    {
+      "Path": "BlastRoyale/Packages/PlayFabSDK/Insights/PlayFabInsightsAPI.cs",
+      "BeforeSHA256": "45ba74b3b80aeed9ad2f21bed572958ad09fd6e03fecfa761fb8b3643a9be373"
+    },
+    {
+      "Path": "BlastRoyale/Packages/PlayFabSDK/Insights/PlayFabInsightsModels.cs",
+      "BeforeSHA256": "741203c12a3d18721232c1ebe48a9dd755fa9c584424eee06c8a7d9c39d0d5eb"
+    },
+    {
+      "Path": "BlastRoyale/Packages/PlayFabSDK/Insights/PlayFabEvents.cs",
+      "BeforeSHA256": "abbfac080067bd834184bd765d9d22ebf0b75a3e526a7441d1c67ffb5ddeade6"
+    },
+    {
+      "Path": "BlastRoyale/Packages/PlayFabSDK/Insights/PlayFabInsightsAPI.cs.meta",
+      "BeforeSHA256": "acaed96113a849ae57f9490f87deef45c928b0412776c0c7f5932b5ee03ae22f"
+    },
+    {
+      "Path": "BlastRoyale/Packages/PlayFabSDK/Insights/PlayFabInsightsInstanceAPI.cs",
+      "BeforeSHA256": "37ecab7f5f2923d8d44c01aef6995fceb523530c9e2f0eeb1d83096b67c4c0a4"
+    },
+    {
+      "Path": "BlastRoyale/Packages/PlayFabSDK/Insights/PlayFabInsightsInstanceAPI.cs.meta",
+      "BeforeSHA256": "2906cd0c5df5382adc9fb2750527f027b1db741b1bcd030d26d418a455dcf3c1"
+    },
+    {
+      "Path": "BlastRoyale/Packages/PlayFabSDK/Insights/PlayFabEvents.cs.meta",
+      "BeforeSHA256": "bbf43a452f366b32d15a642c0f64399ae51b522ef7bd762bdc4d7aaab3bb3917"
+    },
+    {
+      "Path": "BlastRoyale/Packages/PlayFabSDK/Insights/PlayFabInsightsModels.cs.meta",
+      "BeforeSHA256": "0fffed68f6349651bdf3784588d4ccbef1c83388ae79bca594151b878dae6507"
+    },
+    {
+      "Path": "BlastRoyale/Packages/PlayFabSDK/Economy/PlayFabEconomyModels.cs.meta",
+      "BeforeSHA256": "2c625f655cdbbe6f80458bdc62c4a8df3ba9149f8f8c4441bec8376c92b3ef76"
+    },
+    {
+      "Path": "BlastRoyale/Packages/PlayFabSDK/Economy/PlayFabEvents.cs",
+      "BeforeSHA256": "b72877d6123c22fd14f560ce5a9b00250aa22a69767d9f19b964b4bdb2be0b2c"
+    },
+    {
+      "Path": "BlastRoyale/Packages/PlayFabSDK/Economy/PlayFabEconomyInstanceAPI.cs.meta",
+      "BeforeSHA256": "c625a1e0dfd430a1822e40bf24dc71334b2aa511fe3bf23ab5ec2040d04dc32b"
+    },
+    {
+      "Path": "BlastRoyale/Packages/PlayFabSDK/Economy/PlayFabEconomyAPI.cs",
+      "BeforeSHA256": "3a4ca705df5111354196bf184ee31c80a66c3648880c2939574c897e164a0d83"
+    },
+    {
+      "Path": "BlastRoyale/Packages/PlayFabSDK/Economy/PlayFabEconomyInstanceAPI.cs",
+      "BeforeSHA256": "6b579bd3ff7be32e4092471690e655899cd1816932bc2f9bd005610c3415560a"
+    },
+    {
+      "Path": "BlastRoyale/Packages/PlayFabSDK/Economy/PlayFabEvents.cs.meta",
+      "BeforeSHA256": "f459c35905421dd46be1671a746fcfe77ed9c042a2ad27a01942628bdabd0846"
+    },
+    {
+      "Path": "BlastRoyale/Packages/PlayFabSDK/Economy/PlayFabEconomyAPI.cs.meta",
+      "BeforeSHA256": "2673f8e061c5216cb2c502851fcc6b37082699c5b9924169fb94a4439dc497a3"
+    },
+    {
+      "Path": "BlastRoyale/Packages/PlayFabSDK/Economy/PlayFabEconomyModels.cs",
+      "BeforeSHA256": "082dabf25689ef32b9b46e9aad1acd28eafbc1921d44eeba6131b131775a32b8"
+    },
+    {
+      "Path": "BlastRoyale/Packages/PlayFabSDK/Experimentation/PlayFabExperimentationInstanceAPI.cs",
+      "BeforeSHA256": "f47802b692724736d448d42c79eb3ca856def4a5191132198d70781ca8ab97fe"
+    },
+    {
+      "Path": "BlastRoyale/Packages/PlayFabSDK/Experimentation/PlayFabEvents.cs",
+      "BeforeSHA256": "eef57c29bf29b93e4a4b4bef1296b4772221f8d112adcdfdf283cb385753f735"
+    },
+    {
+      "Path": "BlastRoyale/Packages/PlayFabSDK/Experimentation/PlayFabExperimentationAPI.cs.meta",
+      "BeforeSHA256": "5519372fcd0a659e654fef5051485f13df829ad6681d9d27ba6c87b07e3b04a2"
+    },
+    {
+      "Path": "BlastRoyale/Packages/PlayFabSDK/Experimentation/PlayFabExperimentationModels.cs",
+      "BeforeSHA256": "5857ad16aa3a2579a5e1c9f0f2e25dd50624dba994eea0b4d2cad170ef88591a"
+    },
+    {
+      "Path": "BlastRoyale/Packages/PlayFabSDK/Experimentation/PlayFabEvents.cs.meta",
+      "BeforeSHA256": "539317aced56ccaa4d37ef64dfe09793bc7e1b92f78c3c95234f326af98a0e31"
+    },
+    {
+      "Path": "BlastRoyale/Packages/PlayFabSDK/Experimentation/PlayFabExperimentationModels.cs.meta",
+      "BeforeSHA256": "350582e0b6a480d7842f6c2139e76658e52a2ddb4ec2a6104930badc13fc681b"
+    },
+    {
+      "Path": "BlastRoyale/Packages/PlayFabSDK/Experimentation/PlayFabExperimentationAPI.cs",
+      "BeforeSHA256": "d4764c0105908385eb9bb5ab26f0efa89459a4bbf2080c969f45002a85d96eb2"
+    },
+    {
+      "Path": "BlastRoyale/Packages/PlayFabSDK/Experimentation/PlayFabExperimentationInstanceAPI.cs.meta",
+      "BeforeSHA256": "e33992ab8e155bfaedd6d768c75ddd490041cbf637dee4cc897141d52cffe0f9"
+    },
+    {
+      "Path": "BlastRoyale/Packages/PlayFabSDK/Entity/ScreenTimeTracker.cs",
+      "BeforeSHA256": "efc8d3df49510ea00f3cb13b1b7ef9ea607ee06e22e783f42bd6c679ee9fd32e"
+    },
+    {
+      "Path": "BlastRoyale/Packages/PlayFabSDK/Entity/ScreenTimeTracker.cs.meta",
+      "BeforeSHA256": "478b5e449ca5727277469730c0099843e0b92c98220db3ddcecbd416744fbad5"
+    },
+    {
+      "Path": "BlastRoyale/Packages/PlayFabSDK/Admin/PlayFabEvents.cs",
+      "BeforeSHA256": "01535f8bc0383afa18eb90a933077c66e6bda254da2ae21b9dd9e02a3f5cddce"
+    },
+    {
+      "Path": "BlastRoyale/Packages/PlayFabSDK/Admin/PlayFabAdminModels.cs",
+      "BeforeSHA256": "5d61af9740b1e6001475164f5dcb1e408f21073846679d99471899c26a287f49"
+    },
+    {
+      "Path": "BlastRoyale/Packages/PlayFabSDK/Admin/PlayFabAdminModels.cs.meta",
+      "BeforeSHA256": "08155fe842adbbf06bfb12165ac63a05ca20ff75a3173b08dd57f5861c129d7d"
+    },
+    {
+      "Path": "BlastRoyale/Packages/PlayFabSDK/Admin/PlayFabAdminAPI.cs.meta",
+      "BeforeSHA256": "7847abcafd33c6be1dcabddbc31b7d4800e0b245bde631f72c0579cb71b64328"
+    },
+    {
+      "Path": "BlastRoyale/Packages/PlayFabSDK/Admin/PlayFabEvents.cs.meta",
+      "BeforeSHA256": "df2bbbe8fc60b39097f776af3208b6eb3e6a55e0ebe651baae501f2c486f14c3"
+    },
+    {
+      "Path": "BlastRoyale/Packages/PlayFabSDK/Admin/PlayFabAdminAPI.cs",
+      "BeforeSHA256": "d24c190349ce5e4fdc9793c0e4f53d4ad0e68b5cbda815ea3b30a1e8e15cdab2"
+    },
+    {
+      "Path": "BlastRoyale/Packages/PlayFabSDK/Admin/PlayFabAdminInstanceAPI.cs",
+      "BeforeSHA256": "cd0476200520effe40747c0541848129366c8ccea7811c7b2e950570311b9cd7"
+    },
+    {
+      "Path": "BlastRoyale/Packages/PlayFabSDK/Admin/PlayFabAdminInstanceAPI.cs.meta",
+      "BeforeSHA256": "f1b483782bd40df8618aa9b656395e5159509c92a35a715f7f501fef9000fa1c"
+    },
+    {
+      "Path": "BlastRoyale/Packages/PlayFabSDK/Server/PlayFabServerModels.cs",
+      "BeforeSHA256": "5dad94c28cf68b07587fc9a029a2ac9513c6eaa00387e33f38f8e1542c409ec7"
+    },
+    {
+      "Path": "BlastRoyale/Packages/PlayFabSDK/Server/PlayFabEvents.cs",
+      "BeforeSHA256": "7976416e8048c5097167eaa55d4fda854db41535bce9cb19a5e1476633e96f4d"
+    },
+    {
+      "Path": "BlastRoyale/Packages/PlayFabSDK/Server/PlayFabServerModels.cs.meta",
+      "BeforeSHA256": "4b770016579e992038869ad10d44ae4aaa88fd73fc19b4f2fece03481f8fe8ba"
+    },
+    {
+      "Path": "BlastRoyale/Packages/PlayFabSDK/Server/PlayFabServerInstanceAPI.cs.meta",
+      "BeforeSHA256": "af8d1278df7e7f1452ddb5f6b2dbb381571444f18eaea7c40d838eca936d6d87"
+    },
+    {
+      "Path": "BlastRoyale/Packages/PlayFabSDK/Server/PlayFabEvents.cs.meta",
+      "BeforeSHA256": "544187a5c41233ccc6a5559d51c7d721305463ea7db72137b1fedb1320656dc8"
+    },
+    {
+      "Path": "BlastRoyale/Packages/PlayFabSDK/Server/PlayFabServerAPI.cs.meta",
+      "BeforeSHA256": "10ffe15dba9a91cc33949af7bc57304d89df99499298c7e1421dc1459f9b5e26"
+    },
+    {
+      "Path": "BlastRoyale/Packages/PlayFabSDK/Server/PlayFabServerInstanceAPI.cs",
+      "BeforeSHA256": "8b479c9fef0ef07e2f2bfe9d8588adb621a317e307e46e357cea449dd9cf451a"
+    },
+    {
+      "Path": "BlastRoyale/Packages/PlayFabSDK/Server/PlayFabServerAPI.cs",
+      "BeforeSHA256": "7fdc0ac57bbbe572c586b9b79b0697e33901cb1be9a5cfd420fd4f2ea4f17e86"
+    },
+    {
+      "Path": "BlastRoyale/Packages/PlayFabSDK/Shared/Editor.meta",
+      "BeforeSHA256": "8ae7f706e3a22406fbee257ac647957a30256a36eeeb56dea98ef74c9c03bbd3"
+    },
+    {
+      "Path": "BlastRoyale/Packages/PlayFabSDK/Groups/PlayFabGroupsInstanceAPI.cs.meta",
+      "BeforeSHA256": "00e6f77d40d0413a1666be9f0344c36749ecc37c715b2d482f4e5eefa10bf809"
+    },
+    {
+      "Path": "BlastRoyale/Packages/PlayFabSDK/Groups/PlayFabGroupsAPI.cs",
+      "BeforeSHA256": "3a07d9d2e25c948bd99d9852a2ce3e922f608f10e8684a0a39fc9d90b04b36b3"
+    },
+    {
+      "Path": "BlastRoyale/Packages/PlayFabSDK/Groups/PlayFabGroupsInstanceAPI.cs",
+      "BeforeSHA256": "7e4c5d9286ef74f90cbbc9acdda059c6b2a9a58d2fbee299c5b3d2e74b65c1fe"
+    },
+    {
+      "Path": "BlastRoyale/Packages/PlayFabSDK/Groups/PlayFabGroupsModels.cs",
+      "BeforeSHA256": "16e4f86a33d578406988b178125f9d7f68ec3b447667c7edb7a6db1fbaa980b5"
+    },
+    {
+      "Path": "BlastRoyale/Packages/PlayFabSDK/Groups/PlayFabEvents.cs",
+      "BeforeSHA256": "7eaef87c948c04e93e8d5bbbbd1b0d6b96a3a89eda9463584479c8ecf47697de"
+    },
+    {
+      "Path": "BlastRoyale/Packages/PlayFabSDK/Groups/PlayFabGroupsModels.cs.meta",
+      "BeforeSHA256": "c74a5baced1bf1308996213fd593350f58c18cf410ce2fb97c0640a04cf2bc74"
+    },
+    {
+      "Path": "BlastRoyale/Packages/PlayFabSDK/Groups/PlayFabEvents.cs.meta",
+      "BeforeSHA256": "963583fe04f991d696ec6589ee27b89f891d2fdde04378fdd4be080f87747d66"
+    },
+    {
+      "Path": "BlastRoyale/Packages/PlayFabSDK/Groups/PlayFabGroupsAPI.cs.meta",
+      "BeforeSHA256": "f66bbc0ef377da9b098308e378f93ebd1242cf82672615ea0fd9259fc65a2305"
+    },
+    {
+      "Path": "BlastRoyale/Packages/PlayFabSDK/CloudScript/PlayFabCloudScriptInstanceAPI.cs.meta",
+      "BeforeSHA256": "2fd40524139b30f085f038b304ef6831f53a544d4c3ef08ef3fe22b105980e08"
+    },
+    {
+      "Path": "BlastRoyale/Packages/PlayFabSDK/CloudScript/PlayFabEvents.cs",
+      "BeforeSHA256": "7bac5a54edbd1e524598d1ae49f59e27d34c415c48928f2c873c77328266f8d0"
+    },
+    {
+      "Path": "BlastRoyale/Packages/PlayFabSDK/CloudScript/PlayFabCloudScriptAPI.cs.meta",
+      "BeforeSHA256": "da7551858fa010ead04bf8091e5b179c39b3efed995fa39c754ee422e3080d51"
+    },
+    {
+      "Path": "BlastRoyale/Packages/PlayFabSDK/CloudScript/PlayFabEvents.cs.meta",
+      "BeforeSHA256": "e0f8c96fcd4150b7ee4a6ccbdc0f3358426b20d7056454c8bce296967e6d7070"
+    },
+    {
+      "Path": "BlastRoyale/Packages/PlayFabSDK/CloudScript/PlayFabCloudScriptInstanceAPI.cs",
+      "BeforeSHA256": "5afac667ce650a97344ec6314870ab9f76d76ff958fc2793850334408dd68e51"
+    },
+    {
+      "Path": "BlastRoyale/Packages/PlayFabSDK/CloudScript/PlayFabCloudScriptAPI.cs",
+      "BeforeSHA256": "2c9874ad7629571421863eb24e2732260a1a6eceb56b702857c88fef7b7563d5"
+    },
+    {
+      "Path": "BlastRoyale/Packages/PlayFabSDK/Addon/PlayFabAddonModels.cs.meta",
+      "BeforeSHA256": "419cb103f09dde845ed18cd766dfca551901973ee2eaf7882ee1d9631c9f455a"
+    },
+    {
+      "Path": "BlastRoyale/Packages/PlayFabSDK/Addon/PlayFabAddonInstanceAPI.cs.meta",
+      "BeforeSHA256": "9a7c02ac22b1e102669a7f8c260bc4a2e911fa6f9c6fa4418ed5b8733b966bf6"
+    },
+    {
+      "Path": "BlastRoyale/Packages/PlayFabSDK/Addon/PlayFabEvents.cs",
+      "BeforeSHA256": "912b39431183db5254812114b9ff119ac6c7cbb0813b4f8740a96af7e4dcb818"
+    },
+    {
+      "Path": "BlastRoyale/Packages/PlayFabSDK/Addon/PlayFabAddonAPI.cs.meta",
+      "BeforeSHA256": "44b2c298c31464dfed7a078802846e822572ff0d5e14cbab76eb0ece704f1405"
+    },
+    {
+      "Path": "BlastRoyale/Packages/PlayFabSDK/Addon/PlayFabEvents.cs.meta",
+      "BeforeSHA256": "503c506d0f6046e7dd380ff24b1017148713057c4af294470aa1effab6cdfa90"
+    },
+    {
+      "Path": "BlastRoyale/Packages/PlayFabSDK/Addon/PlayFabAddonInstanceAPI.cs",
+      "BeforeSHA256": "f92f5a963d089409a7d2a3855da3e15ab676ffc4e229674aea3c914d66c4f911"
+    },
+    {
+      "Path": "BlastRoyale/Packages/PlayFabSDK/Addon/PlayFabAddonModels.cs",
+      "BeforeSHA256": "40d153c6026d49539b34d1421c6210dc3a6423b28fbdb8f948251b07e8b2596b"
+    },
+    {
+      "Path": "BlastRoyale/Packages/PlayFabSDK/Addon/PlayFabAddonAPI.cs",
+      "BeforeSHA256": "17c4d64543b91841980b32e14669f56ae1fd7d61398299579b0f23195cbffb85"
+    },
+    {
+      "Path": "BlastRoyale/Packages/PlayFabSDK/Progression/PlayFabProgressionAPI.cs",
+      "BeforeSHA256": "7f7d267515363a392d8e8f19d3f043c298a4fa6b02a5844ea0adc5be38fb0494"
+    },
+    {
+      "Path": "BlastRoyale/Packages/PlayFabSDK/Progression/PlayFabProgressionInstanceAPI.cs.meta",
+      "BeforeSHA256": "5bbcca33ff4150db930225a696fa3625679d784f2a5f3e3b1a70d7143b9ab519"
+    },
+    {
+      "Path": "BlastRoyale/Packages/PlayFabSDK/Progression/PlayFabEvents.cs",
+      "BeforeSHA256": "8e6346493ce0ec45f4251f2d710aa263ad8bdfd005b1f2440276efd68920ce73"
+    },
+    {
+      "Path": "BlastRoyale/Packages/PlayFabSDK/Progression/PlayFabProgressionInstanceAPI.cs",
+      "BeforeSHA256": "4d933e49341ce0a3eb667f4b3dcd699ac1d54c51eb60440941b77ff54d6d86ca"
+    },
+    {
+      "Path": "BlastRoyale/Packages/PlayFabSDK/Progression/PlayFabProgressionModels.cs",
+      "BeforeSHA256": "8e794dc03bd72d85654f6168e5fbd1661b89d475a838eec0d26a191417212edb"
+    },
+    {
+      "Path": "BlastRoyale/Packages/PlayFabSDK/Progression/PlayFabProgressionAPI.cs.meta",
+      "BeforeSHA256": "0dd3e1cf8bbd7002162afa9f95beb9e38d43437e6768b685a628e9c3e14374ec"
+    },
+    {
+      "Path": "BlastRoyale/Packages/PlayFabSDK/Progression/PlayFabEvents.cs.meta",
+      "BeforeSHA256": "f869d43ffc350d1bfcb964ab29fc08720456ae3ad5da7d6ae37fc64380e8312b"
+    },
+    {
+      "Path": "BlastRoyale/Packages/PlayFabSDK/Progression/PlayFabProgressionModels.cs.meta",
+      "BeforeSHA256": "585a3543fb77ccf51564542b32a4b543e621c56b598d48f88761bb0a57f9c1a4"
+    },
+    {
+      "Path": "BlastRoyale/Packages/PlayFabSDK/Profiles/PlayFabProfilesInstanceAPI.cs",
+      "BeforeSHA256": "c430cc9d411a5e07ab18b275652ff4b5e01a5abe18c6f0fab85eca1a84f3e2db"
+    },
+    {
+      "Path": "BlastRoyale/Packages/PlayFabSDK/Profiles/PlayFabProfilesInstanceAPI.cs.meta",
+      "BeforeSHA256": "60663609fecd6389b44761d90d0263ced99a776f829ff0378c3abb0bc06bd256"
+    },
+    {
+      "Path": "BlastRoyale/Packages/PlayFabSDK/Profiles/PlayFabProfilesAPI.cs",
+      "BeforeSHA256": "733db6e696b075d3d444e7b7e5069033eb16087f51cd4a2411fe5d2901fb5dfc"
+    },
+    {
+      "Path": "BlastRoyale/Packages/PlayFabSDK/Profiles/PlayFabEvents.cs",
+      "BeforeSHA256": "67c9dc50bd19adeb373695822d28e6d5c1360512fa288d5d5288798836ab5d75"
+    },
+    {
+      "Path": "BlastRoyale/Packages/PlayFabSDK/Profiles/PlayFabProfilesModels.cs",
+      "BeforeSHA256": "0433494bb70e42a9f54012e6a87cceb1d1ac8cc0ad5b2e59c2a09d44470478d4"
+    },
+    {
+      "Path": "BlastRoyale/Packages/PlayFabSDK/Profiles/PlayFabProfilesModels.cs.meta",
+      "BeforeSHA256": "685be5c6bf32ffa6a98847c4a8c1d46c68e467a98d79198b71e09c3744d876ec"
+    },
+    {
+      "Path": "BlastRoyale/Packages/PlayFabSDK/Profiles/PlayFabEvents.cs.meta",
+      "BeforeSHA256": "ca10f7390970e0741028fb7a5ed6dcb5f032aa398dd321363881738300076ef3"
+    },
+    {
+      "Path": "BlastRoyale/Packages/PlayFabSDK/Profiles/PlayFabProfilesAPI.cs.meta",
+      "BeforeSHA256": "187e133970b1f8aef580c3edfbd9e1bb8b4f022bed57a4d7a7c31449fe92d033"
+    },
+    {
+      "Path": "BlastRoyale/Packages/PlayFabSDK/Events/PlayFabEventsModels.cs.meta",
+      "BeforeSHA256": "b0b52f92df558e33daf7700ba8d3ea3b1ec8fa6e9768ec2b0bf517fa7a815cc5"
+    },
+    {
+      "Path": "BlastRoyale/Packages/PlayFabSDK/Events/PlayFabEventsAPI.cs.meta",
+      "BeforeSHA256": "d843cc2b8bb3d1f7730f1a3bc8a280b2d15c61bab2e099a9912540fd006c77ec"
+    },
+    {
+      "Path": "BlastRoyale/Packages/PlayFabSDK/Events/PlayFabEventsAPI.cs",
+      "BeforeSHA256": "034236b34efa1209b87e8474ac758dd86831a8c0863bc3cf84ff31c395bb2dfa"
+    },
+    {
+      "Path": "BlastRoyale/Packages/PlayFabSDK/Events/PlayFabEvents.cs",
+      "BeforeSHA256": "d6c00613e41c3668eff5de38f9b333454941fcaeb03ea2b893619568510f979f"
+    },
+    {
+      "Path": "BlastRoyale/Packages/PlayFabSDK/Events/PlayFabEventsInstanceAPI.cs",
+      "BeforeSHA256": "2a9c854f289566f3bbc38cfc1f9965bf3770bad7fc227e589e954b19d95f1ad8"
+    },
+    {
+      "Path": "BlastRoyale/Packages/PlayFabSDK/Events/PlayFabEventsModels.cs",
+      "BeforeSHA256": "a251a669063f3287cb975123ff773628d5ad9bb97737f5cfd8d5e890ed15b90d"
+    },
+    {
+      "Path": "BlastRoyale/Packages/PlayFabSDK/Events/PlayFabEvents.cs.meta",
+      "BeforeSHA256": "8f579cf28dfb02ff3d1d5869d2c5aee566b3100ca2bd37e3ca94dea47e46a5c2"
+    },
+    {
+      "Path": "BlastRoyale/Packages/PlayFabSDK/Events/PlayFabEventsInstanceAPI.cs.meta",
+      "BeforeSHA256": "87b4d19467637b06b2a460d03ff70bc45826944935087977faa560f42963a1a8"
+    },
+    {
+      "Path": "BlastRoyale/Packages/PlayFabSDK/Data/PlayFabDataModels.cs.meta",
+      "BeforeSHA256": "eb354693d33b37b5caacb31b85d7526b0e33273ec353d969193b6f05b3913fce"
+    },
+    {
+      "Path": "BlastRoyale/Packages/PlayFabSDK/Data/PlayFabEvents.cs",
+      "BeforeSHA256": "3824e40e42e09f8ec3ff9496efbf37f8878a484ec2ead4c492e97f9be90d5891"
+    },
+    {
+      "Path": "BlastRoyale/Packages/PlayFabSDK/Data/PlayFabDataInstanceAPI.cs.meta",
+      "BeforeSHA256": "017edbe94a6ca16c57aa2d34e199ceaf703e1321a4e4e10c743bfe9df026045f"
+    },
+    {
+      "Path": "BlastRoyale/Packages/PlayFabSDK/Data/PlayFabDataAPI.cs",
+      "BeforeSHA256": "c385a1686e549cd0c632f8dfe4e1a09ede6edd73a806c8d78ad02c14b1c3fba4"
+    },
+    {
+      "Path": "BlastRoyale/Packages/PlayFabSDK/Data/PlayFabDataAPI.cs.meta",
+      "BeforeSHA256": "07f81b0f9ef9468007868f4ecac15074b1e32d76a98bd0f6fba02b9678c7c0ed"
+    },
+    {
+      "Path": "BlastRoyale/Packages/PlayFabSDK/Data/PlayFabDataModels.cs",
+      "BeforeSHA256": "69a5ced5c996682604371b7ca7630c9f3bc3465024e7356a8085950191744ce3"
+    },
+    {
+      "Path": "BlastRoyale/Packages/PlayFabSDK/Data/PlayFabEvents.cs.meta",
+      "BeforeSHA256": "313f130812d35f663df3582fe28e7e05c74ddd197b08707bb108c56296d0d513"
+    },
+    {
+      "Path": "BlastRoyale/Packages/PlayFabSDK/Data/PlayFabDataInstanceAPI.cs",
+      "BeforeSHA256": "ee9ef36fb08ce60206d51e24a45d9da71784faee2e20b1c45923552ecec00623"
+    },
+    {
+      "Path": "BlastRoyale/Packages/PlayFabSDK/Authentication/PlayFabAuthenticationInstanceAPI.cs.meta",
+      "BeforeSHA256": "155dfcf436a5ea195b9a9c0a1d04f34888712adaf3ef47a2567bc89af583b01d"
+    },
+    {
+      "Path": "BlastRoyale/Packages/PlayFabSDK/Authentication/PlayFabAuthenticationModels.cs",
+      "BeforeSHA256": "3e766cd13296942d6ef932cbd3a9092f3570aead86be2dac14b2d84d06bfba97"
+    },
+    {
+      "Path": "BlastRoyale/Packages/PlayFabSDK/Authentication/PlayFabAuthenticationInstanceAPI.cs",
+      "BeforeSHA256": "01d73fbcb3d3f9f18d30d70a550c66a6daba8416a8fbb73747d3b51811bcac49"
+    },
+    {
+      "Path": "BlastRoyale/Packages/PlayFabSDK/Authentication/PlayFabEvents.cs",
+      "BeforeSHA256": "d20eecdaf7ca3a9582aa0e5f9a942d2d4087347098be64c00273c97faf5152e4"
+    },
+    {
+      "Path": "BlastRoyale/Packages/PlayFabSDK/Authentication/PlayFabAuthenticationAPI.cs",
+      "BeforeSHA256": "17f341a964cde0d38016cc78fb2819f4719fe757bd9785296a514226562402a7"
+    },
+    {
+      "Path": "BlastRoyale/Packages/PlayFabSDK/Authentication/PlayFabEvents.cs.meta",
+      "BeforeSHA256": "a7e3ffe6027b3aebcc27d7dc696044f47ad986259aeafb733eed7c2e87db43c7"
+    },
+    {
+      "Path": "BlastRoyale/Packages/PlayFabSDK/Authentication/PlayFabAuthenticationModels.cs.meta",
+      "BeforeSHA256": "4d3653030efda7a8451a654512afd174aa696b2eab07abd092ea7249db4a76e0"
+    },
+    {
+      "Path": "BlastRoyale/Packages/PlayFabSDK/Authentication/PlayFabAuthenticationAPI.cs.meta",
+      "BeforeSHA256": "4d2be66f3a8f6b628c2e84d9661baf4e0f5f8e4dce28ae14caad0ec9c684c4ef"
+    },
+    {
+      "Path": "BlastRoyale/Packages/PlayFabSDK/Client/PlayFabClientAPI.cs",
+      "BeforeSHA256": "989a6e044ef20a4e6d874f0ee4c5a8e7facc5e7d630486e76349935cd32d5de5"
+    },
+    {
+      "Path": "BlastRoyale/Packages/PlayFabSDK/Client/PlayFabClientAPI.cs.meta",
+      "BeforeSHA256": "f8e00b70fe80d140e6757387e13f14426197a80e30e572aa524debb290819d8b"
+    },
+    {
+      "Path": "BlastRoyale/Packages/PlayFabSDK/Client/PlayFabEvents.cs",
+      "BeforeSHA256": "a49185622ef7e08e5d6ec6f602316917f643a2539da21ec6794d57442285b14e"
+    },
+    {
+      "Path": "BlastRoyale/Packages/PlayFabSDK/Client/PlayFabClientInstanceAPI.cs.meta",
+      "BeforeSHA256": "cb41da49f82e1f26bdc40e79c07281e3b859e8bac994c0a9accf1436b1b80df8"
+    },
+    {
+      "Path": "BlastRoyale/Packages/PlayFabSDK/Client/PlayFabClientInstanceAPI.cs",
+      "BeforeSHA256": "46c8340a045c7ead4538dbb83003065c58c982c874effa675c224959b7f5d1de"
+    },
+    {
+      "Path": "BlastRoyale/Packages/PlayFabSDK/Client/PlayFabDeviceUtil.cs",
+      "BeforeSHA256": "bb5ae44adfa7ef70c517866db5a10f921d670e949fdf31b6199dcfb13c5890e4"
+    },
+    {
+      "Path": "BlastRoyale/Packages/PlayFabSDK/Client/PlayFabEvents.cs.meta",
+      "BeforeSHA256": "0f07d09809a079be63e6aca69c50e6d64c07321ea31a3d519d6dd643e4859157"
+    },
+    {
+      "Path": "BlastRoyale/Packages/PlayFabSDK/Client/PlayFabDeviceUtil.cs.meta",
+      "BeforeSHA256": "201e83a8848247de458b821ed82c781f6cb57c4295ff95f4ef3b3131ee218e13"
+    },
+    {
+      "Path": "BlastRoyale/Packages/PlayFabSDK/Multiplayer/PlayFabEvents.cs",
+      "BeforeSHA256": "f8cef55dc3028efc517bed694abd94536ee3ae3b8a526660dd5655f05fcdc2e7"
+    },
+    {
+      "Path": "BlastRoyale/Packages/PlayFabSDK/Multiplayer/PlayFabMultiplayerModels.cs",
+      "BeforeSHA256": "7930bd534d8d5c3e8621b9bb9761deec24433fa61b0b87673cb43e5ffcf8cce9"
+    },
+    {
+      "Path": "BlastRoyale/Packages/PlayFabSDK/Multiplayer/PlayFabMultiplayerModels.cs.meta",
+      "BeforeSHA256": "db55c3f2f87f30ceffdafdc77959d35ab639c7d727a079d0996a16e78f94fd52"
+    },
+    {
+      "Path": "BlastRoyale/Packages/PlayFabSDK/Multiplayer/PlayFabMultiplayerInstanceAPI.cs.meta",
+      "BeforeSHA256": "06a065408b5de90ebabe59ec0d5545d9a2f40d91c7285468e7f80d740fc495d6"
+    },
+    {
+      "Path": "BlastRoyale/Packages/PlayFabSDK/Multiplayer/PlayFabMultiplayerAPI.cs.meta",
+      "BeforeSHA256": "7181ab3774271d10037ae8c421a02be74837e0731fd4129fae0a35bc3184c01e"
+    },
+    {
+      "Path": "BlastRoyale/Packages/PlayFabSDK/Multiplayer/PlayFabEvents.cs.meta",
+      "BeforeSHA256": "06f596662fe705aa1bf395cb50d2044d1743d1ded35e69a28583de15e9ef924f"
+    },
+    {
+      "Path": "BlastRoyale/Packages/PlayFabSDK/Multiplayer/PlayFabMultiplayerAPI.cs",
+      "BeforeSHA256": "6ea6a926034ce37dcbea9eecce71aae40b2a259bfd268da19276e58c11587896"
+    },
+    {
+      "Path": "BlastRoyale/Packages/PlayFabSDK/Multiplayer/PlayFabMultiplayerInstanceAPI.cs",
+      "BeforeSHA256": "d20fee75970e2b6556152da520b7560f768e0d98b9cf057cb838f511dc72ee9d"
+    },
+    {
+      "Path": "BlastRoyale/Packages/PlayFabSDK/Localization/PlayFabLocalizationAPI.cs",
+      "BeforeSHA256": "27c288164c1176f2169af860b3a11b9f118d6666abbabdbb3dc4f60026859fc5"
+    },
+    {
+      "Path": "BlastRoyale/Packages/PlayFabSDK/Localization/PlayFabLocalizationModels.cs.meta",
+      "BeforeSHA256": "211ba8dc4c56561ddd073e5bd33316080aacbd49be1538ca7bc81911f99cb345"
+    },
+    {
+      "Path": "BlastRoyale/Packages/PlayFabSDK/Localization/PlayFabEvents.cs",
+      "BeforeSHA256": "78bc76d67ecffef0c510fb8d45282b0d69b0a3dc01028c4874aeeefb81110ca9"
+    },
+    {
+      "Path": "BlastRoyale/Packages/PlayFabSDK/Localization/PlayFabLocalizationInstanceAPI.cs",
+      "BeforeSHA256": "ad1f4e113b3fe7f1aca24e71c53e1f643805696e9a7200733916912ef4b98ed7"
+    },
+    {
+      "Path": "BlastRoyale/Packages/PlayFabSDK/Localization/PlayFabLocalizationAPI.cs.meta",
+      "BeforeSHA256": "4774e033aa70a17b0a688d0a89b6c36026c896558228123b42554f687bedfacb"
+    },
+    {
+      "Path": "BlastRoyale/Packages/PlayFabSDK/Localization/PlayFabLocalizationModels.cs",
+      "BeforeSHA256": "a3fe9768ee812601057a3046f7b6ee6e5fc44843f6a8a6d09d997505276a0bbe"
+    },
+    {
+      "Path": "BlastRoyale/Packages/PlayFabSDK/Localization/PlayFabEvents.cs.meta",
+      "BeforeSHA256": "a9eb5a27b60ac391f2461ed83b91947dc3edbfa007e75abdd59b417bb2b41297"
+    },
+    {
+      "Path": "BlastRoyale/Packages/PlayFabSDK/Localization/PlayFabLocalizationInstanceAPI.cs.meta",
+      "BeforeSHA256": "1b773a377f2678e7da842c97e7b9c1cb7bd40ab54e154cc97f600b3f9fc3af4a"
+    },
+    {
+      "Path": "BlastRoyale/Packages/PlayFabSDK/Shared/Internal/Log.cs",
+      "BeforeSHA256": "99dc509dbd5be08bf8f498a11f6c5d8296aef26fce816bf6493c11f7d3c1edef"
+    },
+    {
+      "Path": "BlastRoyale/Packages/PlayFabSDK/Shared/Internal/SingletonMonoBehaviour.cs",
+      "BeforeSHA256": "d821f4ab06eea5784a1c79bfee138660b8c6065ca038fd5042ffa1eaa5b91b4f"
+    },
+    {
+      "Path": "BlastRoyale/Packages/PlayFabSDK/Shared/Internal/PlayFabHttp.meta",
+      "BeforeSHA256": "b3e798c484c07a08177828030dac40ea67b1e9afaf098a8282bcff0c8e255612"
+    },
+    {
+      "Path": "BlastRoyale/Packages/PlayFabSDK/Shared/Internal/SingletonMonoBehaviour.cs.meta",
+      "BeforeSHA256": "958bf66278c3fa9f09e71730e7fb45f194abb9f8ea6f9f791d0afaa258f63e78"
+    },
+    {
+      "Path": "BlastRoyale/Packages/PlayFabSDK/Shared/Internal/Log.cs.meta",
+      "BeforeSHA256": "37217aa6f22d22805644d9e984381be3e5927323df711502d897bfffdd643566"
+    },
+    {
+      "Path": "BlastRoyale/Packages/PlayFabSDK/Shared/Models/PlayFabSharedSettings.cs",
+      "BeforeSHA256": "cf783034a744d8846891c7d2b8445372fa39b5f8611ce410384bf658e0bab117"
+    },
+    {
+      "Path": "BlastRoyale/Packages/PlayFabSDK/Shared/Models/Editor.meta",
+      "BeforeSHA256": "9a6fd6eead8edd1c8b4dc4c4d2127f20b1022c5e6a53ff3d756196c666582ba4"
+    },
+    {
+      "Path": "BlastRoyale/Packages/PlayFabSDK/Shared/Models/PlayFabSharedSettings.cs.meta",
+      "BeforeSHA256": "47cb867939a90b369b466f7770f04ddb3d4c32677f68ea6ede30d5fa781d8c11"
+    },
+    {
+      "Path": "BlastRoyale/Packages/PlayFabSDK/Shared/Public/PlayFabApiSettings.cs.meta",
+      "BeforeSHA256": "015bde319da02f1e26d607e395021a8d920e92a5f033396e5e45a44ae47c5408"
+    },
+    {
+      "Path": "BlastRoyale/Packages/PlayFabSDK/Shared/Public/PlayFabEvents.cs",
+      "BeforeSHA256": "01e206acdbe1934d6d9ba5f026551de80ce19740791a4ae10cad5bf2062772bf"
+    },
+    {
+      "Path": "BlastRoyale/Packages/PlayFabSDK/Shared/Public/PlayFabDataGatherer.cs",
+      "BeforeSHA256": "8d06f3fca7a13222d6cc5e785b46627b420a428bd9e1bc3c05fdc332afa5b478"
+    },
+    {
+      "Path": "BlastRoyale/Packages/PlayFabSDK/Shared/Public/PlayFabLogger.cs.meta",
+      "BeforeSHA256": "d10e7a903a491f5571d82ae9ec9c21c911d3b2a3bb22d45f4141726c7ecdfc81"
+    },
+    {
+      "Path": "BlastRoyale/Packages/PlayFabSDK/Shared/Public/PlayFabSettings.cs.meta",
+      "BeforeSHA256": "6c0e89659390560ee6929626c0064bdf15bbe7c21633d690db6be964d0dd9bc5"
+    },
+    {
+      "Path": "BlastRoyale/Packages/PlayFabSDK/Shared/Public/PlayFabLogger.cs",
+      "BeforeSHA256": "383bec8c35f461f6d5807b5ff533400ca64db955d9282760978c99e79f001e0a"
+    },
+    {
+      "Path": "BlastRoyale/Packages/PlayFabSDK/Shared/Public/PlayFabSettings.cs",
+      "BeforeSHA256": "17d0de80f61449ae0b404ec357f101f9263ab1f3e780b0d1bd06a9d979ff0228"
+    },
+    {
+      "Path": "BlastRoyale/Packages/PlayFabSDK/Shared/Public/PlayFabEvents.cs.meta",
+      "BeforeSHA256": "c439fa4f52d49f16ba99893960c6da3c21a5e15ae173adcc9f05371f8909b8a5"
+    },
+    {
+      "Path": "BlastRoyale/Packages/PlayFabSDK/Shared/Public/PlayFabApiSettings.cs",
+      "BeforeSHA256": "06ebe8db47a28899c4d5ae52c08bf5455db759b38ffff39c1361d9a24a3580e6"
+    },
+    {
+      "Path": "BlastRoyale/Packages/PlayFabSDK/Shared/Public/PlayFabDataGatherer.cs.meta",
+      "BeforeSHA256": "b622e4a083c96dc5f59a10608933f5af543a74d909edfadbfc038925b3647fb0"
+    },
+    {
+      "Path": "BlastRoyale/Packages/PlayFabSDK/Shared/Editor/PlayFablogo.png",
+      "BeforeSHA256": "75363ff1885a5741c2bb1252e665dd54aeac88e6ff84343f7036ecd359dba171"
+    },
+    {
+      "Path": "BlastRoyale/Packages/PlayFabSDK/Shared/Editor/PlayFabHelp.cs.meta",
+      "BeforeSHA256": "d9e43123d81001e12de1468bad5258280f4aff7ec79c1fb6a40d53da71e61efc"
+    },
+    {
+      "Path": "BlastRoyale/Packages/PlayFabSDK/Shared/Editor/PlayFablogo.png.meta",
+      "BeforeSHA256": "9a48805687452a9c2aea285b0349c11db747ce66b56d73626ad43b613029427b"
+    },
+    {
+      "Path": "BlastRoyale/Packages/PlayFabSDK/Shared/Editor/PlayFabSdkEditor.asmdef.meta",
+      "BeforeSHA256": "4524f1f704d2e6555a857bc7955293349ceca6689dc1a3011e5ec5dbfe7871bc"
+    },
+    {
+      "Path": "BlastRoyale/Packages/PlayFabSDK/Shared/Editor/PlayFabSdkEditor.asmdef",
+      "BeforeSHA256": "3783763d7c3eb638186223b41f8f5a3153ce4482cf65d66a2c4e7c64be3ec88f"
+    },
+    {
+      "Path": "BlastRoyale/Packages/PlayFabSDK/Shared/Editor/MakeSharedSettingsObj.cs",
+      "BeforeSHA256": "df88e8dbab3e601da865b8352d2e6d15654295c55be15bec153324f5f6aa1da7"
+    },
+    {
+      "Path": "BlastRoyale/Packages/PlayFabSDK/Shared/Editor/MakeSharedSettingsObj.cs.meta",
+      "BeforeSHA256": "6cc3c67724cea5a213a8bb4e45d3e36894a4bfa83172787bed277c2af489dabc"
+    },
+    {
+      "Path": "BlastRoyale/Packages/PlayFabSDK/Shared/Editor/PlayFabHelp.cs",
+      "BeforeSHA256": "6caeb8d76807842c3639bcd81137099369fc617401962773a787ae96ab50bd91"
+    },
+    {
+      "Path": "BlastRoyale/Packages/PlayFabSDK/Shared/Internal/PlayFabHttp/GzipDownloadHandler.cs.meta",
+      "BeforeSHA256": "ed34e02dd49492d8a64782cdfb88db8bdf49107b0ecf1cbc61015accf3d07cbc"
+    },
+    {
+      "Path": "BlastRoyale/Packages/PlayFabSDK/Shared/Internal/PlayFabHttp/IPlayFabHttp.cs",
+      "BeforeSHA256": "802fb7bed42ac299fa6966a4b1149a370b4713fd8913821420a7bccec3564838"
+    },
+    {
+      "Path": "BlastRoyale/Packages/PlayFabSDK/Shared/Internal/PlayFabHttp/PlayFabWWW.cs",
+      "BeforeSHA256": "6c6edb56ca19d6253c18584ace51382ba10814688aae9d04f8bc569a58d8b92c"
+    },
+    {
+      "Path": "BlastRoyale/Packages/PlayFabSDK/Shared/Internal/PlayFabHttp/PlayFabHTTP.cs",
+      "BeforeSHA256": "3679d62ca099dcf3721a2ab47e8b8c5300f0c8af9d1045f9b69f1371cd64fe53"
+    },
+    {
+      "Path": "BlastRoyale/Packages/PlayFabSDK/Shared/Internal/PlayFabHttp/IPlayFabHttp.cs.meta",
+      "BeforeSHA256": "c9931b7a8c32189febce4e2df001bdd56a91375bfc2ce2ed72493cf8c4d8312d"
+    },
+    {
+      "Path": "BlastRoyale/Packages/PlayFabSDK/Shared/Internal/PlayFabHttp/PlayFabUnityHttp.cs.meta",
+      "BeforeSHA256": "11e941071945f7775827b0ade15dc79c9e3e0fbb3941d8932289574b0e8ebb02"
+    },
+    {
+      "Path": "BlastRoyale/Packages/PlayFabSDK/Shared/Internal/PlayFabHttp/PlayFabUnityHttp.cs",
+      "BeforeSHA256": "8acb2b2d490dbdfc5836b65de59f0509fcea32c2922cecb166ce6d9bab1f556f"
+    },
+    {
+      "Path": "BlastRoyale/Packages/PlayFabSDK/Shared/Internal/PlayFabHttp/PlayFabHTTP.cs.meta",
+      "BeforeSHA256": "34886bba35429a445e4a2fa7a040d8d754d65ad6ffeeb039779fec6263540771"
+    },
+    {
+      "Path": "BlastRoyale/Packages/PlayFabSDK/Shared/Internal/PlayFabHttp/GzipDownloadHandler.cs",
+      "BeforeSHA256": "3e8badfcced54ea3318946591893b2303fe28f9f7507d3bf860e8cc9f4990fbd"
+    },
+    {
+      "Path": "BlastRoyale/Packages/PlayFabSDK/Shared/Internal/PlayFabHttp/PlayFabWebRequest.cs",
+      "BeforeSHA256": "b4c84c342f1be2aee92f5c10c45cab6843b2b9e33172f7971e22b849488c2f38"
+    },
+    {
+      "Path": "BlastRoyale/Packages/PlayFabSDK/Shared/Internal/PlayFabHttp/PlayFabWWW.cs.meta",
+      "BeforeSHA256": "1bb9c51c5c3425f4c934bce28739d21596a8e6c9405e6190e3e4bdfa20128085"
+    },
+    {
+      "Path": "BlastRoyale/Packages/PlayFabSDK/Shared/Internal/PlayFabHttp/PlayFabWebRequest.cs.meta",
+      "BeforeSHA256": "464a4482f33241ee31ecc919a9330837a1ed28e516ae4fbc0fccde406bf848b6"
+    },
+    {
+      "Path": "BlastRoyale/Assets/Resources/PlayFabSharedSettings.asset",
+      "BeforeSHA256": "11ececeaf7e2e40d978908293a50e278f75af9faf5f58979f9f31bd1d005764b"
+    },
+    {
+      "Path": "BlastRoyale/Assets/Resources/PlayFabSharedSettings.asset.meta",
+      "BeforeSHA256": "80095b9a14bb9aeb4cc6dd41609a3573a71f359391e3c1a5939f2f13b7c924a5"
+    },
+    {
+      "Path": "BlastRoyale/Packages/PlayFabSDK/Shared/Public/ITransportPlugin.cs",
+      "BeforeSHA256": "d1ca164593d2ed84d2c9890ff34d057433428e10c1292f3a8957a37fa2fb01ab"
+    },
+    {
+      "Path": "BlastRoyale/Packages/PlayFabSDK/Shared/Public/ITransportPlugin.cs.meta",
+      "BeforeSHA256": "8d38dbe5ee12b138afa2db32ca8da1e301cc6aec2f37f175e9c85c12990385ef"
+    }
+  ]
+}
