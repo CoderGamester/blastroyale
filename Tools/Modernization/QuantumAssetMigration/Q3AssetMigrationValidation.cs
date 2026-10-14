@@ -97,6 +97,65 @@ public static class Q3AssetMigrationValidation {
     }
     Debug.Log("[Q3 Asset Migration Validation] Dumped all 213 actual restored SDK instances for semantic schema audit");
   }
+  private static JToken CanonicalMapCacheToken(JToken token) => token is JObject obj
+    ? new JObject(obj.Properties().OrderBy(property => property.Name, StringComparer.Ordinal).Select(property => new JProperty(property.Name, CanonicalMapCacheToken(property.Value))))
+    : token is JArray array ? new JArray(array.Select(CanonicalMapCacheToken)) : token.DeepClone();
+  private static string MapCacheHash(JToken token) {
+    using (var sha = System.Security.Cryptography.SHA256.Create())
+      return BitConverter.ToString(sha.ComputeHash(System.Text.Encoding.UTF8.GetBytes(CanonicalMapCacheToken(token).ToString(Newtonsoft.Json.Formatting.None)))).Replace("-", "").ToLowerInvariant();
+  }
+  private static void ValidateExactNativeMapEntityCache(JObject source, JObject actual, Quantum.Map map, List<string> accepted) {
+    if (JToken.DeepEquals(source["MapEntities"], actual["MapEntities"])) return;
+    if (!(source["MapEntities"] is JArray oldCache) || oldCache.Count != 0)
+      throw new InvalidOperationException("Only originally empty exported map entity caches can use genuine native restoration evidence.");
+    var allowed = new Dictionary<string, int> {
+      ["Assets/AddressableResources/Maps/Battlelands/BattlelandsMap.asset"] = 479,
+      ["Assets/AddressableResources/Maps/Cemetery/Cemetery.asset"] = 139,
+      ["Assets/AddressableResources/Maps/District/District.asset"] = 223,
+      ["Assets/AddressableResources/Maps/Fortress/Fortress.asset"] = 140,
+      ["Assets/AddressableResources/Maps/FtueDeck/FtueDeck.asset"] = 17,
+      ["Assets/AddressableResources/Maps/IslandOne/IslandOne.asset"] = 2824,
+      ["Assets/AddressableResources/Maps/Islands/IslandsMap.asset"] = 943,
+      ["Assets/AddressableResources/Maps/MazeMayhem/MazeMayhem.asset"] = 708,
+      ["Assets/AddressableResources/Maps/Test/TestScene.asset"] = 80,
+      ["Assets/AddressableResources/Maps/TestAssets/TestAssetsMap.asset"] = 10
+    };
+    var ledgerPath = Environment.GetEnvironmentVariable("BLAST_NATIVE_MAP_CACHE_LEDGER");
+    if (string.IsNullOrEmpty(ledgerPath)) ledgerPath = Path.Combine(Evidence, "q3-native-map-cache-ledger.json");
+    if (!File.Exists(ledgerPath)) throw new InvalidOperationException("Exact native map cache acceptance ledger is required: " + ledgerPath);
+    var ledger = JObject.Parse(File.ReadAllText(ledgerPath));
+    var entries = ((JArray)ledger["Entries"]).OfType<JObject>().ToArray();
+    if ((int)ledger["Version"] != 1 || entries.Length != 10 || !allowed.Keys.ToHashSet().SetEquals(entries.Select(entry => (string)entry["UnityMapPath"])))
+      throw new InvalidOperationException("Exact accepted ten-map identity set required.");
+    var path = AssetDatabase.GetAssetPath(map);
+    var row = entries.Single(entry => (string)entry["UnityMapPath"] == path);
+    if (!allowed.TryGetValue(path, out var expectedCount) || (int)row["PrototypeCount"] != expectedCount || (int)row["NativePrototypeSourceCount"] != expectedCount ||
+        (int)row["SceneReferenceCount"] != expectedCount || (long)row["QuantumGuid"] != map.Guid.Value ||
+        (string)row["UnityMapGuid"] != AssetDatabase.AssetPathToGUID(path) || (bool)row["SourceMapEntitiesEmpty"] != true ||
+        (string)row["NativeBaker"] != "QuantumMapDataBaker.BakePrototypes(data,true)" || ((JArray)actual["MapEntities"]).Count != expectedCount)
+      throw new InvalidOperationException("Exact native map cache identity/source/count contract differs: " + path);
+    Func<string,string> fileHash = file => {
+      using (var sha = System.Security.Cryptography.SHA256.Create())
+        return BitConverter.ToString(sha.ComputeHash(File.ReadAllBytes(file))).Replace("-", "").ToLowerInvariant();
+    };
+    var scene = (string)row["ScenePath"];
+    if (fileHash(path) != (string)row["NativeMapFileSha256"] || fileHash(scene) != (string)row["SceneFileSha256"] ||
+        fileHash(scene + ".meta") != (string)row["SceneMetaSha256"] || AssetDatabase.AssetPathToGUID(scene) != (string)row["OriginalSceneGuid"])
+      throw new InvalidOperationException("Verified native map/scene files or original scene metadata changed: " + path);
+    if (MapCacheHash(actual["MapEntities"]) != (string)row["NativeMapEntitiesSha256"] || MapCacheHash(actual["references"]) != (string)row["NativeManagedReferencesSha256"])
+      throw new InvalidOperationException("Native prototype bodies or typed managed references differ from exact accepted cache: " + path);
+    var cacheIds = ((JContainer)actual["MapEntities"]).DescendantsAndSelf().OfType<JProperty>().Where(property => property.Name == "rid")
+      .Select(property => (long)property.Value).Where(id => id > 0).ToHashSet();
+    if (!cacheIds.SetEquals(((JArray)actual["references"]["RefIds"]).Select(entry => (long)entry["rid"])))
+      throw new InvalidOperationException("Native managed reference registry contains bodies outside the exact entity cache: " + path);
+    var other = (JObject)actual.DeepClone(); other.Remove("MapEntities"); other.Remove("references");
+    if (MapCacheHash(other) != (string)row["NativeOtherMapFieldsSha256"])
+      throw new InvalidOperationException("Another native map field differs from its accepted preservation fingerprint: " + path);
+    // All other original fields continue through strict AssertSourceFields below.
+    source["MapEntities"] = actual["MapEntities"].DeepClone();
+    accepted.Add("Exact originally empty MapEntities -> actual SDK prototype-only bake, exact native typed cache/other fields/scene/meta hashes, " + expectedCount + " authored sources and scene references");
+  }
+
   private static List<string> ValidateSourceFields(JObject source, JObject actual, AssetObject asset, string sourceName) {
     var retiredFields = new List<string>();
     if (asset is Quantum.BinaryData && !JToken.DeepEquals(source["Data"], actual["Data"])) {
@@ -133,7 +192,8 @@ public static class Q3AssetMigrationValidation {
       source.Remove("DataFilepath");
       retiredFields.Add("DataFilepath (empty legacy loader path; real DataAsset retained)");
     }
-    if (asset is Quantum.Map) {
+    if (asset is Quantum.Map nativeMap) {
+      ValidateExactNativeMapEntityCache(source, actual, nativeMap, retiredFields);
       if ((int)source["TriangleMeshCellSize"] != 4 || (int)actual["TriangleMeshCellSize"] != -1 || (long)actual["SceneMeshCellSize"]?["RawValue"] != 262144)
         throw new InvalidOperationException("Map's integer-to-FP scene mesh cell migration differs");
       source.Remove("TriangleMeshCellSize"); actual.Remove("TriangleMeshCellSize");
@@ -176,39 +236,67 @@ public static class Q3AssetMigrationValidation {
   }
   public static void ValidateRestoredAssets() {
     Guard();
+    var registryPath = Environment.GetEnvironmentVariable("BLAST_QUANTUM_ORIGINAL_GUID_REGISTRY");
+    if (string.IsNullOrEmpty(registryPath)) registryPath = Path.GetFullPath(Path.Combine(Application.dataPath, "../../../Tools/Modernization/quantum-original-guid-registry.json"));
+    var registry = JObject.Parse(File.ReadAllText(registryPath));
+    var entries = ((JArray)registry["Entries"]).OfType<JObject>().ToArray();
+    if ((int)registry["Version"] != 1 || entries.Length != 213 || entries.Select(row => (long)row["QuantumGuid"]).Distinct().Count() != 213)
+      throw new InvalidOperationException("The exact one-to-one213 canonical native asset registry is required.");
+    var seen = new HashSet<long>();
     var rows = new List<object>();
     var nativeRows = new List<object>();
     foreach (var jsonFile in Directory.GetFiles(Path.Combine(Evidence, "Q2AssetExport"), "*.json")) {
       var source = JObject.Parse(File.ReadAllText(jsonFile));
       var sourceName = Path.GetFileNameWithoutExtension(jsonFile);
-      var split = sourceName.IndexOf('_');
-      var unityGuid = sourceName.Substring(0, split);
-      var localId = long.Parse(sourceName.Substring(split + 1));
-      var unityPath = AssetDatabase.GUIDToAssetPath(unityGuid);
+      var originalGuid = (long)source["Identifier"]["Guid"]["Value"];
+      if (!seen.Add(originalGuid)) throw new InvalidOperationException("Duplicated original exported Quantum GUID: " + sourceName);
+      var entry = entries.Single(row => (long)row["QuantumGuid"] == originalGuid);
+      if ((string)source["Identifier"]["Path"] != (string)entry["OriginalPath"])
+        throw new InvalidOperationException("Original export path differs from its exact canonical registry identity: " + sourceName);
+      var unityPath = (string)entry["UnityPath"];
+      var unityGuid = (string)entry["UnityGuid"];
+      var localId = (long)entry["UnityLocalId"];
       var assets = AssetDatabase.LoadAllAssetsAtPath(unityPath).OfType<AssetObject>();
       var asset = assets.SingleOrDefault(a => AssetDatabase.TryGetGUIDAndLocalFileIdentifier(a, out string guid, out long id) && guid == unityGuid && id == localId);
-      if (!asset) throw new InvalidOperationException("Exact exported asset is not loaded: " + sourceName + " at " + unityPath);
+      if (!asset || asset.Guid.Value != originalGuid || asset.Path != (string)entry["NativePath"] || asset.GetType().FullName != (string)entry["Type"])
+        throw new InvalidOperationException("Exact canonical asset Unity path/GUID/local ID/native type/original Quantum GUID differs: " + sourceName);
+      using (var sha = System.Security.Cryptography.SHA256.Create()) {
+        var hash = BitConverter.ToString(sha.ComputeHash(File.ReadAllBytes(unityPath))).Replace("-", "").ToLowerInvariant();
+        if (hash != (string)entry["SourceSha256"]) throw new InvalidOperationException("Exact canonical native asset bytes differ from registry: " + unityPath);
+      }
       var actual = JObject.Parse(JsonUtility.ToJson(asset));
+      var storageMoved = (string)entry["OriginalPath"] != (string)entry["NativePath"];
+      if (storageMoved) {
+        if (!(asset is Quantum.EntityPrototype) || !unityPath.EndsWith(".qprototype", StringComparison.Ordinal) || !((string)entry["OriginalPath"]).EndsWith("|EntityPrototype", StringComparison.Ordinal))
+          throw new InvalidOperationException("Unexpected canonical storage relocation: " + sourceName);
+        source["Identifier"]["Path"] = (string)entry["NativePath"];
+      }
       var retiredFields = ValidateSourceFields(source, actual, asset, sourceName);
-      rows.Add(new { UnityPath = unityPath, UnityGuid = unityGuid, LocalId = localId, QuantumGuid = asset.Guid.Value, QuantumPath = asset.Path, NativeType = asset.GetType().FullName, PreservedAllActiveExportedFields = true, RetiredFields = retiredFields });
-      if (asset is Quantum.EntityPrototype) {
-        var parent = AssetDatabase.LoadAssetAtPath<GameObject>(unityPath).GetComponent<QuantumEntityPrototype>();
-        if (!parent) throw new InvalidOperationException("Native prototype parent missing: " + unityPath);
-        var view = AssetDatabase.LoadAllAssetsAtPath(unityPath).OfType<Quantum.EntityView>().SingleOrDefault();
+      if (storageMoved) retiredFields.Add("Exact registered Q2 prefab prototype path -> actual canonical native .qprototype storage; original Quantum GUID preserved one-to-one");
+      rows.Add(new { OriginalExport = sourceName, OriginalQuantumPath = (string)entry["OriginalPath"], UnityPath = unityPath, UnityGuid = unityGuid, LocalId = localId, QuantumGuid = asset.Guid.Value, QuantumPath = asset.Path, NativeType = asset.GetType().FullName, PreservedAllActiveExportedFields = true, RetiredFields = retiredFields });
+      if (asset is Quantum.EntityPrototype nativePrototype) {
+        var prefabPath = "Assets/" + ((string)entry["OriginalPath"]).Split('|')[0] + ".prefab";
+        var prefab = AssetDatabase.LoadAssetAtPath<GameObject>(prefabPath);
+        var parent = prefab ? prefab.GetComponent<QuantumEntityPrototype>() : null;
+        if (!parent) throw new InvalidOperationException("Exact original native prototype parent prefab missing: " + prefabPath);
+        var view = AssetDatabase.LoadAllAssetsAtPath(prefabPath).OfType<Quantum.EntityView>().SingleOrDefault();
         var prototype = AssetObject.Create<Quantum.EntityPrototype>();
         try {
           prototype.Identifier = asset.Identifier;
           parent.InitializeAssetObject(prototype, view);
           var components = prototype.Container.Components.Select(c => new { Type = c.GetType().FullName, Data = JObject.Parse(JsonUtility.ToJson(c)) }).ToList();
-          if (components.Count == 0) throw new InvalidOperationException("Actual native prototype is empty: " + unityPath);
-          nativeRows.Add(new { Path = asset.Path, Guid = asset.Guid.Value, Components = components });
+          var stored = nativePrototype.Container.Components.Select(c => new { Type = c.GetType().FullName, Data = JObject.Parse(JsonUtility.ToJson(c)) }).ToList();
+          if (components.Count == 0 || !JToken.DeepEquals(JArray.FromObject(components), JArray.FromObject(stored)))
+            throw new InvalidOperationException("Actual canonical prototype cache differs from genuine source SDK reconstruction: " + unityPath);
+          nativeRows.Add(new { Path = asset.Path, Guid = asset.Guid.Value, Components = components, CanonicalStorageMatchesNativeSourceReconstruction = true });
         } finally { UnityEngine.Object.DestroyImmediate(prototype); }
       }
     }
-    if (rows.Count != 213 || nativeRows.Count != 20) throw new InvalidOperationException("Restored/native counts differ: " + rows.Count + "/" + nativeRows.Count);
+    if (seen.Count != 213 || !seen.SetEquals(entries.Select(row => (long)row["QuantumGuid"])) || rows.Count != 213 || nativeRows.Count != 20)
+      throw new InvalidOperationException("Exact original/canonical/native counts differ: " + seen.Count + "/" + rows.Count + "/" + nativeRows.Count);
     File.WriteAllText(Path.Combine(Evidence, "q3-restored-assets-validation.json"), Newtonsoft.Json.JsonConvert.SerializeObject(rows, Newtonsoft.Json.Formatting.Indented));
     File.WriteAllText(Path.Combine(Evidence, "Q3PreparedPrototypeComponents.json"), Newtonsoft.Json.JsonConvert.SerializeObject(nativeRows, Newtonsoft.Json.Formatting.Indented));
-    Debug.Log("[Q3 Asset Migration Validation] All 213 exact original asset GUIDs/local IDs and all exported fields preserved; 20 actual native prototypes rebuilt");
+    Debug.Log("[Q3 Asset Migration Validation] All213 exact original Quantum GUIDs +registered canonical Unity GUID/local IDs/types/bytes and exported fields preserved;20 genuine native prototype caches match source reconstruction");
   }
   public static void ValidateSceneMarkers() {
     Guard();
