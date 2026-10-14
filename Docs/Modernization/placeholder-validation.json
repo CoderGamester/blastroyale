@@ -1,0 +1,245 @@
+{
+  "assets": [
+    {
+      "guid": "c2431dfbd81df1a4aa42e3dab0019235",
+      "fileID": 2100000,
+      "kind": "Material",
+      "path": "Assets/Art/ModernizationPlaceholders/Materials/PLACEHOLDER_c2431dfbd81df1a4aa42e3dab0019235.mat",
+      "shader": "Universal Render Pipeline/Unlit",
+      "references": 1
+    },
+    {
+      "guid": "273a82a7641d5a64fa1b229d702691ad",
+      "fileID": 2100000,
+      "kind": "Material",
+      "path": "Assets/Art/ModernizationPlaceholders/Materials/PLACEHOLDER_273a82a7641d5a64fa1b229d702691ad.mat",
+      "shader": "Universal Render Pipeline/Unlit",
+      "references": 1
+    },
+    {
+      "guid": "ac74d7afbd638724c846c42fede5993e",
+      "fileID": 2100000,
+      "kind": "Material",
+      "path": "Assets/Art/ModernizationPlaceholders/Materials/PLACEHOLDER_ac74d7afbd638724c846c42fede5993e.mat",
+      "shader": "Universal Render Pipeline/Unlit",
+      "references": 1
+    },
+    {
+      "guid": "cb6286d018aabce4096fc7bcc2abe6d7",
+      "fileID": 2100000,
+      "kind": "Material",
+      "path": "Assets/Art/ModernizationPlaceholders/Materials/PLACEHOLDER_cb6286d018aabce4096fc7bcc2abe6d7.mat",
+      "shader": "Universal Render Pipeline/Unlit",
+      "references": 1
+    },
+    {
+      "guid": "cf61267dc73fc5b4d8e57362c71bc583",
+      "fileID": 2100000,
+      "kind": "Material",
+      "path": "Assets/Art/ModernizationPlaceholders/Materials/PLACEHOLDER_cf61267dc73fc5b4d8e57362c71bc583.mat",
+      "shader": "Universal Render Pipeline/Unlit",
+      "references": 1
+    },
+    {
+      "guid": "9834219b897b0c34894ba5f620e788cf",
+      "fileID": 2100000,
+      "kind": "Material",
+      "path": "Assets/Art/ModernizationPlaceholders/Materials/PLACEHOLDER_9834219b897b0c34894ba5f620e788cf.mat",
+      "shader": "Universal Render Pipeline/Unlit",
+      "references": 1
+    },
+    {
+      "guid": "2c666af29b283ab4c9260e3b87ae65c9",
+      "fileID": 2100000,
+      "kind": "Material",
+      "path": "Assets/Art/ModernizationPlaceholders/Materials/PLACEHOLDER_2c666af29b283ab4c9260e3b87ae65c9.mat",
+      "shader": "Universal Render Pipeline/Unlit",
+      "references": 1
+    },
+    {
+      "guid": "94c23622bd47b7d46aec31948f5ee5f1",
+      "fileID": 2100000,
+      "kind": "Material",
+      "path": "Assets/Art/ModernizationPlaceholders/Materials/PLACEHOLDER_94c23622bd47b7d46aec31948f5ee5f1.mat",
+      "shader": "Universal Render Pipeline/Unlit",
+      "references": 1
+    },
+    {
+      "guid": "d756731c196e35744bcc581ac2aab3be",
+      "fileID": 2100000,
+      "kind": "Material",
+      "path": "Assets/Art/ModernizationPlaceholders/Materials/PLACEHOLDER_d756731c196e35744bcc581ac2aab3be.mat",
+      "shader": "Universal Render Pipeline/Unlit",
+      "references": 1
+    },
+    {
+      "guid": "7b47d90dd2421c747b9d32eac62c6b99",
+      "fileID": 2100000,
+      "kind": "Material",
+      "path": "Assets/Art/ModernizationPlaceholders/Materials/PLACEHOLDER_7b47d90dd2421c747b9d32eac62c6b99.mat",
+      "shader": "Universal Render Pipeline/Unlit",
+      "references": 1
+    },
+    {
+      "guid": "e7c0dd826f038e34794a4875d14b1156",
+      "fileID": 2100000,
+      "kind": "Material",
+      "path": "Assets/Art/ModernizationPlaceholders/Materials/PLACEHOLDER_e7c0dd826f038e34794a4875d14b1156.mat",
+      "shader": "Universal Render Pipeline/Unlit",
+      "references": 9
+    },
+    {
+      "guid": "2978e8c11e8957849b8ef31875b0c5b7",
+      "fileID": 2100000,
+      "kind": "Material",
+      "path": "Assets/Art/ModernizationPlaceholders/Materials/PLACEHOLDER_2978e8c11e8957849b8ef31875b0c5b7.mat",
+      "shader": "Universal Render Pipeline/Unlit",
+      "references": 1
+    },
+    {
+      "guid": "c541332bab4df464aa22e71dc70a1aa6",
+      "fileID": 2100000,
+      "kind": "Material",
+      "path": "Assets/Art/ModernizationPlaceholders/Materials/PLACEHOLDER_c541332bab4df464aa22e71dc70a1aa6.mat",
+      "shader": "Universal Render Pipeline/Unlit",
+      "references": 3
+    },
+    {
+      "guid": "f3682907f85c07d41b62d911feafc62a",
+      "fileID": 2100000,
+      "kind": "Material",
+      "path": "Assets/Art/ModernizationPlaceholders/Materials/PLACEHOLDER_f3682907f85c07d41b62d911feafc62a.mat",
+      "shader": "Universal Render Pipeline/Unlit",
+      "references": 1
+    },
+    {
+      "guid": "74dee4c16fa44d14e933d7d1b3e6c56e",
+      "fileID": 2100000,
+      "kind": "Material",
+      "path": "Assets/Art/ModernizationPlaceholders/Materials/PLACEHOLDER_74dee4c16fa44d14e933d7d1b3e6c56e.mat",
+      "shader": "Universal Render Pipeline/Unlit",
+      "references": 29
+    },
+    {
+      "guid": "85819ac46da0acb498e85ac18964f4e7",
+      "fileID": 2100000,
+      "kind": "Material",
+      "path": "Assets/Art/ModernizationPlaceholders/Materials/PLACEHOLDER_85819ac46da0acb498e85ac18964f4e7.mat",
+      "shader": "Universal Render Pipeline/Unlit",
+      "references": 15
+    },
+    {
+      "guid": "7cce38ba40b7d05439de10ddde5afaf6",
+      "fileID": 2100000,
+      "kind": "Material",
+      "path": "Assets/Art/ModernizationPlaceholders/Materials/PLACEHOLDER_7cce38ba40b7d05439de10ddde5afaf6.mat",
+      "shader": "Universal Render Pipeline/Unlit",
+      "references": 2
+    },
+    {
+      "guid": "838453d867ecb4446bffe354d916fcdb",
+      "fileID": 2100000,
+      "kind": "Material",
+      "path": "Assets/Art/ModernizationPlaceholders/Materials/PLACEHOLDER_838453d867ecb4446bffe354d916fcdb.mat",
+      "shader": "Universal Render Pipeline/Unlit",
+      "references": 1
+    },
+    {
+      "guid": "7c1717d309562a4448607317ff419141",
+      "fileID": 2100000,
+      "kind": "Material",
+      "path": "Assets/Art/ModernizationPlaceholders/Materials/PLACEHOLDER_7c1717d309562a4448607317ff419141.mat",
+      "shader": "Universal Render Pipeline/Unlit",
+      "references": 1
+    },
+    {
+      "guid": "fa578e2f2d8ee324295414ba764cc7d2",
+      "fileID": 2100000,
+      "kind": "Material",
+      "path": "Assets/Art/ModernizationPlaceholders/Materials/PLACEHOLDER_fa578e2f2d8ee324295414ba764cc7d2.mat",
+      "shader": "Universal Render Pipeline/Unlit",
+      "references": 1
+    },
+    {
+      "guid": "34550e126b4c8441696b65040c2fd9b3",
+      "fileID": 2100000,
+      "kind": "Material",
+      "path": "Assets/Art/ModernizationPlaceholders/Materials/PLACEHOLDER_34550e126b4c8441696b65040c2fd9b3.mat",
+      "shader": "Universal Render Pipeline/Unlit",
+      "references": 2
+    },
+    {
+      "guid": "f3053f8556ff7cf4fb59de5cf109104e",
+      "fileID": 2100000,
+      "kind": "Material",
+      "path": "Assets/Art/ModernizationPlaceholders/Materials/PLACEHOLDER_f3053f8556ff7cf4fb59de5cf109104e.mat",
+      "shader": "Universal Render Pipeline/Unlit",
+      "references": 2
+    },
+    {
+      "guid": "54b3ed35361584c0bb6a8d0a8a882451",
+      "fileID": 2100000,
+      "kind": "Material",
+      "path": "Assets/Art/ModernizationPlaceholders/Materials/PLACEHOLDER_54b3ed35361584c0bb6a8d0a8a882451.mat",
+      "shader": "Universal Render Pipeline/Unlit",
+      "references": 1
+    },
+    {
+      "guid": "9e790bbee27d08e45ab96d553ca371c8",
+      "fileID": 2100000,
+      "kind": "Material",
+      "path": "Assets/Art/ModernizationPlaceholders/Materials/PLACEHOLDER_9e790bbee27d08e45ab96d553ca371c8.mat",
+      "shader": "Universal Render Pipeline/Unlit",
+      "references": 1
+    },
+    {
+      "guid": "9815abc3682332c43bb766decd901afb",
+      "fileID": 2100000,
+      "kind": "Material",
+      "path": "Assets/Art/ModernizationPlaceholders/Materials/PLACEHOLDER_9815abc3682332c43bb766decd901afb.mat",
+      "shader": "Universal Render Pipeline/Unlit",
+      "references": 1
+    },
+    {
+      "guid": "d2dfa0f97bbc8754582b973b94db743f",
+      "fileID": 2100000,
+      "kind": "Material",
+      "path": "Assets/Art/ModernizationPlaceholders/Materials/PLACEHOLDER_d2dfa0f97bbc8754582b973b94db743f.mat",
+      "shader": "Universal Render Pipeline/Unlit",
+      "references": 1
+    },
+    {
+      "guid": "20fc1a40907004c4aaac0d7aa19f035c",
+      "fileID": 2100000,
+      "kind": "Material",
+      "path": "Assets/Art/ModernizationPlaceholders/Materials/PLACEHOLDER_20fc1a40907004c4aaac0d7aa19f035c.mat",
+      "shader": "Universal Render Pipeline/Unlit",
+      "references": 1
+    },
+    {
+      "guid": "cf0a78991173b5e4fad24e6e6a9086fb",
+      "fileID": 2100000,
+      "kind": "Material",
+      "path": "Assets/Art/ModernizationPlaceholders/Materials/PLACEHOLDER_cf0a78991173b5e4fad24e6e6a9086fb.mat",
+      "shader": "Universal Render Pipeline/Unlit",
+      "references": 2
+    },
+    {
+      "guid": "b6690f61625435e44a320a4650fdc9dd",
+      "fileID": 2100000,
+      "kind": "Material",
+      "path": "Assets/Art/ModernizationPlaceholders/Materials/PLACEHOLDER_b6690f61625435e44a320a4650fdc9dd.mat",
+      "shader": "Universal Render Pipeline/Unlit",
+      "references": 1
+    },
+    {
+      "guid": "6d6cd06c2176aab46a6da9dd4e1f83e9",
+      "fileID": 4300000,
+      "kind": "Mesh",
+      "path": "Assets/Art/ModernizationPlaceholders/Meshes/PLACEHOLDER_6d6cd06c2176aab46a6da9dd4e1f83e9.asset",
+      "shader": "",
+      "references": 2
+    }
+  ],
+  "unityVersion": "6000.3.26f1"
+}

@@ -1,0 +1,13 @@
+{
+  "unityVersion": "6000.3.26f1",
+  "prefab": "SM_Tree_Stump_01",
+  "meshGuid": "6d6cd06c2176aab46a6da9dd4e1f83e9",
+  "meshFileID": 4300000,
+  "materialGuid": "9815abc3682332c43bb766decd901afb",
+  "materialFileID": 2100000,
+  "meshFilterAndColliderResolved": true,
+  "materialResolved": true,
+  "meshFilterComponentID": 33943791594629960,
+  "meshColliderComponentID": 64265605863392054,
+  "prefabComponentIDsPreserved": true
+}

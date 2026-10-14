@@ -1,0 +1,15 @@
+{
+  "before": {
+    "unresolved_references": 153464,
+    "unresolved_unique_guids": 1429,
+    "unresolved_script_references": 18308
+  },
+  "after": {
+    "unresolved_references": 153377,
+    "unresolved_unique_guids": 1399,
+    "unresolved_script_references": 18308
+  },
+  "attributable_guid_reduction": 30,
+  "attributable_reference_reduction": 87,
+  "normalization": "Excluded actual Unity built-in resource GUIDs from both snapshots"
+}

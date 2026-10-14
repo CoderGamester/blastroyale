@@ -1,0 +1,782 @@
+{
+  "excluded_mesh_guids": [
+    {
+      "guid": "0000000000000000e000000000000000",
+      "fileIDs": [
+        "10001",
+        "10202",
+        "10206",
+        "10207",
+        "10208",
+        "10209",
+        "10210",
+        "19001",
+        "19002",
+        "19101",
+        "19102",
+        "19103"
+      ],
+      "references": 1527,
+      "reason": "Unity built-in mesh resource",
+      "example": {
+        "asset": "BlastRoyale/Assets/AddressableResources/Collections/Flags/DeathFlag.prefab",
+        "line": "43"
+      }
+    },
+    {
+      "guid": "8709dee4b32073648987691d33990209",
+      "fileIDs": [
+        "3853819754208438184",
+        "6446819969098511625"
+      ],
+      "references": 10,
+      "reason": "Imported model/subasset local IDs; cannot preserve native main mesh fileID",
+      "example": {
+        "asset": "BlastRoyale/Assets/AddressableResources/Collections/WeaponSkins/Hammer/CustomAssets/Dummy Placeholders/CommonBox.prefab",
+        "line": "75"
+      }
+    },
+    {
+      "guid": "5a38f64112f130c40bb9aac2480fe37d",
+      "fileIDs": [
+        "3634926235976907507"
+      ],
+      "references": 11,
+      "reason": "Imported model/subasset local IDs; cannot preserve native main mesh fileID",
+      "example": {
+        "asset": "BlastRoyale/Assets/AddressableResources/MainMenuAssets/Banners/Demon.prefab",
+        "line": "14801"
+      }
+    },
+    {
+      "guid": "d6a3e9a4d47251b43b9677f79a166f03",
+      "fileIDs": [
+        "-1590183171088775094",
+        "-4359675750921613140",
+        "-7511558181221131132",
+        "-8679921383154817045",
+        "100100000",
+        "5672107846885503879",
+        "919132149155446097"
+      ],
+      "references": 27,
+      "reason": "Imported model/subasset local IDs; cannot preserve native main mesh fileID",
+      "example": {
+        "asset": "BlastRoyale/Assets/AddressableResources/MainMenuAssets/Banners/Superstar.prefab",
+        "line": "14662"
+      }
+    },
+    {
+      "guid": "358ab1843752a2f458b1032d85a23b78",
+      "fileIDs": [
+        "3361575070873428437",
+        "5291059189563344664"
+      ],
+      "references": 73,
+      "reason": "Imported model/subasset local IDs; cannot preserve native main mesh fileID",
+      "example": {
+        "asset": "BlastRoyale/Assets/AddressableResources/Maps/Battlelands/BattlelandsMapScene.unity",
+        "line": "2523"
+      }
+    },
+    {
+      "guid": "b710930b096707645b6dd5e5bcbdeefe",
+      "fileIDs": [
+        "4300008",
+        "4300010"
+      ],
+      "references": 395,
+      "reason": "Imported model/subasset local IDs; cannot preserve native main mesh fileID",
+      "example": {
+        "asset": "BlastRoyale/Assets/AddressableResources/Maps/FtueDeck/FtueDeckScene.unity",
+        "line": "367"
+      }
+    },
+    {
+      "guid": "3340ad4fea81fc24ea110c402f43fc43",
+      "fileIDs": [
+        "4300002",
+        "4300004"
+      ],
+      "references": 2,
+      "reason": "Imported model/subasset local IDs; cannot preserve native main mesh fileID",
+      "example": {
+        "asset": "BlastRoyale/Assets/AddressableResources/Maps/IslandOne/IslandOneScene.unity",
+        "line": "657298"
+      }
+    },
+    {
+      "guid": "8fc1170310326024080767cdfea8f9d1",
+      "fileIDs": [
+        "4474450564667511390"
+      ],
+      "references": 2,
+      "reason": "Imported model/subasset local IDs; cannot preserve native main mesh fileID",
+      "example": {
+        "asset": "BlastRoyale/Assets/AddressableResources/Maps/Islands/IslandsMapScene.unity",
+        "line": "90812"
+      }
+    },
+    {
+      "guid": "7ea3ae276d634bc49b350b0ab5bc8638",
+      "fileIDs": [
+        "4235609704195411"
+      ],
+      "references": 75,
+      "reason": "Imported model/subasset local IDs; cannot preserve native main mesh fileID",
+      "example": {
+        "asset": "BlastRoyale/Assets/AddressableResources/Maps/Islands/IslandsMapScene.unity",
+        "line": "99897"
+      }
+    },
+    {
+      "guid": "dac5541ca002ffa4ab089c79894369fd",
+      "fileIDs": [
+        "5760088582868077764"
+      ],
+      "references": 3,
+      "reason": "Imported model/subasset local IDs; cannot preserve native main mesh fileID",
+      "example": {
+        "asset": "BlastRoyale/Assets/AddressableResources/Maps/Islands/IslandsMapScene.unity",
+        "line": "172186"
+      }
+    },
+    {
+      "guid": "974333072fe496d49858f48a2fdf211f",
+      "fileIDs": [
+        "-1392655449829903573",
+        "-2773731513787832154",
+        "-3200546853997709457"
+      ],
+      "references": 42,
+      "reason": "Imported model/subasset local IDs; cannot preserve native main mesh fileID",
+      "example": {
+        "asset": "BlastRoyale/Assets/AddressableResources/Maps/Islands/IslandsMapScene.unity",
+        "line": "174846"
+      }
+    },
+    {
+      "guid": "0afce520e4ceee04d8117d8a4828c8b8",
+      "fileIDs": [
+        "-2377451161649310012",
+        "-7935055015806752780"
+      ],
+      "references": 6,
+      "reason": "Imported model/subasset local IDs; cannot preserve native main mesh fileID",
+      "example": {
+        "asset": "BlastRoyale/Assets/AddressableResources/Maps/Islands/IslandsMapScene.unity",
+        "line": "175166"
+      }
+    },
+    {
+      "guid": "7e90452985d1d2f4aae9f155827b6b48",
+      "fileIDs": [
+        "-8778567118593834401"
+      ],
+      "references": 17,
+      "reason": "Imported model/subasset local IDs; cannot preserve native main mesh fileID",
+      "example": {
+        "asset": "BlastRoyale/Assets/AddressableResources/Maps/Islands/IslandsMapScene.unity",
+        "line": "175211"
+      }
+    },
+    {
+      "guid": "cf99ff3f5eddcdc40960c7b291bc77f2",
+      "fileIDs": [
+        "4836809601161271908"
+      ],
+      "references": 6,
+      "reason": "Imported model/subasset local IDs; cannot preserve native main mesh fileID",
+      "example": {
+        "asset": "BlastRoyale/Assets/AddressableResources/Maps/Islands/IslandsMapScene.unity",
+        "line": "178438"
+      }
+    },
+    {
+      "guid": "a8798e70e6819f4499ffa44337fab5dd",
+      "fileIDs": [
+        "-7168271652358354349",
+        "8201437419870775723"
+      ],
+      "references": 2,
+      "reason": "Imported model/subasset local IDs; cannot preserve native main mesh fileID",
+      "example": {
+        "asset": "BlastRoyale/Assets/AddressableResources/Maps/Islands/IslandsMapScene.unity",
+        "line": "178929"
+      }
+    },
+    {
+      "guid": "7f2686c75c8247e4ab3107a94f2af777",
+      "fileIDs": [
+        "-3920259025177494153",
+        "3134732294210814483"
+      ],
+      "references": 2,
+      "reason": "Imported model/subasset local IDs; cannot preserve native main mesh fileID",
+      "example": {
+        "asset": "BlastRoyale/Assets/AddressableResources/Maps/Islands/IslandsMapScene.unity",
+        "line": "179287"
+      }
+    },
+    {
+      "guid": "1fdcc2259a7338d48b9e221214c333fe",
+      "fileIDs": [
+        "-3167674179674757384",
+        "8201437419870775723"
+      ],
+      "references": 4,
+      "reason": "Imported model/subasset local IDs; cannot preserve native main mesh fileID",
+      "example": {
+        "asset": "BlastRoyale/Assets/AddressableResources/Maps/Islands/IslandsMapScene.unity",
+        "line": "183868"
+      }
+    },
+    {
+      "guid": "18ba2af73df0ab54bbc83eaa340b175f",
+      "fileIDs": [
+        "-4131803779134354175"
+      ],
+      "references": 1,
+      "reason": "Imported model/subasset local IDs; cannot preserve native main mesh fileID",
+      "example": {
+        "asset": "BlastRoyale/Assets/AddressableResources/Maps/Islands/IslandsMapScene.unity",
+        "line": "184130"
+      }
+    },
+    {
+      "guid": "d94fd1645c818874caf5dcb3ca3101aa",
+      "fileIDs": [
+        "-3031950155399943173",
+        "8201437419870775723"
+      ],
+      "references": 2,
+      "reason": "Imported model/subasset local IDs; cannot preserve native main mesh fileID",
+      "example": {
+        "asset": "BlastRoyale/Assets/AddressableResources/Maps/Islands/IslandsMapScene.unity",
+        "line": "187517"
+      }
+    },
+    {
+      "guid": "7832d0464cc8d7948bf1593b2b761586",
+      "fileIDs": [
+        "1138865973473098825"
+      ],
+      "references": 61,
+      "reason": "Imported model/subasset local IDs; cannot preserve native main mesh fileID",
+      "example": {
+        "asset": "BlastRoyale/Assets/AddressableResources/Maps/Islands/IslandsMapScene.unity",
+        "line": "188977"
+      }
+    },
+    {
+      "guid": "845667ff6574668438a9213b99142726",
+      "fileIDs": [
+        "7735325564342407624"
+      ],
+      "references": 47,
+      "reason": "Imported model/subasset local IDs; cannot preserve native main mesh fileID",
+      "example": {
+        "asset": "BlastRoyale/Assets/AddressableResources/Maps/Islands/IslandsMapScene.unity",
+        "line": "192234"
+      }
+    },
+    {
+      "guid": "b8a9a3993c1036f4ab418786041486f2",
+      "fileIDs": [
+        "1823175270689406231"
+      ],
+      "references": 8,
+      "reason": "Imported model/subasset local IDs; cannot preserve native main mesh fileID",
+      "example": {
+        "asset": "BlastRoyale/Assets/AddressableResources/Maps/Islands/IslandsMapScene.unity",
+        "line": "192242"
+      }
+    },
+    {
+      "guid": "3fc4925794ae3214a979817f7bb54d92",
+      "fileIDs": [
+        "-1342861020411414694"
+      ],
+      "references": 69,
+      "reason": "Imported model/subasset local IDs; cannot preserve native main mesh fileID",
+      "example": {
+        "asset": "BlastRoyale/Assets/AddressableResources/Maps/Islands/IslandsMapScene.unity",
+        "line": "192322"
+      }
+    },
+    {
+      "guid": "eba3cc41b0c0c29449cd80fc189078f2",
+      "fileIDs": [
+        "-3547893066495650475",
+        "8201437419870775723"
+      ],
+      "references": 4,
+      "reason": "Imported model/subasset local IDs; cannot preserve native main mesh fileID",
+      "example": {
+        "asset": "BlastRoyale/Assets/AddressableResources/Maps/Islands/IslandsMapScene.unity",
+        "line": "193187"
+      }
+    },
+    {
+      "guid": "547251fe03b8f4847943b3ad29ac309e",
+      "fileIDs": [
+        "7647466038921580461"
+      ],
+      "references": 4,
+      "reason": "Imported model/subasset local IDs; cannot preserve native main mesh fileID",
+      "example": {
+        "asset": "BlastRoyale/Assets/AddressableResources/Maps/Islands/IslandsMapScene.unity",
+        "line": "206475"
+      }
+    },
+    {
+      "guid": "3ce78a4d3583ec249889400d62140414",
+      "fileIDs": [
+        "-5535846362130828872"
+      ],
+      "references": 8,
+      "reason": "Imported model/subasset local IDs; cannot preserve native main mesh fileID",
+      "example": {
+        "asset": "BlastRoyale/Assets/AddressableResources/Maps/Islands/IslandsMapScene.unity",
+        "line": "207735"
+      }
+    },
+    {
+      "guid": "b928f62398d78d9468f3a7bbbacd09d3",
+      "fileIDs": [
+        "-1197388379580596956"
+      ],
+      "references": 3,
+      "reason": "Imported model/subasset local IDs; cannot preserve native main mesh fileID",
+      "example": {
+        "asset": "BlastRoyale/Assets/AddressableResources/Maps/Islands/IslandsMapScene.unity",
+        "line": "212612"
+      }
+    },
+    {
+      "guid": "a05e46d7d0020774dabc48898d57b0fc",
+      "fileIDs": [
+        "-3278928705951914877"
+      ],
+      "references": 2,
+      "reason": "Imported model/subasset local IDs; cannot preserve native main mesh fileID",
+      "example": {
+        "asset": "BlastRoyale/Assets/AddressableResources/Maps/Test/TestScene_Scene.unity",
+        "line": "20129"
+      }
+    },
+    {
+      "guid": "c25725af53152d5419874521f0a65b63",
+      "fileIDs": [
+        "4772182317507495081"
+      ],
+      "references": 2,
+      "reason": "Imported model/subasset local IDs; cannot preserve native main mesh fileID",
+      "example": {
+        "asset": "BlastRoyale/Assets/AddressableResources/Maps/Test/TestScene_Scene.unity",
+        "line": "20172"
+      }
+    },
+    {
+      "guid": "efe0d0a11fe5b4e4eafcdbc307ca2dee",
+      "fileIDs": [
+        "-8887450664860928385"
+      ],
+      "references": 1,
+      "reason": "Imported model/subasset local IDs; cannot preserve native main mesh fileID",
+      "example": {
+        "asset": "BlastRoyale/Assets/AddressableResources/MatchAssets/Collectables/EnergyCubeLarge.prefab",
+        "line": "43"
+      }
+    },
+    {
+      "guid": "022e85dee57a41549a4592437135d884",
+      "fileIDs": [
+        "1801921913108395325"
+      ],
+      "references": 1,
+      "reason": "Imported model/subasset local IDs; cannot preserve native main mesh fileID",
+      "example": {
+        "asset": "BlastRoyale/Assets/AddressableResources/QuantumAssets/Destructibles/Landmine.prefab",
+        "line": "4978"
+      }
+    },
+    {
+      "guid": "41e18b74cd8bd984b94d58c040bb66da",
+      "fileIDs": [
+        "4300000"
+      ],
+      "references": 1,
+      "reason": "Particle-system mesh pointer, outside MeshFilter/Collider scope",
+      "example": {
+        "asset": "BlastRoyale/Assets/AddressableResources/QuantumAssets/Destructibles/Landmine.prefab",
+        "line": "10301"
+      }
+    },
+    {
+      "guid": "2f181599c8fee9b458370abd502a5a97",
+      "fileIDs": [
+        "-3545631101337805316"
+      ],
+      "references": 1,
+      "reason": "Imported model/subasset local IDs; cannot preserve native main mesh fileID",
+      "example": {
+        "asset": "BlastRoyale/Assets/Art/Prefabs/Environment/Barriers/New Containers/Prefabs/CC_Blue_PRFB.prefab",
+        "line": "225"
+      }
+    },
+    {
+      "guid": "5b82ffce0ec53114d81420184fc2f381",
+      "fileIDs": [
+        "8014414963000489983"
+      ],
+      "references": 1,
+      "reason": "Imported model/subasset local IDs; cannot preserve native main mesh fileID",
+      "example": {
+        "asset": "BlastRoyale/Assets/Art/Prefabs/Environment/Barriers/New Containers/Prefabs/CC_Green_PRFB.prefab",
+        "line": "225"
+      }
+    },
+    {
+      "guid": "dc5724ac13f452048a1ee3e4307a1718",
+      "fileIDs": [
+        "-4083622028742053262"
+      ],
+      "references": 1,
+      "reason": "Imported model/subasset local IDs; cannot preserve native main mesh fileID",
+      "example": {
+        "asset": "BlastRoyale/Assets/Art/Prefabs/Environment/Barriers/New Containers/Prefabs/CC_Grey_PRFB.prefab",
+        "line": "43"
+      }
+    },
+    {
+      "guid": "f6173322fb89ee645a2d3de95d8f1268",
+      "fileIDs": [
+        "5994750775818186975"
+      ],
+      "references": 1,
+      "reason": "Imported model/subasset local IDs; cannot preserve native main mesh fileID",
+      "example": {
+        "asset": "BlastRoyale/Assets/Art/Prefabs/Environment/Barriers/New Containers/Prefabs/CC_Red_PRFB.prefab",
+        "line": "43"
+      }
+    },
+    {
+      "guid": "19d7fc865b7634b40ab8e478d5188356",
+      "fileIDs": [
+        "-4966640774629125344"
+      ],
+      "references": 1,
+      "reason": "Imported model/subasset local IDs; cannot preserve native main mesh fileID",
+      "example": {
+        "asset": "BlastRoyale/Assets/Art/Prefabs/Environment/Barriers/New Containers/Prefabs/CC_Yellow_PRFB.prefab",
+        "line": "192"
+      }
+    },
+    {
+      "guid": "fb009a0a11f96c444a27e0d5ad59f1d0",
+      "fileIDs": [
+        "-3778391177528445538"
+      ],
+      "references": 1,
+      "reason": "Imported model/subasset local IDs; cannot preserve native main mesh fileID",
+      "example": {
+        "asset": "BlastRoyale/Assets/Art/Prefabs/Environment/Barriers/New Containers/Prefabs/DC_Red_PRFB.prefab",
+        "line": "225"
+      }
+    },
+    {
+      "guid": "4c6b2034b565a2c4a990c54ceb1910f1",
+      "fileIDs": [
+        "7485987785665771936"
+      ],
+      "references": 1,
+      "reason": "Imported model/subasset local IDs; cannot preserve native main mesh fileID",
+      "example": {
+        "asset": "BlastRoyale/Assets/Art/Prefabs/Environment/Props/PetrolPumps_PRFB.prefab",
+        "line": "45"
+      }
+    },
+    {
+      "guid": "9427a83c364fa1e4fbe9b67bd075a0cc",
+      "fileIDs": [
+        "9028004165107945956"
+      ],
+      "references": 1,
+      "reason": "Imported model/subasset local IDs; cannot preserve native main mesh fileID",
+      "example": {
+        "asset": "BlastRoyale/Assets/Art/Prefabs/Environment/Props/Prop_BenchPark_PRFB.prefab",
+        "line": "44"
+      }
+    },
+    {
+      "guid": "4d22572abfa783c4b9e98ff8a1a63cdf",
+      "fileIDs": [
+        "-4818509684175400022"
+      ],
+      "references": 1,
+      "reason": "Imported model/subasset local IDs; cannot preserve native main mesh fileID",
+      "example": {
+        "asset": "BlastRoyale/Assets/Art/Prefabs/Environment/Props/Prop_Box_1_PRFB.prefab",
+        "line": "43"
+      }
+    },
+    {
+      "guid": "4787c8ee47b2bb64fbe619d60e4a226e",
+      "fileIDs": [
+        "1271176337602840169"
+      ],
+      "references": 1,
+      "reason": "Imported model/subasset local IDs; cannot preserve native main mesh fileID",
+      "example": {
+        "asset": "BlastRoyale/Assets/Art/Prefabs/Environment/Props/Prop_Box_2_PRFB.prefab",
+        "line": "43"
+      }
+    },
+    {
+      "guid": "cd06c47ca7911564faa49b1470d4084a",
+      "fileIDs": [
+        "489186931637776299"
+      ],
+      "references": 1,
+      "reason": "Imported model/subasset local IDs; cannot preserve native main mesh fileID",
+      "example": {
+        "asset": "BlastRoyale/Assets/Art/Prefabs/Environment/Props/Prop_Dumpster_PRFB.prefab",
+        "line": "141"
+      }
+    },
+    {
+      "guid": "805df80e7dc2a1a4b857f42fefbcf685",
+      "fileIDs": [
+        "-7210459051045162524"
+      ],
+      "references": 1,
+      "reason": "Imported model/subasset local IDs; cannot preserve native main mesh fileID",
+      "example": {
+        "asset": "BlastRoyale/Assets/Art/Prefabs/Environment/Props/Prop_FireHydrant_PRFB.prefab",
+        "line": "44"
+      }
+    },
+    {
+      "guid": "89e447003b61d714bbaf3dabaa953cf3",
+      "fileIDs": [
+        "1697211310281668421",
+        "4467999167202459143"
+      ],
+      "references": 2,
+      "reason": "Imported model/subasset local IDs; cannot preserve native main mesh fileID",
+      "example": {
+        "asset": "BlastRoyale/Assets/Art/Prefabs/Environment/Props/Prop_Rubble_1_PRFB.prefab",
+        "line": "43"
+      }
+    },
+    {
+      "guid": "2d043a60c54b61947a9f30b6306ca76a",
+      "fileIDs": [
+        "5318294145395027911"
+      ],
+      "references": 1,
+      "reason": "Imported model/subasset local IDs; cannot preserve native main mesh fileID",
+      "example": {
+        "asset": "BlastRoyale/Assets/Art/Prefabs/Environment/Props/Prop_SidewalkTree_Oak_PRFB.prefab",
+        "line": "44"
+      }
+    },
+    {
+      "guid": "37ff423a00954cd4aabd50aeb098b0b2",
+      "fileIDs": [
+        "2118966673750630009"
+      ],
+      "references": 1,
+      "reason": "Imported model/subasset local IDs; cannot preserve native main mesh fileID",
+      "example": {
+        "asset": "BlastRoyale/Assets/Art/Prefabs/Environment/Props/Prop_Sign_DIner_PRFB.prefab",
+        "line": "44"
+      }
+    },
+    {
+      "guid": "a52122b4584945041b88bb59eceac75c",
+      "fileIDs": [
+        "699229780260359700"
+      ],
+      "references": 1,
+      "reason": "Imported model/subasset local IDs; cannot preserve native main mesh fileID",
+      "example": {
+        "asset": "BlastRoyale/Assets/Art/Prefabs/Environment/Props/Prop_Sign_Motel_PRFB.prefab",
+        "line": "44"
+      }
+    },
+    {
+      "guid": "7256a32b031c83148b099682f161fedf",
+      "fileIDs": [
+        "4084825462601579873"
+      ],
+      "references": 1,
+      "reason": "Imported model/subasset local IDs; cannot preserve native main mesh fileID",
+      "example": {
+        "asset": "BlastRoyale/Assets/Art/Prefabs/Environment/Props/Prop_StopSignBent_PRFB.prefab",
+        "line": "45"
+      }
+    },
+    {
+      "guid": "4b3bd0118c6ad0048bca3a8cdf11f56a",
+      "fileIDs": [
+        "-9189144401764922683"
+      ],
+      "references": 1,
+      "reason": "Imported model/subasset local IDs; cannot preserve native main mesh fileID",
+      "example": {
+        "asset": "BlastRoyale/Assets/Art/Prefabs/Environment/Props/Prop_StopSign_PRFB.prefab",
+        "line": "45"
+      }
+    },
+    {
+      "guid": "ad9c5f733b80e5d4fb29974ab234b534",
+      "fileIDs": [
+        "7316546201933709398",
+        "8920789066090005012"
+      ],
+      "references": 3,
+      "reason": "Imported model/subasset local IDs; cannot preserve native main mesh fileID",
+      "example": {
+        "asset": "BlastRoyale/Assets/Art/Prefabs/Environment/Props/Prop_StreetLight_PRFB.prefab",
+        "line": "45"
+      }
+    },
+    {
+      "guid": "cf416a3b56bc9ca45a05c6362b274d38",
+      "fileIDs": [
+        "7633433917930475476"
+      ],
+      "references": 1,
+      "reason": "Imported model/subasset local IDs; cannot preserve native main mesh fileID",
+      "example": {
+        "asset": "BlastRoyale/Assets/Art/Prefabs/Environment/Props/Prop_TrafficCone_PRFB.prefab",
+        "line": "43"
+      }
+    },
+    {
+      "guid": "b397a86f0d96b0f4e9f2a275f7dd5b4d",
+      "fileIDs": [
+        "2955705035834749037"
+      ],
+      "references": 1,
+      "reason": "Imported model/subasset local IDs; cannot preserve native main mesh fileID",
+      "example": {
+        "asset": "BlastRoyale/Assets/Art/Prefabs/Environment/Props/Prop_TrashCan_Fallen_PRFB.prefab",
+        "line": "45"
+      }
+    },
+    {
+      "guid": "d94d01977b13d7a44999d594361724fd",
+      "fileIDs": [
+        "1693146904097924092"
+      ],
+      "references": 1,
+      "reason": "Imported model/subasset local IDs; cannot preserve native main mesh fileID",
+      "example": {
+        "asset": "BlastRoyale/Assets/Art/Prefabs/Environment/Props/Statue_PRFB.prefab",
+        "line": "46"
+      }
+    },
+    {
+      "guid": "87f7cf84bd14f9348b4375c8925442b3",
+      "fileIDs": [
+        "-2966322019815328312",
+        "-394131820197429433",
+        "1109602666867028110",
+        "2486898327898679587",
+        "7553266294174551253"
+      ],
+      "references": 5,
+      "reason": "Imported model/subasset local IDs; cannot preserve native main mesh fileID",
+      "example": {
+        "asset": "BlastRoyale/Assets/Art/Prefabs/Environment/Props/scatter assets/Rocks/ROCK_1.prefab",
+        "line": "45"
+      }
+    },
+    {
+      "guid": "2584dd8e9173d8245bab7c46bd0da0e8",
+      "fileIDs": [
+        "-268762606516022895",
+        "-4403156898367258650",
+        "-6736581425296954727",
+        "-727686369603882621",
+        "-7603967091857319137",
+        "-8428372971272114200",
+        "1312087546691619792",
+        "5568872017272591530",
+        "7977991405763368719",
+        "907818207079075937"
+      ],
+      "references": 10,
+      "reason": "Imported model/subasset local IDs; cannot preserve native main mesh fileID",
+      "example": {
+        "asset": "BlastRoyale/Assets/Art/Prefabs/Environment/Props/scatter assets/broken floor rubble/Rubble_small_1.prefab",
+        "line": "43"
+      }
+    },
+    {
+      "guid": "d4aaecd35eba22343b482a275307d75b",
+      "fileIDs": [
+        "-8878540323414062475",
+        "354455593585552775",
+        "8170216713259385223"
+      ],
+      "references": 3,
+      "reason": "Imported model/subasset local IDs; cannot preserve native main mesh fileID",
+      "example": {
+        "asset": "BlastRoyale/Assets/Art/Prefabs/Environment/Trees/Dead_tree_1.prefab",
+        "line": "45"
+      }
+    },
+    {
+      "guid": "da41ae21c658fc541b9c9d96b396e739",
+      "fileIDs": [
+        "-7231435786059215861"
+      ],
+      "references": 1,
+      "reason": "Imported model/subasset local IDs; cannot preserve native main mesh fileID",
+      "example": {
+        "asset": "BlastRoyale/Assets/Art/Prefabs/LEGACY/Particles/FX_CoinDrop.prefab",
+        "line": "4975"
+      }
+    },
+    {
+      "guid": "c035c0e219c7d834ea07eb553442c10f",
+      "fileIDs": [
+        "4300000"
+      ],
+      "references": 2,
+      "reason": "Particle-system mesh pointer, outside MeshFilter/Collider scope",
+      "example": {
+        "asset": "BlastRoyale/Assets/Art/Prefabs/LEGACY/Particles/FX_FireHazard.prefab",
+        "line": "9793"
+      }
+    },
+    {
+      "guid": "698d83cd0377a14489f5be2b239b876b",
+      "fileIDs": [
+        "1993189760640699962"
+      ],
+      "references": 1,
+      "reason": "Imported model/subasset local IDs; cannot preserve native main mesh fileID",
+      "example": {
+        "asset": "BlastRoyale/Assets/Art/Prefabs/LEGACY/Particles/FX_ShrinkingCircleRingOfFire.prefab",
+        "line": "768"
+      }
+    },
+    {
+      "guid": "4dc487372f16827439cd1ae5905dbc3b",
+      "fileIDs": [
+        "-2921881498535460259"
+      ],
+      "references": 1,
+      "reason": "Imported model/subasset local IDs; cannot preserve native main mesh fileID",
+      "example": {
+        "asset": "BlastRoyale/Assets/Art/Prefabs/LEGACY/Particles/HitFx/FX_MeteorHit.prefab",
+        "line": "39235"
+      }
+    }
+  ]
+}
