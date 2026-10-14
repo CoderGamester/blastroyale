@@ -1,0 +1,12 @@
+{
+  "name": "FirstLight.UITTimelineExtensions",
+  "rootNamespace": "FirstLight.Game.UI.Timeline",
+  "references": [
+    "UITTimeline",
+    "Unity.Timeline"
+  ],
+  "includePlatforms": [],
+  "excludePlatforms": [],
+  "allowUnsafeCode": false,
+  "autoReferenced": true
+}

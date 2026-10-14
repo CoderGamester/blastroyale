@@ -9,7 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 597970daea4104996808b5e9505d5b58, type: 3}
+  m_Script: {fileID: 11500000, guid: 6685b7e72b8843e99db0cfbb86a78ac5, type: 3}
   m_Name: '#RewardsImpactCircle'
   m_EditorClassIdentifier: 
   m_Version: 3
@@ -154,7 +154,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 597970daea4104996808b5e9505d5b58, type: 3}
+  m_Script: {fileID: 11500000, guid: 6685b7e72b8843e99db0cfbb86a78ac5, type: 3}
   m_Name: '#PremiumPassIcon'
   m_EditorClassIdentifier: 
   m_Version: 3
@@ -385,7 +385,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cc53655b7c6ad47fe82d3435fd9e98c9, type: 3}
+  m_Script: {fileID: 11500000, guid: 27556e11d4ef4f2eab9fc6e073a441e3, type: 3}
   m_Name: UITOpacityClip(Clone)(Clone)(Clone)
   m_EditorClassIdentifier: 
   _template:
@@ -399,7 +399,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fa3678c8e5d8241d8a144107daae27f3, type: 3}
+  m_Script: {fileID: 11500000, guid: 01c49e5bbc074a0d9ce85b31c6cf16bb, type: 3}
   m_Name: UITPositionClip(Clone)
   m_EditorClassIdentifier: 
   _template:
@@ -413,7 +413,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cc53655b7c6ad47fe82d3435fd9e98c9, type: 3}
+  m_Script: {fileID: 11500000, guid: 27556e11d4ef4f2eab9fc6e073a441e3, type: 3}
   m_Name: UITOpacityClip(Clone)(Clone)
   m_EditorClassIdentifier: 
   _template:
@@ -427,7 +427,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fa3678c8e5d8241d8a144107daae27f3, type: 3}
+  m_Script: {fileID: 11500000, guid: 01c49e5bbc074a0d9ce85b31c6cf16bb, type: 3}
   m_Name: UITPositionClip(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)
   m_EditorClassIdentifier: 
   _template:
@@ -441,7 +441,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cc53655b7c6ad47fe82d3435fd9e98c9, type: 3}
+  m_Script: {fileID: 11500000, guid: 27556e11d4ef4f2eab9fc6e073a441e3, type: 3}
   m_Name: UITOpacityClip
   m_EditorClassIdentifier: 
   _template:
@@ -455,7 +455,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cc53655b7c6ad47fe82d3435fd9e98c9, type: 3}
+  m_Script: {fileID: 11500000, guid: 27556e11d4ef4f2eab9fc6e073a441e3, type: 3}
   m_Name: UITOpacityClip(Clone)(Clone)(Clone)(Clone)(Clone)
   m_EditorClassIdentifier: 
   _template:
@@ -469,7 +469,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cc53655b7c6ad47fe82d3435fd9e98c9, type: 3}
+  m_Script: {fileID: 11500000, guid: 27556e11d4ef4f2eab9fc6e073a441e3, type: 3}
   m_Name: UITOpacityClip(Clone)(Clone)
   m_EditorClassIdentifier: 
   _template:
@@ -483,7 +483,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fa3678c8e5d8241d8a144107daae27f3, type: 3}
+  m_Script: {fileID: 11500000, guid: 01c49e5bbc074a0d9ce85b31c6cf16bb, type: 3}
   m_Name: UITPositionClip(Clone)(Clone)(Clone)(Clone)(Clone)
   m_EditorClassIdentifier: 
   _template:
@@ -497,7 +497,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cc53655b7c6ad47fe82d3435fd9e98c9, type: 3}
+  m_Script: {fileID: 11500000, guid: 27556e11d4ef4f2eab9fc6e073a441e3, type: 3}
   m_Name: UITOpacityClip(Clone)(Clone)(Clone)
   m_EditorClassIdentifier: 
   _template:
@@ -511,7 +511,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 597970daea4104996808b5e9505d5b58, type: 3}
+  m_Script: {fileID: 11500000, guid: 6685b7e72b8843e99db0cfbb86a78ac5, type: 3}
   m_Name: Layer 1
   m_EditorClassIdentifier: 
   m_Version: 3
@@ -742,7 +742,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cc53655b7c6ad47fe82d3435fd9e98c9, type: 3}
+  m_Script: {fileID: 11500000, guid: 27556e11d4ef4f2eab9fc6e073a441e3, type: 3}
   m_Name: UITOpacityClip
   m_EditorClassIdentifier: 
   _template:
@@ -756,7 +756,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa3563c4c1576499f8f4740733a3495e, type: 3}
+  m_Script: {fileID: 11500000, guid: f4803d5894ab4403812457ce41049513, type: 3}
   m_Name: UITScaleClip(Clone)
   m_EditorClassIdentifier: 
   _template:
@@ -770,7 +770,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cc53655b7c6ad47fe82d3435fd9e98c9, type: 3}
+  m_Script: {fileID: 11500000, guid: 27556e11d4ef4f2eab9fc6e073a441e3, type: 3}
   m_Name: UITOpacityClip(Clone)(Clone)(Clone)
   m_EditorClassIdentifier: 
   _template:
@@ -784,7 +784,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 597970daea4104996808b5e9505d5b58, type: 3}
+  m_Script: {fileID: 11500000, guid: 9314490441e54471b05b59c7a49df3a3, type: 3}
   m_Name: '#CharacterImage'
   m_EditorClassIdentifier: 
   m_Version: 3
@@ -879,7 +879,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 597970daea4104996808b5e9505d5b58, type: 3}
+  m_Script: {fileID: 11500000, guid: 6685b7e72b8843e99db0cfbb86a78ac5, type: 3}
   m_Name: '#SeasonTextContainer'
   m_EditorClassIdentifier: 
   m_Version: 3
@@ -1042,7 +1042,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 597970daea4104996808b5e9505d5b58, type: 3}
+  m_Script: {fileID: 11500000, guid: 6685b7e72b8843e99db0cfbb86a78ac5, type: 3}
   m_Name: Layer 1
   m_EditorClassIdentifier: 
   m_Version: 3
@@ -1342,7 +1342,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fa3678c8e5d8241d8a144107daae27f3, type: 3}
+  m_Script: {fileID: 11500000, guid: 01c49e5bbc074a0d9ce85b31c6cf16bb, type: 3}
   m_Name: UITPositionClip(Clone)(Clone)(Clone)
   m_EditorClassIdentifier: 
   _template:
@@ -1356,7 +1356,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fa3678c8e5d8241d8a144107daae27f3, type: 3}
+  m_Script: {fileID: 11500000, guid: 01c49e5bbc074a0d9ce85b31c6cf16bb, type: 3}
   m_Name: UITPositionClip(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)
   m_EditorClassIdentifier: 
   _template:
@@ -1370,7 +1370,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa3563c4c1576499f8f4740733a3495e, type: 3}
+  m_Script: {fileID: 11500000, guid: f4803d5894ab4403812457ce41049513, type: 3}
   m_Name: UITScaleClip(Clone)(Clone)(Clone)
   m_EditorClassIdentifier: 
   _template:
@@ -1384,7 +1384,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fa3678c8e5d8241d8a144107daae27f3, type: 3}
+  m_Script: {fileID: 11500000, guid: 01c49e5bbc074a0d9ce85b31c6cf16bb, type: 3}
   m_Name: UITPositionClip(Clone)(Clone)(Clone)
   m_EditorClassIdentifier: 
   _template:
@@ -1398,7 +1398,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fa3678c8e5d8241d8a144107daae27f3, type: 3}
+  m_Script: {fileID: 11500000, guid: 01c49e5bbc074a0d9ce85b31c6cf16bb, type: 3}
   m_Name: UITPositionClip(Clone)(Clone)(Clone)(Clone)(Clone)
   m_EditorClassIdentifier: 
   _template:
@@ -1412,7 +1412,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fa3678c8e5d8241d8a144107daae27f3, type: 3}
+  m_Script: {fileID: 11500000, guid: 01c49e5bbc074a0d9ce85b31c6cf16bb, type: 3}
   m_Name: UITPositionClip(Clone)(Clone)
   m_EditorClassIdentifier: 
   _template:
@@ -1426,7 +1426,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cc53655b7c6ad47fe82d3435fd9e98c9, type: 3}
+  m_Script: {fileID: 11500000, guid: 27556e11d4ef4f2eab9fc6e073a441e3, type: 3}
   m_Name: UITOpacityClip
   m_EditorClassIdentifier: 
   _template:
@@ -1440,7 +1440,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 597970daea4104996808b5e9505d5b58, type: 3}
+  m_Script: {fileID: 11500000, guid: 6685b7e72b8843e99db0cfbb86a78ac5, type: 3}
   m_Name: Layer 1
   m_EditorClassIdentifier: 
   m_Version: 3
@@ -1671,7 +1671,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 597970daea4104996808b5e9505d5b58, type: 3}
+  m_Script: {fileID: 11500000, guid: 6685b7e72b8843e99db0cfbb86a78ac5, type: 3}
   m_Name: Layer 1
   m_EditorClassIdentifier: 
   m_Version: 3
@@ -1902,7 +1902,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fa3678c8e5d8241d8a144107daae27f3, type: 3}
+  m_Script: {fileID: 11500000, guid: 01c49e5bbc074a0d9ce85b31c6cf16bb, type: 3}
   m_Name: UITPositionClip(Clone)(Clone)(Clone)(Clone)(Clone)
   m_EditorClassIdentifier: 
   _template:
@@ -1930,7 +1930,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cc53655b7c6ad47fe82d3435fd9e98c9, type: 3}
+  m_Script: {fileID: 11500000, guid: 27556e11d4ef4f2eab9fc6e073a441e3, type: 3}
   m_Name: UITOpacityClip(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)
   m_EditorClassIdentifier: 
   _template:
@@ -1944,7 +1944,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cc53655b7c6ad47fe82d3435fd9e98c9, type: 3}
+  m_Script: {fileID: 11500000, guid: 27556e11d4ef4f2eab9fc6e073a441e3, type: 3}
   m_Name: UITOpacityClip(Clone)
   m_EditorClassIdentifier: 
   _template:
@@ -1958,7 +1958,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cc53655b7c6ad47fe82d3435fd9e98c9, type: 3}
+  m_Script: {fileID: 11500000, guid: 27556e11d4ef4f2eab9fc6e073a441e3, type: 3}
   m_Name: UITOpacityClip(Clone)(Clone)(Clone)(Clone)
   m_EditorClassIdentifier: 
   _template:
@@ -1972,7 +1972,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cc53655b7c6ad47fe82d3435fd9e98c9, type: 3}
+  m_Script: {fileID: 11500000, guid: 27556e11d4ef4f2eab9fc6e073a441e3, type: 3}
   m_Name: UITOpacityClip
   m_EditorClassIdentifier: 
   _template:
@@ -1986,7 +1986,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa3563c4c1576499f8f4740733a3495e, type: 3}
+  m_Script: {fileID: 11500000, guid: f4803d5894ab4403812457ce41049513, type: 3}
   m_Name: UITScaleClip
   m_EditorClassIdentifier: 
   _template:
@@ -2034,7 +2034,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa3563c4c1576499f8f4740733a3495e, type: 3}
+  m_Script: {fileID: 11500000, guid: f4803d5894ab4403812457ce41049513, type: 3}
   m_Name: UITScaleClip(Clone)
   m_EditorClassIdentifier: 
   _template:
@@ -2048,7 +2048,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cc53655b7c6ad47fe82d3435fd9e98c9, type: 3}
+  m_Script: {fileID: 11500000, guid: 27556e11d4ef4f2eab9fc6e073a441e3, type: 3}
   m_Name: UITOpacityClip(Clone)
   m_EditorClassIdentifier: 
   _template:
@@ -2062,7 +2062,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 597970daea4104996808b5e9505d5b58, type: 3}
+  m_Script: {fileID: 11500000, guid: 9314490441e54471b05b59c7a49df3a3, type: 3}
   m_Name: Layer 1
   m_EditorClassIdentifier: 
   m_Version: 3
@@ -2224,7 +2224,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 597970daea4104996808b5e9505d5b58, type: 3}
+  m_Script: {fileID: 11500000, guid: 6685b7e72b8843e99db0cfbb86a78ac5, type: 3}
   m_Name: Layer 1
   m_EditorClassIdentifier: 
   m_Version: 3
@@ -2524,7 +2524,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fa3678c8e5d8241d8a144107daae27f3, type: 3}
+  m_Script: {fileID: 11500000, guid: 01c49e5bbc074a0d9ce85b31c6cf16bb, type: 3}
   m_Name: UITPositionClip(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)
   m_EditorClassIdentifier: 
   _template:
@@ -2538,7 +2538,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa3563c4c1576499f8f4740733a3495e, type: 3}
+  m_Script: {fileID: 11500000, guid: f4803d5894ab4403812457ce41049513, type: 3}
   m_Name: UITScaleClip(Clone)(Clone)
   m_EditorClassIdentifier: 
   _template:
@@ -2552,7 +2552,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa3563c4c1576499f8f4740733a3495e, type: 3}
+  m_Script: {fileID: 11500000, guid: f4803d5894ab4403812457ce41049513, type: 3}
   m_Name: UITScaleClip
   m_EditorClassIdentifier: 
   _template:
@@ -2580,7 +2580,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 597970daea4104996808b5e9505d5b58, type: 3}
+  m_Script: {fileID: 11500000, guid: 6685b7e72b8843e99db0cfbb86a78ac5, type: 3}
   m_Name: '#TimeLeftWidget'
   m_EditorClassIdentifier: 
   m_Version: 3
@@ -2724,7 +2724,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 597970daea4104996808b5e9505d5b58, type: 3}
+  m_Script: {fileID: 11500000, guid: 9314490441e54471b05b59c7a49df3a3, type: 3}
   m_Name: Layer 2
   m_EditorClassIdentifier: 
   m_Version: 3
@@ -3093,7 +3093,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cc53655b7c6ad47fe82d3435fd9e98c9, type: 3}
+  m_Script: {fileID: 11500000, guid: 27556e11d4ef4f2eab9fc6e073a441e3, type: 3}
   m_Name: UITOpacityClip(Clone)
   m_EditorClassIdentifier: 
   _template:
@@ -3107,7 +3107,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fa3678c8e5d8241d8a144107daae27f3, type: 3}
+  m_Script: {fileID: 11500000, guid: 01c49e5bbc074a0d9ce85b31c6cf16bb, type: 3}
   m_Name: UITPositionClip(Clone)
   m_EditorClassIdentifier: 
   _template:
@@ -3121,7 +3121,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fa3678c8e5d8241d8a144107daae27f3, type: 3}
+  m_Script: {fileID: 11500000, guid: 01c49e5bbc074a0d9ce85b31c6cf16bb, type: 3}
   m_Name: UITPositionClip(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)
   m_EditorClassIdentifier: 
   _template:
@@ -3135,7 +3135,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa3563c4c1576499f8f4740733a3495e, type: 3}
+  m_Script: {fileID: 11500000, guid: f4803d5894ab4403812457ce41049513, type: 3}
   m_Name: UITScaleClip(Clone)(Clone)
   m_EditorClassIdentifier: 
   _template:
@@ -3149,7 +3149,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fa3678c8e5d8241d8a144107daae27f3, type: 3}
+  m_Script: {fileID: 11500000, guid: 01c49e5bbc074a0d9ce85b31c6cf16bb, type: 3}
   m_Name: UITPositionClip(Clone)(Clone)(Clone)(Clone)(Clone)
   m_EditorClassIdentifier: 
   _template:
@@ -3163,7 +3163,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cc53655b7c6ad47fe82d3435fd9e98c9, type: 3}
+  m_Script: {fileID: 11500000, guid: 27556e11d4ef4f2eab9fc6e073a441e3, type: 3}
   m_Name: UITOpacityClip
   m_EditorClassIdentifier: 
   _template:
@@ -3177,7 +3177,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 597970daea4104996808b5e9505d5b58, type: 3}
+  m_Script: {fileID: 11500000, guid: 6685b7e72b8843e99db0cfbb86a78ac5, type: 3}
   m_Name: '#CloseButton'
   m_EditorClassIdentifier: 
   m_Version: 3
@@ -3339,7 +3339,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fa3678c8e5d8241d8a144107daae27f3, type: 3}
+  m_Script: {fileID: 11500000, guid: 01c49e5bbc074a0d9ce85b31c6cf16bb, type: 3}
   m_Name: UITPositionClip(Clone)(Clone)(Clone)(Clone)
   m_EditorClassIdentifier: 
   _template:
@@ -3353,7 +3353,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fa3678c8e5d8241d8a144107daae27f3, type: 3}
+  m_Script: {fileID: 11500000, guid: 01c49e5bbc074a0d9ce85b31c6cf16bb, type: 3}
   m_Name: UITPositionClip(Clone)(Clone)(Clone)
   m_EditorClassIdentifier: 
   _template:
@@ -3367,7 +3367,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 597970daea4104996808b5e9505d5b58, type: 3}
+  m_Script: {fileID: 11500000, guid: 6685b7e72b8843e99db0cfbb86a78ac5, type: 3}
   m_Name: '#ButtonsBuy'
   m_EditorClassIdentifier: 
   m_Version: 3
@@ -3530,7 +3530,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cc53655b7c6ad47fe82d3435fd9e98c9, type: 3}
+  m_Script: {fileID: 11500000, guid: 27556e11d4ef4f2eab9fc6e073a441e3, type: 3}
   m_Name: UITOpacityClip(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)
   m_EditorClassIdentifier: 
   _template:
@@ -3544,7 +3544,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa3563c4c1576499f8f4740733a3495e, type: 3}
+  m_Script: {fileID: 11500000, guid: f4803d5894ab4403812457ce41049513, type: 3}
   m_Name: UITScaleClip(Clone)
   m_EditorClassIdentifier: 
   _template:
@@ -3558,7 +3558,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fa3678c8e5d8241d8a144107daae27f3, type: 3}
+  m_Script: {fileID: 11500000, guid: 01c49e5bbc074a0d9ce85b31c6cf16bb, type: 3}
   m_Name: UITPositionClip(Clone)(Clone)(Clone)(Clone)(Clone)
   m_EditorClassIdentifier: 
   _template:
@@ -3572,7 +3572,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fa3678c8e5d8241d8a144107daae27f3, type: 3}
+  m_Script: {fileID: 11500000, guid: 01c49e5bbc074a0d9ce85b31c6cf16bb, type: 3}
   m_Name: UITPositionClip(Clone)(Clone)(Clone)(Clone)
   m_EditorClassIdentifier: 
   _template:
@@ -3586,7 +3586,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cc53655b7c6ad47fe82d3435fd9e98c9, type: 3}
+  m_Script: {fileID: 11500000, guid: 27556e11d4ef4f2eab9fc6e073a441e3, type: 3}
   m_Name: UITOpacityClip(Clone)(Clone)
   m_EditorClassIdentifier: 
   _template:
@@ -3600,7 +3600,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa3563c4c1576499f8f4740733a3495e, type: 3}
+  m_Script: {fileID: 11500000, guid: f4803d5894ab4403812457ce41049513, type: 3}
   m_Name: UITScaleClip(Clone)
   m_EditorClassIdentifier: 
   _template:
@@ -3614,7 +3614,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cc53655b7c6ad47fe82d3435fd9e98c9, type: 3}
+  m_Script: {fileID: 11500000, guid: 27556e11d4ef4f2eab9fc6e073a441e3, type: 3}
   m_Name: UITOpacityClip(Clone)(Clone)(Clone)
   m_EditorClassIdentifier: 
   _template:
@@ -3628,7 +3628,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 597970daea4104996808b5e9505d5b58, type: 3}
+  m_Script: {fileID: 11500000, guid: 6685b7e72b8843e99db0cfbb86a78ac5, type: 3}
   m_Name: '#Banner'
   m_EditorClassIdentifier: 
   m_Version: 3
@@ -3721,7 +3721,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cc53655b7c6ad47fe82d3435fd9e98c9, type: 3}
+  m_Script: {fileID: 11500000, guid: 27556e11d4ef4f2eab9fc6e073a441e3, type: 3}
   m_Name: UITOpacityClip(Clone)
   m_EditorClassIdentifier: 
   _template:
@@ -3735,7 +3735,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 597970daea4104996808b5e9505d5b58, type: 3}
+  m_Script: {fileID: 11500000, guid: 6685b7e72b8843e99db0cfbb86a78ac5, type: 3}
   m_Name: Layer 1
   m_EditorClassIdentifier: 
   m_Version: 3
@@ -3966,7 +3966,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fa3678c8e5d8241d8a144107daae27f3, type: 3}
+  m_Script: {fileID: 11500000, guid: 01c49e5bbc074a0d9ce85b31c6cf16bb, type: 3}
   m_Name: UITPositionClip(Clone)(Clone)(Clone)
   m_EditorClassIdentifier: 
   _template:
@@ -3980,7 +3980,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fa3678c8e5d8241d8a144107daae27f3, type: 3}
+  m_Script: {fileID: 11500000, guid: 01c49e5bbc074a0d9ce85b31c6cf16bb, type: 3}
   m_Name: UITPositionClip(Clone)(Clone)(Clone)(Clone)
   m_EditorClassIdentifier: 
   _template:
@@ -3994,7 +3994,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fa3678c8e5d8241d8a144107daae27f3, type: 3}
+  m_Script: {fileID: 11500000, guid: 01c49e5bbc074a0d9ce85b31c6cf16bb, type: 3}
   m_Name: UITPositionClip(Clone)(Clone)(Clone)(Clone)(Clone)
   m_EditorClassIdentifier: 
   _template:
@@ -4008,7 +4008,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 597970daea4104996808b5e9505d5b58, type: 3}
+  m_Script: {fileID: 11500000, guid: 6685b7e72b8843e99db0cfbb86a78ac5, type: 3}
   m_Name: '#EarnExclusiveItemsLabel'
   m_EditorClassIdentifier: 
   m_Version: 3
@@ -4171,7 +4171,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fa3678c8e5d8241d8a144107daae27f3, type: 3}
+  m_Script: {fileID: 11500000, guid: 01c49e5bbc074a0d9ce85b31c6cf16bb, type: 3}
   m_Name: UITPositionClip(Clone)(Clone)
   m_EditorClassIdentifier: 
   _template:
@@ -4185,7 +4185,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cc53655b7c6ad47fe82d3435fd9e98c9, type: 3}
+  m_Script: {fileID: 11500000, guid: 27556e11d4ef4f2eab9fc6e073a441e3, type: 3}
   m_Name: UITOpacityClip
   m_EditorClassIdentifier: 
   _template:
@@ -4199,7 +4199,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa3563c4c1576499f8f4740733a3495e, type: 3}
+  m_Script: {fileID: 11500000, guid: f4803d5894ab4403812457ce41049513, type: 3}
   m_Name: UITScaleClip(Clone)(Clone)(Clone)
   m_EditorClassIdentifier: 
   _template:
@@ -4213,7 +4213,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 597970daea4104996808b5e9505d5b58, type: 3}
+  m_Script: {fileID: 11500000, guid: 6685b7e72b8843e99db0cfbb86a78ac5, type: 3}
   m_Name: '#Background'
   m_EditorClassIdentifier: 
   m_Version: 3
@@ -4375,7 +4375,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cc53655b7c6ad47fe82d3435fd9e98c9, type: 3}
+  m_Script: {fileID: 11500000, guid: 27556e11d4ef4f2eab9fc6e073a441e3, type: 3}
   m_Name: UITOpacityClip
   m_EditorClassIdentifier: 
   _template:
@@ -4389,7 +4389,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 597970daea4104996808b5e9505d5b58, type: 3}
+  m_Script: {fileID: 11500000, guid: 6685b7e72b8843e99db0cfbb86a78ac5, type: 3}
   m_Name: Layer 1
   m_EditorClassIdentifier: 
   m_Version: 3
@@ -4533,7 +4533,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 597970daea4104996808b5e9505d5b58, type: 3}
+  m_Script: {fileID: 11500000, guid: 6685b7e72b8843e99db0cfbb86a78ac5, type: 3}
   m_Name: '#FreeLabel'
   m_EditorClassIdentifier: 
   m_Version: 3
@@ -4696,7 +4696,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 597970daea4104996808b5e9505d5b58, type: 3}
+  m_Script: {fileID: 11500000, guid: 6685b7e72b8843e99db0cfbb86a78ac5, type: 3}
   m_Name: Layer 1
   m_EditorClassIdentifier: 
   m_Version: 3
@@ -4996,7 +4996,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cc53655b7c6ad47fe82d3435fd9e98c9, type: 3}
+  m_Script: {fileID: 11500000, guid: 27556e11d4ef4f2eab9fc6e073a441e3, type: 3}
   m_Name: UITOpacityClip(Clone)(Clone)
   m_EditorClassIdentifier: 
   _template:
@@ -5010,7 +5010,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fa3678c8e5d8241d8a144107daae27f3, type: 3}
+  m_Script: {fileID: 11500000, guid: 01c49e5bbc074a0d9ce85b31c6cf16bb, type: 3}
   m_Name: UITPositionClip(Clone)(Clone)(Clone)
   m_EditorClassIdentifier: 
   _template:
@@ -5024,7 +5024,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 597970daea4104996808b5e9505d5b58, type: 3}
+  m_Script: {fileID: 11500000, guid: 6685b7e72b8843e99db0cfbb86a78ac5, type: 3}
   m_Name: '#RewardsContainerPremium'
   m_EditorClassIdentifier: 
   m_Version: 3
@@ -5187,7 +5187,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fa3678c8e5d8241d8a144107daae27f3, type: 3}
+  m_Script: {fileID: 11500000, guid: 01c49e5bbc074a0d9ce85b31c6cf16bb, type: 3}
   m_Name: UITPositionClip(Clone)
   m_EditorClassIdentifier: 
   _template:
@@ -5201,7 +5201,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 597970daea4104996808b5e9505d5b58, type: 3}
+  m_Script: {fileID: 11500000, guid: 6685b7e72b8843e99db0cfbb86a78ac5, type: 3}
   m_Name: '#RewardsContainerFree'
   m_EditorClassIdentifier: 
   m_Version: 3
@@ -5364,7 +5364,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 597970daea4104996808b5e9505d5b58, type: 3}
+  m_Script: {fileID: 11500000, guid: 6685b7e72b8843e99db0cfbb86a78ac5, type: 3}
   m_Name: '#PremiumLabel'
   m_EditorClassIdentifier: 
   m_Version: 3
@@ -5527,7 +5527,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fa3678c8e5d8241d8a144107daae27f3, type: 3}
+  m_Script: {fileID: 11500000, guid: 01c49e5bbc074a0d9ce85b31c6cf16bb, type: 3}
   m_Name: UITPositionClip
   m_EditorClassIdentifier: 
   _template:
@@ -5541,7 +5541,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cc53655b7c6ad47fe82d3435fd9e98c9, type: 3}
+  m_Script: {fileID: 11500000, guid: 27556e11d4ef4f2eab9fc6e073a441e3, type: 3}
   m_Name: UITOpacityClip(Clone)
   m_EditorClassIdentifier: 
   _template:

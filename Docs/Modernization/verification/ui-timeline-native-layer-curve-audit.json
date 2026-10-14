@@ -1,0 +1,4440 @@
+{
+  "TrackGuid": "6685b7e72b8843e99db0cfbb86a78ac5",
+  "Tracks": [
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/MatchEndAnimations-Win.playable",
+      "TrackId": "-8819821444503341434",
+      "Name": "'#BackWingradient'",
+      "ParentId": "11400000",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/MatchEndAnimations-Win.playable",
+      "TrackId": "-8621353950029577036",
+      "Name": "'#BgWin'",
+      "ParentId": "11400000",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/MatchEndAnimations-Win.playable",
+      "TrackId": "-8484188896237894323",
+      "Name": "'#TextWin'",
+      "ParentId": "11400000",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/MatchEndAnimations-Win.playable",
+      "TrackId": "-8214471294396961128",
+      "Name": "Layer 2",
+      "ParentId": "-8484188896237894323",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/MatchEndAnimations-Win.playable",
+      "TrackId": "-8121429817656247604",
+      "Name": "'#YouWinTitle'",
+      "ParentId": "11400000",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/MatchEndAnimations-Win.playable",
+      "TrackId": "-8033612114692926714",
+      "Name": "'#Crown'",
+      "ParentId": "11400000",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/MatchEndAnimations-Win.playable",
+      "TrackId": "-7444228666996903233",
+      "Name": "Layer 1",
+      "ParentId": "-4603165164280802143",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/MatchEndAnimations-Win.playable",
+      "TrackId": "-7354444688688553038",
+      "Name": "'#TextWinEffect1'",
+      "ParentId": "11400000",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/MatchEndAnimations-Win.playable",
+      "TrackId": "-4603165164280802143",
+      "Name": "'#TextWinEffect2'",
+      "ParentId": "11400000",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/MatchEndAnimations-Win.playable",
+      "TrackId": "-3916831736668134977",
+      "Name": "'#ProjectorLight'",
+      "ParentId": "11400000",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/MatchEndAnimations-Win.playable",
+      "TrackId": "-3385205405666126791",
+      "Name": "'#Star'",
+      "ParentId": "11400000",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/MatchEndAnimations-Win.playable",
+      "TrackId": "-1870059653863349323",
+      "Name": "Layer 1",
+      "ParentId": "-3916831736668134977",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/MatchEndAnimations-Win.playable",
+      "TrackId": "1798040099902277670",
+      "Name": "Layer 1",
+      "ParentId": "-3385205405666126791",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/MatchEndAnimations-Win.playable",
+      "TrackId": "2326562785326289968",
+      "Name": "Layer 2",
+      "ParentId": "7880004563913607410",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/MatchEndAnimations-Win.playable",
+      "TrackId": "4698070780692941593",
+      "Name": "Layer 1",
+      "ParentId": "7880004563913607410",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/MatchEndAnimations-Win.playable",
+      "TrackId": "4853180185223904942",
+      "Name": "Layer 2",
+      "ParentId": "-3916831736668134977",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/MatchEndAnimations-Win.playable",
+      "TrackId": "6440150037193852193",
+      "Name": "'#root'",
+      "ParentId": "11400000",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/MatchEndAnimations-Win.playable",
+      "TrackId": "6515267918672331646",
+      "Name": "Layer 1",
+      "ParentId": "-8484188896237894323",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/MatchEndAnimations-Win.playable",
+      "TrackId": "7637602787477885394",
+      "Name": "Layer 1",
+      "ParentId": "-7354444688688553038",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/MatchEndAnimations-Win.playable",
+      "TrackId": "7880004563913607410",
+      "Name": "'#ProjectorLight2'",
+      "ParentId": "11400000",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/MatchEndAnimations-Win.playable",
+      "TrackId": "8292631120696359835",
+      "Name": "Layer 1",
+      "ParentId": "-8033612114692926714",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/Kill-2Timeline.playable",
+      "TrackId": "-8908894555607006378",
+      "Name": "'#DoubleBlastNotification #SkullIcon #SkullImpact'",
+      "ParentId": "11400000",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/Kill-2Timeline.playable",
+      "TrackId": "-7961896300871228918",
+      "Name": "'#DoubleBlastNotification #SkullIcon #SkullShardDouble'",
+      "ParentId": "11400000",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/Kill-2Timeline.playable",
+      "TrackId": "-4611195914790692973",
+      "Name": "Layer 3",
+      "ParentId": "-8908894555607006378",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/Kill-2Timeline.playable",
+      "TrackId": "-4404899198868080854",
+      "Name": "Layer 2",
+      "ParentId": "-7961896300871228918",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/Kill-2Timeline.playable",
+      "TrackId": "-4049036526332507876",
+      "Name": "Layer 1",
+      "ParentId": "-8908894555607006378",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/Kill-2Timeline.playable",
+      "TrackId": "-4036241146819265791",
+      "Name": "Layer 1",
+      "ParentId": "2768601336474830607",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/Kill-2Timeline.playable",
+      "TrackId": "-2740046472461113835",
+      "Name": "Layer 3",
+      "ParentId": "5947456361654976155",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/Kill-2Timeline.playable",
+      "TrackId": "-2691589807430721479",
+      "Name": "'#DoubleBlastNotification #PlayerNameLabel'",
+      "ParentId": "11400000",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/Kill-2Timeline.playable",
+      "TrackId": "-2594503567911819640",
+      "Name": "Layer 2",
+      "ParentId": "2768601336474830607",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/Kill-2Timeline.playable",
+      "TrackId": "-2325106431334465016",
+      "Name": "Layer 2",
+      "ParentId": "-8908894555607006378",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/Kill-2Timeline.playable",
+      "TrackId": "-1529345925792574744",
+      "Name": "Layer 1",
+      "ParentId": "-2691589807430721479",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/Kill-2Timeline.playable",
+      "TrackId": "-1305295611753436319",
+      "Name": "'#DoubleBlastNotification #BlastGradient'",
+      "ParentId": "11400000",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/Kill-2Timeline.playable",
+      "TrackId": "2015006052403255169",
+      "Name": "Layer 1",
+      "ParentId": "5947456361654976155",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/Kill-2Timeline.playable",
+      "TrackId": "2768601336474830607",
+      "Name": "'#DoubleBlastNotification #BlastedLabel'",
+      "ParentId": "11400000",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/Kill-2Timeline.playable",
+      "TrackId": "2850762276701876409",
+      "Name": "Layer 4",
+      "ParentId": "6431536508659469879",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/Kill-2Timeline.playable",
+      "TrackId": "2979832194182227574",
+      "Name": "Layer 1",
+      "ParentId": "-7961896300871228918",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/Kill-2Timeline.playable",
+      "TrackId": "3608859886645802696",
+      "Name": "Layer 2",
+      "ParentId": "-2691589807430721479",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/Kill-2Timeline.playable",
+      "TrackId": "3823474307977621119",
+      "Name": "'#DoubleBlastNotification #SkullIcon #SkullShardSmall'",
+      "ParentId": "11400000",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/Kill-2Timeline.playable",
+      "TrackId": "5262739216963331458",
+      "Name": "Layer 1",
+      "ParentId": "6431536508659469879",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/Kill-2Timeline.playable",
+      "TrackId": "5947456361654976155",
+      "Name": "'#DoubleBlastNotification'",
+      "ParentId": "11400000",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/Kill-2Timeline.playable",
+      "TrackId": "6043307560445215864",
+      "Name": "Layer 2",
+      "ParentId": "6431536508659469879",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/Kill-2Timeline.playable",
+      "TrackId": "6431536508659469879",
+      "Name": "'#DoubleBlastNotification #SkullIcon'",
+      "ParentId": "11400000",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/Kill-2Timeline.playable",
+      "TrackId": "6716652435606672048",
+      "Name": "Layer 1",
+      "ParentId": "7383100022765610909",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/Kill-2Timeline.playable",
+      "TrackId": "7212129111008296828",
+      "Name": "Layer 3",
+      "ParentId": "6431536508659469879",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/Kill-2Timeline.playable",
+      "TrackId": "7356590052632367979",
+      "Name": "Layer 1",
+      "ParentId": "8306095886786167601",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/Kill-2Timeline.playable",
+      "TrackId": "7383100022765610909",
+      "Name": "'#DoubleBlastNotification #SkullIcon #SkullShardMiddle'",
+      "ParentId": "11400000",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/Kill-2Timeline.playable",
+      "TrackId": "7484498877053359822",
+      "Name": "Layer 2",
+      "ParentId": "5947456361654976155",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/Kill-2Timeline.playable",
+      "TrackId": "7777678773193532685",
+      "Name": "Layer 1",
+      "ParentId": "-1305295611753436319",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/Kill-2Timeline.playable",
+      "TrackId": "8191706044831868813",
+      "Name": "Layer 1",
+      "ParentId": "3823474307977621119",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/Kill-2Timeline.playable",
+      "TrackId": "8306095886786167601",
+      "Name": "'#DoubleBlastNotification #SkullIcon #SkullIconFull'",
+      "ParentId": "11400000",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/LoadingScreenAnimationTimeline.playable",
+      "TrackId": "4306816525744702806",
+      "Name": ".loading-background",
+      "ParentId": "11400000",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/LoadingScreenAnimationTimeline.playable",
+      "TrackId": "5327110456667942227",
+      "Name": ".loading-br-logo",
+      "ParentId": "11400000",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/AreaShrinkingTimeline.playable",
+      "TrackId": "-8465428278312028475",
+      "Name": "Layer 2",
+      "ParentId": "7021443245936874663",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/AreaShrinkingTimeline.playable",
+      "TrackId": "632782122807146364",
+      "Name": "Layer 3",
+      "ParentId": "7021443245936874663",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/AreaShrinkingTimeline.playable",
+      "TrackId": "6757809764788377220",
+      "Name": "Layer 1",
+      "ParentId": "7021443245936874663",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/AreaShrinkingTimeline.playable",
+      "TrackId": "7021443245936874663",
+      "Name": "'#NotificationText'",
+      "ParentId": "11400000",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/BattlePassAnimationTimeline.playable",
+      "TrackId": "-1484020746945344299",
+      "Name": ".paid-pass-icon__spark-small",
+      "ParentId": "11400000",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/BattlePassAnimationTimeline.playable",
+      "TrackId": "-670225417361474866",
+      "Name": ".paid-pass-icon",
+      "ParentId": "11400000",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/BattlePassAnimationTimeline.playable",
+      "TrackId": "5443421180016128011",
+      "Name": ".paid-pass-icon__spark-big",
+      "ParentId": "11400000",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/BattlePassAnimationTimeline.playable",
+      "TrackId": "6267227440717177396",
+      "Name": "Layer 1",
+      "ParentId": "5443421180016128011",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/Kill-3Timeline.playable",
+      "TrackId": "-8908894555607006378",
+      "Name": "'#TripleBlastNotification #SkullIcon #SkullImpact'",
+      "ParentId": "11400000",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/Kill-3Timeline.playable",
+      "TrackId": "-7961896300871228918",
+      "Name": "'#TripleBlastNotification #SkullIcon #SkullShardTriple'",
+      "ParentId": "11400000",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/Kill-3Timeline.playable",
+      "TrackId": "-7831143498447143036",
+      "Name": "'#BackgroundCyanTint'",
+      "ParentId": "11400000",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/Kill-3Timeline.playable",
+      "TrackId": "-4404899198868080854",
+      "Name": "Layer 2",
+      "ParentId": "-7961896300871228918",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/Kill-3Timeline.playable",
+      "TrackId": "-4049036526332507876",
+      "Name": "Layer 1",
+      "ParentId": "-8908894555607006378",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/Kill-3Timeline.playable",
+      "TrackId": "-4036241146819265791",
+      "Name": "Layer 1",
+      "ParentId": "2768601336474830607",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/Kill-3Timeline.playable",
+      "TrackId": "-3504504470889931934",
+      "Name": "Layer 2",
+      "ParentId": "-7831143498447143036",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/Kill-3Timeline.playable",
+      "TrackId": "-2740046472461113835",
+      "Name": "Layer 3",
+      "ParentId": "5947456361654976155",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/Kill-3Timeline.playable",
+      "TrackId": "-2691589807430721479",
+      "Name": "'#TripleBlastNotification #PlayerNameLabel'",
+      "ParentId": "11400000",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/Kill-3Timeline.playable",
+      "TrackId": "-2594503567911819640",
+      "Name": "Layer 2",
+      "ParentId": "2768601336474830607",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/Kill-3Timeline.playable",
+      "TrackId": "-2323925827832526878",
+      "Name": "Layer 2",
+      "ParentId": "-8908894555607006378",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/Kill-3Timeline.playable",
+      "TrackId": "-2214240471996490887",
+      "Name": "Layer 3",
+      "ParentId": "-8908894555607006378",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/Kill-3Timeline.playable",
+      "TrackId": "-1753362564230214033",
+      "Name": "Layer 1",
+      "ParentId": "-7831143498447143036",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/Kill-3Timeline.playable",
+      "TrackId": "-1529345925792574744",
+      "Name": "Layer 1",
+      "ParentId": "-2691589807430721479",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/Kill-3Timeline.playable",
+      "TrackId": "-1305295611753436319",
+      "Name": "'#TripleBlastNotification #BlastGradient'",
+      "ParentId": "11400000",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/Kill-3Timeline.playable",
+      "TrackId": "2015006052403255169",
+      "Name": "Layer 1",
+      "ParentId": "5947456361654976155",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/Kill-3Timeline.playable",
+      "TrackId": "2768601336474830607",
+      "Name": "'#TripleBlastNotification #BlastedLabel'",
+      "ParentId": "11400000",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/Kill-3Timeline.playable",
+      "TrackId": "2850762276701876409",
+      "Name": "Layer 4",
+      "ParentId": "6431536508659469879",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/Kill-3Timeline.playable",
+      "TrackId": "2979832194182227574",
+      "Name": "Layer 1",
+      "ParentId": "-7961896300871228918",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/Kill-3Timeline.playable",
+      "TrackId": "3608859886645802696",
+      "Name": "Layer 2",
+      "ParentId": "-2691589807430721479",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/Kill-3Timeline.playable",
+      "TrackId": "3823474307977621119",
+      "Name": "'#TripleBlastNotification #SkullIcon #SkullShardSmall'",
+      "ParentId": "11400000",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/Kill-3Timeline.playable",
+      "TrackId": "5262739216963331458",
+      "Name": "Layer 1",
+      "ParentId": "6431536508659469879",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/Kill-3Timeline.playable",
+      "TrackId": "5947456361654976155",
+      "Name": "'#TripleBlastNotification'",
+      "ParentId": "11400000",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/Kill-3Timeline.playable",
+      "TrackId": "6043307560445215864",
+      "Name": "Layer 2",
+      "ParentId": "6431536508659469879",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/Kill-3Timeline.playable",
+      "TrackId": "6431536508659469879",
+      "Name": "'#TripleBlastNotification #SkullIcon'",
+      "ParentId": "11400000",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/Kill-3Timeline.playable",
+      "TrackId": "6716652435606672048",
+      "Name": "Layer 1",
+      "ParentId": "7383100022765610909",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/Kill-3Timeline.playable",
+      "TrackId": "7212129111008296828",
+      "Name": "Layer 3",
+      "ParentId": "6431536508659469879",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/Kill-3Timeline.playable",
+      "TrackId": "7356590052632367979",
+      "Name": "Layer 1",
+      "ParentId": "8306095886786167601",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/Kill-3Timeline.playable",
+      "TrackId": "7383100022765610909",
+      "Name": "'#TripleBlastNotification #SkullIcon #SkullShardMiddle'",
+      "ParentId": "11400000",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/Kill-3Timeline.playable",
+      "TrackId": "7484498877053359822",
+      "Name": "Layer 2",
+      "ParentId": "5947456361654976155",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/Kill-3Timeline.playable",
+      "TrackId": "7777678773193532685",
+      "Name": "Layer 1",
+      "ParentId": "-1305295611753436319",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/Kill-3Timeline.playable",
+      "TrackId": "8191706044831868813",
+      "Name": "Layer 1",
+      "ParentId": "3823474307977621119",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/Kill-3Timeline.playable",
+      "TrackId": "8306095886786167601",
+      "Name": "'#TripleBlastNotification #SkullIcon #SkullIconFull'",
+      "ParentId": "11400000",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/SeasonBannerAnimation.playable",
+      "TrackId": "-9097863052344877618",
+      "Name": "'#RewardsImpactCircle'",
+      "ParentId": "11400000",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/SeasonBannerAnimation.playable",
+      "TrackId": "-8794257283604349555",
+      "Name": "'#PremiumPassIcon'",
+      "ParentId": "11400000",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/SeasonBannerAnimation.playable",
+      "TrackId": "-6001255455817581766",
+      "Name": "Layer 1",
+      "ParentId": "8453379619656721340",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/SeasonBannerAnimation.playable",
+      "TrackId": "-4892852679697708023",
+      "Name": "'#CharacterImage'",
+      "ParentId": "11400000",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/SeasonBannerAnimation.playable",
+      "TrackId": "-4811388825361289342",
+      "Name": "'#SeasonTextContainer'",
+      "ParentId": "11400000",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/SeasonBannerAnimation.playable",
+      "TrackId": "-4638511011904806548",
+      "Name": "Layer 1",
+      "ParentId": "3887272775489278223",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/SeasonBannerAnimation.playable",
+      "TrackId": "-1962321691158948707",
+      "Name": "Layer 1",
+      "ParentId": "7198674620220984014",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/SeasonBannerAnimation.playable",
+      "TrackId": "-1763910459948690777",
+      "Name": "Layer 1",
+      "ParentId": "8630012444920406850",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/SeasonBannerAnimation.playable",
+      "TrackId": "490832666150665043",
+      "Name": "Layer 1",
+      "ParentId": "-4892852679697708023",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/SeasonBannerAnimation.playable",
+      "TrackId": "614530954122720825",
+      "Name": "Layer 1",
+      "ParentId": "-4811388825361289342",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/SeasonBannerAnimation.playable",
+      "TrackId": "2267098056401756634",
+      "Name": "'#TimeLeftWidget'",
+      "ParentId": "11400000",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/SeasonBannerAnimation.playable",
+      "TrackId": "3051605103075813530",
+      "Name": "Layer 2",
+      "ParentId": "-4892852679697708023",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/SeasonBannerAnimation.playable",
+      "TrackId": "3764328218843409976",
+      "Name": "'#CloseButton'",
+      "ParentId": "11400000",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/SeasonBannerAnimation.playable",
+      "TrackId": "3887272775489278223",
+      "Name": "'#ButtonsBuy'",
+      "ParentId": "11400000",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/SeasonBannerAnimation.playable",
+      "TrackId": "4850402320234479802",
+      "Name": "'#Banner'",
+      "ParentId": "11400000",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/SeasonBannerAnimation.playable",
+      "TrackId": "5497160316376264964",
+      "Name": "Layer 1",
+      "ParentId": "6574379895898023360",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/SeasonBannerAnimation.playable",
+      "TrackId": "5799463821706715698",
+      "Name": "'#EarnExclusiveItemsLabel'",
+      "ParentId": "11400000",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/SeasonBannerAnimation.playable",
+      "TrackId": "6424231404473792077",
+      "Name": "'#Background'",
+      "ParentId": "11400000",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/SeasonBannerAnimation.playable",
+      "TrackId": "6482141096606158351",
+      "Name": "Layer 1",
+      "ParentId": "-9097863052344877618",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/SeasonBannerAnimation.playable",
+      "TrackId": "6574379895898023360",
+      "Name": "'#FreeLabel'",
+      "ParentId": "11400000",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/SeasonBannerAnimation.playable",
+      "TrackId": "6612136655247645041",
+      "Name": "Layer 1",
+      "ParentId": "5799463821706715698",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/SeasonBannerAnimation.playable",
+      "TrackId": "7198674620220984014",
+      "Name": "'#RewardsContainerPremium'",
+      "ParentId": "11400000",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/SeasonBannerAnimation.playable",
+      "TrackId": "8453379619656721340",
+      "Name": "'#RewardsContainerFree'",
+      "ParentId": "11400000",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/SeasonBannerAnimation.playable",
+      "TrackId": "8630012444920406850",
+      "Name": "'#PremiumLabel'",
+      "ParentId": "11400000",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/MaxConsumablesTimeline.playable",
+      "TrackId": "-8509256577152112155",
+      "Name": "Layer 2",
+      "ParentId": "-5189331160316557962",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/MaxConsumablesTimeline.playable",
+      "TrackId": "-5563496972263051141",
+      "Name": "Layer 1",
+      "ParentId": "-5189331160316557962",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/MaxConsumablesTimeline.playable",
+      "TrackId": "-5189331160316557962",
+      "Name": "'#AbovePlayerNotifications'",
+      "ParentId": "11400000",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/Rewards-Equipment.playable",
+      "TrackId": "-9079786361427324287",
+      "Name": "Layer 2",
+      "ParentId": "1315114779343489125",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/Rewards-Equipment.playable",
+      "TrackId": "-8415907800020115399",
+      "Name": "'#DarkPatternRight'",
+      "ParentId": "11400000",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/Rewards-Equipment.playable",
+      "TrackId": "-8025206816093129636",
+      "Name": "Layer 1",
+      "ParentId": "2023242062321418722",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/Rewards-Equipment.playable",
+      "TrackId": "-7455742261475249287",
+      "Name": "Layer 2",
+      "ParentId": "4908127495663557615",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/Rewards-Equipment.playable",
+      "TrackId": "-7449652283114861039",
+      "Name": "Layer 1",
+      "ParentId": "5247380825569293082",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/Rewards-Equipment.playable",
+      "TrackId": "-6913582855871645909",
+      "Name": "'#EquipmentIcon'",
+      "ParentId": "11400000",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/Rewards-Equipment.playable",
+      "TrackId": "-6882730018973514719",
+      "Name": "'#RaysEquipment'",
+      "ParentId": "11400000",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/Rewards-Equipment.playable",
+      "TrackId": "-6454450283680527895",
+      "Name": "Layer 1",
+      "ParentId": "1315114779343489125",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/Rewards-Equipment.playable",
+      "TrackId": "-6231842558456513518",
+      "Name": "'#EquipmentInfoContainer'",
+      "ParentId": "11400000",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/Rewards-Equipment.playable",
+      "TrackId": "-6106144949439665548",
+      "Name": "Layer 1",
+      "ParentId": "-2248527846660845962",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/Rewards-Equipment.playable",
+      "TrackId": "-4424576446201472418",
+      "Name": "Layer 1",
+      "ParentId": "-4134346750332896358",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/Rewards-Equipment.playable",
+      "TrackId": "-4418146883390440668",
+      "Name": "Layer 2",
+      "ParentId": "6072340238492731630",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/Rewards-Equipment.playable",
+      "TrackId": "-4134346750332896358",
+      "Name": "'#NewLabel'",
+      "ParentId": "11400000",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/Rewards-Equipment.playable",
+      "TrackId": "-3299063896368667491",
+      "Name": "'#SparkGradient1'",
+      "ParentId": "11400000",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/Rewards-Equipment.playable",
+      "TrackId": "-2947490145564568669",
+      "Name": "'#WhiteBlink'",
+      "ParentId": "11400000",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/Rewards-Equipment.playable",
+      "TrackId": "-2941007297354828683",
+      "Name": "'#RewardsImpactCircle'",
+      "ParentId": "11400000",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/Rewards-Equipment.playable",
+      "TrackId": "-2248527846660845962",
+      "Name": "'#TagsContainer'",
+      "ParentId": "11400000",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/Rewards-Equipment.playable",
+      "TrackId": "-2215479266707210181",
+      "Name": "Layer 1",
+      "ParentId": "-6882730018973514719",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/Rewards-Equipment.playable",
+      "TrackId": "-2087410933819028582",
+      "Name": "Layer 3",
+      "ParentId": "-6913582855871645909",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/Rewards-Equipment.playable",
+      "TrackId": "-1371089434018997475",
+      "Name": "Layer 2",
+      "ParentId": "5679475691686377054",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/Rewards-Equipment.playable",
+      "TrackId": "-1000439173522430553",
+      "Name": "Layer 2",
+      "ParentId": "-6882730018973514719",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/Rewards-Equipment.playable",
+      "TrackId": "-151482614683946860",
+      "Name": "Layer 2",
+      "ParentId": "-2248527846660845962",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/Rewards-Equipment.playable",
+      "TrackId": "276501822444700926",
+      "Name": "Layer 2",
+      "ParentId": "5247380825569293082",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/Rewards-Equipment.playable",
+      "TrackId": "1315114779343489125",
+      "Name": "'#SparkGradient3'",
+      "ParentId": "11400000",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/Rewards-Equipment.playable",
+      "TrackId": "2023242062321418722",
+      "Name": "'#DarkPatternLeft'",
+      "ParentId": "11400000",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/Rewards-Equipment.playable",
+      "TrackId": "2601859785163412623",
+      "Name": "Layer 1",
+      "ParentId": "6072340238492731630",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/Rewards-Equipment.playable",
+      "TrackId": "2657566351251352627",
+      "Name": "Layer 2",
+      "ParentId": "3327332891495933809",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/Rewards-Equipment.playable",
+      "TrackId": "3088251297031509839",
+      "Name": "Layer 2",
+      "ParentId": "2023242062321418722",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/Rewards-Equipment.playable",
+      "TrackId": "3327332891495933809",
+      "Name": "'#EquipmentRewardCard'",
+      "ParentId": "11400000",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/Rewards-Equipment.playable",
+      "TrackId": "3881938311482140003",
+      "Name": "Layer 1",
+      "ParentId": "-2941007297354828683",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/Rewards-Equipment.playable",
+      "TrackId": "4245780132530833188",
+      "Name": "Layer 1",
+      "ParentId": "4908127495663557615",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/Rewards-Equipment.playable",
+      "TrackId": "4398160533553226752",
+      "Name": ".dark-pattern__pattern-holder",
+      "ParentId": "11400000",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/Rewards-Equipment.playable",
+      "TrackId": "4908127495663557615",
+      "Name": "'#AppearGradientEquipment'",
+      "ParentId": "11400000",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/Rewards-Equipment.playable",
+      "TrackId": "4933363069364800232",
+      "Name": "'#NewLabelGradient'",
+      "ParentId": "11400000",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/Rewards-Equipment.playable",
+      "TrackId": "5247380825569293082",
+      "Name": "'#NameContainer'",
+      "ParentId": "11400000",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/Rewards-Equipment.playable",
+      "TrackId": "5550482876120368361",
+      "Name": "Layer 1",
+      "ParentId": "-6913582855871645909",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/Rewards-Equipment.playable",
+      "TrackId": "5648751866482953320",
+      "Name": "Layer 2",
+      "ParentId": "-8415907800020115399",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/Rewards-Equipment.playable",
+      "TrackId": "5679475691686377054",
+      "Name": "'#NewLabelSpark'",
+      "ParentId": "11400000",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/Rewards-Equipment.playable",
+      "TrackId": "5838638160016931253",
+      "Name": "Layer 1",
+      "ParentId": "-8415907800020115399",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/Rewards-Equipment.playable",
+      "TrackId": "6072340238492731630",
+      "Name": "'#SparkGradient2'",
+      "ParentId": "11400000",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/Rewards-Equipment.playable",
+      "TrackId": "6570988857782163337",
+      "Name": "Layer 1",
+      "ParentId": "3327332891495933809",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/Rewards-Equipment.playable",
+      "TrackId": "6817819437161869087",
+      "Name": "Layer 2",
+      "ParentId": "-6913582855871645909",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/Rewards-Equipment.playable",
+      "TrackId": "7156300411001469741",
+      "Name": "Layer 1",
+      "ParentId": "-2947490145564568669",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/Rewards-Equipment.playable",
+      "TrackId": "7695908689852534171",
+      "Name": "Layer 2",
+      "ParentId": "-3299063896368667491",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/Rewards-Equipment.playable",
+      "TrackId": "8721505439933250883",
+      "Name": "Layer 1",
+      "ParentId": "5679475691686377054",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/Rewards-Equipment.playable",
+      "TrackId": "8757691573480740314",
+      "Name": "Layer 1",
+      "ParentId": "-3299063896368667491",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/MatchEndAnimations-Blasted.playable",
+      "TrackId": "-6234348099703038565",
+      "Name": "Layer 1",
+      "ParentId": "-5486261906441374026",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/MatchEndAnimations-Blasted.playable",
+      "TrackId": "-5728677613740130960",
+      "Name": "'#root'",
+      "ParentId": "11400000",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/MatchEndAnimations-Blasted.playable",
+      "TrackId": "-5486261906441374026",
+      "Name": "'#TextBlasted'",
+      "ParentId": "11400000",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/MatchEndAnimations-Blasted.playable",
+      "TrackId": "-2156736412442611505",
+      "Name": "Layer 1",
+      "ParentId": "-1301440613037851944",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/MatchEndAnimations-Blasted.playable",
+      "TrackId": "-1301440613037851944",
+      "Name": "'#TextBlastedEffect'",
+      "ParentId": "11400000",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/MatchEndAnimations-Blasted.playable",
+      "TrackId": "446676002103985019",
+      "Name": "'#BlastedTitle'",
+      "ParentId": "11400000",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/MatchEndAnimations-Blasted.playable",
+      "TrackId": "861714450506955734",
+      "Name": "Layer 2",
+      "ParentId": "-5486261906441374026",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/MatchEndAnimations-Blasted.playable",
+      "TrackId": "3776351064534302434",
+      "Name": "'#BgBlasted'",
+      "ParentId": "11400000",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/MatchEndAnimations-Blasted.playable",
+      "TrackId": "8010856451560727170",
+      "Name": "'#GradientBlasted'",
+      "ParentId": "11400000",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/ProductBundleBannerAnimation.playable",
+      "TrackId": "-9118531299317731974",
+      "Name": "'#Container'",
+      "ParentId": "11400000",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/ProductBundleBannerAnimation.playable",
+      "TrackId": "-5307382891405142911",
+      "Name": "'#BundleContentsContainer'",
+      "ParentId": "-3061701398244693599",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/ProductBundleBannerAnimation.playable",
+      "TrackId": "-4458051402921072554",
+      "Name": "'#PurchaseContent'",
+      "ParentId": "11400000",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/ProductBundleBannerAnimation.playable",
+      "TrackId": "-3980947818035057023",
+      "Name": "'#BannerBackground'",
+      "ParentId": "11400000",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/ProductBundleBannerAnimation.playable",
+      "TrackId": "-3061701398244693599",
+      "Name": "'#BundleContentsContainer'",
+      "ParentId": "11400000",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/ProductBundleBannerAnimation.playable",
+      "TrackId": "109843343257155440",
+      "Name": "'#RewardSpotlight'",
+      "ParentId": "11400000",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/ProductBundleBannerAnimation.playable",
+      "TrackId": "1684372068626844418",
+      "Name": "'#LimitedOfferText'",
+      "ParentId": "11400000",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/ProductBundleBannerAnimation.playable",
+      "TrackId": "1690486796298837686",
+      "Name": "'#MainReward'",
+      "ParentId": "7623760851643452445",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/ProductBundleBannerAnimation.playable",
+      "TrackId": "2035959306839207804",
+      "Name": "'#MainReward'",
+      "ParentId": "7623760851643452445",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/ProductBundleBannerAnimation.playable",
+      "TrackId": "4396322094411756804",
+      "Name": "'#BundleTextContainer'",
+      "ParentId": "6354351993588248241",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/ProductBundleBannerAnimation.playable",
+      "TrackId": "6354351993588248241",
+      "Name": "'#BundleTextContainer'",
+      "ParentId": "11400000",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/ProductBundleBannerAnimation.playable",
+      "TrackId": "7623760851643452445",
+      "Name": "'#MainReward'",
+      "ParentId": "11400000",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/KnockedOutTimeline.playable",
+      "TrackId": "-8760001681488250057",
+      "Name": "Layer 1",
+      "ParentId": "-8343219894446485676",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/KnockedOutTimeline.playable",
+      "TrackId": "-8355364920286730595",
+      "Name": "Layer 2",
+      "ParentId": "-8343219894446485676",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/KnockedOutTimeline.playable",
+      "TrackId": "-8343219894446485676",
+      "Name": "'#KnockedOutNotification'",
+      "ParentId": "11400000",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/KnockedOutTimeline.playable",
+      "TrackId": "-2793972282891493444",
+      "Name": "'#KnockedOutLabel'",
+      "ParentId": "11400000",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/KnockedOutTimeline.playable",
+      "TrackId": "136010158580437265",
+      "Name": "'#KnockedOutIcon'",
+      "ParentId": "11400000",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/KnockedOutTimeline.playable",
+      "TrackId": "557633047146449375",
+      "Name": "Layer 1",
+      "ParentId": "2485806076352257798",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/KnockedOutTimeline.playable",
+      "TrackId": "2485806076352257798",
+      "Name": "'#KnockedOutIconAnimated'",
+      "ParentId": "11400000",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/KnockedOutTimeline.playable",
+      "TrackId": "6991441558827532203",
+      "Name": "Layer 1",
+      "ParentId": "136010158580437265",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/Rewards-One.playable",
+      "TrackId": "-9068570294940309739",
+      "Name": "'#AppearGradient'",
+      "ParentId": "11400000",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/Rewards-One.playable",
+      "TrackId": "-8962738558117080910",
+      "Name": "Layer 2",
+      "ParentId": "-3979815646054788880",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/Rewards-One.playable",
+      "TrackId": "-8927358173446959721",
+      "Name": "'#RewardAmount'",
+      "ParentId": "11400000",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/Rewards-One.playable",
+      "TrackId": "-8148402758409687676",
+      "Name": "Layer 1",
+      "ParentId": "5194649479817038925",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/Rewards-One.playable",
+      "TrackId": "-7634166039988593107",
+      "Name": "Layer 2",
+      "ParentId": "4885218209549843447",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/Rewards-One.playable",
+      "TrackId": "-6590137949555062859",
+      "Name": "Layer 1",
+      "ParentId": "-5833125605483606227",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/Rewards-One.playable",
+      "TrackId": "-5833125605483606227",
+      "Name": "'#RewardsImpactCircle'",
+      "ParentId": "11400000",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/Rewards-One.playable",
+      "TrackId": "-5798722124494428202",
+      "Name": "Layer 1",
+      "ParentId": "-2261602265853019880",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/Rewards-One.playable",
+      "TrackId": "-4557526260101332456",
+      "Name": "Layer 1",
+      "ParentId": "4885218209549843447",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/Rewards-One.playable",
+      "TrackId": "-4097201346965072474",
+      "Name": "Layer 1",
+      "ParentId": "-9068570294940309739",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/Rewards-One.playable",
+      "TrackId": "-3979815646054788880",
+      "Name": "'#RewardName'",
+      "ParentId": "11400000",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/Rewards-One.playable",
+      "TrackId": "-3123449907168183662",
+      "Name": "Layer 2",
+      "ParentId": "1943199033403687664",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/Rewards-One.playable",
+      "TrackId": "-2261602265853019880",
+      "Name": "'#SparkGradient1'",
+      "ParentId": "11400000",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/Rewards-One.playable",
+      "TrackId": "-1939976407856137499",
+      "Name": "Layer 1",
+      "ParentId": "-8927358173446959721",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/Rewards-One.playable",
+      "TrackId": "-1632960231543006321",
+      "Name": "Layer 1",
+      "ParentId": "1943199033403687664",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/Rewards-One.playable",
+      "TrackId": "1301866071603966120",
+      "Name": "Layer 1",
+      "ParentId": "-3979815646054788880",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/Rewards-One.playable",
+      "TrackId": "1943199033403687664",
+      "Name": "'#RewardIcon'",
+      "ParentId": "11400000",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/Rewards-One.playable",
+      "TrackId": "2650145166761524002",
+      "Name": "'#OneReward'",
+      "ParentId": "11400000",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/Rewards-One.playable",
+      "TrackId": "2829696833650817483",
+      "Name": "Layer 2",
+      "ParentId": "-9068570294940309739",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/Rewards-One.playable",
+      "TrackId": "4814402595435446106",
+      "Name": "Layer 2",
+      "ParentId": "5194649479817038925",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/Rewards-One.playable",
+      "TrackId": "4885218209549843447",
+      "Name": "'#SparkGradient2'",
+      "ParentId": "11400000",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/Rewards-One.playable",
+      "TrackId": "5183910240919470814",
+      "Name": "'#RaysOneReward'",
+      "ParentId": "11400000",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/Rewards-One.playable",
+      "TrackId": "5194649479817038925",
+      "Name": "'#SparkGradient3'",
+      "ParentId": "11400000",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/Rewards-One.playable",
+      "TrackId": "8902480830207480150",
+      "Name": "Layer 2",
+      "ParentId": "-8927358173446959721",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/Rewards-One.playable",
+      "TrackId": "9050139957812606893",
+      "Name": "Layer 2",
+      "ParentId": "-2261602265853019880",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/GameModeNewEvent.playable",
+      "TrackId": "-9112852344480083125",
+      "Name": "Layer 2",
+      "ParentId": "3738014803660674908",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/GameModeNewEvent.playable",
+      "TrackId": "-8997595772141462857",
+      "Name": "'#NewEventBackground'",
+      "ParentId": "11400000",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/GameModeNewEvent.playable",
+      "TrackId": "-8771550361421580996",
+      "Name": "'#Char'",
+      "ParentId": "11400000",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/GameModeNewEvent.playable",
+      "TrackId": "-8628204446233742726",
+      "Name": "Layer 1",
+      "ParentId": "3738014803660674908",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/GameModeNewEvent.playable",
+      "TrackId": "-6181014751770108580",
+      "Name": "'#SelectedEffects'",
+      "ParentId": "11400000",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/GameModeNewEvent.playable",
+      "TrackId": "-4967622728728729516",
+      "Name": "Layer 2",
+      "ParentId": "-3406896271238715562",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/GameModeNewEvent.playable",
+      "TrackId": "-4784084529389894692",
+      "Name": "Layer 1",
+      "ParentId": "4633142747917078366",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/GameModeNewEvent.playable",
+      "TrackId": "-3959304680206141118",
+      "Name": "'#CardRoot'",
+      "ParentId": "11400000",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/GameModeNewEvent.playable",
+      "TrackId": "-3406896271238715562",
+      "Name": "'#NewEventBallMedium'",
+      "ParentId": "11400000",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/GameModeNewEvent.playable",
+      "TrackId": "-946180038288416678",
+      "Name": "'#Shadow'",
+      "ParentId": "11400000",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/GameModeNewEvent.playable",
+      "TrackId": "6774902955261746",
+      "Name": "'#Background'",
+      "ParentId": "11400000",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/GameModeNewEvent.playable",
+      "TrackId": "1578130372197738285",
+      "Name": "'#NewEventEffects'",
+      "ParentId": "11400000",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/GameModeNewEvent.playable",
+      "TrackId": "3695695171594375161",
+      "Name": "'#NewEventEffects'",
+      "ParentId": "11400000",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/GameModeNewEvent.playable",
+      "TrackId": "3738014803660674908",
+      "Name": "'#NewEventBallSmall'",
+      "ParentId": "11400000",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/GameModeNewEvent.playable",
+      "TrackId": "4633142747917078366",
+      "Name": "'#NewEventLabel'",
+      "ParentId": "11400000",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/GameModeNewEvent.playable",
+      "TrackId": "7610732832156342389",
+      "Name": "Layer 1",
+      "ParentId": "-3406896271238715562",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/TeammateNeedsHelp.playable",
+      "TrackId": "-8995265374408745389",
+      "Name": "'#NeedshelpIconAnimated'",
+      "ParentId": "11400000",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/TeammateNeedsHelp.playable",
+      "TrackId": "-3858623933098986838",
+      "Name": "Layer 1",
+      "ParentId": "-8995265374408745389",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/TeammateNeedsHelp.playable",
+      "TrackId": "-3627462801174453769",
+      "Name": "'#NeedshelpLabel'",
+      "ParentId": "11400000",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/TeammateNeedsHelp.playable",
+      "TrackId": "-2359022722126122689",
+      "Name": ".revive-needshelp-icon",
+      "ParentId": "11400000",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/TeammateNeedsHelp.playable",
+      "TrackId": "769174338736999921",
+      "Name": "Layer 1",
+      "ParentId": "-2359022722126122689",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/TeammateNeedsHelp.playable",
+      "TrackId": "6757809764788377220",
+      "Name": "Layer 1",
+      "ParentId": "7021443245936874663",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/TeammateNeedsHelp.playable",
+      "TrackId": "7021443245936874663",
+      "Name": "'#NeedshelpNotification'",
+      "ParentId": "11400000",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/TeammateNeedsHelp.playable",
+      "TrackId": "8601191286675771412",
+      "Name": "Layer 2",
+      "ParentId": "7021443245936874663",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/Rewards-summary.playable",
+      "TrackId": "-8853691798463498554",
+      "Name": "Layer 1",
+      "ParentId": "5197762972514647258",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/Rewards-summary.playable",
+      "TrackId": "-7371835792949757980",
+      "Name": "'#RewardSlot'",
+      "ParentId": "11400000",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/Rewards-summary.playable",
+      "TrackId": "-6967700788525371226",
+      "Name": "Layer 1",
+      "ParentId": "-3469943589713106561",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/Rewards-summary.playable",
+      "TrackId": "-6258982088486026263",
+      "Name": "'#ReachLevelToGetRewards'",
+      "ParentId": "11400000",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/Rewards-summary.playable",
+      "TrackId": "-3720666457482479215",
+      "Name": "'#RaysSummaryReward'",
+      "ParentId": "11400000",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/Rewards-summary.playable",
+      "TrackId": "-3469943589713106561",
+      "Name": "'#RewardSlot3'",
+      "ParentId": "11400000",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/Rewards-summary.playable",
+      "TrackId": "603037130719100873",
+      "Name": "Layer 1",
+      "ParentId": "7144136436921474960",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/Rewards-summary.playable",
+      "TrackId": "5197762972514647258",
+      "Name": "'#YouGotLabel'",
+      "ParentId": "11400000",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/Rewards-summary.playable",
+      "TrackId": "5369020869847361957",
+      "Name": "Layer 1",
+      "ParentId": "-7371835792949757980",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/Rewards-summary.playable",
+      "TrackId": "7144136436921474960",
+      "Name": "'#RewardSlot2'",
+      "ParentId": "11400000",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/Rewards-summary.playable",
+      "TrackId": "8077901802099604548",
+      "Name": "Layer 1",
+      "ParentId": "-3720666457482479215",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/Kill-1Timeline.playable",
+      "TrackId": "-8908894555607006378",
+      "Name": "'#BlastedNotification #SkullIcon #SkullImpact'",
+      "ParentId": "11400000",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/Kill-1Timeline.playable",
+      "TrackId": "-4049036526332507876",
+      "Name": "Layer 1",
+      "ParentId": "-8908894555607006378",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/Kill-1Timeline.playable",
+      "TrackId": "-4036241146819265791",
+      "Name": "Layer 1",
+      "ParentId": "2768601336474830607",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/Kill-1Timeline.playable",
+      "TrackId": "-2740046472461113835",
+      "Name": "Layer 3",
+      "ParentId": "5947456361654976155",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/Kill-1Timeline.playable",
+      "TrackId": "-2691589807430721479",
+      "Name": "'#BlastedNotification #PlayerNameLabel'",
+      "ParentId": "11400000",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/Kill-1Timeline.playable",
+      "TrackId": "-2594503567911819640",
+      "Name": "Layer 2",
+      "ParentId": "2768601336474830607",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/Kill-1Timeline.playable",
+      "TrackId": "-1529345925792574744",
+      "Name": "Layer 1",
+      "ParentId": "-2691589807430721479",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/Kill-1Timeline.playable",
+      "TrackId": "2015006052403255169",
+      "Name": "Layer 1",
+      "ParentId": "5947456361654976155",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/Kill-1Timeline.playable",
+      "TrackId": "2768601336474830607",
+      "Name": "'#BlastedNotification #BlastedLabel'",
+      "ParentId": "11400000",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/Kill-1Timeline.playable",
+      "TrackId": "3608859886645802696",
+      "Name": "Layer 2",
+      "ParentId": "-2691589807430721479",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/Kill-1Timeline.playable",
+      "TrackId": "3823474307977621119",
+      "Name": "'#BlastedNotification #SkullIcon #SkullShardSmall'",
+      "ParentId": "11400000",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/Kill-1Timeline.playable",
+      "TrackId": "5262739216963331458",
+      "Name": "Layer 1",
+      "ParentId": "6431536508659469879",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/Kill-1Timeline.playable",
+      "TrackId": "5947456361654976155",
+      "Name": "'#BlastedNotification '",
+      "ParentId": "11400000",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/Kill-1Timeline.playable",
+      "TrackId": "6043307560445215864",
+      "Name": "Layer 2",
+      "ParentId": "6431536508659469879",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/Kill-1Timeline.playable",
+      "TrackId": "6431536508659469879",
+      "Name": "'#BlastedNotification #SkullIcon'",
+      "ParentId": "11400000",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/Kill-1Timeline.playable",
+      "TrackId": "6716652435606672048",
+      "Name": "Layer 1",
+      "ParentId": "7383100022765610909",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/Kill-1Timeline.playable",
+      "TrackId": "7212129111008296828",
+      "Name": "Layer 3",
+      "ParentId": "6431536508659469879",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/Kill-1Timeline.playable",
+      "TrackId": "7383100022765610909",
+      "Name": "'#BlastedNotification #SkullIcon #SkullShardMiddle'",
+      "ParentId": "11400000",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/Kill-1Timeline.playable",
+      "TrackId": "7484498877053359822",
+      "Name": "Layer 2",
+      "ParentId": "5947456361654976155",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/Kill-1Timeline.playable",
+      "TrackId": "8191706044831868813",
+      "Name": "Layer 1",
+      "ParentId": "3823474307977621119",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/Kill-1Timeline.playable",
+      "TrackId": "8306095886786167601",
+      "Name": "'#BlastedNotification #SkullIcon #SkullIconFull'",
+      "ParentId": "11400000",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/KillBeast-Timeline.playable",
+      "TrackId": "-8908894555607006378",
+      "Name": "'#BeastBlastNotification #SkullIcon #SkullImpact'",
+      "ParentId": "11400000",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/KillBeast-Timeline.playable",
+      "TrackId": "-7961896300871228918",
+      "Name": "'#BeastBlastNotification #SkullIcon #SkullShardTriple'",
+      "ParentId": "11400000",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/KillBeast-Timeline.playable",
+      "TrackId": "-7831143498447143036",
+      "Name": "'#BackgroundCyanTint'",
+      "ParentId": "11400000",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/KillBeast-Timeline.playable",
+      "TrackId": "-7037154562978832450",
+      "Name": "Layer 1",
+      "ParentId": "6840105503160482105",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/KillBeast-Timeline.playable",
+      "TrackId": "-6760462410930601663",
+      "Name": "'#BeastBlastNotification #BlastGradient'",
+      "ParentId": "11400000",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/KillBeast-Timeline.playable",
+      "TrackId": "-5104235921860183237",
+      "Name": "'#StarIcon2'",
+      "ParentId": "11400000",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/KillBeast-Timeline.playable",
+      "TrackId": "-4404899198868080854",
+      "Name": "Layer 2",
+      "ParentId": "-7961896300871228918",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/KillBeast-Timeline.playable",
+      "TrackId": "-4049036526332507876",
+      "Name": "Layer 1",
+      "ParentId": "-8908894555607006378",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/KillBeast-Timeline.playable",
+      "TrackId": "-4036241146819265791",
+      "Name": "Layer 1",
+      "ParentId": "2768601336474830607",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/KillBeast-Timeline.playable",
+      "TrackId": "-3504504470889931934",
+      "Name": "Layer 2",
+      "ParentId": "-7831143498447143036",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/KillBeast-Timeline.playable",
+      "TrackId": "-2740046472461113835",
+      "Name": "Layer 3",
+      "ParentId": "5947456361654976155",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/KillBeast-Timeline.playable",
+      "TrackId": "-2691589807430721479",
+      "Name": "'#BeastBlastNotification #PlayerNameLabel'",
+      "ParentId": "11400000",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/KillBeast-Timeline.playable",
+      "TrackId": "-2594503567911819640",
+      "Name": "Layer 2",
+      "ParentId": "2768601336474830607",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/KillBeast-Timeline.playable",
+      "TrackId": "-2323925827832526878",
+      "Name": "Layer 2",
+      "ParentId": "-8908894555607006378",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/KillBeast-Timeline.playable",
+      "TrackId": "-2214240471996490887",
+      "Name": "Layer 3",
+      "ParentId": "-8908894555607006378",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/KillBeast-Timeline.playable",
+      "TrackId": "-1753362564230214033",
+      "Name": "Layer 1",
+      "ParentId": "-7831143498447143036",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/KillBeast-Timeline.playable",
+      "TrackId": "-1529345925792574744",
+      "Name": "Layer 1",
+      "ParentId": "-2691589807430721479",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/KillBeast-Timeline.playable",
+      "TrackId": "443697809395515878",
+      "Name": "'#StarIcon'",
+      "ParentId": "11400000",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/KillBeast-Timeline.playable",
+      "TrackId": "2015006052403255169",
+      "Name": "Layer 1",
+      "ParentId": "5947456361654976155",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/KillBeast-Timeline.playable",
+      "TrackId": "2768601336474830607",
+      "Name": "'#BeastBlastNotification #BeastLabel'",
+      "ParentId": "11400000",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/KillBeast-Timeline.playable",
+      "TrackId": "2850762276701876409",
+      "Name": "Layer 4",
+      "ParentId": "6431536508659469879",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/KillBeast-Timeline.playable",
+      "TrackId": "2979832194182227574",
+      "Name": "Layer 1",
+      "ParentId": "-7961896300871228918",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/KillBeast-Timeline.playable",
+      "TrackId": "3042589856079947691",
+      "Name": "Layer 1",
+      "ParentId": "-5104235921860183237",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/KillBeast-Timeline.playable",
+      "TrackId": "3608859886645802696",
+      "Name": "Layer 2",
+      "ParentId": "-2691589807430721479",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/KillBeast-Timeline.playable",
+      "TrackId": "3823474307977621119",
+      "Name": "'#BeastBlastNotification #SkullIcon #SkullShardSmall'",
+      "ParentId": "11400000",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/KillBeast-Timeline.playable",
+      "TrackId": "4158779865138890050",
+      "Name": "'#BeastBlastNotification #SkullIcon #BeastSpark'",
+      "ParentId": "11400000",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/KillBeast-Timeline.playable",
+      "TrackId": "4447373317555578514",
+      "Name": "'#BeastBlastNotification #SkullIcon #SkullShardBeast'",
+      "ParentId": "11400000",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/KillBeast-Timeline.playable",
+      "TrackId": "4497452003917924926",
+      "Name": "Layer 1",
+      "ParentId": "4447373317555578514",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/KillBeast-Timeline.playable",
+      "TrackId": "4992540936594846108",
+      "Name": "Layer 1",
+      "ParentId": "4158779865138890050",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/KillBeast-Timeline.playable",
+      "TrackId": "5262739216963331458",
+      "Name": "Layer 1",
+      "ParentId": "6431536508659469879",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/KillBeast-Timeline.playable",
+      "TrackId": "5947456361654976155",
+      "Name": "'#BeastBlastNotification'",
+      "ParentId": "11400000",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/KillBeast-Timeline.playable",
+      "TrackId": "6009075119367285854",
+      "Name": "Layer 4",
+      "ParentId": "-8908894555607006378",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/KillBeast-Timeline.playable",
+      "TrackId": "6043307560445215864",
+      "Name": "Layer 2",
+      "ParentId": "6431536508659469879",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/KillBeast-Timeline.playable",
+      "TrackId": "6431536508659469879",
+      "Name": "'#BeastBlastNotification #SkullIcon'",
+      "ParentId": "11400000",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/KillBeast-Timeline.playable",
+      "TrackId": "6716652435606672048",
+      "Name": "Layer 1",
+      "ParentId": "7383100022765610909",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/KillBeast-Timeline.playable",
+      "TrackId": "6772336463200206437",
+      "Name": "Layer 1",
+      "ParentId": "443697809395515878",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/KillBeast-Timeline.playable",
+      "TrackId": "6840105503160482105",
+      "Name": "'#BeastExplosion'",
+      "ParentId": "11400000",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/KillBeast-Timeline.playable",
+      "TrackId": "7212129111008296828",
+      "Name": "Layer 3",
+      "ParentId": "6431536508659469879",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/KillBeast-Timeline.playable",
+      "TrackId": "7356590052632367979",
+      "Name": "Layer 1",
+      "ParentId": "8306095886786167601",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/KillBeast-Timeline.playable",
+      "TrackId": "7383100022765610909",
+      "Name": "'#BeastBlastNotification #SkullIcon #SkullShardMiddle'",
+      "ParentId": "11400000",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/KillBeast-Timeline.playable",
+      "TrackId": "7484498877053359822",
+      "Name": "Layer 2",
+      "ParentId": "5947456361654976155",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/KillBeast-Timeline.playable",
+      "TrackId": "7715050644859839363",
+      "Name": "Layer 1",
+      "ParentId": "-6760462410930601663",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/KillBeast-Timeline.playable",
+      "TrackId": "8191706044831868813",
+      "Name": "Layer 1",
+      "ParentId": "3823474307977621119",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/KillBeast-Timeline.playable",
+      "TrackId": "8306095886786167601",
+      "Name": "'#BeastBlastNotification #SkullIcon #SkullIconFull'",
+      "ParentId": "11400000",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/KillBeast-Timeline.playable",
+      "TrackId": "9024420485413367869",
+      "Name": "Layer 2",
+      "ParentId": "4158779865138890050",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/LevelUpNotificationTimeline.playable",
+      "TrackId": "-8361208730223523882",
+      "Name": "'#ReachLevelToGetRewards'",
+      "ParentId": "11400000",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/LevelUpNotificationTimeline.playable",
+      "TrackId": "-8145340599273433946",
+      "Name": "Layer 1",
+      "ParentId": "-2759925418493874991",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/LevelUpNotificationTimeline.playable",
+      "TrackId": "-7584703470502162837",
+      "Name": ".player-avatar__fame-lvl",
+      "ParentId": "11400000",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/LevelUpNotificationTimeline.playable",
+      "TrackId": "-6987498204783377707",
+      "Name": ".rewards-summary__you-got-label",
+      "ParentId": "11400000",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/LevelUpNotificationTimeline.playable",
+      "TrackId": "-6825975016079145789",
+      "Name": "Layer 1",
+      "ParentId": "-6987498204783377707",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/LevelUpNotificationTimeline.playable",
+      "TrackId": "-3944873828245280622",
+      "Name": "Layer 2",
+      "ParentId": "7854419589558152687",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/LevelUpNotificationTimeline.playable",
+      "TrackId": "-2879504867280254194",
+      "Name": "Layer 2",
+      "ParentId": "-8361208730223523882",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/LevelUpNotificationTimeline.playable",
+      "TrackId": "-2759925418493874991",
+      "Name": ".rewards-one__rays",
+      "ParentId": "11400000",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/LevelUpNotificationTimeline.playable",
+      "TrackId": "-1643378071356528085",
+      "Name": "Layer 2",
+      "ParentId": "-6987498204783377707",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/LevelUpNotificationTimeline.playable",
+      "TrackId": "-860281194688680931",
+      "Name": "Layer 1",
+      "ParentId": "7854419589558152687",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/LevelUpNotificationTimeline.playable",
+      "TrackId": "-789166304007187606",
+      "Name": "Layer 1",
+      "ParentId": "5838306250858633489",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/LevelUpNotificationTimeline.playable",
+      "TrackId": "2220930797207700605",
+      "Name": "Layer 2",
+      "ParentId": "5838306250858633489",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/LevelUpNotificationTimeline.playable",
+      "TrackId": "2739972290387108797",
+      "Name": ".player-avatar__fame-star-1",
+      "ParentId": "11400000",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/LevelUpNotificationTimeline.playable",
+      "TrackId": "3498869304911014579",
+      "Name": "Layer 1",
+      "ParentId": "2739972290387108797",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/LevelUpNotificationTimeline.playable",
+      "TrackId": "5201557893516583294",
+      "Name": ".player-avatar__fame-stars-holder",
+      "ParentId": "11400000",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/LevelUpNotificationTimeline.playable",
+      "TrackId": "5838306250858633489",
+      "Name": ".player-avatar",
+      "ParentId": "11400000",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/LevelUpNotificationTimeline.playable",
+      "TrackId": "6784092937408559046",
+      "Name": ".rewards-summary__rewards-container",
+      "ParentId": "11400000",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/LevelUpNotificationTimeline.playable",
+      "TrackId": "7854419589558152687",
+      "Name": ".level-up__label",
+      "ParentId": "11400000",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/LevelUpNotificationTimeline.playable",
+      "TrackId": "9058436772612084899",
+      "Name": "Layer 1",
+      "ParentId": "-8361208730223523882",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UIAnimationExamples/UIAnimationTimeline.playable",
+      "TrackId": "-8960414282111691138",
+      "Name": "'#ButtonSubItem .square'",
+      "ParentId": "-6452016146114734223",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UIAnimationExamples/UIAnimationTimeline.playable",
+      "TrackId": "-8775055686020545012",
+      "Name": "'#ButtonScale'",
+      "ParentId": "2145041579738498661",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UIAnimationExamples/UIAnimationTimeline.playable",
+      "TrackId": "-8011641607539136469",
+      "Name": "'#ButtonSubItem .line.animated'",
+      "ParentId": "-6452016146114734223",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UIAnimationExamples/UIAnimationTimeline.playable",
+      "TrackId": "-6755506088873128151",
+      "Name": "'#ButtonVisibilityDisplay'",
+      "ParentId": "2145041579738498661",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UIAnimationExamples/UIAnimationTimeline.playable",
+      "TrackId": "-6315304702296622894",
+      "Name": "'#ButtonClass'",
+      "ParentId": "-6452016146114734223",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UIAnimationExamples/UIAnimationTimeline.playable",
+      "TrackId": "-3416163267505707931",
+      "Name": "'#ButtonLayers'",
+      "ParentId": "-6452016146114734223",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UIAnimationExamples/UIAnimationTimeline.playable",
+      "TrackId": "-325974015188182829",
+      "Name": "'#ButtonOpacity'",
+      "ParentId": "2145041579738498661",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UIAnimationExamples/UIAnimationTimeline.playable",
+      "TrackId": "1688148005707321649",
+      "Name": "Scale",
+      "ParentId": "-3416163267505707931",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UIAnimationExamples/UIAnimationTimeline.playable",
+      "TrackId": "4855580627905990588",
+      "Name": "'#ButtonSubItem #Dot'",
+      "ParentId": "-6452016146114734223",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UIAnimationExamples/UIAnimationTimeline.playable",
+      "TrackId": "6423746810429552274",
+      "Name": ".scaling-button",
+      "ParentId": "1371465258646605215",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UIAnimationExamples/UIAnimationTimeline.playable",
+      "TrackId": "6669204991770779292",
+      "Name": "Opacity",
+      "ParentId": "-3416163267505707931",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UIAnimationExamples/UIAnimationTimeline.playable",
+      "TrackId": "6723220258552096781",
+      "Name": "'#ButtonRotate'",
+      "ParentId": "2145041579738498661",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UIAnimationExamples/UIAnimationTimeline.playable",
+      "TrackId": "7143407088236348928",
+      "Name": "'#ButtonMove'",
+      "ParentId": "2145041579738498661",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UIAnimationExamples/UIAnimationTimeline.playable",
+      "TrackId": "7454235382549570551",
+      "Name": "'#ButtonCurves'",
+      "ParentId": "-6452016146114734223",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/Timelines/UI/PreGameLoadingScreenAnimationTimeline.playable",
+      "TrackId": "-8257623293569792055",
+      "Name": "Layer 1",
+      "ParentId": "5964162256886299201",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/Timelines/UI/PreGameLoadingScreenAnimationTimeline.playable",
+      "TrackId": "-1199348810463108725",
+      "Name": "'#AnimationLine'",
+      "ParentId": "11400000",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/Timelines/UI/PreGameLoadingScreenAnimationTimeline.playable",
+      "TrackId": "-215604844208081285",
+      "Name": "Layer 2",
+      "ParentId": "5964162256886299201",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/Timelines/UI/PreGameLoadingScreenAnimationTimeline.playable",
+      "TrackId": "60113988806674129",
+      "Name": "Layer 2",
+      "ParentId": "-1199348810463108725",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/Timelines/UI/PreGameLoadingScreenAnimationTimeline.playable",
+      "TrackId": "1606219706190591551",
+      "Name": "Layer 1",
+      "ParentId": "9108185301560168950",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/Timelines/UI/PreGameLoadingScreenAnimationTimeline.playable",
+      "TrackId": "5964162256886299201",
+      "Name": ".map__title-bg",
+      "ParentId": "11400000",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/Timelines/UI/PreGameLoadingScreenAnimationTimeline.playable",
+      "TrackId": "9104628617393001572",
+      "Name": "Layer 1",
+      "ParentId": "-1199348810463108725",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/Timelines/UI/PreGameLoadingScreenAnimationTimeline.playable",
+      "TrackId": "9108185301560168950",
+      "Name": ".map__title",
+      "ParentId": "11400000",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    }
+  ],
+  "NonzeroTrackCurves": [],
+  "LayerLikeNames": [
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/MatchEndAnimations-Win.playable",
+      "TrackId": "-8214471294396961128",
+      "Name": "Layer 2",
+      "ParentId": "-8484188896237894323",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/MatchEndAnimations-Win.playable",
+      "TrackId": "-7444228666996903233",
+      "Name": "Layer 1",
+      "ParentId": "-4603165164280802143",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/MatchEndAnimations-Win.playable",
+      "TrackId": "-1870059653863349323",
+      "Name": "Layer 1",
+      "ParentId": "-3916831736668134977",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/MatchEndAnimations-Win.playable",
+      "TrackId": "1798040099902277670",
+      "Name": "Layer 1",
+      "ParentId": "-3385205405666126791",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/MatchEndAnimations-Win.playable",
+      "TrackId": "2326562785326289968",
+      "Name": "Layer 2",
+      "ParentId": "7880004563913607410",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/MatchEndAnimations-Win.playable",
+      "TrackId": "4698070780692941593",
+      "Name": "Layer 1",
+      "ParentId": "7880004563913607410",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/MatchEndAnimations-Win.playable",
+      "TrackId": "4853180185223904942",
+      "Name": "Layer 2",
+      "ParentId": "-3916831736668134977",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/MatchEndAnimations-Win.playable",
+      "TrackId": "6515267918672331646",
+      "Name": "Layer 1",
+      "ParentId": "-8484188896237894323",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/MatchEndAnimations-Win.playable",
+      "TrackId": "7637602787477885394",
+      "Name": "Layer 1",
+      "ParentId": "-7354444688688553038",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/MatchEndAnimations-Win.playable",
+      "TrackId": "8292631120696359835",
+      "Name": "Layer 1",
+      "ParentId": "-8033612114692926714",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/Kill-2Timeline.playable",
+      "TrackId": "-4611195914790692973",
+      "Name": "Layer 3",
+      "ParentId": "-8908894555607006378",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/Kill-2Timeline.playable",
+      "TrackId": "-4404899198868080854",
+      "Name": "Layer 2",
+      "ParentId": "-7961896300871228918",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/Kill-2Timeline.playable",
+      "TrackId": "-4049036526332507876",
+      "Name": "Layer 1",
+      "ParentId": "-8908894555607006378",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/Kill-2Timeline.playable",
+      "TrackId": "-4036241146819265791",
+      "Name": "Layer 1",
+      "ParentId": "2768601336474830607",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/Kill-2Timeline.playable",
+      "TrackId": "-2740046472461113835",
+      "Name": "Layer 3",
+      "ParentId": "5947456361654976155",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/Kill-2Timeline.playable",
+      "TrackId": "-2594503567911819640",
+      "Name": "Layer 2",
+      "ParentId": "2768601336474830607",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/Kill-2Timeline.playable",
+      "TrackId": "-2325106431334465016",
+      "Name": "Layer 2",
+      "ParentId": "-8908894555607006378",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/Kill-2Timeline.playable",
+      "TrackId": "-1529345925792574744",
+      "Name": "Layer 1",
+      "ParentId": "-2691589807430721479",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/Kill-2Timeline.playable",
+      "TrackId": "2015006052403255169",
+      "Name": "Layer 1",
+      "ParentId": "5947456361654976155",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/Kill-2Timeline.playable",
+      "TrackId": "2850762276701876409",
+      "Name": "Layer 4",
+      "ParentId": "6431536508659469879",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/Kill-2Timeline.playable",
+      "TrackId": "2979832194182227574",
+      "Name": "Layer 1",
+      "ParentId": "-7961896300871228918",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/Kill-2Timeline.playable",
+      "TrackId": "3608859886645802696",
+      "Name": "Layer 2",
+      "ParentId": "-2691589807430721479",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/Kill-2Timeline.playable",
+      "TrackId": "5262739216963331458",
+      "Name": "Layer 1",
+      "ParentId": "6431536508659469879",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/Kill-2Timeline.playable",
+      "TrackId": "6043307560445215864",
+      "Name": "Layer 2",
+      "ParentId": "6431536508659469879",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/Kill-2Timeline.playable",
+      "TrackId": "6716652435606672048",
+      "Name": "Layer 1",
+      "ParentId": "7383100022765610909",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/Kill-2Timeline.playable",
+      "TrackId": "7212129111008296828",
+      "Name": "Layer 3",
+      "ParentId": "6431536508659469879",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/Kill-2Timeline.playable",
+      "TrackId": "7356590052632367979",
+      "Name": "Layer 1",
+      "ParentId": "8306095886786167601",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/Kill-2Timeline.playable",
+      "TrackId": "7484498877053359822",
+      "Name": "Layer 2",
+      "ParentId": "5947456361654976155",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/Kill-2Timeline.playable",
+      "TrackId": "7777678773193532685",
+      "Name": "Layer 1",
+      "ParentId": "-1305295611753436319",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/Kill-2Timeline.playable",
+      "TrackId": "8191706044831868813",
+      "Name": "Layer 1",
+      "ParentId": "3823474307977621119",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/AreaShrinkingTimeline.playable",
+      "TrackId": "-8465428278312028475",
+      "Name": "Layer 2",
+      "ParentId": "7021443245936874663",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/AreaShrinkingTimeline.playable",
+      "TrackId": "632782122807146364",
+      "Name": "Layer 3",
+      "ParentId": "7021443245936874663",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/AreaShrinkingTimeline.playable",
+      "TrackId": "6757809764788377220",
+      "Name": "Layer 1",
+      "ParentId": "7021443245936874663",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/BattlePassAnimationTimeline.playable",
+      "TrackId": "6267227440717177396",
+      "Name": "Layer 1",
+      "ParentId": "5443421180016128011",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/Kill-3Timeline.playable",
+      "TrackId": "-4404899198868080854",
+      "Name": "Layer 2",
+      "ParentId": "-7961896300871228918",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/Kill-3Timeline.playable",
+      "TrackId": "-4049036526332507876",
+      "Name": "Layer 1",
+      "ParentId": "-8908894555607006378",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/Kill-3Timeline.playable",
+      "TrackId": "-4036241146819265791",
+      "Name": "Layer 1",
+      "ParentId": "2768601336474830607",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/Kill-3Timeline.playable",
+      "TrackId": "-3504504470889931934",
+      "Name": "Layer 2",
+      "ParentId": "-7831143498447143036",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/Kill-3Timeline.playable",
+      "TrackId": "-2740046472461113835",
+      "Name": "Layer 3",
+      "ParentId": "5947456361654976155",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/Kill-3Timeline.playable",
+      "TrackId": "-2594503567911819640",
+      "Name": "Layer 2",
+      "ParentId": "2768601336474830607",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/Kill-3Timeline.playable",
+      "TrackId": "-2323925827832526878",
+      "Name": "Layer 2",
+      "ParentId": "-8908894555607006378",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/Kill-3Timeline.playable",
+      "TrackId": "-2214240471996490887",
+      "Name": "Layer 3",
+      "ParentId": "-8908894555607006378",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/Kill-3Timeline.playable",
+      "TrackId": "-1753362564230214033",
+      "Name": "Layer 1",
+      "ParentId": "-7831143498447143036",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/Kill-3Timeline.playable",
+      "TrackId": "-1529345925792574744",
+      "Name": "Layer 1",
+      "ParentId": "-2691589807430721479",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/Kill-3Timeline.playable",
+      "TrackId": "2015006052403255169",
+      "Name": "Layer 1",
+      "ParentId": "5947456361654976155",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/Kill-3Timeline.playable",
+      "TrackId": "2850762276701876409",
+      "Name": "Layer 4",
+      "ParentId": "6431536508659469879",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/Kill-3Timeline.playable",
+      "TrackId": "2979832194182227574",
+      "Name": "Layer 1",
+      "ParentId": "-7961896300871228918",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/Kill-3Timeline.playable",
+      "TrackId": "3608859886645802696",
+      "Name": "Layer 2",
+      "ParentId": "-2691589807430721479",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/Kill-3Timeline.playable",
+      "TrackId": "5262739216963331458",
+      "Name": "Layer 1",
+      "ParentId": "6431536508659469879",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/Kill-3Timeline.playable",
+      "TrackId": "6043307560445215864",
+      "Name": "Layer 2",
+      "ParentId": "6431536508659469879",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/Kill-3Timeline.playable",
+      "TrackId": "6716652435606672048",
+      "Name": "Layer 1",
+      "ParentId": "7383100022765610909",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/Kill-3Timeline.playable",
+      "TrackId": "7212129111008296828",
+      "Name": "Layer 3",
+      "ParentId": "6431536508659469879",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/Kill-3Timeline.playable",
+      "TrackId": "7356590052632367979",
+      "Name": "Layer 1",
+      "ParentId": "8306095886786167601",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/Kill-3Timeline.playable",
+      "TrackId": "7484498877053359822",
+      "Name": "Layer 2",
+      "ParentId": "5947456361654976155",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/Kill-3Timeline.playable",
+      "TrackId": "7777678773193532685",
+      "Name": "Layer 1",
+      "ParentId": "-1305295611753436319",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/Kill-3Timeline.playable",
+      "TrackId": "8191706044831868813",
+      "Name": "Layer 1",
+      "ParentId": "3823474307977621119",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/SeasonBannerAnimation.playable",
+      "TrackId": "-6001255455817581766",
+      "Name": "Layer 1",
+      "ParentId": "8453379619656721340",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/SeasonBannerAnimation.playable",
+      "TrackId": "-4638511011904806548",
+      "Name": "Layer 1",
+      "ParentId": "3887272775489278223",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/SeasonBannerAnimation.playable",
+      "TrackId": "-1962321691158948707",
+      "Name": "Layer 1",
+      "ParentId": "7198674620220984014",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/SeasonBannerAnimation.playable",
+      "TrackId": "-1763910459948690777",
+      "Name": "Layer 1",
+      "ParentId": "8630012444920406850",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/SeasonBannerAnimation.playable",
+      "TrackId": "490832666150665043",
+      "Name": "Layer 1",
+      "ParentId": "-4892852679697708023",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/SeasonBannerAnimation.playable",
+      "TrackId": "614530954122720825",
+      "Name": "Layer 1",
+      "ParentId": "-4811388825361289342",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/SeasonBannerAnimation.playable",
+      "TrackId": "3051605103075813530",
+      "Name": "Layer 2",
+      "ParentId": "-4892852679697708023",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/SeasonBannerAnimation.playable",
+      "TrackId": "5497160316376264964",
+      "Name": "Layer 1",
+      "ParentId": "6574379895898023360",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/SeasonBannerAnimation.playable",
+      "TrackId": "6482141096606158351",
+      "Name": "Layer 1",
+      "ParentId": "-9097863052344877618",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/SeasonBannerAnimation.playable",
+      "TrackId": "6612136655247645041",
+      "Name": "Layer 1",
+      "ParentId": "5799463821706715698",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/MaxConsumablesTimeline.playable",
+      "TrackId": "-8509256577152112155",
+      "Name": "Layer 2",
+      "ParentId": "-5189331160316557962",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/MaxConsumablesTimeline.playable",
+      "TrackId": "-5563496972263051141",
+      "Name": "Layer 1",
+      "ParentId": "-5189331160316557962",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/Rewards-Equipment.playable",
+      "TrackId": "-9079786361427324287",
+      "Name": "Layer 2",
+      "ParentId": "1315114779343489125",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/Rewards-Equipment.playable",
+      "TrackId": "-8025206816093129636",
+      "Name": "Layer 1",
+      "ParentId": "2023242062321418722",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/Rewards-Equipment.playable",
+      "TrackId": "-7455742261475249287",
+      "Name": "Layer 2",
+      "ParentId": "4908127495663557615",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/Rewards-Equipment.playable",
+      "TrackId": "-7449652283114861039",
+      "Name": "Layer 1",
+      "ParentId": "5247380825569293082",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/Rewards-Equipment.playable",
+      "TrackId": "-6454450283680527895",
+      "Name": "Layer 1",
+      "ParentId": "1315114779343489125",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/Rewards-Equipment.playable",
+      "TrackId": "-6106144949439665548",
+      "Name": "Layer 1",
+      "ParentId": "-2248527846660845962",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/Rewards-Equipment.playable",
+      "TrackId": "-4424576446201472418",
+      "Name": "Layer 1",
+      "ParentId": "-4134346750332896358",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/Rewards-Equipment.playable",
+      "TrackId": "-4418146883390440668",
+      "Name": "Layer 2",
+      "ParentId": "6072340238492731630",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/Rewards-Equipment.playable",
+      "TrackId": "-2215479266707210181",
+      "Name": "Layer 1",
+      "ParentId": "-6882730018973514719",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/Rewards-Equipment.playable",
+      "TrackId": "-2087410933819028582",
+      "Name": "Layer 3",
+      "ParentId": "-6913582855871645909",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/Rewards-Equipment.playable",
+      "TrackId": "-1371089434018997475",
+      "Name": "Layer 2",
+      "ParentId": "5679475691686377054",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/Rewards-Equipment.playable",
+      "TrackId": "-1000439173522430553",
+      "Name": "Layer 2",
+      "ParentId": "-6882730018973514719",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/Rewards-Equipment.playable",
+      "TrackId": "-151482614683946860",
+      "Name": "Layer 2",
+      "ParentId": "-2248527846660845962",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/Rewards-Equipment.playable",
+      "TrackId": "276501822444700926",
+      "Name": "Layer 2",
+      "ParentId": "5247380825569293082",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/Rewards-Equipment.playable",
+      "TrackId": "2601859785163412623",
+      "Name": "Layer 1",
+      "ParentId": "6072340238492731630",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/Rewards-Equipment.playable",
+      "TrackId": "2657566351251352627",
+      "Name": "Layer 2",
+      "ParentId": "3327332891495933809",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/Rewards-Equipment.playable",
+      "TrackId": "3088251297031509839",
+      "Name": "Layer 2",
+      "ParentId": "2023242062321418722",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/Rewards-Equipment.playable",
+      "TrackId": "3881938311482140003",
+      "Name": "Layer 1",
+      "ParentId": "-2941007297354828683",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/Rewards-Equipment.playable",
+      "TrackId": "4245780132530833188",
+      "Name": "Layer 1",
+      "ParentId": "4908127495663557615",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/Rewards-Equipment.playable",
+      "TrackId": "5550482876120368361",
+      "Name": "Layer 1",
+      "ParentId": "-6913582855871645909",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/Rewards-Equipment.playable",
+      "TrackId": "5648751866482953320",
+      "Name": "Layer 2",
+      "ParentId": "-8415907800020115399",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/Rewards-Equipment.playable",
+      "TrackId": "5838638160016931253",
+      "Name": "Layer 1",
+      "ParentId": "-8415907800020115399",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/Rewards-Equipment.playable",
+      "TrackId": "6570988857782163337",
+      "Name": "Layer 1",
+      "ParentId": "3327332891495933809",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/Rewards-Equipment.playable",
+      "TrackId": "6817819437161869087",
+      "Name": "Layer 2",
+      "ParentId": "-6913582855871645909",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/Rewards-Equipment.playable",
+      "TrackId": "7156300411001469741",
+      "Name": "Layer 1",
+      "ParentId": "-2947490145564568669",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/Rewards-Equipment.playable",
+      "TrackId": "7695908689852534171",
+      "Name": "Layer 2",
+      "ParentId": "-3299063896368667491",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/Rewards-Equipment.playable",
+      "TrackId": "8721505439933250883",
+      "Name": "Layer 1",
+      "ParentId": "5679475691686377054",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/Rewards-Equipment.playable",
+      "TrackId": "8757691573480740314",
+      "Name": "Layer 1",
+      "ParentId": "-3299063896368667491",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/MatchEndAnimations-Blasted.playable",
+      "TrackId": "-6234348099703038565",
+      "Name": "Layer 1",
+      "ParentId": "-5486261906441374026",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/MatchEndAnimations-Blasted.playable",
+      "TrackId": "-2156736412442611505",
+      "Name": "Layer 1",
+      "ParentId": "-1301440613037851944",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/MatchEndAnimations-Blasted.playable",
+      "TrackId": "861714450506955734",
+      "Name": "Layer 2",
+      "ParentId": "-5486261906441374026",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/KnockedOutTimeline.playable",
+      "TrackId": "-8760001681488250057",
+      "Name": "Layer 1",
+      "ParentId": "-8343219894446485676",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/KnockedOutTimeline.playable",
+      "TrackId": "-8355364920286730595",
+      "Name": "Layer 2",
+      "ParentId": "-8343219894446485676",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/KnockedOutTimeline.playable",
+      "TrackId": "557633047146449375",
+      "Name": "Layer 1",
+      "ParentId": "2485806076352257798",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/KnockedOutTimeline.playable",
+      "TrackId": "6991441558827532203",
+      "Name": "Layer 1",
+      "ParentId": "136010158580437265",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/Rewards-One.playable",
+      "TrackId": "-8962738558117080910",
+      "Name": "Layer 2",
+      "ParentId": "-3979815646054788880",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/Rewards-One.playable",
+      "TrackId": "-8148402758409687676",
+      "Name": "Layer 1",
+      "ParentId": "5194649479817038925",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/Rewards-One.playable",
+      "TrackId": "-7634166039988593107",
+      "Name": "Layer 2",
+      "ParentId": "4885218209549843447",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/Rewards-One.playable",
+      "TrackId": "-6590137949555062859",
+      "Name": "Layer 1",
+      "ParentId": "-5833125605483606227",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/Rewards-One.playable",
+      "TrackId": "-5798722124494428202",
+      "Name": "Layer 1",
+      "ParentId": "-2261602265853019880",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/Rewards-One.playable",
+      "TrackId": "-4557526260101332456",
+      "Name": "Layer 1",
+      "ParentId": "4885218209549843447",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/Rewards-One.playable",
+      "TrackId": "-4097201346965072474",
+      "Name": "Layer 1",
+      "ParentId": "-9068570294940309739",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/Rewards-One.playable",
+      "TrackId": "-3123449907168183662",
+      "Name": "Layer 2",
+      "ParentId": "1943199033403687664",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/Rewards-One.playable",
+      "TrackId": "-1939976407856137499",
+      "Name": "Layer 1",
+      "ParentId": "-8927358173446959721",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/Rewards-One.playable",
+      "TrackId": "-1632960231543006321",
+      "Name": "Layer 1",
+      "ParentId": "1943199033403687664",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/Rewards-One.playable",
+      "TrackId": "1301866071603966120",
+      "Name": "Layer 1",
+      "ParentId": "-3979815646054788880",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/Rewards-One.playable",
+      "TrackId": "2829696833650817483",
+      "Name": "Layer 2",
+      "ParentId": "-9068570294940309739",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/Rewards-One.playable",
+      "TrackId": "4814402595435446106",
+      "Name": "Layer 2",
+      "ParentId": "5194649479817038925",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/Rewards-One.playable",
+      "TrackId": "8902480830207480150",
+      "Name": "Layer 2",
+      "ParentId": "-8927358173446959721",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/Rewards-One.playable",
+      "TrackId": "9050139957812606893",
+      "Name": "Layer 2",
+      "ParentId": "-2261602265853019880",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/GameModeNewEvent.playable",
+      "TrackId": "-9112852344480083125",
+      "Name": "Layer 2",
+      "ParentId": "3738014803660674908",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/GameModeNewEvent.playable",
+      "TrackId": "-8628204446233742726",
+      "Name": "Layer 1",
+      "ParentId": "3738014803660674908",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/GameModeNewEvent.playable",
+      "TrackId": "-4967622728728729516",
+      "Name": "Layer 2",
+      "ParentId": "-3406896271238715562",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/GameModeNewEvent.playable",
+      "TrackId": "-4784084529389894692",
+      "Name": "Layer 1",
+      "ParentId": "4633142747917078366",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/GameModeNewEvent.playable",
+      "TrackId": "7610732832156342389",
+      "Name": "Layer 1",
+      "ParentId": "-3406896271238715562",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/TeammateNeedsHelp.playable",
+      "TrackId": "-3858623933098986838",
+      "Name": "Layer 1",
+      "ParentId": "-8995265374408745389",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/TeammateNeedsHelp.playable",
+      "TrackId": "769174338736999921",
+      "Name": "Layer 1",
+      "ParentId": "-2359022722126122689",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/TeammateNeedsHelp.playable",
+      "TrackId": "6757809764788377220",
+      "Name": "Layer 1",
+      "ParentId": "7021443245936874663",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/TeammateNeedsHelp.playable",
+      "TrackId": "8601191286675771412",
+      "Name": "Layer 2",
+      "ParentId": "7021443245936874663",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/Rewards-summary.playable",
+      "TrackId": "-8853691798463498554",
+      "Name": "Layer 1",
+      "ParentId": "5197762972514647258",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/Rewards-summary.playable",
+      "TrackId": "-6967700788525371226",
+      "Name": "Layer 1",
+      "ParentId": "-3469943589713106561",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/Rewards-summary.playable",
+      "TrackId": "603037130719100873",
+      "Name": "Layer 1",
+      "ParentId": "7144136436921474960",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/Rewards-summary.playable",
+      "TrackId": "5369020869847361957",
+      "Name": "Layer 1",
+      "ParentId": "-7371835792949757980",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/Rewards-summary.playable",
+      "TrackId": "8077901802099604548",
+      "Name": "Layer 1",
+      "ParentId": "-3720666457482479215",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/Kill-1Timeline.playable",
+      "TrackId": "-4049036526332507876",
+      "Name": "Layer 1",
+      "ParentId": "-8908894555607006378",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/Kill-1Timeline.playable",
+      "TrackId": "-4036241146819265791",
+      "Name": "Layer 1",
+      "ParentId": "2768601336474830607",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/Kill-1Timeline.playable",
+      "TrackId": "-2740046472461113835",
+      "Name": "Layer 3",
+      "ParentId": "5947456361654976155",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/Kill-1Timeline.playable",
+      "TrackId": "-2594503567911819640",
+      "Name": "Layer 2",
+      "ParentId": "2768601336474830607",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/Kill-1Timeline.playable",
+      "TrackId": "-1529345925792574744",
+      "Name": "Layer 1",
+      "ParentId": "-2691589807430721479",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/Kill-1Timeline.playable",
+      "TrackId": "2015006052403255169",
+      "Name": "Layer 1",
+      "ParentId": "5947456361654976155",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/Kill-1Timeline.playable",
+      "TrackId": "3608859886645802696",
+      "Name": "Layer 2",
+      "ParentId": "-2691589807430721479",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/Kill-1Timeline.playable",
+      "TrackId": "5262739216963331458",
+      "Name": "Layer 1",
+      "ParentId": "6431536508659469879",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/Kill-1Timeline.playable",
+      "TrackId": "6043307560445215864",
+      "Name": "Layer 2",
+      "ParentId": "6431536508659469879",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/Kill-1Timeline.playable",
+      "TrackId": "6716652435606672048",
+      "Name": "Layer 1",
+      "ParentId": "7383100022765610909",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/Kill-1Timeline.playable",
+      "TrackId": "7212129111008296828",
+      "Name": "Layer 3",
+      "ParentId": "6431536508659469879",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/Kill-1Timeline.playable",
+      "TrackId": "7484498877053359822",
+      "Name": "Layer 2",
+      "ParentId": "5947456361654976155",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/Kill-1Timeline.playable",
+      "TrackId": "8191706044831868813",
+      "Name": "Layer 1",
+      "ParentId": "3823474307977621119",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/KillBeast-Timeline.playable",
+      "TrackId": "-7037154562978832450",
+      "Name": "Layer 1",
+      "ParentId": "6840105503160482105",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/KillBeast-Timeline.playable",
+      "TrackId": "-4404899198868080854",
+      "Name": "Layer 2",
+      "ParentId": "-7961896300871228918",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/KillBeast-Timeline.playable",
+      "TrackId": "-4049036526332507876",
+      "Name": "Layer 1",
+      "ParentId": "-8908894555607006378",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/KillBeast-Timeline.playable",
+      "TrackId": "-4036241146819265791",
+      "Name": "Layer 1",
+      "ParentId": "2768601336474830607",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/KillBeast-Timeline.playable",
+      "TrackId": "-3504504470889931934",
+      "Name": "Layer 2",
+      "ParentId": "-7831143498447143036",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/KillBeast-Timeline.playable",
+      "TrackId": "-2740046472461113835",
+      "Name": "Layer 3",
+      "ParentId": "5947456361654976155",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/KillBeast-Timeline.playable",
+      "TrackId": "-2594503567911819640",
+      "Name": "Layer 2",
+      "ParentId": "2768601336474830607",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/KillBeast-Timeline.playable",
+      "TrackId": "-2323925827832526878",
+      "Name": "Layer 2",
+      "ParentId": "-8908894555607006378",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/KillBeast-Timeline.playable",
+      "TrackId": "-2214240471996490887",
+      "Name": "Layer 3",
+      "ParentId": "-8908894555607006378",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/KillBeast-Timeline.playable",
+      "TrackId": "-1753362564230214033",
+      "Name": "Layer 1",
+      "ParentId": "-7831143498447143036",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/KillBeast-Timeline.playable",
+      "TrackId": "-1529345925792574744",
+      "Name": "Layer 1",
+      "ParentId": "-2691589807430721479",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/KillBeast-Timeline.playable",
+      "TrackId": "2015006052403255169",
+      "Name": "Layer 1",
+      "ParentId": "5947456361654976155",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/KillBeast-Timeline.playable",
+      "TrackId": "2850762276701876409",
+      "Name": "Layer 4",
+      "ParentId": "6431536508659469879",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/KillBeast-Timeline.playable",
+      "TrackId": "2979832194182227574",
+      "Name": "Layer 1",
+      "ParentId": "-7961896300871228918",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/KillBeast-Timeline.playable",
+      "TrackId": "3042589856079947691",
+      "Name": "Layer 1",
+      "ParentId": "-5104235921860183237",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/KillBeast-Timeline.playable",
+      "TrackId": "3608859886645802696",
+      "Name": "Layer 2",
+      "ParentId": "-2691589807430721479",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/KillBeast-Timeline.playable",
+      "TrackId": "4497452003917924926",
+      "Name": "Layer 1",
+      "ParentId": "4447373317555578514",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/KillBeast-Timeline.playable",
+      "TrackId": "4992540936594846108",
+      "Name": "Layer 1",
+      "ParentId": "4158779865138890050",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/KillBeast-Timeline.playable",
+      "TrackId": "5262739216963331458",
+      "Name": "Layer 1",
+      "ParentId": "6431536508659469879",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/KillBeast-Timeline.playable",
+      "TrackId": "6009075119367285854",
+      "Name": "Layer 4",
+      "ParentId": "-8908894555607006378",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/KillBeast-Timeline.playable",
+      "TrackId": "6043307560445215864",
+      "Name": "Layer 2",
+      "ParentId": "6431536508659469879",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/KillBeast-Timeline.playable",
+      "TrackId": "6716652435606672048",
+      "Name": "Layer 1",
+      "ParentId": "7383100022765610909",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/KillBeast-Timeline.playable",
+      "TrackId": "6772336463200206437",
+      "Name": "Layer 1",
+      "ParentId": "443697809395515878",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/KillBeast-Timeline.playable",
+      "TrackId": "7212129111008296828",
+      "Name": "Layer 3",
+      "ParentId": "6431536508659469879",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/KillBeast-Timeline.playable",
+      "TrackId": "7356590052632367979",
+      "Name": "Layer 1",
+      "ParentId": "8306095886786167601",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/KillBeast-Timeline.playable",
+      "TrackId": "7484498877053359822",
+      "Name": "Layer 2",
+      "ParentId": "5947456361654976155",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/KillBeast-Timeline.playable",
+      "TrackId": "7715050644859839363",
+      "Name": "Layer 1",
+      "ParentId": "-6760462410930601663",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/KillBeast-Timeline.playable",
+      "TrackId": "8191706044831868813",
+      "Name": "Layer 1",
+      "ParentId": "3823474307977621119",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/KillBeast-Timeline.playable",
+      "TrackId": "9024420485413367869",
+      "Name": "Layer 2",
+      "ParentId": "4158779865138890050",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/LevelUpNotificationTimeline.playable",
+      "TrackId": "-8145340599273433946",
+      "Name": "Layer 1",
+      "ParentId": "-2759925418493874991",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/LevelUpNotificationTimeline.playable",
+      "TrackId": "-6825975016079145789",
+      "Name": "Layer 1",
+      "ParentId": "-6987498204783377707",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/LevelUpNotificationTimeline.playable",
+      "TrackId": "-3944873828245280622",
+      "Name": "Layer 2",
+      "ParentId": "7854419589558152687",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/LevelUpNotificationTimeline.playable",
+      "TrackId": "-2879504867280254194",
+      "Name": "Layer 2",
+      "ParentId": "-8361208730223523882",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/LevelUpNotificationTimeline.playable",
+      "TrackId": "-1643378071356528085",
+      "Name": "Layer 2",
+      "ParentId": "-6987498204783377707",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/LevelUpNotificationTimeline.playable",
+      "TrackId": "-860281194688680931",
+      "Name": "Layer 1",
+      "ParentId": "7854419589558152687",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/LevelUpNotificationTimeline.playable",
+      "TrackId": "-789166304007187606",
+      "Name": "Layer 1",
+      "ParentId": "5838306250858633489",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/LevelUpNotificationTimeline.playable",
+      "TrackId": "2220930797207700605",
+      "Name": "Layer 2",
+      "ParentId": "5838306250858633489",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/LevelUpNotificationTimeline.playable",
+      "TrackId": "3498869304911014579",
+      "Name": "Layer 1",
+      "ParentId": "2739972290387108797",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UI/Animations/LevelUpNotificationTimeline.playable",
+      "TrackId": "9058436772612084899",
+      "Name": "Layer 1",
+      "ParentId": "-8361208730223523882",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UIAnimationExamples/UIAnimationTimeline.playable",
+      "TrackId": "1688148005707321649",
+      "Name": "Scale",
+      "ParentId": "-3416163267505707931",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/UIAnimationExamples/UIAnimationTimeline.playable",
+      "TrackId": "6669204991770779292",
+      "Name": "Opacity",
+      "ParentId": "-3416163267505707931",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/Timelines/UI/PreGameLoadingScreenAnimationTimeline.playable",
+      "TrackId": "-8257623293569792055",
+      "Name": "Layer 1",
+      "ParentId": "5964162256886299201",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/Timelines/UI/PreGameLoadingScreenAnimationTimeline.playable",
+      "TrackId": "-215604844208081285",
+      "Name": "Layer 2",
+      "ParentId": "5964162256886299201",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/Timelines/UI/PreGameLoadingScreenAnimationTimeline.playable",
+      "TrackId": "60113988806674129",
+      "Name": "Layer 2",
+      "ParentId": "-1199348810463108725",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/Timelines/UI/PreGameLoadingScreenAnimationTimeline.playable",
+      "TrackId": "1606219706190591551",
+      "Name": "Layer 1",
+      "ParentId": "9108185301560168950",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    },
+    {
+      "Asset": "BlastRoyale/Assets/Art/Timelines/UI/PreGameLoadingScreenAnimationTimeline.playable",
+      "TrackId": "9104628617393001572",
+      "Name": "Layer 1",
+      "ParentId": "-1199348810463108725",
+      "TrackCurveId": "0",
+      "ClipCurveIds": []
+    }
+  ]
+}

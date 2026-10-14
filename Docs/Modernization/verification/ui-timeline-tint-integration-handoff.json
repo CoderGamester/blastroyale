@@ -1,0 +1,120 @@
+{
+  "Version": 1,
+  "MainMustBeIdleForPromotion": true,
+  "Files": [
+    {
+      "Path": "BlastRoyale/Assets/Src/FirstLight/UITTimelineExtensions/BackgroundImageTintClip.cs",
+      "BeforeSHA256": null,
+      "OverlayPath": ".local/tint-timeline-patches/BlastRoyale/Assets/Src/FirstLight/UITTimelineExtensions/BackgroundImageTintClip.cs",
+      "AfterSHA256": "faf36519302dfb1be71d2e438cb6934d855f83b46ac9b2735c0b5e6f4edbf2ca"
+    },
+    {
+      "Path": "BlastRoyale/Assets/Src/FirstLight/UITTimelineExtensions/BackgroundImageTintClip.cs.meta",
+      "BeforeSHA256": null,
+      "OverlayPath": ".local/tint-timeline-patches/BlastRoyale/Assets/Src/FirstLight/UITTimelineExtensions/BackgroundImageTintClip.cs.meta",
+      "AfterSHA256": "5abcb854c9f383d06d3bff2b6afb4fe4f1191082912868a856a3f2adaae8f2a7"
+    },
+    {
+      "Path": "BlastRoyale/Assets/Src/FirstLight/UITTimelineExtensions/BackgroundImageTintMixerBehaviour.cs",
+      "BeforeSHA256": null,
+      "OverlayPath": ".local/tint-timeline-patches/BlastRoyale/Assets/Src/FirstLight/UITTimelineExtensions/BackgroundImageTintMixerBehaviour.cs",
+      "AfterSHA256": "2683692c1d6a898fcbe4f575ed064a595d9779d6408d34ff3f9f98b9f89acc5d"
+    },
+    {
+      "Path": "BlastRoyale/Assets/Src/FirstLight/UITTimelineExtensions/BackgroundImageTintMixerBehaviour.cs.meta",
+      "BeforeSHA256": null,
+      "OverlayPath": ".local/tint-timeline-patches/BlastRoyale/Assets/Src/FirstLight/UITTimelineExtensions/BackgroundImageTintMixerBehaviour.cs.meta",
+      "AfterSHA256": "0f59962658ff3f385061b04f801740685f29cc6898209689cd819da1a4d97bf4"
+    },
+    {
+      "Path": "BlastRoyale/Assets/Src/FirstLight/UITTimelineExtensions/BackgroundImageTintTrack.cs",
+      "BeforeSHA256": null,
+      "OverlayPath": ".local/tint-timeline-patches/BlastRoyale/Assets/Src/FirstLight/UITTimelineExtensions/BackgroundImageTintTrack.cs",
+      "AfterSHA256": "952692e5aeeccbcdac3eed1a6a2ba813ff8308303b55ac8bc7de39330e667036"
+    },
+    {
+      "Path": "BlastRoyale/Assets/Src/FirstLight/UITTimelineExtensions/BackgroundImageTintTrack.cs.meta",
+      "BeforeSHA256": null,
+      "OverlayPath": ".local/tint-timeline-patches/BlastRoyale/Assets/Src/FirstLight/UITTimelineExtensions/BackgroundImageTintTrack.cs.meta",
+      "AfterSHA256": "fb9979d9a6fd315eca4d158a2bbfc4956df6ec41cac657360a8fcc476bfdd0aa"
+    },
+    {
+      "Path": "BlastRoyale/Assets/Src/FirstLight/UITTimelineExtensions/FirstLight.UITTimelineExtensions.asmdef",
+      "BeforeSHA256": null,
+      "OverlayPath": ".local/tint-timeline-patches/BlastRoyale/Assets/Src/FirstLight/UITTimelineExtensions/FirstLight.UITTimelineExtensions.asmdef",
+      "AfterSHA256": "14067b821e9e0cd3c0d8e89bee392b2e8ffd8edf037ef4fdd7dc9d632fd0630e"
+    },
+    {
+      "Path": "BlastRoyale/Assets/Src/FirstLight/UITTimelineExtensions/FirstLight.UITTimelineExtensions.asmdef.meta",
+      "BeforeSHA256": null,
+      "OverlayPath": ".local/tint-timeline-patches/BlastRoyale/Assets/Src/FirstLight/UITTimelineExtensions/FirstLight.UITTimelineExtensions.asmdef.meta",
+      "AfterSHA256": "5b351009a7d9ecf89f903f428f9f257a2701dd13123a852127facb36e5092322"
+    },
+    {
+      "Path": "BlastRoyale/Assets/Src/FirstLight/UITTimelineExtensions.meta",
+      "BeforeSHA256": null,
+      "OverlayPath": ".local/tint-timeline-patches/BlastRoyale/Assets/Src/FirstLight/UITTimelineExtensions.meta",
+      "AfterSHA256": "579566a6c499a27723012cba20d5dc896a92c5a8ac9ccb95ef8d3ae54ca7cf7f"
+    },
+    {
+      "Path": "BlastRoyale/Assets/Art/UI/Animations/SeasonBannerAnimation.playable",
+      "BeforeSHA256": "44c7ab44e52fd44e01b3f7c12012077ab6e14782498b8814e2efae547a568a18",
+      "OverlayPath": ".local/tint-timeline-patches/BlastRoyale/Assets/Art/UI/Animations/SeasonBannerAnimation.playable",
+      "AfterSHA256": "60e6ec716f938b330fc58a6327adcdcd83868d652f1345c698a744c3bf206a14",
+      "PreservedMetadataSHA256": "febfa0361eb924364f252b4d17b1a02f4780b29d6dd3eed78ddfdf7a00a1143e",
+      "OnlyChangedRecords": [
+        "-4892852679697708023",
+        "490832666150665043",
+        "3051605103075813530"
+      ],
+      "Change": "Only each recorded native UIT track m_Script GUID; every other byte retained"
+    },
+    {
+      "Path": "BlastRoyale/Assets/Art/UI/Animations/Rewards-Equipment.playable",
+      "BeforeSHA256": "f7cae796300833db604d89ad034cd1415d936f538b5ddae07937312b9e1444c0",
+      "OverlayPath": ".local/tint-timeline-patches/BlastRoyale/Assets/Art/UI/Animations/Rewards-Equipment.playable",
+      "AfterSHA256": "300e7bb9692ebba44e086e67e04dc9186d958acf073d5facd1be7715ef5c209b",
+      "PreservedMetadataSHA256": "4288754d811b16bf9368bd26204949b19d165b2fff8988fb022e3fa75d2d53e2",
+      "OnlyChangedRecords": [
+        "-6913582855871645909",
+        "-2087410933819028582",
+        "5550482876120368361",
+        "6817819437161869087"
+      ],
+      "Change": "Only each recorded native UIT track m_Script GUID; every other byte retained"
+    },
+    {
+      "Path": "BlastRoyale/Assets/Art/UI/Animations/ProductBundleBannerAnimation.playable",
+      "BeforeSHA256": "7453b903e145b0bd2c05377b8113c0567144d4da46312aaab7968d90a5d4a434",
+      "OverlayPath": ".local/tint-timeline-patches/BlastRoyale/Assets/Art/UI/Animations/ProductBundleBannerAnimation.playable",
+      "AfterSHA256": "e03a4b1ba5eb3c883dcd88183cd251cf61534ccd1637d7c62a9288eb60049dac",
+      "PreservedMetadataSHA256": "594abc96c844694409a371375d17e19804f5c5f2f085ce5f70a580ce14ac05f1",
+      "OnlyChangedRecords": [
+        "1690486796298837686",
+        "2035959306839207804",
+        "7623760851643452445"
+      ],
+      "Change": "Only each recorded native UIT track m_Script GUID; every other byte retained"
+    },
+    {
+      "Path": "BlastRoyale/Assets/Art/UI/Animations/GameModeNewEvent.playable",
+      "BeforeSHA256": "32cef92d98ef12592ef6c0ec5630af5257dd73f5288c4be3d1a535b32d3b42c6",
+      "OverlayPath": ".local/tint-timeline-patches/BlastRoyale/Assets/Art/UI/Animations/GameModeNewEvent.playable",
+      "AfterSHA256": "172e6c269cce9fd738629ba6bde51fc7fcf131b6ef94c2cfa53935227f5410b0",
+      "PreservedMetadataSHA256": "942e820d3934d902534cb407a40026ad0d8c781ca112b90c9aceb3f23b1a231e",
+      "OnlyChangedRecords": [
+        "-8997595772141462857"
+      ],
+      "Change": "Only each recorded native UIT track m_Script GUID; every other byte retained"
+    }
+  ],
+  "OriginalTintScriptGuidPreserved": "d7b44b5154d04b2787b81cc4970c12d8",
+  "TintClipsPreserved": 8,
+  "FourAssetTrackFamilies": 11,
+  "PublicUpstreamCommit": "68e9114b94ba4a9123a4612d6fd6ce9fc98a7868",
+  "NativeProof": [
+    "artifacts/tint-timeline-runtime-second-native.log",
+    "artifacts/tint-timeline-authored-native.log"
+  ],
+  "MainChangedByAgent": false
+}

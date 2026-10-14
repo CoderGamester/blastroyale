@@ -1,0 +1,440 @@
+{
+    "Unity": "6000.3.26f1",
+    "TintClips": 8,
+    "FamilyTracks": 11,
+    "Samples": 24,
+    "Rows": [
+        {
+            "Asset": "Assets/Art/UI/Animations/SeasonBannerAnimation.playable",
+            "Track": "#CharacterImage",
+            "Time": 0.7283333333333334,
+            "Actual": {
+                "r": 1.0,
+                "g": 1.0,
+                "b": 1.0,
+                "a": 1.0
+            },
+            "Expected": {
+                "r": 1.0,
+                "g": 1.0,
+                "b": 1.0,
+                "a": 1.0
+            },
+            "TotalWeight": 1.0
+        },
+        {
+            "Asset": "Assets/Art/UI/Animations/SeasonBannerAnimation.playable",
+            "Track": "#CharacterImage",
+            "Time": 2.7083333333333337,
+            "Actual": {
+                "r": 1.0,
+                "g": 1.0,
+                "b": 1.0,
+                "a": 1.0
+            },
+            "Expected": {
+                "r": 1.0,
+                "g": 1.0,
+                "b": 1.0,
+                "a": 1.0
+            },
+            "TotalWeight": 1.0
+        },
+        {
+            "Asset": "Assets/Art/UI/Animations/SeasonBannerAnimation.playable",
+            "Track": "#CharacterImage",
+            "Time": 4.6883333333333339,
+            "Actual": {
+                "r": 1.0,
+                "g": 1.0,
+                "b": 1.0,
+                "a": 1.0
+            },
+            "Expected": {
+                "r": 1.0,
+                "g": 1.0,
+                "b": 1.0,
+                "a": 1.0
+            },
+            "TotalWeight": 1.0
+        },
+        {
+            "Asset": "Assets/Art/UI/Animations/SeasonBannerAnimation.playable",
+            "Track": "#CharacterImage",
+            "Time": 0.06999999999999999,
+            "Actual": {
+                "r": 0.0,
+                "g": 0.0,
+                "b": 0.0,
+                "a": 1.0
+            },
+            "Expected": {
+                "r": 0.0,
+                "g": 0.0,
+                "b": 0.0,
+                "a": 1.0
+            },
+            "TotalWeight": 1.0
+        },
+        {
+            "Asset": "Assets/Art/UI/Animations/SeasonBannerAnimation.playable",
+            "Track": "#CharacterImage",
+            "Time": 0.35,
+            "Actual": {
+                "r": 0.15625,
+                "g": 0.15625,
+                "b": 0.15625,
+                "a": 1.0
+            },
+            "Expected": {
+                "r": 0.15625,
+                "g": 0.15625,
+                "b": 0.15625,
+                "a": 1.0
+            },
+            "TotalWeight": 1.0
+        },
+        {
+            "Asset": "Assets/Art/UI/Animations/SeasonBannerAnimation.playable",
+            "Track": "#CharacterImage",
+            "Time": 0.63,
+            "Actual": {
+                "r": 0.9392500519752502,
+                "g": 0.9392500519752502,
+                "b": 0.9392500519752502,
+                "a": 1.0
+            },
+            "Expected": {
+                "r": 0.9392500519752502,
+                "g": 0.9392500519752502,
+                "b": 0.9392500519752502,
+                "a": 1.0
+            },
+            "TotalWeight": 1.0
+        },
+        {
+            "Asset": "Assets/Art/UI/Animations/Rewards-Equipment.playable",
+            "Track": "#EquipmentIcon",
+            "Time": 1.0333333333333335,
+            "Actual": {
+                "r": 1.0,
+                "g": 1.0,
+                "b": 1.0,
+                "a": 1.0
+            },
+            "Expected": {
+                "r": 1.0,
+                "g": 1.0,
+                "b": 1.0,
+                "a": 1.0
+            },
+            "TotalWeight": 1.0
+        },
+        {
+            "Asset": "Assets/Art/UI/Animations/Rewards-Equipment.playable",
+            "Track": "#EquipmentIcon",
+            "Time": 3.166666666666667,
+            "Actual": {
+                "r": 1.0,
+                "g": 1.0,
+                "b": 1.0,
+                "a": 1.0
+            },
+            "Expected": {
+                "r": 1.0,
+                "g": 1.0,
+                "b": 1.0,
+                "a": 1.0
+            },
+            "TotalWeight": 1.0
+        },
+        {
+            "Asset": "Assets/Art/UI/Animations/Rewards-Equipment.playable",
+            "Track": "#EquipmentIcon",
+            "Time": 5.300000000000001,
+            "Actual": {
+                "r": 1.0,
+                "g": 1.0,
+                "b": 1.0,
+                "a": 1.0
+            },
+            "Expected": {
+                "r": 1.0,
+                "g": 1.0,
+                "b": 1.0,
+                "a": 1.0
+            },
+            "TotalWeight": 1.0
+        },
+        {
+            "Asset": "Assets/Art/UI/Animations/Rewards-Equipment.playable",
+            "Track": "#EquipmentIcon",
+            "Time": 0.05,
+            "Actual": {
+                "r": 0.0,
+                "g": 0.0,
+                "b": 0.0,
+                "a": 1.0
+            },
+            "Expected": {
+                "r": 0.0,
+                "g": 0.0,
+                "b": 0.0,
+                "a": 1.0
+            },
+            "TotalWeight": 1.0
+        },
+        {
+            "Asset": "Assets/Art/UI/Animations/Rewards-Equipment.playable",
+            "Track": "#EquipmentIcon",
+            "Time": 0.25,
+            "Actual": {
+                "r": 0.0,
+                "g": 0.0,
+                "b": 0.0,
+                "a": 1.0
+            },
+            "Expected": {
+                "r": 0.0,
+                "g": 0.0,
+                "b": 0.0,
+                "a": 1.0
+            },
+            "TotalWeight": 1.0
+        },
+        {
+            "Asset": "Assets/Art/UI/Animations/Rewards-Equipment.playable",
+            "Track": "#EquipmentIcon",
+            "Time": 0.45,
+            "Actual": {
+                "r": 0.0,
+                "g": 0.0,
+                "b": 0.0,
+                "a": 1.0
+            },
+            "Expected": {
+                "r": 0.0,
+                "g": 0.0,
+                "b": 0.0,
+                "a": 1.0
+            },
+            "TotalWeight": 1.0
+        },
+        {
+            "Asset": "Assets/Art/UI/Animations/ProductBundleBannerAnimation.playable",
+            "Track": "#MainReward",
+            "Time": 0.10833333333333334,
+            "Actual": {
+                "r": 0.0,
+                "g": 0.0,
+                "b": 0.0,
+                "a": 1.0
+            },
+            "Expected": {
+                "r": 0.0,
+                "g": 0.0,
+                "b": 0.0,
+                "a": 1.0
+            },
+            "TotalWeight": 1.0
+        },
+        {
+            "Asset": "Assets/Art/UI/Animations/ProductBundleBannerAnimation.playable",
+            "Track": "#MainReward",
+            "Time": 0.5416666666666666,
+            "Actual": {
+                "r": 0.0,
+                "g": 0.0,
+                "b": 0.0,
+                "a": 1.0
+            },
+            "Expected": {
+                "r": 0.0,
+                "g": 0.0,
+                "b": 0.0,
+                "a": 1.0
+            },
+            "TotalWeight": 1.0
+        },
+        {
+            "Asset": "Assets/Art/UI/Animations/ProductBundleBannerAnimation.playable",
+            "Track": "#MainReward",
+            "Time": 0.975,
+            "Actual": {
+                "r": 0.8795093297958374,
+                "g": 0.8795093297958374,
+                "b": 0.8795093297958374,
+                "a": 1.0
+            },
+            "Expected": {
+                "r": 0.8795093297958374,
+                "g": 0.8795093297958374,
+                "b": 0.8795093297958374,
+                "a": 1.0
+            },
+            "TotalWeight": 1.0
+        },
+        {
+            "Asset": "Assets/Art/UI/Animations/ProductBundleBannerAnimation.playable",
+            "Track": "#MainReward",
+            "Time": 0.7616666666666668,
+            "Actual": {
+                "r": 0.2908893823623657,
+                "g": 0.2908893823623657,
+                "b": 0.2908893823623657,
+                "a": 1.0
+            },
+            "Expected": {
+                "r": 0.2908893823623657,
+                "g": 0.2908893823623657,
+                "b": 0.2908893823623657,
+                "a": 1.0
+            },
+            "TotalWeight": 1.0
+        },
+        {
+            "Asset": "Assets/Art/UI/Animations/ProductBundleBannerAnimation.playable",
+            "Track": "#MainReward",
+            "Time": 1.4750000000000006,
+            "Actual": {
+                "r": 1.0,
+                "g": 1.0,
+                "b": 1.0,
+                "a": 1.0
+            },
+            "Expected": {
+                "r": 1.0,
+                "g": 1.0,
+                "b": 1.0,
+                "a": 1.0
+            },
+            "TotalWeight": 1.0
+        },
+        {
+            "Asset": "Assets/Art/UI/Animations/ProductBundleBannerAnimation.playable",
+            "Track": "#MainReward",
+            "Time": 2.188333333333334,
+            "Actual": {
+                "r": 1.0,
+                "g": 1.0,
+                "b": 1.0,
+                "a": 1.0
+            },
+            "Expected": {
+                "r": 1.0,
+                "g": 1.0,
+                "b": 1.0,
+                "a": 1.0
+            },
+            "TotalWeight": 1.0
+        },
+        {
+            "Asset": "Assets/Art/UI/Animations/GameModeNewEvent.playable",
+            "Track": "#NewEventBackground",
+            "Time": 1.185,
+            "Actual": {
+                "r": 1.0,
+                "g": 1.0,
+                "b": 1.0,
+                "a": 1.0
+            },
+            "Expected": {
+                "r": 1.0,
+                "g": 1.0,
+                "b": 1.0,
+                "a": 1.0
+            },
+            "TotalWeight": 1.0
+        },
+        {
+            "Asset": "Assets/Art/UI/Animations/GameModeNewEvent.playable",
+            "Track": "#NewEventBackground",
+            "Time": 2.925,
+            "Actual": {
+                "r": 1.0,
+                "g": 1.0,
+                "b": 1.0,
+                "a": 1.0
+            },
+            "Expected": {
+                "r": 1.0,
+                "g": 1.0,
+                "b": 1.0,
+                "a": 1.0
+            },
+            "TotalWeight": 1.0
+        },
+        {
+            "Asset": "Assets/Art/UI/Animations/GameModeNewEvent.playable",
+            "Track": "#NewEventBackground",
+            "Time": 4.664999999999999,
+            "Actual": {
+                "r": 1.0,
+                "g": 1.0,
+                "b": 1.0,
+                "a": 1.0
+            },
+            "Expected": {
+                "r": 1.0,
+                "g": 1.0,
+                "b": 1.0,
+                "a": 1.0
+            },
+            "TotalWeight": 1.0
+        },
+        {
+            "Asset": "Assets/Art/UI/Animations/GameModeNewEvent.playable",
+            "Track": "#NewEventBackground",
+            "Time": 0.07500000000000001,
+            "Actual": {
+                "r": 1.0,
+                "g": 1.0,
+                "b": 1.0,
+                "a": 1.0
+            },
+            "Expected": {
+                "r": 1.0,
+                "g": 1.0,
+                "b": 1.0,
+                "a": 1.0
+            },
+            "TotalWeight": 1.0
+        },
+        {
+            "Asset": "Assets/Art/UI/Animations/GameModeNewEvent.playable",
+            "Track": "#NewEventBackground",
+            "Time": 0.375,
+            "Actual": {
+                "r": 1.0,
+                "g": 1.0,
+                "b": 1.0,
+                "a": 1.0
+            },
+            "Expected": {
+                "r": 1.0,
+                "g": 1.0,
+                "b": 1.0,
+                "a": 1.0
+            },
+            "TotalWeight": 1.0
+        },
+        {
+            "Asset": "Assets/Art/UI/Animations/GameModeNewEvent.playable",
+            "Track": "#NewEventBackground",
+            "Time": 0.675,
+            "Actual": {
+                "r": 1.0,
+                "g": 1.0,
+                "b": 1.0,
+                "a": 1.0
+            },
+            "Expected": {
+                "r": 1.0,
+                "g": 1.0,
+                "b": 1.0,
+                "a": 1.0
+            },
+            "TotalWeight": 1.0
+        }
+    ]
+}
