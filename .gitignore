@@ -243,3 +243,4 @@ Tools/Modernization/QuantumSdkLayout/obj/
 BlastRoyale/uam/
 BlastRoyale/ProjectSettings/Packages/com.unity.asset-manager-for-unity/ImportedAssetInfo/
 BlastRoyale/Assets/Plugins/Android/*.backup*
+BlastRoyale/Assets/Resources/PerformanceTestRun*.json*

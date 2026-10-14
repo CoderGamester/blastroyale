@@ -1,0 +1,17 @@
+[
+  {
+    "Path": "BlastRoyale/Assets/Art/Cameras/Timeline/AdventureIntroCamerasTimeline.playable",
+    "BeforeSha256": "7d6b224711a6e07a5e2c94ac0893a265213ee02ee83edc3aa5779df6f249cd37",
+    "SignalEmitterRecords": 1
+  },
+  {
+    "Path": "BlastRoyale/Assets/Art/Cameras/Timeline/AdventureVictoryTimeline.playable",
+    "BeforeSha256": "2cfeb751b20745bc8827b91da95a577cdb37205c114e70d01855624c5aca1e78",
+    "SignalEmitterRecords": 1
+  },
+  {
+    "Path": "BlastRoyale/Assets/Art/Cameras/Timeline/AdventureCelebrationTimeline.playable",
+    "BeforeSha256": "271462c5ea96f6cdffe6674978e2ebb6275918855c7e16ac2008a3fd05abd064",
+    "SignalEmitterRecords": 1
+  }
+]

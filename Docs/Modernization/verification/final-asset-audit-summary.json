@@ -1,0 +1,16 @@
+{
+  "RawAuditBeforeFinalOrphanCleanup": {
+    "assets_scanned": 1380,
+    "known_guids": 25899,
+    "unresolved_references": 18777,
+    "unresolved_unique_guids": 1291,
+    "unresolved_script_references": 23
+  },
+  "Qualifications": [
+    "Raw missing GUIDs include original missingprefab source/override provenance retained in repaired native scenes, unused design-only scenes and examples. Native10map validation proves no missing script/prefab instances in playablemapscenes.",
+    "Five unused orphansettings/prefab assets retired after zero source/GUIDconsumer checks; unsupported virtualmode Addressablesbuilder retired preservingactivePackedMode.",
+    "Three original Timeline signal records mapped to current nativeSignalEmitter without changing serializedfields.",
+    "Remaining inactive EnemySpawnercontroller logbehaviour and Design/Mapworks missingcomponents are unverified authoringcontent, not validatedgameplay."
+  ],
+  "Scope": "Nozero-rawmissingreferenceclaim; nativeimport/build/gameplay checksareseparate"
+}

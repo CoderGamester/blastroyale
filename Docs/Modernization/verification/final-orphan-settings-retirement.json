@@ -1,0 +1,27 @@
+[
+  {
+    "Path": "BlastRoyale/Assets/AddressableResources/UI/PartyDialog.prefab",
+    "BeforeSha256": "47b8a25d10d36c9eff78d38e60435109082c801cd1ae1724158537079bc21b47",
+    "Reason": "No remaining code/serialized GUID consumer; retired presenter/vendor/embedded importer setting"
+  },
+  {
+    "Path": "BlastRoyale/Assets/Animancer Settings.asset",
+    "BeforeSha256": "66fc909d8dc060595a5fef09e78fccc8d004eea0790c89822dd99048b55fa4c1",
+    "Reason": "No remaining code/serialized GUID consumer; retired presenter/vendor/embedded importer setting"
+  },
+  {
+    "Path": "BlastRoyale/Assets/Resources/EssentialKitSettings.asset",
+    "BeforeSha256": "c3e2fb83b9b6607be42c0dc799ab10ab98e848449c632bf9c9fed07d92dfa298",
+    "Reason": "No remaining code/serialized GUID consumer; retired presenter/vendor/embedded importer setting"
+  },
+  {
+    "Path": "BlastRoyale/Assets/Unity Cloud/Resources/UnityCloudPlayerSettings.asset",
+    "BeforeSha256": "90d5ac3f55c157f9de3ea24f65c9f4f7b6ea83524b099796dc479b3ff1cf0302",
+    "Reason": "No remaining code/serialized GUID consumer; retired presenter/vendor/embedded importer setting"
+  },
+  {
+    "Path": "BlastRoyale/Assets/Src/FirstLight/Editor/AssetImporters/AssetsImporter.asset",
+    "BeforeSha256": "27a39fe63fcc6e02aac615ff4caf015b30f6059e25fd5941b548a654c163518a",
+    "Reason": "No remaining code/serialized GUID consumer; retired presenter/vendor/embedded importer setting"
+  }
+]
