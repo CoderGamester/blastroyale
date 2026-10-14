@@ -1,0 +1,6 @@
+Command: python3 .local/compile-ugs-overlay.py
+References: actual imported Unity6000.3.26 managed assemblies, Authentication3.8 including PlayerAccounts, CloudSave, Photon Quantum3.0.14/BotSDK3.10.2, maintained GameLovers packages
+FirstLight.Inspector exit 0 diagnostics 0
+FirstLight.Game exit 0 diagnostics 0
+Raw successful csc output: empty; SHA256 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+Scope: isolated combined provider/peer overlay. No cloud/network/recovery execution.

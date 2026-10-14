@@ -1,0 +1,733 @@
+{
+  "converted_attributes": 334,
+  "additional_aliased_readonly_attributes": 5,
+  "source_files": 88,
+  "scalar_required_annotations_removed": [
+    {
+      "file": "BlastRoyale/Assets/Src/FirstLight/Game/Presenters/HUDScreenPresenter.cs",
+      "field": "_lowHPThreshold",
+      "type": "int"
+    },
+    {
+      "file": "BlastRoyale/Assets/Src/FirstLight/Game/Configs/MatchmakingAndRoomConfigs.cs",
+      "field": "MatchmakingLoadingTimeout",
+      "type": "int"
+    },
+    {
+      "file": "BlastRoyale/Assets/Src/FirstLight/Game/Configs/MatchmakingAndRoomConfigs.cs",
+      "field": "SecondsToLoadCustomGames",
+      "type": "int"
+    },
+    {
+      "file": "BlastRoyale/Assets/Src/FirstLight/Game/MonoComponent/AnimatedBackground.cs",
+      "field": "Bottom",
+      "type": "UnityEngine.Color"
+    },
+    {
+      "file": "BlastRoyale/Assets/Src/FirstLight/Game/MonoComponent/AnimatedBackground.cs",
+      "field": "Middle",
+      "type": "UnityEngine.Color"
+    },
+    {
+      "file": "BlastRoyale/Assets/Src/FirstLight/Game/MonoComponent/AnimatedBackground.cs",
+      "field": "Top",
+      "type": "UnityEngine.Color"
+    },
+    {
+      "file": "BlastRoyale/Assets/Src/FirstLight/Game/MonoComponent/AnimatedBackground.cs",
+      "field": "Pattern",
+      "type": "UnityEngine.Color"
+    },
+    {
+      "file": "BlastRoyale/Assets/Src/FirstLight/Game/Views/OverlayWorldView.cs",
+      "field": "_screenOffset",
+      "type": "UnityEngine.Vector2"
+    },
+    {
+      "file": "BlastRoyale/Assets/Src/FirstLight/Game/Views/StaticRotationView.cs",
+      "field": "_staticRotation",
+      "type": "UnityEngine.Vector3"
+    },
+    {
+      "file": "BlastRoyale/Assets/Src/FirstLight/Game/Configs/Collection/CharacterSkinConfigs.cs",
+      "field": "GameId",
+      "type": "Quantum.GameId"
+    },
+    {
+      "file": "BlastRoyale/Assets/Src/FirstLight/Game/Configs/Collection/FlagSkinConfigs.cs",
+      "field": "GameId",
+      "type": "Quantum.GameId"
+    },
+    {
+      "file": "BlastRoyale/Assets/Src/FirstLight/Game/Configs/Utils/ReusableTypes.cs",
+      "field": "ApplyRootMotion",
+      "type": "bool"
+    },
+    {
+      "file": "BlastRoyale/Assets/Src/FirstLight/Game/Configs/Utils/ReusableTypes.cs",
+      "field": "UpdateMode",
+      "type": "UnityEngine.AnimatorUpdateMode"
+    },
+    {
+      "file": "BlastRoyale/Assets/Src/FirstLight/Game/Configs/Utils/ReusableTypes.cs",
+      "field": "CullingMode",
+      "type": "UnityEngine.AnimatorCullingMode"
+    },
+    {
+      "file": "BlastRoyale/Assets/Src/FirstLight/Game/MonoComponent/EntityViews/GateBarrierViewMonoComponent.cs",
+      "field": "_isOpenWide",
+      "type": "bool"
+    },
+    {
+      "file": "BlastRoyale/Assets/Src/FirstLight/Game/MonoComponent/EntityViews/WeaponViewMonoComponent.cs",
+      "field": "_shells",
+      "type": "int"
+    },
+    {
+      "file": "BlastRoyale/Assets/Src/FirstLight/Game/MonoComponent/EntityViews/WeaponViewMonoComponent.cs",
+      "field": "_shellsPlaySound",
+      "type": "bool"
+    },
+    {
+      "file": "BlastRoyale/Assets/Src/FirstLight/Game/MonoComponent/Vfx/LocationPointerAbstractVfxMonoComponent.cs",
+      "field": "_arrowAnimationSpeed",
+      "type": "float"
+    },
+    {
+      "file": "BlastRoyale/Assets/Src/FirstLight/Game/Views/MatchHudViews/MiniMapView.cs",
+      "field": "_fullScreenPadding",
+      "type": "float"
+    },
+    {
+      "file": "BlastRoyale/Assets/Src/FirstLight/Game/Views/MatchHudViews/MiniMapView.cs",
+      "field": "_duration",
+      "type": "float"
+    }
+  ],
+  "source_changes": [
+    {
+      "file": "BlastRoyale/Assets/Src/FirstLight/Game/Startup.cs",
+      "attributes": 1,
+      "beforeSha256": "b403e57ea471d3fc7f62faf04a816251e463218e2c8fddf7bb47153c3ea7a1ca",
+      "afterSha256": "a1b96abc99e0faf3c2b1da7a01ea13a75e76b6a6ad7b02916b6e00e9b2c253ea",
+      "finalSha256": "a1b96abc99e0faf3c2b1da7a01ea13a75e76b6a6ad7b02916b6e00e9b2c253ea"
+    },
+    {
+      "file": "BlastRoyale/Assets/Src/FirstLight/Game/FLGCamera.cs",
+      "attributes": 3,
+      "beforeSha256": "f2834e9b31915bc3e9757d9b1d139bd30957796b24c8b19158fbe6e04bdda2d1",
+      "afterSha256": "35ef71880f570df513652d39089945e3c4ad447d5848dbf966ab9bb17e1e9b4c",
+      "finalSha256": "f231b1626a8889970f49e7cd5a203752b82798dc072d1c67c5ac6b1278f5362b"
+    },
+    {
+      "file": "BlastRoyale/Assets/Src/FirstLight/Game/Utils/CustomNavMeshGenerator.cs",
+      "attributes": 1,
+      "beforeSha256": "271ca7531940c619971ed857c42ad3ef6fa397d0c6a03b05f5de566561313937",
+      "afterSha256": "977f346c09c5e4aea2bf2de473bc5ba7c42fc6fe39b502ea14cff58ce61cc7af",
+      "finalSha256": "977f346c09c5e4aea2bf2de473bc5ba7c42fc6fe39b502ea14cff58ce61cc7af"
+    },
+    {
+      "file": "BlastRoyale/Assets/Src/FirstLight/Game/Utils/CharacterTester.cs",
+      "attributes": 7,
+      "beforeSha256": "ec7a90b95cb8ed7ed9a191dbc487b16bc4577aba89749e55ff6c3640fafef6ab",
+      "afterSha256": "6e93c860742409d1457c0fe2f183dafeb9e9c7866023fd6c5a0c2e50310b9b7a",
+      "finalSha256": "cab28fe32137f23bfe2c8574298aa68dad65945471b5d698a187fde6add01a99"
+    },
+    {
+      "file": "BlastRoyale/Assets/Src/FirstLight/Game/Utils/FLEnvironmentAsset.cs",
+      "attributes": 2,
+      "beforeSha256": "6041a4bfd712ea27391deaae717f1077ed7f66bc733c1952612b5347980cdce6",
+      "afterSha256": "8ed2be3ed7427e4e761b84e9ed4c69edcef76879a580184cf752d063beef83a9",
+      "finalSha256": "44186c8a11073f6944d1631b2b632754ae613268f94d67f3126ade1051263e84"
+    },
+    {
+      "file": "BlastRoyale/Assets/Src/FirstLight/Game/Presenters/DisconnectedScreenPresenter.cs",
+      "attributes": 0,
+      "beforeSha256": "e9d4d4c139b10e7d986b82db7adbfd76059f4a8b4ff9b0c1bea9b615299f57c2",
+      "afterSha256": "9bd6958d5ae61d49f045f5a322039f188262024a85aea64e2129a1dd2604f7fb",
+      "finalSha256": "27360bfcfe959271e611053d08dbcbf77d7d9c01b7a89b57c758a0d0ddcfbd5e"
+    },
+    {
+      "file": "BlastRoyale/Assets/Src/FirstLight/Game/Presenters/ServerSelectScreenPresenter.cs",
+      "attributes": 5,
+      "beforeSha256": "b3c9172db2286d5500d5ad8f8bb5150bee7840c057e5024381d0bb19decf1396",
+      "afterSha256": "e18c5f6e35c9a329492c458ab510080c2f50324733b290150e940e23baba2065",
+      "finalSha256": "438d5e4338677314f70b75a0085d37ebc1b3f79c31b612cf4dc7a703bc5090e3"
+    },
+    {
+      "file": "BlastRoyale/Assets/Src/FirstLight/Game/Presenters/HUDScreenPresenter.cs",
+      "attributes": 37,
+      "beforeSha256": "d4b5c37940dd89d4a78e2032f0ab48596d93b6a2c864a3f74d8f7901781f96db",
+      "afterSha256": "85aa4fa07a62c3514e90481cc6701f324102e321fca3831492525dd47f085f03",
+      "finalSha256": "692552b0dd858731df85db7fb1e798a547f35ce9cef97605d016f41aff9a06f0"
+    },
+    {
+      "file": "BlastRoyale/Assets/Src/FirstLight/Game/Presenters/UIVFXScreenPresenter.cs",
+      "attributes": 3,
+      "beforeSha256": "da02d958ebd88cc3c38c3707389a6799924d87d9f278c1cd7e6fa211a24e691d",
+      "afterSha256": "03c08c5424686bebb545218e9fccb98fa36617ae2ee388a1bd5a2841c6c98ad6",
+      "finalSha256": "f8059be17ba57d6e3bb8ab4297bf65eae5fe71df8ff00be2084079f812738855"
+    },
+    {
+      "file": "BlastRoyale/Assets/Src/FirstLight/Game/Presenters/GameModeScreenPresenter.cs",
+      "attributes": 2,
+      "beforeSha256": "126155e7f7a24c6caa1a2311f316a686d042146612c4ead40edf681b34c50cd8",
+      "afterSha256": "a87109144b425f15b7e8b7bcfe1f7461d7e5d2c02f78cd0022da88bab2d2865d",
+      "finalSha256": "a87109144b425f15b7e8b7bcfe1f7461d7e5d2c02f78cd0022da88bab2d2865d"
+    },
+    {
+      "file": "BlastRoyale/Assets/Src/FirstLight/Game/Presenters/PopupPresenter.cs",
+      "attributes": 11,
+      "beforeSha256": "5229f1d3c8461012ce3105b8efa7b92ae4342f39c8e53ff0362a3dccfaeb8094",
+      "afterSha256": "6654be9f38c2bba115bff59d5f6128bf709413748eec23faae5d9612765a797b",
+      "finalSha256": "f9ff496f5e265e66e2e49bab2195e9723826ac1180990ccb9521ed2058d9528d"
+    },
+    {
+      "file": "BlastRoyale/Assets/Src/FirstLight/Game/Configs/MatchmakingAndRoomConfigs.cs",
+      "attributes": 6,
+      "beforeSha256": "11906aa4dcc503a4ed7096c345db8f9a9d89ee31c12e33cef6336299d3bfb423",
+      "afterSha256": "7115028bfbc59b0ba6f58777dee6230237da5bae57b74ab311b055380d522c2a",
+      "finalSha256": "8493f9fc04f6e1ac6e4ac7e5facdbd1233503a2755ba0805b645c7ca3f892e20"
+    },
+    {
+      "file": "BlastRoyale/Assets/Src/FirstLight/Game/MonoComponent/RenderersContainerMonoComponent.cs",
+      "attributes": 0,
+      "beforeSha256": "578c93f7465d275e5c57e2a9934453cba228a1981c81b4e9249be5393f7b418b",
+      "afterSha256": "1dc644678c877ddbb5dba78c03678981e6260b3f14aee241455914bd33103628",
+      "finalSha256": "8b181a17858702734e42109d3f62c29030157ea15277639598068da14e845e5c"
+    },
+    {
+      "file": "BlastRoyale/Assets/Src/FirstLight/Game/MonoComponent/AnimationBindMonoComponent.cs",
+      "attributes": 1,
+      "beforeSha256": "05118a9ee6811b925e8f8ecb81eb60f0d0cd80b734ed390c1b7fe97e4f7fa128",
+      "afterSha256": "dd36b39b7fd479d29230ff2d315e834d3ef98e9d6546b744dccf9e8222aaa4ee",
+      "finalSha256": "371f585a2cd564f8c43fdedac5857f967046d123d712c03575f4b2125bb09ba7"
+    },
+    {
+      "file": "BlastRoyale/Assets/Src/FirstLight/Game/MonoComponent/BaseCharacterMonoComponent.cs",
+      "attributes": 2,
+      "beforeSha256": "e02fb60818ac813edc523af2d396cafa7c792391e19b04ccb96081e937887568",
+      "afterSha256": "231bae04d09c2eae398eceedfd96fdab280a0e21cdc2a7c208f6d0565f825656",
+      "finalSha256": "298c2184edeb7008caed5bde30ec37f62104f4570170dd80829dea3f93b8a77e"
+    },
+    {
+      "file": "BlastRoyale/Assets/Src/FirstLight/Game/MonoComponent/GlobalAnimatedBackground.cs",
+      "attributes": 1,
+      "beforeSha256": "fb11f11e464892ce6dce08a1e7257a7f9a8001cd5211b56e0aa3b5bd59ea2177",
+      "afterSha256": "89b9e13625dff87e7a0bd477a2b02578c8efb6430cb70101aa957a116de21a9a",
+      "finalSha256": "97265c7b548ac12e6050347f16e4f3e80287842cc66b4b802ba7eb6c014e0d2c"
+    },
+    {
+      "file": "BlastRoyale/Assets/Src/FirstLight/Game/MonoComponent/LandMineViewMonoComponent.cs",
+      "attributes": 2,
+      "beforeSha256": "fb3b954fd169ee5577676a3f17fe9e03296eaded54c8136468e167ce5847d5ed",
+      "afterSha256": "d13184a7ab48fefcf5b1257d9906e0f8e6b0ee3d82b553ed8f9a9d558cb8c236",
+      "finalSha256": "60557580163c2356cbe5f07cd3a68752b065bdeaa35896d8ee8367eaa115b5e9"
+    },
+    {
+      "file": "BlastRoyale/Assets/Src/FirstLight/Game/MonoComponent/AnimatedBackground.cs",
+      "attributes": 19,
+      "beforeSha256": "085882041a0e8d05cfb3e8624cbf777503ab798b905406528e7a45409fcd400f",
+      "afterSha256": "6ad4222f6fb6a8ee39a40e4ac3620d6c26ec1ab7e135dcff3c71cb765c7272b4",
+      "finalSha256": "a4619397a9dad67fa31690b25cfca20e994d5651f8030a5c82413bafdbf5b661"
+    },
+    {
+      "file": "BlastRoyale/Assets/Src/FirstLight/Game/Views/LookAtCameraView.cs",
+      "attributes": 1,
+      "beforeSha256": "17bc462df44a4f57094d055e5abcf73ffd0031bf525fae568f4a238a09808d0b",
+      "afterSha256": "6ea8f77a26bd214b2e6447a42df2044e5cc6490611160984251f215ec55bad7c",
+      "finalSha256": "1d3f96d365ec0d0785530ec13bf677c8bc913cdc1242a1effa43c74aff6e202b"
+    },
+    {
+      "file": "BlastRoyale/Assets/Src/FirstLight/Game/Views/OverlayWorldView.cs",
+      "attributes": 3,
+      "beforeSha256": "a9e2a83660c3844c50749b96c71b04de55ee15c8f27cf11ecb3a83c2668aada6",
+      "afterSha256": "af533ab3070e84071279f460fc81994af756341fec99bca050fefbeb922c4e37",
+      "finalSha256": "fcc1c0018b45d3594cd5629c6e6d198eaf72a88620524301806056fd7199815e"
+    },
+    {
+      "file": "BlastRoyale/Assets/Src/FirstLight/Game/Views/UiButtonView.cs",
+      "attributes": 2,
+      "beforeSha256": "37834e8ac5d58417546a24f4369613b6e7550eba5ec42390f9c57a71d504cf2c",
+      "afterSha256": "fe210277357974482fdd82fdb8af2207f8f8d400a053f08a2be5bba3adaac65e",
+      "finalSha256": "d09182e91cda137d0ad1c0c7d36f4fc0beb52958c5b758a987a1c1694591db14"
+    },
+    {
+      "file": "BlastRoyale/Assets/Src/FirstLight/Game/Views/StaticRotationView.cs",
+      "attributes": 1,
+      "beforeSha256": "40d78cb38320ef01f08c4ef732f5be66dd326ba7df9dc5cbce4dd22790b4d044",
+      "afterSha256": "d3f437b166013db104547e5723c65231559b38856fb687afbc6970f7f3a19574",
+      "finalSha256": "8d4cc13e92bdda1d11668c442dc2aedbb632f619847acd3e6f34a52256dac162"
+    },
+    {
+      "file": "BlastRoyale/Assets/Src/FirstLight/Game/Views/RemoteTextureView.cs",
+      "attributes": 3,
+      "beforeSha256": "0b638edfb227273e8a98892fab86272eb43c2e3b2a747b6599bb6a67342f4cd4",
+      "afterSha256": "f4761ec18a401b2c6ff0815e0ba691e46f62bfa8bcc82670e87a4a66dd54cf20",
+      "finalSha256": "30d9a2e7f4664e23ea6af39081c6cc2e4f65f928bec5ab24839fec00691a7854"
+    },
+    {
+      "file": "BlastRoyale/Assets/Src/FirstLight/Game/Domains/Maps/MapAssetConfigIndex.cs",
+      "attributes": 2,
+      "beforeSha256": "28fded32813d944edd1f222963b113c24ee3c1c9f51364a067c17782012a91e6",
+      "afterSha256": "e38c244460955d397ea52697e21d92cdb0de13b1cc782b52621df6eef4a1bd08",
+      "finalSha256": "0adce2964c2b2afc52d14eed12c5bb209db5ea305f89adb2ef82f2694215902e"
+    },
+    {
+      "file": "BlastRoyale/Assets/Src/FirstLight/Game/Domains/Maps/MapAssetConfig.cs",
+      "attributes": 1,
+      "beforeSha256": "d7c7a8bbf732d07a83ea05580546b3778e19dd1fb0559eff84c1d18f5f4a78c5",
+      "afterSha256": "529eba0ae9e6c2bb38c73b9cc6c7809de54e160b3613870d52dc642401031747",
+      "finalSha256": "4514a09d845d238260e74ac37cb296bff0ce743dd86267649789eee4e109fb90"
+    },
+    {
+      "file": "BlastRoyale/Assets/Src/FirstLight/Game/Domains/VFX/PooledVFXConfigs.cs",
+      "attributes": 2,
+      "beforeSha256": "f92f21e2de4606e9dbb77c9ec927640e3ca982046c500f7d9266c2cdeb3b572b",
+      "afterSha256": "5aaaddb010adfcf1818b34fcfa587f0e4b173b3dc76e24230f630d277d888e34",
+      "finalSha256": "ae1fdc92fa395e9a705897f7f6c4a4ac79c25d891fb2e58a49f0150d97ade90d"
+    },
+    {
+      "file": "BlastRoyale/Assets/Src/FirstLight/Game/Presenters/EndGameSequence/MatchEndScreenPresenter.cs",
+      "attributes": 2,
+      "beforeSha256": "3e3c28c9441f73d9549b1b60f88c222b8faf9ec18a535265eaa0f268f5e0258b",
+      "afterSha256": "cfdafcbb91a1a8e356c63181b667543567dc547db3d30ab56e2cbdf96d6084b6",
+      "finalSha256": "06c55ce25acd826b006c1e7fd1b495f6aaad417f913041cf0d56477bf97f2e34"
+    },
+    {
+      "file": "BlastRoyale/Assets/Src/FirstLight/Game/Presenters/EndGameSequence/WinnersScreenPresenter.cs",
+      "attributes": 1,
+      "beforeSha256": "9b1a0e7b743fd9af9353641dee86e2445f265ccd7b6751446a3cb11ebcd791e5",
+      "afterSha256": "3842c9de902034fb76826278c764d25c2008daa9bd84a33b1d034c5eff1482bc",
+      "finalSha256": "c13f2e72196cdc093177c29cd0cdebe46aa645e1986eeb503747aff9f5c8d0e2"
+    },
+    {
+      "file": "BlastRoyale/Assets/Src/FirstLight/Game/Presenters/EndGameSequence/LeaderboardAndRewardsScreenPresenter.cs",
+      "attributes": 1,
+      "beforeSha256": "63f3f5d15b5368c993a90c6d488425e063ce96be56e97df53158e90a9739fafc",
+      "afterSha256": "47b14d11ee4ca4573e1f27783be3deb21110b7b093a452df75d93d00127f50fc",
+      "finalSha256": "3a4f5c08c6e4cce15de8556ee3653ad0d7149afa5f92e41d2d61bb45a089fa23"
+    },
+    {
+      "file": "BlastRoyale/Assets/Src/FirstLight/Game/Presenters/Rewards/RewardsScreenPresenter.cs",
+      "attributes": 9,
+      "beforeSha256": "d86e7421700553da9f1547e77f19aff8a15d567343631009e3003f47463ad0ae",
+      "afterSha256": "13cde901ab0869829058a0c0ba2d9bbb25da9ecfccb9c6cc484ccab2d18db455",
+      "finalSha256": "bb06963ed9f57b027f3ef1a4506dffbbe611bca526805da6113b9c934295f9e0"
+    },
+    {
+      "file": "BlastRoyale/Assets/Src/FirstLight/Game/Presenters/Social/MatchLobbyScreenPresenter.cs",
+      "attributes": 1,
+      "beforeSha256": "a4f7a118d6cf9b95f97a6465f0f2df46e4b32fc5403ac951fb99ce3182cc83bf",
+      "afterSha256": "6bc771477e3b665c9c5bf80aafaaf5dfea8c78b8631e5d0dd7e8298b3e876288",
+      "finalSha256": "2bf47307f84d421b8a080095d7d8bc0ba8fd37999645505ae4566b93aae23160"
+    },
+    {
+      "file": "BlastRoyale/Assets/Src/FirstLight/Game/Configs/Collection/CharacterSkinConfigs.cs",
+      "attributes": 3,
+      "beforeSha256": "a2ed779880cd73119fe1b1007ab80dab951b5e06b4ef8faf48e76f7a30db4598",
+      "afterSha256": "f60e1055ae5e110061d44974ba29715e61e93fb02d7fc88c923ec7c0f88fb541",
+      "finalSha256": "20ace96d5297184e674d74d825fc4d460a384fd210a29c842271a7ced6ddbc54"
+    },
+    {
+      "file": "BlastRoyale/Assets/Src/FirstLight/Game/Configs/Collection/WeaponSkinsConfigContainer.cs",
+      "attributes": 2,
+      "beforeSha256": "de9014a8a8bcc69076bdc9cbcc1e4a8f7af5943238ad2a65b1718891aec2fb31",
+      "afterSha256": "500b0d67d46046a1b8b39e3ceb1fc38b2a034016044a912fd4dbe3c61e6065e2",
+      "finalSha256": "725301e54f2fbc72dea7ab6815f0ecc97a11eace4da11e208159a2fd3b248808"
+    },
+    {
+      "file": "BlastRoyale/Assets/Src/FirstLight/Game/Configs/Collection/FlagSkinConfigs.cs",
+      "attributes": 3,
+      "beforeSha256": "78f3d17a56295a12cd4c516e9c73eed2e3ace20f0e0345680e3a6b3d05b06bf1",
+      "afterSha256": "dec022675c5495fac4fe9c1e3f4346aeca662f6dc0fe470b0991dc2f42dc1c80",
+      "finalSha256": "0aeb8af5d2da46e26d239c245e958ca6ca8bcd3a92c9aacd231604ea097ca87b"
+    },
+    {
+      "file": "BlastRoyale/Assets/Src/FirstLight/Game/Configs/Utils/ReusableTypes.cs",
+      "attributes": 8,
+      "beforeSha256": "ed379c3e735a2ae256727299c4ccd47c62a56b758e6f152b6a4ad0850274eab0",
+      "afterSha256": "75854cfca7084ab5568d0c106b0ba16acf72f8b20493cf4fd3166ee998149549",
+      "finalSha256": "36eee5dfcecee69b87a4b0c022a51cda4459f2fc7511bce21731a03ccd88d40d"
+    },
+    {
+      "file": "BlastRoyale/Assets/Src/FirstLight/Game/Configs/AssetConfigs/CustomAssetConfigs.cs",
+      "attributes": 5,
+      "beforeSha256": "56d13e498ca826f02a269bbd8c4ee6fb90e85ec59525e33f4292867c0eba45c3",
+      "afterSha256": "9aa5849e7632ad8c5ba83f9d8e5e1d2a34d961e14c5eae0e0f506df5155d8d6e",
+      "finalSha256": "654eed5f7f9ffccbd349df73abb8036bd73505aec328ac9c76a06b5229d33caf"
+    },
+    {
+      "file": "BlastRoyale/Assets/Src/FirstLight/Game/Configs/Remote/MatchmakingQueuesConfig.cs",
+      "attributes": 0,
+      "beforeSha256": "dde594b8ed3729cc5ddeba9c4adcc861aafde7c795eb7ee31815506a5577aea9",
+      "afterSha256": "180aec7e9c55397f6a1d6512c0ed15d7e663887f23861ff2ff904b148f9d39b1",
+      "finalSha256": "19fce76c18d3d17e34897e7496d0dae3d23fdcf3a31106158608f9f81ffefa10"
+    },
+    {
+      "file": "BlastRoyale/Assets/Src/FirstLight/Game/MonoComponent/Ftue/FtueCollectablePlatformSpawnerMonoComponent.cs",
+      "attributes": 1,
+      "beforeSha256": "cb11b5901fbdf4c53e2c8ffc8c01b9d8cbc09e228f190898e0136a53edcd0e46",
+      "afterSha256": "d23b87a8c50cd570e1766b81a4b0848205ebcd1f02d409cf31d6c22e02724325",
+      "finalSha256": "45eb5ffc344f23fa07077a458551eab9583112f85d228f758fa989430f294b7c"
+    },
+    {
+      "file": "BlastRoyale/Assets/Src/FirstLight/Game/MonoComponent/Ftue/FtueCheckDummiesKilledMonoComponent.cs",
+      "attributes": 1,
+      "beforeSha256": "880056204ac4d333fd540b70c9bf239ab9ec0827fbf34d4e94f22e9686fe1071",
+      "afterSha256": "0a581a4312b27104cfe641afefb5b8964ccda9184501728e48cf42473b3b0858",
+      "finalSha256": "f562d5a1df050f4f61a617c5ae7eec093bef743f1c2e47e2847f066b8d15a9ac"
+    },
+    {
+      "file": "BlastRoyale/Assets/Src/FirstLight/Game/MonoComponent/Ftue/FtueCheckTimelineColliderMonoComponent.cs",
+      "attributes": 1,
+      "beforeSha256": "17b8e4e7bd6fe91f34e35267398338ec604d23202f6eb7a59e054c9afefa0b85",
+      "afterSha256": "d1bad7185544320fa072b56e39743c9309616fc282fd03d87a520579a921ef66",
+      "finalSha256": "fb37ebb597c64cbb92a18ec8665690987e02df9534a5bc39924ce13bb8ab777b"
+    },
+    {
+      "file": "BlastRoyale/Assets/Src/FirstLight/Game/MonoComponent/Ftue/FtueArrowIndicatorMonoComponent.cs",
+      "attributes": 1,
+      "beforeSha256": "0f9c52a346d6c68f50acb026ad0da675d9d61894774b7d2c00db7f0409a921f7",
+      "afterSha256": "e7c671e9b149dad09b946da701482e56ee65af3f454f0711eb174012b7520a80",
+      "finalSha256": "e5b2c1fed69cebbcf2ec7ad23720b4901978c9eaf9d3dfa860052645c60e0789"
+    },
+    {
+      "file": "BlastRoyale/Assets/Src/FirstLight/Game/MonoComponent/Ftue/FtueWeaponSpawnerMonoComponent.cs",
+      "attributes": 1,
+      "beforeSha256": "1d035cbc4b07513a87a318d81741743e78dcddc794109283d6187d2f2b51171a",
+      "afterSha256": "1c50918131233531c06ad0c7613665a7c18c84a497eabb87fe694ac89ad02b42",
+      "finalSha256": "dd41f5a5c91afc762a1c90364e6500563af8a5b130e83520868753d88e7ead6e"
+    },
+    {
+      "file": "BlastRoyale/Assets/Src/FirstLight/Game/MonoComponent/EntityViews/CollectablePlatformSpawnerViewMonoComponent.cs",
+      "attributes": 2,
+      "beforeSha256": "f1027c7f7b770deaa4f3c92e461419ca4c35ee0463d2648f578b7c1f8f7e352f",
+      "afterSha256": "c5b81f01e3c2a1e03d824a9863375c92265908f09a7957d22a4cbafcf3fe6feb",
+      "finalSha256": "c3c3847ce8585a648da313375a610a98433ff3f55dd55b76a5847b262c8c7ba3"
+    },
+    {
+      "file": "BlastRoyale/Assets/Src/FirstLight/Game/MonoComponent/EntityViews/AvatarViewBase.cs",
+      "attributes": 0,
+      "beforeSha256": "b2aa1b80e55c6b5c9f4df1590722e12ee9b3afe954551fdd128bccb5321a37dd",
+      "afterSha256": "d32495d301ba3dd57d766777fc08039535fb0a349b2bf76243acbfc07c42111f",
+      "finalSha256": "7b02005437256121de85a80ddaab8fd9c40f8983b71448eea4b9887940be7df9"
+    },
+    {
+      "file": "BlastRoyale/Assets/Src/FirstLight/Game/MonoComponent/EntityViews/CollectableViewMonoComponent.cs",
+      "attributes": 2,
+      "beforeSha256": "519e9a9afd93a800f1c82d7c54e1b3f0c6d347f7997e2df3c742a3b21a039984",
+      "afterSha256": "6d28fc7fd16b9c7bd6d43d69cb40572e4c8f67fee4424342131110fc8d100cb5",
+      "finalSha256": "b484f12ab9e8f22725e380c05d8da589f1596ca208d29a75e4c361658d080691"
+    },
+    {
+      "file": "BlastRoyale/Assets/Src/FirstLight/Game/MonoComponent/EntityViews/KnockedOutPlayerViewMonoComponent.cs",
+      "attributes": 3,
+      "beforeSha256": "08676e3138efa440346c393ad2a00402a3f82d96b67cd5a6e6112d69758106d9",
+      "afterSha256": "b437fcd3d7cf0def011d5f477dcbf7cb2bddd4361ae4bd970e4fd1f52e855fa1",
+      "finalSha256": "c1901008a620f3ea4251b318b9bb6dc998fd2184e5e6dac078982d8ed9797a19"
+    },
+    {
+      "file": "BlastRoyale/Assets/Src/FirstLight/Game/MonoComponent/EntityViews/GateBarrierViewMonoComponent.cs",
+      "attributes": 2,
+      "beforeSha256": "a433091815aa6326566d59a7a501f299b17d670f3f98931a2e41370593672189",
+      "afterSha256": "97a3604fa692d73bd49a791793fc2cde5fe6ab10f6f7f8bfc7bed28ecd940501",
+      "finalSha256": "253fa12647a6b2c52243d6a3b21eca7f23928b061dc354ffd0cb43662a72311c"
+    },
+    {
+      "file": "BlastRoyale/Assets/Src/FirstLight/Game/MonoComponent/EntityViews/DestructibleViewMonoComponent.cs",
+      "attributes": 1,
+      "beforeSha256": "fdb3ccb012a40525ecf8ae0a03ba7e3b1fb7b0aad8188799240e03235bac701d",
+      "afterSha256": "738f8b90f7f49093d50ee0d47aa25206013902b93fce6684ce88dc083c453d3f",
+      "finalSha256": "4ef8f73407f2819a4c8826777f59f7bae33b98446f9df5a5ce9def9df830fb2a"
+    },
+    {
+      "file": "BlastRoyale/Assets/Src/FirstLight/Game/MonoComponent/EntityViews/WeaponViewMonoComponent.cs",
+      "attributes": 3,
+      "beforeSha256": "266d8a76b611a154f30adf6132ba4735f8a13220d5c4c23285b557ed6127b991",
+      "afterSha256": "b29c79564a9b55c9d462ec0bbe7f003c8f532495118c23536b35c8771ea725fa",
+      "finalSha256": "d19b2934716884c2a415d9e68ac165a310bec52e4041d81056a2c200177016e8"
+    },
+    {
+      "file": "BlastRoyale/Assets/Src/FirstLight/Game/MonoComponent/Match/MovementIndicatorMonoComponent.cs",
+      "attributes": 1,
+      "beforeSha256": "7357d791654dd3958a862bee94a39e80fef26bf671a0649b689725653b4b447e",
+      "afterSha256": "8e0446368c39cfc159245e0817bf89bbd9d7b8808d397636f648cbb5381277dc",
+      "finalSha256": "4186c3bd2be270dc9b1047012143f4fa5e8c3aea477929e0f73b456582982802"
+    },
+    {
+      "file": "BlastRoyale/Assets/Src/FirstLight/Game/MonoComponent/Match/RadialIndicatorMonoComponent.cs",
+      "attributes": 1,
+      "beforeSha256": "de162ae50faf670d1ff4c7a9d8bb0dc57af4673ee17ea1b3f7bb0da367ec1ceb",
+      "afterSha256": "821665c1b0dd6c67b988e2b65d3c7c331ffdab1508803e928ebaab17307084f2",
+      "finalSha256": "7cc6ac769e69d081fbfb7d4a317d76734af489852f4897370016f104a688a01d"
+    },
+    {
+      "file": "BlastRoyale/Assets/Src/FirstLight/Game/MonoComponent/Match/CircleLineRendererMonoComponent.cs",
+      "attributes": 1,
+      "beforeSha256": "7312a0bdbe258a0f064d9c44c48288da1f4ca8f21501c532f8d2e8d0181a8ca7",
+      "afterSha256": "f2651e95e04465824502ea60cd8bbfb74b883caecb1c06d241918fd50f2f1488",
+      "finalSha256": "bfb33cea275c5bdf322641920381d3a255ada5d876d08d5af97073beb36a870b"
+    },
+    {
+      "file": "BlastRoyale/Assets/Src/FirstLight/Game/MonoComponent/Match/FixedAdventureCameraMonoComponent.cs",
+      "attributes": 6,
+      "beforeSha256": "e4f2f4b38a68df0585e581c095974489f7221164ad755d832e96112962fe4320",
+      "afterSha256": "9391718e238b39e2b2d672f68628def2363fef348af433182f7b9c0e7412fcea",
+      "finalSha256": "261236acce84d532121cf66e9f291a684058d502a1494149ba06f9538847d2fe"
+    },
+    {
+      "file": "BlastRoyale/Assets/Src/FirstLight/Game/MonoComponent/Match/RangeIndicatorMonoComponent.cs",
+      "attributes": 1,
+      "beforeSha256": "2500a76c637646cac96d1298619df65dcc671ec223815e755f09b275ccd8d5fc",
+      "afterSha256": "f5d66a9e71f11234af47d5b7171950af22ab6c9e45a55dbc5689d5e813b429c8",
+      "finalSha256": "771ba32ec1d0dbf6d8fcea06dbbca8f3040a00948b143ac8ed41af7f54fe256e"
+    },
+    {
+      "file": "BlastRoyale/Assets/Src/FirstLight/Game/MonoComponent/Match/SafeAreaIndicatorMonoComponent.cs",
+      "attributes": 1,
+      "beforeSha256": "b0a7efc29bea982ad37c464c963f469140e801de110f91175946ca3a6f3e45e4",
+      "afterSha256": "b767b2dd1cf44bbd8f92d8dbe84f5125f0f0e19f180ea88cedefc713fe6f9b33",
+      "finalSha256": "126eb035ddbfd514fbfac6d6d53a474c04f387294b45c82d16afbcaff25d00a6"
+    },
+    {
+      "file": "BlastRoyale/Assets/Src/FirstLight/Game/MonoComponent/Match/ScalableLineIndicatorMonoComponent.cs",
+      "attributes": 1,
+      "beforeSha256": "b9146b433adba60cf097159421b2dcf3470f51c571c254339684f059c182feec",
+      "afterSha256": "d0552cdbef3db1f5ba87a98e0c6960d11aabf6cb178cf85da345f3f1c7809c26",
+      "finalSha256": "a979f228cfc196d8096c5c94b53212942eabcb1e36a11e5ff43d098776143f02"
+    },
+    {
+      "file": "BlastRoyale/Assets/Src/FirstLight/Game/MonoComponent/Match/ShrinkingCircleMonoComponent.cs",
+      "attributes": 7,
+      "beforeSha256": "4783945cd62d2999ff0ef075250002aa719fe88a5ed5ee634cc8c3160c622e94",
+      "afterSha256": "7df8cba22edb6409be00990b238734a6b7e15f3372b88eb7dac1b12532e97bb2",
+      "finalSha256": "54c51cbb04ea42a88bcfcd7116bc37a56151bae5470c379a42259e5be4c3f9b3"
+    },
+    {
+      "file": "BlastRoyale/Assets/Src/FirstLight/Game/MonoComponent/Match/ConeIndicatorMonoComponent.cs",
+      "attributes": 1,
+      "beforeSha256": "ed007021a2a0e5b6b0a4fec5932f6b14b0c3d4c38b3d41e90357cb16cd363c7d",
+      "afterSha256": "7998d45c65060df52254d3d45cd1a530bd17c4121010a2d4b24604a4856fd98e",
+      "finalSha256": "afa4c0c42e6be6851d0b7f19fffd264419d77303f7085fe0e0a213186bb9def2"
+    },
+    {
+      "file": "BlastRoyale/Assets/Src/FirstLight/Game/MonoComponent/Match/LineIndicatorMonoComponent.cs",
+      "attributes": 1,
+      "beforeSha256": "f87036b71cea20354f153bfc3905abe64b1ecbd5f32bd40e9ea8d7ee18edd282",
+      "afterSha256": "91059a8dc41de248dfb845e14e25517f6536cdf43721c760e33bbc41944eba8a",
+      "finalSha256": "053655aac852c85672fc39ec8953061129fc7b653738280f92ea3a42be38ebcc"
+    },
+    {
+      "file": "BlastRoyale/Assets/Src/FirstLight/Game/MonoComponent/EntityPrototypes/HealthEntityBase.cs",
+      "attributes": 1,
+      "beforeSha256": "c4cbadbb5d36754e2c846f1ad1e8483f2f12796a8573ac4a5c427ebb220ebe8d",
+      "afterSha256": "00934782161f6fca5ffecb4edc2ff2deddddf19dfcdd24bd01a3cd41238cd133",
+      "finalSha256": "020f583d91bcbc62d1200ec0647972eae62504e255f6209ce5c65e7edeb7f33f"
+    },
+    {
+      "file": "BlastRoyale/Assets/Src/FirstLight/Game/MonoComponent/EntityPrototypes/VisibilityAreaMonoComponent.cs",
+      "attributes": 1,
+      "beforeSha256": "421f138135f2ea69f18dd78727d4ccd403938dbd68bb781ceb70b40e0962a657",
+      "afterSha256": "28b75a2f094ae07e4bab1c4085256b987c1d1b17415d65ec8914a39ffae8bb64",
+      "finalSha256": "4e69acebcf8bcc79fb873ac83387cc0febfda440d2306fbcb46e67922248339c"
+    },
+    {
+      "file": "BlastRoyale/Assets/Src/FirstLight/Game/MonoComponent/EntityPrototypes/PlayerCharacterMonoComponent.cs",
+      "attributes": 0,
+      "beforeSha256": "9b4548baf4a67ca41da82378baf07b6a5db6c1b437aad7d127f6bb524ff9f99c",
+      "afterSha256": "ed5acf0513e138f08dc836454b8e4b479330077d2cc9b228fb6d014a07adb807",
+      "finalSha256": "adf81d3865ee7ef6ff03ddaac6820ed4a2881f8dee45b6fc223564f7120c076f"
+    },
+    {
+      "file": "BlastRoyale/Assets/Src/FirstLight/Game/MonoComponent/EntityPrototypes/AirDropMonoComponent.cs",
+      "attributes": 6,
+      "beforeSha256": "06c5a86654ff30d27cc6d483f5b7921d67b527ebb685d4b5169ba5153eabb66e",
+      "afterSha256": "8a2ba37ef2b27f3959bae32f1109ffcce6159613ad715bf98fe1ad5d88134b9a",
+      "finalSha256": "459412974b039c549ca6cb8ee43994b111050f3e23a95e8ac2bef09ddbba9d4a"
+    },
+    {
+      "file": "BlastRoyale/Assets/Src/FirstLight/Game/MonoComponent/EntityPrototypes/BulletMonoComponent.cs",
+      "attributes": 0,
+      "beforeSha256": "5d849c841f63d693a444f12c33db24234d966958a10d31a6864698ff0c2fc961",
+      "afterSha256": "6b6c41dd64a0bf589bc5ea7bb955c01dca1f115e74f51aff2101595615dafde7",
+      "finalSha256": "d9841cddbac1c168870e36df18424d0ee40626e8161639a59f26dcf82581e7fd"
+    },
+    {
+      "file": "BlastRoyale/Assets/Src/FirstLight/Game/MonoComponent/EntityPrototypes/DestructibleMonoComponent.cs",
+      "attributes": 1,
+      "beforeSha256": "9e2bc93c4a606cda6e2ead87213e25d99b9dfe67c091b1f0d521016c85fe16fb",
+      "afterSha256": "239860c7b88c6f5486a16ca8c273a9978cd1597b44ee2011c363ced1a7acb3e0",
+      "finalSha256": "11573b7453b292b6745c4015320b627fce6f19c6bc1403c39e9269d7dc314738"
+    },
+    {
+      "file": "BlastRoyale/Assets/Src/FirstLight/Game/MonoComponent/EntityPrototypes/CollectablePlatformSpawnerMonoComponent.cs",
+      "attributes": 1,
+      "beforeSha256": "3e4b5e94ab8e686759349abf28e39b72db862dba33f21305ef5552948f0573c3",
+      "afterSha256": "5feec6a35d3a60a45de2c107e60293660de3192911415d8af2658ac889015395",
+      "finalSha256": "a2bff7d45f93f765c27c76be8b27050b14f2480b89d059f5eca3f170cff5e69a"
+    },
+    {
+      "file": "BlastRoyale/Assets/Src/FirstLight/Game/MonoComponent/EntityPrototypes/EquipmentCollectableMonoComponent.cs",
+      "attributes": 2,
+      "beforeSha256": "709eba58e19c9edc77181ed6a48dfda52ab94ac509211eb62fa7b7d10b06ec1b",
+      "afterSha256": "7ddc3d363582211f9b311d33df845f564413d1d0b21a9fd58f169102f6641eff",
+      "finalSha256": "fe75c0c69b53730f6a87f2543c67ce11776b14a955d42d0aa9ecb8cdac0a0f19"
+    },
+    {
+      "file": "BlastRoyale/Assets/Src/FirstLight/Game/MonoComponent/EntityPrototypes/GateMonoComponent.cs",
+      "attributes": 1,
+      "beforeSha256": "c5c0263ee9b415cbf3684e72f479f566230cdea6c04ce6bbcd9dae9726451ccc",
+      "afterSha256": "9e9a0f311bdc44cea45c4998de740626559f41ad3d90d9a31d82f95914bf7e1e",
+      "finalSha256": "6c714bc7c1514745a90fe9438ab31eeff6fa09c3df9e700e20be0188125e1234"
+    },
+    {
+      "file": "BlastRoyale/Assets/Src/FirstLight/Game/MonoComponent/Vfx/LocationPointerAbstractVfxMonoComponent.cs",
+      "attributes": 2,
+      "beforeSha256": "1f12574c15b9425ef79004ab2dd4427281a50f6c4b9e3a030c86b7d6ebf4356d",
+      "afterSha256": "721108d49d91acebde7a1903d32ef3100a14293ae88b57fe0ba54cb79229b076",
+      "finalSha256": "42f4c48739fdd5c42240dd77322ebca303428a0946e0e0b4fb33abdb8c4ee6c1"
+    },
+    {
+      "file": "BlastRoyale/Assets/Src/FirstLight/Game/MonoComponent/Vfx/CollectableIndicatorAbstractVfxMonoComponent.cs",
+      "attributes": 1,
+      "beforeSha256": "42a690d03fbe8a04cc7e2391ba9f6543b3fbd12f0584088b589f4c3aa5907fb9",
+      "afterSha256": "7a85d4b8060642e2da893eafbf6595e5f4e2adcb15eae80f1b4b7c0adff63e85",
+      "finalSha256": "de3f2b714f6c925cd23af2efa2d1015655d903dd9cd133abad3ae46c35241d42"
+    },
+    {
+      "file": "BlastRoyale/Assets/Src/FirstLight/Game/MonoComponent/Vfx/VfxSpawnerBase.cs",
+      "attributes": 1,
+      "beforeSha256": "4e108ad210f6ac830e7acc54150bc48bba401b14f227d290ba4c7df2d61b9588",
+      "afterSha256": "a25f2dd640b086d67436c1c9329ba4e0e86334dbad6ac8a07d5ca78710955e58",
+      "finalSha256": "c1478acbedae4262e70d103c1ab13b758bb8a979bcfcc23913dd6d622de6a031"
+    },
+    {
+      "file": "BlastRoyale/Assets/Src/FirstLight/Game/MonoComponent/Vfx/ParabolicAbstractVfxMonoComponent.cs",
+      "attributes": 1,
+      "beforeSha256": "85e42a2d4179316f305f9fc2b9dfa4de000bc9f7c702f60433a382399f87d2e7",
+      "afterSha256": "2205847c07beff75cee61ee46aa323e6d161a51b3ce404467813588c304f2a0b",
+      "finalSha256": "c3ce777ee34cac622974797b69d138369bf9e9d6b006997e0e911d2f6f0d98ef"
+    },
+    {
+      "file": "BlastRoyale/Assets/Src/FirstLight/Game/MonoComponent/MainMenu/MainMenuVfxMonoComponent.cs",
+      "attributes": 1,
+      "beforeSha256": "05cf98230928ba049f68df8c31bdc02eeb5de80a0820a073be08a1b3717e7f1a",
+      "afterSha256": "a53152b3bbb20d5e53c9d4338363810f842cc7215fe2f0f914d9444a2da0204b",
+      "finalSha256": "5f8c77999ba277925e9477794cfef30eb8d5f165b958cfead8ffd3a5eeca6455"
+    },
+    {
+      "file": "BlastRoyale/Assets/Src/FirstLight/Game/MonoComponent/EditorOnly/NavmeshQuantumCollidersBaking.cs",
+      "attributes": 17,
+      "beforeSha256": "086cd98d7bc428d44f060435b5b5660d9b883b41a341220303dc01d533dcc4d7",
+      "afterSha256": "49efabcf4baebb0bf4746130b25d7c6b8222e2333c541d1008dc6b921cd1d03e",
+      "finalSha256": "cc0d78d371afacebd498e1b2bf54f31c89419e44e1150e66f6fb4081e20bdebf"
+    },
+    {
+      "file": "BlastRoyale/Assets/Src/FirstLight/Game/MonoComponent/EditorOnly/SpawnerDebugMonoComponent.cs",
+      "attributes": 1,
+      "beforeSha256": "1867d56e2f1695d456631f82b31c57caaa733d99cfaf113169c6511ea4fd57c3",
+      "afterSha256": "1b83a971537aca1c6768c981b63de69841ed9b73f1007bdffba023caecfba801",
+      "finalSha256": "3b69f2081adb59a52b6d0e5e2c76834b20b7affc82f3f996b092701d1584c50d"
+    },
+    {
+      "file": "BlastRoyale/Assets/Src/FirstLight/Game/MonoComponent/EditorOnly/DebugCharacters.cs",
+      "attributes": 1,
+      "beforeSha256": "1f4f065b1851ef0a5ad61c93d608e81caf69b1707ca0e93ea528f512c6d8a302",
+      "afterSha256": "742b5e7812389dfd3e47965d8488ea4b35e92d7a4d3d510965e7dc19f9c34d71",
+      "finalSha256": "742b5e7812389dfd3e47965d8488ea4b35e92d7a4d3d510965e7dc19f9c34d71"
+    },
+    {
+      "file": "BlastRoyale/Assets/Src/FirstLight/Game/Views/UITK/KnockOutNotificationView.cs",
+      "attributes": 2,
+      "beforeSha256": "342e33818dc49145f84dc136569c02e406ff6bda110a44e37a015a06e958c169",
+      "afterSha256": "47ad01a9372d1deca26ad363e73a43298c23baf5cce1747ad6fea288c88c1241",
+      "finalSha256": "c5ae185222e3f1ee2837e48053df4adc880f7be5a1e00c26bc48f491d1715313"
+    },
+    {
+      "file": "BlastRoyale/Assets/Src/FirstLight/Game/Views/MatchHudViews/MinimapAirdropView.cs",
+      "attributes": 9,
+      "beforeSha256": "0a63b82dcdad7178eb13d18a8fa8fb30a3481210e982111c36246912fcc2d8a5",
+      "afterSha256": "217f59659620da4f76adcfb994d797bb47a2cca3986a2f014101800c54861dad",
+      "finalSha256": "f8c0017a358f8553c516a655bc94eccd13ec7ed35bd31d424f76f78cd43c598d"
+    },
+    {
+      "file": "BlastRoyale/Assets/Src/FirstLight/Game/Views/MatchHudViews/MinimapPingView.cs",
+      "attributes": 3,
+      "beforeSha256": "778948363d25bf8fef8749da86d33817b1fb3cad58758ef923814bd2a0ed5fd4",
+      "afterSha256": "9a108b268a2fec60cd3fdbb0b06b1b0572bb2c405d7214f022443e07caa40728",
+      "finalSha256": "f54069e0fdbea03e51018553fb2b0d512d9c029d73ec35c17ffc698b9fe1315a"
+    },
+    {
+      "file": "BlastRoyale/Assets/Src/FirstLight/Game/Views/MatchHudViews/WeaponAim.cs",
+      "attributes": 3,
+      "beforeSha256": "9b7f735e9cc6c4159a648a80df8b46493d17985e4b595a75df4d5d42d8b8e5ea",
+      "afterSha256": "adb5342d115a6deefe76d8793b4ebea029651d854c9679b4e84ea79ed0c80da5",
+      "finalSha256": "9a5d2d2893d67849487be7749ab2266f6738ed1b6be5fd3ee9e5f776dc947ab5"
+    },
+    {
+      "file": "BlastRoyale/Assets/Src/FirstLight/Game/Views/MatchHudViews/MiniMapView.cs",
+      "attributes": 22,
+      "beforeSha256": "cd54564fba4df66ecc439ad16e4b12c2a866af8c5d5cf749d18a426dfb7a0376",
+      "afterSha256": "1b35c72faef889ede4929231d4658e36de6c50167b54373d9ccad10ae8b698c8",
+      "finalSha256": "f3d02290dc923cb57861e3146bf0928c056ec46127ba21400ee4a7444a86eb38"
+    },
+    {
+      "file": "BlastRoyale/Assets/Src/FirstLight/Game/Views/MatchHudViews/MinimapFriendlyView.cs",
+      "attributes": 7,
+      "beforeSha256": "5d826f0fee26f14f3b44e7d219f1d996d754bc0a3306725fcf4890840a9b9721",
+      "afterSha256": "81b5d3c31df9ff457030c0d85080612ac1536861d1798a953b39339d0a222df9",
+      "finalSha256": "b256477ed8f0934b4c908677d762d31ffd9944e0e799cdc71e3dd47bc3ec7ac3"
+    },
+    {
+      "file": "BlastRoyale/Assets/Src/FirstLight/Game/Domains/VFX/Behaviours/VfxAnimationMonoBehaviour.cs",
+      "attributes": 1,
+      "beforeSha256": "2ced535a26fb5b29b9f6d519fa040e30bd9662f742e594c43239e4935f2a8762",
+      "afterSha256": "8ac7bc50565fe9f00d4145194c95a4806c50d834a5d3b255c4d7a1e29fa2f13c",
+      "finalSha256": "e95b94312538e89c8f531ad3e998315edc8cc1ecabded2c30a3616ebe84e05d5"
+    },
+    {
+      "file": "BlastRoyale/Assets/Src/FirstLight/Game/Domains/VFX/Behaviours/TimedAbstractVfxMonoComponent.cs",
+      "attributes": 0,
+      "beforeSha256": "bcfa3a4d5850340259bb27d6223039b8e97cf6a66e3f9b01e469b90077a85e1e",
+      "afterSha256": "93bf36fc66bb7b10c770437474dd620361b5b19bcf4d105013c36964fd6e6573",
+      "finalSha256": "c6fbbf8ef8e326f6a49afa6971851e46bb34d485f4ab412c0edca921d8138b5e"
+    },
+    {
+      "file": "BlastRoyale/Assets/Src/FirstLight/Game/Domains/VFX/Behaviours/ParticleAbstractVfxMonoComponent.cs",
+      "attributes": 1,
+      "beforeSha256": "4a0e984b991d2861e2ea3f708ba7c19675ede06086ed7d49da362618364458e2",
+      "afterSha256": "35ec862e4e66fddfb62d868860cf3fc8cb51a30c9d0ec5bf16873c8db53e35e9",
+      "finalSha256": "2e19609231a84a5db14bd2b59ee430806bbef2ec688ec9bf87dd72fc49a29c7b"
+    },
+    {
+      "file": "BlastRoyale/Assets/Src/FirstLight/Game/Domains/HomeScreen/UI/MainMenuFloatingTextView.cs",
+      "attributes": 2,
+      "beforeSha256": "5f9fc80d2642b2940824f5916c8ccdf4c180e63fddf1303fa5f21ea8aaae9229",
+      "afterSha256": "2d4426684d77366acf5a463f34411ce1c9b935ffa0bea4f4c04e0d1331062458",
+      "finalSha256": "c5fcd2c878a9e19adb317b6651c4e804eef4101e8c61ff0c5a7102e178e47a79"
+    },
+    {
+      "file": ".local/quantum3-source-project/Assets/QuantumUser/Simulation/Configs/QuantumChestConfigs.cs",
+      "attributes": 0,
+      "beforeSha256": "5ec311ca8e6e9eb4e86dc1f2859d98a9e7124f618e77f337945a4a15ca4fec78",
+      "afterSha256": "fe7f4ee1a8fc023215e949f8ea6af6a3e515e73ea8b879bd5e9a2dfeaac53e84"
+    },
+    {
+      "file": ".local/quantum3-source-project/Assets/QuantumUser/Simulation/Configs/QuantumGameModeConfigs.cs",
+      "attributes": 54,
+      "beforeSha256": "1e85025f4d3abf6b8e4c1d86f4c1c29e3ef1b031edd34e99ab2b5d9e9251931b",
+      "afterSha256": "d445a4a4a6618cad6c8b8b7c377cc6136a7460ee2faca046eba0e0ef5d238e02"
+    }
+  ],
+  "new_assembly": "FirstLight.Inspector",
+  "direct_simulation_compile": {
+    "warnings": 0,
+    "errors": 0,
+    "paid_references": 0
+  },
+  "limits": [
+    "Main whole-client compile pending root Quantum3 integration",
+    "Native editor behavioral validation owned by CI agent/root"
+  ]
+}

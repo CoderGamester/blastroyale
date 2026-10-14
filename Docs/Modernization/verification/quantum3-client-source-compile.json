@@ -1,0 +1,22 @@
+{
+  "status": "source_compile_pass",
+  "unity": "6000.3.26f1",
+  "quantum": "3.0.14-stable-2241",
+  "warnings": 0,
+  "errors": 0,
+  "source_files": 752,
+  "compiler": "target Unity bundled Roslyn and actual Unity source generators",
+  "references": "actual SDK3 native no-migration assemblies and installed package/editor assemblies",
+  "sdk_assembly_checksums": {
+    "Quantum.Unity.dll": "627024f7aa37dcea07bdcfe1d1e7a785dd50fbd35f84abab9868433d3c333679",
+    "Quantum.Simulation.dll": "fe0d828bcfe80f892ebd9ebff43e0773b79d1dcd259a29f8329a999d6187ef03",
+    "Quantum.Unity.Editor.dll": "889ba9185129b6681880ce3aa9e2e92ffb41f3caba0e1f433ec72a121d81750d",
+    "Quantum.Unity.Editor.CodeGen.dll": "22e7596bc82c9fdcf9db9fce038e32cb213aa20837cba19d747d1f9a91d2f694"
+  },
+  "main_unity_import": "pass_exit_0_zero_CSharp_diagnostics",
+  "cloud_match": "not_run",
+  "editmode": "294_pass_zero_failed_zero_skipped",
+  "playmode": "6_pass_zero_failed_zero_skipped",
+  "addressables": "pass_exit_0_with_content_warnings",
+  "boot": "entered_play_mode_blocked_by_missing_Unity_Cloud_project"
+}

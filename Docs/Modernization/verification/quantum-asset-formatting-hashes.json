@@ -1,0 +1,970 @@
+{
+  "Reason": "Trailing whitespace normalization only after native asset integration; IDs/data fields unchanged",
+  "UpdatedEntries": [
+    {
+      "Path": "Assets/AddressableResources/QuantumAssets/Default Config Assets/Default PhysicsMaterialAsset.asset",
+      "Before": "c954ecfa66b2aca91a5b025a90b927a12f52e4622fd878b67bc0aa1245aeac3f",
+      "After": "ffe282ca89d233058d4c8667dfdfe6bef6fc59d02c520014c6a4065c1bbb579a"
+    },
+    {
+      "Path": "Assets/AddressableResources/Maps/Cemetery/Cemetery_mesh.asset",
+      "Before": "0778ecfbfc1ab2c1855fdf1c5d88736f207c2bc105bf6a3f11e408e6c63ce4d3",
+      "After": "79f9a89504206a5d0f0f85794ab8b6c368436703910dce60df98ed96ae00079d"
+    },
+    {
+      "Path": "Assets/AddressableResources/Maps/TestAssets/NavMeshAsset.asset",
+      "Before": "f8571d78fd7fecd6cdf991f36eebf07d4a35d4dbe560bef72b805f65e24c18f3",
+      "After": "33b99dac4faa8b1d96c432e7612ee950d74da64bc11d731e13fa4a13b0dc0403"
+    },
+    {
+      "Path": "Assets/AddressableResources/Maps/Test/TestScene.asset",
+      "Before": "175a3eee7574cf5ce09304be3cd20facaebcc30a38ab373ce29ac027283135b9",
+      "After": "86adc3eca01d436a453e581bb381e882b9cbfd5807b6386136bce84360482121"
+    },
+    {
+      "Path": "Assets/AddressableResources/Maps/MazeMayhem/MazeMayhem_mesh.asset",
+      "Before": "2164d455d8c0b854bba9d70f04fe7b71339d5371a37efb1acae637b1ba7810cd",
+      "After": "5512a792be3a351555a6ab59a9a9a155c37b10378a8308e3bc8bdd3b4c854b98"
+    },
+    {
+      "Path": "Assets/AddressableResources/Configs/BotConfigs.asset",
+      "Before": "e9ff148d90527e23500d876b9b01090924be23818754fc86b8ee88af509caac1",
+      "After": "7a1ac7c6837a58f50f943dc2e5f2ea366e5730feee8ccb7db02af8e307229436"
+    },
+    {
+      "Path": "Assets/AddressableResources/QuantumAssets/Default Config Assets/Default CharacterController3DConfigAsset.asset",
+      "Before": "d208ad194ee946437c275072d7db11d5b9d5ad673ff1cef331610dee5221a12c",
+      "After": "ded8d643446b5cedf44f8fc1f4a7f05f953f99fe1c46b3c8fcec50aa3ca36535"
+    },
+    {
+      "Path": "Assets/AddressableResources/Maps/Islands/IslandsMap_NavMesh.asset",
+      "Before": "cc8429d437f791c0ab96fb73920baf37b456c5cd06cd74b032f464ca2831a097",
+      "After": "de83970f80196a5a4f7d3585fe39e700aff0c838e2e8f8bb4e1f22e7bc267d6f"
+    },
+    {
+      "Path": "Assets/AddressableResources/Configs/WeaponConfigs.asset",
+      "Before": "dcc53a8ce81962ae8783b764876736604c102914770da9742878b200e2f7b6fc",
+      "After": "b7811301d1cbd01ef553f345674593efa95a348c5437c451aed77afea3408e47"
+    },
+    {
+      "Path": "Assets/AddressableResources/Configs/ConsumableConfigs.asset",
+      "Before": "5167e5f076d8c403d0cb2fd16f01e4e26ac4db83a76f10cb04bb601cec27fcdf",
+      "After": "3e92cf44cb9c3e0550e830f22792d1df787c4f81da4adc8c1a2cd37d76550e82"
+    },
+    {
+      "Path": "Assets/AddressableResources/QuantumAssets/Characters/DummyCharacter.prefab",
+      "Before": "239d6cf3fc667c7bc787f75f8c8c972b37100a3e048654bae3b976bdc80e38e5",
+      "After": "8aa47c2b64b8011b7f8cbcbbe095159645ec2e9f82daa6ccc59c22d18c2383a0"
+    },
+    {
+      "Path": "Assets/AddressableResources/QuantumAssets/Collectables/EquipmentPickup.prefab",
+      "Before": "9bc1dd0f0970947dc3d986fab746c8d40a4a913dccdc95392a40bd4afa9767d9",
+      "After": "709aba23f3c2dc5b33bda4f84a2e6ab3296cd39fd1dea5b49bb39d2e40beaea5"
+    },
+    {
+      "Path": "Assets/AddressableResources/Maps/IslandOne/IslandOne_Navmesh Baking.asset",
+      "Before": "731f39b2225aee7c5a240423e20d87e1fa0d9691073ce0bab342ba92a95f154d",
+      "After": "0bc863d2b9a8b36feea59048f5fdaab61ffce2facb363839d779446f46e8907e"
+    },
+    {
+      "Path": "Assets/AddressableResources/Maps/IslandOne/IslandOne.asset",
+      "Before": "06a698300172470f6fc06f8d5d83b5a8e96e842ec862df05829a4385b07e1d11",
+      "After": "96d2d2468ffc75bae14087650f0c62a79d2237d3add1ebc5fc8e75361f318247"
+    },
+    {
+      "Path": "Assets/AddressableResources/Maps/MazeMayhem/MazeMayhem_Navmesh Baking.asset",
+      "Before": "836972a23167836efb317eb5784778652cf682efa6c21e1b413799b2bb4f5d7b",
+      "After": "abeaec49b2d359348c63b09175349553a54e3d72db15c65ffd73809d36d98dc0"
+    },
+    {
+      "Path": "Assets/AddressableResources/Configs/SpecialConfigs.asset",
+      "Before": "0140392bfed612ea45268d9a98dda053ef405d69370ce287b1b3c89988906958",
+      "After": "12cdde15321692a4bf8f21ecec6ac9d049835b8760f39d6c9f379fbcda58b706"
+    },
+    {
+      "Path": "Assets/AddressableResources/Maps/TestAssets/TestAssetsMap_mesh.asset",
+      "Before": "e94482d562195de3cd62cd653171f0efe9b8293b220ffe699fddbbd5f03afd58",
+      "After": "353b425998a58a3e553e4fe6d4976cec8ca97a0bc1c5226a68343823b690e94f"
+    },
+    {
+      "Path": "Assets/AddressableResources/Maps/IslandOne/IslandOne_mesh.asset",
+      "Before": "8a2ea4dbf39967dbb09bac6c87d171f61667b4a8c97f42d829b2a1d9513a453e",
+      "After": "a74c1f84c20f503459b1021b664efbd2d8d2283d191bfd7f0a6a48169628a9ca"
+    },
+    {
+      "Path": "Assets/AddressableResources/QuantumAssets/CircuitExport/Blackboard_Assets/PlayerBlackboard.asset",
+      "Before": "f70e73472697bf137fefe1f2e84fa2dda292c2f4f12f464943855b1bee2ef660",
+      "After": "f85764511c3612905d3b5503bd535bd80c66e939589f232769fdacb813b3017b"
+    },
+    {
+      "Path": "Assets/AddressableResources/Maps/Fortress/Fortress_NavMesh_data.asset",
+      "Before": "9ea0c0556cb99e24308228567b5f7cc49ebefc75fb5831ebd6e58f4bd1802c3a",
+      "After": "425bb23e15333b54a30927117006ae36ee7562ea120481e7c7446646c9c03b9f"
+    },
+    {
+      "Path": "Assets/AddressableResources/QuantumAssets/Destructibles/Landmine.prefab",
+      "Before": "62c1af78b12d9265683352e4a0028767e25f64c0a9385ed1c90dcf103056fa07",
+      "After": "36c6c19ebd62baff2114f006c96f32f56b8122151797f7c0422481506063fbb1"
+    },
+    {
+      "Path": "Assets/AddressableResources/Maps/Test/TestScene_NavMesh.asset",
+      "Before": "0fe434f1c76061a25628b1d1d7e06a73ee61809935bbc796fbb1de60541b6f48",
+      "After": "f1832b2692f1ff115211cf354408ceb5aa3932b202820dd500a1ab14ba015d9c"
+    },
+    {
+      "Path": "Assets/AddressableResources/Maps/FtueDeck/FtueDeck_NavMesh_data.asset",
+      "Before": "f903e27874d4f88d47df73e8c006315e12dfdc06e4ae97a26134b2d76e082e40",
+      "After": "c50c880564f1a2cce76cf28ce1cf499be0195b4a34e2a82b3e4f5ca65a64afef"
+    },
+    {
+      "Path": "Assets/AddressableResources/Maps/Test/TestScene_mesh.asset",
+      "Before": "155990c7be53ae8d0dc29cf9288c0dc393122e20553d1bc2c216bc4f1313ccd5",
+      "After": "bdd20065318597cddc9a2710cef28f179c1973f277d45c6e9527587f34cde257"
+    },
+    {
+      "Path": "Assets/AddressableResources/Maps/Cemetery/Cemetery_NavMesh_data.asset",
+      "Before": "bbd48d6835cc0d45e3299703b6b9fd716498b641e021e516a6d84e12265cc454",
+      "After": "810f135a597b25c32a213ce5e2eca8b6c84b920835f58a296ca607ab44734f8d"
+    },
+    {
+      "Path": "Assets/AddressableResources/Maps/Battlelands/BattlelandsMap.asset",
+      "Before": "d8df6f95e744cbc5a7ab25221179bade2dacd4431a943d75003b5655e4f17ba3",
+      "After": "9090187777ba616af7899bd8de5cc6d7a6a1184c11464c09dbcd56d06c19cca9"
+    },
+    {
+      "Path": "Assets/AddressableResources/Maps/Fortress/Fortress_NavMesh.asset",
+      "Before": "2217cd25a996342ef45b76914baa29c766273f349e254305b45202a20db2a1f0",
+      "After": "337de43c321c9868b07543d45f80b8d7c0c438b485fc8a94bc86f5e7e0511823"
+    },
+    {
+      "Path": "Assets/AddressableResources/Maps/District/District_NavMesh.asset",
+      "Before": "d7a1cb3513e51432f2ce17b54e2d340f94e121c2531e54de47a049c93584a6d4",
+      "After": "059dfe2a1935648bce3b26b050a02057e79c2d4d1c812c6fef5ce46e77490d7a"
+    },
+    {
+      "Path": "Assets/AddressableResources/Configs/EquipmentMaterialStatConfigs.asset",
+      "Before": "0f6ae1b36f17da8e90c29dc10fed4d4d47a12a9b4539afe8c99d03b36f66046d",
+      "After": "ded5a65e8446be7f58228544940d002e99b7706a2df4ac19655d4b849b895e75"
+    },
+    {
+      "Path": "Assets/AddressableResources/Maps/IslandOne/IslandOne_Navmesh Baking_data.asset",
+      "Before": "f813e059e86ea6dc8f5b621e83965bb1bb395d05238c9403099d261b940ff332",
+      "After": "f8c49d9e5268a624961bec5bd558b074675a0e4b7ea125e3f961e6112f65ac75"
+    },
+    {
+      "Path": "Assets/AddressableResources/QuantumAssets/Spawners/LegacyWeaponPlatformSpawner.prefab",
+      "Before": "cbc5a7b015083097aadaa794fa78f425207b2e2883e11cac9718ed1952948a09",
+      "After": "deababd5f85f08109bc2678fab4d15289c5aa904a918220dc02b18b1e7acf260"
+    },
+    {
+      "Path": "Assets/AddressableResources/QuantumAssets/Spawners/PlayerSpawner.prefab",
+      "Before": "d35a1f3e921004165c5c1aa8b8d15f68b34faf03d9d463d8fd2dd9aef12d3318",
+      "After": "61d0f497886570d5810044e5d8a9e4ec76c003c3b46dcf25a140fd51bd8f6c32"
+    },
+    {
+      "Path": "Assets/AddressableResources/QuantumAssets/Characters/PlayerCharacter.prefab",
+      "Before": "95ece2416fa4d0164f50b325392766a54d9fbd15d096b9268b68d5121d51531d",
+      "After": "997d99470173c8b7bf0c63b7129cd4c0b701441e556dd798696ea64d0b9acfbe"
+    },
+    {
+      "Path": "Assets/AddressableResources/Maps/District/District_mesh.asset",
+      "Before": "daac8fa73eb02e86014c03e0f0294893b66188d1ed8036240e5e7b7576624066",
+      "After": "d4f5e67d7a2172cdf9aa0887e6eb7033f89958fad5e978911b7151552118da2c"
+    },
+    {
+      "Path": "Assets/AddressableResources/Maps/Battlelands/BattlelandsMap_NavMesh.asset",
+      "Before": "7c03d8462b443cefb610c908fe43d2ed06f223ccf18584da4db3bb1e26df3762",
+      "After": "ecd0190e7311f6eeb372a7d4750e40f13785adff958f474b8afcb4cfca33b6f9"
+    },
+    {
+      "Path": "Assets/AddressableResources/Maps/District/District.asset",
+      "Before": "f25de92d75db7dbbec9c4b72448710a337acb57b5919c98d0bf2082ab7b1c3c4",
+      "After": "a3b2308755263c8ac99ccf30e4cf289ab23d9ef5428f029e09517ccba3315d54"
+    },
+    {
+      "Path": "Assets/AddressableResources/QuantumAssets/Default Config Assets/Default CharacterController2DConfigAsset.asset",
+      "Before": "f53f65bf8c3ae2bd8422a0434cc5ce69110a83b798ee34b3fe6ff7a97b00a06b",
+      "After": "67768372c6bab7e0ec155b91506c2d76ac78da8233aadcfd0a928ae603bea4ae"
+    },
+    {
+      "Path": "Assets/AddressableResources/QuantumAssets/Collectables/AirDrop.prefab",
+      "Before": "fec56dd0a79d12e1fcb9d16c86f97f2a78c651a4900b50e3477e34cb387a4f62",
+      "After": "970f0fdfbff41f9d95c3629c22b11670f1c7a503d950c1b6928697b6f4ad02f1"
+    },
+    {
+      "Path": "Assets/AddressableResources/Configs/ReviveConfigs.asset",
+      "Before": "bdf7a4f7f742ead6ef49e3f5478d89f464d8d43cf68e7a7dbf52b967e3728a7a",
+      "After": "aaff1855fe1b7af2c85660b79c63af115cf129adafed85959cd338cceeed8360"
+    },
+    {
+      "Path": "Assets/AddressableResources/Configs/CustomAssetConfigs.asset",
+      "Before": "c0302bc19367e908638fe9fb88a9dfa09c8283c366ce4f7ae74b2332152fa929",
+      "After": "2be314a24ff6a67d88cd8a4536716084c32564389d7b656e21bf86cbebaac098"
+    },
+    {
+      "Path": "Assets/AddressableResources/QuantumAssets/Projectiles/RocketBullet.prefab",
+      "Before": "d531d2e3a3d662face1e6b19030873dcb45f0f44c8af9581d2b3cf6856a9c250",
+      "After": "aec801d9fc064091dc8f26f59369bd229b60dbe54106e692e26b8a6be2e060ea"
+    },
+    {
+      "Path": "Assets/AddressableResources/Maps/MazeMayhem/MazeMayhem_Navmesh Baking_data.asset",
+      "Before": "9846891509b3ca3c41689717e2bdd62de857ffaa242e72753275e4c01718eddc",
+      "After": "f91cfc1d04b6995e721ce1827a36d0d24847973c716b6fd8da0f683dc26d9f17"
+    },
+    {
+      "Path": "Assets/AddressableResources/Configs/GameModeConfigs.asset",
+      "Before": "e3974ed7dcb7994c78371f85497fa791fc5c98305655cf3c925ba0bdd55b6ddf",
+      "After": "67f0e31afcc9e19f0442ec41f8d2c79f93e677bfcc324297a4065b6b2ad242d9"
+    },
+    {
+      "Path": "Assets/AddressableResources/Configs/ChestConfigs.asset",
+      "Before": "0280830103473e8000fe046305a612be4bd677a98317dd2e789bcc53b2673eb0",
+      "After": "a79f21f1eb60e2b07c528b09de85f39936032dd1d40e04927bf42f69b709cded"
+    },
+    {
+      "Path": "Assets/AddressableResources/Configs/ShrinkingCircleConfigs.asset",
+      "Before": "30c046e9338d6f7186f2df88ce5fb8b62adc807281b61bcf406387efbbfdf36b",
+      "After": "1303658afdf5229d2196bf398708dadf712f59219d24cb2b954b70ddc76cbc36"
+    },
+    {
+      "Path": "Assets/AddressableResources/Maps/FtueDeck/FtueDeck_mesh.asset",
+      "Before": "0c4d7febc47759e07adb1d435dc9c06e970786b75309cc34bc927041fef6e312",
+      "After": "c11228fed616a0e91ea6510333a20a4b1bccc397ce8c43c3639c23d0292060c9"
+    },
+    {
+      "Path": "Assets/AddressableResources/Maps/FtueDeck/FtueDeck.asset",
+      "Before": "88bd6324713e272bdb89c33dcd696e757ca99699e3cd3703b4f9967f65c7f391",
+      "After": "7ddec5d7cae427b8568309fed012b7c896b717ed815979e829314847f8e5dfdf"
+    },
+    {
+      "Path": "Assets/AddressableResources/Maps/MazeMayhem/MazeMayhem.asset",
+      "Before": "0a2ab72e7e7996e83b397303b2bb761a027e9042da89eb6ea8aea850e671b4a8",
+      "After": "eca0a2e56418666e9e8ad08f33b1e3e06603e19ddefbd53a63396574342511b2"
+    },
+    {
+      "Path": "Assets/AddressableResources/Maps/TestAssets/TestAssetsMap.asset",
+      "Before": "72c9d93f61a188a3cb03e6c36e146a77ab7e5ad74e5adcf2b3e52c657e90067b",
+      "After": "95c60c736529fe39773360c81009372a433174e4f4fb9c8fdc80481c9961fadb"
+    },
+    {
+      "Path": "Assets/AddressableResources/QuantumAssets/Projectiles/RocketExplosion.prefab",
+      "Before": "243b961f7d6d21615dc573ae19c1e7dc2b93cac615b017e21da70b80482e0583",
+      "After": "3c4cfd80e4d7456fac8dc016e31126929f6c73b495f5deb20a8ece85b334fc95"
+    },
+    {
+      "Path": "Assets/AddressableResources/Maps/District/District_NavMesh_data.asset",
+      "Before": "4c02e2a0fdeeb8e4e92ad47fa3727df32d2cd1921af20fef441e08a1028849f7",
+      "After": "79d9b601535c5ddc7013c34dcfec193bea1362095eb866660a0fe7a874325625"
+    },
+    {
+      "Path": "Assets/AddressableResources/Maps/Fortress/Fortress_mesh.asset",
+      "Before": "fee96ae34f9ab8b2bd3e5ff6fb780aeefcca6bf01a2b6356c536abed7e80d5f1",
+      "After": "ec8116ba83d3cdec2d551a936467f1e56025ce70ecf3b05ea87b0b9a0e6ff49a"
+    },
+    {
+      "Path": "Assets/AddressableResources/Maps/Islands/IslandsMap_mesh.asset",
+      "Before": "4fc065a70c82849df71cb04f2ac20ffeba4d02823ba53e3d9a0036005e5715d4",
+      "After": "e4c3f7c2d39c993fe805c26ce0efdf559633b1fb0900ebc3ffad540765e51668"
+    },
+    {
+      "Path": "Assets/AddressableResources/QuantumAssets/Projectiles/MainBullet.prefab",
+      "Before": "ad291fd918c05bf1250b90cf425d27a05b1d57372f7f9fc79924c5998bcf1eb6",
+      "After": "74e303bb50645052dcfb02e19a601a17b9cafe08965818e15d9dac1f64fe6eba"
+    },
+    {
+      "Path": "Assets/AddressableResources/QuantumAssets/Projectiles/HammerHit.prefab",
+      "Before": "ddf3311ae81587fb72d2f98cf80bca7d34b4cbc21e2eba961835f338f14b95b0",
+      "After": "4d8b2754f38954a04d45840ffa66c6a6426a185691274fada7c0eca9cdf81645"
+    },
+    {
+      "Path": "Assets/AddressableResources/MatchAssets/MapObjects/Bush Small.prefab",
+      "Before": "e1ee4b29fabdd093e9c8430dc052543400d4b04231e38fbf57d723ee947ec555",
+      "After": "e55ef87233395d24dad12dfd6ef1e6ddce00ffd6197ffa161d8ef63bcb352d5f"
+    },
+    {
+      "Path": "Assets/AddressableResources/QuantumAssets/Others/DeathFlagPrototype.prefab",
+      "Before": "1c4320e71d42c769a05f53167b58c132b21af3f77660db2dfa5106425b7bc50a",
+      "After": "40b4155679dce20a416d4ca58eda7d5f3b845bd8bab3ee1a674898952dd52b55"
+    },
+    {
+      "Path": "Assets/AddressableResources/Maps/Cemetery/Cemetery.asset",
+      "Before": "a83ca8ce76da36cecfb7e3745e9d77eaf8310a4da1b8cf69bb6a787f38a48781",
+      "After": "571f055c007f09871126fc3f121a8e5934a6df924b7fe4e326dede18afd395ad"
+    },
+    {
+      "Path": "Assets/AddressableResources/QuantumAssets/Default Config Assets/Default NavMeshAgentConfigAsset.asset",
+      "Before": "758e7bd2ad9737f6b17a5f22b15880b530305c910ba639baed404100097b90d9",
+      "After": "9fcfa36ba61bbcfe5ec9f9e61a5f9ffd779a82bbbc97f3bcb89809a77865844c"
+    },
+    {
+      "Path": "Assets/AddressableResources/QuantumAssets/Physics Config Assets/Bot NavMeshAgentConfig.asset",
+      "Before": "f60371f520c86d458238f2acb49659f9db438f6618f8dfbc0596e97e5027f5e7",
+      "After": "7b249c68f78e37736fe3fb1a4aff45a6da89eb677da21d9f0d6236bed44dae86"
+    },
+    {
+      "Path": "Assets/AddressableResources/QuantumAssets/CircuitExport/Blackboard_Assets/PlayerBlackboardInitializer.asset",
+      "Before": "77369050a92e98b7e4810417ae3fcac573055ec1198bb496ed360a16a2221400",
+      "After": "dac94f9b583e0241baa0ef3e322f9df2aa163b60a37fa616f583c2aba9838c2a"
+    },
+    {
+      "Path": "Assets/AddressableResources/Configs/GameConfigs.asset",
+      "Before": "6f99eb076c2ba691b70c4b5aa22b34ec4c0267bcdebe70bb6666c4e3385235c5",
+      "After": "5b222a4bbb05020b3f51b5053135836778fc779ada42e0156e65bf1d9bafbf36"
+    },
+    {
+      "Path": "Assets/AddressableResources/Maps/Fortress/Fortress.asset",
+      "Before": "7bc9f9f734b76d91e1fedd20535d940b72b1b0ece90d231183c680ac7c91d5df",
+      "After": "2f17b6c568c7c38ba48fed73800331500c91657d3e5f9d03b8c1c43bd1bf8bbe"
+    },
+    {
+      "Path": "Assets/AddressableResources/Maps/Test/TestScene_NavMesh_data.asset",
+      "Before": "7631c899f6b33fbcb8e3c6ed586ae2480f5964e5bdd0527c07ca4b835314adca",
+      "After": "7d29b1687b6e30ae646aee24561a83ecd1bd4dfbf80b2f32d552b87cbae1a343"
+    },
+    {
+      "Path": "Assets/AddressableResources/Maps/Cemetery/Cemetery_NavMesh.asset",
+      "Before": "b91dd43a641d963abbc7d5df704ffd8a2fa6ef6f582b29804e376e6ab74085ac",
+      "After": "e9339bce820d3672f6c9882712de1876b98446022bdd01527fad042bfb6eef2b"
+    },
+    {
+      "Path": "Assets/AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player.asset",
+      "Before": "26b98e32e816f74eae34af200f8f9a72ba143898c6d9436488e1443fce688855",
+      "After": "df74afec6423fbeb279e95e4f6ff677a10e473ba3ce92c27883e2c1c50f94008"
+    },
+    {
+      "Path": "Assets/AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player.asset",
+      "Before": "26b98e32e816f74eae34af200f8f9a72ba143898c6d9436488e1443fce688855",
+      "After": "df74afec6423fbeb279e95e4f6ff677a10e473ba3ce92c27883e2c1c50f94008"
+    },
+    {
+      "Path": "Assets/AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player.asset",
+      "Before": "26b98e32e816f74eae34af200f8f9a72ba143898c6d9436488e1443fce688855",
+      "After": "df74afec6423fbeb279e95e4f6ff677a10e473ba3ce92c27883e2c1c50f94008"
+    },
+    {
+      "Path": "Assets/AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player.asset",
+      "Before": "26b98e32e816f74eae34af200f8f9a72ba143898c6d9436488e1443fce688855",
+      "After": "df74afec6423fbeb279e95e4f6ff677a10e473ba3ce92c27883e2c1c50f94008"
+    },
+    {
+      "Path": "Assets/AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player.asset",
+      "Before": "26b98e32e816f74eae34af200f8f9a72ba143898c6d9436488e1443fce688855",
+      "After": "df74afec6423fbeb279e95e4f6ff677a10e473ba3ce92c27883e2c1c50f94008"
+    },
+    {
+      "Path": "Assets/AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player.asset",
+      "Before": "26b98e32e816f74eae34af200f8f9a72ba143898c6d9436488e1443fce688855",
+      "After": "df74afec6423fbeb279e95e4f6ff677a10e473ba3ce92c27883e2c1c50f94008"
+    },
+    {
+      "Path": "Assets/AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player.asset",
+      "Before": "26b98e32e816f74eae34af200f8f9a72ba143898c6d9436488e1443fce688855",
+      "After": "df74afec6423fbeb279e95e4f6ff677a10e473ba3ce92c27883e2c1c50f94008"
+    },
+    {
+      "Path": "Assets/AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player.asset",
+      "Before": "26b98e32e816f74eae34af200f8f9a72ba143898c6d9436488e1443fce688855",
+      "After": "df74afec6423fbeb279e95e4f6ff677a10e473ba3ce92c27883e2c1c50f94008"
+    },
+    {
+      "Path": "Assets/AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player.asset",
+      "Before": "26b98e32e816f74eae34af200f8f9a72ba143898c6d9436488e1443fce688855",
+      "After": "df74afec6423fbeb279e95e4f6ff677a10e473ba3ce92c27883e2c1c50f94008"
+    },
+    {
+      "Path": "Assets/AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player.asset",
+      "Before": "26b98e32e816f74eae34af200f8f9a72ba143898c6d9436488e1443fce688855",
+      "After": "df74afec6423fbeb279e95e4f6ff677a10e473ba3ce92c27883e2c1c50f94008"
+    },
+    {
+      "Path": "Assets/AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player.asset",
+      "Before": "26b98e32e816f74eae34af200f8f9a72ba143898c6d9436488e1443fce688855",
+      "After": "df74afec6423fbeb279e95e4f6ff677a10e473ba3ce92c27883e2c1c50f94008"
+    },
+    {
+      "Path": "Assets/AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player.asset",
+      "Before": "26b98e32e816f74eae34af200f8f9a72ba143898c6d9436488e1443fce688855",
+      "After": "df74afec6423fbeb279e95e4f6ff677a10e473ba3ce92c27883e2c1c50f94008"
+    },
+    {
+      "Path": "Assets/AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player.asset",
+      "Before": "26b98e32e816f74eae34af200f8f9a72ba143898c6d9436488e1443fce688855",
+      "After": "df74afec6423fbeb279e95e4f6ff677a10e473ba3ce92c27883e2c1c50f94008"
+    },
+    {
+      "Path": "Assets/AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player.asset",
+      "Before": "26b98e32e816f74eae34af200f8f9a72ba143898c6d9436488e1443fce688855",
+      "After": "df74afec6423fbeb279e95e4f6ff677a10e473ba3ce92c27883e2c1c50f94008"
+    },
+    {
+      "Path": "Assets/AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player.asset",
+      "Before": "26b98e32e816f74eae34af200f8f9a72ba143898c6d9436488e1443fce688855",
+      "After": "df74afec6423fbeb279e95e4f6ff677a10e473ba3ce92c27883e2c1c50f94008"
+    },
+    {
+      "Path": "Assets/AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player.asset",
+      "Before": "26b98e32e816f74eae34af200f8f9a72ba143898c6d9436488e1443fce688855",
+      "After": "df74afec6423fbeb279e95e4f6ff677a10e473ba3ce92c27883e2c1c50f94008"
+    },
+    {
+      "Path": "Assets/AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player.asset",
+      "Before": "26b98e32e816f74eae34af200f8f9a72ba143898c6d9436488e1443fce688855",
+      "After": "df74afec6423fbeb279e95e4f6ff677a10e473ba3ce92c27883e2c1c50f94008"
+    },
+    {
+      "Path": "Assets/AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player.asset",
+      "Before": "26b98e32e816f74eae34af200f8f9a72ba143898c6d9436488e1443fce688855",
+      "After": "df74afec6423fbeb279e95e4f6ff677a10e473ba3ce92c27883e2c1c50f94008"
+    },
+    {
+      "Path": "Assets/AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player.asset",
+      "Before": "26b98e32e816f74eae34af200f8f9a72ba143898c6d9436488e1443fce688855",
+      "After": "df74afec6423fbeb279e95e4f6ff677a10e473ba3ce92c27883e2c1c50f94008"
+    },
+    {
+      "Path": "Assets/AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player.asset",
+      "Before": "26b98e32e816f74eae34af200f8f9a72ba143898c6d9436488e1443fce688855",
+      "After": "df74afec6423fbeb279e95e4f6ff677a10e473ba3ce92c27883e2c1c50f94008"
+    },
+    {
+      "Path": "Assets/AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player.asset",
+      "Before": "26b98e32e816f74eae34af200f8f9a72ba143898c6d9436488e1443fce688855",
+      "After": "df74afec6423fbeb279e95e4f6ff677a10e473ba3ce92c27883e2c1c50f94008"
+    },
+    {
+      "Path": "Assets/AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player.asset",
+      "Before": "26b98e32e816f74eae34af200f8f9a72ba143898c6d9436488e1443fce688855",
+      "After": "df74afec6423fbeb279e95e4f6ff677a10e473ba3ce92c27883e2c1c50f94008"
+    },
+    {
+      "Path": "Assets/AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player.asset",
+      "Before": "26b98e32e816f74eae34af200f8f9a72ba143898c6d9436488e1443fce688855",
+      "After": "df74afec6423fbeb279e95e4f6ff677a10e473ba3ce92c27883e2c1c50f94008"
+    },
+    {
+      "Path": "Assets/AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player.asset",
+      "Before": "26b98e32e816f74eae34af200f8f9a72ba143898c6d9436488e1443fce688855",
+      "After": "df74afec6423fbeb279e95e4f6ff677a10e473ba3ce92c27883e2c1c50f94008"
+    },
+    {
+      "Path": "Assets/AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player.asset",
+      "Before": "26b98e32e816f74eae34af200f8f9a72ba143898c6d9436488e1443fce688855",
+      "After": "df74afec6423fbeb279e95e4f6ff677a10e473ba3ce92c27883e2c1c50f94008"
+    },
+    {
+      "Path": "Assets/AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player.asset",
+      "Before": "26b98e32e816f74eae34af200f8f9a72ba143898c6d9436488e1443fce688855",
+      "After": "df74afec6423fbeb279e95e4f6ff677a10e473ba3ce92c27883e2c1c50f94008"
+    },
+    {
+      "Path": "Assets/AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player.asset",
+      "Before": "26b98e32e816f74eae34af200f8f9a72ba143898c6d9436488e1443fce688855",
+      "After": "df74afec6423fbeb279e95e4f6ff677a10e473ba3ce92c27883e2c1c50f94008"
+    },
+    {
+      "Path": "Assets/AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player.asset",
+      "Before": "26b98e32e816f74eae34af200f8f9a72ba143898c6d9436488e1443fce688855",
+      "After": "df74afec6423fbeb279e95e4f6ff677a10e473ba3ce92c27883e2c1c50f94008"
+    },
+    {
+      "Path": "Assets/AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player.asset",
+      "Before": "26b98e32e816f74eae34af200f8f9a72ba143898c6d9436488e1443fce688855",
+      "After": "df74afec6423fbeb279e95e4f6ff677a10e473ba3ce92c27883e2c1c50f94008"
+    },
+    {
+      "Path": "Assets/AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player.asset",
+      "Before": "26b98e32e816f74eae34af200f8f9a72ba143898c6d9436488e1443fce688855",
+      "After": "df74afec6423fbeb279e95e4f6ff677a10e473ba3ce92c27883e2c1c50f94008"
+    },
+    {
+      "Path": "Assets/AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player.asset",
+      "Before": "26b98e32e816f74eae34af200f8f9a72ba143898c6d9436488e1443fce688855",
+      "After": "df74afec6423fbeb279e95e4f6ff677a10e473ba3ce92c27883e2c1c50f94008"
+    },
+    {
+      "Path": "Assets/AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player.asset",
+      "Before": "26b98e32e816f74eae34af200f8f9a72ba143898c6d9436488e1443fce688855",
+      "After": "df74afec6423fbeb279e95e4f6ff677a10e473ba3ce92c27883e2c1c50f94008"
+    },
+    {
+      "Path": "Assets/AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player.asset",
+      "Before": "26b98e32e816f74eae34af200f8f9a72ba143898c6d9436488e1443fce688855",
+      "After": "df74afec6423fbeb279e95e4f6ff677a10e473ba3ce92c27883e2c1c50f94008"
+    },
+    {
+      "Path": "Assets/AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player.asset",
+      "Before": "26b98e32e816f74eae34af200f8f9a72ba143898c6d9436488e1443fce688855",
+      "After": "df74afec6423fbeb279e95e4f6ff677a10e473ba3ce92c27883e2c1c50f94008"
+    },
+    {
+      "Path": "Assets/AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player.asset",
+      "Before": "26b98e32e816f74eae34af200f8f9a72ba143898c6d9436488e1443fce688855",
+      "After": "df74afec6423fbeb279e95e4f6ff677a10e473ba3ce92c27883e2c1c50f94008"
+    },
+    {
+      "Path": "Assets/AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player.asset",
+      "Before": "26b98e32e816f74eae34af200f8f9a72ba143898c6d9436488e1443fce688855",
+      "After": "df74afec6423fbeb279e95e4f6ff677a10e473ba3ce92c27883e2c1c50f94008"
+    },
+    {
+      "Path": "Assets/AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player.asset",
+      "Before": "26b98e32e816f74eae34af200f8f9a72ba143898c6d9436488e1443fce688855",
+      "After": "df74afec6423fbeb279e95e4f6ff677a10e473ba3ce92c27883e2c1c50f94008"
+    },
+    {
+      "Path": "Assets/AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player.asset",
+      "Before": "26b98e32e816f74eae34af200f8f9a72ba143898c6d9436488e1443fce688855",
+      "After": "df74afec6423fbeb279e95e4f6ff677a10e473ba3ce92c27883e2c1c50f94008"
+    },
+    {
+      "Path": "Assets/AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player.asset",
+      "Before": "26b98e32e816f74eae34af200f8f9a72ba143898c6d9436488e1443fce688855",
+      "After": "df74afec6423fbeb279e95e4f6ff677a10e473ba3ce92c27883e2c1c50f94008"
+    },
+    {
+      "Path": "Assets/AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player.asset",
+      "Before": "26b98e32e816f74eae34af200f8f9a72ba143898c6d9436488e1443fce688855",
+      "After": "df74afec6423fbeb279e95e4f6ff677a10e473ba3ce92c27883e2c1c50f94008"
+    },
+    {
+      "Path": "Assets/AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player.asset",
+      "Before": "26b98e32e816f74eae34af200f8f9a72ba143898c6d9436488e1443fce688855",
+      "After": "df74afec6423fbeb279e95e4f6ff677a10e473ba3ce92c27883e2c1c50f94008"
+    },
+    {
+      "Path": "Assets/AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player.asset",
+      "Before": "26b98e32e816f74eae34af200f8f9a72ba143898c6d9436488e1443fce688855",
+      "After": "df74afec6423fbeb279e95e4f6ff677a10e473ba3ce92c27883e2c1c50f94008"
+    },
+    {
+      "Path": "Assets/AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player.asset",
+      "Before": "26b98e32e816f74eae34af200f8f9a72ba143898c6d9436488e1443fce688855",
+      "After": "df74afec6423fbeb279e95e4f6ff677a10e473ba3ce92c27883e2c1c50f94008"
+    },
+    {
+      "Path": "Assets/AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player.asset",
+      "Before": "26b98e32e816f74eae34af200f8f9a72ba143898c6d9436488e1443fce688855",
+      "After": "df74afec6423fbeb279e95e4f6ff677a10e473ba3ce92c27883e2c1c50f94008"
+    },
+    {
+      "Path": "Assets/AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player.asset",
+      "Before": "26b98e32e816f74eae34af200f8f9a72ba143898c6d9436488e1443fce688855",
+      "After": "df74afec6423fbeb279e95e4f6ff677a10e473ba3ce92c27883e2c1c50f94008"
+    },
+    {
+      "Path": "Assets/AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player.asset",
+      "Before": "26b98e32e816f74eae34af200f8f9a72ba143898c6d9436488e1443fce688855",
+      "After": "df74afec6423fbeb279e95e4f6ff677a10e473ba3ce92c27883e2c1c50f94008"
+    },
+    {
+      "Path": "Assets/AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player.asset",
+      "Before": "26b98e32e816f74eae34af200f8f9a72ba143898c6d9436488e1443fce688855",
+      "After": "df74afec6423fbeb279e95e4f6ff677a10e473ba3ce92c27883e2c1c50f94008"
+    },
+    {
+      "Path": "Assets/AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player.asset",
+      "Before": "26b98e32e816f74eae34af200f8f9a72ba143898c6d9436488e1443fce688855",
+      "After": "df74afec6423fbeb279e95e4f6ff677a10e473ba3ce92c27883e2c1c50f94008"
+    },
+    {
+      "Path": "Assets/AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player.asset",
+      "Before": "26b98e32e816f74eae34af200f8f9a72ba143898c6d9436488e1443fce688855",
+      "After": "df74afec6423fbeb279e95e4f6ff677a10e473ba3ce92c27883e2c1c50f94008"
+    },
+    {
+      "Path": "Assets/AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player.asset",
+      "Before": "26b98e32e816f74eae34af200f8f9a72ba143898c6d9436488e1443fce688855",
+      "After": "df74afec6423fbeb279e95e4f6ff677a10e473ba3ce92c27883e2c1c50f94008"
+    },
+    {
+      "Path": "Assets/AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player.asset",
+      "Before": "26b98e32e816f74eae34af200f8f9a72ba143898c6d9436488e1443fce688855",
+      "After": "df74afec6423fbeb279e95e4f6ff677a10e473ba3ce92c27883e2c1c50f94008"
+    },
+    {
+      "Path": "Assets/AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player.asset",
+      "Before": "26b98e32e816f74eae34af200f8f9a72ba143898c6d9436488e1443fce688855",
+      "After": "df74afec6423fbeb279e95e4f6ff677a10e473ba3ce92c27883e2c1c50f94008"
+    },
+    {
+      "Path": "Assets/AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player.asset",
+      "Before": "26b98e32e816f74eae34af200f8f9a72ba143898c6d9436488e1443fce688855",
+      "After": "df74afec6423fbeb279e95e4f6ff677a10e473ba3ce92c27883e2c1c50f94008"
+    },
+    {
+      "Path": "Assets/AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player.asset",
+      "Before": "26b98e32e816f74eae34af200f8f9a72ba143898c6d9436488e1443fce688855",
+      "After": "df74afec6423fbeb279e95e4f6ff677a10e473ba3ce92c27883e2c1c50f94008"
+    },
+    {
+      "Path": "Assets/AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player.asset",
+      "Before": "26b98e32e816f74eae34af200f8f9a72ba143898c6d9436488e1443fce688855",
+      "After": "df74afec6423fbeb279e95e4f6ff677a10e473ba3ce92c27883e2c1c50f94008"
+    },
+    {
+      "Path": "Assets/AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player.asset",
+      "Before": "26b98e32e816f74eae34af200f8f9a72ba143898c6d9436488e1443fce688855",
+      "After": "df74afec6423fbeb279e95e4f6ff677a10e473ba3ce92c27883e2c1c50f94008"
+    },
+    {
+      "Path": "Assets/AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player.asset",
+      "Before": "26b98e32e816f74eae34af200f8f9a72ba143898c6d9436488e1443fce688855",
+      "After": "df74afec6423fbeb279e95e4f6ff677a10e473ba3ce92c27883e2c1c50f94008"
+    },
+    {
+      "Path": "Assets/AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player.asset",
+      "Before": "26b98e32e816f74eae34af200f8f9a72ba143898c6d9436488e1443fce688855",
+      "After": "df74afec6423fbeb279e95e4f6ff677a10e473ba3ce92c27883e2c1c50f94008"
+    },
+    {
+      "Path": "Assets/AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player.asset",
+      "Before": "26b98e32e816f74eae34af200f8f9a72ba143898c6d9436488e1443fce688855",
+      "After": "df74afec6423fbeb279e95e4f6ff677a10e473ba3ce92c27883e2c1c50f94008"
+    },
+    {
+      "Path": "Assets/AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player.asset",
+      "Before": "26b98e32e816f74eae34af200f8f9a72ba143898c6d9436488e1443fce688855",
+      "After": "df74afec6423fbeb279e95e4f6ff677a10e473ba3ce92c27883e2c1c50f94008"
+    },
+    {
+      "Path": "Assets/AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player.asset",
+      "Before": "26b98e32e816f74eae34af200f8f9a72ba143898c6d9436488e1443fce688855",
+      "After": "df74afec6423fbeb279e95e4f6ff677a10e473ba3ce92c27883e2c1c50f94008"
+    },
+    {
+      "Path": "Assets/AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player.asset",
+      "Before": "26b98e32e816f74eae34af200f8f9a72ba143898c6d9436488e1443fce688855",
+      "After": "df74afec6423fbeb279e95e4f6ff677a10e473ba3ce92c27883e2c1c50f94008"
+    },
+    {
+      "Path": "Assets/AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player.asset",
+      "Before": "26b98e32e816f74eae34af200f8f9a72ba143898c6d9436488e1443fce688855",
+      "After": "df74afec6423fbeb279e95e4f6ff677a10e473ba3ce92c27883e2c1c50f94008"
+    },
+    {
+      "Path": "Assets/AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player.asset",
+      "Before": "26b98e32e816f74eae34af200f8f9a72ba143898c6d9436488e1443fce688855",
+      "After": "df74afec6423fbeb279e95e4f6ff677a10e473ba3ce92c27883e2c1c50f94008"
+    },
+    {
+      "Path": "Assets/AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player.asset",
+      "Before": "26b98e32e816f74eae34af200f8f9a72ba143898c6d9436488e1443fce688855",
+      "After": "df74afec6423fbeb279e95e4f6ff677a10e473ba3ce92c27883e2c1c50f94008"
+    },
+    {
+      "Path": "Assets/AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player.asset",
+      "Before": "26b98e32e816f74eae34af200f8f9a72ba143898c6d9436488e1443fce688855",
+      "After": "df74afec6423fbeb279e95e4f6ff677a10e473ba3ce92c27883e2c1c50f94008"
+    },
+    {
+      "Path": "Assets/AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player.asset",
+      "Before": "26b98e32e816f74eae34af200f8f9a72ba143898c6d9436488e1443fce688855",
+      "After": "df74afec6423fbeb279e95e4f6ff677a10e473ba3ce92c27883e2c1c50f94008"
+    },
+    {
+      "Path": "Assets/AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player.asset",
+      "Before": "26b98e32e816f74eae34af200f8f9a72ba143898c6d9436488e1443fce688855",
+      "After": "df74afec6423fbeb279e95e4f6ff677a10e473ba3ce92c27883e2c1c50f94008"
+    },
+    {
+      "Path": "Assets/AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player.asset",
+      "Before": "26b98e32e816f74eae34af200f8f9a72ba143898c6d9436488e1443fce688855",
+      "After": "df74afec6423fbeb279e95e4f6ff677a10e473ba3ce92c27883e2c1c50f94008"
+    },
+    {
+      "Path": "Assets/AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player.asset",
+      "Before": "26b98e32e816f74eae34af200f8f9a72ba143898c6d9436488e1443fce688855",
+      "After": "df74afec6423fbeb279e95e4f6ff677a10e473ba3ce92c27883e2c1c50f94008"
+    },
+    {
+      "Path": "Assets/AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player.asset",
+      "Before": "26b98e32e816f74eae34af200f8f9a72ba143898c6d9436488e1443fce688855",
+      "After": "df74afec6423fbeb279e95e4f6ff677a10e473ba3ce92c27883e2c1c50f94008"
+    },
+    {
+      "Path": "Assets/AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player.asset",
+      "Before": "26b98e32e816f74eae34af200f8f9a72ba143898c6d9436488e1443fce688855",
+      "After": "df74afec6423fbeb279e95e4f6ff677a10e473ba3ce92c27883e2c1c50f94008"
+    },
+    {
+      "Path": "Assets/AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player.asset",
+      "Before": "26b98e32e816f74eae34af200f8f9a72ba143898c6d9436488e1443fce688855",
+      "After": "df74afec6423fbeb279e95e4f6ff677a10e473ba3ce92c27883e2c1c50f94008"
+    },
+    {
+      "Path": "Assets/AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player.asset",
+      "Before": "26b98e32e816f74eae34af200f8f9a72ba143898c6d9436488e1443fce688855",
+      "After": "df74afec6423fbeb279e95e4f6ff677a10e473ba3ce92c27883e2c1c50f94008"
+    },
+    {
+      "Path": "Assets/AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player.asset",
+      "Before": "26b98e32e816f74eae34af200f8f9a72ba143898c6d9436488e1443fce688855",
+      "After": "df74afec6423fbeb279e95e4f6ff677a10e473ba3ce92c27883e2c1c50f94008"
+    },
+    {
+      "Path": "Assets/AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player.asset",
+      "Before": "26b98e32e816f74eae34af200f8f9a72ba143898c6d9436488e1443fce688855",
+      "After": "df74afec6423fbeb279e95e4f6ff677a10e473ba3ce92c27883e2c1c50f94008"
+    },
+    {
+      "Path": "Assets/AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player.asset",
+      "Before": "26b98e32e816f74eae34af200f8f9a72ba143898c6d9436488e1443fce688855",
+      "After": "df74afec6423fbeb279e95e4f6ff677a10e473ba3ce92c27883e2c1c50f94008"
+    },
+    {
+      "Path": "Assets/AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player.asset",
+      "Before": "26b98e32e816f74eae34af200f8f9a72ba143898c6d9436488e1443fce688855",
+      "After": "df74afec6423fbeb279e95e4f6ff677a10e473ba3ce92c27883e2c1c50f94008"
+    },
+    {
+      "Path": "Assets/AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player.asset",
+      "Before": "26b98e32e816f74eae34af200f8f9a72ba143898c6d9436488e1443fce688855",
+      "After": "df74afec6423fbeb279e95e4f6ff677a10e473ba3ce92c27883e2c1c50f94008"
+    },
+    {
+      "Path": "Assets/AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player.asset",
+      "Before": "26b98e32e816f74eae34af200f8f9a72ba143898c6d9436488e1443fce688855",
+      "After": "df74afec6423fbeb279e95e4f6ff677a10e473ba3ce92c27883e2c1c50f94008"
+    },
+    {
+      "Path": "Assets/AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player.asset",
+      "Before": "26b98e32e816f74eae34af200f8f9a72ba143898c6d9436488e1443fce688855",
+      "After": "df74afec6423fbeb279e95e4f6ff677a10e473ba3ce92c27883e2c1c50f94008"
+    },
+    {
+      "Path": "Assets/AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player.asset",
+      "Before": "26b98e32e816f74eae34af200f8f9a72ba143898c6d9436488e1443fce688855",
+      "After": "df74afec6423fbeb279e95e4f6ff677a10e473ba3ce92c27883e2c1c50f94008"
+    },
+    {
+      "Path": "Assets/AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player.asset",
+      "Before": "26b98e32e816f74eae34af200f8f9a72ba143898c6d9436488e1443fce688855",
+      "After": "df74afec6423fbeb279e95e4f6ff677a10e473ba3ce92c27883e2c1c50f94008"
+    },
+    {
+      "Path": "Assets/AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player.asset",
+      "Before": "26b98e32e816f74eae34af200f8f9a72ba143898c6d9436488e1443fce688855",
+      "After": "df74afec6423fbeb279e95e4f6ff677a10e473ba3ce92c27883e2c1c50f94008"
+    },
+    {
+      "Path": "Assets/AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player.asset",
+      "Before": "26b98e32e816f74eae34af200f8f9a72ba143898c6d9436488e1443fce688855",
+      "After": "df74afec6423fbeb279e95e4f6ff677a10e473ba3ce92c27883e2c1c50f94008"
+    },
+    {
+      "Path": "Assets/AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player.asset",
+      "Before": "26b98e32e816f74eae34af200f8f9a72ba143898c6d9436488e1443fce688855",
+      "After": "df74afec6423fbeb279e95e4f6ff677a10e473ba3ce92c27883e2c1c50f94008"
+    },
+    {
+      "Path": "Assets/AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player.asset",
+      "Before": "26b98e32e816f74eae34af200f8f9a72ba143898c6d9436488e1443fce688855",
+      "After": "df74afec6423fbeb279e95e4f6ff677a10e473ba3ce92c27883e2c1c50f94008"
+    },
+    {
+      "Path": "Assets/AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player.asset",
+      "Before": "26b98e32e816f74eae34af200f8f9a72ba143898c6d9436488e1443fce688855",
+      "After": "df74afec6423fbeb279e95e4f6ff677a10e473ba3ce92c27883e2c1c50f94008"
+    },
+    {
+      "Path": "Assets/AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player.asset",
+      "Before": "26b98e32e816f74eae34af200f8f9a72ba143898c6d9436488e1443fce688855",
+      "After": "df74afec6423fbeb279e95e4f6ff677a10e473ba3ce92c27883e2c1c50f94008"
+    },
+    {
+      "Path": "Assets/AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player.asset",
+      "Before": "26b98e32e816f74eae34af200f8f9a72ba143898c6d9436488e1443fce688855",
+      "After": "df74afec6423fbeb279e95e4f6ff677a10e473ba3ce92c27883e2c1c50f94008"
+    },
+    {
+      "Path": "Assets/AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player.asset",
+      "Before": "26b98e32e816f74eae34af200f8f9a72ba143898c6d9436488e1443fce688855",
+      "After": "df74afec6423fbeb279e95e4f6ff677a10e473ba3ce92c27883e2c1c50f94008"
+    },
+    {
+      "Path": "Assets/AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player.asset",
+      "Before": "26b98e32e816f74eae34af200f8f9a72ba143898c6d9436488e1443fce688855",
+      "After": "df74afec6423fbeb279e95e4f6ff677a10e473ba3ce92c27883e2c1c50f94008"
+    },
+    {
+      "Path": "Assets/AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player.asset",
+      "Before": "26b98e32e816f74eae34af200f8f9a72ba143898c6d9436488e1443fce688855",
+      "After": "df74afec6423fbeb279e95e4f6ff677a10e473ba3ce92c27883e2c1c50f94008"
+    },
+    {
+      "Path": "Assets/AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player.asset",
+      "Before": "26b98e32e816f74eae34af200f8f9a72ba143898c6d9436488e1443fce688855",
+      "After": "df74afec6423fbeb279e95e4f6ff677a10e473ba3ce92c27883e2c1c50f94008"
+    },
+    {
+      "Path": "Assets/AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player.asset",
+      "Before": "26b98e32e816f74eae34af200f8f9a72ba143898c6d9436488e1443fce688855",
+      "After": "df74afec6423fbeb279e95e4f6ff677a10e473ba3ce92c27883e2c1c50f94008"
+    },
+    {
+      "Path": "Assets/AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player.asset",
+      "Before": "26b98e32e816f74eae34af200f8f9a72ba143898c6d9436488e1443fce688855",
+      "After": "df74afec6423fbeb279e95e4f6ff677a10e473ba3ce92c27883e2c1c50f94008"
+    },
+    {
+      "Path": "Assets/AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player.asset",
+      "Before": "26b98e32e816f74eae34af200f8f9a72ba143898c6d9436488e1443fce688855",
+      "After": "df74afec6423fbeb279e95e4f6ff677a10e473ba3ce92c27883e2c1c50f94008"
+    },
+    {
+      "Path": "Assets/AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player.asset",
+      "Before": "26b98e32e816f74eae34af200f8f9a72ba143898c6d9436488e1443fce688855",
+      "After": "df74afec6423fbeb279e95e4f6ff677a10e473ba3ce92c27883e2c1c50f94008"
+    },
+    {
+      "Path": "Assets/AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player.asset",
+      "Before": "26b98e32e816f74eae34af200f8f9a72ba143898c6d9436488e1443fce688855",
+      "After": "df74afec6423fbeb279e95e4f6ff677a10e473ba3ce92c27883e2c1c50f94008"
+    },
+    {
+      "Path": "Assets/AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player.asset",
+      "Before": "26b98e32e816f74eae34af200f8f9a72ba143898c6d9436488e1443fce688855",
+      "After": "df74afec6423fbeb279e95e4f6ff677a10e473ba3ce92c27883e2c1c50f94008"
+    },
+    {
+      "Path": "Assets/AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player.asset",
+      "Before": "26b98e32e816f74eae34af200f8f9a72ba143898c6d9436488e1443fce688855",
+      "After": "df74afec6423fbeb279e95e4f6ff677a10e473ba3ce92c27883e2c1c50f94008"
+    },
+    {
+      "Path": "Assets/AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player.asset",
+      "Before": "26b98e32e816f74eae34af200f8f9a72ba143898c6d9436488e1443fce688855",
+      "After": "df74afec6423fbeb279e95e4f6ff677a10e473ba3ce92c27883e2c1c50f94008"
+    },
+    {
+      "Path": "Assets/AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player.asset",
+      "Before": "26b98e32e816f74eae34af200f8f9a72ba143898c6d9436488e1443fce688855",
+      "After": "df74afec6423fbeb279e95e4f6ff677a10e473ba3ce92c27883e2c1c50f94008"
+    },
+    {
+      "Path": "Assets/AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player.asset",
+      "Before": "26b98e32e816f74eae34af200f8f9a72ba143898c6d9436488e1443fce688855",
+      "After": "df74afec6423fbeb279e95e4f6ff677a10e473ba3ce92c27883e2c1c50f94008"
+    },
+    {
+      "Path": "Assets/AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player.asset",
+      "Before": "26b98e32e816f74eae34af200f8f9a72ba143898c6d9436488e1443fce688855",
+      "After": "df74afec6423fbeb279e95e4f6ff677a10e473ba3ce92c27883e2c1c50f94008"
+    },
+    {
+      "Path": "Assets/AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player.asset",
+      "Before": "26b98e32e816f74eae34af200f8f9a72ba143898c6d9436488e1443fce688855",
+      "After": "df74afec6423fbeb279e95e4f6ff677a10e473ba3ce92c27883e2c1c50f94008"
+    },
+    {
+      "Path": "Assets/AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player.asset",
+      "Before": "26b98e32e816f74eae34af200f8f9a72ba143898c6d9436488e1443fce688855",
+      "After": "df74afec6423fbeb279e95e4f6ff677a10e473ba3ce92c27883e2c1c50f94008"
+    },
+    {
+      "Path": "Assets/AddressableResources/QuantumAssets/CircuitExport/HFSM_Assets/Player.asset",
+      "Before": "26b98e32e816f74eae34af200f8f9a72ba143898c6d9436488e1443fce688855",
+      "After": "df74afec6423fbeb279e95e4f6ff677a10e473ba3ce92c27883e2c1c50f94008"
+    },
+    {
+      "Path": "Assets/AddressableResources/Maps/Battlelands/BattlelandsMap_mesh.asset",
+      "Before": "53ea7467f5de8ebd23ad6ab3a7ea89a9bff9684ec6e8b80fd802a2bd8f2988f9",
+      "After": "efc24867f78aec2b6974bed10676aa6a371ff04f7440f9ef75d03f5f3d669297"
+    },
+    {
+      "Path": "Assets/AddressableResources/QuantumAssets/Spawners/PlatformSpawner.prefab",
+      "Before": "4581957dba571ede6bbd2effa3f2ada2c2ffb60ed04aa7e4c47ee6ed1791a665",
+      "After": "6d89331c12ec0cabcaee21613fd5b5d88664c9cd6457964f74626ab6d13ff02e"
+    },
+    {
+      "Path": "Assets/AddressableResources/Configs/BaseEquipmentStatConfigs.asset",
+      "Before": "72981957f0eaf33433c569d07b56758c3cc39dec3c1e9044710ff751e9f9abd1",
+      "After": "5f2fe9fda330b95f5ae22c5a4463517a13b2009af03782e1881dd72754377e38"
+    },
+    {
+      "Path": "Assets/AddressableResources/Maps/FtueDeck/FtueDeck_NavMesh.asset",
+      "Before": "b0e2d688212de13ba9365507d0c1aac326627ff3737a2cd805025eb263ca163a",
+      "After": "4afebd09cad1194a55e1fd563a39bd8bab5bd6d21c4e63af16ee3a100817d912"
+    },
+    {
+      "Path": "Assets/AddressableResources/Maps/Islands/IslandsMap_NavMesh_data.asset",
+      "Before": "1312146c6680642ea656590a31bebb612146d129b69fda902b3754a3cc27f81a",
+      "After": "d95b50ee37f05338f9962dd4d04cb8c81ff05ceb5939acde4ca6770dac356c1a"
+    },
+    {
+      "Path": "Assets/AddressableResources/Configs/BotDifficultyConfigs.asset",
+      "Before": "a34919987986832c9dabe6eb69f9bffe9a499226419c1addd25fca8b675157b0",
+      "After": "50f66a4099495ab1319ef0a2f49007ffd5b2a043d2d20042a14c9cba3f8dfc92"
+    },
+    {
+      "Path": "Assets/AddressableResources/Configs/EquipmentStatConfigs.asset",
+      "Before": "efc2b8d2be59c86ff721f5d08bff6eaa8fb41d262895956c40bd1e80b1595d72",
+      "After": "43c8068052e0f4553e91eac8c0f5ee11875ed4f69d126cf352833a7765c19e03"
+    },
+    {
+      "Path": "Assets/AddressableResources/QuantumAssets/Collectables/ConsumablePickup.prefab",
+      "Before": "91a2aa6d578dae4ff1e38b64b0832c1d7955325cd955d61c73c3f743022e2d33",
+      "After": "b93db9d641af43b85e55797bbfd2af87ba2dd69df57bdc2613e69e6f27e1450f"
+    },
+    {
+      "Path": "Assets/AddressableResources/QuantumAssets/Gates/GateBarrierEntity.prefab",
+      "Before": "bbc43b06a79d64eff3b4396cd0523fe63020f15ae9d6ee5c18501dbbf22eac71",
+      "After": "931075260cc98a904d46a365652fddebf8d341d0c59ee76e2120caecbe1cb9e4"
+    },
+    {
+      "Path": "Assets/AddressableResources/Configs/BuffConfigs.asset",
+      "Before": "973a856426b36a4b466a4f6e804438996ae9362396caf519c5e8aec2870927fd",
+      "After": "f72f64d39c6890a0afa7683d09d868bdbfa6438ab927943e65f56e16f3cc1332"
+    },
+    {
+      "Path": "Assets/AddressableResources/MatchAssets/MapObjects/Bush.prefab",
+      "Before": "08ab178f3c8bbf979944a19520183b889704d06bb93a99a151f4b95e35265db9",
+      "After": "33986be42a57b7d11e74fac66631ba6ab595e7d96fb07324d039b83cd91c8049"
+    },
+    {
+      "Path": "Assets/AddressableResources/Configs/DestructibleConfigs.asset",
+      "Before": "0fb4a84269d166e0360960f6fc4c1be51db705e97fdd8f4d3f2868a694940376",
+      "After": "56772f3af8052bb22f4b31c7893720ed724216068144b49c3352441bce1a82ea"
+    },
+    {
+      "Path": "Assets/AddressableResources/Maps/Islands/IslandsMap.asset",
+      "Before": "1e041d96361d519b0bca163fa08dcee45da08f3d1d5e2c67a0649609d34ff676",
+      "After": "75f75be09da5484c0295bbec39b1eadff2d49ed9c5fbc0e5fe2dbd33eba0672f"
+    },
+    {
+      "Path": "Assets/AddressableResources/QuantumAssets/Projectiles/MainSmallBullet.prefab",
+      "Before": "24856b7a0788d81761c7ddd202c7fd758db6a1464fac0c44c66f6df69095e106",
+      "After": "e8ff8ca61197a060952f399a84b3d01cece40d8797e95d57a7c0afad00c26c26"
+    },
+    {
+      "Path": "Assets/AddressableResources/QuantumAssets/Collectables/ChestPickup.prefab",
+      "Before": "cd81d8cc2c3e115562e97bf0fb14413a6244ece18dcdc95985b602168b17d520",
+      "After": "118d7931409387be89ab146a98158441ab2efc5e2d8d8e354cc1d903a17c7d4b"
+    },
+    {
+      "Path": "Assets/AddressableResources/Configs/StatConfigs.asset",
+      "Before": "51be6c03fe5a87fa585ba2e11c8983c93fd281186aab54e2b52077851e92db6d",
+      "After": "3b5c96543a4cc8694db3fbedd47e63748801c1e25034feb829ff12424ff71f91"
+    },
+    {
+      "Path": "Assets/AddressableResources/Configs/Settings/SimulationConfig.asset",
+      "Before": "3995c8d661349f58c162b3508bc461b8a22ace23202f41e99d46e57149e128b5",
+      "After": "fbc747d24158780d9959e0f4defa0437584f3d066eba06e66c166431638966aa"
+    },
+    {
+      "Path": "Assets/AddressableResources/Configs/QuantumMapConfigs.asset",
+      "Before": "22b9ca80af124a8cfd1cfbc8e55ae8d4e2cdc0ccc8ffdc48f44c76fa6a1542a0",
+      "After": "2ed402e44714679a2fe087ef3a4e381cd417f34aaef2ecc2fba1f7b04499fa04"
+    },
+    {
+      "Path": "Assets/AddressableResources/MatchAssets/MapObjects/VisVolume.prefab",
+      "Before": "19950f67d4bbeac7019b7a5472bd6de51782cf9f492752ed1a273ff7c3c279fc",
+      "After": "4d3091d8a9778a9fd4ab395f28cc9bfb6c6c1888e76daba6779089ee2125a73c"
+    },
+    {
+      "Path": "Assets/AddressableResources/Maps/Battlelands/BattlelandsMap_NavMesh_data.asset",
+      "Before": "366894457fec351214d529dd7dc987c63512b18134e735c7dbab0212d495cdd3",
+      "After": "eb06d80b3c14e6beeb6bd59445dd1f0becfe9ba22cf19198dbbafd3ad27e75bb"
+    }
+  ]
+}

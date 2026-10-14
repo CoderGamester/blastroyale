@@ -1,0 +1,29 @@
+{
+  "Editor": {
+    "source_files": 117,
+    "source_compilation": "pass",
+    "warnings": 0,
+    "errors": 0,
+    "log": "artifacts/quantum3-firstlight.editor-compile.log",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "actual_Q3_execution": "pending"
+  },
+  "EditMode": {
+    "source_files": 52,
+    "source_compilation": "pass",
+    "warnings": 0,
+    "errors": 0,
+    "log": "artifacts/quantum3-firstlight.game.editor.tests-compile.log",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "actual_Q3_execution": "pending"
+  },
+  "PlayMode": {
+    "source_files": 1,
+    "source_compilation": "pass",
+    "warnings": 0,
+    "errors": 0,
+    "log": "artifacts/quantum3-firstlight.game.tests-compile.log",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "actual_Q3_execution": "pending"
+  }
+}

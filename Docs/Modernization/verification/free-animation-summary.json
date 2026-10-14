@@ -1,0 +1,38 @@
+{
+  "unity": "6000.3.26f1",
+  "platform": "PlayMode",
+  "tests": {
+    "total": 10,
+    "passed": 10,
+    "failed": 0,
+    "skipped": 0
+  },
+  "direct_source_compile": {
+    "warnings": 0,
+    "errors": 0
+  },
+  "sources": {
+    "BlastRoyale/Assets/Src/FirstLight/Game/Views/UiVfxImage.cs": "70f330407ca0de54129d38e4d3ad706a7141b3653c5db08946d4b862f2374293",
+    "BlastRoyale/Assets/Src/FirstLight/Game/Utils/OneShotAnimationPlayer.cs": "dcb9d839eeafde931b1369b407a4973e7b2ce7c4ccd91b6f51a74019949627fe",
+    "BlastRoyale/Assets/Src/FirstLight/Game/MonoComponent/Collections/AdditionalFlairAnimation.cs": "7697f87d0b2992dfc892107f4560fb549eac57ea3d16712088dce3388e48b2aa",
+    "BlastRoyale/Assets/AddressableResources/UI/UIVFXScreen.prefab": "6952938e080f92f2707701544506a0621eefc59dadac835164656a784b253ccf",
+    "Tools/Validation/FreeAnimationIsolation/FreeAnimationTests.cs": "562361061da36165a1b58e3229d52bdfe682119ee2fe8a6d72da98e54fa12c8f",
+    "Tools/Validation/FreeAnimationIsolation/create_project.py": "3a8765b271e9b2a411c7d4bb99664d4197c0561bc35a50280d57d5723c4b1b69"
+  },
+  "authored_curve_transfer": {
+    "move": {
+      "duration": "1",
+      "curveSha256": "a204ee0dfca4ce9ca536a9050e05582caab50339848145cc6787a06ae7e3f166"
+    },
+    "scale": {
+      "duration": "1",
+      "curveSha256": "0d2370f2a1fa24db180426fc067f0b48c6b7b29033b20706e0b81583624f42be"
+    }
+  },
+  "limits": [
+    "No full original UI prefab rendering",
+    "No addressable flair integration run",
+    "No Android/iOS or player build",
+    "Existing FirstLight.Game metadata resolves CharacterSkin in narrow source compile"
+  ]
+}

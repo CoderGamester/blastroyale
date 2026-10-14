@@ -1,0 +1,14 @@
+{
+  "result": "passed",
+  "unity": "6000.3.26f1",
+  "target": "Android",
+  "development": true,
+  "build_exit_code": 0,
+  "CSharp_errors": 0,
+  "CSharp_warnings": 0,
+  "device_test": "not_run",
+  "backend_provider": "hybrid_checkpoint_before_authorized_UGS_only_port",
+  "content_console": "warnings_remain",
+  "apk_bytes": 405821813,
+  "apk_sha256": "12c5e2030b17e571cc4c614ecad0b04205a1e1345d899099ec087c99b3e431f5"
+}

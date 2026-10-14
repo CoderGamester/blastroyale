@@ -1,0 +1,19 @@
+{
+  "status": "source_compile_pass",
+  "editor": "6000.3.26f1",
+  "warnings": 0,
+  "errors": 0,
+  "source_files": 118,
+  "original_odin_editor_files": 13,
+  "native_consumer": "BlastRoyale/Assets/Src/FirstLight/Editor/Inspector/InspectorFieldDrawer.cs",
+  "paid_compiler_references_removed": [
+    "Sirenix.*",
+    "Animancer",
+    "DOTweenPro",
+    "DOTweenProEditor"
+  ],
+  "actual_editor_interaction": "not_run",
+  "actual_q3_original_import": "pending",
+  "backend_metadata_inventory": ".local/odin-game-attribute-inventory.json",
+  "evidence_log": "Docs/Modernization/verification/editor-odin-native-compile.log"
+}

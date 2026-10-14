@@ -1,0 +1,142 @@
+{
+  "date": "2026-10-14",
+  "unity_editor": "6000.3.26f1",
+  "quantum_sdk": "3.0.14",
+  "bot_sdk": "3.10.2",
+  "test_framework": "1.6.0",
+  "result": "Passed",
+  "total": 21,
+  "passed": 21,
+  "failed": 0,
+  "skipped": 0,
+  "actual_test_case_elements": 21,
+  "process_exit_code": 0,
+  "compiler_warnings": 0,
+  "compiler_errors": 0,
+  "platform": "Unity EditMode",
+  "filter": "FirstLight.Tests.EditorMode.Systems",
+  "results_sha256": "4f12d765677773588f2af21a5757018d3abb580f616dc81202cd557f67f63806",
+  "log_sha256": "0acdf7c23b89adace3484d220e128e15144388eb79b022923cd76bd61307a330",
+  "fixtures": [
+    {
+      "name": "FirstLight.Tests.EditorMode.Systems.Quantum3CommandSerializationTests",
+      "total": 14,
+      "passed": 14,
+      "failed": 0
+    },
+    {
+      "name": "FirstLight.Tests.EditorMode.Systems.Quantum3MovementMathTests",
+      "total": 6,
+      "passed": 6,
+      "failed": 0
+    },
+    {
+      "name": "FirstLight.Tests.EditorMode.Systems.Quantum3StatsTests",
+      "total": 1,
+      "passed": 1,
+      "failed": 0
+    }
+  ],
+  "cases": [
+    {
+      "name": "FirstLight.Tests.EditorMode.Systems.Quantum3CommandSerializationTests.EmojiIdRoundTrips(FlagPooEmoji)",
+      "result": "Passed"
+    },
+    {
+      "name": "FirstLight.Tests.EditorMode.Systems.Quantum3CommandSerializationTests.EmojiIdRoundTrips(FlagCryEmoji)",
+      "result": "Passed"
+    },
+    {
+      "name": "FirstLight.Tests.EditorMode.Systems.Quantum3CommandSerializationTests.EmojiIdRoundTrips(MalePunk)",
+      "result": "Passed"
+    },
+    {
+      "name": "FirstLight.Tests.EditorMode.Systems.Quantum3CommandSerializationTests.RepeatedSerializationProducesIdenticalPayload",
+      "result": "Passed"
+    },
+    {
+      "name": "FirstLight.Tests.EditorMode.Systems.Quantum3CommandSerializationTests.SpecialAimRoundTripsEveryFixedPointBit(0L,0L,0)",
+      "result": "Passed"
+    },
+    {
+      "name": "FirstLight.Tests.EditorMode.Systems.Quantum3CommandSerializationTests.SpecialAimRoundTripsEveryFixedPointBit(-196609L,131073L,1)",
+      "result": "Passed"
+    },
+    {
+      "name": "FirstLight.Tests.EditorMode.Systems.Quantum3CommandSerializationTests.SpecialAimRoundTripsEveryFixedPointBit(65537L,-32769L,2)",
+      "result": "Passed"
+    },
+    {
+      "name": "FirstLight.Tests.EditorMode.Systems.Quantum3CommandSerializationTests.TeamPingRoundTripsNegativeAndFractionalCoordinates(General)",
+      "result": "Passed"
+    },
+    {
+      "name": "FirstLight.Tests.EditorMode.Systems.Quantum3CommandSerializationTests.TeamPingRoundTripsNegativeAndFractionalCoordinates(Chest)",
+      "result": "Passed"
+    },
+    {
+      "name": "FirstLight.Tests.EditorMode.Systems.Quantum3CommandSerializationTests.TeamPingRoundTripsNegativeAndFractionalCoordinates(Player)",
+      "result": "Passed"
+    },
+    {
+      "name": "FirstLight.Tests.EditorMode.Systems.Quantum3CommandSerializationTests.TeamPingRoundTripsNegativeAndFractionalCoordinates(Equipment)",
+      "result": "Passed"
+    },
+    {
+      "name": "FirstLight.Tests.EditorMode.Systems.Quantum3CommandSerializationTests.WeaponSlotPayloadPreservesSignedIndex(-1)",
+      "result": "Passed"
+    },
+    {
+      "name": "FirstLight.Tests.EditorMode.Systems.Quantum3CommandSerializationTests.WeaponSlotPayloadPreservesSignedIndex(0)",
+      "result": "Passed"
+    },
+    {
+      "name": "FirstLight.Tests.EditorMode.Systems.Quantum3CommandSerializationTests.WeaponSlotPayloadPreservesSignedIndex(2)",
+      "result": "Passed"
+    },
+    {
+      "name": "FirstLight.Tests.EditorMode.Systems.Quantum3MovementMathTests.CardinalAimDirectionSurvivesRotationRoundTrip(1,0)",
+      "result": "Passed"
+    },
+    {
+      "name": "FirstLight.Tests.EditorMode.Systems.Quantum3MovementMathTests.CardinalAimDirectionSurvivesRotationRoundTrip(0,1)",
+      "result": "Passed"
+    },
+    {
+      "name": "FirstLight.Tests.EditorMode.Systems.Quantum3MovementMathTests.CardinalAimDirectionSurvivesRotationRoundTrip(-1,0)",
+      "result": "Passed"
+    },
+    {
+      "name": "FirstLight.Tests.EditorMode.Systems.Quantum3MovementMathTests.CardinalAimDirectionSurvivesRotationRoundTrip(0,-1)",
+      "result": "Passed"
+    },
+    {
+      "name": "FirstLight.Tests.EditorMode.Systems.Quantum3MovementMathTests.FullSteeringPointsTransformTowardsAim",
+      "result": "Passed"
+    },
+    {
+      "name": "FirstLight.Tests.EditorMode.Systems.Quantum3MovementMathTests.ZeroSteeringWeightKeepsCurrentRotation",
+      "result": "Passed"
+    },
+    {
+      "name": "FirstLight.Tests.EditorMode.Systems.Quantum3StatsTests.ConstructorInitializesEveryGameplayStatAndCollectionHandle",
+      "result": "Passed"
+    }
+  ],
+  "coverage": [
+    "actual game command serialization with native Quantum BitStream",
+    "fixed-point steering math over native Transform2D and actual SDK LUT",
+    "actual migrated Stats constructor"
+  ],
+  "not_covered": [
+    "command execution against a Frame",
+    "full movement/physics simulation",
+    "rollback/replay",
+    "bot navigation",
+    "migrated asset loading",
+    "original menus",
+    "cloud networking",
+    "completed match",
+    "mobile player builds"
+  ]
+}

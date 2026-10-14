@@ -1,0 +1,80 @@
+{
+  "Status": "Provider source prepared in isolated overlay; main integration and live UGS acceptance pending",
+  "Files": [
+    {
+      "Path": "BlastRoyale/Assets/Src/FirstLight/Game/Services/Authentication/UnityCloudLoginProvider.cs",
+      "SHA256": "d47ba13d2266617d91ee3d3168f6c011c6ffa4bc7b19f8e6967073dfd4005bf5",
+      "Bytes": 5105
+    },
+    {
+      "Path": "BlastRoyale/Assets/Src/FirstLight/Game/Services/Authentication/UnityCloudLoginProvider.cs.meta",
+      "SHA256": "73e436831c4ae82440aa239739ee3ee624e8b802ed9b27c3e4f3386e72488221",
+      "Bytes": 83
+    },
+    {
+      "Path": "BlastRoyale/Assets/Src/FirstLight/Game/Services/Authentication/AuthService.cs",
+      "SHA256": "783a9bded4f930310f99566d5eef653719f249fec8e3dc933eee6bec34ff4546",
+      "Bytes": 18865
+    },
+    {
+      "Path": "BlastRoyale/Assets/Src/FirstLight/Game/Services/Authentication/AuthService.cs.meta",
+      "SHA256": "d783faa0ed45f6e990ca6ca671150077072d8f1600917019dcf8920fea34e0d6",
+      "Bytes": 83
+    },
+    {
+      "Path": "BlastRoyale/Assets/Src/FirstLight/Game/Services/Authentication/Hooks/UnityCloudHook.cs",
+      "SHA256": "4551ba7e482b880404abf8fe32364f0453ccd2b6d7791d56b9fdd765562868b2",
+      "Bytes": 2113
+    },
+    {
+      "Path": "BlastRoyale/Assets/Src/FirstLight/Game/Services/Authentication/Hooks/UnityCloudHook.cs.meta",
+      "SHA256": "ab20c89e72c5e3d00eabb49c0be98c193be5a0847303be47ba706f214bdc0df0",
+      "Bytes": 83
+    },
+    {
+      "Path": "BlastRoyale/Assets/Src/FirstLight/Game/Services/Authentication/Hooks/ParseFeatureFlagsHook.cs",
+      "SHA256": "932108d0e540474b65cd3dcd0cc05dbc80d027e7ee6d3bd7f3ba5a2a57ca1749",
+      "Bytes": 1725
+    },
+    {
+      "Path": "BlastRoyale/Assets/Src/FirstLight/Game/Services/Authentication/Hooks/ParseFeatureFlagsHook.cs.meta",
+      "SHA256": "5d97f55e9607ed7651b6884cd6b9132bb59f52ca5e7cfb1b871cc900b622c512",
+      "Bytes": 83
+    },
+    {
+      "Path": "BlastRoyale/Assets/Src/FirstLight/Game/Services/Server/PlayerStateBackend.cs",
+      "SHA256": "3f64a3a52cd30f4c634078f93b7f4062dd30be0233b1e0162a4c60c85254697e",
+      "Bytes": 5623
+    },
+    {
+      "Path": "BlastRoyale/Assets/Src/FirstLight/Game/Services/Server/PlayerStateBackend.cs.meta",
+      "SHA256": "607334f666593b9498717471df1398b0cb3478a222f0d3dc54f96eed1e0eaba2",
+      "Bytes": 60
+    },
+    {
+      "Path": "BlastRoyale/Assets/Src/FirstLight/Game/Services/Server/GameBackendService.cs",
+      "SHA256": "3d804d4596d206a6254ae910256a2966130dc093a6538a011a35240ce69e1a4a",
+      "Bytes": 15510
+    },
+    {
+      "Path": "BlastRoyale/Assets/Src/FirstLight/Game/Services/Server/GameBackendService.cs.meta",
+      "SHA256": "0ae670e7fc022ca685de750e0036b8700f04875acb7f4ed821abdc2af0f3bc38",
+      "Bytes": 243
+    }
+  ],
+  "Deletions": [
+    "BlastRoyale/Assets/Src/FirstLight/Game/Services/Authentication/PlayfabDeviceLoginProvider.cs",
+    "BlastRoyale/Assets/Src/FirstLight/Game/Services/Authentication/PlayfabDeviceLoginProvider.cs.meta",
+    "BlastRoyale/Assets/Src/FirstLight/Game/Services/Authentication/Hooks/UpdateContactEmailHook.cs",
+    "BlastRoyale/Assets/Src/FirstLight/Game/Services/Authentication/Hooks/UpdateContactEmailHook.cs.meta"
+  ],
+  "RequiredAssemblyReference": "Unity.Services.Authentication.PlayerAccounts",
+  "LiveCloudTests": "Not run - Unity project service linkage required",
+  "CombinedCompile": {
+    "Command": "python3 .local/compile-ugs-overlay.py",
+    "Errors": 0,
+    "Warnings": 0,
+    "RawCompilerLogSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "Note": "Native csc emits no output on successful compilation. Script stdout separately reports both assembly exit codes."
+  }
+}

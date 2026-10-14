@@ -1,0 +1,94 @@
+[
+  {
+    "Path": "Assets/Photon/Quantum/Runtime/QPrototypeNavMeshPathfinder.cs",
+    "ExpectedClass": "Quantum.QPrototypeNavMeshPathfinder",
+    "ActualClass": "Quantum.QPrototypeNavMeshPathfinder",
+    "ExpectedGuid": "c1695c6f0a2badb4b8f81311344db83f",
+    "ActualGuid": "c1695c6f0a2badb4b8f81311344db83f",
+    "InRuntimeMonoScriptInventory": true
+  },
+  {
+    "Path": "Assets/Photon/Quantum/Runtime/QPrototypePhysicsCollider2D.cs",
+    "ExpectedClass": "Quantum.QPrototypePhysicsCollider2D",
+    "ActualClass": "Quantum.QPrototypePhysicsCollider2D",
+    "ExpectedGuid": "7673f01b7845c5b479f25c395d940007",
+    "ActualGuid": "7673f01b7845c5b479f25c395d940007",
+    "InRuntimeMonoScriptInventory": true
+  },
+  {
+    "Path": "Assets/Photon/Quantum/Runtime/QPrototypePhysicsCollider3D.cs",
+    "ExpectedClass": "Quantum.QPrototypePhysicsCollider3D",
+    "ActualClass": "Quantum.QPrototypePhysicsCollider3D",
+    "ExpectedGuid": "ca984aa8410585245ad7d8459517e43f",
+    "ActualGuid": "ca984aa8410585245ad7d8459517e43f",
+    "InRuntimeMonoScriptInventory": true
+  },
+  {
+    "Path": "Assets/Photon/Quantum/Runtime/QPrototypePhysicsJoints2D.cs",
+    "ExpectedClass": "Quantum.QPrototypePhysicsJoints2D",
+    "ActualClass": "Quantum.QPrototypePhysicsJoints2D",
+    "ExpectedGuid": "51c12c7749fb4d94296e023103352370",
+    "ActualGuid": "51c12c7749fb4d94296e023103352370",
+    "InRuntimeMonoScriptInventory": true
+  },
+  {
+    "Path": "Assets/Photon/Quantum/Runtime/QPrototypePhysicsJoints3D.cs",
+    "ExpectedClass": "Quantum.QPrototypePhysicsJoints3D",
+    "ActualClass": "Quantum.QPrototypePhysicsJoints3D",
+    "ExpectedGuid": "1a4f21123fba28543a8e8102a798713e",
+    "ActualGuid": "1a4f21123fba28543a8e8102a798713e",
+    "InRuntimeMonoScriptInventory": true
+  },
+  {
+    "Path": "Assets/Photon/Quantum/Runtime/QPrototypeTransform2D.cs",
+    "ExpectedClass": "Quantum.QPrototypeTransform2D",
+    "ActualClass": "Quantum.QPrototypeTransform2D",
+    "ExpectedGuid": "04f73d14281d2ec4a815c74fa0930a3e",
+    "ActualGuid": "04f73d14281d2ec4a815c74fa0930a3e",
+    "InRuntimeMonoScriptInventory": true
+  },
+  {
+    "Path": "Assets/Photon/Quantum/Runtime/QPrototypeTransform2DVertical.cs",
+    "ExpectedClass": "Quantum.QPrototypeTransform2DVertical",
+    "ActualClass": "Quantum.QPrototypeTransform2DVertical",
+    "ExpectedGuid": "a2d23b7d25f38b14b9cc17e42d27de60",
+    "ActualGuid": "a2d23b7d25f38b14b9cc17e42d27de60",
+    "InRuntimeMonoScriptInventory": true
+  },
+  {
+    "Path": "Assets/Photon/Quantum/Runtime/QPrototypeTransform3D.cs",
+    "ExpectedClass": "Quantum.QPrototypeTransform3D",
+    "ActualClass": "Quantum.QPrototypeTransform3D",
+    "ExpectedGuid": "5b92e94e573bf1b449e412b3fe03056c",
+    "ActualGuid": "5b92e94e573bf1b449e412b3fe03056c",
+    "InRuntimeMonoScriptInventory": true
+  },
+  {
+    "Path": "Assets/Photon/Quantum/Runtime/QuantumUnityDB.cs",
+    "ExpectedClass": "Quantum.QuantumUnityDB",
+    "ActualClass": "Quantum.QuantumUnityDB",
+    "ExpectedGuid": "f6a4c4d8bf504c68b7cc3f562897b4d7",
+    "ActualGuid": "f6a4c4d8bf504c68b7cc3f562897b4d7",
+    "InRuntimeMonoScriptInventory": true
+  },
+  {
+    "Path": "Assets/Photon/Quantum/Runtime/QuantumMonoBehaviour.cs",
+    "ExpectedClass": "Quantum.QuantumMonoBehaviour",
+    "ActualClass": "Quantum.QuantumMonoBehaviour",
+    "ExpectedGuid": "b37a66ea378440bbac2ec48d9d18efc2",
+    "ActualGuid": "b37a66ea378440bbac2ec48d9d18efc2",
+    "InRuntimeMonoScriptInventory": true
+  },
+  {
+    "Path": "Assets/Photon/Quantum/Runtime/QuantumScriptableObject.cs",
+    "ExpectedClass": "Quantum.QuantumScriptableObject",
+    "ActualClass": "Quantum.QuantumScriptableObject",
+    "ExpectedGuid": "7ffa618c05834a43b4c277aca47c448f",
+    "ActualGuid": "7ffa618c05834a43b4c277aca47c448f",
+    "InRuntimeMonoScriptInventory": true
+  },
+  {
+    "Path": "Assets/Photon/Quantum/Runtime/QuantumUnityRuntime.cs",
+    "ActualClass": null
+  }
+]
