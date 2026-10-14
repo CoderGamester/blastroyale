@@ -31,7 +31,6 @@ using Unity.Services.Friends.Notifications;
 using Unity.Services.Lobbies;
 using Unity.Services.Lobbies.Models;
 using UnityEngine;
-using UnityEngine.Purchasing;
 using UnityEngine.UIElements;
 using Random = UnityEngine.Random;
 
@@ -186,7 +185,7 @@ namespace FirstLight.Game.Domains.HomeScreen.UI
 
 		private async UniTaskVoid CheckStoreUpdateForNotification()
 		{
-			await UniTask.WaitUntil(() => _services.IAPService.UnityStore.Initialized);
+			await UniTask.WaitUntil(() => _services.IAPService.Initialized);
 
 			_storeNotification.SetDisplay(_services.IAPService.HasStoreItemsUpdate());
 		}
@@ -199,7 +198,7 @@ namespace FirstLight.Game.Domains.HomeScreen.UI
 			_starterPackCooldown = Root.Q<Label>("BundleCooldown").Required();
 			_starterPackShine = Root.Q("BundleShine").Required();
 
-			await UniTask.WaitUntil(() => _services.IAPService.UnityStore.Initialized);
+			await UniTask.WaitUntil(() => _services.IAPService.Initialized);
 
 			var bundle = _services.IAPService.AvailableGameProductBundles.FirstOrDefault(b => b.Name == STARTER_PACK);
 			if (bundle == null ||
@@ -300,7 +299,7 @@ namespace FirstLight.Game.Domains.HomeScreen.UI
 		/// <param name="data"></param>
 		/// <param name="succeeded"></param>
 		/// <param name="failurereason"></param>
-		private void OnPurchaseFinished(string itemId, ItemData data, bool succeeded, IUnityStoreService.PurchaseFailureData failurereason)
+		private void OnPurchaseFinished(string itemId, ItemData data, bool succeeded, StorePurchaseFailureData failurereason)
 		{
 			if (!succeeded)
 			{

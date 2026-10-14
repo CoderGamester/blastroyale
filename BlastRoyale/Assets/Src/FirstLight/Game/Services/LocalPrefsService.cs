@@ -10,8 +10,8 @@ namespace FirstLight.Game.Services
 {
 	public class LocalPrefsService
 	{
-		public ObservableField<Dictionary<string, IUnityStoreService.PurchaseFailureData>> FailedTransactionMessages { get; } =
-			CreateObjectSetting(nameof(FailedTransactionMessages), new Dictionary<string, IUnityStoreService.PurchaseFailureData>());
+		public ObservableField<Dictionary<string, StorePurchaseFailureData>> FailedTransactionMessages { get; } =
+			CreateObjectSetting(nameof(FailedTransactionMessages), new Dictionary<string, StorePurchaseFailureData>());
 
 		/// <summary>
 		/// Stores the last selected gamemode

@@ -57,8 +57,8 @@ namespace FirstLight.Game.Services
 					return IHomeScreenService.ProcessorResult.None;
 				}
 
-				await UniTask.WaitUntil(() => _services.IAPService.UnityStore.Initialized);
-				if (FindProduct(true) == null || FindProduct(false) == null)
+				await UniTask.WaitUntil(() => _services.IAPService.Initialized);
+				if (FindProduct(false) == null)
 				{
 					FLog.Warn("Not displaying battlepass banner because didn't found store products");
 					return IHomeScreenService.ProcessorResult.None;

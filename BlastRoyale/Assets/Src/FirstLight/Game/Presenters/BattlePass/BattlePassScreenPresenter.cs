@@ -24,7 +24,6 @@ using FirstLight.Game.UI;
 using FirstLight.Game.Localization;
 using Quantum;
 using UnityEngine;
-using UnityEngine.Purchasing;
 using UnityEngine.UI;
 using UnityEngine.UIElements;
 using UnityEngine.UIElements.Experimental;
@@ -154,7 +153,7 @@ namespace FirstLight.Game.Presenters
 			return base.OnScreenClose();
 		}
 
-		private void OnPurchaseFinished(string itemId, ItemData itemData, bool succeeded, IUnityStoreService.PurchaseFailureData _3)
+		private void OnPurchaseFinished(string itemId, ItemData itemData, bool succeeded, StorePurchaseFailureData _3)
 		{
 			if (_services.HomeScreenService.ForceBehaviour == HomeScreenForceBehaviourType.Store)
 			{

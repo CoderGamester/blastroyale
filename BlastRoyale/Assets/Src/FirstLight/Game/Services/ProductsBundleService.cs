@@ -83,7 +83,7 @@ namespace FirstLight.Game.Services
 					return IHomeScreenService.ProcessorResult.None;
 				}
 
-				await UniTask.WaitUntil(() => GameServices.IAPService.UnityStore.Initialized);
+				await UniTask.WaitUntil(() => GameServices.IAPService.Initialized);
 
 				LoadProductBundles();
 

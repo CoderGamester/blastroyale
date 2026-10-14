@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test-run id="2" testcasecount="4" result="Passed" total="4" passed="4" failed="0" inconclusive="0" skipped="0" asserts="0" engine-version="3.5.0.0" clr-version="4.0.30319.42000" start-time="2026-10-14 16:38:04Z" end-time="2026-10-14 16:38:04Z" duration="0.3877724">
+  <test-suite type="TestSuite" id="1000" name="project" fullname="project" runstate="Runnable" testcasecount="5" result="Passed" start-time="2026-10-14 16:38:04Z" end-time="2026-10-14 16:38:04Z" duration="0.387772" total="4" passed="4" failed="0" inconclusive="0" skipped="0" asserts="0">
+    <properties>
+      <property name="platform" value="EditMode" />
+    </properties>
+    <test-suite type="Assembly" id="1006" name="BlastRoyale.BundledShop.Tests.dll" fullname="<repo>/.local/purchasing-retirement/project/Library/ScriptAssemblies/BlastRoyale.BundledShop.Tests.dll" runstate="Runnable" testcasecount="4" result="Passed" start-time="2026-10-14 16:38:04Z" end-time="2026-10-14 16:38:04Z" duration="0.383947" total="4" passed="4" failed="0" inconclusive="0" skipped="0" asserts="0">
+      <properties>
+        <property name="_PID" value="49488" />
+        <property name="_APPDOMAIN" value="Unity Child Domain" />
+        <property name="platform" value="EditMode" />
+        <property name="EditorOnly" value="True" />
+      </properties>
+      <test-suite type="TestSuite" id="1007" name="FirstLight" fullname="FirstLight" runstate="Runnable" testcasecount="4" result="Passed" start-time="2026-10-14 16:38:04Z" end-time="2026-10-14 16:38:04Z" duration="0.383613" total="4" passed="4" failed="0" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <test-suite type="TestSuite" id="1008" name="Tests" fullname="FirstLight.Tests" runstate="Runnable" testcasecount="4" result="Passed" start-time="2026-10-14 16:38:04Z" end-time="2026-10-14 16:38:04Z" duration="0.383441" total="4" passed="4" failed="0" inconclusive="0" skipped="0" asserts="0">
+          <properties />
+          <test-suite type="TestSuite" id="1009" name="EditorMode" fullname="FirstLight.Tests.EditorMode" runstate="Runnable" testcasecount="4" result="Passed" start-time="2026-10-14 16:38:04Z" end-time="2026-10-14 16:38:04Z" duration="0.383273" total="4" passed="4" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-suite type="TestSuite" id="1010" name="Services" fullname="FirstLight.Tests.EditorMode.Services" runstate="Runnable" testcasecount="4" result="Passed" start-time="2026-10-14 16:38:04Z" end-time="2026-10-14 16:38:04Z" duration="0.383004" total="4" passed="4" failed="0" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <test-suite type="TestFixture" id="1001" name="BundledShopReadinessTests" fullname="FirstLight.Tests.EditorMode.Services.BundledShopReadinessTests" classname="FirstLight.Tests.EditorMode.Services.BundledShopReadinessTests" runstate="Runnable" testcasecount="4" result="Passed" start-time="2026-10-14 16:38:04Z" end-time="2026-10-14 16:38:04Z" duration="0.382473" total="4" passed="4" failed="0" inconclusive="0" skipped="0" asserts="0">
+                <properties />
+                <test-case id="1004" name="CashRequestRejectsWithoutExecutingEarnedCurrencyCommand" fullname="FirstLight.Tests.EditorMode.Services.BundledShopReadinessTests.CashRequestRejectsWithoutExecutingEarnedCurrencyCommand" methodname="CashRequestRejectsWithoutExecutingEarnedCurrencyCommand" classname="FirstLight.Tests.EditorMode.Services.BundledShopReadinessTests" runstate="Runnable" seed="789078053" result="Passed" start-time="2026-10-14 16:38:04Z" end-time="2026-10-14 16:38:04Z" duration="0.192045" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                  <output><![CDATA[ (T1 F4)  [IAPService] Buy prodyct called
+ (T1 F4)  [IAPService] OnPurchaseFailure ProductUnavailable Cash purchases are unavailable in this build.
+]]></output>
+                </test-case>
+                <test-case id="1003" name="CatalogReadinessCompletesWithoutPaymentSdk" fullname="FirstLight.Tests.EditorMode.Services.BundledShopReadinessTests.CatalogReadinessCompletesWithoutPaymentSdk" methodname="CatalogReadinessCompletesWithoutPaymentSdk" classname="FirstLight.Tests.EditorMode.Services.BundledShopReadinessTests" runstate="Runnable" seed="147097392" result="Passed" start-time="2026-10-14 16:38:04Z" end-time="2026-10-14 16:38:04Z" duration="0.137722" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+                <test-case id="1005" name="FailurePopupCompletesWhenRealDialogCloses" fullname="FirstLight.Tests.EditorMode.Services.BundledShopReadinessTests.FailurePopupCompletesWhenRealDialogCloses" methodname="FailurePopupCompletesWhenRealDialogCloses" classname="FirstLight.Tests.EditorMode.Services.BundledShopReadinessTests" runstate="Runnable" seed="570233262" result="Passed" start-time="2026-10-14 16:38:04Z" end-time="2026-10-14 16:38:04Z" duration="0.036046" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+                <test-case id="1002" name="OldPaymentFailureJsonRemainsReadableWithoutPaymentTypes" fullname="FirstLight.Tests.EditorMode.Services.BundledShopReadinessTests.OldPaymentFailureJsonRemainsReadableWithoutPaymentTypes" methodname="OldPaymentFailureJsonRemainsReadableWithoutPaymentTypes" classname="FirstLight.Tests.EditorMode.Services.BundledShopReadinessTests" runstate="Runnable" seed="999424361" result="Passed" start-time="2026-10-14 16:38:04Z" end-time="2026-10-14 16:38:04Z" duration="0.010654" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                  <output><![CDATA[Saving results to: <user>/Library/Application Support/DefaultCompany/project/TestResults.xml
+]]></output>
+                </test-case>
+              </test-suite>
+            </test-suite>
+          </test-suite>
+        </test-suite>
+      </test-suite>
+    </test-suite>
+  </test-suite>
+</test-run>

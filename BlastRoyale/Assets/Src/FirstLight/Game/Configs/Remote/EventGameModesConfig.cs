@@ -3,7 +3,6 @@ using FirstLight.Game.Configs.Utils;
 using System.Collections.Generic;
 using FirstLight.Game.Data.DataTypes;
 using Quantum;
-using UnityEngine.Purchasing;
 
 namespace FirstLight.Game.Configs.Remote
 {

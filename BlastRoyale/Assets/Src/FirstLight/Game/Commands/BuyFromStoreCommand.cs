@@ -13,7 +13,7 @@ namespace FirstLight.Game.Commands
 {
 	/// <summary>
 	/// Command used to process Logical purchases from the store, only used for InGame currencies
-	/// for real money purchases it doesn't use any command and syncs directly with server see more at <see cref="IAPService"/>
+	/// Cash purchases are unavailable in the restored development shop.
 	/// </summary>
 	public class BuyFromStoreCommand : IGameCommandWithResult<bool>
 	{

@@ -19,7 +19,6 @@ using FirstLight.Game.Localization;
 using Quantum;
 using QuickEye.UIToolkit;
 using UnityEngine;
-using UnityEngine.Purchasing;
 using UnityEngine.UIElements;
 using Button = UnityEngine.UIElements.Button;
 
@@ -124,19 +123,17 @@ namespace FirstLight.Game.Presenters
 				return;
 			}
 
+			if (_services.BattlePassService.FindProduct(false) == null)
+			{
+				_purchaseContainer.SetDisplay(false);
+				return;
+			}
 			SetupButton(inGameButton, false);
-			if (_dataProvider.BattlePassDataProvider.GetCurrentSeasonConfig().Season.EnableIAP)
-			{
-				SetupButton(realMoneyButton, true);
-			}
-			else
-			{
-				orLabel.SetDisplay(false);
-				realMoneyButton.parent.SetDisplay(false);
-			}
+			orLabel.SetDisplay(false);
+			realMoneyButton.parent.SetDisplay(false);
 
 			_currencyTopBarView.Configure(
-				realMoneyButton,
+				inGameButton,
 				new List<GameId>() {_services.BattlePassService.FindProduct(false).GetPrice().item});
 		}
 
@@ -146,7 +143,7 @@ namespace FirstLight.Game.Presenters
 
 			if (realMoney)
 			{
-				button.text = product.UnityIapProduct().metadata.localizedPriceString;
+				button.text = product.GetDisplayPrice();
 			}
 			else
 			{
@@ -165,7 +162,7 @@ namespace FirstLight.Game.Presenters
 			return UniTask.CompletedTask;
 		}
 
-		private void IAPServiceOnPurchaseFinished(string itemId, ItemData data, bool success, IUnityStoreService.PurchaseFailureData reason)
+		private void IAPServiceOnPurchaseFinished(string itemId, ItemData data, bool success, StorePurchaseFailureData reason)
 		{
 			if (!success) return;
 			if (data.TryGetMetadata<UnlockMetadata>(out var metadata) && metadata.Unlock == UnlockSystem.PaidBattlePass)

@@ -242,9 +242,8 @@ namespace FirstLight.Game.Presenters.Store
 			}
 			else if (price.item == GameId.RealMoney)
 			{
-				_price.text = _hasRuntimeData
-					? product.UnityIapProduct()?.metadata.localizedPriceString ?? string.Empty
-					: price.amt.ToString();
+				_price.text = string.Empty;
+				_purchaseDisabledOverlay.SetDisplay(true);
 			}
 			else
 			{

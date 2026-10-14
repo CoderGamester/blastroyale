@@ -1,0 +1,42 @@
+{
+  "Status": "Native isolated app-service tests pass; Main application remains root-owned",
+  "Editor": "6000.3.26f1",
+  "TestCount": 4,
+  "Passed": 4,
+  "Failed": 0,
+  "Skipped": 0,
+  "NativeProcessExit": 0,
+  "Cases": [
+    "CashRequestRejectsWithoutExecutingEarnedCurrencyCommand",
+    "CatalogReadinessCompletesWithoutPaymentSdk",
+    "FailurePopupCompletesWhenRealDialogCloses",
+    "OldPaymentFailureJsonRemainsReadableWithoutPaymentTypes"
+  ],
+  "TestXmlSHA256": "2e34d6199f4534bf83af0cf9bfc06192d30afe03c10d75c96c7f1df1c120ba10",
+  "CompileLogs": {
+    "FirstLight.Game.log": {
+      "SHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "CompilerDiagnostics": 0
+    },
+    "FirstLight.Game.Editor.Tests.log": {
+      "SHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "CompilerDiagnostics": 0
+    },
+    "FirstLight.Editor.log": {
+      "SHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "CompilerDiagnostics": 0
+    }
+  },
+  "OverlayFiles": 23,
+  "DeletedFiles": 2,
+  "CurrentMainPreconditionMismatchPaths": [],
+  "VerificationScope": "Whole actual game/Editor/EditMode-test source compilation using genuine native managed dependencies with Purchasing references excluded. Native fixture imports the whole compiled game and genuine app/package/SDK dependencies; test collaborators implement actual application interfaces. No SDK/Unity replacement types and no live account/network.",
+  "PublishedPreparerNativeResult": {
+    "ProcessExit": 0,
+    "Passed": 4,
+    "Failed": 0,
+    "Skipped": 0,
+    "TestXmlSHA256": "2bb31af3f9da597a16b7718cea36466038dd45d424d8ab3aa9ae9a01eec3df3d",
+    "NoPurchasingOrIapResolverAssemblies": true
+  }
+}

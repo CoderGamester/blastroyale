@@ -313,7 +313,7 @@ namespace FirstLight.Game.Presenters.Store
 		/// <summary>
 		/// This is here in case the purchase takes longer then expected and the player is still on the screen when getting the reward
 		/// </summary>
-		private void OnPurchaseFinished(string itemId, ItemData item, bool success, IUnityStoreService.PurchaseFailureData reason)
+		private void OnPurchaseFinished(string itemId, ItemData item, bool success, StorePurchaseFailureData reason)
 		{
 			if (!success) return;
 			if (IAPHelpers.IsUIBeingHandled(itemId))
