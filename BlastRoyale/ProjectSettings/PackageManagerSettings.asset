@@ -40,8 +40,6 @@ MonoBehaviour:
     m_Url: https://package.openupm.com
     m_Scopes:
     - io.backtrace.unity
-    - xyz.0xsequence.waas-unity
-    - com.nethereum.unity
     m_IsDefault: 0
     m_Capabilities: 0
     m_ConfigSource: 4

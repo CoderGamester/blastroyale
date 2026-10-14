@@ -238,3 +238,8 @@ BlastRoyale/.modernization-sdk-layout-phase5-backup/
 Tools/Modernization/QuantumSdkLayout/bin/
 Tools/Modernization/QuantumSdkLayout/obj/
 !Tools/Modernization/QuantumSdkLayout/*.csproj
+
+# Unity Asset Manager host cache; contains local store/package state.
+BlastRoyale/uam/
+BlastRoyale/ProjectSettings/Packages/com.unity.asset-manager-for-unity/ImportedAssetInfo/
+BlastRoyale/Assets/Plugins/Android/*.backup*
