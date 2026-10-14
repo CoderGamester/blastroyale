@@ -1,0 +1,18 @@
+{
+    "name": "FirstLight.FLogger.Editor",
+    "rootNamespace": "",
+    "references": [
+        "FirstLight.FLogger"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

@@ -1,0 +1,59 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    <DefineConstants>UNITY_EDITOR</DefineConstants>
+    <EnableNETAnalyzers>false</EnableNETAnalyzers>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <EmitCompilerGeneratedFiles>true</EmitCompilerGeneratedFiles>
+    <CompilerGeneratedFilesOutputPath>$(MSBuildProjectDirectory)/obj/generated</CompilerGeneratedFilesOutputPath>
+    <UnityEditorPath Condition="'$(UnityEditorPath)' == ''">/Applications/Unity/Hub/Editor/6000.3.26f1/Unity.app/Contents/Resources</UnityEditorPath>
+    <UnityProjectPath>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)../../../BlastRoyale'))</UnityProjectPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="$(UnityProjectPath)/Assets/Src/FirstLight/Game/UIElements/ImageButton.cs" />
+    <Compile Include="$(UnityProjectPath)/Assets/Src/FirstLight/Game/UIElements/LabelOutlined.cs" />
+    <Compile Include="$(UnityProjectPath)/Assets/Src/FirstLight/Game/UIElements/ButtonOutlined.cs" />
+    <Compile Include="$(UnityProjectPath)/Assets/Src/FirstLight/Game/UIElements/AutoSizeLabel.cs" />
+    <Compile Include="$(UnityProjectPath)/Assets/Src/FirstLight/Game/UIElements/TooltipElement.cs" />
+    <Compile Include="$(UnityProjectPath)/Assets/Src/FirstLight/Game/UIElements/AnimatedImageElement.cs" />
+    <Compile Include="$(UnityProjectPath)/Assets/Src/FirstLight/Game/UIElements/GradientElement.cs" />
+    <Compile Include="$(UnityProjectPath)/Assets/Src/FirstLight/Game/UIElements/RadialProgressElement.cs" />
+    <Compile Include="$(UnityProjectPath)/Assets/Src/FirstLight/Game/UIElements/GlintElement.cs" />
+    <Compile Include="$(UnityProjectPath)/Assets/Src/FirstLight/Game/UIElements/SafeAreaElement.cs" />
+    <Compile Include="$(UnityProjectPath)/Assets/Src/FirstLight/Game/UIElements/DotsLoadingElement.cs" />
+    <Compile Include="$(UnityProjectPath)/Assets/Src/FirstLight/Game/UIElements/AngledContainerElement.cs" />
+    <Compile Include="$(UnityProjectPath)/Assets/Src/FirstLight/Game/UIElements/JoystickElement.cs" />
+    <Compile Include="$(UnityProjectPath)/Assets/Src/FirstLight/Game/UIElements/LocalizedLabel.cs" />
+    <Compile Include="$(UnityProjectPath)/Assets/Src/FirstLight/Game/UIElements/LocalizedButton.cs" />
+    <Compile Include="$(UnityProjectPath)/Assets/Src/FirstLight/Game/UIElements/LocalizedDropDown.cs" />
+    <Compile Include="$(UnityProjectPath)/Assets/Src/FirstLight/Game/UIElements/LocalizedRadioButtonGroup.cs" />
+    <Compile Include="$(UnityProjectPath)/Assets/Src/FirstLight/Game/UIElements/LocalizedSliderInt.cs" />
+    <Compile Include="$(UnityProjectPath)/Assets/Src/FirstLight/Game/UIElements/LocalizedToggle.cs" />
+    <Compile Include="$(UnityProjectPath)/Assets/Src/FirstLight/Game/UIElements/LocalizedRadioButton.cs" />
+    <Compile Include="$(UnityProjectPath)/Assets/Src/FirstLight/Game/UIElements/TabButton.cs" />
+    <Compile Include="$(UnityProjectPath)/Assets/Src/FirstLight/Game/Localization/GameLocalization.cs" />
+    <Compile Include="$(UnityProjectPath)/Assets/Src/FirstLight/Game/UIElements/GenericPopupElement.cs" />
+    <Compile Include="$(UnityProjectPath)/Assets/Src/FirstLight/Game/UIElements/LocalizedTextField.cs" />
+    <Compile Include="$(UnityProjectPath)/Assets/Src/FirstLight/Game/UIElements/PasswordFieldElement.cs" />
+    <Compile Include="$(UnityProjectPath)/Assets/Src/FirstLight/Game/UIElements/PopupElement.cs" />
+    <Compile Include="$(UnityProjectPath)/Assets/Src/FirstLight/Game/UIElements/SliderIntWithButtons.cs" />
+    <Compile Include="$(UnityProjectPath)/Assets/Src/FirstLight/Game/UIElements/ScreenHeaderElement.cs" />
+    <Compile Include="$(UnityProjectPath)/Assets/Src/FirstLight/Game/UIElements/Kit/KitButton.cs" />
+    <Compile Include="$(UnityProjectPath)/Assets/Src/FirstLight/Game/Presenters/Social/Elements/MatchSettingsButtonElement.cs" />
+    <Compile Include="$(UnityProjectPath)/Assets/Src/FirstLight/Game/Presenters/Social/Elements/MatchSettingsSelectionElement.cs" />
+    <Compile Include="CompileOnlyHelpers.cs" />
+    <UnityAssembly Include="$(UnityEditorPath)/Scripting/Managed/UnityEngine/*.dll" />
+    <Reference Include="@(UnityAssembly)">
+      <HintPath>%(Identity)</HintPath>
+    </Reference>
+    <NewtonsoftAssembly Include="$(UnityProjectPath)/Library/PackageCache/com.unity.nuget.newtonsoft-json@*/Runtime/Newtonsoft.Json.dll" />
+    <Reference Include="@(NewtonsoftAssembly)">
+      <HintPath>%(Identity)</HintPath>
+    </Reference>
+    <Reference Include="UniTask">
+      <HintPath>$(UnityProjectPath)/Library/ScriptAssemblies/UniTask.dll</HintPath>
+    </Reference>
+    <Analyzer Include="$(UnityEditorPath)/BuildPipeline/Unity.SourceGenerators/Unity.UIToolkit.SourceGenerator.dll" />
+  </ItemGroup>
+</Project>
