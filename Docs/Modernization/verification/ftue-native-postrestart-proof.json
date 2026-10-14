@@ -1,0 +1,17 @@
+{
+  "status": "native_postrestart_pass",
+  "editor": "6000.3.26f1",
+  "scene": "Assets/ModernizationProbe/FtueDeckScene_FREE_PLACEHOLDER_PROBE.unity",
+  "sceneHash": "03e78ac7e498703cfa0de1936add0b6e7fb625ff4d5b80c56bd099bed1e6718a",
+  "mapHash": "d126dca6a2ec33d05fbe0a7a4ec610c8e93e35ed146f804d5218d3a6cee5ad33",
+  "mapEntities": 17,
+  "mapEntityReferences": 17,
+  "nonNullViewReferences": 16,
+  "placeholders": 100,
+  "nativeMissingPrefabs": 0,
+  "nativeMissingScripts": 0,
+  "banners": [],
+  "colliderBake": "not_invoked",
+  "navMeshBake": "not_invoked",
+  "lightingRebake": "not_invoked"
+}

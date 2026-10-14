@@ -1,0 +1,64 @@
+{
+  "status": "native_postrestart_pass",
+  "mainApplied": true,
+  "editor": "6000.3.26f1",
+  "sceneAndPrefabFiles": [
+    {
+      "source": ".local/maze-native-probe/Assets/ModernizationProbe/MazeMayhemScene_FREE_PLACEHOLDER_PROBE.unity",
+      "destination": "BlastRoyale/Assets/AddressableResources/Maps/MazeMayhem/MazeMayhemScene.unity",
+      "sourceSha256": "1c59e21bd75c5fa303f08d107a348be5f6b596aa650453c610fed2831da03482",
+      "destinationSha256Precondition": "36f480e62fbfe74a7de5216ddf571eae49f017fca2cf608f63661febbaa7ae5d",
+      "keepDestinationMeta": true,
+      "sourceOwnGuidReferences": 0
+    },
+    {
+      "source": ".local/maze-native-probe/Assets/ModernizationProbe/Superstar_VisualPlaceholderProbe.prefab",
+      "destination": "BlastRoyale/Assets/AddressableResources/MainMenuAssets/Banners/Superstar.prefab",
+      "sourceSha256": "84ee65a024a01cd3a758d5c43dfacbb249650032927560e43c9ffa05a437be0a",
+      "destinationSha256Precondition": "c4902ac6bf7c13af185362a70e56dc8357ceb45ccc20f5df006098a6a584a298",
+      "keepDestinationMeta": true,
+      "sourceOwnGuidReferences": 0
+    },
+    {
+      "source": ".local/maze-native-probe/Assets/ModernizationProbe/Unicorn_VisualPlaceholderProbe.prefab",
+      "destination": "BlastRoyale/Assets/AddressableResources/MainMenuAssets/Banners/Unicorn.prefab",
+      "sourceSha256": "a5a89e2c9c797dbcb2f6481d781c5b625bd8520b473563d64d341ed527c062b6",
+      "destinationSha256Precondition": "48457423c56a902767f0ea963a6273a796b806088628bc2f32d743bce960b936",
+      "keepDestinationMeta": true,
+      "sourceOwnGuidReferences": 0
+    },
+    {
+      "source": ".local/maze-native-probe/Assets/ModernizationProbe/Demon_VisualPlaceholderProbe.prefab",
+      "destination": "BlastRoyale/Assets/AddressableResources/MainMenuAssets/Banners/Demon.prefab",
+      "sourceSha256": "08f1ef8e7341d189fea840c460443263acd28348ac9faf31ec99ef26ae572976",
+      "destinationSha256Precondition": "f8ca9367d10a4ecb2bf10f3d4024b09d1e888d1b3bc4622565f5dc51bf382cdd",
+      "keepDestinationMeta": true,
+      "sourceOwnGuidReferences": 0
+    },
+    {
+      "source": ".local/maze-native-probe/Assets/ModernizationProbe/Tombstone_VisualPlaceholderProbe.prefab",
+      "destination": "BlastRoyale/Assets/AddressableResources/MainMenuAssets/Banners/Tombstone.prefab",
+      "sourceSha256": "68d9f96785d96cf9b1e56a8aa7f3c699512cc25e2ee7f0a51fe2d65aa8df5ebb",
+      "destinationSha256Precondition": "ae822933edb1385933ad9ad8135e1a02fd7897ced3f4f816a931a3cf07540c94",
+      "keepDestinationMeta": true,
+      "sourceOwnGuidReferences": 0
+    },
+    {
+      "source": ".local/maze-native-probe/Assets/Art/ModernizationPlaceholders/Materials/PLACEHOLDER_MissingPrefab_Visual.mat",
+      "destination": "BlastRoyale/Assets/Art/ModernizationPlaceholders/Materials/PLACEHOLDER_MissingPrefab_Visual.mat",
+      "sourceSha256": "e93451c240daa2ae410b5d168fcf18bf49e9be889626a73a6ec803f50b94bc14",
+      "destinationMustNotExist": true,
+      "copyGeneratedMeta": true,
+      "generatedMetaSha256": "f978b78615040f64e0d051b6f0dc29718ceec2d295ac6b362c9f1f9e2882aac9"
+    }
+  ],
+  "mazeMapPolicy": "Import only actual native MapEntities from maze-native-baked-map.json; preserve newer converted Main triangle/navmesh payloads. Do not copy the full clone Map.asset.",
+  "prototypeExport": ".local/maze-native-probe/maze-native-baked-map.json",
+  "prototypeExportSha256": "ad2eca1acad889357502698e2085141347d3eacb980997da4a7e5a2da59ba33b",
+  "mapEntities": 708,
+  "mapEntityReferences": 708,
+  "nonnullViewReferences": 341,
+  "postrestartLog": "artifacts/maze-native-postrestart.log",
+  "noMainProcessOwnership": "Root only; this agent has no running Unity process.",
+  "mainAppliedFields": "scene visual/persisted view references and four prefabs only; MapEntities import follows separately"
+}

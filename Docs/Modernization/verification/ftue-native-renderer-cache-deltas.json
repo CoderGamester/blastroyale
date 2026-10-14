@@ -1,0 +1,14 @@
+{
+  "status": "native_generated_visual_cache_rows_only",
+  "originalCacheEntries": "preserved in order, real SerializedObject references captured; only cache rows whose native Renderer belongs to generated verified unit boxes are excluded from structural equality",
+  "containers": [
+    {
+      "identity": "scene:594247769:0",
+      "generatedVisualRows": [
+        5
+      ],
+      "reason": "native_RenderersContainer_UpdateRenderers_includes_generated_unit_boxes"
+    }
+  ],
+  "uniqueContainers": 1
+}

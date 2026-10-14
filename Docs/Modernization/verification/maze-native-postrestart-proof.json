@@ -1,0 +1,47 @@
+{
+  "status": "native_postrestart_pass",
+  "editor": "6000.3.26f1",
+  "scene": "Assets/ModernizationProbe/MazeMayhemScene_FREE_PLACEHOLDER_PROBE.unity",
+  "sceneHash": "1c59e21bd75c5fa303f08d107a348be5f6b596aa650453c610fed2831da03482",
+  "mapHash": "650cc9a2c5490a23047669e9080039fcb9ac0a004eaca11e5559d6d581ca6218",
+  "mapEntities": 708,
+  "mapEntityReferences": 708,
+  "nonNullViewReferences": 341,
+  "placeholders": 681,
+  "nativeMissingPrefabs": 0,
+  "nativeMissingScripts": 0,
+  "banners": [
+    {
+      "name": "Superstar",
+      "path": "Assets/ModernizationProbe/Superstar_VisualPlaceholderProbe.prefab",
+      "hash": "84ee65a024a01cd3a758d5c43dfacbb249650032927560e43c9ffa05a437be0a",
+      "nativeMissingPrefabCount": 0,
+      "nativeMissingScriptCount": 0
+    },
+    {
+      "name": "Unicorn",
+      "path": "Assets/ModernizationProbe/Unicorn_VisualPlaceholderProbe.prefab",
+      "hash": "a5a89e2c9c797dbcb2f6481d781c5b625bd8520b473563d64d341ed527c062b6",
+      "nativeMissingPrefabCount": 0,
+      "nativeMissingScriptCount": 0
+    },
+    {
+      "name": "Demon",
+      "path": "Assets/ModernizationProbe/Demon_VisualPlaceholderProbe.prefab",
+      "hash": "08f1ef8e7341d189fea840c460443263acd28348ac9faf31ec99ef26ae572976",
+      "nativeMissingPrefabCount": 0,
+      "nativeMissingScriptCount": 0
+    },
+    {
+      "name": "Tombstone",
+      "path": "Assets/ModernizationProbe/Tombstone_VisualPlaceholderProbe.prefab",
+      "hash": "68d9f96785d96cf9b1e56a8aa7f3c699512cc25e2ee7f0a51fe2d65aa8df5ebb",
+      "nativeMissingPrefabCount": 0,
+      "nativeMissingScriptCount": 0
+    }
+  ],
+  "colliderBake": "not_invoked",
+  "navMeshBake": "not_invoked",
+  "lightingRebake": "not_invoked",
+  "mainApplied": false
+}

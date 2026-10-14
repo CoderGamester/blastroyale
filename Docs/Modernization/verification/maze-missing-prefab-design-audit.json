@@ -1,0 +1,15 @@
+{
+  "status": "design_only_no_mutation",
+  "scene": "BlastRoyale/Assets/AddressableResources/Maps/MazeMayhem/MazeMayhemScene.unity",
+  "missing_prefab_guids": 65,
+  "missing_prefab_instances": 681,
+  "full_position_xyz_overrides": 681,
+  "full_rotation_xyzw_overrides": 681,
+  "full_scale_xyz_overrides": 195,
+  "instances_with_added_components": 662,
+  "instances_with_added_gameobjects": 6,
+  "missing_source_scale_unknown": 486,
+  "native_missing_prefab_unpack_roundtrip": "not_run",
+  "original_child_ids": "not_invented",
+  "missing_nonprefab_references": "excluded"
+}

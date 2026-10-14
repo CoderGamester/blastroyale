@@ -1,0 +1,27 @@
+# Native Maze visual and prototype restoration
+
+**Isolated acceptance passed; Main integration belongs to the root.** Unity 6000.3.26f1 imported an isolated COW copy containing the actual Q3 SDK, game sources and original MonoScript metadata. A separate Unity process subsequently verified the final scene/prefab artifacts. Main scene/prefab files remain unchanged at this handoff.
+
+## Visual preservation phase
+
+Native `UnpackPrefabInstance` retained **23,835 objects with durable IDs** and **3,157 temporary objects created by Unity for missing source content**. Their available hierarchy, names/active/tag/layer/static state, serialized component values and references were compared before/after native unpack/save/reopen. Authored durable IDs remained unchanged; Unity assigned IDs to temporary/new objects. **314 generated `DontSaveInEditor` components** were excluded from persisted-object acceptance, including TMP's generated mesh component.
+
+The scene's **681 missing prefab roots, from 65 source GUIDs, became zero**. Each receives a clearly named visual-only unit cube child and a real native URP Unlit material. Generated physics colliders are removed. Original source meshes, source base scale and missing hierarchies are not reconstructed. All **41 Map/NavMesh/BinaryData asset file hashes** and the native lighting settings snapshot remained unchanged in this phase. No collision, navmesh or lighting rebake ran. [Exact preservation result](verification/maze-native-visual-roundtrip.json).
+
+Exactly three missing Bakery light/storage components were removed through native `GameObjectUtility.RemoveMonoBehavioursWithMissingScript`, with owner/name/count/script-field prechecks. Native scene save also omitted their three newly unreferenced ownerless Bakery group records. The full original scene and all six exact records/SHAs remain in the ignored `.local/savepoints/maze-bakery-retirement` savepoint. DELETED-ASSETS records removal of Bakery; light/sky/storage/group serialized field fingerprints corroborate identity. The omitted original Bakery package contained no available historical GUID-to-filename metadata, so that mapping is not claimed. Existing Unity directional light, render settings and lightmaps remain; lighting quality/rebake acceptance has not run.
+
+Four banner prefabs also pass native unpack/save/reload, retaining **22 durable objects for Superstar** and **18 each for Unicorn/Demon/Tombstone**, plus one temporary geometry root each. Superstar's separate particle-renderer mesh referenced the same missing model. Its actual native mesh setter replaces only that mesh with the existing verified cube asset; all other renderer fields remain unchanged. Earlier exclusion was a checker bug: `EditorJsonUtility` puts fields inside the `ParticleSystemRenderer` envelope. Correct nested comparison and fresh-process import pass. These are visual approximations, not recovered original banner models. [Banner result](verification/banner-native-probe-results.json).
+
+## Separate native prototype phase
+
+The original/recovered Maze `MapEntities` list was empty. Actual `QuantumMapDataBaker.BakePrototypes` now serializes **708 active scene `QuantumEntityPrototype` sources**; zero inactive sources were omitted. The resulting native component counts are 708 Transform2D, 314 CollectablePlatformSpawner, 233 PlayerSpawner, 66 AirDropSpawner, 58 StormAnchor, 27 each PhysicsCollider2D/PhysicsCallbacks2D/VisibilityArea, and 10 EntityGroup. [Scene inventory](verification/maze-native-prototype-inventory.json), [native bake result](verification/maze-native-prototype-bake.json).
+
+This is an intentional behavioral delta, separate from visual preservation. The native scene now persists **708 map view-reference slots**, **341 non-null**, matching the baked entity order. Save/reload and another fresh Unity process verify those references and the actual asset types; no missing native prefab/script component remains in the resulting Maze or four banner artifacts. [Reference roundtrip](verification/maze-native-map-entity-reference-proof.json), [fresh-process acceptance](verification/maze-native-postrestart-proof.json).
+
+Collider/navmesh baking was never invoked. All 40 other map/navmesh asset files stayed unchanged during prototype baking. The root subsequently integrated genuine triangle/navmesh conversions into Main. Therefore integrate **only the actual native MapEntities payload** into that newer Main map; copying the whole clone Map.asset would overwrite legitimate newer binary data.
+
+## Integration and limits
+
+[Integration manifest](verification/maze-native-integration-handoff.json) lists exact artifact paths, SHA preconditions and destination metadata policy. Keep the original scene/banner `.meta` GUIDs; generated artifacts contain zero references to their scratch-only own GUIDs. Include the new Unity-created URP material and its generated `.meta`. Source scene precondition is `36f480e62fbfe74a7de5216ddf571eae49f017fca2cf608f63661febbaa7ae5d`; final scene SHA is `1c59e21bd75c5fa303f08d107a348be5f6b596aa650453c610fed2831da03482`.
+
+Root must integrate while Main is idle and perform actual Main import/reference acceptance. Native simulation sessions consume the prototype-only payload in the separately converted scratch catalog; their results are owned by the backend agent. This work does not claim full rendered-game, lighting, device, cloud-save or UI/view-lifecycle acceptance. Existing missing visual assets outside this bounded subset remain an asset-audit limitation.

@@ -1,0 +1,668 @@
+{
+  "status": "native_full_roundtrip_pass",
+  "editor": "6000.3.26f1",
+  "source": "Assets/AddressableResources/Maps/FtueDeck/FtueDeckScene.unity",
+  "target": "Assets/ModernizationProbe/FtueDeckScene_FREE_PLACEHOLDER_PROBE.unity",
+  "sourceHash": "0689780ea1c94d0ff3a127231fa44c19abad2fc0f3417fc1eb55c02fea73589a",
+  "targetHash": "82c0f96cfea8311b0e0b8699d786466f5d80ecf6f3a97ad2be300b6befe65f30",
+  "missingRootsBefore": 100,
+  "missingRootsAfter": 0,
+  "authoredObjects": 1802,
+  "retainedTemporaryObjects": 192,
+  "editorOnlyTransientComponentsExcluded": 5,
+  "retiredBakeryRecordHashes": {
+    "275781418": "266773cf5f2d2d71b830f2feb8aa77fc4d39837c4b628b86e8ace45aff495d58",
+    "734784427": "9558fea04ace52efcb5053c69c28b347e42b07987796fbd134865891711fea08",
+    "821118485": "a1289bed73626d18302d9646809b956b8695783ece0fcfbfc98e64f69bd4c412",
+    "1541802024": "39560c4907e529bec214153877dc83695dcfb378f09f7fb6efe39ffc0d8c1da1",
+    "1589549743": "a7a9cac3a66f142a7fd1771f5a4d9113d5f5185cda624520c1c78f8d47c2dc25",
+    "1630253437": "c40d86d0aa1075319e0eae1ece744206001eaed587b7a3b5bd47cdb8d92f1e21"
+  },
+  "nativeLightingSnapshotHash": "165639cec12b9d920263665c7066155c624ec2e585910949b11bb6c64912bf96",
+  "lightingRebake": "not_run",
+  "nativeCollisionAssetHashes": {
+    "Assets/AddressableResources/Maps/Battlelands/BattlelandsMap.asset": "5fc9db2b40d030cdc707885c19c238d962556f9ddb43eede992efff262c7b1ed",
+    "Assets/AddressableResources/Maps/Battlelands/BattlelandsMap_mesh.asset": "702a3ca947c98593705386eb8a705f41350b5970226e163d828344160db5890f",
+    "Assets/AddressableResources/Maps/Battlelands/BattlelandsMap_NavMesh.asset": "3af687fd2188f4cca0d2dad72a18aa78670b456ecc7127a1c85338270101d77e",
+    "Assets/AddressableResources/Maps/Battlelands/BattlelandsMap_NavMesh_data.asset": "32b65aed1f604c051a33bace5bc9dc0926491390764c3009d1d325b9ba0e6cca",
+    "Assets/AddressableResources/Maps/Cemetery/Cemetery.asset": "f712a3f9ab6a9b9e6d5ba4185839f32765d077554909bd216e81b0d3a38c215b",
+    "Assets/AddressableResources/Maps/Cemetery/Cemetery_mesh.asset": "682acecb0e18b0251f4cba9fcf5c68f1d2a25c1c57661ab264fb7c74a9997e0c",
+    "Assets/AddressableResources/Maps/Cemetery/Cemetery_NavMesh.asset": "e95e4a536788d775b21679d8098125229d6937407f647d68cf5a70534ece64d7",
+    "Assets/AddressableResources/Maps/Cemetery/Cemetery_NavMesh_data.asset": "7f9d84d26bf3e85c387f2df2cc1055e8d39720ff7be6c7b38439ca8d121ef7da",
+    "Assets/AddressableResources/Maps/District/District.asset": "ce869a97fd44794bb0f173e348f7c75970187573d8ed26a4c1bb337a7d427066",
+    "Assets/AddressableResources/Maps/District/District_mesh.asset": "f25fdad37b0984a7312565f54b5e92c577bf85f58705d278dfe6a3bb07f97e4d",
+    "Assets/AddressableResources/Maps/District/District_NavMesh.asset": "e7ae274116dca9b514a26a6102702fa916f2473df050ae8e8ce8ef003845abbc",
+    "Assets/AddressableResources/Maps/District/District_NavMesh_data.asset": "c4d9035247004c67552211b6fa8aa025ed9a9b8dc540a5aaad58f53197d5ce94",
+    "Assets/AddressableResources/Maps/Fortress/Fortress.asset": "4bf3475739c4d308b5601042207022280744fe5889659987a5cbbee399c057ea",
+    "Assets/AddressableResources/Maps/Fortress/Fortress_mesh.asset": "74a08231a1035410bcdc3b3189e1ebccf39ab030ebbde08af7761686cc36093b",
+    "Assets/AddressableResources/Maps/Fortress/Fortress_NavMesh.asset": "63ec086e27b5404b32b8869e9033431becdfbe8ed14cc551a97ca38795c59441",
+    "Assets/AddressableResources/Maps/Fortress/Fortress_NavMesh_data.asset": "be6b2ac86fbf4376ca155b814ece8de38a4b12dfc6b63c04888381f2843449c4",
+    "Assets/AddressableResources/Maps/FtueDeck/FtueDeck.asset": "88bd6324713e272bdb89c33dcd696e757ca99699e3cd3703b4f9967f65c7f391",
+    "Assets/AddressableResources/Maps/FtueDeck/FtueDeck_mesh.asset": "0c4d7febc47759e07adb1d435dc9c06e970786b75309cc34bc927041fef6e312",
+    "Assets/AddressableResources/Maps/FtueDeck/FtueDeck_NavMesh.asset": "b0e2d688212de13ba9365507d0c1aac326627ff3737a2cd805025eb263ca163a",
+    "Assets/AddressableResources/Maps/FtueDeck/FtueDeck_NavMesh_data.asset": "f903e27874d4f88d47df73e8c006315e12dfdc06e4ae97a26134b2d76e082e40",
+    "Assets/AddressableResources/Maps/IslandOne/IslandOne.asset": "79998cd4d384beab37ff15e7dba730caeef9e82eea35c284c29ecaa98fdb78f7",
+    "Assets/AddressableResources/Maps/IslandOne/IslandOne_mesh.asset": "3331c506d176001da6f5fd839d4583139a8d5f13c763c96ed456ec4827a88982",
+    "Assets/AddressableResources/Maps/IslandOne/IslandOne_Navmesh Baking.asset": "961b5c327417c132b5d807cb04dcde197b2a7988c388bb2ed7b9f74f09b2a349",
+    "Assets/AddressableResources/Maps/IslandOne/IslandOne_Navmesh Baking_data.asset": "162941377527506094a2dc393383a8ad877cdc502fcf2225453ca605cd72899e",
+    "Assets/AddressableResources/Maps/Islands/IslandsMap.asset": "1b076b39e0bd31eb3ba74ef2eebace9284f9b3185a6e2b6b1037bcbb6896b9c2",
+    "Assets/AddressableResources/Maps/Islands/IslandsMap_mesh.asset": "4ad801ab47ec93fb911c041aace7a19b742126e811fe0ed9d2291027ee80a789",
+    "Assets/AddressableResources/Maps/Islands/IslandsMap_NavMesh.asset": "3a2022495f2518788c7405401397951c7c7e283fc82b625fddf561f1935a699f",
+    "Assets/AddressableResources/Maps/Islands/IslandsMap_NavMesh_data.asset": "555e2b9fd086f48cea685e34370df5916a361be574cf050a34e3eb70cc4e9302",
+    "Assets/AddressableResources/Maps/MazeMayhem/MazeMayhem.asset": "650cc9a2c5490a23047669e9080039fcb9ac0a004eaca11e5559d6d581ca6218",
+    "Assets/AddressableResources/Maps/MazeMayhem/MazeMayhem_mesh.asset": "5c151a61ccc30dc78fce6098bbb18738961087d6529cc1010ee29ab1d06e6591",
+    "Assets/AddressableResources/Maps/MazeMayhem/MazeMayhem_Navmesh Baking.asset": "4710db0751faded7046fa795b8d3c2508d5e4fad651cfeae38294327d0f61944",
+    "Assets/AddressableResources/Maps/MazeMayhem/MazeMayhem_Navmesh Baking_data.asset": "8edbd209319f8747e52e35c9e68cb6d912356ac56006643fbcfc515ff91a4932",
+    "Assets/AddressableResources/Maps/Test/TestScene.asset": "96265a133454fcd1170e99842a3417e12da3b0c7a8664c99ebbc1a42b5f2a7b0",
+    "Assets/AddressableResources/Maps/Test/TestScene_mesh.asset": "4cbfaf371de711d31d72fbf16c29d843cd4b61475fbc02e99235d3fd6cd5fde0",
+    "Assets/AddressableResources/Maps/Test/TestScene_NavMesh.asset": "437d1d523d7b233082f1cb499773a158f9638d70085ec3579062ca34508c416f",
+    "Assets/AddressableResources/Maps/Test/TestScene_NavMesh_data.asset": "c9d77f6c87d685968faeb50e8f64aab9ee96c732d5bc63a3c34bd5758687f548",
+    "Assets/AddressableResources/Maps/TestAssets/NavMeshAsset.asset": "f8571d78fd7fecd6cdf991f36eebf07d4a35d4dbe560bef72b805f65e24c18f3",
+    "Assets/AddressableResources/Maps/TestAssets/TestAssetsMap.asset": "40be533ec3e8c648ce8d791c7242b7a72c44ae1922a7f75f0ce2670ff79f5843",
+    "Assets/AddressableResources/Maps/TestAssets/TestAssetsMap_mesh.asset": "37abe9b67c5bb24e5b51dbc561b01439f97935dd6273e207f66e0e32d80db7a5",
+    "Assets/QuantumUser/Resources/QuantumMap.asset": "c0453f0b22a55baa500bb015c71be3d59e1ac5d73f7ced6b2a65d061ff216540",
+    "Assets/QuantumUser/Resources/QuantumMap_mesh.asset": "ef243b6a595db932a2c6c5243db36d22fcf6552b3711cbfafb9c496f0b9d4dfb"
+  },
+  "restored": [
+    {
+      "identity": "scene:1024294273:0",
+      "originalName": "SM_Env_Wall_Damaged_02 (3) (Missing Prefab with guid: 08545bfec25d6e24584b83015f38bde3)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1043318008:0",
+      "originalName": "SM_Prop_Wall_Brick_Pillar_01 (Missing Prefab with guid: a311ccb500e121d40ae9db65652d6cd3)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1050418776:0",
+      "originalName": "Brownstone_4_PRFB (7) (Missing Prefab with guid: 9f225aae79f0f174897f7c2ee8144599)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:115593172:0",
+      "originalName": "SM_Prop_Wall_Brick_01 (2) (Missing Prefab with guid: 7dad9049c23a35a4aabc1bada811b110)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1159657292:0",
+      "originalName": "SM_Prop_Wall_Brick_01 (4) (Missing Prefab with guid: 7dad9049c23a35a4aabc1bada811b110)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1160135733:0",
+      "originalName": "Prop_BoatProp_03 (19) (Missing Prefab with guid: a145129118512d942a233ec0d60fe7bd)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1181405642:0",
+      "originalName": "SM_Env_Road_Asphalt_Long_01 (2) (Missing Prefab with guid: 7e54ae70541a75a4f966aa80a36e3072)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1238246047:0",
+      "originalName": "SM_Env_Rock_Brown_03 (8) (Missing Prefab with guid: 2a2cf743f71e80a43b60ea9d614f9f69)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:125724166:0",
+      "originalName": "SM_Env_Rock_Brown_03 (22) (Missing Prefab with guid: 2a2cf743f71e80a43b60ea9d614f9f69)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1275631496:0",
+      "originalName": "SM_Prop_Wall_Brick_Pillar_01 (2) (Missing Prefab with guid: a311ccb500e121d40ae9db65652d6cd3)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1300216705:0",
+      "originalName": "SM_Env_Rock_Brown_03 (12) (Missing Prefab with guid: 2a2cf743f71e80a43b60ea9d614f9f69)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1318540369:0",
+      "originalName": "SM_Env_Rock_Brown_03 (3) (Missing Prefab with guid: 2a2cf743f71e80a43b60ea9d614f9f69)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:133261244:0",
+      "originalName": "SM_Env_Rock_Brown_03 (7) (Missing Prefab with guid: 2a2cf743f71e80a43b60ea9d614f9f69)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:135228084:0",
+      "originalName": "SM_Env_Road_Asphalt_Bend_01 (1) (Missing Prefab with guid: 063fdbadef70a384db7c25621827dd80)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1352927909:0",
+      "originalName": "SM_Prop_Wall_Brick_01 (3) (Missing Prefab with guid: 7dad9049c23a35a4aabc1bada811b110)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1359072598:0",
+      "originalName": "SM_Item_ToiletRoll_01 (Missing Prefab with guid: 056d2354163c88e4dada4538e066648a)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1374407625:0",
+      "originalName": "Rock_Small_3__PRFB (2) (Missing Prefab with guid: 5a32df6979714c44d93b2b4d68216ca7)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1393243783:0",
+      "originalName": "Env_Wharf (6) (Missing Prefab with guid: eaf36630404a7b84a915e3eec4a58863)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1402651496:0",
+      "originalName": "SM_Prop_Wall_Brick_Pillar_01 (6) (Missing Prefab with guid: a311ccb500e121d40ae9db65652d6cd3)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1453139086:0",
+      "originalName": "SM_Env_Road_Asphalt_Long_01 (1) (Missing Prefab with guid: 7e54ae70541a75a4f966aa80a36e3072)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1464851567:0",
+      "originalName": "Prop_BoatProp_03 (18) (Missing Prefab with guid: a145129118512d942a233ec0d60fe7bd)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1480446880:0",
+      "originalName": "SM_Prop_FlowerPot_01 (Missing Prefab with guid: 21b9859735f749442899d7d2a0ee1e86)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:149100650:0",
+      "originalName": "SM_Env_Rock_Brown_03 (9) (Missing Prefab with guid: 2a2cf743f71e80a43b60ea9d614f9f69)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1498976692:0",
+      "originalName": "SM_Env_Rock_Brown_03 (19) (Missing Prefab with guid: 2a2cf743f71e80a43b60ea9d614f9f69)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1556471252:0",
+      "originalName": "SM_Env_Wall_Damaged_02 (1) (Missing Prefab with guid: 08545bfec25d6e24584b83015f38bde3)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1612819484:0",
+      "originalName": "Building_Outhouse (Missing Prefab with guid: 1ff760a33de1bda47b0da96a4a80fe53)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1646245201:0",
+      "originalName": "SM_Env_Road_Asphalt_Long_01 (4) (Missing Prefab with guid: 7e54ae70541a75a4f966aa80a36e3072)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1652120020:0",
+      "originalName": "SM_Prop_Wall_Brick_01 (1) (Missing Prefab with guid: 7dad9049c23a35a4aabc1bada811b110)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1661834360:0",
+      "originalName": "Rock_Medium_1_PRFB (Missing Prefab with guid: 5180f434c4156664a893b124baee49d7)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:166189551:0",
+      "originalName": "SM_Prop_Wall_Brick_Pillar_01 (4) (Missing Prefab with guid: a311ccb500e121d40ae9db65652d6cd3)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1677550419:0",
+      "originalName": "WoodenBarrierModel (Missing Prefab with guid: db69a366b68cd164698f1b52823a5ccc)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1696347550:0",
+      "originalName": "SM_Prop_Wall_Brick_01 (14) (Missing Prefab with guid: 7dad9049c23a35a4aabc1bada811b110)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1713742390:0",
+      "originalName": "SM_Prop_Wall_Brick_01 (8) (Missing Prefab with guid: 7dad9049c23a35a4aabc1bada811b110)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1736749317:0",
+      "originalName": "SM_Env_Road_Asphalt_Long_01 (Missing Prefab with guid: 7e54ae70541a75a4f966aa80a36e3072)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1756557735:0",
+      "originalName": "SM_Prop_Wall_Brick_01 (6) (Missing Prefab with guid: 7dad9049c23a35a4aabc1bada811b110)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:17584032:0",
+      "originalName": "SM_Prop_Wall_Brick_01 (18) (Missing Prefab with guid: 7dad9049c23a35a4aabc1bada811b110)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1767922154:0",
+      "originalName": "SM_Env_Rock_Brown_03 (5) (Missing Prefab with guid: 2a2cf743f71e80a43b60ea9d614f9f69)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1776844523:0",
+      "originalName": "Rock_Medium_1_PRFB (1) (Missing Prefab with guid: 5180f434c4156664a893b124baee49d7)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1778156816:0",
+      "originalName": "SM_Prop_Wall_Brick_Pillar_01 (7) (Missing Prefab with guid: a311ccb500e121d40ae9db65652d6cd3)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:181451248:0",
+      "originalName": "SM_Env_Rock_Brown_03 (10) (Missing Prefab with guid: 2a2cf743f71e80a43b60ea9d614f9f69)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1820687653:0",
+      "originalName": "SM_Env_Road_Asphalt_Bend_01 (3) (Missing Prefab with guid: 063fdbadef70a384db7c25621827dd80)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:185461876:0",
+      "originalName": "Rock_Small_3__PRFB (Missing Prefab with guid: 5a32df6979714c44d93b2b4d68216ca7)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1874762445:0",
+      "originalName": "SM_Env_Road_Asphalt_Bend_01 (Missing Prefab with guid: 063fdbadef70a384db7c25621827dd80)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1880474148:0",
+      "originalName": "SM_Env_Rock_Brown_03 (1) (Missing Prefab with guid: 2a2cf743f71e80a43b60ea9d614f9f69)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1882450130:0",
+      "originalName": "SM_Prop_Hologram_Bottle_03 (Missing Prefab with guid: 379eabae3615bb140990344ce8a9a9f9)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1895390835:0",
+      "originalName": "Building_SmokeStack_02 (Missing Prefab with guid: 28d80922412eb6a449417b1fa75adf83)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1905619313:0",
+      "originalName": "SM_Prop_Barrel_01 (Missing Prefab with guid: a151dc5f94562c34d801de99d41cab93)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1938216342:0",
+      "originalName": "SM_Prop_Wall_Brick_Pillar_01 (3) (Missing Prefab with guid: a311ccb500e121d40ae9db65652d6cd3)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:194396560:0",
+      "originalName": "SM_Env_Road_Asphalt_Bend_01 (4) (Missing Prefab with guid: 063fdbadef70a384db7c25621827dd80)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:195913682:0",
+      "originalName": "SM_Env_Rock_Brown_03 (4) (Missing Prefab with guid: 2a2cf743f71e80a43b60ea9d614f9f69)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1975027270:0",
+      "originalName": "Prop_BoatProp_03 (20) (Missing Prefab with guid: a145129118512d942a233ec0d60fe7bd)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1981002480:0",
+      "originalName": "SM_Env_Rock_Brown_03 (23) (Missing Prefab with guid: 2a2cf743f71e80a43b60ea9d614f9f69)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1999054026:0",
+      "originalName": "SM_Env_Rock_Brown_03 (11) (Missing Prefab with guid: 2a2cf743f71e80a43b60ea9d614f9f69)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:2019511219:0",
+      "originalName": "SM_Prop_Wall_Brick_01 (17) (Missing Prefab with guid: 7dad9049c23a35a4aabc1bada811b110)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:2037136166:0",
+      "originalName": "SM_Env_Road_Asphalt_Long_01 (5) (Missing Prefab with guid: 7e54ae70541a75a4f966aa80a36e3072)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:2059334137:0",
+      "originalName": "SM_Prop_Hologram_Burger_03 (Missing Prefab with guid: c1141c296070e564bbdd3c2eb6bc0c30)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:2089474421:0",
+      "originalName": "SM_Env_Rock_Brown_02 (1) (Missing Prefab with guid: c1d31e2346400f2429cd5d706ff1bb1e)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:2123757285:0",
+      "originalName": "Building_SmokeStack_02 (1) (Missing Prefab with guid: 28d80922412eb6a449417b1fa75adf83)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:2134248584:0",
+      "originalName": "SM_Prop_Trestle_Table_01 (Missing Prefab with guid: 77b4404182943d2428c3ba2bb2b86b5e)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:216244815:0",
+      "originalName": "SM_Prop_Wall_Brick_Pillar_01 (1) (Missing Prefab with guid: a311ccb500e121d40ae9db65652d6cd3)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:275541027:0",
+      "originalName": "SM_Prop_Wall_Brick_01 (15) (Missing Prefab with guid: 7dad9049c23a35a4aabc1bada811b110)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:297148200:0",
+      "originalName": "SM_Env_Road_Asphalt_Long_01 (3) (Missing Prefab with guid: 7e54ae70541a75a4f966aa80a36e3072)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:299100170:0",
+      "originalName": "SM_Bld_Bunker_Wall_Slab_x2_01 (17) (Missing Prefab with guid: 64fac78d375aa1a48a6d9a8221a30e54)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:345678802:0",
+      "originalName": "SM_Env_Rock_Brown_03 (13) (Missing Prefab with guid: 2a2cf743f71e80a43b60ea9d614f9f69)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:373170765:0",
+      "originalName": "SM_Veh_Pickup_01_ToolBox (Missing Prefab with guid: e8fd39c4d5c5f964aaeea9ddf1aa1e58)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:38401865:0",
+      "originalName": "SM_Env_Rock_Brown_03 (6) (Missing Prefab with guid: 2a2cf743f71e80a43b60ea9d614f9f69)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:396663509:0",
+      "originalName": "SM_Plant_Mushrooms_05 (Missing Prefab with guid: ac42f59b9c44c274b9612f7df5333cf3)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:406005567:0",
+      "originalName": "SM_Prop_Wall_Brick_01 (11) (Missing Prefab with guid: 7dad9049c23a35a4aabc1bada811b110)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:416312794:0",
+      "originalName": "SM_Env_Rock_Brown_03 (21) (Missing Prefab with guid: 2a2cf743f71e80a43b60ea9d614f9f69)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:438468785:0",
+      "originalName": "SM_Prop_Hologram_Pizza_01 (Missing Prefab with guid: 2c73cdfb2428d34439778c7b24037932)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:439614802:0",
+      "originalName": "SM_Prop_Wall_Brick_01 (12) (Missing Prefab with guid: 7dad9049c23a35a4aabc1bada811b110)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:43980979:0",
+      "originalName": "SM_Env_Wall_Damaged_02 (Missing Prefab with guid: 08545bfec25d6e24584b83015f38bde3)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:448780325:0",
+      "originalName": "SM_Prop_Wall_Brick_01 (9) (Missing Prefab with guid: 7dad9049c23a35a4aabc1bada811b110)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:450680666:0",
+      "originalName": "SM_Prop_Wall_Brick_01 (13) (Missing Prefab with guid: 7dad9049c23a35a4aabc1bada811b110)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:458003346:0",
+      "originalName": "SM_Prop_Wall_Brick_01 (16) (Missing Prefab with guid: 7dad9049c23a35a4aabc1bada811b110)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:458689004:0",
+      "originalName": "SM_Prop_Wall_Brick_01 (10) (Missing Prefab with guid: 7dad9049c23a35a4aabc1bada811b110)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:475080349:0",
+      "originalName": "Brownstone_4_PRFB (8) (Missing Prefab with guid: 9f225aae79f0f174897f7c2ee8144599)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:504084134:0",
+      "originalName": "SM_Prop_Wall_Brick_01 (5) (Missing Prefab with guid: 7dad9049c23a35a4aabc1bada811b110)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:519555985:0",
+      "originalName": "SM_Env_Rock_Brown_03 (15) (Missing Prefab with guid: 2a2cf743f71e80a43b60ea9d614f9f69)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:543314667:0",
+      "originalName": "SM_Bld_Bunker_Wall_Slab_x2_01 (4) (Missing Prefab with guid: 64fac78d375aa1a48a6d9a8221a30e54)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:557369745:0",
+      "originalName": "Rock_Small_3__PRFB (1) (Missing Prefab with guid: 5a32df6979714c44d93b2b4d68216ca7)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:577000636:0",
+      "originalName": "SM_Chr_Attach_Hat_Shark_01 (Missing Prefab with guid: 87766464316015042857b7ae2ac09b7a)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:606484339:0",
+      "originalName": "SM_Env_Rock_Brown_03 (Missing Prefab with guid: 2a2cf743f71e80a43b60ea9d614f9f69)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:61825975:0",
+      "originalName": "Building_Lighthouse_01 (Missing Prefab with guid: ce442432fe375254e8912e4dd3a53a53)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:630099426:0",
+      "originalName": "SM_Prop_Wall_Brick_Pillar_01 (8) (Missing Prefab with guid: a311ccb500e121d40ae9db65652d6cd3)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:65782841:0",
+      "originalName": "Vehicle_FishingBoat_07 (Missing Prefab with guid: ab5845810e9a17d47b4fda716ea338df)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:662366655:0",
+      "originalName": "SM_Env_Rock_Brown_03 (16) (Missing Prefab with guid: 2a2cf743f71e80a43b60ea9d614f9f69)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:70025034:0",
+      "originalName": "SM_Env_Road_Asphalt_Bend_01 (2) (Missing Prefab with guid: 063fdbadef70a384db7c25621827dd80)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:742543536:0",
+      "originalName": "Vehicle_Sailboat_01 (Missing Prefab with guid: f3f3c144a36edb34d95cc4bf1406a9f0)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:761432788:0",
+      "originalName": "SM_Env_Rock_Brown_03 (18) (Missing Prefab with guid: 2a2cf743f71e80a43b60ea9d614f9f69)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:766765485:0",
+      "originalName": "SM_Prop_Wall_Brick_Pillar_01 (5) (Missing Prefab with guid: a311ccb500e121d40ae9db65652d6cd3)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:802258454:0",
+      "originalName": "SM_Prop_CardboardBox_Stack_01 (Missing Prefab with guid: d2cc4d86402025a4da8fe1d92ada788d)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:842521041:0",
+      "originalName": "SM_Env_Rock_Brown_03 (20) (Missing Prefab with guid: 2a2cf743f71e80a43b60ea9d614f9f69)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:848792340:0",
+      "originalName": "SM_Prop_Bottle_01 (Missing Prefab with guid: 21e1771c27a671147b188378c5b1da6e)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:881121410:0",
+      "originalName": "SM_Env_Rock_Brown_03 (2) (Missing Prefab with guid: 2a2cf743f71e80a43b60ea9d614f9f69)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:898998818:0",
+      "originalName": "Building_Boatshed_04 (Missing Prefab with guid: 3617340804c5c3842b19a6cef5997e2c)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:907266075:0",
+      "originalName": "SM_Prop_Wall_Brick_01 (7) (Missing Prefab with guid: 7dad9049c23a35a4aabc1bada811b110)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:919045124:0",
+      "originalName": "SM_Env_Rock_Brown_03 (17) (Missing Prefab with guid: 2a2cf743f71e80a43b60ea9d614f9f69)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:978881267:0",
+      "originalName": "Building_Boatshed_Ramp (Missing Prefab with guid: 102069e262e05344eb69601534e15935)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:984756819:0",
+      "originalName": "SM_Env_Rock_Brown_03 (14) (Missing Prefab with guid: 2a2cf743f71e80a43b60ea9d614f9f69)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    }
+  ]
+}

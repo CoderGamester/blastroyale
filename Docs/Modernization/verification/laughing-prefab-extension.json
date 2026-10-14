@@ -1,0 +1,8 @@
+{
+  "reason": "Original valid YAML PrefabInstance was stripped of its .prefab extension; native Addressables rejected its file type.",
+  "source": "BlastRoyale/Assets/AddressableResources/Collections/Flags/Flag_Flag_Laughing",
+  "destination": "BlastRoyale/Assets/AddressableResources/Collections/Flags/Flag_Flag_Laughing.prefab",
+  "sha256": "bbd23bc63ae538087bab48eaa321eee2ff353a70ac3aa76a9dc815ff92e597e3",
+  "meta_sha256": "8495a99f3d28a61f3589139eb18a108d892ffa66276aa20f59c5b375020e7821",
+  "unity_guid": "c4a9e1f29fb759f4ca2e5969635fdeb3"
+}

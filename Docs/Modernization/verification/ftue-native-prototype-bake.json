@@ -1,0 +1,32 @@
+{
+  "status": "native_prototype_bake_pass",
+  "editor": "6000.3.26f1",
+  "scene": "Assets/ModernizationProbe/FtueDeckScene_FREE_PLACEHOLDER_PROBE.unity",
+  "sceneHash": "82c0f96cfea8311b0e0b8699d786466f5d80ecf6f3a97ad2be300b6befe65f30",
+  "map": "Assets/AddressableResources/Maps/FtueDeck/FtueDeck.asset",
+  "mapGuid": "[1D3D0D85D1E0C1F6]",
+  "mapEntitiesBefore": 0,
+  "mapEntitiesAfter": 17,
+  "activeSourcePrototypes": 17,
+  "inactiveSourcePrototypes": 0,
+  "componentTypeCounts": {
+    "Quantum.Prototypes.Transform2DPrototype, Quantum.Engine, Version=3.0.14.2241, Culture=neutral, PublicKeyToken=null": 17,
+    "Quantum.Prototypes.TutorialRuntimeDataPrototype, Quantum.Simulation, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null": 1,
+    "Quantum.Prototypes.PlayerSpawnerPrototype, Quantum.Simulation, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null": 5,
+    "Quantum.Prototypes.CosmeticsHolderPrototype, Quantum.Simulation, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null": 4,
+    "Quantum.Prototypes.CollectablePlatformSpawnerPrototype, Quantum.Simulation, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null": 5,
+    "Quantum.Prototypes.PhysicsCollider2DPrototype, Quantum.Engine, Version=3.0.14.2241, Culture=neutral, PublicKeyToken=null": 6,
+    "Quantum.Prototypes.PhysicsCallbacks2DPrototype, Quantum.Engine, Version=3.0.14.2241, Culture=neutral, PublicKeyToken=null": 6,
+    "Quantum.Prototypes.DestructiblePrototype, Quantum.Simulation, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null": 2,
+    "Quantum.Prototypes.GatePrototype, Quantum.Simulation, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null": 3,
+    "Quantum.Prototypes.TriggerPrototype, Quantum.Simulation, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null": 3
+  },
+  "mapEntityViewReferences": 17,
+  "colliderBake": "not_invoked",
+  "navMeshBake": "not_invoked",
+  "lightingRebake": "not_invoked",
+  "mapHashBefore": "88bd6324713e272bdb89c33dcd696e757ca99699e3cd3703b4f9967f65c7f391",
+  "mapHashAfter": "d126dca6a2ec33d05fbe0a7a4ec610c8e93e35ed146f804d5218d3a6cee5ad33",
+  "unchangedOtherNativePayloads": 40,
+  "export": "ftue-native-baked-map.json"
+}

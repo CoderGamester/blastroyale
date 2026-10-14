@@ -1,0 +1,4158 @@
+{
+  "status": "native_full_roundtrip_pass",
+  "editor": "6000.3.26f1",
+  "source": "Assets/AddressableResources/Maps/MazeMayhem/MazeMayhemScene.unity",
+  "target": "Assets/ModernizationProbe/MazeMayhemScene_FREE_PLACEHOLDER_PROBE.unity",
+  "sourceHash": "36f480e62fbfe74a7de5216ddf571eae49f017fca2cf608f63661febbaa7ae5d",
+  "targetHash": "4564e221e75450d23f8abcb93a6647647a96347ae7465dd287d94496f9df4389",
+  "missingRootsBefore": 681,
+  "missingRootsAfter": 0,
+  "authoredObjects": 23835,
+  "retainedTemporaryObjects": 3157,
+  "editorOnlyTransientComponentsExcluded": 314,
+  "retiredBakeryRecordHashes": {
+    "215093580": "43b05c8900bd29f9f1926a1066ca7aa79601bf833e175855da80eae09db49b48",
+    "715899853": "027af6fc734e20e3b74a6f4e5f6ff784f05644d3db321a659c78b56b2d46d86e",
+    "876442302": "ee29a504427d6a61c7dcdd342c77464fbc7883058345fb6db89b56d29414ce6b",
+    "1355474427": "c9f33df48b60d5ea0d10e878c206491b679ad9f9c8bda2b9f7c942902abcaa0f",
+    "1909127094": "3b0910bcd0e7c2434c79ea46cbd86210964ccc1304430cc34a886c7f41113a0e",
+    "1985402995": "05702152da64625996276f015fe364172e8391b340df7748fb4b4629105d2d6a"
+  },
+  "nativeLightingSnapshotHash": "7684df3fdaf03389710b030eab0ee74409fef397e86f4cb84b705f1a0e811170",
+  "lightingRebake": "not_run",
+  "nativeCollisionAssetHashes": {
+    "Assets/AddressableResources/Maps/Battlelands/BattlelandsMap.asset": "5fc9db2b40d030cdc707885c19c238d962556f9ddb43eede992efff262c7b1ed",
+    "Assets/AddressableResources/Maps/Battlelands/BattlelandsMap_mesh.asset": "702a3ca947c98593705386eb8a705f41350b5970226e163d828344160db5890f",
+    "Assets/AddressableResources/Maps/Battlelands/BattlelandsMap_NavMesh.asset": "3af687fd2188f4cca0d2dad72a18aa78670b456ecc7127a1c85338270101d77e",
+    "Assets/AddressableResources/Maps/Battlelands/BattlelandsMap_NavMesh_data.asset": "32b65aed1f604c051a33bace5bc9dc0926491390764c3009d1d325b9ba0e6cca",
+    "Assets/AddressableResources/Maps/Cemetery/Cemetery.asset": "f712a3f9ab6a9b9e6d5ba4185839f32765d077554909bd216e81b0d3a38c215b",
+    "Assets/AddressableResources/Maps/Cemetery/Cemetery_mesh.asset": "682acecb0e18b0251f4cba9fcf5c68f1d2a25c1c57661ab264fb7c74a9997e0c",
+    "Assets/AddressableResources/Maps/Cemetery/Cemetery_NavMesh.asset": "e95e4a536788d775b21679d8098125229d6937407f647d68cf5a70534ece64d7",
+    "Assets/AddressableResources/Maps/Cemetery/Cemetery_NavMesh_data.asset": "7f9d84d26bf3e85c387f2df2cc1055e8d39720ff7be6c7b38439ca8d121ef7da",
+    "Assets/AddressableResources/Maps/District/District.asset": "ce869a97fd44794bb0f173e348f7c75970187573d8ed26a4c1bb337a7d427066",
+    "Assets/AddressableResources/Maps/District/District_mesh.asset": "f25fdad37b0984a7312565f54b5e92c577bf85f58705d278dfe6a3bb07f97e4d",
+    "Assets/AddressableResources/Maps/District/District_NavMesh.asset": "e7ae274116dca9b514a26a6102702fa916f2473df050ae8e8ce8ef003845abbc",
+    "Assets/AddressableResources/Maps/District/District_NavMesh_data.asset": "c4d9035247004c67552211b6fa8aa025ed9a9b8dc540a5aaad58f53197d5ce94",
+    "Assets/AddressableResources/Maps/Fortress/Fortress.asset": "4bf3475739c4d308b5601042207022280744fe5889659987a5cbbee399c057ea",
+    "Assets/AddressableResources/Maps/Fortress/Fortress_mesh.asset": "74a08231a1035410bcdc3b3189e1ebccf39ab030ebbde08af7761686cc36093b",
+    "Assets/AddressableResources/Maps/Fortress/Fortress_NavMesh.asset": "63ec086e27b5404b32b8869e9033431becdfbe8ed14cc551a97ca38795c59441",
+    "Assets/AddressableResources/Maps/Fortress/Fortress_NavMesh_data.asset": "be6b2ac86fbf4376ca155b814ece8de38a4b12dfc6b63c04888381f2843449c4",
+    "Assets/AddressableResources/Maps/FtueDeck/FtueDeck.asset": "953ce0febb98a2b5cbd84741a9aef511e95445ae09a4bcd42cda2b56e2c6166d",
+    "Assets/AddressableResources/Maps/FtueDeck/FtueDeck_mesh.asset": "83cb564bd56403afec146c7db4eff0b9863ee9a3df13d515d1b0e2336acdc78c",
+    "Assets/AddressableResources/Maps/FtueDeck/FtueDeck_NavMesh.asset": "648a8286c4b14ec81bb33617de7801f06b36b59b74bf44b90f7a752f2cffee64",
+    "Assets/AddressableResources/Maps/FtueDeck/FtueDeck_NavMesh_data.asset": "73ca657bab6df4539c86f1a07170ab0b83f1bfb6abda2dbd14186b300c51c3ac",
+    "Assets/AddressableResources/Maps/IslandOne/IslandOne.asset": "79998cd4d384beab37ff15e7dba730caeef9e82eea35c284c29ecaa98fdb78f7",
+    "Assets/AddressableResources/Maps/IslandOne/IslandOne_mesh.asset": "3331c506d176001da6f5fd839d4583139a8d5f13c763c96ed456ec4827a88982",
+    "Assets/AddressableResources/Maps/IslandOne/IslandOne_Navmesh Baking.asset": "961b5c327417c132b5d807cb04dcde197b2a7988c388bb2ed7b9f74f09b2a349",
+    "Assets/AddressableResources/Maps/IslandOne/IslandOne_Navmesh Baking_data.asset": "162941377527506094a2dc393383a8ad877cdc502fcf2225453ca605cd72899e",
+    "Assets/AddressableResources/Maps/Islands/IslandsMap.asset": "1b076b39e0bd31eb3ba74ef2eebace9284f9b3185a6e2b6b1037bcbb6896b9c2",
+    "Assets/AddressableResources/Maps/Islands/IslandsMap_mesh.asset": "4ad801ab47ec93fb911c041aace7a19b742126e811fe0ed9d2291027ee80a789",
+    "Assets/AddressableResources/Maps/Islands/IslandsMap_NavMesh.asset": "3a2022495f2518788c7405401397951c7c7e283fc82b625fddf561f1935a699f",
+    "Assets/AddressableResources/Maps/Islands/IslandsMap_NavMesh_data.asset": "555e2b9fd086f48cea685e34370df5916a361be574cf050a34e3eb70cc4e9302",
+    "Assets/AddressableResources/Maps/MazeMayhem/MazeMayhem.asset": "e8046d826866219e686bc5eb05ba4dcb4c4dfe2ef010afe2ea5a503cdf807cae",
+    "Assets/AddressableResources/Maps/MazeMayhem/MazeMayhem_mesh.asset": "5c151a61ccc30dc78fce6098bbb18738961087d6529cc1010ee29ab1d06e6591",
+    "Assets/AddressableResources/Maps/MazeMayhem/MazeMayhem_Navmesh Baking.asset": "4710db0751faded7046fa795b8d3c2508d5e4fad651cfeae38294327d0f61944",
+    "Assets/AddressableResources/Maps/MazeMayhem/MazeMayhem_Navmesh Baking_data.asset": "8edbd209319f8747e52e35c9e68cb6d912356ac56006643fbcfc515ff91a4932",
+    "Assets/AddressableResources/Maps/Test/TestScene.asset": "96265a133454fcd1170e99842a3417e12da3b0c7a8664c99ebbc1a42b5f2a7b0",
+    "Assets/AddressableResources/Maps/Test/TestScene_mesh.asset": "4cbfaf371de711d31d72fbf16c29d843cd4b61475fbc02e99235d3fd6cd5fde0",
+    "Assets/AddressableResources/Maps/Test/TestScene_NavMesh.asset": "437d1d523d7b233082f1cb499773a158f9638d70085ec3579062ca34508c416f",
+    "Assets/AddressableResources/Maps/Test/TestScene_NavMesh_data.asset": "c9d77f6c87d685968faeb50e8f64aab9ee96c732d5bc63a3c34bd5758687f548",
+    "Assets/AddressableResources/Maps/TestAssets/NavMeshAsset.asset": "f8571d78fd7fecd6cdf991f36eebf07d4a35d4dbe560bef72b805f65e24c18f3",
+    "Assets/AddressableResources/Maps/TestAssets/TestAssetsMap.asset": "40be533ec3e8c648ce8d791c7242b7a72c44ae1922a7f75f0ce2670ff79f5843",
+    "Assets/AddressableResources/Maps/TestAssets/TestAssetsMap_mesh.asset": "37abe9b67c5bb24e5b51dbc561b01439f97935dd6273e207f66e0e32d80db7a5",
+    "Assets/QuantumUser/Resources/QuantumMap.asset": "c0453f0b22a55baa500bb015c71be3d59e1ac5d73f7ced6b2a65d061ff216540",
+    "Assets/QuantumUser/Resources/QuantumMap_mesh.asset": "ef243b6a595db932a2c6c5243db36d22fcf6552b3711cbfafb9c496f0b9d4dfb"
+  },
+  "restored": [
+    {
+      "identity": "scene:1000888993:0",
+      "originalName": "barricade_concrete_High Variant (3) (Missing Prefab with guid: 532b9e3265ce8bc479b631898a4bf4c2)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1011792699:0",
+      "originalName": "barricade_concrete_High Variant (38) (Missing Prefab with guid: 532b9e3265ce8bc479b631898a4bf4c2)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1015307917:0",
+      "originalName": "Wall_Base_Straight_PRFB (5) (Missing Prefab with guid: a12ad16b265c63448b457b908f5d9845)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1017129424:0",
+      "originalName": "Wall_Base_Corner_Short_PRFB (3) (Missing Prefab with guid: 249acdeb55ce15948b2e850d4069e7e6)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1017421185:0",
+      "originalName": "Tyres_Baricade Variant (Missing Prefab with guid: 12ef1723b52b0d741996d5ea26a08c2f)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1019702499:0",
+      "originalName": "barricade_sandbags Variant (47) (Missing Prefab with guid: b4991c8b525f0f84e9259bf1b6bcf642)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1028798624:0",
+      "originalName": "SB_container Variant (5) (Missing Prefab with guid: 4eb91f0f238f97240bdf0726b0e33dfc)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1031258906:0",
+      "originalName": "traffic cone Variant (19) (Missing Prefab with guid: fc61c55e208f92e40972ee7b17836982)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1032589900:0",
+      "originalName": "Wall_Base_Straight_PRFB (27) (Missing Prefab with guid: a12ad16b265c63448b457b908f5d9845)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:103951141:0",
+      "originalName": "LB_Fortified_wall Variant (1) (Missing Prefab with guid: ef1ce9dbcd7eac54bb86b26aedbfcfdb)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1041823149:0",
+      "originalName": "SB_container Variant (63) (Missing Prefab with guid: 4eb91f0f238f97240bdf0726b0e33dfc)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:104444034:0",
+      "originalName": "SB_Low_wall Variant (Missing Prefab with guid: bcdb50297f89ac8408519eaee76f6a9e)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1045355042:0",
+      "originalName": "barricade_concrete_LowClean Variant (17) (Missing Prefab with guid: 96eaba1a465b3a6498090336e793fef9)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1049885854:0",
+      "originalName": "barricade_sandbags Variant (40) (Missing Prefab with guid: b4991c8b525f0f84e9259bf1b6bcf642)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:105007887:0",
+      "originalName": "traffic cone Variant (1) (Missing Prefab with guid: fc61c55e208f92e40972ee7b17836982)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1051865103:0",
+      "originalName": "SB_container Variant (23) (Missing Prefab with guid: 4eb91f0f238f97240bdf0726b0e33dfc)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1055498354:0",
+      "originalName": "SB_Junk_wall Variant (Missing Prefab with guid: 655b69d4aaa362b41b9ea91dc3ebf98a)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1056524133:0",
+      "originalName": "SB_container Variant (58) (Missing Prefab with guid: 4eb91f0f238f97240bdf0726b0e33dfc)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1059010333:0",
+      "originalName": "barricade_concrete_High Variant (16) (Missing Prefab with guid: 532b9e3265ce8bc479b631898a4bf4c2)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1059212352:0",
+      "originalName": "Scatter_asset_5 Variant (4) (Missing Prefab with guid: 5795fd8d5989d5e4cab83966537ae553)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1060699709:0",
+      "originalName": "barricade_sandbags Variant (54) (Missing Prefab with guid: b4991c8b525f0f84e9259bf1b6bcf642)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:106078843:0",
+      "originalName": "SB_Low_wall Variant (3) (Missing Prefab with guid: bcdb50297f89ac8408519eaee76f6a9e)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1066810017:0",
+      "originalName": "Wall_Base_Straight_PRFB (15) (Missing Prefab with guid: a12ad16b265c63448b457b908f5d9845)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1067015226:0",
+      "originalName": "barricade_concrete_LowClean Variant (1) (Missing Prefab with guid: 96eaba1a465b3a6498090336e793fef9)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1070310921:0",
+      "originalName": "Thick_colomb_baricade Variant (6) (Missing Prefab with guid: 8037b0f137dfe2c499bf3c1f6579ca7f)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1070348479:0",
+      "originalName": "SB_concrete_barrier Variant (10) (Missing Prefab with guid: 75f205a96f8a69d409fd8881f0edd4c6)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1071567241:0",
+      "originalName": "traffic cone Variant (54) (Missing Prefab with guid: fc61c55e208f92e40972ee7b17836982)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1073019460:0",
+      "originalName": "barricade_concrete_High Variant (Missing Prefab with guid: 532b9e3265ce8bc479b631898a4bf4c2)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1073698117:0",
+      "originalName": "Scatter_assets_7 Variant (1) (Missing Prefab with guid: 63b799f88e13d4b428171b29d5b5e0d8)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1075447209:0",
+      "originalName": "barricade_concrete_High Variant (6) (Missing Prefab with guid: 532b9e3265ce8bc479b631898a4bf4c2)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1075659402:0",
+      "originalName": "barricade_sandbags Variant (56) (Missing Prefab with guid: b4991c8b525f0f84e9259bf1b6bcf642)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1082014101:0",
+      "originalName": "Mobile_Home_Red Variant (3) (Missing Prefab with guid: 2115cfd2b1f4351428c54dbc27ff133b)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:108579391:0",
+      "originalName": "Thick_colomb_baricade Variant (26) (Missing Prefab with guid: 8037b0f137dfe2c499bf3c1f6579ca7f)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1089251940:0",
+      "originalName": "traffic cone Variant (48) (Missing Prefab with guid: fc61c55e208f92e40972ee7b17836982)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1089801030:0",
+      "originalName": "MB_Funnel_Shape Variant (1) (Missing Prefab with guid: 16c85de8daf745d4f8930777c298fc0d)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1096970591:0",
+      "originalName": "barricade_concrete_High Variant (1) (Missing Prefab with guid: 532b9e3265ce8bc479b631898a4bf4c2)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1097394333:0",
+      "originalName": "sky_walk_broken_both_ends Variant (1) (Missing Prefab with guid: 02d14de97bf8f8c41b9e9701a23a2f63)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1097411126:0",
+      "originalName": "Thick_colomb_baricade Variant (5) (Missing Prefab with guid: 8037b0f137dfe2c499bf3c1f6579ca7f)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1098806062:0",
+      "originalName": "SB_container Variant (46) (Missing Prefab with guid: 4eb91f0f238f97240bdf0726b0e33dfc)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1099168550:0",
+      "originalName": "SB_container Variant (61) (Missing Prefab with guid: 4eb91f0f238f97240bdf0726b0e33dfc)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1105727428:0",
+      "originalName": "Wall_Base_Straight_PRFB (23) (Missing Prefab with guid: a12ad16b265c63448b457b908f5d9845)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:110716420:0",
+      "originalName": "Wall_Base_Straight_PRFB (37) (Missing Prefab with guid: a12ad16b265c63448b457b908f5d9845)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1113421218:0",
+      "originalName": "Scatter_assets_6 Variant (4) (Missing Prefab with guid: ded78b0bf6daec74d9d2fd898892bd3d)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1118654740:0",
+      "originalName": "Tyres_Baricade Variant (3) (Missing Prefab with guid: 12ef1723b52b0d741996d5ea26a08c2f)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1119654069:0",
+      "originalName": "barricade_concrete_LowClean Variant (11) (Missing Prefab with guid: 96eaba1a465b3a6498090336e793fef9)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1121321169:0",
+      "originalName": "MB_wall_Compound_shape Variant (3) (Missing Prefab with guid: 612dff909b60caf4395084d428a55ed9)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1129217670:0",
+      "originalName": "barricade_sandbags Variant (32) (Missing Prefab with guid: b4991c8b525f0f84e9259bf1b6bcf642)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1131119250:0",
+      "originalName": "Container_Red (2) (Missing Prefab with guid: 7705fb9d99e1c7b43ad5c33e8cefed59)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1132307127:0",
+      "originalName": "SB_container Variant (52) (Missing Prefab with guid: 4eb91f0f238f97240bdf0726b0e33dfc)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1133504175:0",
+      "originalName": "SB_container Variant (54) (Missing Prefab with guid: 4eb91f0f238f97240bdf0726b0e33dfc)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1134526044:0",
+      "originalName": "Wall_Base_Straight_PRFB (25) (Missing Prefab with guid: a12ad16b265c63448b457b908f5d9845)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1134782893:0",
+      "originalName": "Wall_Base_Straight_PRFB (8) (Missing Prefab with guid: a12ad16b265c63448b457b908f5d9845)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1134825045:0",
+      "originalName": "barricade_sandbags Variant (48) (Missing Prefab with guid: b4991c8b525f0f84e9259bf1b6bcf642)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1136568811:0",
+      "originalName": "Scatter_assets_6 Variant (1) (Missing Prefab with guid: ded78b0bf6daec74d9d2fd898892bd3d)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1137593795:0",
+      "originalName": "SB_container Variant (55) (Missing Prefab with guid: 4eb91f0f238f97240bdf0726b0e33dfc)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1137624533:0",
+      "originalName": "traffic cone Variant (36) (Missing Prefab with guid: fc61c55e208f92e40972ee7b17836982)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1139044549:0",
+      "originalName": "SB_container Variant (34) (Missing Prefab with guid: 4eb91f0f238f97240bdf0726b0e33dfc)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1143547330:0",
+      "originalName": "Mobile_Home_Red Variant (2) (Missing Prefab with guid: 2115cfd2b1f4351428c54dbc27ff133b)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1146744080:0",
+      "originalName": "Wall_Base_Straight_PRFB (14) (Missing Prefab with guid: a12ad16b265c63448b457b908f5d9845)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1148304897:0",
+      "originalName": "Car_Convertable_Green_PRFB (Missing Prefab with guid: 42434af825ece434aac36cb37e64cb1e)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:115046339:0",
+      "originalName": "Thick_colomb_baricade Variant (10) (Missing Prefab with guid: 8037b0f137dfe2c499bf3c1f6579ca7f)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1152273138:0",
+      "originalName": "SB_container Variant (32) (Missing Prefab with guid: 4eb91f0f238f97240bdf0726b0e33dfc)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1154157369:0",
+      "originalName": "barricade_sandbags Variant (75) (Missing Prefab with guid: b4991c8b525f0f84e9259bf1b6bcf642)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1154707086:0",
+      "originalName": "barricade_concrete_High Variant (33) (Missing Prefab with guid: 532b9e3265ce8bc479b631898a4bf4c2)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1168801463:0",
+      "originalName": "LB_Fortified_wall Variant (Missing Prefab with guid: ef1ce9dbcd7eac54bb86b26aedbfcfdb)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1173560822:0",
+      "originalName": "SB_Shelving_Broken Variant (1) (Missing Prefab with guid: e5ad857853bac9448af9b93b866983d7)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1180284829:0",
+      "originalName": "Tyres_Baricade Variant (7) (Missing Prefab with guid: 12ef1723b52b0d741996d5ea26a08c2f)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1180527749:0",
+      "originalName": "barricade_concrete_LowClean Variant (2) (Missing Prefab with guid: 96eaba1a465b3a6498090336e793fef9)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1182698560:0",
+      "originalName": "Scatter_asset_2 Variant (6) (Missing Prefab with guid: 5a152d999c328434e82353230c91a39d)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1184124283:0",
+      "originalName": "SB_Low_wall Variant (2) (Missing Prefab with guid: bcdb50297f89ac8408519eaee76f6a9e)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1188070602:0",
+      "originalName": "SB_container Variant (62) (Missing Prefab with guid: 4eb91f0f238f97240bdf0726b0e33dfc)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1190078417:0",
+      "originalName": "MB_barrel_pallete Variant (1) (Missing Prefab with guid: f7f2322b8a846f947809ea34012271c7)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:119427369:0",
+      "originalName": "LB_Fortified_wall Variant (4) (Missing Prefab with guid: ef1ce9dbcd7eac54bb86b26aedbfcfdb)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1197065169:0",
+      "originalName": "MB_Wall_T_shape Variant (3) (Missing Prefab with guid: ed992dbd114de214695f8eaa6539acf0)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1202682010:0",
+      "originalName": "Wall_Base_Straight_PRFB (4) (Missing Prefab with guid: a12ad16b265c63448b457b908f5d9845)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1206170148:0",
+      "originalName": "barricade_sandbags Variant (57) (Missing Prefab with guid: b4991c8b525f0f84e9259bf1b6bcf642)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1206447795:0",
+      "originalName": "corvett_crash Variant (Missing Prefab with guid: d0ed0c78b33be7f4c8a130c350b4504f)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1209364820:0",
+      "originalName": "Scatter_asset_3 Variant (2) (Missing Prefab with guid: f4939ac19e6d4024bb5dc0da01046f87)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1209660259:0",
+      "originalName": "barricade_concrete_LowClean Variant (18) (Missing Prefab with guid: 96eaba1a465b3a6498090336e793fef9)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1210205193:0",
+      "originalName": "traffic cone Variant (37) (Missing Prefab with guid: fc61c55e208f92e40972ee7b17836982)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1211003185:0",
+      "originalName": "MB_Wall_L_Shape_Bare Variant (5) (Missing Prefab with guid: 39c166a3556f0ae4184948c83e46f215)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1211599270:0",
+      "originalName": "Scatter_asset_1 Variant (4) (Missing Prefab with guid: 02f8f14fb421e714facb5121d7359b79)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:121304343:0",
+      "originalName": "SB_container Variant (53) (Missing Prefab with guid: 4eb91f0f238f97240bdf0726b0e33dfc)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:121676391:0",
+      "originalName": "barricade_sandbags Variant (31) (Missing Prefab with guid: b4991c8b525f0f84e9259bf1b6bcf642)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1217142946:0",
+      "originalName": "MB_Wall_T_shape Variant (Missing Prefab with guid: ed992dbd114de214695f8eaa6539acf0)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1219430107:0",
+      "originalName": "traffic cone Variant (24) (Missing Prefab with guid: fc61c55e208f92e40972ee7b17836982)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1222000022:0",
+      "originalName": "Car_Convertable_Green_PRFB (1) (Missing Prefab with guid: 42434af825ece434aac36cb37e64cb1e)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1223785236:0",
+      "originalName": "barricade_sandbags Variant (41) (Missing Prefab with guid: b4991c8b525f0f84e9259bf1b6bcf642)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1225000256:0",
+      "originalName": "barricade_concrete_High Variant (25) (Missing Prefab with guid: 532b9e3265ce8bc479b631898a4bf4c2)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1228847128:0",
+      "originalName": "SB_Thick_concrete_colomb Variant (Missing Prefab with guid: 2f8495fe55a3b5f478d97b559e375b5e)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1230113115:0",
+      "originalName": "Thick_colomb_baricade Variant (18) (Missing Prefab with guid: 8037b0f137dfe2c499bf3c1f6579ca7f)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1237851603:0",
+      "originalName": "SB_concrete_barrier Variant (8) (Missing Prefab with guid: 75f205a96f8a69d409fd8881f0edd4c6)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1238472673:0",
+      "originalName": "MB_barrel_pallete Variant (8) (Missing Prefab with guid: f7f2322b8a846f947809ea34012271c7)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1239860012:0",
+      "originalName": "SB_container Variant (48) (Missing Prefab with guid: 4eb91f0f238f97240bdf0726b0e33dfc)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1254489172:0",
+      "originalName": "barricade_concrete_High Variant (36) (Missing Prefab with guid: 532b9e3265ce8bc479b631898a4bf4c2)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1254636496:0",
+      "originalName": "traffic cone Variant (38) (Missing Prefab with guid: fc61c55e208f92e40972ee7b17836982)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1256204415:0",
+      "originalName": "traffic cone Variant (35) (Missing Prefab with guid: fc61c55e208f92e40972ee7b17836982)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1263127879:0",
+      "originalName": "Barrier_Wild_Logs01 (6) (Missing Prefab with guid: 78bc902ee7b6e6148b757dc55310276c)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1266811353:0",
+      "originalName": "traffic cone Variant (49) (Missing Prefab with guid: fc61c55e208f92e40972ee7b17836982)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1267145415:0",
+      "originalName": "SB_container Variant (15) (Missing Prefab with guid: 4eb91f0f238f97240bdf0726b0e33dfc)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1270748959:0",
+      "originalName": "traffic cone Variant (40) (Missing Prefab with guid: fc61c55e208f92e40972ee7b17836982)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1272425132:0",
+      "originalName": "LB_Fortified_wall Variant (1) (Missing Prefab with guid: ef1ce9dbcd7eac54bb86b26aedbfcfdb)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1272805671:0",
+      "originalName": "barricade_sandbags Variant (50) (Missing Prefab with guid: b4991c8b525f0f84e9259bf1b6bcf642)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1273780903:0",
+      "originalName": "Thick_colomb_baricade Variant (9) (Missing Prefab with guid: 8037b0f137dfe2c499bf3c1f6579ca7f)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1276326605:0",
+      "originalName": "barricade_sandbags Variant (23) (Missing Prefab with guid: b4991c8b525f0f84e9259bf1b6bcf642)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1277375682:0",
+      "originalName": "Car_PickUp_Blue_PRFB (Missing Prefab with guid: 527d7ec85a878d6499d64848e38a78fd)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1281237747:0",
+      "originalName": "SB_container Variant (5) (Missing Prefab with guid: 4eb91f0f238f97240bdf0726b0e33dfc)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1282294789:0",
+      "originalName": "barricade_sandbags Variant (11) (Missing Prefab with guid: b4991c8b525f0f84e9259bf1b6bcf642)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1282335176:0",
+      "originalName": "barricade_concrete_High Variant (31) (Missing Prefab with guid: 532b9e3265ce8bc479b631898a4bf4c2)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1290999191:0",
+      "originalName": "Barrier_Wild_Logs01 (3) (Missing Prefab with guid: 78bc902ee7b6e6148b757dc55310276c)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1294731691:0",
+      "originalName": "Wall_Base_Straight_PRFB (15) (Missing Prefab with guid: a12ad16b265c63448b457b908f5d9845)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1296867090:0",
+      "originalName": "Barrier_Wild_Logs01 (1) (Missing Prefab with guid: 78bc902ee7b6e6148b757dc55310276c)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1302467276:0",
+      "originalName": "Wall_Base_Straight_PRFB (9) (Missing Prefab with guid: a12ad16b265c63448b457b908f5d9845)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1305219787:0",
+      "originalName": "SB_container Variant (65) (Missing Prefab with guid: 4eb91f0f238f97240bdf0726b0e33dfc)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1305968039:0",
+      "originalName": "Wall_Base_Straight_PRFB (2) (Missing Prefab with guid: a12ad16b265c63448b457b908f5d9845)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1306122234:0",
+      "originalName": "SB_container Variant (50) (Missing Prefab with guid: 4eb91f0f238f97240bdf0726b0e33dfc)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1310797675:0",
+      "originalName": "MB_barrel_pallete Variant (4) (Missing Prefab with guid: f7f2322b8a846f947809ea34012271c7)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1313079360:0",
+      "originalName": "barricade_sandbags Variant (9) (Missing Prefab with guid: b4991c8b525f0f84e9259bf1b6bcf642)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1313235600:0",
+      "originalName": "Tyres_Baricade Variant (14) (Missing Prefab with guid: 12ef1723b52b0d741996d5ea26a08c2f)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1313311186:0",
+      "originalName": "barricade_sandbags Variant (6) (Missing Prefab with guid: b4991c8b525f0f84e9259bf1b6bcf642)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1316288613:0",
+      "originalName": "SB_Junk_wall Variant (Missing Prefab with guid: 655b69d4aaa362b41b9ea91dc3ebf98a)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1316582654:0",
+      "originalName": "Container_Red (1) (Missing Prefab with guid: 7705fb9d99e1c7b43ad5c33e8cefed59)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1321112701:0",
+      "originalName": "MB_Wall_L_Shape_tyres Variant (Missing Prefab with guid: f4907950e226eff4a89cae57ac22f7b2)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1324309301:0",
+      "originalName": "Thick_colomb_baricade Variant (1) (Missing Prefab with guid: 8037b0f137dfe2c499bf3c1f6579ca7f)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1324448775:0",
+      "originalName": "Junkers_Shop_Geo Variant (Missing Prefab with guid: 3d0c8bb532ab60040b47da8674b7bd55)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1325797118:0",
+      "originalName": "SB_Shelving_Broken Variant (3) (Missing Prefab with guid: e5ad857853bac9448af9b93b866983d7)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1326822081:0",
+      "originalName": "Wall_Base_Straight_PRFB (34) (Missing Prefab with guid: a12ad16b265c63448b457b908f5d9845)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1327047901:0",
+      "originalName": "barricade_sandbags Variant (68) (Missing Prefab with guid: b4991c8b525f0f84e9259bf1b6bcf642)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1327868782:0",
+      "originalName": "SB_Junk_wall Variant (Missing Prefab with guid: 655b69d4aaa362b41b9ea91dc3ebf98a)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1329503065:0",
+      "originalName": "SB_concrete_barrier Variant (7) (Missing Prefab with guid: 75f205a96f8a69d409fd8881f0edd4c6)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:133910761:0",
+      "originalName": "barricade_sandbags Variant (22) (Missing Prefab with guid: b4991c8b525f0f84e9259bf1b6bcf642)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1341603910:0",
+      "originalName": "Wall_Base_Straight_PRFB (14) (Missing Prefab with guid: a12ad16b265c63448b457b908f5d9845)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1345538177:0",
+      "originalName": "SB_Junk_wall Variant (6) (Missing Prefab with guid: 655b69d4aaa362b41b9ea91dc3ebf98a)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1345764217:0",
+      "originalName": "Tyres_Baricade Variant (4) (Missing Prefab with guid: 12ef1723b52b0d741996d5ea26a08c2f)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1346235406:0",
+      "originalName": "Scatter_asset_5 Variant (2) (Missing Prefab with guid: 5795fd8d5989d5e4cab83966537ae553)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1347800771:0",
+      "originalName": "barricade_concrete_LowClean Variant (6) (Missing Prefab with guid: 96eaba1a465b3a6498090336e793fef9)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1348347811:0",
+      "originalName": "barricade_concrete_High Variant (39) (Missing Prefab with guid: 532b9e3265ce8bc479b631898a4bf4c2)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1348792571:0",
+      "originalName": "SB_Broken_colomb Variant (3) (Missing Prefab with guid: 5c3000f1b222cbd419b915327a407f42)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1350671820:0",
+      "originalName": "Scatter_asset_1 Variant (6) (Missing Prefab with guid: 02f8f14fb421e714facb5121d7359b79)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1351754466:0",
+      "originalName": "LB_Fortified_wall Variant (14) (Missing Prefab with guid: ef1ce9dbcd7eac54bb86b26aedbfcfdb)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1351986459:0",
+      "originalName": "SB_Thick_concrete_colomb Variant (Missing Prefab with guid: 2f8495fe55a3b5f478d97b559e375b5e)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1353810917:0",
+      "originalName": "barricade_sandbags Variant (52) (Missing Prefab with guid: b4991c8b525f0f84e9259bf1b6bcf642)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1361238291:0",
+      "originalName": "MB_barrel_pallete Variant (5) (Missing Prefab with guid: f7f2322b8a846f947809ea34012271c7)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1362291673:0",
+      "originalName": "barricade_concrete_High Variant (5) (Missing Prefab with guid: 532b9e3265ce8bc479b631898a4bf4c2)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1363027737:0",
+      "originalName": "traffic cone Variant (47) (Missing Prefab with guid: fc61c55e208f92e40972ee7b17836982)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1364333260:0",
+      "originalName": "traffic cone Variant (53) (Missing Prefab with guid: fc61c55e208f92e40972ee7b17836982)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1366370424:0",
+      "originalName": "LB_Skip Variant (Missing Prefab with guid: acc36632fd71a3b4bb928e3a3a1bebb1)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1368711877:0",
+      "originalName": "SB_Thick_concrete_colomb Variant (6) (Missing Prefab with guid: 2f8495fe55a3b5f478d97b559e375b5e)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:137045485:0",
+      "originalName": "barricade_concrete_High Variant (13) (Missing Prefab with guid: 532b9e3265ce8bc479b631898a4bf4c2)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1371133863:0",
+      "originalName": "barricade_sandbags Variant (78) (Missing Prefab with guid: b4991c8b525f0f84e9259bf1b6bcf642)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1371871968:0",
+      "originalName": "Scatter_asset_1 Variant (5) (Missing Prefab with guid: 02f8f14fb421e714facb5121d7359b79)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1378006341:0",
+      "originalName": "barricade_concrete_LowClean Variant (16) (Missing Prefab with guid: 96eaba1a465b3a6498090336e793fef9)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1381317674:0",
+      "originalName": "Wall_Base_Straight_PRFB (18) (Missing Prefab with guid: a12ad16b265c63448b457b908f5d9845)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1381431423:0",
+      "originalName": "LB_Fortified_wall Variant (11) (Missing Prefab with guid: ef1ce9dbcd7eac54bb86b26aedbfcfdb)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1383126630:0",
+      "originalName": "Sky Walk Base Broken Variant (Missing Prefab with guid: 6e4fa283de21aae4fa2e18cfd114ec05)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1391549307:0",
+      "originalName": "Thick_colomb_baricade Variant (13) (Missing Prefab with guid: 8037b0f137dfe2c499bf3c1f6579ca7f)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1391684597:0",
+      "originalName": "Wall_Base_Straight_PRFB (32) (Missing Prefab with guid: a12ad16b265c63448b457b908f5d9845)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:13925702:0",
+      "originalName": "Thick_colomb_baricade Variant (23) (Missing Prefab with guid: 8037b0f137dfe2c499bf3c1f6579ca7f)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:139447127:0",
+      "originalName": "traffic cone Variant (59) (Missing Prefab with guid: fc61c55e208f92e40972ee7b17836982)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1397163858:0",
+      "originalName": "Tyres_Baricade Variant (8) (Missing Prefab with guid: 12ef1723b52b0d741996d5ea26a08c2f)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1398463177:0",
+      "originalName": "SB_container Variant (6) (Missing Prefab with guid: 4eb91f0f238f97240bdf0726b0e33dfc)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1398517128:0",
+      "originalName": "Wall_Base_Straight_PRFB (8) (Missing Prefab with guid: a12ad16b265c63448b457b908f5d9845)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1400606387:0",
+      "originalName": "MB_wall_Compound_shape Variant (2) (Missing Prefab with guid: 612dff909b60caf4395084d428a55ed9)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1400715432:0",
+      "originalName": "Mobile_Home_Red Variant (1) (Missing Prefab with guid: 2115cfd2b1f4351428c54dbc27ff133b)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1402257241:0",
+      "originalName": "Container_Red (Missing Prefab with guid: 7705fb9d99e1c7b43ad5c33e8cefed59)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1409122786:0",
+      "originalName": "Wall_Base_Straight_PRFB (10) (Missing Prefab with guid: a12ad16b265c63448b457b908f5d9845)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1414344774:0",
+      "originalName": "traffic cone Variant (20) (Missing Prefab with guid: fc61c55e208f92e40972ee7b17836982)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1415490971:0",
+      "originalName": "Wall_Base_Corner_Short_PRFB (2) (Missing Prefab with guid: 249acdeb55ce15948b2e850d4069e7e6)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1415633374:0",
+      "originalName": "Wall_Base_Straight_PRFB (16) (Missing Prefab with guid: a12ad16b265c63448b457b908f5d9845)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1420912991:0",
+      "originalName": "traffic cone Variant (2) (Missing Prefab with guid: fc61c55e208f92e40972ee7b17836982)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1421060739:0",
+      "originalName": "SB_Junk_wall Variant (1) (Missing Prefab with guid: 655b69d4aaa362b41b9ea91dc3ebf98a)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1421799857:0",
+      "originalName": "Scatter_asset_1 Variant (9) (Missing Prefab with guid: 02f8f14fb421e714facb5121d7359b79)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1426602207:0",
+      "originalName": "Wall_Base_Straight_PRFB (38) (Missing Prefab with guid: a12ad16b265c63448b457b908f5d9845)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1427143599:0",
+      "originalName": "barricade_concrete_High Variant (10) (Missing Prefab with guid: 532b9e3265ce8bc479b631898a4bf4c2)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1427247073:0",
+      "originalName": "SB_Cardboard_boxes Variant (Missing Prefab with guid: 7543a048103abcf4ea40383f9a7c5bcc)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1434546651:0",
+      "originalName": "Tyres_Baricade Variant (6) (Missing Prefab with guid: 12ef1723b52b0d741996d5ea26a08c2f)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1435656508:0",
+      "originalName": "barricade_concrete_High Variant (19) (Missing Prefab with guid: 532b9e3265ce8bc479b631898a4bf4c2)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1436952446:0",
+      "originalName": "barricade_sandbags Variant (Missing Prefab with guid: b4991c8b525f0f84e9259bf1b6bcf642)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1444415668:0",
+      "originalName": "SB_Cardboard_boxes Variant (2) (Missing Prefab with guid: 7543a048103abcf4ea40383f9a7c5bcc)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1447503721:0",
+      "originalName": "SB_container Variant (8) (Missing Prefab with guid: 4eb91f0f238f97240bdf0726b0e33dfc)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:144831025:0",
+      "originalName": "barricade_sandbags Variant (27) (Missing Prefab with guid: b4991c8b525f0f84e9259bf1b6bcf642)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1450789628:0",
+      "originalName": "Wall_Base_Straight_PRFB (29) (Missing Prefab with guid: a12ad16b265c63448b457b908f5d9845)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1451908393:0",
+      "originalName": "Wall_Base_Straight_PRFB (12) (Missing Prefab with guid: a12ad16b265c63448b457b908f5d9845)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1454200314:0",
+      "originalName": "SB_container Variant (47) (Missing Prefab with guid: 4eb91f0f238f97240bdf0726b0e33dfc)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1454342659:0",
+      "originalName": "barricade_concrete_High Variant (1) (Missing Prefab with guid: 532b9e3265ce8bc479b631898a4bf4c2)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1456393024:0",
+      "originalName": "traffic cone Variant (21) (Missing Prefab with guid: fc61c55e208f92e40972ee7b17836982)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1456944508:0",
+      "originalName": "traffic cone Variant (55) (Missing Prefab with guid: fc61c55e208f92e40972ee7b17836982)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1459361055:0",
+      "originalName": "barricade_concrete_High Variant (9) (Missing Prefab with guid: 532b9e3265ce8bc479b631898a4bf4c2)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1465724770:0",
+      "originalName": "Mobile_Home_Red Variant (Missing Prefab with guid: 2115cfd2b1f4351428c54dbc27ff133b)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1466572652:0",
+      "originalName": "traffic cone Variant (7) (Missing Prefab with guid: fc61c55e208f92e40972ee7b17836982)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1471994182:0",
+      "originalName": "Wall_Base_Straight_PRFB (9) (Missing Prefab with guid: a12ad16b265c63448b457b908f5d9845)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1472223759:0",
+      "originalName": "SB_Low_wall Variant (4) (Missing Prefab with guid: bcdb50297f89ac8408519eaee76f6a9e)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1479442201:0",
+      "originalName": "MB_Wall_L_Shape_Bare Variant (4) (Missing Prefab with guid: 39c166a3556f0ae4184948c83e46f215)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:148875158:0",
+      "originalName": "LB_Fortified_wall Variant (10) (Missing Prefab with guid: ef1ce9dbcd7eac54bb86b26aedbfcfdb)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1489452644:0",
+      "originalName": "Wall_Base_Straight_PRFB (11) (Missing Prefab with guid: a12ad16b265c63448b457b908f5d9845)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1495937288:0",
+      "originalName": "SB_container Variant (44) (Missing Prefab with guid: 4eb91f0f238f97240bdf0726b0e33dfc)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1497365133:0",
+      "originalName": "SB_container Variant (22) (Missing Prefab with guid: 4eb91f0f238f97240bdf0726b0e33dfc)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1503287112:0",
+      "originalName": "traffic cone Variant (15) (Missing Prefab with guid: fc61c55e208f92e40972ee7b17836982)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:150645391:0",
+      "originalName": "Barricade_Concrete_4Piece_PRFB (Missing Prefab with guid: a85140a774de7cd45a9b88a5291c7c60)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1506565400:0",
+      "originalName": "barricade_sandbags Variant (49) (Missing Prefab with guid: b4991c8b525f0f84e9259bf1b6bcf642)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1507507252:0",
+      "originalName": "SB_Shelving_Broken Variant (2) (Missing Prefab with guid: e5ad857853bac9448af9b93b866983d7)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1507797306:0",
+      "originalName": "barricade_concrete_High Variant (18) (Missing Prefab with guid: 532b9e3265ce8bc479b631898a4bf4c2)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1510907375:0",
+      "originalName": "barricade_concrete_LowClean Variant (3) (Missing Prefab with guid: 96eaba1a465b3a6498090336e793fef9)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:15236947:0",
+      "originalName": "SB_Shelving_Broken Variant (1) (Missing Prefab with guid: e5ad857853bac9448af9b93b866983d7)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1526412939:0",
+      "originalName": "Scatter_assets_7 Variant (Missing Prefab with guid: 63b799f88e13d4b428171b29d5b5e0d8)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1528134394:0",
+      "originalName": "traffic cone Variant (34) (Missing Prefab with guid: fc61c55e208f92e40972ee7b17836982)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1528158400:0",
+      "originalName": "barricade_concrete_High Variant (4) (Missing Prefab with guid: 532b9e3265ce8bc479b631898a4bf4c2)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1531055592:0",
+      "originalName": "Container_Red (6) (Missing Prefab with guid: 7705fb9d99e1c7b43ad5c33e8cefed59)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1535516529:0",
+      "originalName": "barricade_concrete_LowClean Variant (5) (Missing Prefab with guid: 96eaba1a465b3a6498090336e793fef9)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1537142869:0",
+      "originalName": "barricade_concrete_High Variant (21) (Missing Prefab with guid: 532b9e3265ce8bc479b631898a4bf4c2)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1537595468:0",
+      "originalName": "barricade_sandbags Variant (13) (Missing Prefab with guid: b4991c8b525f0f84e9259bf1b6bcf642)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1539809010:0",
+      "originalName": "traffic cone Variant (50) (Missing Prefab with guid: fc61c55e208f92e40972ee7b17836982)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1540341680:0",
+      "originalName": "Wall_Base_Straight_PRFB (35) (Missing Prefab with guid: a12ad16b265c63448b457b908f5d9845)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1540529939:0",
+      "originalName": "SB_container Variant (9) (Missing Prefab with guid: 4eb91f0f238f97240bdf0726b0e33dfc)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1541865479:0",
+      "originalName": "barricade_sandbags Variant (72) (Missing Prefab with guid: b4991c8b525f0f84e9259bf1b6bcf642)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:154321253:0",
+      "originalName": "SB_container Variant (42) (Missing Prefab with guid: 4eb91f0f238f97240bdf0726b0e33dfc)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1543801123:0",
+      "originalName": "Hospital_sign Variant (Missing Prefab with guid: 68a3762b2c4bd804a900ced38bf0d510)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1546963789:0",
+      "originalName": "barricade_concrete_LowClean Variant (4) (Missing Prefab with guid: 96eaba1a465b3a6498090336e793fef9)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1547541103:0",
+      "originalName": "Sky_walk_base Variant (7) (Missing Prefab with guid: 509c8d5112ca38645ae66c8aa797f502)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1551479313:0",
+      "originalName": "Barricade_Concrete_4Piece_PRFB (4) (Missing Prefab with guid: a85140a774de7cd45a9b88a5291c7c60)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1553037197:0",
+      "originalName": "traffic cone Variant (13) (Missing Prefab with guid: fc61c55e208f92e40972ee7b17836982)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1555153327:0",
+      "originalName": "Scatter_asset_5 Variant (1) (Missing Prefab with guid: 5795fd8d5989d5e4cab83966537ae553)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:155866242:0",
+      "originalName": "barricade_concrete_High Variant (7) (Missing Prefab with guid: 532b9e3265ce8bc479b631898a4bf4c2)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1559502311:0",
+      "originalName": "SB_container Variant (2) (Missing Prefab with guid: 4eb91f0f238f97240bdf0726b0e33dfc)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1559840224:0",
+      "originalName": "Scatter_assets_7 Variant (1) (Missing Prefab with guid: 63b799f88e13d4b428171b29d5b5e0d8)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1564584801:0",
+      "originalName": "SB_container Variant (14) (Missing Prefab with guid: 4eb91f0f238f97240bdf0726b0e33dfc)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1566791185:0",
+      "originalName": "traffic cone Variant (2) (Missing Prefab with guid: fc61c55e208f92e40972ee7b17836982)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1568321541:0",
+      "originalName": "Thick_colomb_baricade Variant (Missing Prefab with guid: 8037b0f137dfe2c499bf3c1f6579ca7f)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1571123155:0",
+      "originalName": "barricade_concrete_LowClean Variant (14) (Missing Prefab with guid: 96eaba1a465b3a6498090336e793fef9)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1571189040:0",
+      "originalName": "Thick_colomb_baricade Variant (27) (Missing Prefab with guid: 8037b0f137dfe2c499bf3c1f6579ca7f)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1571541346:0",
+      "originalName": "SB_container Variant (43) (Missing Prefab with guid: 4eb91f0f238f97240bdf0726b0e33dfc)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1572245824:0",
+      "originalName": "barricade_sandbags Variant (67) (Missing Prefab with guid: b4991c8b525f0f84e9259bf1b6bcf642)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1572456508:0",
+      "originalName": "barricade_concrete_High Variant (12) (Missing Prefab with guid: 532b9e3265ce8bc479b631898a4bf4c2)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:157661537:0",
+      "originalName": "SB_Cardboard_boxes Variant (5) (Missing Prefab with guid: 7543a048103abcf4ea40383f9a7c5bcc)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1577870033:0",
+      "originalName": "Prop_TrafficConeLine (6) (Missing Prefab with guid: 1e75a013731430c448b58b513eb3f75f)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:158622379:0",
+      "originalName": "barricade_concrete_LowClean Variant (7) (Missing Prefab with guid: 96eaba1a465b3a6498090336e793fef9)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1586272955:0",
+      "originalName": "traffic cone Variant (14) (Missing Prefab with guid: fc61c55e208f92e40972ee7b17836982)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1589280811:0",
+      "originalName": "SB_container Variant (21) (Missing Prefab with guid: 4eb91f0f238f97240bdf0726b0e33dfc)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1596836418:0",
+      "originalName": "Wall_Base_Straight_PRFB (24) (Missing Prefab with guid: a12ad16b265c63448b457b908f5d9845)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1601198925:0",
+      "originalName": "SB_container Variant (26) (Missing Prefab with guid: 4eb91f0f238f97240bdf0726b0e33dfc)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1604293276:0",
+      "originalName": "barricade_sandbags Variant (21) (Missing Prefab with guid: b4991c8b525f0f84e9259bf1b6bcf642)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1605442866:0",
+      "originalName": "traffic cone Variant (4) (Missing Prefab with guid: fc61c55e208f92e40972ee7b17836982)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1609404174:0",
+      "originalName": "barricade_concrete_LowClean Variant (9) (Missing Prefab with guid: 96eaba1a465b3a6498090336e793fef9)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1610824312:0",
+      "originalName": "Car_Convertable_Pink_PRFB (Missing Prefab with guid: e0e3379cfacc2534a838ed0a5d5a46f0)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1610964018:0",
+      "originalName": "Thick_colomb_baricade Variant (14) (Missing Prefab with guid: 8037b0f137dfe2c499bf3c1f6579ca7f)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1618787542:0",
+      "originalName": "traffic cone Variant (11) (Missing Prefab with guid: fc61c55e208f92e40972ee7b17836982)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1623921874:0",
+      "originalName": "barricade_sandbags Variant (17) (Missing Prefab with guid: b4991c8b525f0f84e9259bf1b6bcf642)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1626271507:0",
+      "originalName": "sky_walk_platform_clean Variant (3) (Missing Prefab with guid: c12e95e6d335f5646bdb9f63c2424def)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1626775927:0",
+      "originalName": "SB_Cardboard_boxes Variant (4) (Missing Prefab with guid: 7543a048103abcf4ea40383f9a7c5bcc)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1630025302:0",
+      "originalName": "LB_Skip Variant (Missing Prefab with guid: acc36632fd71a3b4bb928e3a3a1bebb1)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1631198133:0",
+      "originalName": "Scatter_asset_4 Variant (Missing Prefab with guid: 68f15bccafbfd4147a8ffa2c435a5574)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:163751096:0",
+      "originalName": "traffic cone Variant (58) (Missing Prefab with guid: fc61c55e208f92e40972ee7b17836982)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1642280984:0",
+      "originalName": "Prop_TrafficConeLine (Missing Prefab with guid: 1e75a013731430c448b58b513eb3f75f)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1643577672:0",
+      "originalName": "Tyres_Baricade Variant (9) (Missing Prefab with guid: 12ef1723b52b0d741996d5ea26a08c2f)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1645600446:0",
+      "originalName": "barricade_sandbags Variant (74) (Missing Prefab with guid: b4991c8b525f0f84e9259bf1b6bcf642)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1645758078:0",
+      "originalName": "SB_container Variant (3) (Missing Prefab with guid: 4eb91f0f238f97240bdf0726b0e33dfc)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1660804499:0",
+      "originalName": "barricade_sandbags Variant (2) (Missing Prefab with guid: b4991c8b525f0f84e9259bf1b6bcf642)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1670062793:0",
+      "originalName": "Scatter_asset_5 Variant (1) (Missing Prefab with guid: 5795fd8d5989d5e4cab83966537ae553)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1678639880:0",
+      "originalName": "SB_container Variant (1) (Missing Prefab with guid: 4eb91f0f238f97240bdf0726b0e33dfc)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1683075467:0",
+      "originalName": "SB_Cardboard_boxes Variant (Missing Prefab with guid: 7543a048103abcf4ea40383f9a7c5bcc)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:168332272:0",
+      "originalName": "LB_Fortified_wall Variant (7) (Missing Prefab with guid: ef1ce9dbcd7eac54bb86b26aedbfcfdb)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1684850102:0",
+      "originalName": "Scatter_asset_4 Variant (1) (Missing Prefab with guid: 68f15bccafbfd4147a8ffa2c435a5574)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1694329703:0",
+      "originalName": "barricade_sandbags Variant (39) (Missing Prefab with guid: b4991c8b525f0f84e9259bf1b6bcf642)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1701591313:0",
+      "originalName": "sky_walk_broken_both_ends Variant (Missing Prefab with guid: 02d14de97bf8f8c41b9e9701a23a2f63)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1702877605:0",
+      "originalName": "LB_Broken_baclony_2 Variant (Missing Prefab with guid: 0ccf218bf64918b4b980f72aefa1dd41)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1707060719:0",
+      "originalName": "Wall_Base_Straight_PRFB (13) (Missing Prefab with guid: a12ad16b265c63448b457b908f5d9845)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1707531260:0",
+      "originalName": "Container_Red (4) (Missing Prefab with guid: 7705fb9d99e1c7b43ad5c33e8cefed59)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:170896829:0",
+      "originalName": "barricade_sandbags Variant (69) (Missing Prefab with guid: b4991c8b525f0f84e9259bf1b6bcf642)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1710764526:0",
+      "originalName": "SB_container Variant (31) (Missing Prefab with guid: 4eb91f0f238f97240bdf0726b0e33dfc)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1711131071:0",
+      "originalName": "Wall_Base_Straight_PRFB (12) (Missing Prefab with guid: a12ad16b265c63448b457b908f5d9845)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1716365565:0",
+      "originalName": "traffic cone Variant (9) (Missing Prefab with guid: fc61c55e208f92e40972ee7b17836982)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1716720374:0",
+      "originalName": "barricade_concrete_High Variant (34) (Missing Prefab with guid: 532b9e3265ce8bc479b631898a4bf4c2)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1719103932:0",
+      "originalName": "Scatter_assets_6 Variant (Missing Prefab with guid: ded78b0bf6daec74d9d2fd898892bd3d)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1719728283:0",
+      "originalName": "SB_container Variant (19) (Missing Prefab with guid: 4eb91f0f238f97240bdf0726b0e33dfc)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1721054516:0",
+      "originalName": "Scatter_asset_2 Variant (2) (Missing Prefab with guid: 5a152d999c328434e82353230c91a39d)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1724740223:0",
+      "originalName": "Wall_Base_Straight_PRFB (2) (Missing Prefab with guid: a12ad16b265c63448b457b908f5d9845)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1730368223:0",
+      "originalName": "MB_Wall_L_Shape_Bare Variant (2) (Missing Prefab with guid: 39c166a3556f0ae4184948c83e46f215)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1732342705:0",
+      "originalName": "Thick_colomb_baricade Variant (8) (Missing Prefab with guid: 8037b0f137dfe2c499bf3c1f6579ca7f)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1735989800:0",
+      "originalName": "Thick_colomb_baricade Variant (2) (Missing Prefab with guid: 8037b0f137dfe2c499bf3c1f6579ca7f)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1738547114:0",
+      "originalName": "LB_Broken_baclony_2 Variant (1) (Missing Prefab with guid: 0ccf218bf64918b4b980f72aefa1dd41)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1743611806:0",
+      "originalName": "SB_Cardboard_boxes Variant (10) (Missing Prefab with guid: 7543a048103abcf4ea40383f9a7c5bcc)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1746917991:0",
+      "originalName": "SB_container Variant (41) (Missing Prefab with guid: 4eb91f0f238f97240bdf0726b0e33dfc)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1748174102:0",
+      "originalName": "traffic cone Variant (32) (Missing Prefab with guid: fc61c55e208f92e40972ee7b17836982)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1748961808:0",
+      "originalName": "barricade_concrete_High Variant (4) (Missing Prefab with guid: 532b9e3265ce8bc479b631898a4bf4c2)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1749074935:0",
+      "originalName": "Sky_walk_base Variant (3) (Missing Prefab with guid: 509c8d5112ca38645ae66c8aa797f502)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:175684531:0",
+      "originalName": "SB_container Variant (27) (Missing Prefab with guid: 4eb91f0f238f97240bdf0726b0e33dfc)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:176857209:0",
+      "originalName": "barricade_sandbags Variant (15) (Missing Prefab with guid: b4991c8b525f0f84e9259bf1b6bcf642)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1775693605:0",
+      "originalName": "traffic cone Variant (33) (Missing Prefab with guid: fc61c55e208f92e40972ee7b17836982)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1777661340:0",
+      "originalName": "barricade_concrete_High Variant (30) (Missing Prefab with guid: 532b9e3265ce8bc479b631898a4bf4c2)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1777810936:0",
+      "originalName": "traffic cone Variant (28) (Missing Prefab with guid: fc61c55e208f92e40972ee7b17836982)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1778068691:0",
+      "originalName": "barricade_concrete_LowClean Variant (20) (Missing Prefab with guid: 96eaba1a465b3a6498090336e793fef9)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:178137644:0",
+      "originalName": "LB_Fortified_wall Variant (3) (Missing Prefab with guid: ef1ce9dbcd7eac54bb86b26aedbfcfdb)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1783811673:0",
+      "originalName": "Wall_Base_Straight_PRFB (7) (Missing Prefab with guid: a12ad16b265c63448b457b908f5d9845)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1785727717:0",
+      "originalName": "SB_Cardboard_boxes Variant (1) (Missing Prefab with guid: 7543a048103abcf4ea40383f9a7c5bcc)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1785949803:0",
+      "originalName": "Wall_Base_Straight_PRFB (1) (Missing Prefab with guid: a12ad16b265c63448b457b908f5d9845)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1786597047:0",
+      "originalName": "Barrier_Wild_Logs01 (8) (Missing Prefab with guid: 78bc902ee7b6e6148b757dc55310276c)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1788762124:0",
+      "originalName": "barricade_concrete_LowClean Variant (19) (Missing Prefab with guid: 96eaba1a465b3a6498090336e793fef9)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1791259631:0",
+      "originalName": "Wall_Base_Straight_PRFB (44) (Missing Prefab with guid: a12ad16b265c63448b457b908f5d9845)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1793536529:0",
+      "originalName": "Scatter_asset_1 Variant (2) (Missing Prefab with guid: 02f8f14fb421e714facb5121d7359b79)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1794362854:0",
+      "originalName": "traffic cone Variant (12) (Missing Prefab with guid: fc61c55e208f92e40972ee7b17836982)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1794718855:0",
+      "originalName": "SB_container Variant (49) (Missing Prefab with guid: 4eb91f0f238f97240bdf0726b0e33dfc)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1795863850:0",
+      "originalName": "SB_container Variant (36) (Missing Prefab with guid: 4eb91f0f238f97240bdf0726b0e33dfc)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:179658862:0",
+      "originalName": "MB_barrel_pallete Variant (10) (Missing Prefab with guid: f7f2322b8a846f947809ea34012271c7)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1797209193:0",
+      "originalName": "barricade_sandbags Variant (29) (Missing Prefab with guid: b4991c8b525f0f84e9259bf1b6bcf642)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1799454795:0",
+      "originalName": "Barricade_Concrete_4Piece_PRFB (6) (Missing Prefab with guid: a85140a774de7cd45a9b88a5291c7c60)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1804852090:0",
+      "originalName": "SB_Junk_wall Variant (4) (Missing Prefab with guid: 655b69d4aaa362b41b9ea91dc3ebf98a)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1808676455:0",
+      "originalName": "SB_container Variant (60) (Missing Prefab with guid: 4eb91f0f238f97240bdf0726b0e33dfc)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1811843082:0",
+      "originalName": "SB_Cardboard_boxes Variant (9) (Missing Prefab with guid: 7543a048103abcf4ea40383f9a7c5bcc)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1811859830:0",
+      "originalName": "barricade_concrete_High Variant (11) (Missing Prefab with guid: 532b9e3265ce8bc479b631898a4bf4c2)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1811921818:0",
+      "originalName": "barricade_sandbags Variant (43) (Missing Prefab with guid: b4991c8b525f0f84e9259bf1b6bcf642)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1812523371:0",
+      "originalName": "SB_container Variant (25) (Missing Prefab with guid: 4eb91f0f238f97240bdf0726b0e33dfc)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1817383234:0",
+      "originalName": "LB_Fortified_wall Variant (6) (Missing Prefab with guid: ef1ce9dbcd7eac54bb86b26aedbfcfdb)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1818910122:0",
+      "originalName": "traffic cone Variant (3) (Missing Prefab with guid: fc61c55e208f92e40972ee7b17836982)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1820039792:0",
+      "originalName": "traffic cone Variant (26) (Missing Prefab with guid: fc61c55e208f92e40972ee7b17836982)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1825447795:0",
+      "originalName": "SB_container Variant (2) (Missing Prefab with guid: 4eb91f0f238f97240bdf0726b0e33dfc)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1825481410:0",
+      "originalName": "Scatter_asset_1 Variant (Missing Prefab with guid: 02f8f14fb421e714facb5121d7359b79)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:182721526:0",
+      "originalName": "barricade_sandbags Variant (4) (Missing Prefab with guid: b4991c8b525f0f84e9259bf1b6bcf642)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1829140314:0",
+      "originalName": "Sky_walk_base Variant (6) (Missing Prefab with guid: 509c8d5112ca38645ae66c8aa797f502)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1829975227:0",
+      "originalName": "barricade_concrete_LowClean Variant (Missing Prefab with guid: 96eaba1a465b3a6498090336e793fef9)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:183166125:0",
+      "originalName": "SB_container Variant (64) (Missing Prefab with guid: 4eb91f0f238f97240bdf0726b0e33dfc)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1832337454:0",
+      "originalName": "barricade_sandbags Variant (58) (Missing Prefab with guid: b4991c8b525f0f84e9259bf1b6bcf642)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1832531055:0",
+      "originalName": "barricade_concrete_High Variant (24) (Missing Prefab with guid: 532b9e3265ce8bc479b631898a4bf4c2)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1834997731:0",
+      "originalName": "Tyres_Baricade Variant (11) (Missing Prefab with guid: 12ef1723b52b0d741996d5ea26a08c2f)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1852263113:0",
+      "originalName": "Scatter_asset_4 Variant (1) (Missing Prefab with guid: 68f15bccafbfd4147a8ffa2c435a5574)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1852602885:0",
+      "originalName": "barricade_sandbags Variant (64) (Missing Prefab with guid: b4991c8b525f0f84e9259bf1b6bcf642)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1853875866:0",
+      "originalName": "sky_walk_platform_clean Variant (Missing Prefab with guid: c12e95e6d335f5646bdb9f63c2424def)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1856774772:0",
+      "originalName": "SB_Junk_wall Variant (1) (Missing Prefab with guid: 655b69d4aaa362b41b9ea91dc3ebf98a)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1860264086:0",
+      "originalName": "barricade_sandbags Variant (14) (Missing Prefab with guid: b4991c8b525f0f84e9259bf1b6bcf642)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1860830669:0",
+      "originalName": "barricade_sandbags Variant (63) (Missing Prefab with guid: b4991c8b525f0f84e9259bf1b6bcf642)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1865459464:0",
+      "originalName": "SB_Cardboard_boxes Variant (6) (Missing Prefab with guid: 7543a048103abcf4ea40383f9a7c5bcc)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1865772107:0",
+      "originalName": "Scatter_asset_3 Variant (Missing Prefab with guid: f4939ac19e6d4024bb5dc0da01046f87)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1865898715:0",
+      "originalName": "Wall_Base_Straight_PRFB (39) (Missing Prefab with guid: a12ad16b265c63448b457b908f5d9845)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1866817979:0",
+      "originalName": "Scatter_asset_1 Variant (2) (Missing Prefab with guid: 02f8f14fb421e714facb5121d7359b79)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1867323324:0",
+      "originalName": "Barricade_Concrete_4Piece_PRFB (5) (Missing Prefab with guid: a85140a774de7cd45a9b88a5291c7c60)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1874125858:0",
+      "originalName": "SB_Broken_colomb Variant (Missing Prefab with guid: 5c3000f1b222cbd419b915327a407f42)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1875922009:0",
+      "originalName": "barricade_concrete_High Variant (2) (Missing Prefab with guid: 532b9e3265ce8bc479b631898a4bf4c2)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1875932803:0",
+      "originalName": "Scatter_assets_6 Variant (3) (Missing Prefab with guid: ded78b0bf6daec74d9d2fd898892bd3d)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1876454720:0",
+      "originalName": "Scatter_asset_1 Variant (1) (Missing Prefab with guid: 02f8f14fb421e714facb5121d7359b79)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1878308683:0",
+      "originalName": "barricade_sandbags Variant (3) (Missing Prefab with guid: b4991c8b525f0f84e9259bf1b6bcf642)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1882494288:0",
+      "originalName": "Tyres_Baricade Variant (Missing Prefab with guid: 12ef1723b52b0d741996d5ea26a08c2f)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1885168691:0",
+      "originalName": "barricade_sandbags Variant (7) (Missing Prefab with guid: b4991c8b525f0f84e9259bf1b6bcf642)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1885178377:0",
+      "originalName": "barricade_sandbags Variant (19) (Missing Prefab with guid: b4991c8b525f0f84e9259bf1b6bcf642)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1887953602:0",
+      "originalName": "Scatter_assets_6 Variant (2) (Missing Prefab with guid: ded78b0bf6daec74d9d2fd898892bd3d)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:189435109:0",
+      "originalName": "SB_container Variant (1) (Missing Prefab with guid: 4eb91f0f238f97240bdf0726b0e33dfc)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1898188468:0",
+      "originalName": "traffic cone Variant (43) (Missing Prefab with guid: fc61c55e208f92e40972ee7b17836982)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1899772023:0",
+      "originalName": "Barricade_Concrete_4Piece_PRFB (1) (Missing Prefab with guid: a85140a774de7cd45a9b88a5291c7c60)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1903969984:0",
+      "originalName": "MB_barrel_pallete Variant (3) (Missing Prefab with guid: f7f2322b8a846f947809ea34012271c7)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1909879782:0",
+      "originalName": "barricade_concrete_High Variant (20) (Missing Prefab with guid: 532b9e3265ce8bc479b631898a4bf4c2)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1913301379:0",
+      "originalName": "SB_container Variant (37) (Missing Prefab with guid: 4eb91f0f238f97240bdf0726b0e33dfc)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1922981132:0",
+      "originalName": "SB_container Variant (16) (Missing Prefab with guid: 4eb91f0f238f97240bdf0726b0e33dfc)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:192548410:0",
+      "originalName": "Wall_Base_Straight_PRFB (43) (Missing Prefab with guid: a12ad16b265c63448b457b908f5d9845)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1927767173:0",
+      "originalName": "MB_barrel_pallete Variant (4) (Missing Prefab with guid: f7f2322b8a846f947809ea34012271c7)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1932277759:0",
+      "originalName": "Barricade_Concrete_LongCorner_PRFB (Missing Prefab with guid: 47b88285ff45a614fb80aa1443f07eb1)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1936849506:0",
+      "originalName": "MB_Funnel_Shape Variant (2) (Missing Prefab with guid: 16c85de8daf745d4f8930777c298fc0d)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:193892745:0",
+      "originalName": "barricade_concrete_High Variant (29) (Missing Prefab with guid: 532b9e3265ce8bc479b631898a4bf4c2)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1940332956:0",
+      "originalName": "Scatter_assets_6 Variant (Missing Prefab with guid: ded78b0bf6daec74d9d2fd898892bd3d)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1943907487:0",
+      "originalName": "MB_Fridge Variant (Missing Prefab with guid: 0e4ddefc4a3e7b54996dcbefc0e7d7e3)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1948705113:0",
+      "originalName": "Prop_TrafficConeLine (1) (Missing Prefab with guid: 1e75a013731430c448b58b513eb3f75f)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1949477687:0",
+      "originalName": "MB_barrel_pallete Variant (6) (Missing Prefab with guid: f7f2322b8a846f947809ea34012271c7)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1949769336:0",
+      "originalName": "Barrier_Wild_Logs01 (7) (Missing Prefab with guid: 78bc902ee7b6e6148b757dc55310276c)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1956421856:0",
+      "originalName": "SB_Cardboard_boxes Variant (8) (Missing Prefab with guid: 7543a048103abcf4ea40383f9a7c5bcc)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1959224386:0",
+      "originalName": "LB_Broken_balcony_1 Variant (Missing Prefab with guid: 43021f68ea8b5e140ab0ad8ff86def5e)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1961329859:0",
+      "originalName": "Wall_Base_Straight_PRFB (31) (Missing Prefab with guid: a12ad16b265c63448b457b908f5d9845)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1962253200:0",
+      "originalName": "Car_PickUp_Blue_PRFB (1) (Missing Prefab with guid: 527d7ec85a878d6499d64848e38a78fd)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1962774206:0",
+      "originalName": "barricade_concrete_High Variant (28) (Missing Prefab with guid: 532b9e3265ce8bc479b631898a4bf4c2)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1965478450:0",
+      "originalName": "Prop_TrafficConeLine (2) (Missing Prefab with guid: 1e75a013731430c448b58b513eb3f75f)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1967186244:0",
+      "originalName": "Prop_Water_Fountain (1) (Missing Prefab with guid: e49d290250b121441b8b64769562a657)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1968812830:0",
+      "originalName": "Wall_Base_Straight_PRFB (3) (Missing Prefab with guid: a12ad16b265c63448b457b908f5d9845)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1969601431:0",
+      "originalName": "Thick_colomb_baricade Variant (15) (Missing Prefab with guid: 8037b0f137dfe2c499bf3c1f6579ca7f)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1971112658:0",
+      "originalName": "Sky_walk_base Variant (2) (Missing Prefab with guid: 509c8d5112ca38645ae66c8aa797f502)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1981241007:0",
+      "originalName": "traffic cone Variant (29) (Missing Prefab with guid: fc61c55e208f92e40972ee7b17836982)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1984542056:0",
+      "originalName": "Barricade_Concrete_4Piece_PRFB (Missing Prefab with guid: a85140a774de7cd45a9b88a5291c7c60)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1985816830:0",
+      "originalName": "SB_Low_wall Variant (1) (Missing Prefab with guid: bcdb50297f89ac8408519eaee76f6a9e)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:1987495487:0",
+      "originalName": "barricade_concrete_High Variant (14) (Missing Prefab with guid: 532b9e3265ce8bc479b631898a4bf4c2)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:2007360045:0",
+      "originalName": "barricade_sandbags Variant (12) (Missing Prefab with guid: b4991c8b525f0f84e9259bf1b6bcf642)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:2008616929:0",
+      "originalName": "SB_container Variant (40) (Missing Prefab with guid: 4eb91f0f238f97240bdf0726b0e33dfc)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:2012193313:0",
+      "originalName": "Wall_Base_Corner_Short_PRFB (Missing Prefab with guid: 249acdeb55ce15948b2e850d4069e7e6)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:2014554762:0",
+      "originalName": "barricade_sandbags Variant (65) (Missing Prefab with guid: b4991c8b525f0f84e9259bf1b6bcf642)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:2015567894:0",
+      "originalName": "Wall_Base_Straight_PRFB (Missing Prefab with guid: a12ad16b265c63448b457b908f5d9845)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:2021771309:0",
+      "originalName": "barricade_concrete_LowDamage Variant (Missing Prefab with guid: b8fcc080ffd250447bf7e70f5ac778a6)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:2026670922:0",
+      "originalName": "SB_container Variant (1) (Missing Prefab with guid: 4eb91f0f238f97240bdf0726b0e33dfc)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:2027829579:0",
+      "originalName": "Wall_Base_Straight_PRFB (11) (Missing Prefab with guid: a12ad16b265c63448b457b908f5d9845)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:2030635279:0",
+      "originalName": "Wall_Base_Straight_PRFB (17) (Missing Prefab with guid: a12ad16b265c63448b457b908f5d9845)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:2034573779:0",
+      "originalName": "barricade_sandbags Variant (42) (Missing Prefab with guid: b4991c8b525f0f84e9259bf1b6bcf642)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:2035802821:0",
+      "originalName": "SB_concrete_barrier Variant (11) (Missing Prefab with guid: 75f205a96f8a69d409fd8881f0edd4c6)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:2039934407:0",
+      "originalName": "MB_barrel_pallete Variant (2) (Missing Prefab with guid: f7f2322b8a846f947809ea34012271c7)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:204044156:0",
+      "originalName": "Thick_colomb_baricade Variant (16) (Missing Prefab with guid: 8037b0f137dfe2c499bf3c1f6579ca7f)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:2046362215:0",
+      "originalName": "MB_barrel_pallete Variant (9) (Missing Prefab with guid: f7f2322b8a846f947809ea34012271c7)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:2049523229:0",
+      "originalName": "barricade_sandbags Variant (61) (Missing Prefab with guid: b4991c8b525f0f84e9259bf1b6bcf642)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:2050844038:0",
+      "originalName": "Barrier_Wild_Logs01 (2) (Missing Prefab with guid: 78bc902ee7b6e6148b757dc55310276c)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:2050905373:0",
+      "originalName": "Sky_walk_base Variant (4) (Missing Prefab with guid: 509c8d5112ca38645ae66c8aa797f502)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:2054435222:0",
+      "originalName": "LB_Fortified_wall Variant (3) (Missing Prefab with guid: ef1ce9dbcd7eac54bb86b26aedbfcfdb)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:2054513595:0",
+      "originalName": "barricade_sandbags Variant (28) (Missing Prefab with guid: b4991c8b525f0f84e9259bf1b6bcf642)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:2054576323:0",
+      "originalName": "SB_Low_wall Variant (Missing Prefab with guid: bcdb50297f89ac8408519eaee76f6a9e)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:2059585605:0",
+      "originalName": "traffic cone Variant (39) (Missing Prefab with guid: fc61c55e208f92e40972ee7b17836982)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:2060888247:0",
+      "originalName": "BoBs_Bazaar_GRP Variant (Missing Prefab with guid: 0e1620d578c49ad4197915a7810c1c7f)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:2060999034:0",
+      "originalName": "SB_Shelving_Broken Variant (4) (Missing Prefab with guid: e5ad857853bac9448af9b93b866983d7)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:2063706866:0",
+      "originalName": "barricade_sandbags Variant (71) (Missing Prefab with guid: b4991c8b525f0f84e9259bf1b6bcf642)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:2065917513:0",
+      "originalName": "traffic cone Variant (42) (Missing Prefab with guid: fc61c55e208f92e40972ee7b17836982)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:2069782680:0",
+      "originalName": "barricade_concrete_High Variant (3) (Missing Prefab with guid: 532b9e3265ce8bc479b631898a4bf4c2)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:2071345595:0",
+      "originalName": "sky_walk_platform_clean Variant (1) (Missing Prefab with guid: c12e95e6d335f5646bdb9f63c2424def)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:207460443:0",
+      "originalName": "Tyres_Baricade Variant (12) (Missing Prefab with guid: 12ef1723b52b0d741996d5ea26a08c2f)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:2076982337:0",
+      "originalName": "traffic cone Variant (56) (Missing Prefab with guid: fc61c55e208f92e40972ee7b17836982)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:2077636658:0",
+      "originalName": "SB_container Variant (51) (Missing Prefab with guid: 4eb91f0f238f97240bdf0726b0e33dfc)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:2085602580:0",
+      "originalName": "Prop_ShipBollard_PRFB (Missing Prefab with guid: 708dde232a03b8945bc936865f53de46)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:2085629912:0",
+      "originalName": "Thick_colomb_baricade Variant (Missing Prefab with guid: 8037b0f137dfe2c499bf3c1f6579ca7f)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:2095954681:0",
+      "originalName": "traffic cone Variant (51) (Missing Prefab with guid: fc61c55e208f92e40972ee7b17836982)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:2097921978:0",
+      "originalName": "SB_container Variant (Missing Prefab with guid: 4eb91f0f238f97240bdf0726b0e33dfc)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:2098887627:0",
+      "originalName": "LB_Fortified_wall Variant (5) (Missing Prefab with guid: ef1ce9dbcd7eac54bb86b26aedbfcfdb)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:2100499819:0",
+      "originalName": "Scatter_asset_2 Variant (4) (Missing Prefab with guid: 5a152d999c328434e82353230c91a39d)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:2101279026:0",
+      "originalName": "Barricade_Concrete_4Piece_PRFB (3) (Missing Prefab with guid: a85140a774de7cd45a9b88a5291c7c60)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:2103363368:0",
+      "originalName": "barricade_concrete_High Variant (23) (Missing Prefab with guid: 532b9e3265ce8bc479b631898a4bf4c2)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:2107945979:0",
+      "originalName": "Scatter_assets_7 Variant (6) (Missing Prefab with guid: 63b799f88e13d4b428171b29d5b5e0d8)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:2109793266:0",
+      "originalName": "MB_barrel_pallete Variant (7) (Missing Prefab with guid: f7f2322b8a846f947809ea34012271c7)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:2113259243:0",
+      "originalName": "Wall_Base_Straight_PRFB (41) (Missing Prefab with guid: a12ad16b265c63448b457b908f5d9845)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:2114841680:0",
+      "originalName": "Container_Red (5) (Missing Prefab with guid: 7705fb9d99e1c7b43ad5c33e8cefed59)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:2115914163:0",
+      "originalName": "MB_Wall_L_Shape_Bare Variant (1) (Missing Prefab with guid: 39c166a3556f0ae4184948c83e46f215)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:2116106213:0",
+      "originalName": "Wall_Base_Straight_PRFB (3) (Missing Prefab with guid: a12ad16b265c63448b457b908f5d9845)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:2116992271:0",
+      "originalName": "Wall_Base_Corner_Short_PRFB (4) (Missing Prefab with guid: 249acdeb55ce15948b2e850d4069e7e6)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:2125413048:0",
+      "originalName": "MB_Fridge Variant (1) (Missing Prefab with guid: 0e4ddefc4a3e7b54996dcbefc0e7d7e3)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:2125649583:0",
+      "originalName": "SB_Shelving_Broken Variant (Missing Prefab with guid: e5ad857853bac9448af9b93b866983d7)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:2129072312:0",
+      "originalName": "Sky_walk_base Variant (1) (Missing Prefab with guid: 509c8d5112ca38645ae66c8aa797f502)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:2131300825:0",
+      "originalName": "Car_Chevvy_Purple_PRFB (1) (Missing Prefab with guid: 83cd351522fa2764297f57f7a65d0703)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:2133488484:0",
+      "originalName": "Scatter_asset_1 Variant (3) (Missing Prefab with guid: 02f8f14fb421e714facb5121d7359b79)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:2136127685:0",
+      "originalName": "SB_container Variant (17) (Missing Prefab with guid: 4eb91f0f238f97240bdf0726b0e33dfc)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:2137209431:0",
+      "originalName": "Tyres_Baricade Variant (5) (Missing Prefab with guid: 12ef1723b52b0d741996d5ea26a08c2f)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:2137758417:0",
+      "originalName": "SB_Cardboard_boxes Variant (3) (Missing Prefab with guid: 7543a048103abcf4ea40383f9a7c5bcc)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:214123340:0",
+      "originalName": "traffic cone Variant (6) (Missing Prefab with guid: fc61c55e208f92e40972ee7b17836982)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:2142921521:0",
+      "originalName": "Mobile_Home_Yellow Variant (Missing Prefab with guid: d2fe42abfd5caf0449156973f9ffab47)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:214525538:0",
+      "originalName": "SB_container Variant (33) (Missing Prefab with guid: 4eb91f0f238f97240bdf0726b0e33dfc)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:2147315455:0",
+      "originalName": "barricade_sandbags Variant (59) (Missing Prefab with guid: b4991c8b525f0f84e9259bf1b6bcf642)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:2147444573:0",
+      "originalName": "Wall_Base_Straight_PRFB (13) (Missing Prefab with guid: a12ad16b265c63448b457b908f5d9845)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:217232656:0",
+      "originalName": "MB_barrel_pallete Variant (11) (Missing Prefab with guid: f7f2322b8a846f947809ea34012271c7)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:218257038:0",
+      "originalName": "Sky_walk_base Variant (1) (Missing Prefab with guid: 509c8d5112ca38645ae66c8aa797f502)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:219380610:0",
+      "originalName": "Barrier_Wild_Logs01 (5) (Missing Prefab with guid: 78bc902ee7b6e6148b757dc55310276c)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:222550161:0",
+      "originalName": "Wall_Base_Straight_PRFB (6) (Missing Prefab with guid: a12ad16b265c63448b457b908f5d9845)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:226803908:0",
+      "originalName": "SB_container Variant (13) (Missing Prefab with guid: 4eb91f0f238f97240bdf0726b0e33dfc)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:227336896:0",
+      "originalName": "MB_Wall_L_Shape_Bare Variant (3) (Missing Prefab with guid: 39c166a3556f0ae4184948c83e46f215)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:229489628:0",
+      "originalName": "SB_concrete_barrier Variant (2) (Missing Prefab with guid: 75f205a96f8a69d409fd8881f0edd4c6)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:231792032:0",
+      "originalName": "MB_Fridge Variant (2) (Missing Prefab with guid: 0e4ddefc4a3e7b54996dcbefc0e7d7e3)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:23341044:0",
+      "originalName": "Car_Chevvy_Purple_PRFB (Missing Prefab with guid: 83cd351522fa2764297f57f7a65d0703)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:235017971:0",
+      "originalName": "barricade_sandbags Variant (8) (Missing Prefab with guid: b4991c8b525f0f84e9259bf1b6bcf642)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:238116472:0",
+      "originalName": "Scatter_asset_5 Variant (Missing Prefab with guid: 5795fd8d5989d5e4cab83966537ae553)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:238200256:0",
+      "originalName": "Scatter_asset_3 Variant (1) (Missing Prefab with guid: f4939ac19e6d4024bb5dc0da01046f87)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:240120566:0",
+      "originalName": "MB_Wall_T_shape Variant (1) (Missing Prefab with guid: ed992dbd114de214695f8eaa6539acf0)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:242162130:0",
+      "originalName": "barricade_sandbags Variant (30) (Missing Prefab with guid: b4991c8b525f0f84e9259bf1b6bcf642)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:245248583:0",
+      "originalName": "barricade_sandbags Variant (45) (Missing Prefab with guid: b4991c8b525f0f84e9259bf1b6bcf642)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:247329566:0",
+      "originalName": "SB_container Variant (57) (Missing Prefab with guid: 4eb91f0f238f97240bdf0726b0e33dfc)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:251381025:0",
+      "originalName": "Wall_Base_Straight_PRFB (36) (Missing Prefab with guid: a12ad16b265c63448b457b908f5d9845)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:278373046:0",
+      "originalName": "Barricade_Concrete_4Piece_PRFB (2) (Missing Prefab with guid: a85140a774de7cd45a9b88a5291c7c60)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:278584892:0",
+      "originalName": "traffic cone Variant (41) (Missing Prefab with guid: fc61c55e208f92e40972ee7b17836982)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:285128343:0",
+      "originalName": "Thick_colomb_baricade Variant (20) (Missing Prefab with guid: 8037b0f137dfe2c499bf3c1f6579ca7f)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:289058309:0",
+      "originalName": "barricade_sandbags Variant (33) (Missing Prefab with guid: b4991c8b525f0f84e9259bf1b6bcf642)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:292167360:0",
+      "originalName": "traffic cone Variant (18) (Missing Prefab with guid: fc61c55e208f92e40972ee7b17836982)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:294983346:0",
+      "originalName": "SB_container Variant (12) (Missing Prefab with guid: 4eb91f0f238f97240bdf0726b0e33dfc)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:296641511:0",
+      "originalName": "barricade_sandbags Variant (36) (Missing Prefab with guid: b4991c8b525f0f84e9259bf1b6bcf642)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:304471350:0",
+      "originalName": "traffic cone Variant (8) (Missing Prefab with guid: fc61c55e208f92e40972ee7b17836982)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:304854939:0",
+      "originalName": "barricade_sandbags Variant (55) (Missing Prefab with guid: b4991c8b525f0f84e9259bf1b6bcf642)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:319463147:0",
+      "originalName": "Car_Chevvy_Purple_PRFB (2) (Missing Prefab with guid: 83cd351522fa2764297f57f7a65d0703)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:324162787:0",
+      "originalName": "Wall_Base_Straight_PRFB (6) (Missing Prefab with guid: a12ad16b265c63448b457b908f5d9845)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:326383150:0",
+      "originalName": "traffic cone Variant (17) (Missing Prefab with guid: fc61c55e208f92e40972ee7b17836982)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:32895483:0",
+      "originalName": "LB_Fortified_wall Variant (8) (Missing Prefab with guid: ef1ce9dbcd7eac54bb86b26aedbfcfdb)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:331361840:0",
+      "originalName": "SB_container Variant (45) (Missing Prefab with guid: 4eb91f0f238f97240bdf0726b0e33dfc)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:33219578:0",
+      "originalName": "Thick_colomb_baricade Variant (17) (Missing Prefab with guid: 8037b0f137dfe2c499bf3c1f6579ca7f)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:334137075:0",
+      "originalName": "MB_Wall_T_shape Variant (2) (Missing Prefab with guid: ed992dbd114de214695f8eaa6539acf0)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:335513817:0",
+      "originalName": "SB_container Variant (35) (Missing Prefab with guid: 4eb91f0f238f97240bdf0726b0e33dfc)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:338141674:0",
+      "originalName": "Wall_Base_Straight_PRFB (19) (Missing Prefab with guid: a12ad16b265c63448b457b908f5d9845)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:340697397:0",
+      "originalName": "SB_container Variant (29) (Missing Prefab with guid: 4eb91f0f238f97240bdf0726b0e33dfc)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:348172093:0",
+      "originalName": "barricade_sandbags Variant (10) (Missing Prefab with guid: b4991c8b525f0f84e9259bf1b6bcf642)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:349033829:0",
+      "originalName": "MB_barrel_pallete Variant (Missing Prefab with guid: f7f2322b8a846f947809ea34012271c7)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:352214925:0",
+      "originalName": "Tyres_Baricade Variant (2) (Missing Prefab with guid: 12ef1723b52b0d741996d5ea26a08c2f)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:354459671:0",
+      "originalName": "Barricade_Concrete_LongCorner_PRFB (2) (Missing Prefab with guid: 47b88285ff45a614fb80aa1443f07eb1)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:355476124:0",
+      "originalName": "Wall_Base_Straight_PRFB (20) (Missing Prefab with guid: a12ad16b265c63448b457b908f5d9845)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:357561236:0",
+      "originalName": "Thick_colomb_baricade Variant (22) (Missing Prefab with guid: 8037b0f137dfe2c499bf3c1f6579ca7f)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:358875409:0",
+      "originalName": "Tyres_Baricade Variant (1) (Missing Prefab with guid: 12ef1723b52b0d741996d5ea26a08c2f)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:36094068:0",
+      "originalName": "barricade_concrete_High Variant (32) (Missing Prefab with guid: 532b9e3265ce8bc479b631898a4bf4c2)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:370669923:0",
+      "originalName": "Wall_Base_Straight_PRFB (16) (Missing Prefab with guid: a12ad16b265c63448b457b908f5d9845)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:376296975:0",
+      "originalName": "SB_container Variant (20) (Missing Prefab with guid: 4eb91f0f238f97240bdf0726b0e33dfc)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:377315405:0",
+      "originalName": "SB_concrete_barrier Variant (3) (Missing Prefab with guid: 75f205a96f8a69d409fd8881f0edd4c6)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:377924397:0",
+      "originalName": "Wall_Base_Straight_PRFB (30) (Missing Prefab with guid: a12ad16b265c63448b457b908f5d9845)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:379852395:0",
+      "originalName": "Scatter_asset_1 Variant (10) (Missing Prefab with guid: 02f8f14fb421e714facb5121d7359b79)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:382769243:0",
+      "originalName": "Scatter_asset_4 Variant (2) (Missing Prefab with guid: 68f15bccafbfd4147a8ffa2c435a5574)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:387137528:0",
+      "originalName": "SB_container Variant (4) (Missing Prefab with guid: 4eb91f0f238f97240bdf0726b0e33dfc)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:389656122:0",
+      "originalName": "traffic cone Variant (46) (Missing Prefab with guid: fc61c55e208f92e40972ee7b17836982)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:390051641:0",
+      "originalName": "LB_Fortified_wall Variant (12) (Missing Prefab with guid: ef1ce9dbcd7eac54bb86b26aedbfcfdb)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:392048821:0",
+      "originalName": "barricade_sandbags Variant (60) (Missing Prefab with guid: b4991c8b525f0f84e9259bf1b6bcf642)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:394641285:0",
+      "originalName": "Scatter_asset_5 Variant (2) (Missing Prefab with guid: 5795fd8d5989d5e4cab83966537ae553)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:396523161:0",
+      "originalName": "barricade_sandbags Variant (16) (Missing Prefab with guid: b4991c8b525f0f84e9259bf1b6bcf642)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:400788651:0",
+      "originalName": "LB_Skip Variant (2) (Missing Prefab with guid: acc36632fd71a3b4bb928e3a3a1bebb1)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:40105150:0",
+      "originalName": "traffic cone Variant (5) (Missing Prefab with guid: fc61c55e208f92e40972ee7b17836982)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:408974044:0",
+      "originalName": "BrokenBuilding_2_Door (1) (Missing Prefab with guid: 8558c106caa3a0e439beb86633b47de6)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:40987744:0",
+      "originalName": "Wall_Base_Straight_PRFB (33) (Missing Prefab with guid: a12ad16b265c63448b457b908f5d9845)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:420128776:0",
+      "originalName": "Thick_colomb_baricade Variant (28) (Missing Prefab with guid: 8037b0f137dfe2c499bf3c1f6579ca7f)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:422191524:0",
+      "originalName": "barricade_sandbags Variant (26) (Missing Prefab with guid: b4991c8b525f0f84e9259bf1b6bcf642)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:423308421:0",
+      "originalName": "SB_Shelving_Broken Variant (Missing Prefab with guid: e5ad857853bac9448af9b93b866983d7)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:443442017:0",
+      "originalName": "Scatter_asset_2 Variant (1) (Missing Prefab with guid: 5a152d999c328434e82353230c91a39d)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:44513112:0",
+      "originalName": "Wall_Base_Straight_PRFB (17) (Missing Prefab with guid: a12ad16b265c63448b457b908f5d9845)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:4470390:0",
+      "originalName": "SB_Junk_wall Variant (2) (Missing Prefab with guid: 655b69d4aaa362b41b9ea91dc3ebf98a)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:447284529:0",
+      "originalName": "traffic cone Variant (44) (Missing Prefab with guid: fc61c55e208f92e40972ee7b17836982)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:447815182:0",
+      "originalName": "LB_Fortified_wall Variant (2) (Missing Prefab with guid: ef1ce9dbcd7eac54bb86b26aedbfcfdb)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:459438824:0",
+      "originalName": "SB_Thick_concrete_colomb Variant (3) (Missing Prefab with guid: 2f8495fe55a3b5f478d97b559e375b5e)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:460635163:0",
+      "originalName": "barricade_concrete_High Variant (22) (Missing Prefab with guid: 532b9e3265ce8bc479b631898a4bf4c2)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:464237802:0",
+      "originalName": "Thick_colomb_baricade Variant (1) (Missing Prefab with guid: 8037b0f137dfe2c499bf3c1f6579ca7f)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:46536584:0",
+      "originalName": "barricade_concrete_High Variant (35) (Missing Prefab with guid: 532b9e3265ce8bc479b631898a4bf4c2)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:468545110:0",
+      "originalName": "LB_Skip Variant (Missing Prefab with guid: acc36632fd71a3b4bb928e3a3a1bebb1)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:472597504:0",
+      "originalName": "Wall_Base_Straight_PRFB (22) (Missing Prefab with guid: a12ad16b265c63448b457b908f5d9845)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:475584965:0",
+      "originalName": "barricade_sandbags Variant (66) (Missing Prefab with guid: b4991c8b525f0f84e9259bf1b6bcf642)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:479386736:0",
+      "originalName": "SB_container Variant (30) (Missing Prefab with guid: 4eb91f0f238f97240bdf0726b0e33dfc)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:480508572:0",
+      "originalName": "Thick_colomb_baricade Variant (19) (Missing Prefab with guid: 8037b0f137dfe2c499bf3c1f6579ca7f)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:480599189:0",
+      "originalName": "barricade_concrete_High Variant (Missing Prefab with guid: 532b9e3265ce8bc479b631898a4bf4c2)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:485364344:0",
+      "originalName": "barricade_sandbags Variant (1) (Missing Prefab with guid: b4991c8b525f0f84e9259bf1b6bcf642)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:485418165:0",
+      "originalName": "Tyres_Baricade Variant (10) (Missing Prefab with guid: 12ef1723b52b0d741996d5ea26a08c2f)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:494420177:0",
+      "originalName": "traffic cone Variant (52) (Missing Prefab with guid: fc61c55e208f92e40972ee7b17836982)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:496879064:0",
+      "originalName": "barricade_concrete_LowClean Variant (8) (Missing Prefab with guid: 96eaba1a465b3a6498090336e793fef9)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:502138698:0",
+      "originalName": "Barrier_Wild_Logs01 (Missing Prefab with guid: 78bc902ee7b6e6148b757dc55310276c)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:502586757:0",
+      "originalName": "SB_Thick_concrete_colomb Variant (4) (Missing Prefab with guid: 2f8495fe55a3b5f478d97b559e375b5e)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:504531778:0",
+      "originalName": "SB_container Variant (Missing Prefab with guid: 4eb91f0f238f97240bdf0726b0e33dfc)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:508243214:0",
+      "originalName": "Wall_Base_Straight_PRFB (5) (Missing Prefab with guid: a12ad16b265c63448b457b908f5d9845)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:508552027:0",
+      "originalName": "MB_wall_Compound_shape Variant (4) (Missing Prefab with guid: 612dff909b60caf4395084d428a55ed9)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:510661987:0",
+      "originalName": "Wall_Base_Straight_PRFB (28) (Missing Prefab with guid: a12ad16b265c63448b457b908f5d9845)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:512477896:0",
+      "originalName": "Scatter_asset_4 Variant (3) (Missing Prefab with guid: 68f15bccafbfd4147a8ffa2c435a5574)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:515228454:0",
+      "originalName": "Barrier_Wild_Logs01 (1) (Missing Prefab with guid: 78bc902ee7b6e6148b757dc55310276c)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:517318422:0",
+      "originalName": "SB_Cardboard_boxes Variant (11) (Missing Prefab with guid: 7543a048103abcf4ea40383f9a7c5bcc)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:51793338:0",
+      "originalName": "Container_Red (7) (Missing Prefab with guid: 7705fb9d99e1c7b43ad5c33e8cefed59)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:520061023:0",
+      "originalName": "barricade_concrete_LowClean Variant (21) (Missing Prefab with guid: 96eaba1a465b3a6498090336e793fef9)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:520245174:0",
+      "originalName": "LB_Fortified_wall Variant (Missing Prefab with guid: ef1ce9dbcd7eac54bb86b26aedbfcfdb)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:523978531:0",
+      "originalName": "traffic cone Variant (27) (Missing Prefab with guid: fc61c55e208f92e40972ee7b17836982)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:530329144:0",
+      "originalName": "Wall_Base_Straight_PRFB (26) (Missing Prefab with guid: a12ad16b265c63448b457b908f5d9845)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:539302161:0",
+      "originalName": "Thick_colomb_baricade Variant (7) (Missing Prefab with guid: 8037b0f137dfe2c499bf3c1f6579ca7f)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:543662360:0",
+      "originalName": "skull_iso Variant (Missing Prefab with guid: 63fc173cd236d0a4f94a6dc34df329e7)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:546640745:0",
+      "originalName": "traffic cone Variant (25) (Missing Prefab with guid: fc61c55e208f92e40972ee7b17836982)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:548863670:0",
+      "originalName": "Sky_walk_base Variant (Missing Prefab with guid: 509c8d5112ca38645ae66c8aa797f502)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:550274123:0",
+      "originalName": "barricade_concrete_High Variant (27) (Missing Prefab with guid: 532b9e3265ce8bc479b631898a4bf4c2)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:55279331:0",
+      "originalName": "barricade_sandbags Variant (25) (Missing Prefab with guid: b4991c8b525f0f84e9259bf1b6bcf642)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:556245123:0",
+      "originalName": "MB_Wall_L_Shape_Bare Variant (Missing Prefab with guid: 39c166a3556f0ae4184948c83e46f215)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:562958222:0",
+      "originalName": "Tyres_Baricade Variant (15) (Missing Prefab with guid: 12ef1723b52b0d741996d5ea26a08c2f)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:568873352:0",
+      "originalName": "Car_PickUp_Blue_PRFB (Missing Prefab with guid: 527d7ec85a878d6499d64848e38a78fd)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:570226954:0",
+      "originalName": "LB_Fortified_wall Variant (Missing Prefab with guid: ef1ce9dbcd7eac54bb86b26aedbfcfdb)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:570241504:0",
+      "originalName": "MB_barrel_pallete Variant (3) (Missing Prefab with guid: f7f2322b8a846f947809ea34012271c7)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:570525839:0",
+      "originalName": "SB_container Variant (28) (Missing Prefab with guid: 4eb91f0f238f97240bdf0726b0e33dfc)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:576904753:0",
+      "originalName": "Mobile_Home_Yellow Variant (1) (Missing Prefab with guid: d2fe42abfd5caf0449156973f9ffab47)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:577420845:0",
+      "originalName": "SB_container Variant (18) (Missing Prefab with guid: 4eb91f0f238f97240bdf0726b0e33dfc)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:578246049:0",
+      "originalName": "Mobile_Home_Yellow Variant (2) (Missing Prefab with guid: d2fe42abfd5caf0449156973f9ffab47)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:581338636:0",
+      "originalName": "SB_Low_wall_long_L_shape Variant (1) (Missing Prefab with guid: 8c46eb9c13769ee4fb40a82ed6604b70)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:582239285:0",
+      "originalName": "barricade_sandbags Variant (51) (Missing Prefab with guid: b4991c8b525f0f84e9259bf1b6bcf642)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:582557935:0",
+      "originalName": "barricade_sandbags Variant (73) (Missing Prefab with guid: b4991c8b525f0f84e9259bf1b6bcf642)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:584394041:0",
+      "originalName": "Barricade_Concrete_LongCorner_PRFB (3) (Missing Prefab with guid: 47b88285ff45a614fb80aa1443f07eb1)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:58650614:0",
+      "originalName": "Scatter_assets_7 Variant (5) (Missing Prefab with guid: 63b799f88e13d4b428171b29d5b5e0d8)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:589769166:0",
+      "originalName": "LB_Fortified_wall Variant (1) (Missing Prefab with guid: ef1ce9dbcd7eac54bb86b26aedbfcfdb)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:590715185:0",
+      "originalName": "Barricade_Concrete_LongCorner_PRFB (1) (Missing Prefab with guid: 47b88285ff45a614fb80aa1443f07eb1)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:592006268:0",
+      "originalName": "Container_Red (3) (Missing Prefab with guid: 7705fb9d99e1c7b43ad5c33e8cefed59)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:599081133:0",
+      "originalName": "Scatter_assets_7 Variant (Missing Prefab with guid: 63b799f88e13d4b428171b29d5b5e0d8)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:60022524:0",
+      "originalName": "Thick_colomb_baricade Variant (4) (Missing Prefab with guid: 8037b0f137dfe2c499bf3c1f6579ca7f)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:60174586:0",
+      "originalName": "SB_concrete_barrier Variant (5) (Missing Prefab with guid: 75f205a96f8a69d409fd8881f0edd4c6)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:603891768:0",
+      "originalName": "LB_Broken_baclony_2 Variant (Missing Prefab with guid: 0ccf218bf64918b4b980f72aefa1dd41)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:604986540:0",
+      "originalName": "SB_concrete_barrier Variant (Missing Prefab with guid: 75f205a96f8a69d409fd8881f0edd4c6)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:607234643:0",
+      "originalName": "MB_Funnel_Shape Variant (Missing Prefab with guid: 16c85de8daf745d4f8930777c298fc0d)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:613326940:0",
+      "originalName": "sky_walk_broken_single_end Variant (Missing Prefab with guid: 44149950ec8ae8140a2b6230f6ed521f)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:619942564:0",
+      "originalName": "Scatter_asset_2 Variant (Missing Prefab with guid: 5a152d999c328434e82353230c91a39d)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:620661640:0",
+      "originalName": "Wall_Base_Straight_PRFB (21) (Missing Prefab with guid: a12ad16b265c63448b457b908f5d9845)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:622934126:0",
+      "originalName": "SB_container Variant (7) (Missing Prefab with guid: 4eb91f0f238f97240bdf0726b0e33dfc)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:624202720:0",
+      "originalName": "Scatter_asset_1 Variant (1) (Missing Prefab with guid: 02f8f14fb421e714facb5121d7359b79)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:630935941:0",
+      "originalName": "Wall_Base_Straight_PRFB (1) (Missing Prefab with guid: a12ad16b265c63448b457b908f5d9845)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:631084240:0",
+      "originalName": "barricade_concrete_High Variant (17) (Missing Prefab with guid: 532b9e3265ce8bc479b631898a4bf4c2)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:633425989:0",
+      "originalName": "Prop_TrafficConeLine (4) (Missing Prefab with guid: 1e75a013731430c448b58b513eb3f75f)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:639280368:0",
+      "originalName": "MB_Wall_L_Shape_tyres Variant (Missing Prefab with guid: 8fa8e7f445c5da840a4233ed7a2957c1)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:645427346:0",
+      "originalName": "BrokenBuilding_2_Door (Missing Prefab with guid: 8558c106caa3a0e439beb86633b47de6)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:648463375:0",
+      "originalName": "SB_container Variant (24) (Missing Prefab with guid: 4eb91f0f238f97240bdf0726b0e33dfc)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:649072742:0",
+      "originalName": "SB_Low_wall_long_L_shape Variant (Missing Prefab with guid: 8c46eb9c13769ee4fb40a82ed6604b70)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:650929323:0",
+      "originalName": "SB_Broken_colomb Variant (2) (Missing Prefab with guid: 5c3000f1b222cbd419b915327a407f42)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:656579497:0",
+      "originalName": "SB_container Variant (2) (Missing Prefab with guid: 4eb91f0f238f97240bdf0726b0e33dfc)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:66209313:0",
+      "originalName": "barricade_sandbags Variant (46) (Missing Prefab with guid: b4991c8b525f0f84e9259bf1b6bcf642)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:667283894:0",
+      "originalName": "Thick_colomb_baricade Variant (3) (Missing Prefab with guid: 8037b0f137dfe2c499bf3c1f6579ca7f)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:667801086:0",
+      "originalName": "Barrier_Wild_Logs01 (4) (Missing Prefab with guid: 78bc902ee7b6e6148b757dc55310276c)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:667883942:0",
+      "originalName": "barricade_concrete_High Variant (5) (Missing Prefab with guid: 532b9e3265ce8bc479b631898a4bf4c2)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:669866922:0",
+      "originalName": "traffic cone Variant (57) (Missing Prefab with guid: fc61c55e208f92e40972ee7b17836982)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:672307846:0",
+      "originalName": "SB_Thick_concrete_colomb Variant (1) (Missing Prefab with guid: 2f8495fe55a3b5f478d97b559e375b5e)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:681586951:0",
+      "originalName": "Scatter_asset_2 Variant (7) (Missing Prefab with guid: 5a152d999c328434e82353230c91a39d)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:685016800:0",
+      "originalName": "MB_wall_Compound_shape Variant (1) (Missing Prefab with guid: 612dff909b60caf4395084d428a55ed9)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:685642296:0",
+      "originalName": "barricade_concrete_LowClean Variant (12) (Missing Prefab with guid: 96eaba1a465b3a6498090336e793fef9)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:69267067:0",
+      "originalName": "SB_concrete_barrier Variant (1) (Missing Prefab with guid: 75f205a96f8a69d409fd8881f0edd4c6)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:693801636:0",
+      "originalName": "SB_Cardboard_boxes Variant (7) (Missing Prefab with guid: 7543a048103abcf4ea40383f9a7c5bcc)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:697774320:0",
+      "originalName": "traffic cone Variant (16) (Missing Prefab with guid: fc61c55e208f92e40972ee7b17836982)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:69822351:0",
+      "originalName": "barricade_sandbags Variant (53) (Missing Prefab with guid: b4991c8b525f0f84e9259bf1b6bcf642)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:699363792:0",
+      "originalName": "Sky_walk_base Variant (2) (Missing Prefab with guid: 509c8d5112ca38645ae66c8aa797f502)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:699706920:0",
+      "originalName": "Scatter_assets_7 Variant (4) (Missing Prefab with guid: 63b799f88e13d4b428171b29d5b5e0d8)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:70046333:0",
+      "originalName": "Car_TowTruck_PRFB (Missing Prefab with guid: 62e77bd708a505c459adb59a09fb5b0b)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:707275068:0",
+      "originalName": "barricade_concrete_LowClean Variant (10) (Missing Prefab with guid: 96eaba1a465b3a6498090336e793fef9)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:708463305:0",
+      "originalName": "Thick_colomb_baricade Variant (24) (Missing Prefab with guid: 8037b0f137dfe2c499bf3c1f6579ca7f)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:709439338:0",
+      "originalName": "barricade_concrete_LowClean Variant (15) (Missing Prefab with guid: 96eaba1a465b3a6498090336e793fef9)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:709934835:0",
+      "originalName": "barricade_sandbags Variant (34) (Missing Prefab with guid: b4991c8b525f0f84e9259bf1b6bcf642)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:716667273:0",
+      "originalName": "MB_Wall_L_Shape_tyres Variant (1) (Missing Prefab with guid: 8fa8e7f445c5da840a4233ed7a2957c1)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:720645262:0",
+      "originalName": "SB_container Variant (3) (Missing Prefab with guid: 4eb91f0f238f97240bdf0726b0e33dfc)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:734522631:0",
+      "originalName": "traffic cone Variant (31) (Missing Prefab with guid: fc61c55e208f92e40972ee7b17836982)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:736953133:0",
+      "originalName": "SB_container Variant (59) (Missing Prefab with guid: 4eb91f0f238f97240bdf0726b0e33dfc)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:740708218:0",
+      "originalName": "Scatter_asset_2 Variant (5) (Missing Prefab with guid: 5a152d999c328434e82353230c91a39d)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:743089272:0",
+      "originalName": "SB_Broken_colomb Variant (Missing Prefab with guid: 5c3000f1b222cbd419b915327a407f42)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:74516052:0",
+      "originalName": "Scatter_asset_4 Variant (2) (Missing Prefab with guid: 68f15bccafbfd4147a8ffa2c435a5574)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:746436416:0",
+      "originalName": "LB_Broken_baclony_2 Variant (2) (Missing Prefab with guid: 0ccf218bf64918b4b980f72aefa1dd41)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:747158464:0",
+      "originalName": "barricade_concrete_High Variant (8) (Missing Prefab with guid: 532b9e3265ce8bc479b631898a4bf4c2)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:747547071:0",
+      "originalName": "Scatter_asset_1 Variant (8) (Missing Prefab with guid: 02f8f14fb421e714facb5121d7359b79)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:74779283:0",
+      "originalName": "LB_Skip Variant (1) (Missing Prefab with guid: acc36632fd71a3b4bb928e3a3a1bebb1)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:750776168:0",
+      "originalName": "Wall_Base_Corner_Short_PRFB (1) (Missing Prefab with guid: 249acdeb55ce15948b2e850d4069e7e6)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:75430156:0",
+      "originalName": "SB_concrete_barrier Variant (9) (Missing Prefab with guid: 75f205a96f8a69d409fd8881f0edd4c6)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:756275863:0",
+      "originalName": "traffic cone Variant (Missing Prefab with guid: fc61c55e208f92e40972ee7b17836982)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:758340094:0",
+      "originalName": "barricade_sandbags Variant (76) (Missing Prefab with guid: b4991c8b525f0f84e9259bf1b6bcf642)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:760342424:0",
+      "originalName": "SB_container Variant (10) (Missing Prefab with guid: 4eb91f0f238f97240bdf0726b0e33dfc)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:765191708:0",
+      "originalName": "sky_walk_platform_clean Variant (2) (Missing Prefab with guid: c12e95e6d335f5646bdb9f63c2424def)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:766635110:0",
+      "originalName": "barricade_sandbags Variant (77) (Missing Prefab with guid: b4991c8b525f0f84e9259bf1b6bcf642)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:769745024:0",
+      "originalName": "R_fence_Long_no_pannel PRFB (Missing Prefab with guid: 63b98065d78c0904e93da62ca5dccb2e)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:769793844:0",
+      "originalName": "MB_barrel_pallete Variant (2) (Missing Prefab with guid: f7f2322b8a846f947809ea34012271c7)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:773630629:0",
+      "originalName": "barricade_sandbags Variant (20) (Missing Prefab with guid: b4991c8b525f0f84e9259bf1b6bcf642)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:773649454:0",
+      "originalName": "barricade_sandbags Variant (38) (Missing Prefab with guid: b4991c8b525f0f84e9259bf1b6bcf642)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:774222984:0",
+      "originalName": "SB_Junk_wall Variant (7) (Missing Prefab with guid: 655b69d4aaa362b41b9ea91dc3ebf98a)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:775059404:0",
+      "originalName": "MB_barrel_pallete Variant (1) (Missing Prefab with guid: f7f2322b8a846f947809ea34012271c7)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:77520554:0",
+      "originalName": "LB_Fortified_wall Variant (2) (Missing Prefab with guid: ef1ce9dbcd7eac54bb86b26aedbfcfdb)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:781172758:0",
+      "originalName": "SB_container Variant (56) (Missing Prefab with guid: 4eb91f0f238f97240bdf0726b0e33dfc)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:783718900:0",
+      "originalName": "corvett_crash Variant (1) (Missing Prefab with guid: d0ed0c78b33be7f4c8a130c350b4504f)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:78486172:0",
+      "originalName": "Scatter_assets_7 Variant (3) (Missing Prefab with guid: 63b799f88e13d4b428171b29d5b5e0d8)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:786634580:0",
+      "originalName": "SB_container Variant (39) (Missing Prefab with guid: 4eb91f0f238f97240bdf0726b0e33dfc)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:786958544:0",
+      "originalName": "MB_wall_Compound_shape Variant (Missing Prefab with guid: 612dff909b60caf4395084d428a55ed9)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:795402546:0",
+      "originalName": "Building_LowFSTL (Missing Prefab with guid: be51e080a69a3cf44904d1744e509564)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:796913151:0",
+      "originalName": "Thick_colomb_baricade Variant (25) (Missing Prefab with guid: 8037b0f137dfe2c499bf3c1f6579ca7f)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:800273975:0",
+      "originalName": "SB_Junk_wall Variant (5) (Missing Prefab with guid: 655b69d4aaa362b41b9ea91dc3ebf98a)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:80984070:0",
+      "originalName": "Sky_walk_base Variant (5) (Missing Prefab with guid: 509c8d5112ca38645ae66c8aa797f502)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:815969170:0",
+      "originalName": "Thick_colomb_baricade Variant (12) (Missing Prefab with guid: 8037b0f137dfe2c499bf3c1f6579ca7f)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:81671275:0",
+      "originalName": "barricade_concrete_High Variant (15) (Missing Prefab with guid: 532b9e3265ce8bc479b631898a4bf4c2)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:817570057:0",
+      "originalName": "Wall_Base_Straight_PRFB (10) (Missing Prefab with guid: a12ad16b265c63448b457b908f5d9845)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:821269091:0",
+      "originalName": "Wall_Base_Straight_PRFB (Missing Prefab with guid: a12ad16b265c63448b457b908f5d9845)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:821311618:0",
+      "originalName": "SB_Broken_colomb Variant (1) (Missing Prefab with guid: 5c3000f1b222cbd419b915327a407f42)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:823850054:0",
+      "originalName": "Scatter_asset_2 Variant (3) (Missing Prefab with guid: 5a152d999c328434e82353230c91a39d)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:834110546:0",
+      "originalName": "traffic cone Variant (10) (Missing Prefab with guid: fc61c55e208f92e40972ee7b17836982)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:835134068:0",
+      "originalName": "Scatter_asset_4 Variant (4) (Missing Prefab with guid: 68f15bccafbfd4147a8ffa2c435a5574)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:83635402:0",
+      "originalName": "barricade_sandbags Variant (24) (Missing Prefab with guid: b4991c8b525f0f84e9259bf1b6bcf642)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:84003628:0",
+      "originalName": "traffic cone Variant (23) (Missing Prefab with guid: fc61c55e208f92e40972ee7b17836982)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:84057433:0",
+      "originalName": "SB_Thick_concrete_colomb Variant (5) (Missing Prefab with guid: 2f8495fe55a3b5f478d97b559e375b5e)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:841912530:0",
+      "originalName": "Prop_TrafficConeLine (3) (Missing Prefab with guid: 1e75a013731430c448b58b513eb3f75f)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:842633479:0",
+      "originalName": "SB_concrete_barrier Variant (6) (Missing Prefab with guid: 75f205a96f8a69d409fd8881f0edd4c6)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:844703853:0",
+      "originalName": "traffic cone Variant (3) (Missing Prefab with guid: fc61c55e208f92e40972ee7b17836982)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:848209322:0",
+      "originalName": "Wall_Base_Straight_PRFB (7) (Missing Prefab with guid: a12ad16b265c63448b457b908f5d9845)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:851307279:0",
+      "originalName": "Wall_Base_Straight_PRFB (4) (Missing Prefab with guid: a12ad16b265c63448b457b908f5d9845)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:856613907:0",
+      "originalName": "Thick_colomb_baricade Variant (11) (Missing Prefab with guid: 8037b0f137dfe2c499bf3c1f6579ca7f)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:857305507:0",
+      "originalName": "barricade_sandbags Variant (Missing Prefab with guid: b4991c8b525f0f84e9259bf1b6bcf642)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:860957321:0",
+      "originalName": "Wall_Base_Straight_PRFB (42) (Missing Prefab with guid: a12ad16b265c63448b457b908f5d9845)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:862171150:0",
+      "originalName": "Thick_colomb_baricade Variant (21) (Missing Prefab with guid: 8037b0f137dfe2c499bf3c1f6579ca7f)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:871403155:0",
+      "originalName": "SB_container Variant (38) (Missing Prefab with guid: 4eb91f0f238f97240bdf0726b0e33dfc)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:873054991:0",
+      "originalName": "LB_Fortified_wall Variant (13) (Missing Prefab with guid: ef1ce9dbcd7eac54bb86b26aedbfcfdb)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:883446789:0",
+      "originalName": "SB_container Variant (2) (Missing Prefab with guid: 4eb91f0f238f97240bdf0726b0e33dfc)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:883480792:0",
+      "originalName": "MB_barrel_pallete Variant (Missing Prefab with guid: f7f2322b8a846f947809ea34012271c7)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:887556862:0",
+      "originalName": "Prop_TrafficConeLine (5) (Missing Prefab with guid: 1e75a013731430c448b58b513eb3f75f)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:887587258:0",
+      "originalName": "Wall_Base_Straight_PRFB (40) (Missing Prefab with guid: a12ad16b265c63448b457b908f5d9845)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:887704939:0",
+      "originalName": "barricade_sandbags Variant (37) (Missing Prefab with guid: b4991c8b525f0f84e9259bf1b6bcf642)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:890945911:0",
+      "originalName": "barricade_sandbags Variant (18) (Missing Prefab with guid: b4991c8b525f0f84e9259bf1b6bcf642)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:904760770:0",
+      "originalName": "traffic cone Variant (45) (Missing Prefab with guid: fc61c55e208f92e40972ee7b17836982)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:906085329:0",
+      "originalName": "Barricade_Concrete_LongCorner_PRFB (4) (Missing Prefab with guid: 47b88285ff45a614fb80aa1443f07eb1)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:90734267:0",
+      "originalName": "Hospital_sign Variant (1) (Missing Prefab with guid: 68a3762b2c4bd804a900ced38bf0d510)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:910874256:0",
+      "originalName": "SB_concrete_barrier Variant (4) (Missing Prefab with guid: 75f205a96f8a69d409fd8881f0edd4c6)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:912809229:0",
+      "originalName": "Scatter_asset_1 Variant (7) (Missing Prefab with guid: 02f8f14fb421e714facb5121d7359b79)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:914213797:0",
+      "originalName": "traffic cone Variant (22) (Missing Prefab with guid: fc61c55e208f92e40972ee7b17836982)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:916918580:0",
+      "originalName": "Tyres_Baricade Variant (2) (Missing Prefab with guid: 12ef1723b52b0d741996d5ea26a08c2f)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:919495365:0",
+      "originalName": "Scatter_asset_2 Variant (8) (Missing Prefab with guid: 5a152d999c328434e82353230c91a39d)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:91992869:0",
+      "originalName": "Scatter_asset_5 Variant (3) (Missing Prefab with guid: 5795fd8d5989d5e4cab83966537ae553)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:920198428:0",
+      "originalName": "SB_container Variant (Missing Prefab with guid: 4eb91f0f238f97240bdf0726b0e33dfc)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:922337466:0",
+      "originalName": "barricade_concrete_High Variant (26) (Missing Prefab with guid: 532b9e3265ce8bc479b631898a4bf4c2)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:923890154:0",
+      "originalName": "barricade_sandbags Variant (62) (Missing Prefab with guid: b4991c8b525f0f84e9259bf1b6bcf642)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:935433560:0",
+      "originalName": "Tyres_Baricade Variant (1) (Missing Prefab with guid: 12ef1723b52b0d741996d5ea26a08c2f)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:937125947:0",
+      "originalName": "barricade_concrete_LowClean Variant (13) (Missing Prefab with guid: 96eaba1a465b3a6498090336e793fef9)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:940540482:0",
+      "originalName": "barricade_concrete_High Variant (1) (Missing Prefab with guid: 532b9e3265ce8bc479b631898a4bf4c2)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:941930346:0",
+      "originalName": "SB_container Variant (11) (Missing Prefab with guid: 4eb91f0f238f97240bdf0726b0e33dfc)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:944173786:0",
+      "originalName": "Scatter_asset_1 Variant (Missing Prefab with guid: 02f8f14fb421e714facb5121d7359b79)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:955359088:0",
+      "originalName": "Car_PickUp_Red_PRFB (Missing Prefab with guid: 8fff322043388114089986ad56293238)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:963145:0",
+      "originalName": "LB_Fortified_wall Variant (9) (Missing Prefab with guid: ef1ce9dbcd7eac54bb86b26aedbfcfdb)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:967686426:0",
+      "originalName": "barricade_sandbags Variant (44) (Missing Prefab with guid: b4991c8b525f0f84e9259bf1b6bcf642)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:972575800:0",
+      "originalName": "Hospital_sign Variant (Missing Prefab with guid: 68a3762b2c4bd804a900ced38bf0d510)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:97696848:0",
+      "originalName": "Tyres_Baricade Variant (13) (Missing Prefab with guid: 12ef1723b52b0d741996d5ea26a08c2f)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:977701633:0",
+      "originalName": "barricade_sandbags Variant (35) (Missing Prefab with guid: b4991c8b525f0f84e9259bf1b6bcf642)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:982218435:0",
+      "originalName": "barricade_concrete_High Variant (37) (Missing Prefab with guid: 532b9e3265ce8bc479b631898a4bf4c2)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:984206123:0",
+      "originalName": "barricade_sandbags Variant (70) (Missing Prefab with guid: b4991c8b525f0f84e9259bf1b6bcf642)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:986717794:0",
+      "originalName": "Scatter_assets_7 Variant (2) (Missing Prefab with guid: 63b799f88e13d4b428171b29d5b5e0d8)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:987785158:0",
+      "originalName": "traffic cone Variant (30) (Missing Prefab with guid: fc61c55e208f92e40972ee7b17836982)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    },
+    {
+      "identity": "scene:988696067:0",
+      "originalName": "barricade_sandbags Variant (5) (Missing Prefab with guid: b4991c8b525f0f84e9259bf1b6bcf642)",
+      "geometry": "unit_box_visual_approximation",
+      "generatedPhysicsColliders": 0
+    }
+  ],
+  "log": "artifacts/maze-native-full-probe-sixth.log",
+  "exitCode": 0,
+  "mainSceneApplied": false,
+  "bakeryHistoricalMetaMapping": "Original Bakery package/meta omitted from clone; DELETED-ASSETS removal and exact serialized light/storage/group fields corroborate identity. No historical GUID-to-filename metadata mapping is claimed."
+}

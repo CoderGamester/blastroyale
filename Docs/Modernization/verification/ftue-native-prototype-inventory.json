@@ -1,0 +1,143 @@
+[
+  {
+    "name": "TutorialData",
+    "active": true,
+    "identity": "GlobalObjectId_V1-2-13b126fd46c1f4f7e9adecbb1770086f-870416475-0",
+    "componentTypes": [
+      "Quantum.QPrototypeTutorialRuntimeData, Quantum.Unity, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    ]
+  },
+  {
+    "name": "Player Spawner",
+    "active": true,
+    "identity": "GlobalObjectId_V1-2-13b126fd46c1f4f7e9adecbb1770086f-3818809833343755871-5927150147702384530",
+    "componentTypes": [
+      "Quantum.QPrototypePlayerSpawner, Quantum.Unity, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    ]
+  },
+  {
+    "name": "Final Bot Spawner",
+    "active": true,
+    "identity": "GlobalObjectId_V1-2-13b126fd46c1f4f7e9adecbb1770086f-3818809833343755871-1223799949",
+    "componentTypes": [
+      "Quantum.QPrototypePlayerSpawner, Quantum.Unity, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+      "Quantum.QPrototypeCosmeticsHolder, Quantum.Unity, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    ]
+  },
+  {
+    "name": "Right Static Bot Spawner",
+    "active": true,
+    "identity": "GlobalObjectId_V1-2-13b126fd46c1f4f7e9adecbb1770086f-3818809833343755871-1810857154",
+    "componentTypes": [
+      "Quantum.QPrototypePlayerSpawner, Quantum.Unity, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+      "Quantum.QPrototypeCosmeticsHolder, Quantum.Unity, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    ]
+  },
+  {
+    "name": "Left Bot Spawner",
+    "active": true,
+    "identity": "GlobalObjectId_V1-2-13b126fd46c1f4f7e9adecbb1770086f-3818809833343755871-2134747417",
+    "componentTypes": [
+      "Quantum.QPrototypePlayerSpawner, Quantum.Unity, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+      "Quantum.QPrototypeCosmeticsHolder, Quantum.Unity, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    ]
+  },
+  {
+    "name": "Grenade Bot Spawner",
+    "active": true,
+    "identity": "GlobalObjectId_V1-2-13b126fd46c1f4f7e9adecbb1770086f-3818809833343755871-1644627953",
+    "componentTypes": [
+      "Quantum.QPrototypePlayerSpawner, Quantum.Unity, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+      "Quantum.QPrototypeCosmeticsHolder, Quantum.Unity, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    ]
+  },
+  {
+    "name": "Equipment Chest",
+    "active": true,
+    "identity": "GlobalObjectId_V1-2-13b126fd46c1f4f7e9adecbb1770086f-409028007402901711-1822364223",
+    "componentTypes": [
+      "Quantum.QPrototypeCollectablePlatformSpawner, Quantum.Unity, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    ]
+  },
+  {
+    "name": "Tutorial Rifle Spawner",
+    "active": true,
+    "identity": "GlobalObjectId_V1-2-13b126fd46c1f4f7e9adecbb1770086f-409028007402901711-1549634426",
+    "componentTypes": [
+      "Quantum.QPrototypeCollectablePlatformSpawner, Quantum.Unity, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    ]
+  },
+  {
+    "name": "Ammo Spawner 2",
+    "active": true,
+    "identity": "GlobalObjectId_V1-2-13b126fd46c1f4f7e9adecbb1770086f-409028007402901711-20735824",
+    "componentTypes": [
+      "Quantum.QPrototypeCollectablePlatformSpawner, Quantum.Unity, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    ]
+  },
+  {
+    "name": "Special Spawner",
+    "active": true,
+    "identity": "GlobalObjectId_V1-2-13b126fd46c1f4f7e9adecbb1770086f-409028007402901711-1726519294",
+    "componentTypes": [
+      "Quantum.QPrototypeCollectablePlatformSpawner, Quantum.Unity, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    ]
+  },
+  {
+    "name": "Arena Bot Weapon Spawner",
+    "active": true,
+    "identity": "GlobalObjectId_V1-2-13b126fd46c1f4f7e9adecbb1770086f-409028007402901711-595445071",
+    "componentTypes": [
+      "Quantum.QPrototypeCollectablePlatformSpawner, Quantum.Unity, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    ]
+  },
+  {
+    "name": "SkipDestructible",
+    "active": true,
+    "identity": "GlobalObjectId_V1-2-13b126fd46c1f4f7e9adecbb1770086f-1001488446-0",
+    "componentTypes": [
+      "Quantum.QPrototypeDestructible, Quantum.Unity, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    ]
+  },
+  {
+    "name": "Barrier",
+    "active": true,
+    "identity": "GlobalObjectId_V1-2-13b126fd46c1f4f7e9adecbb1770086f-504578694-0",
+    "componentTypes": [
+      "Quantum.QPrototypeDestructible, Quantum.Unity, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    ]
+  },
+  {
+    "name": "InvisibleWeaponPickupGate",
+    "active": true,
+    "identity": "GlobalObjectId_V1-2-13b126fd46c1f4f7e9adecbb1770086f-737012316-0",
+    "componentTypes": [
+      "Quantum.QPrototypeGate, Quantum.Unity, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+      "Quantum.QPrototypeTrigger, Quantum.Unity, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    ]
+  },
+  {
+    "name": "GateBarrierPlayersAlive",
+    "active": true,
+    "identity": "GlobalObjectId_V1-2-13b126fd46c1f4f7e9adecbb1770086f-1911311926-0",
+    "componentTypes": [
+      "Quantum.QPrototypeGate, Quantum.Unity, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+      "Quantum.QPrototypeTrigger, Quantum.Unity, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    ]
+  },
+  {
+    "name": "GateBarrierChest",
+    "active": true,
+    "identity": "GlobalObjectId_V1-2-13b126fd46c1f4f7e9adecbb1770086f-717091958-0",
+    "componentTypes": [
+      "Quantum.QPrototypeGate, Quantum.Unity, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+      "Quantum.QPrototypeTrigger, Quantum.Unity, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    ]
+  },
+  {
+    "name": "FinalBotBlocker",
+    "active": true,
+    "identity": "GlobalObjectId_V1-2-13b126fd46c1f4f7e9adecbb1770086f-2068982418-0",
+    "componentTypes": []
+  }
+]
