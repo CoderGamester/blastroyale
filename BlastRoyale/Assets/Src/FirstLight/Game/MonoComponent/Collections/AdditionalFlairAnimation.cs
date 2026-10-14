@@ -1,55 +1,78 @@
-﻿using Animancer;
+using System;
 using Cysharp.Threading.Tasks;
 using FirstLight.Game.MonoComponent.Collections;
+using FirstLight.Game.Utils;
 using UnityEngine;
 using UnityEngine.AddressableAssets;
 
 namespace FirstLight.Game.Configs.Collection
 {
 	/// <summary>
-	/// Used for spawning a new game object and playing a animation synchronously with the character one
+	/// Spawns a flair object and plays its clip alongside the character's animation.
 	/// </summary>
 	public class AdditionalFlairAnimation : MonoBehaviour
 	{
-		[SerializeField] private AssetReferenceGameObject _assetReference;
+		[SerializeField] private AssetReferenceGameObject _assetReference = null;
 		[SerializeField] public AnimationClip _animationClip;
-		private AnimancerComponent _animancer;
+		private readonly OneShotAnimationPlayer _clipPlayer = new();
+		private CharacterSkinMonoComponent _characterSkin;
+		private Animator _animator;
 		private GameObject _animationObject;
 
-		private void Start()
+		private async void Start()
 		{
-			GetComponent<CharacterSkinMonoComponent>().OnTriggerFlair += OnOnTriggerFlair;
-			_assetReference.InstantiateAsync(this.transform, false).ToUniTask().ContinueWith((a) =>
+			_characterSkin = GetComponent<CharacterSkinMonoComponent>();
+			if (_characterSkin) _characterSkin.OnTriggerFlair += OnOnTriggerFlair;
+			try
 			{
-				_animationObject = a;
-				_animancer = a.GetComponent<AnimancerComponent>();
+				var animationObject = await _assetReference.InstantiateAsync(transform, false).ToUniTask();
+				if (!this)
+				{
+					Addressables.ReleaseInstance(animationObject);
+					return;
+				}
+				_animationObject = animationObject;
+				_animator = animationObject.GetComponentInChildren<Animator>(true);
 				_animationObject.SetActive(false);
-			});
+				if (!_animator) Debug.LogError("Flair animation prefab requires an Animator.", this);
+			}
+			catch (Exception exception)
+			{
+				if (this) Debug.LogException(exception, this);
+			}
+		}
+
+		private void LateUpdate()
+		{
+			_clipPlayer.Update(Time.deltaTime);
+		}
+
+		private void OnDisable()
+		{
+			_clipPlayer.Stop();
+			if (_animationObject) _animationObject.SetActive(false);
 		}
 
 		private void OnDestroy()
 		{
-			if (_assetReference != null && _assetReference.IsValid())
-				_assetReference.ReleaseAsset();
+			if (_characterSkin) _characterSkin.OnTriggerFlair -= OnOnTriggerFlair;
+			_clipPlayer.Dispose();
+			if (_animationObject) Addressables.ReleaseInstance(_animationObject);
 		}
 
 		private void OnOnTriggerFlair()
 		{
-			if (_animationObject)
-			{
-				TriggerAnimationAndDisable();
-			}
+			TriggerAnimationAndDisable();
 		}
 
 		public void TriggerAnimationAndDisable()
 		{
+			if (!isActiveAndEnabled || !_animationObject || !_animator || !_animationClip) return;
 			_animationObject.SetActive(true);
-			var a = _animancer.Play(_animationClip);
-			a.Events(this).OnEnd += () =>
+			_clipPlayer.Play(_animator, _animationClip, () =>
 			{
-				if (!this) return;
-				_animationObject.SetActive(false);
-			};
+				if (_animationObject) _animationObject.SetActive(false);
+			});
 		}
 	}
 }

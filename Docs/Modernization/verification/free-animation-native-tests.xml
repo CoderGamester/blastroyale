@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test-run id="2" testcasecount="10" result="Passed" total="10" passed="10" failed="0" inconclusive="0" skipped="0" asserts="0" engine-version="3.5.0.0" clr-version="4.0.30319.42000" start-time="2026-10-14 11:56:31Z" end-time="2026-10-14 11:56:31Z" duration="0.0308748">
+  <test-suite type="TestSuite" id="1018" name="free-animation-project" fullname="free-animation-project" runstate="Runnable" testcasecount="10" result="Passed" start-time="2026-10-14 11:56:31Z" end-time="2026-10-14 11:56:31Z" duration="0.030875" total="10" passed="10" failed="0" inconclusive="0" skipped="0" asserts="0">
+    <properties>
+      <property name="platform" value="PlayMode" />
+    </properties>
+    <test-suite type="Assembly" id="1012" name="FirstLight.FreeAnimation.Tests.dll" fullname="<repo>/.local/free-animation-project/Library/ScriptAssemblies/FirstLight.FreeAnimation.Tests.dll" runstate="Runnable" testcasecount="10" result="Passed" start-time="2026-10-14 11:56:31Z" end-time="2026-10-14 11:56:31Z" duration="0.027730" total="10" passed="10" failed="0" inconclusive="0" skipped="0" asserts="0">
+      <properties>
+        <property name="_PID" value="1720" />
+        <property name="_APPDOMAIN" value="Unity Child Domain" />
+        <property name="platform" value="PlayMode" />
+        <property name="EditorOnly" value="False" />
+      </properties>
+      <test-suite type="TestSuite" id="1013" name="FirstLight" fullname="FirstLight" runstate="Runnable" testcasecount="10" result="Passed" start-time="2026-10-14 11:56:31Z" end-time="2026-10-14 11:56:31Z" duration="0.027596" total="10" passed="10" failed="0" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <test-suite type="TestSuite" id="1014" name="Tests" fullname="FirstLight.Tests" runstate="Runnable" testcasecount="10" result="Passed" start-time="2026-10-14 11:56:31Z" end-time="2026-10-14 11:56:31Z" duration="0.027550" total="10" passed="10" failed="0" inconclusive="0" skipped="0" asserts="0">
+          <properties />
+          <test-suite type="TestSuite" id="1015" name="EditorMode" fullname="FirstLight.Tests.EditorMode" runstate="Runnable" testcasecount="10" result="Passed" start-time="2026-10-14 11:56:31Z" end-time="2026-10-14 11:56:31Z" duration="0.027499" total="10" passed="10" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-suite type="TestSuite" id="1016" name="FreeAnimation" fullname="FirstLight.Tests.EditorMode.FreeAnimation" runstate="Runnable" testcasecount="10" result="Passed" start-time="2026-10-14 11:56:31Z" end-time="2026-10-14 11:56:31Z" duration="0.027443" total="10" passed="10" failed="0" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <test-suite type="TestFixture" id="1001" name="FreeAnimationTests" fullname="FirstLight.Tests.EditorMode.FreeAnimation.FreeAnimationTests" classname="FirstLight.Tests.EditorMode.FreeAnimation.FreeAnimationTests" runstate="Runnable" testcasecount="10" result="Passed" start-time="2026-10-14 11:56:31Z" end-time="2026-10-14 11:56:31Z" duration="0.027040" total="10" passed="10" failed="0" inconclusive="0" skipped="0" asserts="0">
+                <properties />
+                <test-case id="1006" name="DestroyedAnimatorCancelsCompletion" fullname="FirstLight.Tests.EditorMode.FreeAnimation.FreeAnimationTests.DestroyedAnimatorCancelsCompletion" methodname="DestroyedAnimatorCancelsCompletion" classname="FirstLight.Tests.EditorMode.FreeAnimation.FreeAnimationTests" runstate="Runnable" seed="943993548" result="Passed" start-time="2026-10-14 11:56:31Z" end-time="2026-10-14 11:56:31Z" duration="0.008171" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+                <test-case id="1002" name="NativeGraphSamplesAuthoredClipAndCompletesOnce" fullname="FirstLight.Tests.EditorMode.FreeAnimation.FreeAnimationTests.NativeGraphSamplesAuthoredClipAndCompletesOnce" methodname="NativeGraphSamplesAuthoredClipAndCompletesOnce" classname="FirstLight.Tests.EditorMode.FreeAnimation.FreeAnimationTests" runstate="Runnable" seed="2051572060" result="Passed" start-time="2026-10-14 11:56:31Z" end-time="2026-10-14 11:56:31Z" duration="0.000576" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+                <test-case id="1007" name="PrefabRetainsDistinctAuthoredCurvesAndTiming" fullname="FirstLight.Tests.EditorMode.FreeAnimation.FreeAnimationTests.PrefabRetainsDistinctAuthoredCurvesAndTiming" methodname="PrefabRetainsDistinctAuthoredCurvesAndTiming" classname="FirstLight.Tests.EditorMode.FreeAnimation.FreeAnimationTests" runstate="Runnable" seed="565403354" result="Passed" start-time="2026-10-14 11:56:31Z" end-time="2026-10-14 11:56:31Z" duration="0.006778" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+                <test-case id="1003" name="RetriggerRestartsClipAndReplacesPreviousCompletion" fullname="FirstLight.Tests.EditorMode.FreeAnimation.FreeAnimationTests.RetriggerRestartsClipAndReplacesPreviousCompletion" methodname="RetriggerRestartsClipAndReplacesPreviousCompletion" classname="FirstLight.Tests.EditorMode.FreeAnimation.FreeAnimationTests" runstate="Runnable" seed="320404411" result="Passed" start-time="2026-10-14 11:56:31Z" end-time="2026-10-14 11:56:31Z" duration="0.000315" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+                <test-case id="1004" name="StopCancelsCompletionAndCanPlayAgain" fullname="FirstLight.Tests.EditorMode.FreeAnimation.FreeAnimationTests.StopCancelsCompletionAndCanPlayAgain" methodname="StopCancelsCompletionAndCanPlayAgain" classname="FirstLight.Tests.EditorMode.FreeAnimation.FreeAnimationTests" runstate="Runnable" seed="184719943" result="Passed" start-time="2026-10-14 11:56:31Z" end-time="2026-10-14 11:56:31Z" duration="0.000185" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+                <test-case id="1011" name="VfxCompletionCanReturnObjectToPoolWithoutLiveScaleTween" fullname="FirstLight.Tests.EditorMode.FreeAnimation.FreeAnimationTests.VfxCompletionCanReturnObjectToPoolWithoutLiveScaleTween" methodname="VfxCompletionCanReturnObjectToPoolWithoutLiveScaleTween" classname="FirstLight.Tests.EditorMode.FreeAnimation.FreeAnimationTests" runstate="Runnable" seed="977763418" result="Passed" start-time="2026-10-14 11:56:31Z" end-time="2026-10-14 11:56:31Z" duration="0.005058" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+                <test-case id="1010" name="VfxDisableCancelsBothTweensWithoutCompletion" fullname="FirstLight.Tests.EditorMode.FreeAnimation.FreeAnimationTests.VfxDisableCancelsBothTweensWithoutCompletion" methodname="VfxDisableCancelsBothTweensWithoutCompletion" classname="FirstLight.Tests.EditorMode.FreeAnimation.FreeAnimationTests" runstate="Runnable" seed="2092265795" result="Passed" start-time="2026-10-14 11:56:31Z" end-time="2026-10-14 11:56:31Z" duration="0.000232" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+                <test-case id="1009" name="VfxRetriggerCancelsPreviousCallbackAndResetsOrigin" fullname="FirstLight.Tests.EditorMode.FreeAnimation.FreeAnimationTests.VfxRetriggerCancelsPreviousCallbackAndResetsOrigin" methodname="VfxRetriggerCancelsPreviousCallbackAndResetsOrigin" classname="FirstLight.Tests.EditorMode.FreeAnimation.FreeAnimationTests" runstate="Runnable" seed="693433036" result="Passed" start-time="2026-10-14 11:56:31Z" end-time="2026-10-14 11:56:31Z" duration="0.000809" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+                <test-case id="1008" name="VfxWaitsForDelayThenUsesAuthoredMovementAndScale" fullname="FirstLight.Tests.EditorMode.FreeAnimation.FreeAnimationTests.VfxWaitsForDelayThenUsesAuthoredMovementAndScale" methodname="VfxWaitsForDelayThenUsesAuthoredMovementAndScale" classname="FirstLight.Tests.EditorMode.FreeAnimation.FreeAnimationTests" runstate="Runnable" seed="1357415879" result="Passed" start-time="2026-10-14 11:56:31Z" end-time="2026-10-14 11:56:31Z" duration="0.000375" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+                <test-case id="1005" name="ZeroAndNegativeDeltaDoNotAdvanceAnimation" fullname="FirstLight.Tests.EditorMode.FreeAnimation.FreeAnimationTests.ZeroAndNegativeDeltaDoNotAdvanceAnimation" methodname="ZeroAndNegativeDeltaDoNotAdvanceAnimation" classname="FirstLight.Tests.EditorMode.FreeAnimation.FreeAnimationTests" runstate="Runnable" seed="875501624" result="Passed" start-time="2026-10-14 11:56:31Z" end-time="2026-10-14 11:56:31Z" duration="0.000145" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                  <output><![CDATA[Saving results to: <repo>/artifacts/free-animation-native-tests.xml
+]]></output>
+                </test-case>
+              </test-suite>
+            </test-suite>
+          </test-suite>
+        </test-suite>
+      </test-suite>
+    </test-suite>
+  </test-suite>
+</test-run>

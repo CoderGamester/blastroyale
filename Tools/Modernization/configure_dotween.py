@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Generate assembly definitions for locally restored DOTween modules and Pro scripts."""
+"""Generate the assembly definition for the free DOTween modules."""
 import json
 import pathlib
 import subprocess
@@ -13,18 +13,11 @@ def configure(root):
     assemblies = [
         ("DOTween/Modules", "DOTween.Modules", ["UnityEngine.UI"], []),
     ]
-    if (vendor / "DOTweenPro/DOTweenPro.dll").exists():
-        assemblies += [
-            ("DOTweenPro", "DOTweenPro.Runtime", ["DOTween.Modules", "UnityEngine.UI", "Unity.TextMeshPro"], []),
-            ("DOTweenPro/Editor", "DOTweenPro.Editor", ["DOTweenPro.Runtime", "DOTween.Modules", "UnityEngine.UI", "Unity.TextMeshPro"], ["Editor"]),
-        ]
     for directory, name, references, platforms in assemblies:
         path = vendor / directory / (name + ".asmdef")
         if subprocess.run(["git", "check-ignore", "-q", "--no-index", str(path)], cwd=root).returncode:
             raise ValueError("Vendor assembly definitions must remain ignored")
         data = {"name": name, "references": references, "includePlatforms": platforms, "autoReferenced": True}
-        if name.startswith("DOTweenPro"):
-            data["versionDefines"] = [{"name": "com.unity.ugui", "expression": "2.0.0", "define": "DOTWEEN_TEXTMESHPRO"}]
         path.write_text(json.dumps(data, indent=2) + "\n")
         guid = uuid.uuid5(uuid.NAMESPACE_URL, "blastroyale-local-vendor/" + name).hex
         pathlib.Path(str(path) + ".meta").write_text("fileFormatVersion: 2\nguid: " + guid + "\nAssemblyDefinitionImporter:\n  externalObjects: {}\n  userData: \n  assetBundleName: \n  assetBundleVariant: \n")

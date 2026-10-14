@@ -1,6 +1,5 @@
 using System;
 using DG.Tweening;
-using Sirenix.OdinInspector;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -11,20 +10,37 @@ namespace FirstLight.Game.Views
 	/// </summary>
 	public class UiVfxImage : MonoBehaviour
 	{
-		[SerializeField, Required] private Image _image;
-		[SerializeField, Required] private DOTweenAnimation _moveAnimation;
-		[SerializeField, Required] private DOTweenAnimation _scaleAnimation;
+		[SerializeField] private Image _image = null;
+		[SerializeField, Min(0)] private float _moveDuration = 1;
+		[SerializeField] private AnimationCurve _moveEase = AnimationCurve.EaseInOut(0, 0, 1, 1);
+		[SerializeField, Min(0)] private float _scaleDuration = 1;
+		[SerializeField] private AnimationCurve _scaleEase = AnimationCurve.EaseInOut(0, 0, 1, 1);
+		[SerializeField] private float _endScale = 2.5f;
+		private Tween _moveTween;
+		private Tween _scaleTween;
 
-		private void Awake()
+		private void OnDisable()
 		{
-			_moveAnimation.targetIsSelf = _scaleAnimation.targetIsSelf = false;
-			_moveAnimation.forcedTargetType = DOTweenAnimation.TargetType.Transform;
-			_moveAnimation.hasOnComplete = true;
+			StopTweens();
+		}
+
+		private void OnDestroy()
+		{
+			StopTweens();
+		}
+
+		private void StopTweens()
+		{
+			_moveTween?.Kill();
+			_scaleTween?.Kill();
+			_moveTween = null;
+			_scaleTween = null;
 		}
 
 		public void Play(Sprite sprite, float delay, Vector3 originWorldPosition, Vector3 targetWorldPosition,
 						 Action onComplete)
 		{
+			StopTweens();
 			_image.sprite = sprite;
 			_image.enabled = false;
 
@@ -32,21 +48,19 @@ namespace FirstLight.Game.Views
 			t.position = originWorldPosition;
 			t.localScale = Vector3.zero;
 
-			_moveAnimation.useTargetAsV3 = false;
-			_moveAnimation.target = t;
-			_moveAnimation.endValueV3 = targetWorldPosition;
-			_moveAnimation.targetGO = _scaleAnimation.targetGO = gameObject;
-			_moveAnimation.delay = delay;
-
-			_scaleAnimation.delay = _moveAnimation.delay = delay;
-
-			_moveAnimation.CreateTween(true);
-			_scaleAnimation.CreateTween(true);
-
-			_moveAnimation.tween.OnComplete(() => { onComplete(); });
-			_moveAnimation.tween.OnStart(() => { _image.enabled = true; });
-			_moveAnimation.tween.Play();
-			_scaleAnimation.tween.Play();
+			// The prefab's authored curves replace its former visual tween components.
+			_moveTween = t.DOMove(targetWorldPosition, _moveDuration)
+				.SetEase(_moveEase).SetDelay(delay).SetTarget(gameObject)
+				.SetLoops(1, LoopType.Restart).SetAutoKill(true).SetUpdate(UpdateType.Normal, false)
+				.OnKill(() => _moveTween = null)
+				.OnStart(() => _image.enabled = true)
+				.OnComplete(() => onComplete?.Invoke());
+			_scaleTween = t.DOScale(_endScale, _scaleDuration)
+				.SetEase(_scaleEase).SetDelay(delay).SetTarget(gameObject)
+				.SetLoops(1, LoopType.Restart).SetAutoKill(true).SetUpdate(UpdateType.Normal, false)
+				.OnKill(() => _scaleTween = null);
+			_moveTween.Play();
+			_scaleTween.Play();
 		}
 	}
 }
