@@ -25,7 +25,8 @@
         "Unity.AssetManager.Editor",
         "GameLovers.MobileServices.Editor",
         "FirstLight.Inspector",
-        "Quantum.Simulation"
+        "Quantum.Simulation",
+        "Quantum.Unity.Editor.CodeGen"
     ],
     "includePlatforms": [
         "Editor"

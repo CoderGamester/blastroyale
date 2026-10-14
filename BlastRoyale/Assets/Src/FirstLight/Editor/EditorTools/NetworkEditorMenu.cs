@@ -1,6 +1,5 @@
 using Quantum;
 using System;
-using FirstLight.Editor.Artifacts;
 using FirstLight.Game.Services;
 using FirstLight.Game.Utils;
 using PlayFab;

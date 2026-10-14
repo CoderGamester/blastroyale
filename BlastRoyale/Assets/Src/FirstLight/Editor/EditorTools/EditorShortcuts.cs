@@ -3,7 +3,6 @@ using MainInstaller = FirstLight.Game.Utils.MainInstaller;
 using FirstLight.Game.Services;
 using System;
 using System.Collections.Generic;
-using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -40,69 +39,8 @@ namespace FirstLight.Editor.EditorTools
 		[MenuItem("FLG/Build/Quantum")]
 		public static void BuildQuantum()
 		{
-			var progressId = Progress.Start("Building Quantum", "Builds Quantum as Debug using msbuild.",
-				Progress.Options.Indefinite | Progress.Options.Unmanaged);
-
-			var fileName = EditorPrefs.GetString(FLGSettingsRegister.KEY_MSBUILD);
-			if (string.IsNullOrEmpty(fileName))
-			{
-				Debug.LogWarning("Please set MSBUILD and optional PATH values in the settings under FLG");
-				return;
-			}
-
-			var startInfo = new ProcessStartInfo
-			{
-				UseShellExecute = false,
-				RedirectStandardError = true,
-				RedirectStandardOutput = true,
-				FileName = fileName,
-				Arguments = "./Quantum/quantum_code/quantum_code.sln -restore -p:Configuration=Debug -p:RestorePackagesConfig=true",
-				CreateNoWindow = true,
-				WorkingDirectory = Application.dataPath.Replace("/Assets", "")
-			};
-
-			startInfo.EnvironmentVariables["PATH"] =
-				$"{startInfo.EnvironmentVariables["PATH"]}:{EditorPrefs.GetString(FLGSettingsRegister.KEY_CUSTOM_PATH)}";
-
-			var p = new Process {StartInfo = startInfo, EnableRaisingEvents = true};
-
-			p.OutputDataReceived += (sender, args) =>
-			{
-				if (args.Data == null) return;
-				Progress.Report(progressId, 0, args.Data);
-			};
-
-			p.ErrorDataReceived += (sender, args) =>
-			{
-				if (args.Data == null) return;
-				Debug.LogError(args.Data);
-			};
-
-			p.Exited += (_, _) =>
-			{
-				var exitCode = p.ExitCode;
-
-				if (exitCode == 0)
-				{
-					Progress.Finish(progressId);
-				}
-				else
-				{
-					Progress.Finish(progressId, Progress.Status.Failed);
-				}
-			};
-
-			try
-			{
-				p.Start();
-				p.BeginOutputReadLine();
-				p.BeginErrorReadLine();
-			}
-			catch (Exception e)
-			{
-				Debug.LogError("Error building Quantum: " + e.Message);
-				Progress.Finish(progressId, Progress.Status.Failed);
-			}
+			// Native Q3 generation uses the authored QuantumUser simulation; Unity compiles the resulting assembly.
+			Quantum.Editor.QuantumCodeGenQtn.Run();
 		}
 
 		[MenuItem("FLG/Scene/Open Main Scene &1")]

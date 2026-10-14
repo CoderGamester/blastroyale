@@ -52,8 +52,10 @@ namespace Quantum
 			// a list of all currently registered entities and their states.
 			// BotSDKDebuggerSystem.AddToDebugger(setup.e);
 
-			blackboard.Board = BlackboardRef;
-			f.FindAsset<AIBlackboard>(BlackboardRef.Id).Initialize(f, &blackboard);
+			var blackboardAsset = f.FindAsset<AIBlackboard>(BlackboardRef.Id);
+			// Allocate the component dictionary before applying optional asset initial values.
+			blackboard.Initialize(f, blackboardAsset);
+			blackboardAsset.Initialize(f, &blackboard);
 			f.Unsafe.GetPointerSingleton<GameContainer>()->AddPlayer(f, setup);
 			var kcc = new TopDownController();
 			kcc.Init();

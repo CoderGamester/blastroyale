@@ -107,7 +107,7 @@ namespace FirstLight.Editor.Ids
 		private static void GenerateQuantumQtn(IList<GameIdEntry> ids, IList<Ids.GroupSource> groups)
 		{
 			var stringBuilder = new StringBuilder();
-			var path = Application.dataPath.Replace("/Assets", $"/../Quantum/quantum_code/quantum.code/Configs/{_name}.qtn");
+			var path = Path.Combine(Application.dataPath, "QuantumUser", "Simulation", "Configs", $"{_name}.qtn");
 
 
 			stringBuilder.AppendLine("/* AUTO GENERATED CODE */");
@@ -128,7 +128,7 @@ namespace FirstLight.Editor.Ids
 		private static void GenerateQuantumScript(Dictionary<string, List<string>> mapGroups, Dictionary<string, List<string>> mapIds)
 		{
 			var stringBuilder = new StringBuilder();
-			var path = $"/../Quantum/quantum_code/quantum.code/Configs/{_name}.cs";
+			var path = Path.Combine(Application.dataPath, "QuantumUser", "Simulation", "Configs", $"{_name}.cs");
 
 			stringBuilder.AppendLine("using System.Collections.Generic;");
 			stringBuilder.AppendLine("using System.Collections.ObjectModel;");
@@ -175,7 +175,7 @@ namespace FirstLight.Editor.Ids
 
 			stringBuilder.AppendLine("}");
 
-			File.WriteAllText(Application.dataPath.Replace("/Assets", path), stringBuilder.ToString());
+			File.WriteAllText(path, stringBuilder.ToString());
 		}
 
 		private static void GenerateLoopUpMethods(StringBuilder stringBuilder)

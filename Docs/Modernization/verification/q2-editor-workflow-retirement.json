@@ -1,0 +1,24 @@
+{
+  "Retired": [
+    "BlastRoyale/Assets/Src/FirstLight/Editor/Artifacts/IArtifact.cs",
+    "BlastRoyale/Assets/Src/FirstLight/Editor/Artifacts/ArtifactCopier.cs",
+    "BlastRoyale/Assets/Src/FirstLight/Editor/Artifacts/QuantumAssetDBArtifact.cs.meta",
+    "BlastRoyale/Assets/Src/FirstLight/Editor/Artifacts/GameConfigArtifact.cs",
+    "BlastRoyale/Assets/Src/FirstLight/Editor/Artifacts/GameConfigArtifact.cs.meta",
+    "BlastRoyale/Assets/Src/FirstLight/Editor/Artifacts/GameTranslationArtifact.cs.meta",
+    "BlastRoyale/Assets/Src/FirstLight/Editor/Artifacts/DllArtifact.cs.meta",
+    "BlastRoyale/Assets/Src/FirstLight/Editor/Artifacts/IArtifact.cs.meta",
+    "BlastRoyale/Assets/Src/FirstLight/Editor/Artifacts/QuantumAssetDBArtifact.cs",
+    "BlastRoyale/Assets/Src/FirstLight/Editor/Artifacts/GameTranslationArtifact.cs",
+    "BlastRoyale/Assets/Src/FirstLight/Editor/Artifacts/DllArtifact.cs",
+    "BlastRoyale/Assets/Src/FirstLight/Editor/Artifacts/ArtifactCopier.cs.meta",
+    "BlastRoyale/Assets/Src/FirstLight/Editor/Artifacts.meta",
+    "BlastRoyale/Assets/Src/FirstLight/Editor/EditorTools/BackendEditorMenu.cs",
+    "BlastRoyale/Assets/Src/FirstLight/Editor/EditorTools/BackendEditorMenu.cs.meta",
+    "BlastRoyale/Assets/Src/FirstLight/Editor/EditorTools/FLGSettings.cs",
+    "BlastRoyale/Assets/Src/FirstLight/Editor/EditorTools/FLGSettings.cs.meta"
+  ],
+  "BackendModified": false,
+  "GameIdGeneratorTarget": "Assets/QuantumUser/Simulation/Configs",
+  "QuantumBuildMenu": "Actual Quantum.Editor.QuantumCodeGenQtn.Run"
+}

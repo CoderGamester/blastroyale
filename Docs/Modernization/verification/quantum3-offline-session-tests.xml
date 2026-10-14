@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test-run id="2" testcasecount="2" result="Passed" total="2" passed="2" failed="0" inconclusive="0" skipped="0" asserts="0" engine-version="3.5.0.0" clr-version="4.0.30319.42000" start-time="2026-10-14 14:26:04Z" end-time="2026-10-14 14:26:06Z" duration="1.650872">
+  <test-suite type="TestSuite" id="1000" name="quantum3-source-project" fullname="quantum3-source-project" runstate="Runnable" testcasecount="24" result="Passed" start-time="2026-10-14 14:26:04Z" end-time="2026-10-14 14:26:06Z" duration="1.650872" total="2" passed="2" failed="0" inconclusive="0" skipped="0" asserts="0">
+    <properties>
+      <property name="platform" value="EditMode" />
+    </properties>
+    <test-suite type="Assembly" id="1033" name="BlastRoyale.Quantum3.EditMode.Tests.dll" fullname="<repo>/.local/quantum3-source-project/Library/ScriptAssemblies/BlastRoyale.Quantum3.EditMode.Tests.dll" runstate="Runnable" testcasecount="23" result="Passed" start-time="2026-10-14 14:26:04Z" end-time="2026-10-14 14:26:06Z" duration="1.647579" total="2" passed="2" failed="0" inconclusive="0" skipped="0" asserts="0">
+      <properties>
+        <property name="_PID" value="44035" />
+        <property name="_APPDOMAIN" value="Unity Child Domain" />
+        <property name="platform" value="EditMode" />
+        <property name="EditorOnly" value="True" />
+      </properties>
+      <test-suite type="TestSuite" id="1034" name="FirstLight" fullname="FirstLight" runstate="Runnable" testcasecount="23" result="Passed" start-time="2026-10-14 14:26:04Z" end-time="2026-10-14 14:26:06Z" duration="1.647449" total="2" passed="2" failed="0" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <test-suite type="TestSuite" id="1035" name="Tests" fullname="FirstLight.Tests" runstate="Runnable" testcasecount="23" result="Passed" start-time="2026-10-14 14:26:04Z" end-time="2026-10-14 14:26:06Z" duration="1.647382" total="2" passed="2" failed="0" inconclusive="0" skipped="0" asserts="0">
+          <properties />
+          <test-suite type="TestSuite" id="1036" name="EditorMode" fullname="FirstLight.Tests.EditorMode" runstate="Runnable" testcasecount="23" result="Passed" start-time="2026-10-14 14:26:04Z" end-time="2026-10-14 14:26:06Z" duration="1.647312" total="2" passed="2" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-suite type="TestSuite" id="1037" name="Systems" fullname="FirstLight.Tests.EditorMode.Systems" runstate="Runnable" testcasecount="23" result="Passed" start-time="2026-10-14 14:26:04Z" end-time="2026-10-14 14:26:06Z" duration="1.647223" total="2" passed="2" failed="0" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <test-suite type="TestFixture" id="1001" name="OfflineMazeSessionTests" fullname="FirstLight.Tests.EditorMode.Systems.OfflineMazeSessionTests" classname="FirstLight.Tests.EditorMode.Systems.OfflineMazeSessionTests" runstate="Runnable" testcasecount="2" result="Passed" start-time="2026-10-14 14:26:04Z" end-time="2026-10-14 14:26:06Z" duration="1.646598" total="2" passed="2" failed="0" inconclusive="0" skipped="0" asserts="0">
+                <properties />
+                <test-case id="1002" name="MazeSessionInitializesTicksMovesQueriesPhysicsAndExecutesBots" fullname="FirstLight.Tests.EditorMode.Systems.OfflineMazeSessionTests.MazeSessionInitializesTicksMovesQueriesPhysicsAndExecutesBots" methodname="MazeSessionInitializesTicksMovesQueriesPhysicsAndExecutesBots" classname="FirstLight.Tests.EditorMode.Systems.OfflineMazeSessionTests" runstate="Runnable" seed="2128663854" result="Passed" start-time="2026-10-14 14:26:04Z" end-time="2026-10-14 14:26:05Z" duration="1.087087" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                  <output><![CDATA[Quantum.TopDownKCCSettings must be instantiated using the ScriptableObject.CreateInstance method instead of new TopDownKCCSettings.
+Quantum.NavMeshAgentConfig must be instantiated using the ScriptableObject.CreateInstance method instead of new NavMeshAgentConfig.
+]]></output>
+                </test-case>
+                <test-case id="1003" name="RecordedMazeSessionReplaysToIdenticalVerifiedChecksum" fullname="FirstLight.Tests.EditorMode.Systems.OfflineMazeSessionTests.RecordedMazeSessionReplaysToIdenticalVerifiedChecksum" methodname="RecordedMazeSessionReplaysToIdenticalVerifiedChecksum" classname="FirstLight.Tests.EditorMode.Systems.OfflineMazeSessionTests" runstate="Runnable" seed="1378931137" result="Passed" start-time="2026-10-14 14:26:05Z" end-time="2026-10-14 14:26:06Z" duration="0.554819" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                  <output><![CDATA[Quantum.NavMeshAgentConfig must be instantiated using the ScriptableObject.CreateInstance method instead of new NavMeshAgentConfig.
+Quantum.NavMeshAgentConfig must be instantiated using the ScriptableObject.CreateInstance method instead of new NavMeshAgentConfig.
+Saving results to: <repo>/artifacts/quantum3-offline-session-blackboard-tests.xml
+]]></output>
+                </test-case>
+              </test-suite>
+            </test-suite>
+          </test-suite>
+        </test-suite>
+      </test-suite>
+    </test-suite>
+  </test-suite>
+</test-run>

@@ -1,0 +1,16 @@
+{
+  "status": "native_isolated_pass",
+  "total": 2,
+  "passed": 2,
+  "failed": 0,
+  "skipped": 0,
+  "tests_source_sha256": "4270a02efaf298b6fb69bee4e37ae1635beb7bc462003e1010410cc6f8782bee",
+  "native_catalog": 221,
+  "original_assets": 213,
+  "authored_Maze_prototypes": 708,
+  "player_bot_physics_ticks": 1200,
+  "recorded_replay_ticks": 600,
+  "verified_checksums_equal": true,
+  "blackboard_fix_main_applied": true,
+  "main_test_rerun": "pass_296_total_zero_failed_zero_skipped"
+}

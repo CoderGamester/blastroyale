@@ -1,0 +1,46 @@
+{
+  "SDK": "Photon Quantum3.0.14 + BotSDK3.10.2",
+  "Unity": "6000.3.26f1",
+  "Project": ".local/quantum3-source-project",
+  "TestPlatform": "EditMode",
+  "Runner": "actual SDK DotNetRunnerFactory + SessionRunner + QuantumGame",
+  "Total": 2,
+  "Passed": 2,
+  "Failed": 0,
+  "UnityExitCode": 0,
+  "NativeCatalogEntries": 221,
+  "OriginalMigratedAssets": 213,
+  "MazeMapEntities": 708,
+  "MovementAndBots": {
+    "Tick": 1200,
+    "NativeInputCallbacks": true,
+    "RealPlayerMovement": true,
+    "BotTimerUpdates": true,
+    "BakedStaticPhysicsQuery": true
+  },
+  "Replay": {
+    "RecordedUntilTick": 600,
+    "FullVerifiedChecksumEqual": true,
+    "ActualSDKInputProvider": true
+  },
+  "SourceFix": {
+    "Path": ".local/quantum3-source-project/Assets/QuantumUser/Simulation/Components/PlayerCharacter.cs",
+    "SHA256": "869f659016f874012edde5868de3f9a866144e41ee5e74dfe866e724d919b3d5",
+    "Detail": "AIBlackboardComponent.Initialize allocates Entries dictionary; AIBlackboard.Initialize only applies optional defaults. Both called in order."
+  },
+  "Evidence": [
+    {
+      "Path": "artifacts/quantum3-offline-session-blackboard-tests.xml",
+      "SHA256": "92d6e6dd5433935e346ab3d24664116a6ad83316328f361379e528e1b273802a"
+    },
+    {
+      "Path": "artifacts/quantum3-offline-session-blackboard-tests.log",
+      "SHA256": "db175fc463c889f7b67a66e9b71e506377d77ea85c3c3c488a40957ff4cf263e"
+    }
+  ],
+  "Limits": [
+    "No rendered match/device/mobile evidence",
+    "No online multi-client deterministic session",
+    "No cloud backend round trip"
+  ]
+}

@@ -14,7 +14,8 @@
     "nunit.framework.dll",
     "Quantum.Deterministic.dll",
     "Quantum.Engine.dll",
-    "Quantum.Log.dll"
+    "Quantum.Log.dll",
+    "Quantum.BotSDK.Core.dll"
   ],
   "autoReferenced": false,
   "defineConstraints": [
