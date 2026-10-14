@@ -5,7 +5,7 @@
     --sprite-elements__button-success-bg: url('/Assets/Art/UI/Sprites/Elements/FButton/button-success-bg.png');
     --sprite-elements__button-tertiary-bg: url('/Assets/Art/UI/Sprites/Elements/FButton/button-tertiary-bg.png');
     --sprite-elements__spherical-dots: url('/Assets/Art/UI/Sprites/Elements/FButton/spherical-dots.png');
-    --sprite-elements__upgrade arrow: url('/Assets/Art/UI/Sprites/Elements/Icons/upgrade arrow.png');
+    --sprite-elements__upgrade-arrow: url('/Assets/Art/UI/Sprites/Elements/Icons/upgrade arrow.png');
 }
 
 .sprite-elements__button-disabled-bg {
@@ -38,8 +38,8 @@
     height: 348px;
 }
 
-.sprite-elements__upgrade arrow {
-    background-image: var(--sprite-elements__upgrade arrow);
+.sprite-elements__upgrade-arrow {
+    background-image: var(--sprite-elements__upgrade-arrow);
     width: 59px;
     height: 68px;
 }

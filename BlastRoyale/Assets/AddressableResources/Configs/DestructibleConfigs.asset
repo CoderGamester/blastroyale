@@ -11,23 +11,22 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 921ef6c155963ad45b9f11d9492be6ea, type: 3}
   m_Name: DestructibleConfigs
-  m_EditorClassIdentifier: 
-  Settings:
-    Identifier:
-      Path: AddressableResources/Configs/DestructibleConfigs
-      Guid:
-        Value: 4393632908210870598
-    QuantumConfigs:
-    - Id: 109
-      AssetRef:
-        Id:
-          Value: 125091833024730613
-      ProjectileAssetRef:
-        Id:
-          Value: 0
-      Health: 100
-      SplashRadius:
-        RawValue: 327680
-      PowerAmount: 400
-      DestructionLengthTime:
-        RawValue: 98304
+  m_EditorClassIdentifier:
+  Identifier:
+    Path: AddressableResources/Configs/DestructibleConfigs
+    Guid:
+      Value: 4393632908210870598
+  QuantumConfigs:
+  - Id: 109
+    AssetRef:
+      Id:
+        Value: 125091833024730613
+    ProjectileAssetRef:
+      Id:
+        Value: 0
+    Health: 100
+    SplashRadius:
+      RawValue: 327680
+    PowerAmount: 400
+    DestructionLengthTime:
+      RawValue: 98304

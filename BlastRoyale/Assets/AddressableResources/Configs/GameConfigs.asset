@@ -11,137 +11,128 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5e8dfc1b838045a6a0a05f7c25dd9974, type: 3}
   m_Name: GameConfigs
-  m_EditorClassIdentifier: 
-  Settings:
-    Identifier:
-      Path: AddressableResources/Configs/GameConfigs
-      Guid:
-        Value: 2168878361177007176
-    QuantumConfig:
-      DisconnectedDestroySeconds:
-        RawValue: 655360
-      DoubleKillTimeLimit: 10
-      RoomLockKillCount: 14
-      BotsNameCount: 912
-      PlayerRespawnTime:
-        RawValue: 262144
-      PlayerForceRespawnTime:
-        RawValue: 983040
-      GoToNextMatchForceTime:
-        RawValue: 655360
-      ShrinkingDamageCooldown:
+  m_EditorClassIdentifier:
+  Identifier:
+    Path: AddressableResources/Configs/GameConfigs
+    Guid:
+      Value: 2168878361177007176
+  QuantumConfig:
+    DisconnectedDestroySeconds:
+      RawValue: 655360
+    DoubleKillTimeLimit: 10
+    RoomLockKillCount: 14
+    BotsNameCount: 912
+    PlayerRespawnTime:
+      RawValue: 262144
+    PlayerForceRespawnTime:
+      RawValue: 983040
+    GoToNextMatchForceTime:
+      RawValue: 655360
+    ShrinkingDamageCooldown:
+      RawValue: 98304
+    PlayerDefaultHealth:
+      Default: 100
+      Keys:
+      - BattleRoyale
+      - Deathmatch
+      Values: 640000002c010000
+    PlayerDefaultSpeed:
+      Default:
+        RawValue: 183500
+      Keys:
+      - BattleRoyale
+      - Deathmatch
+      Values:
+      - RawValue: 183500
+      - RawValue: 245760
+    PlayerMaxShieldCapacity:
+      Default: 100
+      Keys:
+      - BattleRoyale
+      - Deathmatch
+      Values: 6400000090010000
+    PlayerStartingShieldCapacity:
+      Default: 100
+      Keys:
+      - BattleRoyale
+      - Deathmatch
+      Values: 6400000090010000
+    CollectableCollectTime:
+      Default:
         RawValue: 98304
-      PlayerDefaultHealth:
-        Default: 100
-        Keys:
-        - BattleRoyale
-        - Deathmatch
-        Values: 640000002c010000
-      PlayerDefaultSpeed:
-        Default:
-          RawValue: 183500
-        Keys:
-        - BattleRoyale
-        - Deathmatch
-        Values:
-        - RawValue: 183500
-        - RawValue: 245760
-      PlayerMaxShieldCapacity:
-        Default: 100
-        Keys:
-        - BattleRoyale
-        - Deathmatch
-        Values: 6400000090010000
-      PlayerStartingShieldCapacity:
-        Default: 100
-        Keys:
-        - BattleRoyale
-        - Deathmatch
-        Values: 6400000090010000
-      CollectableCollectTime:
-        Default:
-          RawValue: 98304
-        Keys:
-        - BattleRoyale
-        - Deathmatch
-        Values:
-        - RawValue: 98304
-        - RawValue: 39322
-      PlayerAliveShieldDuration:
-        Default:
-          RawValue: 0
-        Keys:
-        - BattleRoyale
-        - Deathmatch
-        Values:
-        - RawValue: 0
-        - RawValue: 196608
-      PlayerMaxEnergyLevel: 99
-      MinMaxEnergyLevelRequirement:
-        Value1: 100
-        Value2: 100
-      MaxPlayerRanks: 25
-      RageStatusDamageMultiplier:
-        RawValue: 196608
-      DeathDropHealthChance:
-        RawValue: 26214
-      DeathDropLargeShieldChance:
-        RawValue: 3277
-      DeathDropSmallShieldChance:
-        RawValue: 16384
-      TrophyEloRange: 400
-      TrophyEloK:
-        RawValue: 262144
-      TrophyMinChange:
-        RawValue: 3277
-      NftAssumedOwned: 40
-      MinNftForPoolSizeBonus: 3
-      EarningsAugmentationStrengthDropMod:
-        RawValue: 52429
-      EarningsAugmentationStrengthSteepnessMod:
-        RawValue: 196608
-      NftUsageCooldownMinutes: 1440
-      NftRequiredEquippedForPlay: 0
-      PlayerVisionRange:
-        RawValue: 1245184
-      AirdropPositionOffsetMultiplier:
-        RawValue: 6553
-      AirdropRandomAreaMultiplier:
-        RawValue: 6554
-      AirdropHeight:
-        RawValue: 1310720
-      MultiKillResetTime:
-        RawValue: 655360
-      BotsMaxDifficulty: 0
-      NftDurabilityDropDays:
-        RawValue: 458752
-      NonNftDurabilityDropDays:
-        RawValue: 458752
-      BotsDifficultyTrophiesStep: 150
-      MightBaseValue:
-        RawValue: 6553600
-      MightRarityMultiplier:
-        RawValue: 78512
-      MightLevelMultiplier:
-        RawValue: 1933
-      TrophiesPerKill:
-        RawValue: 131072
-      RoofDamageHeight:
-        RawValue: 98304
-      RoofDamageDelay:
-        RawValue: 327680
-      RoofDamageAmount:
-        RawValue: 13107
-      RoofDamageCooldown:
-        RawValue: 98304
-      HardAngleAim: 0
-      CollectableEquipmentPickupRadius:
-        RawValue: 49152
-      NoInputWarningTime:
-        RawValue: 983040
-      NoInputKillTime:
-        RawValue: 1310720
-      NoInputStartChecking:
-        RawValue: 655360
-      NoInputStopChecking:
-        RawValue: 4915200
+      Keys:
+      - BattleRoyale
+      - Deathmatch
+      Values:
+      - RawValue: 98304
+      - RawValue: 39322
+    PlayerAliveShieldDuration:
+      Default:
+        RawValue: 0
+      Keys:
+      - BattleRoyale
+      - Deathmatch
+      Values:
+      - RawValue: 0
+      - RawValue: 196608
+    PlayerMaxEnergyLevel: 99
+    MinMaxEnergyLevelRequirement:
+      Value1: 100
+      Value2: 100
+    MaxPlayerRanks: 25
+    RageStatusDamageMultiplier:
+      RawValue: 196608
+    DeathDropHealthChance:
+      RawValue: 26214
+    DeathDropLargeShieldChance:
+      RawValue: 3277
+    DeathDropSmallShieldChance:
+      RawValue: 16384
+    TrophyEloRange: 400
+    TrophyEloK:
+      RawValue: 262144
+    TrophyMinChange:
+      RawValue: 3277
+    EarningsAugmentationStrengthDropMod:
+      RawValue: 52429
+    EarningsAugmentationStrengthSteepnessMod:
+      RawValue: 196608
+    PlayerVisionRange:
+      RawValue: 1245184
+    AirdropPositionOffsetMultiplier:
+      RawValue: 6553
+    AirdropRandomAreaMultiplier:
+      RawValue: 6554
+    AirdropHeight:
+      RawValue: 1310720
+    MultiKillResetTime:
+      RawValue: 655360
+    BotsMaxDifficulty: 0
+    BotsDifficultyTrophiesStep: 150
+    MightBaseValue:
+      RawValue: 6553600
+    MightRarityMultiplier:
+      RawValue: 78512
+    MightLevelMultiplier:
+      RawValue: 1933
+    TrophiesPerKill:
+      RawValue: 131072
+    RoofDamageHeight:
+      RawValue: 98304
+    RoofDamageDelay:
+      RawValue: 327680
+    RoofDamageAmount:
+      RawValue: 13107
+    RoofDamageCooldown:
+      RawValue: 98304
+    HardAngleAim: 0
+    CollectableEquipmentPickupRadius:
+      RawValue: 49152
+    NoInputWarningTime:
+      RawValue: 983040
+    NoInputKillTime:
+      RawValue: 1310720
+    NoInputStartChecking:
+      RawValue: 655360
+    NoInputStopChecking:
+      RawValue: 4915200

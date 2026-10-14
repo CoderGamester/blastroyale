@@ -11,928 +11,927 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2566c2e410db44958669bdcb7e19600e, type: 3}
   m_Name: BaseEquipmentStatConfigs
-  m_EditorClassIdentifier: 
-  Settings:
-    Identifier:
-      Path: AddressableResources/Configs/BaseEquipmentStatConfigs
-      Guid:
-        Value: 1461361185191240749
-    QuantumConfigs:
-    - Id: 28
-      Manufacturer: 5
-      HpRatioToBase:
-        RawValue: 0
-      ArmorRatioToBase:
-        RawValue: 0
-      SpeedRatioToBase:
-        RawValue: 4424
-      PowerRatioToBase:
-        RawValue: 0
-      AttackRangeRatioToBase:
-        RawValue: 0
-      PickupSpeedRatioToBase:
-        RawValue: 0
-      AmmoCapacityRatioToBase:
-        RawValue: 0
-      ShieldCapacityRatioToBase:
-        RawValue: 0
-    - Id: 38
-      Manufacturer: 4
-      HpRatioToBase:
-        RawValue: 0
-      ArmorRatioToBase:
-        RawValue: 0
-      SpeedRatioToBase:
-        RawValue: 0
-      PowerRatioToBase:
-        RawValue: 0
-      AttackRangeRatioToBase:
-        RawValue: 0
-      PickupSpeedRatioToBase:
-        RawValue: 5751
-      AmmoCapacityRatioToBase:
-        RawValue: 0
-      ShieldCapacityRatioToBase:
-        RawValue: 0
-    - Id: 39
-      Manufacturer: 3
-      HpRatioToBase:
-        RawValue: 0
-      ArmorRatioToBase:
-        RawValue: 0
-      SpeedRatioToBase:
-        RawValue: 0
-      PowerRatioToBase:
-        RawValue: 0
-      AttackRangeRatioToBase:
-        RawValue: 8228
-      PickupSpeedRatioToBase:
-        RawValue: 0
-      AmmoCapacityRatioToBase:
-        RawValue: 0
-      ShieldCapacityRatioToBase:
-        RawValue: 0
-    - Id: 40
-      Manufacturer: 0
-      HpRatioToBase:
-        RawValue: 0
-      ArmorRatioToBase:
-        RawValue: 0
-      SpeedRatioToBase:
-        RawValue: 0
-      PowerRatioToBase:
-        RawValue: 0
-      AttackRangeRatioToBase:
-        RawValue: 8228
-      PickupSpeedRatioToBase:
-        RawValue: 0
-      AmmoCapacityRatioToBase:
-        RawValue: 0
-      ShieldCapacityRatioToBase:
-        RawValue: 0
-    - Id: 41
-      Manufacturer: 6
-      HpRatioToBase:
-        RawValue: 0
-      ArmorRatioToBase:
-        RawValue: 0
-      SpeedRatioToBase:
-        RawValue: 4424
-      PowerRatioToBase:
-        RawValue: 0
-      AttackRangeRatioToBase:
-        RawValue: 0
-      PickupSpeedRatioToBase:
-        RawValue: 0
-      AmmoCapacityRatioToBase:
-        RawValue: 0
-      ShieldCapacityRatioToBase:
-        RawValue: 0
-    - Id: 42
-      Manufacturer: 4
-      HpRatioToBase:
-        RawValue: 0
-      ArmorRatioToBase:
-        RawValue: 0
-      SpeedRatioToBase:
-        RawValue: 0
-      PowerRatioToBase:
-        RawValue: 0
-      AttackRangeRatioToBase:
-        RawValue: 0
-      PickupSpeedRatioToBase:
-        RawValue: 5751
-      AmmoCapacityRatioToBase:
-        RawValue: 0
-      ShieldCapacityRatioToBase:
-        RawValue: 0
-    - Id: 29
-      Manufacturer: 5
-      HpRatioToBase:
-        RawValue: 0
-      ArmorRatioToBase:
-        RawValue: 0
-      SpeedRatioToBase:
-        RawValue: 4424
-      PowerRatioToBase:
-        RawValue: 0
-      AttackRangeRatioToBase:
-        RawValue: 0
-      PickupSpeedRatioToBase:
-        RawValue: 0
-      AmmoCapacityRatioToBase:
-        RawValue: 0
-      ShieldCapacityRatioToBase:
-        RawValue: 0
-    - Id: 43
-      Manufacturer: 3
-      HpRatioToBase:
-        RawValue: 0
-      ArmorRatioToBase:
-        RawValue: 0
-      SpeedRatioToBase:
-        RawValue: 0
-      PowerRatioToBase:
-        RawValue: 0
-      AttackRangeRatioToBase:
-        RawValue: 8228
-      PickupSpeedRatioToBase:
-        RawValue: 0
-      AmmoCapacityRatioToBase:
-        RawValue: 0
-      ShieldCapacityRatioToBase:
-        RawValue: 0
-    - Id: 44
-      Manufacturer: 0
-      HpRatioToBase:
-        RawValue: 0
-      ArmorRatioToBase:
-        RawValue: 0
-      SpeedRatioToBase:
-        RawValue: 0
-      PowerRatioToBase:
-        RawValue: 0
-      AttackRangeRatioToBase:
-        RawValue: 8228
-      PickupSpeedRatioToBase:
-        RawValue: 0
-      AmmoCapacityRatioToBase:
-        RawValue: 0
-      ShieldCapacityRatioToBase:
-        RawValue: 0
-    - Id: 45
-      Manufacturer: 6
-      HpRatioToBase:
-        RawValue: 0
-      ArmorRatioToBase:
-        RawValue: 0
-      SpeedRatioToBase:
-        RawValue: 4424
-      PowerRatioToBase:
-        RawValue: 0
-      AttackRangeRatioToBase:
-        RawValue: 0
-      PickupSpeedRatioToBase:
-        RawValue: 0
-      AmmoCapacityRatioToBase:
-        RawValue: 0
-      ShieldCapacityRatioToBase:
-        RawValue: 0
-    - Id: 34
-      Manufacturer: 7
-      HpRatioToBase:
-        RawValue: 0
-      ArmorRatioToBase:
-        RawValue: 0
-      SpeedRatioToBase:
-        RawValue: 0
-      PowerRatioToBase:
-        RawValue: 0
-      AttackRangeRatioToBase:
-        RawValue: 0
-      PickupSpeedRatioToBase:
-        RawValue: 5751
-      AmmoCapacityRatioToBase:
-        RawValue: 0
-      ShieldCapacityRatioToBase:
-        RawValue: 0
-    - Id: 35
-      Manufacturer: 7
-      HpRatioToBase:
-        RawValue: 0
-      ArmorRatioToBase:
-        RawValue: 0
-      SpeedRatioToBase:
-        RawValue: 0
-      PowerRatioToBase:
-        RawValue: 0
-      AttackRangeRatioToBase:
-        RawValue: 0
-      PickupSpeedRatioToBase:
-        RawValue: 5751
-      AmmoCapacityRatioToBase:
-        RawValue: 0
-      ShieldCapacityRatioToBase:
-        RawValue: 0
-    - Id: 27
-      Manufacturer: 3
-      HpRatioToBase:
-        RawValue: 0
-      ArmorRatioToBase:
-        RawValue: 0
-      SpeedRatioToBase:
-        RawValue: 0
-      PowerRatioToBase:
-        RawValue: 0
-      AttackRangeRatioToBase:
-        RawValue: 8228
-      PickupSpeedRatioToBase:
-        RawValue: 0
-      AmmoCapacityRatioToBase:
-        RawValue: 0
-      ShieldCapacityRatioToBase:
-        RawValue: 0
-    - Id: 52
-      Manufacturer: 4
-      HpRatioToBase:
-        RawValue: 0
-      ArmorRatioToBase:
-        RawValue: 0
-      SpeedRatioToBase:
-        RawValue: 0
-      PowerRatioToBase:
-        RawValue: 0
-      AttackRangeRatioToBase:
-        RawValue: 0
-      PickupSpeedRatioToBase:
-        RawValue: 5751
-      AmmoCapacityRatioToBase:
-        RawValue: 0
-      ShieldCapacityRatioToBase:
-        RawValue: 0
-    - Id: 53
-      Manufacturer: 0
-      HpRatioToBase:
-        RawValue: 0
-      ArmorRatioToBase:
-        RawValue: 0
-      SpeedRatioToBase:
-        RawValue: 0
-      PowerRatioToBase:
-        RawValue: 0
-      AttackRangeRatioToBase:
-        RawValue: 8228
-      PickupSpeedRatioToBase:
-        RawValue: 0
-      AmmoCapacityRatioToBase:
-        RawValue: 0
-      ShieldCapacityRatioToBase:
-        RawValue: 0
-    - Id: 54
-      Manufacturer: 6
-      HpRatioToBase:
-        RawValue: 0
-      ArmorRatioToBase:
-        RawValue: 0
-      SpeedRatioToBase:
-        RawValue: 4424
-      PowerRatioToBase:
-        RawValue: 0
-      AttackRangeRatioToBase:
-        RawValue: 0
-      PickupSpeedRatioToBase:
-        RawValue: 0
-      AmmoCapacityRatioToBase:
-        RawValue: 0
-      ShieldCapacityRatioToBase:
-        RawValue: 0
-    - Id: 36
-      Manufacturer: 5
-      HpRatioToBase:
-        RawValue: 0
-      ArmorRatioToBase:
-        RawValue: 0
-      SpeedRatioToBase:
-        RawValue: 4424
-      PowerRatioToBase:
-        RawValue: 0
-      AttackRangeRatioToBase:
-        RawValue: 0
-      PickupSpeedRatioToBase:
-        RawValue: 0
-      AmmoCapacityRatioToBase:
-        RawValue: 0
-      ShieldCapacityRatioToBase:
-        RawValue: 0
-    - Id: 50
-      Manufacturer: 3
-      HpRatioToBase:
-        RawValue: 0
-      ArmorRatioToBase:
-        RawValue: 0
-      SpeedRatioToBase:
-        RawValue: 0
-      PowerRatioToBase:
-        RawValue: 0
-      AttackRangeRatioToBase:
-        RawValue: 8228
-      PickupSpeedRatioToBase:
-        RawValue: 0
-      AmmoCapacityRatioToBase:
-        RawValue: 0
-      ShieldCapacityRatioToBase:
-        RawValue: 0
-    - Id: 23
-      Manufacturer: 5
-      HpRatioToBase:
-        RawValue: 0
-      ArmorRatioToBase:
-        RawValue: 0
-      SpeedRatioToBase:
-        RawValue: 4424
-      PowerRatioToBase:
-        RawValue: 0
-      AttackRangeRatioToBase:
-        RawValue: 0
-      PickupSpeedRatioToBase:
-        RawValue: 0
-      AmmoCapacityRatioToBase:
-        RawValue: 0
-      ShieldCapacityRatioToBase:
-        RawValue: 0
-    - Id: 32
-      Manufacturer: 7
-      HpRatioToBase:
-        RawValue: 0
-      ArmorRatioToBase:
-        RawValue: 0
-      SpeedRatioToBase:
-        RawValue: 4424
-      PowerRatioToBase:
-        RawValue: 0
-      AttackRangeRatioToBase:
-        RawValue: 0
-      PickupSpeedRatioToBase:
-        RawValue: 0
-      AmmoCapacityRatioToBase:
-        RawValue: 0
-      ShieldCapacityRatioToBase:
-        RawValue: 0
-    - Id: 33
-      Manufacturer: 7
-      HpRatioToBase:
-        RawValue: 0
-      ArmorRatioToBase:
-        RawValue: 0
-      SpeedRatioToBase:
-        RawValue: 0
-      PowerRatioToBase:
-        RawValue: 0
-      AttackRangeRatioToBase:
-        RawValue: 0
-      PickupSpeedRatioToBase:
-        RawValue: 5751
-      AmmoCapacityRatioToBase:
-        RawValue: 0
-      ShieldCapacityRatioToBase:
-        RawValue: 0
-    - Id: 24
-      Manufacturer: 4
-      HpRatioToBase:
-        RawValue: 0
-      ArmorRatioToBase:
-        RawValue: 0
-      SpeedRatioToBase:
-        RawValue: 0
-      PowerRatioToBase:
-        RawValue: 0
-      AttackRangeRatioToBase:
-        RawValue: 0
-      PickupSpeedRatioToBase:
-        RawValue: 5751
-      AmmoCapacityRatioToBase:
-        RawValue: 0
-      ShieldCapacityRatioToBase:
-        RawValue: 0
-    - Id: 49
-      Manufacturer: 0
-      HpRatioToBase:
-        RawValue: 0
-      ArmorRatioToBase:
-        RawValue: 0
-      SpeedRatioToBase:
-        RawValue: 0
-      PowerRatioToBase:
-        RawValue: 0
-      AttackRangeRatioToBase:
-        RawValue: 8228
-      PickupSpeedRatioToBase:
-        RawValue: 0
-      AmmoCapacityRatioToBase:
-        RawValue: 0
-      ShieldCapacityRatioToBase:
-        RawValue: 0
-    - Id: 51
-      Manufacturer: 6
-      HpRatioToBase:
-        RawValue: 0
-      ArmorRatioToBase:
-        RawValue: 0
-      SpeedRatioToBase:
-        RawValue: 4424
-      PowerRatioToBase:
-        RawValue: 0
-      AttackRangeRatioToBase:
-        RawValue: 0
-      PickupSpeedRatioToBase:
-        RawValue: 0
-      AmmoCapacityRatioToBase:
-        RawValue: 0
-      ShieldCapacityRatioToBase:
-        RawValue: 0
-    - Id: 30
-      Manufacturer: 7
-      HpRatioToBase:
-        RawValue: 0
-      ArmorRatioToBase:
-        RawValue: 0
-      SpeedRatioToBase:
-        RawValue: 0
-      PowerRatioToBase:
-        RawValue: 0
-      AttackRangeRatioToBase:
-        RawValue: 0
-      PickupSpeedRatioToBase:
-        RawValue: 5751
-      AmmoCapacityRatioToBase:
-        RawValue: 0
-      ShieldCapacityRatioToBase:
-        RawValue: 0
-    - Id: 31
-      Manufacturer: 0
-      HpRatioToBase:
-        RawValue: 0
-      ArmorRatioToBase:
-        RawValue: 0
-      SpeedRatioToBase:
-        RawValue: 0
-      PowerRatioToBase:
-        RawValue: 131072
-      AttackRangeRatioToBase:
-        RawValue: 0
-      PickupSpeedRatioToBase:
-        RawValue: 0
-      AmmoCapacityRatioToBase:
-        RawValue: 0
-      ShieldCapacityRatioToBase:
-        RawValue: 0
-    - Id: 60
-      Manufacturer: 2
-      HpRatioToBase:
-        RawValue: 0
-      ArmorRatioToBase:
-        RawValue: 0
-      SpeedRatioToBase:
-        RawValue: 0
-      PowerRatioToBase:
-        RawValue: 131072
-      AttackRangeRatioToBase:
-        RawValue: 0
-      PickupSpeedRatioToBase:
-        RawValue: 0
-      AmmoCapacityRatioToBase:
-        RawValue: 0
-      ShieldCapacityRatioToBase:
-        RawValue: 0
-    - Id: 71
-      Manufacturer: 2
-      HpRatioToBase:
-        RawValue: 0
-      ArmorRatioToBase:
-        RawValue: 0
-      SpeedRatioToBase:
-        RawValue: 0
-      PowerRatioToBase:
-        RawValue: 131072
-      AttackRangeRatioToBase:
-        RawValue: 0
-      PickupSpeedRatioToBase:
-        RawValue: 0
-      AmmoCapacityRatioToBase:
-        RawValue: 0
-      ShieldCapacityRatioToBase:
-        RawValue: 0
-    - Id: 78
-      Manufacturer: 2
-      HpRatioToBase:
-        RawValue: 0
-      ArmorRatioToBase:
-        RawValue: 0
-      SpeedRatioToBase:
-        RawValue: 0
-      PowerRatioToBase:
-        RawValue: 131072
-      AttackRangeRatioToBase:
-        RawValue: 0
-      PickupSpeedRatioToBase:
-        RawValue: 0
-      AmmoCapacityRatioToBase:
-        RawValue: 0
-      ShieldCapacityRatioToBase:
-        RawValue: 0
-    - Id: 79
-      Manufacturer: 2
-      HpRatioToBase:
-        RawValue: 0
-      ArmorRatioToBase:
-        RawValue: 0
-      SpeedRatioToBase:
-        RawValue: 0
-      PowerRatioToBase:
-        RawValue: 131072
-      AttackRangeRatioToBase:
-        RawValue: 0
-      PickupSpeedRatioToBase:
-        RawValue: 0
-      AmmoCapacityRatioToBase:
-        RawValue: 0
-      ShieldCapacityRatioToBase:
-        RawValue: 0
-    - Id: 84
-      Manufacturer: 2
-      HpRatioToBase:
-        RawValue: 0
-      ArmorRatioToBase:
-        RawValue: 0
-      SpeedRatioToBase:
-        RawValue: 0
-      PowerRatioToBase:
-        RawValue: 131072
-      AttackRangeRatioToBase:
-        RawValue: 0
-      PickupSpeedRatioToBase:
-        RawValue: 0
-      AmmoCapacityRatioToBase:
-        RawValue: 0
-      ShieldCapacityRatioToBase:
-        RawValue: 0
-    - Id: 86
-      Manufacturer: 2
-      HpRatioToBase:
-        RawValue: 0
-      ArmorRatioToBase:
-        RawValue: 0
-      SpeedRatioToBase:
-        RawValue: 0
-      PowerRatioToBase:
-        RawValue: 131072
-      AttackRangeRatioToBase:
-        RawValue: 0
-      PickupSpeedRatioToBase:
-        RawValue: 0
-      AmmoCapacityRatioToBase:
-        RawValue: 0
-      ShieldCapacityRatioToBase:
-        RawValue: 0
-    - Id: 87
-      Manufacturer: 2
-      HpRatioToBase:
-        RawValue: 0
-      ArmorRatioToBase:
-        RawValue: 0
-      SpeedRatioToBase:
-        RawValue: 0
-      PowerRatioToBase:
-        RawValue: 131072
-      AttackRangeRatioToBase:
-        RawValue: 0
-      PickupSpeedRatioToBase:
-        RawValue: 0
-      AmmoCapacityRatioToBase:
-        RawValue: 0
-      ShieldCapacityRatioToBase:
-        RawValue: 0
-    - Id: 88
-      Manufacturer: 0
-      HpRatioToBase:
-        RawValue: 0
-      ArmorRatioToBase:
-        RawValue: 0
-      SpeedRatioToBase:
-        RawValue: 0
-      PowerRatioToBase:
-        RawValue: 131072
-      AttackRangeRatioToBase:
-        RawValue: 0
-      PickupSpeedRatioToBase:
-        RawValue: 0
-      AmmoCapacityRatioToBase:
-        RawValue: 0
-      ShieldCapacityRatioToBase:
-        RawValue: 0
-    - Id: 90
-      Manufacturer: 0
-      HpRatioToBase:
-        RawValue: 0
-      ArmorRatioToBase:
-        RawValue: 0
-      SpeedRatioToBase:
-        RawValue: 0
-      PowerRatioToBase:
-        RawValue: 131072
-      AttackRangeRatioToBase:
-        RawValue: 0
-      PickupSpeedRatioToBase:
-        RawValue: 0
-      AmmoCapacityRatioToBase:
-        RawValue: 0
-      ShieldCapacityRatioToBase:
-        RawValue: 0
-    - Id: 91
-      Manufacturer: 0
-      HpRatioToBase:
-        RawValue: 0
-      ArmorRatioToBase:
-        RawValue: 0
-      SpeedRatioToBase:
-        RawValue: 0
-      PowerRatioToBase:
-        RawValue: 131072
-      AttackRangeRatioToBase:
-        RawValue: 0
-      PickupSpeedRatioToBase:
-        RawValue: 0
-      AmmoCapacityRatioToBase:
-        RawValue: 0
-      ShieldCapacityRatioToBase:
-        RawValue: 0
-    - Id: 92
-      Manufacturer: 0
-      HpRatioToBase:
-        RawValue: 0
-      ArmorRatioToBase:
-        RawValue: 0
-      SpeedRatioToBase:
-        RawValue: 0
-      PowerRatioToBase:
-        RawValue: 131072
-      AttackRangeRatioToBase:
-        RawValue: 0
-      PickupSpeedRatioToBase:
-        RawValue: 0
-      AmmoCapacityRatioToBase:
-        RawValue: 0
-      ShieldCapacityRatioToBase:
-        RawValue: 0
-    - Id: 93
-      Manufacturer: 0
-      HpRatioToBase:
-        RawValue: 0
-      ArmorRatioToBase:
-        RawValue: 0
-      SpeedRatioToBase:
-        RawValue: 0
-      PowerRatioToBase:
-        RawValue: 131072
-      AttackRangeRatioToBase:
-        RawValue: 0
-      PickupSpeedRatioToBase:
-        RawValue: 0
-      AmmoCapacityRatioToBase:
-        RawValue: 0
-      ShieldCapacityRatioToBase:
-        RawValue: 0
-    - Id: 94
-      Manufacturer: 0
-      HpRatioToBase:
-        RawValue: 0
-      ArmorRatioToBase:
-        RawValue: 0
-      SpeedRatioToBase:
-        RawValue: 0
-      PowerRatioToBase:
-        RawValue: 131072
-      AttackRangeRatioToBase:
-        RawValue: 0
-      PickupSpeedRatioToBase:
-        RawValue: 0
-      AmmoCapacityRatioToBase:
-        RawValue: 0
-      ShieldCapacityRatioToBase:
-        RawValue: 0
-    - Id: 95
-      Manufacturer: 0
-      HpRatioToBase:
-        RawValue: 0
-      ArmorRatioToBase:
-        RawValue: 0
-      SpeedRatioToBase:
-        RawValue: 0
-      PowerRatioToBase:
-        RawValue: 131072
-      AttackRangeRatioToBase:
-        RawValue: 0
-      PickupSpeedRatioToBase:
-        RawValue: 0
-      AmmoCapacityRatioToBase:
-        RawValue: 0
-      ShieldCapacityRatioToBase:
-        RawValue: 0
-    - Id: 96
-      Manufacturer: 1
-      HpRatioToBase:
-        RawValue: 0
-      ArmorRatioToBase:
-        RawValue: 0
-      SpeedRatioToBase:
-        RawValue: 0
-      PowerRatioToBase:
-        RawValue: 131072
-      AttackRangeRatioToBase:
-        RawValue: 0
-      PickupSpeedRatioToBase:
-        RawValue: 0
-      AmmoCapacityRatioToBase:
-        RawValue: 0
-      ShieldCapacityRatioToBase:
-        RawValue: 0
-    - Id: 97
-      Manufacturer: 1
-      HpRatioToBase:
-        RawValue: 0
-      ArmorRatioToBase:
-        RawValue: 0
-      SpeedRatioToBase:
-        RawValue: 0
-      PowerRatioToBase:
-        RawValue: 131072
-      AttackRangeRatioToBase:
-        RawValue: 0
-      PickupSpeedRatioToBase:
-        RawValue: 0
-      AmmoCapacityRatioToBase:
-        RawValue: 0
-      ShieldCapacityRatioToBase:
-        RawValue: 0
-    - Id: 98
-      Manufacturer: 1
-      HpRatioToBase:
-        RawValue: 0
-      ArmorRatioToBase:
-        RawValue: 0
-      SpeedRatioToBase:
-        RawValue: 0
-      PowerRatioToBase:
-        RawValue: 131072
-      AttackRangeRatioToBase:
-        RawValue: 0
-      PickupSpeedRatioToBase:
-        RawValue: 0
-      AmmoCapacityRatioToBase:
-        RawValue: 0
-      ShieldCapacityRatioToBase:
-        RawValue: 0
-    - Id: 99
-      Manufacturer: 1
-      HpRatioToBase:
-        RawValue: 0
-      ArmorRatioToBase:
-        RawValue: 0
-      SpeedRatioToBase:
-        RawValue: 0
-      PowerRatioToBase:
-        RawValue: 131072
-      AttackRangeRatioToBase:
-        RawValue: 0
-      PickupSpeedRatioToBase:
-        RawValue: 0
-      AmmoCapacityRatioToBase:
-        RawValue: 0
-      ShieldCapacityRatioToBase:
-        RawValue: 0
-    - Id: 100
-      Manufacturer: 1
-      HpRatioToBase:
-        RawValue: 0
-      ArmorRatioToBase:
-        RawValue: 0
-      SpeedRatioToBase:
-        RawValue: 0
-      PowerRatioToBase:
-        RawValue: 131072
-      AttackRangeRatioToBase:
-        RawValue: 0
-      PickupSpeedRatioToBase:
-        RawValue: 0
-      AmmoCapacityRatioToBase:
-        RawValue: 0
-      ShieldCapacityRatioToBase:
-        RawValue: 0
-    - Id: 101
-      Manufacturer: 1
-      HpRatioToBase:
-        RawValue: 0
-      ArmorRatioToBase:
-        RawValue: 0
-      SpeedRatioToBase:
-        RawValue: 0
-      PowerRatioToBase:
-        RawValue: 131072
-      AttackRangeRatioToBase:
-        RawValue: 0
-      PickupSpeedRatioToBase:
-        RawValue: 0
-      AmmoCapacityRatioToBase:
-        RawValue: 0
-      ShieldCapacityRatioToBase:
-        RawValue: 0
-    - Id: 103
-      Manufacturer: 1
-      HpRatioToBase:
-        RawValue: 0
-      ArmorRatioToBase:
-        RawValue: 0
-      SpeedRatioToBase:
-        RawValue: 0
-      PowerRatioToBase:
-        RawValue: 131072
-      AttackRangeRatioToBase:
-        RawValue: 0
-      PickupSpeedRatioToBase:
-        RawValue: 0
-      AmmoCapacityRatioToBase:
-        RawValue: 0
-      ShieldCapacityRatioToBase:
-        RawValue: 0
-    - Id: 269
-      Manufacturer: 0
-      HpRatioToBase:
-        RawValue: 0
-      ArmorRatioToBase:
-        RawValue: 0
-      SpeedRatioToBase:
-        RawValue: 0
-      PowerRatioToBase:
-        RawValue: 131072
-      AttackRangeRatioToBase:
-        RawValue: 0
-      PickupSpeedRatioToBase:
-        RawValue: 0
-      AmmoCapacityRatioToBase:
-        RawValue: 0
-      ShieldCapacityRatioToBase:
-        RawValue: 0
-    - Id: 270
-      Manufacturer: 0
-      HpRatioToBase:
-        RawValue: 0
-      ArmorRatioToBase:
-        RawValue: 0
-      SpeedRatioToBase:
-        RawValue: 0
-      PowerRatioToBase:
-        RawValue: 131072
-      AttackRangeRatioToBase:
-        RawValue: 0
-      PickupSpeedRatioToBase:
-        RawValue: 0
-      AmmoCapacityRatioToBase:
-        RawValue: 0
-      ShieldCapacityRatioToBase:
-        RawValue: 0
-    - Id: 292
-      Manufacturer: 0
-      HpRatioToBase:
-        RawValue: 0
-      ArmorRatioToBase:
-        RawValue: 0
-      SpeedRatioToBase:
-        RawValue: 0
-      PowerRatioToBase:
-        RawValue: 131072
-      AttackRangeRatioToBase:
-        RawValue: 0
-      PickupSpeedRatioToBase:
-        RawValue: 0
-      AmmoCapacityRatioToBase:
-        RawValue: 0
-      ShieldCapacityRatioToBase:
-        RawValue: 0
-    - Id: 342
-      Manufacturer: 0
-      HpRatioToBase:
-        RawValue: 0
-      ArmorRatioToBase:
-        RawValue: 0
-      SpeedRatioToBase:
-        RawValue: 0
-      PowerRatioToBase:
-        RawValue: 131072
-      AttackRangeRatioToBase:
-        RawValue: 0
-      PickupSpeedRatioToBase:
-        RawValue: 0
-      AmmoCapacityRatioToBase:
-        RawValue: 0
-      ShieldCapacityRatioToBase:
-        RawValue: 0
+  m_EditorClassIdentifier:
+  Identifier:
+    Path: AddressableResources/Configs/BaseEquipmentStatConfigs
+    Guid:
+      Value: 1461361185191240749
+  QuantumConfigs:
+  - Id: 28
+    Manufacturer: 5
+    HpRatioToBase:
+      RawValue: 0
+    ArmorRatioToBase:
+      RawValue: 0
+    SpeedRatioToBase:
+      RawValue: 4424
+    PowerRatioToBase:
+      RawValue: 0
+    AttackRangeRatioToBase:
+      RawValue: 0
+    PickupSpeedRatioToBase:
+      RawValue: 0
+    AmmoCapacityRatioToBase:
+      RawValue: 0
+    ShieldCapacityRatioToBase:
+      RawValue: 0
+  - Id: 38
+    Manufacturer: 4
+    HpRatioToBase:
+      RawValue: 0
+    ArmorRatioToBase:
+      RawValue: 0
+    SpeedRatioToBase:
+      RawValue: 0
+    PowerRatioToBase:
+      RawValue: 0
+    AttackRangeRatioToBase:
+      RawValue: 0
+    PickupSpeedRatioToBase:
+      RawValue: 5751
+    AmmoCapacityRatioToBase:
+      RawValue: 0
+    ShieldCapacityRatioToBase:
+      RawValue: 0
+  - Id: 39
+    Manufacturer: 3
+    HpRatioToBase:
+      RawValue: 0
+    ArmorRatioToBase:
+      RawValue: 0
+    SpeedRatioToBase:
+      RawValue: 0
+    PowerRatioToBase:
+      RawValue: 0
+    AttackRangeRatioToBase:
+      RawValue: 8228
+    PickupSpeedRatioToBase:
+      RawValue: 0
+    AmmoCapacityRatioToBase:
+      RawValue: 0
+    ShieldCapacityRatioToBase:
+      RawValue: 0
+  - Id: 40
+    Manufacturer: 0
+    HpRatioToBase:
+      RawValue: 0
+    ArmorRatioToBase:
+      RawValue: 0
+    SpeedRatioToBase:
+      RawValue: 0
+    PowerRatioToBase:
+      RawValue: 0
+    AttackRangeRatioToBase:
+      RawValue: 8228
+    PickupSpeedRatioToBase:
+      RawValue: 0
+    AmmoCapacityRatioToBase:
+      RawValue: 0
+    ShieldCapacityRatioToBase:
+      RawValue: 0
+  - Id: 41
+    Manufacturer: 6
+    HpRatioToBase:
+      RawValue: 0
+    ArmorRatioToBase:
+      RawValue: 0
+    SpeedRatioToBase:
+      RawValue: 4424
+    PowerRatioToBase:
+      RawValue: 0
+    AttackRangeRatioToBase:
+      RawValue: 0
+    PickupSpeedRatioToBase:
+      RawValue: 0
+    AmmoCapacityRatioToBase:
+      RawValue: 0
+    ShieldCapacityRatioToBase:
+      RawValue: 0
+  - Id: 42
+    Manufacturer: 4
+    HpRatioToBase:
+      RawValue: 0
+    ArmorRatioToBase:
+      RawValue: 0
+    SpeedRatioToBase:
+      RawValue: 0
+    PowerRatioToBase:
+      RawValue: 0
+    AttackRangeRatioToBase:
+      RawValue: 0
+    PickupSpeedRatioToBase:
+      RawValue: 5751
+    AmmoCapacityRatioToBase:
+      RawValue: 0
+    ShieldCapacityRatioToBase:
+      RawValue: 0
+  - Id: 29
+    Manufacturer: 5
+    HpRatioToBase:
+      RawValue: 0
+    ArmorRatioToBase:
+      RawValue: 0
+    SpeedRatioToBase:
+      RawValue: 4424
+    PowerRatioToBase:
+      RawValue: 0
+    AttackRangeRatioToBase:
+      RawValue: 0
+    PickupSpeedRatioToBase:
+      RawValue: 0
+    AmmoCapacityRatioToBase:
+      RawValue: 0
+    ShieldCapacityRatioToBase:
+      RawValue: 0
+  - Id: 43
+    Manufacturer: 3
+    HpRatioToBase:
+      RawValue: 0
+    ArmorRatioToBase:
+      RawValue: 0
+    SpeedRatioToBase:
+      RawValue: 0
+    PowerRatioToBase:
+      RawValue: 0
+    AttackRangeRatioToBase:
+      RawValue: 8228
+    PickupSpeedRatioToBase:
+      RawValue: 0
+    AmmoCapacityRatioToBase:
+      RawValue: 0
+    ShieldCapacityRatioToBase:
+      RawValue: 0
+  - Id: 44
+    Manufacturer: 0
+    HpRatioToBase:
+      RawValue: 0
+    ArmorRatioToBase:
+      RawValue: 0
+    SpeedRatioToBase:
+      RawValue: 0
+    PowerRatioToBase:
+      RawValue: 0
+    AttackRangeRatioToBase:
+      RawValue: 8228
+    PickupSpeedRatioToBase:
+      RawValue: 0
+    AmmoCapacityRatioToBase:
+      RawValue: 0
+    ShieldCapacityRatioToBase:
+      RawValue: 0
+  - Id: 45
+    Manufacturer: 6
+    HpRatioToBase:
+      RawValue: 0
+    ArmorRatioToBase:
+      RawValue: 0
+    SpeedRatioToBase:
+      RawValue: 4424
+    PowerRatioToBase:
+      RawValue: 0
+    AttackRangeRatioToBase:
+      RawValue: 0
+    PickupSpeedRatioToBase:
+      RawValue: 0
+    AmmoCapacityRatioToBase:
+      RawValue: 0
+    ShieldCapacityRatioToBase:
+      RawValue: 0
+  - Id: 34
+    Manufacturer: 7
+    HpRatioToBase:
+      RawValue: 0
+    ArmorRatioToBase:
+      RawValue: 0
+    SpeedRatioToBase:
+      RawValue: 0
+    PowerRatioToBase:
+      RawValue: 0
+    AttackRangeRatioToBase:
+      RawValue: 0
+    PickupSpeedRatioToBase:
+      RawValue: 5751
+    AmmoCapacityRatioToBase:
+      RawValue: 0
+    ShieldCapacityRatioToBase:
+      RawValue: 0
+  - Id: 35
+    Manufacturer: 7
+    HpRatioToBase:
+      RawValue: 0
+    ArmorRatioToBase:
+      RawValue: 0
+    SpeedRatioToBase:
+      RawValue: 0
+    PowerRatioToBase:
+      RawValue: 0
+    AttackRangeRatioToBase:
+      RawValue: 0
+    PickupSpeedRatioToBase:
+      RawValue: 5751
+    AmmoCapacityRatioToBase:
+      RawValue: 0
+    ShieldCapacityRatioToBase:
+      RawValue: 0
+  - Id: 27
+    Manufacturer: 3
+    HpRatioToBase:
+      RawValue: 0
+    ArmorRatioToBase:
+      RawValue: 0
+    SpeedRatioToBase:
+      RawValue: 0
+    PowerRatioToBase:
+      RawValue: 0
+    AttackRangeRatioToBase:
+      RawValue: 8228
+    PickupSpeedRatioToBase:
+      RawValue: 0
+    AmmoCapacityRatioToBase:
+      RawValue: 0
+    ShieldCapacityRatioToBase:
+      RawValue: 0
+  - Id: 52
+    Manufacturer: 4
+    HpRatioToBase:
+      RawValue: 0
+    ArmorRatioToBase:
+      RawValue: 0
+    SpeedRatioToBase:
+      RawValue: 0
+    PowerRatioToBase:
+      RawValue: 0
+    AttackRangeRatioToBase:
+      RawValue: 0
+    PickupSpeedRatioToBase:
+      RawValue: 5751
+    AmmoCapacityRatioToBase:
+      RawValue: 0
+    ShieldCapacityRatioToBase:
+      RawValue: 0
+  - Id: 53
+    Manufacturer: 0
+    HpRatioToBase:
+      RawValue: 0
+    ArmorRatioToBase:
+      RawValue: 0
+    SpeedRatioToBase:
+      RawValue: 0
+    PowerRatioToBase:
+      RawValue: 0
+    AttackRangeRatioToBase:
+      RawValue: 8228
+    PickupSpeedRatioToBase:
+      RawValue: 0
+    AmmoCapacityRatioToBase:
+      RawValue: 0
+    ShieldCapacityRatioToBase:
+      RawValue: 0
+  - Id: 54
+    Manufacturer: 6
+    HpRatioToBase:
+      RawValue: 0
+    ArmorRatioToBase:
+      RawValue: 0
+    SpeedRatioToBase:
+      RawValue: 4424
+    PowerRatioToBase:
+      RawValue: 0
+    AttackRangeRatioToBase:
+      RawValue: 0
+    PickupSpeedRatioToBase:
+      RawValue: 0
+    AmmoCapacityRatioToBase:
+      RawValue: 0
+    ShieldCapacityRatioToBase:
+      RawValue: 0
+  - Id: 36
+    Manufacturer: 5
+    HpRatioToBase:
+      RawValue: 0
+    ArmorRatioToBase:
+      RawValue: 0
+    SpeedRatioToBase:
+      RawValue: 4424
+    PowerRatioToBase:
+      RawValue: 0
+    AttackRangeRatioToBase:
+      RawValue: 0
+    PickupSpeedRatioToBase:
+      RawValue: 0
+    AmmoCapacityRatioToBase:
+      RawValue: 0
+    ShieldCapacityRatioToBase:
+      RawValue: 0
+  - Id: 50
+    Manufacturer: 3
+    HpRatioToBase:
+      RawValue: 0
+    ArmorRatioToBase:
+      RawValue: 0
+    SpeedRatioToBase:
+      RawValue: 0
+    PowerRatioToBase:
+      RawValue: 0
+    AttackRangeRatioToBase:
+      RawValue: 8228
+    PickupSpeedRatioToBase:
+      RawValue: 0
+    AmmoCapacityRatioToBase:
+      RawValue: 0
+    ShieldCapacityRatioToBase:
+      RawValue: 0
+  - Id: 23
+    Manufacturer: 5
+    HpRatioToBase:
+      RawValue: 0
+    ArmorRatioToBase:
+      RawValue: 0
+    SpeedRatioToBase:
+      RawValue: 4424
+    PowerRatioToBase:
+      RawValue: 0
+    AttackRangeRatioToBase:
+      RawValue: 0
+    PickupSpeedRatioToBase:
+      RawValue: 0
+    AmmoCapacityRatioToBase:
+      RawValue: 0
+    ShieldCapacityRatioToBase:
+      RawValue: 0
+  - Id: 32
+    Manufacturer: 7
+    HpRatioToBase:
+      RawValue: 0
+    ArmorRatioToBase:
+      RawValue: 0
+    SpeedRatioToBase:
+      RawValue: 4424
+    PowerRatioToBase:
+      RawValue: 0
+    AttackRangeRatioToBase:
+      RawValue: 0
+    PickupSpeedRatioToBase:
+      RawValue: 0
+    AmmoCapacityRatioToBase:
+      RawValue: 0
+    ShieldCapacityRatioToBase:
+      RawValue: 0
+  - Id: 33
+    Manufacturer: 7
+    HpRatioToBase:
+      RawValue: 0
+    ArmorRatioToBase:
+      RawValue: 0
+    SpeedRatioToBase:
+      RawValue: 0
+    PowerRatioToBase:
+      RawValue: 0
+    AttackRangeRatioToBase:
+      RawValue: 0
+    PickupSpeedRatioToBase:
+      RawValue: 5751
+    AmmoCapacityRatioToBase:
+      RawValue: 0
+    ShieldCapacityRatioToBase:
+      RawValue: 0
+  - Id: 24
+    Manufacturer: 4
+    HpRatioToBase:
+      RawValue: 0
+    ArmorRatioToBase:
+      RawValue: 0
+    SpeedRatioToBase:
+      RawValue: 0
+    PowerRatioToBase:
+      RawValue: 0
+    AttackRangeRatioToBase:
+      RawValue: 0
+    PickupSpeedRatioToBase:
+      RawValue: 5751
+    AmmoCapacityRatioToBase:
+      RawValue: 0
+    ShieldCapacityRatioToBase:
+      RawValue: 0
+  - Id: 49
+    Manufacturer: 0
+    HpRatioToBase:
+      RawValue: 0
+    ArmorRatioToBase:
+      RawValue: 0
+    SpeedRatioToBase:
+      RawValue: 0
+    PowerRatioToBase:
+      RawValue: 0
+    AttackRangeRatioToBase:
+      RawValue: 8228
+    PickupSpeedRatioToBase:
+      RawValue: 0
+    AmmoCapacityRatioToBase:
+      RawValue: 0
+    ShieldCapacityRatioToBase:
+      RawValue: 0
+  - Id: 51
+    Manufacturer: 6
+    HpRatioToBase:
+      RawValue: 0
+    ArmorRatioToBase:
+      RawValue: 0
+    SpeedRatioToBase:
+      RawValue: 4424
+    PowerRatioToBase:
+      RawValue: 0
+    AttackRangeRatioToBase:
+      RawValue: 0
+    PickupSpeedRatioToBase:
+      RawValue: 0
+    AmmoCapacityRatioToBase:
+      RawValue: 0
+    ShieldCapacityRatioToBase:
+      RawValue: 0
+  - Id: 30
+    Manufacturer: 7
+    HpRatioToBase:
+      RawValue: 0
+    ArmorRatioToBase:
+      RawValue: 0
+    SpeedRatioToBase:
+      RawValue: 0
+    PowerRatioToBase:
+      RawValue: 0
+    AttackRangeRatioToBase:
+      RawValue: 0
+    PickupSpeedRatioToBase:
+      RawValue: 5751
+    AmmoCapacityRatioToBase:
+      RawValue: 0
+    ShieldCapacityRatioToBase:
+      RawValue: 0
+  - Id: 31
+    Manufacturer: 0
+    HpRatioToBase:
+      RawValue: 0
+    ArmorRatioToBase:
+      RawValue: 0
+    SpeedRatioToBase:
+      RawValue: 0
+    PowerRatioToBase:
+      RawValue: 131072
+    AttackRangeRatioToBase:
+      RawValue: 0
+    PickupSpeedRatioToBase:
+      RawValue: 0
+    AmmoCapacityRatioToBase:
+      RawValue: 0
+    ShieldCapacityRatioToBase:
+      RawValue: 0
+  - Id: 60
+    Manufacturer: 2
+    HpRatioToBase:
+      RawValue: 0
+    ArmorRatioToBase:
+      RawValue: 0
+    SpeedRatioToBase:
+      RawValue: 0
+    PowerRatioToBase:
+      RawValue: 131072
+    AttackRangeRatioToBase:
+      RawValue: 0
+    PickupSpeedRatioToBase:
+      RawValue: 0
+    AmmoCapacityRatioToBase:
+      RawValue: 0
+    ShieldCapacityRatioToBase:
+      RawValue: 0
+  - Id: 71
+    Manufacturer: 2
+    HpRatioToBase:
+      RawValue: 0
+    ArmorRatioToBase:
+      RawValue: 0
+    SpeedRatioToBase:
+      RawValue: 0
+    PowerRatioToBase:
+      RawValue: 131072
+    AttackRangeRatioToBase:
+      RawValue: 0
+    PickupSpeedRatioToBase:
+      RawValue: 0
+    AmmoCapacityRatioToBase:
+      RawValue: 0
+    ShieldCapacityRatioToBase:
+      RawValue: 0
+  - Id: 78
+    Manufacturer: 2
+    HpRatioToBase:
+      RawValue: 0
+    ArmorRatioToBase:
+      RawValue: 0
+    SpeedRatioToBase:
+      RawValue: 0
+    PowerRatioToBase:
+      RawValue: 131072
+    AttackRangeRatioToBase:
+      RawValue: 0
+    PickupSpeedRatioToBase:
+      RawValue: 0
+    AmmoCapacityRatioToBase:
+      RawValue: 0
+    ShieldCapacityRatioToBase:
+      RawValue: 0
+  - Id: 79
+    Manufacturer: 2
+    HpRatioToBase:
+      RawValue: 0
+    ArmorRatioToBase:
+      RawValue: 0
+    SpeedRatioToBase:
+      RawValue: 0
+    PowerRatioToBase:
+      RawValue: 131072
+    AttackRangeRatioToBase:
+      RawValue: 0
+    PickupSpeedRatioToBase:
+      RawValue: 0
+    AmmoCapacityRatioToBase:
+      RawValue: 0
+    ShieldCapacityRatioToBase:
+      RawValue: 0
+  - Id: 84
+    Manufacturer: 2
+    HpRatioToBase:
+      RawValue: 0
+    ArmorRatioToBase:
+      RawValue: 0
+    SpeedRatioToBase:
+      RawValue: 0
+    PowerRatioToBase:
+      RawValue: 131072
+    AttackRangeRatioToBase:
+      RawValue: 0
+    PickupSpeedRatioToBase:
+      RawValue: 0
+    AmmoCapacityRatioToBase:
+      RawValue: 0
+    ShieldCapacityRatioToBase:
+      RawValue: 0
+  - Id: 86
+    Manufacturer: 2
+    HpRatioToBase:
+      RawValue: 0
+    ArmorRatioToBase:
+      RawValue: 0
+    SpeedRatioToBase:
+      RawValue: 0
+    PowerRatioToBase:
+      RawValue: 131072
+    AttackRangeRatioToBase:
+      RawValue: 0
+    PickupSpeedRatioToBase:
+      RawValue: 0
+    AmmoCapacityRatioToBase:
+      RawValue: 0
+    ShieldCapacityRatioToBase:
+      RawValue: 0
+  - Id: 87
+    Manufacturer: 2
+    HpRatioToBase:
+      RawValue: 0
+    ArmorRatioToBase:
+      RawValue: 0
+    SpeedRatioToBase:
+      RawValue: 0
+    PowerRatioToBase:
+      RawValue: 131072
+    AttackRangeRatioToBase:
+      RawValue: 0
+    PickupSpeedRatioToBase:
+      RawValue: 0
+    AmmoCapacityRatioToBase:
+      RawValue: 0
+    ShieldCapacityRatioToBase:
+      RawValue: 0
+  - Id: 88
+    Manufacturer: 0
+    HpRatioToBase:
+      RawValue: 0
+    ArmorRatioToBase:
+      RawValue: 0
+    SpeedRatioToBase:
+      RawValue: 0
+    PowerRatioToBase:
+      RawValue: 131072
+    AttackRangeRatioToBase:
+      RawValue: 0
+    PickupSpeedRatioToBase:
+      RawValue: 0
+    AmmoCapacityRatioToBase:
+      RawValue: 0
+    ShieldCapacityRatioToBase:
+      RawValue: 0
+  - Id: 90
+    Manufacturer: 0
+    HpRatioToBase:
+      RawValue: 0
+    ArmorRatioToBase:
+      RawValue: 0
+    SpeedRatioToBase:
+      RawValue: 0
+    PowerRatioToBase:
+      RawValue: 131072
+    AttackRangeRatioToBase:
+      RawValue: 0
+    PickupSpeedRatioToBase:
+      RawValue: 0
+    AmmoCapacityRatioToBase:
+      RawValue: 0
+    ShieldCapacityRatioToBase:
+      RawValue: 0
+  - Id: 91
+    Manufacturer: 0
+    HpRatioToBase:
+      RawValue: 0
+    ArmorRatioToBase:
+      RawValue: 0
+    SpeedRatioToBase:
+      RawValue: 0
+    PowerRatioToBase:
+      RawValue: 131072
+    AttackRangeRatioToBase:
+      RawValue: 0
+    PickupSpeedRatioToBase:
+      RawValue: 0
+    AmmoCapacityRatioToBase:
+      RawValue: 0
+    ShieldCapacityRatioToBase:
+      RawValue: 0
+  - Id: 92
+    Manufacturer: 0
+    HpRatioToBase:
+      RawValue: 0
+    ArmorRatioToBase:
+      RawValue: 0
+    SpeedRatioToBase:
+      RawValue: 0
+    PowerRatioToBase:
+      RawValue: 131072
+    AttackRangeRatioToBase:
+      RawValue: 0
+    PickupSpeedRatioToBase:
+      RawValue: 0
+    AmmoCapacityRatioToBase:
+      RawValue: 0
+    ShieldCapacityRatioToBase:
+      RawValue: 0
+  - Id: 93
+    Manufacturer: 0
+    HpRatioToBase:
+      RawValue: 0
+    ArmorRatioToBase:
+      RawValue: 0
+    SpeedRatioToBase:
+      RawValue: 0
+    PowerRatioToBase:
+      RawValue: 131072
+    AttackRangeRatioToBase:
+      RawValue: 0
+    PickupSpeedRatioToBase:
+      RawValue: 0
+    AmmoCapacityRatioToBase:
+      RawValue: 0
+    ShieldCapacityRatioToBase:
+      RawValue: 0
+  - Id: 94
+    Manufacturer: 0
+    HpRatioToBase:
+      RawValue: 0
+    ArmorRatioToBase:
+      RawValue: 0
+    SpeedRatioToBase:
+      RawValue: 0
+    PowerRatioToBase:
+      RawValue: 131072
+    AttackRangeRatioToBase:
+      RawValue: 0
+    PickupSpeedRatioToBase:
+      RawValue: 0
+    AmmoCapacityRatioToBase:
+      RawValue: 0
+    ShieldCapacityRatioToBase:
+      RawValue: 0
+  - Id: 95
+    Manufacturer: 0
+    HpRatioToBase:
+      RawValue: 0
+    ArmorRatioToBase:
+      RawValue: 0
+    SpeedRatioToBase:
+      RawValue: 0
+    PowerRatioToBase:
+      RawValue: 131072
+    AttackRangeRatioToBase:
+      RawValue: 0
+    PickupSpeedRatioToBase:
+      RawValue: 0
+    AmmoCapacityRatioToBase:
+      RawValue: 0
+    ShieldCapacityRatioToBase:
+      RawValue: 0
+  - Id: 96
+    Manufacturer: 1
+    HpRatioToBase:
+      RawValue: 0
+    ArmorRatioToBase:
+      RawValue: 0
+    SpeedRatioToBase:
+      RawValue: 0
+    PowerRatioToBase:
+      RawValue: 131072
+    AttackRangeRatioToBase:
+      RawValue: 0
+    PickupSpeedRatioToBase:
+      RawValue: 0
+    AmmoCapacityRatioToBase:
+      RawValue: 0
+    ShieldCapacityRatioToBase:
+      RawValue: 0
+  - Id: 97
+    Manufacturer: 1
+    HpRatioToBase:
+      RawValue: 0
+    ArmorRatioToBase:
+      RawValue: 0
+    SpeedRatioToBase:
+      RawValue: 0
+    PowerRatioToBase:
+      RawValue: 131072
+    AttackRangeRatioToBase:
+      RawValue: 0
+    PickupSpeedRatioToBase:
+      RawValue: 0
+    AmmoCapacityRatioToBase:
+      RawValue: 0
+    ShieldCapacityRatioToBase:
+      RawValue: 0
+  - Id: 98
+    Manufacturer: 1
+    HpRatioToBase:
+      RawValue: 0
+    ArmorRatioToBase:
+      RawValue: 0
+    SpeedRatioToBase:
+      RawValue: 0
+    PowerRatioToBase:
+      RawValue: 131072
+    AttackRangeRatioToBase:
+      RawValue: 0
+    PickupSpeedRatioToBase:
+      RawValue: 0
+    AmmoCapacityRatioToBase:
+      RawValue: 0
+    ShieldCapacityRatioToBase:
+      RawValue: 0
+  - Id: 99
+    Manufacturer: 1
+    HpRatioToBase:
+      RawValue: 0
+    ArmorRatioToBase:
+      RawValue: 0
+    SpeedRatioToBase:
+      RawValue: 0
+    PowerRatioToBase:
+      RawValue: 131072
+    AttackRangeRatioToBase:
+      RawValue: 0
+    PickupSpeedRatioToBase:
+      RawValue: 0
+    AmmoCapacityRatioToBase:
+      RawValue: 0
+    ShieldCapacityRatioToBase:
+      RawValue: 0
+  - Id: 100
+    Manufacturer: 1
+    HpRatioToBase:
+      RawValue: 0
+    ArmorRatioToBase:
+      RawValue: 0
+    SpeedRatioToBase:
+      RawValue: 0
+    PowerRatioToBase:
+      RawValue: 131072
+    AttackRangeRatioToBase:
+      RawValue: 0
+    PickupSpeedRatioToBase:
+      RawValue: 0
+    AmmoCapacityRatioToBase:
+      RawValue: 0
+    ShieldCapacityRatioToBase:
+      RawValue: 0
+  - Id: 101
+    Manufacturer: 1
+    HpRatioToBase:
+      RawValue: 0
+    ArmorRatioToBase:
+      RawValue: 0
+    SpeedRatioToBase:
+      RawValue: 0
+    PowerRatioToBase:
+      RawValue: 131072
+    AttackRangeRatioToBase:
+      RawValue: 0
+    PickupSpeedRatioToBase:
+      RawValue: 0
+    AmmoCapacityRatioToBase:
+      RawValue: 0
+    ShieldCapacityRatioToBase:
+      RawValue: 0
+  - Id: 103
+    Manufacturer: 1
+    HpRatioToBase:
+      RawValue: 0
+    ArmorRatioToBase:
+      RawValue: 0
+    SpeedRatioToBase:
+      RawValue: 0
+    PowerRatioToBase:
+      RawValue: 131072
+    AttackRangeRatioToBase:
+      RawValue: 0
+    PickupSpeedRatioToBase:
+      RawValue: 0
+    AmmoCapacityRatioToBase:
+      RawValue: 0
+    ShieldCapacityRatioToBase:
+      RawValue: 0
+  - Id: 269
+    Manufacturer: 0
+    HpRatioToBase:
+      RawValue: 0
+    ArmorRatioToBase:
+      RawValue: 0
+    SpeedRatioToBase:
+      RawValue: 0
+    PowerRatioToBase:
+      RawValue: 131072
+    AttackRangeRatioToBase:
+      RawValue: 0
+    PickupSpeedRatioToBase:
+      RawValue: 0
+    AmmoCapacityRatioToBase:
+      RawValue: 0
+    ShieldCapacityRatioToBase:
+      RawValue: 0
+  - Id: 270
+    Manufacturer: 0
+    HpRatioToBase:
+      RawValue: 0
+    ArmorRatioToBase:
+      RawValue: 0
+    SpeedRatioToBase:
+      RawValue: 0
+    PowerRatioToBase:
+      RawValue: 131072
+    AttackRangeRatioToBase:
+      RawValue: 0
+    PickupSpeedRatioToBase:
+      RawValue: 0
+    AmmoCapacityRatioToBase:
+      RawValue: 0
+    ShieldCapacityRatioToBase:
+      RawValue: 0
+  - Id: 292
+    Manufacturer: 0
+    HpRatioToBase:
+      RawValue: 0
+    ArmorRatioToBase:
+      RawValue: 0
+    SpeedRatioToBase:
+      RawValue: 0
+    PowerRatioToBase:
+      RawValue: 131072
+    AttackRangeRatioToBase:
+      RawValue: 0
+    PickupSpeedRatioToBase:
+      RawValue: 0
+    AmmoCapacityRatioToBase:
+      RawValue: 0
+    ShieldCapacityRatioToBase:
+      RawValue: 0
+  - Id: 342
+    Manufacturer: 0
+    HpRatioToBase:
+      RawValue: 0
+    ArmorRatioToBase:
+      RawValue: 0
+    SpeedRatioToBase:
+      RawValue: 0
+    PowerRatioToBase:
+      RawValue: 131072
+    AttackRangeRatioToBase:
+      RawValue: 0
+    PickupSpeedRatioToBase:
+      RawValue: 0
+    AmmoCapacityRatioToBase:
+      RawValue: 0
+    ShieldCapacityRatioToBase:
+      RawValue: 0

@@ -13,8 +13,6 @@ MonoBehaviour:
   m_Name: Match_Assets
   m_EditorClassIdentifier: 
   m_GroupName: Match_Assets
-  m_Data:
-    m_SerializedData: []
   m_GUID: 999777a24f8cfb14fac815876431de4a
   m_SerializeEntries:
   - m_GUID: 11d57e767718d493580978f3366fb7b5

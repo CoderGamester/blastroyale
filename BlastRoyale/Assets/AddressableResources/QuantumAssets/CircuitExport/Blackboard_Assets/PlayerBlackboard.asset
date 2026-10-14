@@ -9,81 +9,83 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4180ae84daba4918bb9d2b80549bc7d0, type: 3}
+  m_Script: {fileID: -1141069558, guid: 19b3f061e0d562b4a97261f0aa32250f, type: 3}
   m_Name: PlayerBlackboard
-  m_EditorClassIdentifier: 
-  Settings:
-    Identifier:
-      Path: AddressableResources/QuantumAssets/CircuitExport/Blackboard_Assets/PlayerBlackboard
-      Guid:
-        Value: 2204164627415752385
-    Entries:
-    - Type: 2
-      Key:
-        Key: MagazineSize
-    - Type: 0
-      Key:
-        Key: IsShooting
-    - Type: 0
-      Key:
-        Key: IsKnockedOut
-    - Type: 3
-      Key:
-        Key: TapCooldown
-    - Type: 2
-      Key:
-        Key: AimAngle
-    - Type: 3
-      Key:
-        Key: BurstShotCount
-    - Type: 3
-      Key:
-        Key: MoveSpeed
-    - Type: 3
-      Key:
-        Key: AimingMovementSpeed
-    - Type: 3
-      Key:
-        Key: RampUpTimeStart
-    - Type: 3
-      Key:
-        Key: StunDuration
-    - Type: 0
-      Key:
-        Key: IsSkydiving
-    - Type: 4
-      Key:
-        Key: AimDirection
-    - Type: 3
-      Key:
-        Key: BurstTimeDelay
-    - Type: 3
-      Key:
-        Key: NextShotTime
-    - Type: 3
-      Key:
-        Key: LastShotAt
-    - Type: 3
-      Key:
-        Key: InitialAttackCooldown
-    - Type: 3
-      Key:
-        Key: ReloadTime
-    - Type: 3
-      Key:
-        Key: NumberOfBursts
-    - Type: 0
-      Key:
-        Key: HasMeleeWeapon
-    - Type: 0
-      Key:
-        Key: IsAimPressed
-    - Type: 3
-      Key:
-        Key: NextTapTime
-    - Type: 4
-      Key:
-        Key: MoveDirection
-    - Type: 3
-      Key:
-        Key: AttackCooldown
+  m_EditorClassIdentifier:
+  Identifier:
+    Path: AddressableResources/QuantumAssets/CircuitExport/Blackboard_Assets/PlayerBlackboard
+    Guid:
+      Value: 2204164627415752385
+  Entries:
+  - Type: 2
+    Key:
+      Key: MagazineSize
+  - Type: 0
+    Key:
+      Key: IsShooting
+  - Type: 0
+    Key:
+      Key: IsKnockedOut
+  - Type: 3
+    Key:
+      Key: TapCooldown
+  - Type: 2
+    Key:
+      Key: AimAngle
+  - Type: 3
+    Key:
+      Key: BurstShotCount
+  - Type: 3
+    Key:
+      Key: MoveSpeed
+  - Type: 3
+    Key:
+      Key: AimingMovementSpeed
+  - Type: 3
+    Key:
+      Key: RampUpTimeStart
+  - Type: 3
+    Key:
+      Key: StunDuration
+  - Type: 0
+    Key:
+      Key: IsSkydiving
+  - Type: 4
+    Key:
+      Key: AimDirection
+  - Type: 3
+    Key:
+      Key: BurstTimeDelay
+  - Type: 3
+    Key:
+      Key: NextShotTime
+  - Type: 3
+    Key:
+      Key: LastShotAt
+  - Type: 3
+    Key:
+      Key: InitialAttackCooldown
+  - Type: 3
+    Key:
+      Key: ReloadTime
+  - Type: 3
+    Key:
+      Key: NumberOfBursts
+  - Type: 0
+    Key:
+      Key: HasMeleeWeapon
+  - Type: 0
+    Key:
+      Key: IsAimPressed
+  - Type: 3
+    Key:
+      Key: NextTapTime
+  - Type: 4
+    Key:
+      Key: MoveDirection
+  - Type: 3
+    Key:
+      Key: AttackCooldown
+  InitializerRef:
+    Id:
+      Value: 0

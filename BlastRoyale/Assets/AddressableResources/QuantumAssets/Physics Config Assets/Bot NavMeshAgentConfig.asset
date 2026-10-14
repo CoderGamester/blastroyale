@@ -9,61 +9,59 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4f1d036770c1ce443b17299047b9d147, type: 3}
+  m_Script: {fileID: 321274561, guid: b156eeaae3f741b40af66649a4748430, type: 3}
   m_Name: Bot NavMeshAgentConfig
-  m_EditorClassIdentifier: 
-  Settings:
-    Identifier:
-      Path: AddressableResources/QuantumAssets/Physics Config Assets/Bot NavMeshAgentConfig
-      Guid:
-        Value: 1093005050644660195
-    UpdateInterval: 20
-    PathQuality: 0
-    CachedWaypointCount: 16
-    MaxRepathTimeout:
-      RawValue: 163840
-    LineOfSightFunneling: 0
-    DynamicLineOfSight: 0
-    DynamicLineOfSightWaypointRange:
-      RawValue: 0
-    AutomaticTargetCorrection: 1
-    AutomaticTargetCorrectionRadius:
-      RawValue: 2621440
-    EnableWaypointDetectionAxis: 1
-    WaypointDetectionAxisExtend:
-      RawValue: 13107
-    WaypointDetectionAxisOffset:
-      RawValue: 6553
-    DefaultWaypointDetectionDistance:
-      RawValue: 131072
-    MovementType: 1
-    VerticalPositioning: 1
-    Speed:
-      RawValue: 183500
-    AngularSpeed:
-      RawValue: 0
-    Acceleration:
-      RawValue: 6553600
-    StoppingDistance:
-      RawValue: 655
-    AutoBraking: 0
-    AutoBrakingDistance:
-      RawValue: 13107
-    ClampAgentToNavmesh: 1
-    ClampAgentToNavmeshCorrection:
-      RawValue: 32768
-    AvoidanceType: 2
-    AvoidanceQuality: 1
-    Priority: 50
-    AvoidanceRadius:
-      RawValue: 52428
-    AvoidanceLayer: 0
-    AvoidanceMask:
-      BitMask: 64
-    MaxAvoidanceCandidates: 4
-    ReduceAvoidanceAtWaypoints: 0
-    ReduceAvoidanceFactor:
-      RawValue: 262144
-    AvoidanceCanReduceSpeed: 0
-    ShowDebugSteering: 0
-    ShowDebugAvoidance: 0
+  m_EditorClassIdentifier:
+  Identifier:
+    Path: AddressableResources/QuantumAssets/Physics Config Assets/Bot NavMeshAgentConfig
+    Guid:
+      Value: 1093005050644660195
+  UpdateInterval: 20
+  PathQuality: 0
+  CachedWaypointCount: 16
+  MaxRepathTimeout:
+    RawValue: 163840
+  LineOfSightFunneling: 0
+  DynamicLineOfSight: 0
+  DynamicLineOfSightWaypointRange:
+    RawValue: 0
+  AutomaticTargetCorrection: 1
+  AutomaticTargetCorrectionRadius:
+    RawValue: 2621440
+  EnableWaypointDetectionAxis: 1
+  WaypointDetectionAxisExtend:
+    RawValue: 13107
+  WaypointDetectionAxisOffset:
+    RawValue: 6553
+  DefaultWaypointDetectionDistance:
+    RawValue: 131072
+  MovementType: 1
+  VerticalPositioning: 1
+  Speed:
+    RawValue: 183500
+  AngularSpeed:
+    RawValue: 0
+  Acceleration:
+    RawValue: 6553600
+  StoppingDistance:
+    RawValue: 655
+  AutoBraking: 0
+  AutoBrakingDistance:
+    RawValue: 13107
+  ClampAgentToNavmesh: 1
+  ClampAgentToNavmeshCorrection:
+    RawValue: 32768
+  AvoidanceType: 2
+  AvoidanceQuality: 1
+  Priority: 50
+  AvoidanceRadius:
+    RawValue: 52428
+  AvoidanceLayer: 0
+  AvoidanceMask:
+    BitMask: 64
+  MaxAvoidanceCandidates: 4
+  ReduceAvoidanceAtWaypoints: 0
+  ReduceAvoidanceFactor:
+    RawValue: 262144
+  AvoidanceCanReduceSpeed: 0
+  ShowDebugAvoidance: 0

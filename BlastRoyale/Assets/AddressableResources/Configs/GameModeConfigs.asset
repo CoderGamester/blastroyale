@@ -11,118 +11,117 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 27719413a98b49a8bb127e18f4e1f671, type: 3}
   m_Name: GameModeConfigs
-  m_EditorClassIdentifier: 
-  Settings:
-    Identifier:
-      Path: AddressableResources/Configs/GameModeConfigs
-      Guid:
-        Value: 1595361790544170013
-    QuantumConfigs:
-    - Id: BattleRoyale
-      MaxAllowedPlayersPerTeam: 0
-      AllowedMaps: 6c000000710000007200000073000000c5000000c6000000c8000000
-      ShowUIMinimap: 1
-      ShowUITimer: 1
-      ShowUIStandingsExtraInfo: 1
-      ShowWeaponSlots: 1
-      SingleSlotMode: 1
-      DescriptionLocalisationKey: MainMenu/BattleRoyaleDescription
-      DropWeaponOnPickup: 1
-      AirdropNearPlayer: 0
-      ShrinkingCircleCenteredOnPlayer: 0
-      SkydiveSpawn: 1
-      SpawnSelection: 1
-      DeathDropStrategy: 4
-      DeathMarker: 1
-      MinimumHealth: 0
-      InstantLoad: 0
-      AllowBots: 1
-      UseBotsFromGamemode: 
-      BotsTeamOverride: 0
-      CompletionStrategy: 1
-      CompletionKillCount: 0
-      AllowEarlyRewards: 1
-      IsDebugOnly: 0
-      Systems:
-      - Quantum.Systems.ShrinkingCircleSystem, quantum.code, Version=2.1.0.0, Culture=neutral,
-        PublicKeyToken=null
-    - Id: Testing
-      MaxAllowedPlayersPerTeam: 0
-      AllowedMaps: 0b00000005000000f1030000
-      ShowUIMinimap: 0
-      ShowUITimer: 1
-      ShowUIStandingsExtraInfo: 1
-      ShowWeaponSlots: 1
-      SingleSlotMode: 1
-      DescriptionLocalisationKey: 
-      DropWeaponOnPickup: 1
-      AirdropNearPlayer: 0
-      ShrinkingCircleCenteredOnPlayer: 0
-      SkydiveSpawn: 0
-      SpawnSelection: 0
-      DeathDropStrategy: 0
-      DeathMarker: 0
-      MinimumHealth: 0
-      InstantLoad: 1
-      AllowBots: 1
-      UseBotsFromGamemode: 
-      BotsTeamOverride: 666
-      CompletionStrategy: 0
-      CompletionKillCount: 0
-      AllowEarlyRewards: 1
-      IsDebugOnly: 1
-      Systems: []
-    - Id: Tutorial
-      MaxAllowedPlayersPerTeam: 0
-      AllowedMaps: 05000000
-      ShowUIMinimap: 0
-      ShowUITimer: 0
-      ShowUIStandingsExtraInfo: 0
-      ShowWeaponSlots: 1
-      SingleSlotMode: 1
-      DescriptionLocalisationKey: 
-      DropWeaponOnPickup: 0
-      AirdropNearPlayer: 0
-      ShrinkingCircleCenteredOnPlayer: 0
-      SkydiveSpawn: 0
-      SpawnSelection: 0
-      DeathDropStrategy: 5
-      DeathMarker: 0
-      MinimumHealth: 15
-      InstantLoad: 1
-      AllowBots: 1
-      UseBotsFromGamemode: 
-      BotsTeamOverride: 100
-      CompletionStrategy: 1
-      CompletionKillCount: 0
-      AllowEarlyRewards: 0
-      IsDebugOnly: 1
-      Systems: []
-    - Id: BattleRoyale First Game
-      MaxAllowedPlayersPerTeam: 0
-      AllowedMaps: 73000000
-      ShowUIMinimap: 1
-      ShowUITimer: 1
-      ShowUIStandingsExtraInfo: 1
-      ShowWeaponSlots: 1
-      SingleSlotMode: 1
-      DescriptionLocalisationKey: MainMenu/BattleRoyaleDescription
-      DropWeaponOnPickup: 1
-      AirdropNearPlayer: 0
-      ShrinkingCircleCenteredOnPlayer: 0
-      SkydiveSpawn: 1
-      SpawnSelection: 1
-      DeathDropStrategy: 4
-      DeathMarker: 1
-      MinimumHealth: 0
-      InstantLoad: 0
-      AllowBots: 1
-      UseBotsFromGamemode: 
-      BotsTeamOverride: 0
-      CompletionStrategy: 1
-      CompletionKillCount: 0
-      AllowEarlyRewards: 1
-      IsDebugOnly: 1
-      Systems:
-      - Quantum.Systems.ShrinkingCircleSystem, quantum.code, Version=2.1.0.0, Culture=neutral,
-        PublicKeyToken=null
+  m_EditorClassIdentifier:
+  Identifier:
+    Path: AddressableResources/Configs/GameModeConfigs
+    Guid:
+      Value: 1595361790544170013
+  QuantumConfigs:
+  - Id: BattleRoyale
+    MaxAllowedPlayersPerTeam: 0
+    AllowedMaps: 6c000000710000007200000073000000c5000000c6000000c8000000
+    ShowUIMinimap: 1
+    ShowUITimer: 1
+    ShowUIStandingsExtraInfo: 1
+    ShowWeaponSlots: 1
+    SingleSlotMode: 1
+    DescriptionLocalisationKey: MainMenu/BattleRoyaleDescription
+    DropWeaponOnPickup: 1
+    AirdropNearPlayer: 0
+    ShrinkingCircleCenteredOnPlayer: 0
+    SkydiveSpawn: 1
+    SpawnSelection: 1
+    DeathDropStrategy: 4
+    DeathMarker: 1
+    MinimumHealth: 0
+    InstantLoad: 0
+    AllowBots: 1
+    UseBotsFromGamemode:
+    BotsTeamOverride: 0
+    CompletionStrategy: 1
+    CompletionKillCount: 0
+    AllowEarlyRewards: 1
+    IsDebugOnly: 0
+    Systems:
+    - Quantum.Systems.ShrinkingCircleSystem, Quantum.Simulation, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - Id: Testing
+    MaxAllowedPlayersPerTeam: 0
+    AllowedMaps: 0b00000005000000f1030000
+    ShowUIMinimap: 0
+    ShowUITimer: 1
+    ShowUIStandingsExtraInfo: 1
+    ShowWeaponSlots: 1
+    SingleSlotMode: 1
+    DescriptionLocalisationKey:
+    DropWeaponOnPickup: 1
+    AirdropNearPlayer: 0
+    ShrinkingCircleCenteredOnPlayer: 0
+    SkydiveSpawn: 0
+    SpawnSelection: 0
+    DeathDropStrategy: 0
+    DeathMarker: 0
+    MinimumHealth: 0
+    InstantLoad: 1
+    AllowBots: 1
+    UseBotsFromGamemode:
+    BotsTeamOverride: 666
+    CompletionStrategy: 0
+    CompletionKillCount: 0
+    AllowEarlyRewards: 1
+    IsDebugOnly: 1
+    Systems: []
+  - Id: Tutorial
+    MaxAllowedPlayersPerTeam: 0
+    AllowedMaps: 05000000
+    ShowUIMinimap: 0
+    ShowUITimer: 0
+    ShowUIStandingsExtraInfo: 0
+    ShowWeaponSlots: 1
+    SingleSlotMode: 1
+    DescriptionLocalisationKey:
+    DropWeaponOnPickup: 0
+    AirdropNearPlayer: 0
+    ShrinkingCircleCenteredOnPlayer: 0
+    SkydiveSpawn: 0
+    SpawnSelection: 0
+    DeathDropStrategy: 5
+    DeathMarker: 0
+    MinimumHealth: 15
+    InstantLoad: 1
+    AllowBots: 1
+    UseBotsFromGamemode:
+    BotsTeamOverride: 100
+    CompletionStrategy: 1
+    CompletionKillCount: 0
+    AllowEarlyRewards: 0
+    IsDebugOnly: 1
+    Systems: []
+  - Id: BattleRoyale First Game
+    MaxAllowedPlayersPerTeam: 0
+    AllowedMaps: 73000000
+    ShowUIMinimap: 1
+    ShowUITimer: 1
+    ShowUIStandingsExtraInfo: 1
+    ShowWeaponSlots: 1
+    SingleSlotMode: 1
+    DescriptionLocalisationKey: MainMenu/BattleRoyaleDescription
+    DropWeaponOnPickup: 1
+    AirdropNearPlayer: 0
+    ShrinkingCircleCenteredOnPlayer: 0
+    SkydiveSpawn: 1
+    SpawnSelection: 1
+    DeathDropStrategy: 4
+    DeathMarker: 1
+    MinimumHealth: 0
+    InstantLoad: 0
+    AllowBots: 1
+    UseBotsFromGamemode:
+    BotsTeamOverride: 0
+    CompletionStrategy: 1
+    CompletionKillCount: 0
+    AllowEarlyRewards: 1
+    IsDebugOnly: 1
+    Systems:
+    - Quantum.Systems.ShrinkingCircleSystem, Quantum.Simulation, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null

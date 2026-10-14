@@ -148,8 +148,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   m_Material: {fileID: 0}
   m_Color: {r: 0.33333334, g: 0.9647059, b: 0.33333334, a: 1}
   m_RaycastTarget: 0
@@ -287,8 +287,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   m_Material: {fileID: 0}
   m_Color: {r: 0.6301887, g: 0.6301887, b: 0.6301887, a: 0.47843137}
   m_RaycastTarget: 0
@@ -475,8 +475,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 836dcb7e0f6259748b850a10912ce727, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   TransformMode: 0
   Transform2DVertical:
     IsEnabled: 0
@@ -641,7 +641,7 @@ MonoBehaviour:
         Asset:
           Id:
             Value: 0
-        Name: 
+        Name:
   NavMeshSteeringAgent:
     IsEnabled: 0
     MaxSpeed:
@@ -667,8 +667,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a5ea18823f2b46b78c03098b90bea8e6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   Prototype:
     HfsmRootRef:
       Id:
@@ -761,8 +761,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d33c813011c8e46458a3517eebf8ce99, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   Prototype:
     Specials:
     - SpecialId:
@@ -819,8 +819,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d9ae53b228d18c443a77ed7e71b345c0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   Prototype:
     TimesKnockedOut: 0
     RecoverMoveSpeedAfter:
@@ -835,8 +835,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0008c51fe3af00b4da5d44f02d9b3dff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   BindBehaviour: 1
   ManualDisposal: 1
   GameObjectNameIsEntityRef: 0
@@ -865,8 +865,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4417a037e4cf49b19ecfc874dd8373ef, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   _id:
     _selection: PlayerCharacter
   _elements:
@@ -881,8 +881,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1fbbdbaec0fb404b83bfc050d3ee236e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   EntityView: {fileID: 9100407106362044459}
   _healthBarAnchor: {fileID: 6195588820050874286}
   _shadowBlob: {fileID: 8884971393132718742}
@@ -897,8 +897,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5667c5457d0048889542ead77da28bcf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   _indicatorsRoot: {fileID: 1410547205824004515}
   _reviveProgressIndicator: {fileID: 5067741373110478353}
   _rangeIndicator: {fileID: 4832204832635830727}
@@ -972,7 +972,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6650924515104287630, guid: 78a738c4908cf3445a727ff241a55d5b, type: 3}
       propertyPath: m_Sprite
-      value: 
+      value:
       objectReference: {fileID: 21300000, guid: a49be92fdecf54e4ebae741388eb08a5, type: 3}
     - target: {fileID: 6650924515104287630, guid: 78a738c4908cf3445a727ff241a55d5b, type: 3}
       propertyPath: m_Color.a
@@ -1009,24 +1009,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6650924514108190406, guid: 78a738c4908cf3445a727ff241a55d5b, type: 3}
   m_PrefabInstance: {fileID: 2810552878819034193}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &-6204203526727587837
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0120b722c3ca5454da1240b65656905f, type: 3}
-  m_Name: PlayerCharacterEntityPrototype
-  m_EditorClassIdentifier: 
-  Settings:
-    Identifier:
-      Path: AddressableResources/QuantumAssets/Characters/PlayerCharacter|EntityPrototype
-      Guid:
-        Value: 1494014866598569848
-  Parent: {fileID: 9100407106362044458}
 --- !u!114 &-3041705823161878789
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1036,12 +1018,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4d5baec4de8d2754a864a680181831e8, type: 3}
+  m_Script: {fileID: 206745634, guid: b156eeaae3f741b40af66649a4748430, type: 3}
   m_Name: PlayerCharacterEntityView
-  m_EditorClassIdentifier: 
-  Settings:
-    Identifier:
-      Path: AddressableResources/QuantumAssets/Characters/PlayerCharacter|EntityView
-      Guid:
-        Value: 2190570854744983118
-  Parent: {fileID: 9100407106362044459}
+  m_EditorClassIdentifier:
+  Identifier:
+    Path: "AddressableResources/QuantumAssets/Characters/PlayerCharacter|EntityView"
+    Guid:
+      Value: 2190570854744983118
+  Prefab: {fileID: 9100407106362044460}

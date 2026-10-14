@@ -70,11 +70,6 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 1d36a06b40d855e40977e5ce3c59a3b3
-    m_Address: Assets/Art/Models/Environment/BattleRoyalMaps/T_BattleRoyale_Texture_01_A.png
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 1eb815601ac601447b33dd98954e53e5
     m_Address: Assets/Art/Textures/Particles/sparkles-sheet.png
     m_ReadOnly: 0
@@ -122,11 +117,6 @@ MonoBehaviour:
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 36e335017ad71d54fbb10842863188ae
     m_Address: Packages/com.unity.render-pipelines.core/Runtime/RenderPipelineResources/FallbackShader.shader
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 383af2f3fddfd49a28a8e090f2857a24
-    m_Address: Assets/Art/UI/Vectors/ProfileBgShapeNft.svg
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
@@ -197,11 +187,6 @@ MonoBehaviour:
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 66a73467112654eef93391a94a6a1b3b
     m_Address: Assets/Art/Models/Environment/Animations/BuildingTopOff.anim
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 66c3ab413f2b26c4d94e782c8d5b73e8
-    m_Address: Assets/Art/Models/Environment/BattleRoyalMaps/T_Apocalypse_Texture_01_A.png
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0

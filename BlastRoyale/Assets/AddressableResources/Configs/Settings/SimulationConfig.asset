@@ -9,140 +9,143 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 23c7b65fea44e964aabbede6a2e3d752, type: 3}
+  m_Script: {fileID: 11500000, guid: b30f6d93ec78efe4b808efdf1c8e136f, type: 3}
   m_Name: SimulationConfig
-  m_EditorClassIdentifier: 
-  Settings:
-    Identifier:
-      Path: AddressableResources/Configs/Settings/SimulationConfig
-      Guid:
-        Value: 1565542650131154954
-    Navigation:
-      DefaultNavMeshAgent:
-        Id:
-          Value: 4427458006344599318
-      EnableNavigationCallbacks: 1
-      HeightThresholdForWaypoints:
-        RawValue: 65536
-      HeightThresholdForAvoidance:
-        RawValue: 65536
-      RawPathSize: 512
-      RawPathAllocationStrategy: 0
-      EnableAvoidance: 0
-      AvoidanceRange:
-        RawValue: 524288
-      MaxAvoidanceCandidates: 64
-      VelocityObstacleTruncationFactor:
-        RawValue: 72089
-    Physics:
-      Gravity:
-        X:
-          RawValue: 0
-        Y:
-          RawValue: -655360
-        Z:
-          RawValue: 0
-      SolverType: 1
-      SolverIterations: 2
-      PositionSolverIterations: 2
-      UseJoints: 0
-      UseAngularVelocity: 0
-      UseVerticalTransform: 0
-      PenetrationAllowance:
-        RawValue: 655
-      PenetrationCorrection:
-        RawValue: 32768
-      MinLinearIntegration:
+  m_EditorClassIdentifier:
+  Identifier:
+    Path: AddressableResources/Configs/Settings/SimulationConfig
+    Guid:
+      Value: 1565542650131154954
+  Entities:
+    CommitCommandsMode: 0
+    DefaultEntityCapacity: 2024
+    DefaultComponentBlockCapacity: 128
+    ComponentTypeConfiguration: []
+  Physics:
+    Gravity:
+      X:
         RawValue: 0
-      MinAngularIntegration:
+      Y:
+        RawValue: -655360
+      Z:
         RawValue: 0
-      SimplexMinBitShift: 0
-      SimplexMaxBitShift: 2
-      ShapeCastMaxIterations: 16
-      ShapeCastHardTolerance:
-        RawValue: 655
-      ShapeCastSoftTolerance:
-        RawValue: 3275
-      AllowSleeping: 1
-      SleepTimeSec:
-        RawValue: 32768
-      LinearSleepTolerance:
-        RawValue: 1310
-      AngularSleepToleranceInRad:
-        RawValue: 2286
-      AllowCCD: 0
-      CCDLinearVelocityThreshold:
-        RawValue: 196608
-      CCDAngularVelocityThreshold:
-        RawValue: 196608
-      CCDDistanceTolerance:
-        RawValue: 65
-      MaxTimeOfImpactIterations: 16
-      MaxRootFindingIterations: 32
-      DefaultEntriesCapacity: 3072
-      DefaultStaticsCapacity: 4096
-      DefaultQueriesCapacity: 1024
-      DefaultQueryItemsCapacity: 4096
-      DefaultHitCollectionItemsCapacity: 32
-      DefaultBucketsCapacity: 16
-      DefaultIslandsCapacity: 1024
-      DefaultManifoldsCapacity: 1024
-      DefaultJointsCapacity: 64
-      DefaultPhysicsMaterial:
-        Id:
-          Value: 534549481968428075
-      DefaultCharacterController2D:
-        Id:
-          Value: 307490403732720118
-      DefaultCharacterController3D:
-        Id:
-          Value: 692395575484242622
-      Layers:
-      - Default
-      - TransparentFX
-      - Ignore Raycast
-      - 
-      - Water
-      - UI
-      - Players
-      - Bullets
-      - Obstacles
-      - CollideOnlyWithPlayers
-      - Indicators
-      - MinimapIgnore
-      - PlayersHitbox
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      LayerMatrix: 0000000000000000000000000000000000000000000000004003000000110000c00000004000000000000000000000008000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-    Entities:
-      CommitCommandsMode: 0
-      DefaultEntityCapacity: 2024
-      DefaultComponentBlockCapacity: 128
-      ComponentTypeConfiguration: []
-    AutoLoadSceneFromMap: 0
-    DeltaTimeType: 0
-    ThreadCount: 2
-    ChecksumSnapshotHistoryLengthSeconds:
+    SolverType: 1
+    SolverIterations: 2
+    PositionSolverIterations: 2
+    UseJoints: 0
+    UseAngularVelocity: 0
+    UseVerticalTransform: 0
+    PenetrationAllowance:
+      RawValue: 655
+    PenetrationCorrection:
+      RawValue: 32768
+    MinLinearIntegration:
+      RawValue: 0
+    MinAngularIntegration:
+      RawValue: 0
+    MinContactInverseMass:
+      RawValue: 35
+    SimplexMinBitShift: 0
+    SimplexMaxBitShift: 2
+    ShapeCastMaxIterations: 16
+    ShapeCastMinIterations: 4
+    ShapeCastHardTolerance:
+      RawValue: 655
+    ShapeCastSoftTolerance:
+      RawValue: 3275
+    AllowSleeping: 1
+    SleepTimeSec:
+      RawValue: 32768
+    LinearSleepTolerance:
+      RawValue: 1310
+    AngularSleepToleranceInRad:
+      RawValue: 2286
+    AllowCCD: 0
+    InvokeSpeculativeCallbacks: 0
+    CCDLinearVelocityThreshold:
       RawValue: 196608
-    ChecksumErrorDumpOptions: 0
-    HeapTrackingMode: 0
-    HeapPageShift: 15
-    HeapPageCount: 64
-    HeapExtraCount: 0
+    CCDAngularVelocityThreshold:
+      RawValue: 196608
+    CCDDistanceTolerance:
+      RawValue: 65
+    MaxTimeOfImpactIterations: 16
+    MaxRootFindingIterations: 32
+    DefaultEntriesCapacity: 3072
+    DefaultStaticsCapacity: 4096
+    DefaultQueriesCapacity: 1024
+    DefaultQueryItemsCapacity: 4096
+    DefaultHitCollectionItemsCapacity: 32
+    DefaultBucketsCapacity: 16
+    DefaultIslandsCapacity: 1024
+    DefaultManifoldsCapacity: 1024
+    DefaultJointsCapacity: 64
+    DefaultPhysicsMaterial:
+      Id:
+        Value: 534549481968428075
+    DefaultCharacterController2D:
+      Id:
+        Value: 307490403732720118
+    DefaultCharacterController3D:
+      Id:
+        Value: 692395575484242622
+    Layers:
+    - Default
+    - TransparentFX
+    - Ignore Raycast
+    -
+    - Water
+    - UI
+    - Players
+    - Bullets
+    - Obstacles
+    - CollideOnlyWithPlayers
+    - Indicators
+    - MinimapIgnore
+    - PlayersHitbox
+    -
+    -
+    -
+    -
+    -
+    -
+    -
+    -
+    -
+    -
+    -
+    -
+    -
+    -
+    -
+    -
+    -
+    -
+    -
+    LayerMatrix: 0000000000000000000000000000000000000000000000004003000000110000c00000004000000000000000000000008000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+  Navigation:
+    DefaultNavMeshAgent:
+      Id:
+        Value: 4427458006344599318
+    EnableNavigationCallbacks: 1
+    HeightThresholdForWaypoints:
+      RawValue: 65536
+    HeightThresholdForAvoidance:
+      RawValue: 65536
+    RawPathSize: 512
+    RawPathAllocationStrategy: 0
+    EnableAvoidance: 0
+    AvoidanceRange:
+      RawValue: 524288
+    MaxAvoidanceCandidates: 64
+    VelocityObstacleTruncationFactor:
+      RawValue: 72089
+  AutoLoadSceneFromMap: 0
+  DeltaTimeType: 0
+  ThreadCount: 2
+  ChecksumSnapshotHistoryLengthSeconds:
+    RawValue: 196608
+  ChecksumErrorDumpOptions: 0
+  HeapTrackingMode: 0
+  HeapPageShift: 15
+  HeapPageCount: 64
+  HeapExtraCount: 0

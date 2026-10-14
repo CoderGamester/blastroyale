@@ -183,8 +183,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 836dcb7e0f6259748b850a10912ce727, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   TransformMode: 0
   Transform2DVertical:
     IsEnabled: 0
@@ -305,7 +305,7 @@ MonoBehaviour:
         Asset:
           Id:
             Value: 0
-        Name: 
+        Name:
   NavMeshSteeringAgent:
     IsEnabled: 0
     MaxSpeed:
@@ -331,8 +331,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0008c51fe3af00b4da5d44f02d9b3dff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   BindBehaviour: 1
   ManualDisposal: 0
   GameObjectNameIsEntityRef: 0
@@ -361,8 +361,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1c9ac32227d3443d8d91d5da90b60a4a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   EntityView: {fileID: 9100407106362044459}
   _healthBarAnchor: {fileID: 6195588820050874286}
 --- !u!114 &6200409989629866430
@@ -375,32 +375,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e8d4bf3ef7bd8fc41a2c038208c5a361, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   Prototype:
     Health:
       RawValue: 6553600
     Shields:
       RawValue: 0
     PlayerReference: 0
---- !u!114 &-6204203526727587837
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0120b722c3ca5454da1240b65656905f, type: 3}
-  m_Name: DummyCharacterEntityPrototype
-  m_EditorClassIdentifier: 
-  Settings:
-    Identifier:
-      Path: AddressableResources/QuantumAssets/Characters/DummyCharacter|EntityPrototype
-      Guid:
-        Value: 754640765234653046
-  Parent: {fileID: 9100407106362044458}
 --- !u!114 &-3041705823161878789
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -410,12 +392,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4d5baec4de8d2754a864a680181831e8, type: 3}
+  m_Script: {fileID: 206745634, guid: b156eeaae3f741b40af66649a4748430, type: 3}
   m_Name: DummyCharacterEntityView
-  m_EditorClassIdentifier: 
-  Settings:
-    Identifier:
-      Path: AddressableResources/QuantumAssets/Characters/DummyCharacter|EntityView
-      Guid:
-        Value: 4506913672909982829
-  Parent: {fileID: 9100407106362044459}
+  m_EditorClassIdentifier:
+  Identifier:
+    Path: "AddressableResources/QuantumAssets/Characters/DummyCharacter|EntityView"
+    Guid:
+      Value: 4506913672909982829
+  Prefab: {fileID: 9100407106362044460}

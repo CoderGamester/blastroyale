@@ -16,7 +16,7 @@ Material:
   - _SURFACE_TYPE_TRANSPARENT
   m_InvalidKeywords:
   - _EMISSION
-  m_LightmapFlags: 0
+  m_LightmapFlags: 2
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: 3000
@@ -47,7 +47,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: fffcdc323b176c44685847bb11a5ad2b, type: 3}
+        m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
@@ -78,6 +78,7 @@ Material:
     - Vector1_92fdf375f5784c49959e8a87b3f752d9: 0
     - Vector1_97e5ee158e1d44ca9a1984022d8a8b5b: 1
     - Vector1_cd047edbde144e149b5ea1510e81c375: 0.6
+    - _AddPrecomputedVelocity: 0
     - _AlphaClip: 1
     - _AlphaToMask: 0
     - _Blend: 0
@@ -115,6 +116,7 @@ Material:
     - _SrcBlend: 5
     - _SrcBlendAlpha: 1
     - _Surface: 1
+    - _XRMotionVectorsPass: 1
     - _ZWrite: 0
     m_Colors:
     - Color_c456f3cd5c7a48ceb6529b327462c057: {r: 1, g: 0.87900555, b: 0, a: 0}
@@ -140,4 +142,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d0353a89b1f911e48b9e16bdc9f2e058, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  version: 9
+  version: 10

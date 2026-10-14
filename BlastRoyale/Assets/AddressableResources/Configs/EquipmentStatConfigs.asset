@@ -11,129 +11,128 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b853ab15c74441619f6cb917d2909662, type: 3}
   m_Name: EquipmentStatConfigs
-  m_EditorClassIdentifier: 
-  Settings:
-    Identifier:
-      Path: AddressableResources/Configs/EquipmentStatConfigs
-      Guid:
-        Value: 2044373238692490151
-    QuantumConfigs:
-    - Faction: 0
-      HpRatioToBaseK:
-        RawValue: 0
-      ArmorRatioToBaseK:
-        RawValue: 0
-      SpeedRatioToBaseK:
-        RawValue: 0
-      PowerRatioToBaseK:
-        RawValue: 0
-      AttackRangeRatioToBaseK:
-        RawValue: 0
-      PickupSpeedRatioToBaseK:
-        RawValue: 5751
-      AmmoCapacityRatioToBaseK:
-        RawValue: 0
-      ShieldCapacityRatioToBaseK:
-        RawValue: 0
-    - Faction: 1
-      HpRatioToBaseK:
-        RawValue: 0
-      ArmorRatioToBaseK:
-        RawValue: 0
-      SpeedRatioToBaseK:
-        RawValue: 4424
-      PowerRatioToBaseK:
-        RawValue: 0
-      AttackRangeRatioToBaseK:
-        RawValue: 0
-      PickupSpeedRatioToBaseK:
-        RawValue: 0
-      AmmoCapacityRatioToBaseK:
-        RawValue: 0
-      ShieldCapacityRatioToBaseK:
-        RawValue: 0
-    - Faction: 2
-      HpRatioToBaseK:
-        RawValue: 0
-      ArmorRatioToBaseK:
-        RawValue: 0
-      SpeedRatioToBaseK:
-        RawValue: 0
-      PowerRatioToBaseK:
-        RawValue: 0
-      AttackRangeRatioToBaseK:
-        RawValue: 8228
-      PickupSpeedRatioToBaseK:
-        RawValue: 0
-      AmmoCapacityRatioToBaseK:
-        RawValue: 0
-      ShieldCapacityRatioToBaseK:
-        RawValue: 0
-    - Faction: 3
-      HpRatioToBaseK:
-        RawValue: 0
-      ArmorRatioToBaseK:
-        RawValue: 0
-      SpeedRatioToBaseK:
-        RawValue: 0
-      PowerRatioToBaseK:
-        RawValue: 0
-      AttackRangeRatioToBaseK:
-        RawValue: 0
-      PickupSpeedRatioToBaseK:
-        RawValue: 5751
-      AmmoCapacityRatioToBaseK:
-        RawValue: 0
-      ShieldCapacityRatioToBaseK:
-        RawValue: 0
-    - Faction: 4
-      HpRatioToBaseK:
-        RawValue: 0
-      ArmorRatioToBaseK:
-        RawValue: 0
-      SpeedRatioToBaseK:
-        RawValue: 0
-      PowerRatioToBaseK:
-        RawValue: 0
-      AttackRangeRatioToBaseK:
-        RawValue: 0
-      PickupSpeedRatioToBaseK:
-        RawValue: 6390
-      AmmoCapacityRatioToBaseK:
-        RawValue: 0
-      ShieldCapacityRatioToBaseK:
-        RawValue: 0
-    - Faction: 5
-      HpRatioToBaseK:
-        RawValue: 0
-      ArmorRatioToBaseK:
-        RawValue: 0
-      SpeedRatioToBaseK:
-        RawValue: 0
-      PowerRatioToBaseK:
-        RawValue: 0
-      AttackRangeRatioToBaseK:
-        RawValue: 10056
-      PickupSpeedRatioToBaseK:
-        RawValue: 0
-      AmmoCapacityRatioToBaseK:
-        RawValue: 0
-      ShieldCapacityRatioToBaseK:
-        RawValue: 0
-    - Faction: 6
-      HpRatioToBaseK:
-        RawValue: 0
-      ArmorRatioToBaseK:
-        RawValue: 0
-      SpeedRatioToBaseK:
-        RawValue: 5407
-      PowerRatioToBaseK:
-        RawValue: 0
-      AttackRangeRatioToBaseK:
-        RawValue: 0
-      PickupSpeedRatioToBaseK:
-        RawValue: 0
-      AmmoCapacityRatioToBaseK:
-        RawValue: 0
-      ShieldCapacityRatioToBaseK:
-        RawValue: 0
+  m_EditorClassIdentifier:
+  Identifier:
+    Path: AddressableResources/Configs/EquipmentStatConfigs
+    Guid:
+      Value: 2044373238692490151
+  QuantumConfigs:
+  - Faction: 0
+    HpRatioToBaseK:
+      RawValue: 0
+    ArmorRatioToBaseK:
+      RawValue: 0
+    SpeedRatioToBaseK:
+      RawValue: 0
+    PowerRatioToBaseK:
+      RawValue: 0
+    AttackRangeRatioToBaseK:
+      RawValue: 0
+    PickupSpeedRatioToBaseK:
+      RawValue: 5751
+    AmmoCapacityRatioToBaseK:
+      RawValue: 0
+    ShieldCapacityRatioToBaseK:
+      RawValue: 0
+  - Faction: 1
+    HpRatioToBaseK:
+      RawValue: 0
+    ArmorRatioToBaseK:
+      RawValue: 0
+    SpeedRatioToBaseK:
+      RawValue: 4424
+    PowerRatioToBaseK:
+      RawValue: 0
+    AttackRangeRatioToBaseK:
+      RawValue: 0
+    PickupSpeedRatioToBaseK:
+      RawValue: 0
+    AmmoCapacityRatioToBaseK:
+      RawValue: 0
+    ShieldCapacityRatioToBaseK:
+      RawValue: 0
+  - Faction: 2
+    HpRatioToBaseK:
+      RawValue: 0
+    ArmorRatioToBaseK:
+      RawValue: 0
+    SpeedRatioToBaseK:
+      RawValue: 0
+    PowerRatioToBaseK:
+      RawValue: 0
+    AttackRangeRatioToBaseK:
+      RawValue: 8228
+    PickupSpeedRatioToBaseK:
+      RawValue: 0
+    AmmoCapacityRatioToBaseK:
+      RawValue: 0
+    ShieldCapacityRatioToBaseK:
+      RawValue: 0
+  - Faction: 3
+    HpRatioToBaseK:
+      RawValue: 0
+    ArmorRatioToBaseK:
+      RawValue: 0
+    SpeedRatioToBaseK:
+      RawValue: 0
+    PowerRatioToBaseK:
+      RawValue: 0
+    AttackRangeRatioToBaseK:
+      RawValue: 0
+    PickupSpeedRatioToBaseK:
+      RawValue: 5751
+    AmmoCapacityRatioToBaseK:
+      RawValue: 0
+    ShieldCapacityRatioToBaseK:
+      RawValue: 0
+  - Faction: 4
+    HpRatioToBaseK:
+      RawValue: 0
+    ArmorRatioToBaseK:
+      RawValue: 0
+    SpeedRatioToBaseK:
+      RawValue: 0
+    PowerRatioToBaseK:
+      RawValue: 0
+    AttackRangeRatioToBaseK:
+      RawValue: 0
+    PickupSpeedRatioToBaseK:
+      RawValue: 6390
+    AmmoCapacityRatioToBaseK:
+      RawValue: 0
+    ShieldCapacityRatioToBaseK:
+      RawValue: 0
+  - Faction: 5
+    HpRatioToBaseK:
+      RawValue: 0
+    ArmorRatioToBaseK:
+      RawValue: 0
+    SpeedRatioToBaseK:
+      RawValue: 0
+    PowerRatioToBaseK:
+      RawValue: 0
+    AttackRangeRatioToBaseK:
+      RawValue: 10056
+    PickupSpeedRatioToBaseK:
+      RawValue: 0
+    AmmoCapacityRatioToBaseK:
+      RawValue: 0
+    ShieldCapacityRatioToBaseK:
+      RawValue: 0
+  - Faction: 6
+    HpRatioToBaseK:
+      RawValue: 0
+    ArmorRatioToBaseK:
+      RawValue: 0
+    SpeedRatioToBaseK:
+      RawValue: 5407
+    PowerRatioToBaseK:
+      RawValue: 0
+    AttackRangeRatioToBaseK:
+      RawValue: 0
+    PickupSpeedRatioToBaseK:
+      RawValue: 0
+    AmmoCapacityRatioToBaseK:
+      RawValue: 0
+    ShieldCapacityRatioToBaseK:
+      RawValue: 0

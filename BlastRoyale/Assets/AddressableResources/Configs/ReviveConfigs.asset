@@ -11,70 +11,69 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 75d5e112c5f14cc09592708f657062e1, type: 3}
   m_Name: ReviveConfigs
-  m_EditorClassIdentifier: 
-  Settings:
-    Identifier:
-      Path: AddressableResources/Configs/ReviveConfigs
-      Guid:
-        Value: 3922240779153377466
-    FullyDisable: 0
-    ReviveAnimationDuration:
-      RawValue: 65536
-    PerGameMode:
-      Default:
-        AllowedRevives:
-        - DamageTickInterval:
-            RawValue: 65536
-          DamagePerTick:
-            RawValue: 1966
-          DamagePerShot:
-            RawValue: 18350
-          TimeToRevive:
-            RawValue: 327680
-          LifePercentageOnRevived:
-            RawValue: 22937
-          LifePercentageOnKnockedOut:
-            RawValue: 65536
-          MoveSpeedMultiplier:
-            RawValue: 21626
-          ReviveColliderRange:
-            RawValue: 131072
-          ProgressDownSpeedMultiplier:
-            RawValue: 32768
-        - DamageTickInterval:
-            RawValue: 65536
-          DamagePerTick:
-            RawValue: 1966
-          DamagePerShot:
-            RawValue: 18350
-          TimeToRevive:
-            RawValue: 327680
-          LifePercentageOnRevived:
-            RawValue: 22937
-          LifePercentageOnKnockedOut:
-            RawValue: 32768
-          MoveSpeedMultiplier:
-            RawValue: 21626
-          ReviveColliderRange:
-            RawValue: 131072
-          ProgressDownSpeedMultiplier:
-            RawValue: 32768
-        - DamageTickInterval:
-            RawValue: 65536
-          DamagePerTick:
-            RawValue: 1966
-          DamagePerShot:
-            RawValue: 18350
-          TimeToRevive:
-            RawValue: 327680
-          LifePercentageOnRevived:
-            RawValue: 22937
-          LifePercentageOnKnockedOut:
-            RawValue: 16384
-          MoveSpeedMultiplier:
-            RawValue: 21626
-          ReviveColliderRange:
-            RawValue: 131072
-          ProgressDownSpeedMultiplier:
-            RawValue: 32768
-      Values: []
+  m_EditorClassIdentifier:
+  Identifier:
+    Path: AddressableResources/Configs/ReviveConfigs
+    Guid:
+      Value: 3922240779153377466
+  FullyDisable: 0
+  ReviveAnimationDuration:
+    RawValue: 65536
+  PerGameMode:
+    Default:
+      AllowedRevives:
+      - DamageTickInterval:
+          RawValue: 65536
+        DamagePerTick:
+          RawValue: 1966
+        DamagePerShot:
+          RawValue: 18350
+        TimeToRevive:
+          RawValue: 327680
+        LifePercentageOnRevived:
+          RawValue: 22937
+        LifePercentageOnKnockedOut:
+          RawValue: 65536
+        MoveSpeedMultiplier:
+          RawValue: 21626
+        ReviveColliderRange:
+          RawValue: 131072
+        ProgressDownSpeedMultiplier:
+          RawValue: 32768
+      - DamageTickInterval:
+          RawValue: 65536
+        DamagePerTick:
+          RawValue: 1966
+        DamagePerShot:
+          RawValue: 18350
+        TimeToRevive:
+          RawValue: 327680
+        LifePercentageOnRevived:
+          RawValue: 22937
+        LifePercentageOnKnockedOut:
+          RawValue: 32768
+        MoveSpeedMultiplier:
+          RawValue: 21626
+        ReviveColliderRange:
+          RawValue: 131072
+        ProgressDownSpeedMultiplier:
+          RawValue: 32768
+      - DamageTickInterval:
+          RawValue: 65536
+        DamagePerTick:
+          RawValue: 1966
+        DamagePerShot:
+          RawValue: 18350
+        TimeToRevive:
+          RawValue: 327680
+        LifePercentageOnRevived:
+          RawValue: 22937
+        LifePercentageOnKnockedOut:
+          RawValue: 16384
+        MoveSpeedMultiplier:
+          RawValue: 21626
+        ReviveColliderRange:
+          RawValue: 131072
+        ProgressDownSpeedMultiplier:
+          RawValue: 32768
+    Values: []

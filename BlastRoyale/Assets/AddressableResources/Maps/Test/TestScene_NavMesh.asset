@@ -9,26 +9,26 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cfb2d134f0fd8e447b08e569da2a1031, type: 3}
+  m_Script: {fileID: -1283927171, guid: b156eeaae3f741b40af66649a4748430, type: 3}
   m_Name: TestScene_NavMesh
-  m_EditorClassIdentifier: 
-  Settings:
-    Identifier:
-      Path: AddressableResources/Maps/Test/TestScene_NavMesh
-      Guid:
-        Value: 4132623271473847115
-    Name: NavMesh
-    DataAsset:
-      Id:
-        Value: 724045998517328729
-    DataFilepath: 
-    GridSizeX: 16
-    GridSizeY: 38
-    GridNodeSize: 4
-    WorldOffset:
-      X:
-        RawValue: -2097152
-      Y:
-        RawValue: -4980736
-    MinAgentRadius:
-      RawValue: 13107
+  m_EditorClassIdentifier:
+  Identifier:
+    Path: AddressableResources/Maps/Test/TestScene_NavMesh
+    Guid:
+      Value: 4132623271473847115
+  Name: NavMesh
+  SerializeType: 1
+  RegionMaskBlockCount: 2
+  DataAsset:
+    Id:
+      Value: 724045998517328729
+  GridSizeX: 16
+  GridSizeY: 38
+  GridNodeSize: 4
+  WorldOffset:
+    X:
+      RawValue: -2097152
+    Y:
+      RawValue: -4980736
+  MinAgentRadius:
+    RawValue: 13107

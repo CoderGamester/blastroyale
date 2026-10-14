@@ -11,1596 +11,1595 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 539ff5c47e17461680888b65c2fa9180, type: 3}
   m_Name: ShrinkingCircleConfigs
-  m_EditorClassIdentifier: 
-  Settings:
-    Identifier:
-      Path: AddressableResources/Configs/ShrinkingCircleConfigs
-      Guid:
-        Value: 3083889286552435639
-    QuantumConfigs:
-    - Key: -26863472
-      Step: 1
-      Map: 108
-      DelayTime:
-        RawValue: 655360
-      WarningTime:
-        RawValue: 983040
-      ShrinkingTime:
-        RawValue: 2949120
-      ShrinkingSizeK:
-        RawValue: 32768
-      NewSafeSpaceAreaSizeK:
-        RawValue: 65536
-      MaxHealthDamage:
-        RawValue: 2032
-      AirdropChance:
-        RawValue: 32768
-      AirdropStartTimeRange:
-        Value1:
-          RawValue: 851968
-        Value2:
-          RawValue: 1441792
-      AirdropDropDuration:
-        RawValue: 524288
-      AirdropChest: 19
-      IsStormAnchored: 0
-    - Key: 451837312
-      Step: 2
-      Map: 108
-      DelayTime:
-        RawValue: 524288
-      WarningTime:
-        RawValue: 786432
-      ShrinkingTime:
-        RawValue: 1966080
-      ShrinkingSizeK:
-        RawValue: 19661
-      NewSafeSpaceAreaSizeK:
-        RawValue: 131072
-      MaxHealthDamage:
-        RawValue: 3998
-      AirdropChance:
-        RawValue: 32768
-      AirdropStartTimeRange:
-        Value1:
-          RawValue: 655360
-        Value2:
-          RawValue: 851968
-      AirdropDropDuration:
-        RawValue: 524288
-      AirdropChest: 19
-      IsStormAnchored: 0
-    - Key: 930538096
-      Step: 3
-      Map: 108
-      DelayTime:
-        RawValue: 327680
-      WarningTime:
-        RawValue: 655360
-      ShrinkingTime:
-        RawValue: 1638400
-      ShrinkingSizeK:
-        RawValue: 66
-      NewSafeSpaceAreaSizeK:
-        RawValue: 131072
-      MaxHealthDamage:
-        RawValue: 6619
-      AirdropChance:
-        RawValue: 0
-      AirdropStartTimeRange:
-        Value1:
-          RawValue: 0
-        Value2:
-          RawValue: 0
-      AirdropDropDuration:
-        RawValue: 0
-      AirdropChest: 13
-      IsStormAnchored: 0
-    - Key: 1409238880
-      Step: 4
-      Map: 108
-      DelayTime:
-        RawValue: 655294464
-      WarningTime:
-        RawValue: 0
-      ShrinkingTime:
-        RawValue: 0
-      ShrinkingSizeK:
-        RawValue: 66
-      NewSafeSpaceAreaSizeK:
-        RawValue: 131072
-      MaxHealthDamage:
-        RawValue: 7930
-      AirdropChance:
-        RawValue: 0
-      AirdropStartTimeRange:
-        Value1:
-          RawValue: 0
-        Value2:
-          RawValue: 0
-      AirdropDropDuration:
-        RawValue: 0
-      AirdropChest: 13
-      IsStormAnchored: 0
-    - Key: 1887939664
-      Step: 1
-      Map: 9
-      DelayTime:
-        RawValue: 1310720
-      WarningTime:
-        RawValue: 2621440
-      ShrinkingTime:
-        RawValue: 3932160
-      ShrinkingSizeK:
-        RawValue: 36045
-      NewSafeSpaceAreaSizeK:
-        RawValue: 65536
-      MaxHealthDamage:
-        RawValue: 1376
-      AirdropChance:
-        RawValue: 39322
-      AirdropStartTimeRange:
-        Value1:
-          RawValue: 851968
-        Value2:
-          RawValue: 1245184
-      AirdropDropDuration:
-        RawValue: 983040
-      AirdropChest: 19
-      IsStormAnchored: 0
-    - Key: -1928326848
-      Step: 2
-      Map: 9
-      DelayTime:
-        RawValue: 983040
-      WarningTime:
-        RawValue: 1638400
-      ShrinkingTime:
-        RawValue: 1966080
-      ShrinkingSizeK:
-        RawValue: 32768
-      NewSafeSpaceAreaSizeK:
-        RawValue: 131072
-      MaxHealthDamage:
-        RawValue: 2032
-      AirdropChance:
-        RawValue: 39322
-      AirdropStartTimeRange:
-        Value1:
-          RawValue: 327680
-        Value2:
-          RawValue: 917504
-      AirdropDropDuration:
-        RawValue: 983040
-      AirdropChest: 19
-      IsStormAnchored: 0
-    - Key: -1449626064
-      Step: 3
-      Map: 9
-      DelayTime:
-        RawValue: 983040
-      WarningTime:
-        RawValue: 983040
-      ShrinkingTime:
-        RawValue: 983040
-      ShrinkingSizeK:
-        RawValue: 19661
-      NewSafeSpaceAreaSizeK:
-        RawValue: 131072
-      MaxHealthDamage:
-        RawValue: 2687
-      AirdropChance:
-        RawValue: 0
-      AirdropStartTimeRange:
-        Value1:
-          RawValue: 0
-        Value2:
-          RawValue: 0
-      AirdropDropDuration:
-        RawValue: 0
-      AirdropChest: 13
-      IsStormAnchored: 0
-    - Key: -970925280
-      Step: 4
-      Map: 9
-      DelayTime:
-        RawValue: 983040
-      WarningTime:
-        RawValue: 0
-      ShrinkingTime:
-        RawValue: 2949120
-      ShrinkingSizeK:
-        RawValue: 66
-      NewSafeSpaceAreaSizeK:
-        RawValue: 131072
-      MaxHealthDamage:
-        RawValue: 3342
-      AirdropChance:
-        RawValue: 0
-      AirdropStartTimeRange:
-        Value1:
-          RawValue: 0
-        Value2:
-          RawValue: 0
-      AirdropDropDuration:
-        RawValue: 0
-      AirdropChest: 13
-      IsStormAnchored: 0
-    - Key: -492224496
-      Step: 5
-      Map: 9
-      DelayTime:
-        RawValue: 655294464
-      WarningTime:
-        RawValue: 0
-      ShrinkingTime:
-        RawValue: 0
-      ShrinkingSizeK:
-        RawValue: 66
-      NewSafeSpaceAreaSizeK:
-        RawValue: 131072
-      MaxHealthDamage:
-        RawValue: 3998
-      AirdropChance:
-        RawValue: 0
-      AirdropStartTimeRange:
-        Value1:
-          RawValue: 0
-        Value2:
-          RawValue: 0
-      AirdropDropDuration:
-        RawValue: 0
-      AirdropChest: 13
-      IsStormAnchored: 0
-    - Key: -13523712
-      Step: 1
-      Map: 65
-      DelayTime:
-        RawValue: 2293760
-      WarningTime:
-        RawValue: 1310720
-      ShrinkingTime:
-        RawValue: 3932160
-      ShrinkingSizeK:
-        RawValue: 39322
-      NewSafeSpaceAreaSizeK:
-        RawValue: 65536
-      MaxHealthDamage:
-        RawValue: 1376
-      AirdropChance:
-        RawValue: 52429
-      AirdropStartTimeRange:
-        Value1:
-          RawValue: 2490368
-        Value2:
-          RawValue: 2686976
-      AirdropDropDuration:
-        RawValue: 655360
-      AirdropChest: 19
-      IsStormAnchored: 0
-    - Key: 465177072
-      Step: 2
-      Map: 65
-      DelayTime:
-        RawValue: 327680
-      WarningTime:
-        RawValue: 983040
-      ShrinkingTime:
-        RawValue: 2621440
-      ShrinkingSizeK:
-        RawValue: 49152
-      NewSafeSpaceAreaSizeK:
-        RawValue: 131072
-      MaxHealthDamage:
-        RawValue: 2032
-      AirdropChance:
-        RawValue: 52429
-      AirdropStartTimeRange:
-        Value1:
-          RawValue: 131072
-        Value2:
-          RawValue: 327680
-      AirdropDropDuration:
-        RawValue: 524288
-      AirdropChest: 19
-      IsStormAnchored: 0
-    - Key: 943877856
-      Step: 3
-      Map: 65
-      DelayTime:
-        RawValue: 327680
-      WarningTime:
-        RawValue: 983040
-      ShrinkingTime:
-        RawValue: 2293760
-      ShrinkingSizeK:
-        RawValue: 45875
-      NewSafeSpaceAreaSizeK:
-        RawValue: 131072
-      MaxHealthDamage:
-        RawValue: 2687
-      AirdropChance:
-        RawValue: 52429
-      AirdropStartTimeRange:
-        Value1:
-          RawValue: 196608
-        Value2:
-          RawValue: 524288
-      AirdropDropDuration:
-        RawValue: 524288
-      AirdropChest: 19
-      IsStormAnchored: 0
-    - Key: 1422578640
-      Step: 4
-      Map: 65
-      DelayTime:
-        RawValue: 327680
-      WarningTime:
-        RawValue: 983040
-      ShrinkingTime:
-        RawValue: 1638400
-      ShrinkingSizeK:
-        RawValue: 42598
-      NewSafeSpaceAreaSizeK:
-        RawValue: 131072
-      MaxHealthDamage:
-        RawValue: 3342
-      AirdropChance:
-        RawValue: 52429
-      AirdropStartTimeRange:
-        Value1:
-          RawValue: 196608
-        Value2:
-          RawValue: 524288
-      AirdropDropDuration:
-        RawValue: 262144
-      AirdropChest: 19
-      IsStormAnchored: 0
-    - Key: 1901279424
-      Step: 5
-      Map: 65
-      DelayTime:
-        RawValue: 327680
-      WarningTime:
-        RawValue: 983040
-      ShrinkingTime:
-        RawValue: 983040
-      ShrinkingSizeK:
-        RawValue: 32768
-      NewSafeSpaceAreaSizeK:
-        RawValue: 131072
-      MaxHealthDamage:
-        RawValue: 3998
-      AirdropChance:
-        RawValue: 0
-      AirdropStartTimeRange:
-        Value1:
-          RawValue: 0
-        Value2:
-          RawValue: 0
-      AirdropDropDuration:
-        RawValue: 0
-      AirdropChest: 13
-      IsStormAnchored: 0
-    - Key: -1914987088
-      Step: 6
-      Map: 65
-      DelayTime:
-        RawValue: 327680
-      WarningTime:
-        RawValue: 655360
-      ShrinkingTime:
-        RawValue: 655360
-      ShrinkingSizeK:
-        RawValue: 32768
-      NewSafeSpaceAreaSizeK:
-        RawValue: 131072
-      MaxHealthDamage:
-        RawValue: 3998
-      AirdropChance:
-        RawValue: 0
-      AirdropStartTimeRange:
-        Value1:
-          RawValue: 0
-        Value2:
-          RawValue: 65536
-      AirdropDropDuration:
-        RawValue: 0
-      AirdropChest: 13
-      IsStormAnchored: 0
-    - Key: -1436286304
-      Step: 7
-      Map: 65
-      DelayTime:
-        RawValue: 327680
-      WarningTime:
-        RawValue: 655360
-      ShrinkingTime:
-        RawValue: 1966080
-      ShrinkingSizeK:
-        RawValue: 66
-      NewSafeSpaceAreaSizeK:
-        RawValue: 131072
-      MaxHealthDamage:
-        RawValue: 3998
-      AirdropChance:
-        RawValue: 0
-      AirdropStartTimeRange:
-        Value1:
-          RawValue: 0
-        Value2:
-          RawValue: 0
-      AirdropDropDuration:
-        RawValue: 0
-      AirdropChest: 13
-      IsStormAnchored: 0
-    - Key: -957585520
-      Step: 8
-      Map: 65
-      DelayTime:
-        RawValue: 655294464
-      WarningTime:
-        RawValue: 0
-      ShrinkingTime:
-        RawValue: 0
-      ShrinkingSizeK:
-        RawValue: 66
-      NewSafeSpaceAreaSizeK:
-        RawValue: 131072
-      MaxHealthDamage:
-        RawValue: 3998
-      AirdropChance:
-        RawValue: 0
-      AirdropStartTimeRange:
-        Value1:
-          RawValue: 0
-        Value2:
-          RawValue: 0
-      AirdropDropDuration:
-        RawValue: 0
-      AirdropChest: 13
-      IsStormAnchored: 0
-    - Key: -478884736
-      Step: 1
-      Map: 113
-      DelayTime:
-        RawValue: 983040
-      WarningTime:
-        RawValue: 1310720
-      ShrinkingTime:
-        RawValue: 3932160
-      ShrinkingSizeK:
-        RawValue: 32768
-      NewSafeSpaceAreaSizeK:
-        RawValue: 65536
-      MaxHealthDamage:
-        RawValue: 1376
-      AirdropChance:
-        RawValue: 32768
-      AirdropStartTimeRange:
-        Value1:
-          RawValue: 1179648
-        Value2:
-          RawValue: 1835008
-      AirdropDropDuration:
-        RawValue: 524288
-      AirdropChest: 19
-      IsStormAnchored: 0
-    - Key: -183952
-      Step: 2
-      Map: 113
-      DelayTime:
-        RawValue: 983040
-      WarningTime:
-        RawValue: 1310720
-      ShrinkingTime:
-        RawValue: 1966080
-      ShrinkingSizeK:
-        RawValue: 19661
-      NewSafeSpaceAreaSizeK:
-        RawValue: 131072
-      MaxHealthDamage:
-        RawValue: 3342
-      AirdropChance:
-        RawValue: 0
-      AirdropStartTimeRange:
-        Value1:
-          RawValue: 0
-        Value2:
-          RawValue: 0
-      AirdropDropDuration:
-        RawValue: 0
-      AirdropChest: 13
-      IsStormAnchored: 0
-    - Key: 478516832
-      Step: 3
-      Map: 113
-      DelayTime:
-        RawValue: 983040
-      WarningTime:
-        RawValue: 1310720
-      ShrinkingTime:
-        RawValue: 1310720
-      ShrinkingSizeK:
-        RawValue: 16384
-      NewSafeSpaceAreaSizeK:
-        RawValue: 131072
-      MaxHealthDamage:
-        RawValue: 5308
-      AirdropChance:
-        RawValue: 32768
-      AirdropStartTimeRange:
-        Value1:
-          RawValue: 1179648
-        Value2:
-          RawValue: 1835008
-      AirdropDropDuration:
-        RawValue: 524288
-      AirdropChest: 19
-      IsStormAnchored: 0
-    - Key: 957217616
-      Step: 4
-      Map: 113
-      DelayTime:
-        RawValue: 327680
-      WarningTime:
-        RawValue: 655360
-      ShrinkingTime:
-        RawValue: 1638400
-      ShrinkingSizeK:
-        RawValue: 66
-      NewSafeSpaceAreaSizeK:
-        RawValue: 131072
-      MaxHealthDamage:
-        RawValue: 6619
-      AirdropChance:
-        RawValue: 0
-      AirdropStartTimeRange:
-        Value1:
-          RawValue: 0
-        Value2:
-          RawValue: 0
-      AirdropDropDuration:
-        RawValue: 0
-      AirdropChest: 13
-      IsStormAnchored: 0
-    - Key: 1435918400
-      Step: 5
-      Map: 113
-      DelayTime:
-        RawValue: 655294464
-      WarningTime:
-        RawValue: 0
-      ShrinkingTime:
-        RawValue: 0
-      ShrinkingSizeK:
-        RawValue: 66
-      NewSafeSpaceAreaSizeK:
-        RawValue: 131072
-      MaxHealthDamage:
-        RawValue: 7930
-      AirdropChance:
-        RawValue: 0
-      AirdropStartTimeRange:
-        Value1:
-          RawValue: 0
-        Value2:
-          RawValue: 0
-      AirdropDropDuration:
-        RawValue: 0
-      AirdropChest: 13
-      IsStormAnchored: 0
-    - Key: 1914619184
-      Step: 1
-      Map: 114
-      DelayTime:
-        RawValue: 1310720
-      WarningTime:
-        RawValue: 655360
-      ShrinkingTime:
-        RawValue: 2293760
-      ShrinkingSizeK:
-        RawValue: 36045
-      NewSafeSpaceAreaSizeK:
-        RawValue: 65536
-      MaxHealthDamage:
-        RawValue: 1376
-      AirdropChance:
-        RawValue: 52429
-      AirdropStartTimeRange:
-        Value1:
-          RawValue: 2490368
-        Value2:
-          RawValue: 2686976
-      AirdropDropDuration:
-        RawValue: 655360
-      AirdropChest: 19
-      IsStormAnchored: 0
-    - Key: -1901647328
-      Step: 2
-      Map: 114
-      DelayTime:
-        RawValue: 327680
-      WarningTime:
-        RawValue: 655360
-      ShrinkingTime:
-        RawValue: 1638400
-      ShrinkingSizeK:
-        RawValue: 49152
-      NewSafeSpaceAreaSizeK:
-        RawValue: 131072
-      MaxHealthDamage:
-        RawValue: 2032
-      AirdropChance:
-        RawValue: 52429
-      AirdropStartTimeRange:
-        Value1:
-          RawValue: 131072
-        Value2:
-          RawValue: 327680
-      AirdropDropDuration:
-        RawValue: 524288
-      AirdropChest: 19
-      IsStormAnchored: 0
-    - Key: -1422946544
-      Step: 3
-      Map: 114
-      DelayTime:
-        RawValue: 327680
-      WarningTime:
-        RawValue: 655360
-      ShrinkingTime:
-        RawValue: 1310720
-      ShrinkingSizeK:
-        RawValue: 45875
-      NewSafeSpaceAreaSizeK:
-        RawValue: 131072
-      MaxHealthDamage:
-        RawValue: 2687
-      AirdropChance:
-        RawValue: 52429
-      AirdropStartTimeRange:
-        Value1:
-          RawValue: 196608
-        Value2:
-          RawValue: 524288
-      AirdropDropDuration:
-        RawValue: 524288
-      AirdropChest: 19
-      IsStormAnchored: 0
-    - Key: -944245760
-      Step: 4
-      Map: 114
-      DelayTime:
-        RawValue: 327680
-      WarningTime:
-        RawValue: 655360
-      ShrinkingTime:
-        RawValue: 983040
-      ShrinkingSizeK:
-        RawValue: 42598
-      NewSafeSpaceAreaSizeK:
-        RawValue: 131072
-      MaxHealthDamage:
-        RawValue: 3998
-      AirdropChance:
-        RawValue: 52429
-      AirdropStartTimeRange:
-        Value1:
-          RawValue: 196608
-        Value2:
-          RawValue: 524288
-      AirdropDropDuration:
-        RawValue: 262144
-      AirdropChest: 19
-      IsStormAnchored: 0
-    - Key: 934034672
-      Step: 5
-      Map: 114
-      DelayTime:
-        RawValue: 327680
-      WarningTime:
-        RawValue: 655360
-      ShrinkingTime:
-        RawValue: 655360
-      ShrinkingSizeK:
-        RawValue: 32768
-      NewSafeSpaceAreaSizeK:
-        RawValue: 131072
-      MaxHealthDamage:
-        RawValue: 5308
-      AirdropChance:
-        RawValue: 0
-      AirdropStartTimeRange:
-        Value1:
-          RawValue: 0
-        Value2:
-          RawValue: 0
-      AirdropDropDuration:
-        RawValue: 0
-      AirdropChest: 13
-      IsStormAnchored: 0
-    - Key: 1412735456
-      Step: 6
-      Map: 114
-      DelayTime:
-        RawValue: 327680
-      WarningTime:
-        RawValue: 655360
-      ShrinkingTime:
-        RawValue: 655360
-      ShrinkingSizeK:
-        RawValue: 32768
-      NewSafeSpaceAreaSizeK:
-        RawValue: 131072
-      MaxHealthDamage:
-        RawValue: 6619
-      AirdropChance:
-        RawValue: 0
-      AirdropStartTimeRange:
-        Value1:
-          RawValue: 0
-        Value2:
-          RawValue: 65536
-      AirdropDropDuration:
-        RawValue: 0
-      AirdropChest: 13
-      IsStormAnchored: 0
-    - Key: 1891436240
-      Step: 7
-      Map: 114
-      DelayTime:
-        RawValue: 327680
-      WarningTime:
-        RawValue: 655360
-      ShrinkingTime:
-        RawValue: 655360
-      ShrinkingSizeK:
-        RawValue: 45875
-      NewSafeSpaceAreaSizeK:
-        RawValue: 131072
-      MaxHealthDamage:
-        RawValue: 7930
-      AirdropChance:
-        RawValue: 0
-      AirdropStartTimeRange:
-        Value1:
-          RawValue: 0
-        Value2:
-          RawValue: 65536
-      AirdropDropDuration:
-        RawValue: 0
-      AirdropChest: 13
-      IsStormAnchored: 0
-    - Key: -1924830272
-      Step: 8
-      Map: 114
-      DelayTime:
-        RawValue: 327680
-      WarningTime:
-        RawValue: 655360
-      ShrinkingTime:
-        RawValue: 655360
-      ShrinkingSizeK:
-        RawValue: 52429
-      NewSafeSpaceAreaSizeK:
-        RawValue: 131072
-      MaxHealthDamage:
-        RawValue: 7930
-      AirdropChance:
-        RawValue: 0
-      AirdropStartTimeRange:
-        Value1:
-          RawValue: 0
-        Value2:
-          RawValue: 65536
-      AirdropDropDuration:
-        RawValue: 0
-      AirdropChest: 13
-      IsStormAnchored: 0
-    - Key: -1446129488
-      Step: 9
-      Map: 114
-      DelayTime:
-        RawValue: 327680
-      WarningTime:
-        RawValue: 655360
-      ShrinkingTime:
-        RawValue: 655360
-      ShrinkingSizeK:
-        RawValue: 52429
-      NewSafeSpaceAreaSizeK:
-        RawValue: 131072
-      MaxHealthDamage:
-        RawValue: 7930
-      AirdropChance:
-        RawValue: 0
-      AirdropStartTimeRange:
-        Value1:
-          RawValue: 0
-        Value2:
-          RawValue: 65536
-      AirdropDropDuration:
-        RawValue: 0
-      AirdropChest: 13
-      IsStormAnchored: 0
-    - Key: -967428704
-      Step: 10
-      Map: 114
-      DelayTime:
-        RawValue: 327680
-      WarningTime:
-        RawValue: 655360
-      ShrinkingTime:
-        RawValue: 655360
-      ShrinkingSizeK:
-        RawValue: 52429
-      NewSafeSpaceAreaSizeK:
-        RawValue: 131072
-      MaxHealthDamage:
-        RawValue: 7930
-      AirdropChance:
-        RawValue: 0
-      AirdropStartTimeRange:
-        Value1:
-          RawValue: 0
-        Value2:
-          RawValue: 65536
-      AirdropDropDuration:
-        RawValue: 0
-      AirdropChest: 13
-      IsStormAnchored: 0
-    - Key: -488727920
-      Step: 11
-      Map: 114
-      DelayTime:
-        RawValue: 327680
-      WarningTime:
-        RawValue: 655360
-      ShrinkingTime:
-        RawValue: 655360
-      ShrinkingSizeK:
-        RawValue: 52429
-      NewSafeSpaceAreaSizeK:
-        RawValue: 131072
-      MaxHealthDamage:
-        RawValue: 7930
-      AirdropChance:
-        RawValue: 0
-      AirdropStartTimeRange:
-        Value1:
-          RawValue: 0
-        Value2:
-          RawValue: 65536
-      AirdropDropDuration:
-        RawValue: 0
-      AirdropChest: 13
-      IsStormAnchored: 0
-    - Key: -10027136
-      Step: 12
-      Map: 114
-      DelayTime:
-        RawValue: 327680
-      WarningTime:
-        RawValue: 655360
-      ShrinkingTime:
-        RawValue: 1966080
-      ShrinkingSizeK:
-        RawValue: 66
-      NewSafeSpaceAreaSizeK:
-        RawValue: 131072
-      MaxHealthDamage:
-        RawValue: 7930
-      AirdropChance:
-        RawValue: 0
-      AirdropStartTimeRange:
-        Value1:
-          RawValue: 0
-        Value2:
-          RawValue: 0
-      AirdropDropDuration:
-        RawValue: 0
-      AirdropChest: 13
-      IsStormAnchored: 0
-    - Key: 468673648
-      Step: 13
-      Map: 114
-      DelayTime:
-        RawValue: 655294464
-      WarningTime:
-        RawValue: 0
-      ShrinkingTime:
-        RawValue: 0
-      ShrinkingSizeK:
-        RawValue: 66
-      NewSafeSpaceAreaSizeK:
-        RawValue: 131072
-      MaxHealthDamage:
-        RawValue: 7930
-      AirdropChance:
-        RawValue: 0
-      AirdropStartTimeRange:
-        Value1:
-          RawValue: 0
-        Value2:
-          RawValue: 0
-      AirdropDropDuration:
-        RawValue: 0
-      AirdropChest: 13
-      IsStormAnchored: 0
-    - Key: 947374432
-      Step: 1
-      Map: 115
-      DelayTime:
-        RawValue: 983040
-      WarningTime:
-        RawValue: 1310720
-      ShrinkingTime:
-        RawValue: 3276800
-      ShrinkingSizeK:
-        RawValue: 39322
-      NewSafeSpaceAreaSizeK:
-        RawValue: 65536
-      MaxHealthDamage:
-        RawValue: 1376
-      AirdropChance:
-        RawValue: 52429
-      AirdropStartTimeRange:
-        Value1:
-          RawValue: 2490368
-        Value2:
-          RawValue: 2686976
-      AirdropDropDuration:
-        RawValue: 655360
-      AirdropChest: 19
-      IsStormAnchored: 0
-    - Key: 1426075216
-      Step: 2
-      Map: 115
-      DelayTime:
-        RawValue: 327680
-      WarningTime:
-        RawValue: 786432
-      ShrinkingTime:
-        RawValue: 2293760
-      ShrinkingSizeK:
-        RawValue: 49152
-      NewSafeSpaceAreaSizeK:
-        RawValue: 131072
-      MaxHealthDamage:
-        RawValue: 2032
-      AirdropChance:
-        RawValue: 13107
-      AirdropStartTimeRange:
-        Value1:
-          RawValue: 524288
-        Value2:
-          RawValue: 655360
-      AirdropDropDuration:
-        RawValue: 655360
-      AirdropChest: 19
-      IsStormAnchored: 0
-    - Key: 1904776000
-      Step: 3
-      Map: 115
-      DelayTime:
-        RawValue: 327680
-      WarningTime:
-        RawValue: 786432
-      ShrinkingTime:
-        RawValue: 1966080
-      ShrinkingSizeK:
-        RawValue: 45875
-      NewSafeSpaceAreaSizeK:
-        RawValue: 131072
-      MaxHealthDamage:
-        RawValue: 2687
-      AirdropChance:
-        RawValue: 19661
-      AirdropStartTimeRange:
-        Value1:
-          RawValue: 524288
-        Value2:
-          RawValue: 655360
-      AirdropDropDuration:
-        RawValue: 655360
-      AirdropChest: 19
-      IsStormAnchored: 0
-    - Key: -1911490512
-      Step: 4
-      Map: 115
-      DelayTime:
-        RawValue: 327680
-      WarningTime:
-        RawValue: 786432
-      ShrinkingTime:
-        RawValue: 1310720
-      ShrinkingSizeK:
-        RawValue: 42598
-      NewSafeSpaceAreaSizeK:
-        RawValue: 131072
-      MaxHealthDamage:
-        RawValue: 3342
-      AirdropChance:
-        RawValue: 0
-      AirdropStartTimeRange:
-        Value1:
-          RawValue: 524288
-        Value2:
-          RawValue: 655360
-      AirdropDropDuration:
-        RawValue: 655360
-      AirdropChest: 19
-      IsStormAnchored: 0
-    - Key: -1432789728
-      Step: 5
-      Map: 115
-      DelayTime:
-        RawValue: 327680
-      WarningTime:
-        RawValue: 655360
-      ShrinkingTime:
-        RawValue: 786432
-      ShrinkingSizeK:
-        RawValue: 32768
-      NewSafeSpaceAreaSizeK:
-        RawValue: 131072
-      MaxHealthDamage:
-        RawValue: 3998
-      AirdropChance:
-        RawValue: 0
-      AirdropStartTimeRange:
-        Value1:
-          RawValue: 0
-        Value2:
-          RawValue: 0
-      AirdropDropDuration:
-        RawValue: 0
-      AirdropChest: 13
-      IsStormAnchored: 1
-    - Key: -954088944
-      Step: 6
-      Map: 115
-      DelayTime:
-        RawValue: 327680
-      WarningTime:
-        RawValue: 655360
-      ShrinkingTime:
-        RawValue: 6553600
-      ShrinkingSizeK:
-        RawValue: 1966
-      NewSafeSpaceAreaSizeK:
-        RawValue: 131072
-      MaxHealthDamage:
-        RawValue: 6619
-      AirdropChance:
-        RawValue: 0
-      AirdropStartTimeRange:
-        Value1:
-          RawValue: 0
-        Value2:
-          RawValue: 65536
-      AirdropDropDuration:
-        RawValue: 0
-      AirdropChest: 13
-      IsStormAnchored: 1
-    - Key: -1898150752
-      Step: 7
-      Map: 115
-      DelayTime:
-        RawValue: 655294464
-      WarningTime:
-        RawValue: 0
-      ShrinkingTime:
-        RawValue: 0
-      ShrinkingSizeK:
-        RawValue: 66
-      NewSafeSpaceAreaSizeK:
-        RawValue: 131072
-      MaxHealthDamage:
-        RawValue: 7930
-      AirdropChance:
-        RawValue: 0
-      AirdropStartTimeRange:
-        Value1:
-          RawValue: 0
-        Value2:
-          RawValue: 0
-      AirdropDropDuration:
-        RawValue: 0
-      AirdropChest: 13
-      IsStormAnchored: 1
-    - Key: -1419449968
-      Step: 1
-      Map: 197
-      DelayTime:
-        RawValue: 655360
-      WarningTime:
-        RawValue: 655360
-      ShrinkingTime:
-        RawValue: 1310720
-      ShrinkingSizeK:
-        RawValue: 39322
-      NewSafeSpaceAreaSizeK:
-        RawValue: 65536
-      MaxHealthDamage:
-        RawValue: 2032
-      AirdropChance:
-        RawValue: 32768
-      AirdropStartTimeRange:
-        Value1:
-          RawValue: 851968
-        Value2:
-          RawValue: 1114112
-      AirdropDropDuration:
-        RawValue: 327680
-      AirdropChest: 19
-      IsStormAnchored: 0
-    - Key: -940749184
-      Step: 2
-      Map: 197
-      DelayTime:
-        RawValue: 327680
-      WarningTime:
-        RawValue: 655360
-      ShrinkingTime:
-        RawValue: 655360
-      ShrinkingSizeK:
-        RawValue: 32768
-      NewSafeSpaceAreaSizeK:
-        RawValue: 131072
-      MaxHealthDamage:
-        RawValue: 3998
-      AirdropChance:
-        RawValue: 32768
-      AirdropStartTimeRange:
-        Value1:
-          RawValue: 524288
-        Value2:
-          RawValue: 786432
-      AirdropDropDuration:
-        RawValue: 327680
-      AirdropChest: 19
-      IsStormAnchored: 0
-    - Key: -462048400
-      Step: 3
-      Map: 197
-      DelayTime:
-        RawValue: 327680
-      WarningTime:
-        RawValue: 655360
-      ShrinkingTime:
-        RawValue: 655360
-      ShrinkingSizeK:
-        RawValue: 32768
-      NewSafeSpaceAreaSizeK:
-        RawValue: 131072
-      MaxHealthDamage:
-        RawValue: 6619
-      AirdropChance:
-        RawValue: 0
-      AirdropStartTimeRange:
-        Value1:
-          RawValue: 0
-        Value2:
-          RawValue: 0
-      AirdropDropDuration:
-        RawValue: 0
-      AirdropChest: 13
-      IsStormAnchored: 0
-    - Key: 16652384
-      Step: 4
-      Map: 197
-      DelayTime:
-        RawValue: 327680
-      WarningTime:
-        RawValue: 655360
-      ShrinkingTime:
-        RawValue: 655360
-      ShrinkingSizeK:
-        RawValue: 32768
-      NewSafeSpaceAreaSizeK:
-        RawValue: 131072
-      MaxHealthDamage:
-        RawValue: 7930
-      AirdropChance:
-        RawValue: 0
-      AirdropStartTimeRange:
-        Value1:
-          RawValue: 0
-        Value2:
-          RawValue: 0
-      AirdropDropDuration:
-        RawValue: 0
-      AirdropChest: 13
-      IsStormAnchored: 0
-    - Key: 495353168
-      Step: 5
-      Map: 197
-      DelayTime:
-        RawValue: 327680
-      WarningTime:
-        RawValue: 655360
-      ShrinkingTime:
-        RawValue: 655360
-      ShrinkingSizeK:
-        RawValue: 32768
-      NewSafeSpaceAreaSizeK:
-        RawValue: 131072
-      MaxHealthDamage:
-        RawValue: 7930
-      AirdropChance:
-        RawValue: 0
-      AirdropStartTimeRange:
-        Value1:
-          RawValue: 0
-        Value2:
-          RawValue: 0
-      AirdropDropDuration:
-        RawValue: 0
-      AirdropChest: 13
-      IsStormAnchored: 0
-    - Key: 974053952
-      Step: 6
-      Map: 197
-      DelayTime:
-        RawValue: 655294464
-      WarningTime:
-        RawValue: 0
-      ShrinkingTime:
-        RawValue: 0
-      ShrinkingSizeK:
-        RawValue: 66
-      NewSafeSpaceAreaSizeK:
-        RawValue: 131072
-      MaxHealthDamage:
-        RawValue: 7930
-      AirdropChance:
-        RawValue: 0
-      AirdropStartTimeRange:
-        Value1:
-          RawValue: 0
-        Value2:
-          RawValue: 0
-      AirdropDropDuration:
-        RawValue: 0
-      AirdropChest: 13
-      IsStormAnchored: 0
-    - Key: 1452754736
-      Step: 1
-      Map: 198
-      DelayTime:
+  m_EditorClassIdentifier:
+  Identifier:
+    Path: AddressableResources/Configs/ShrinkingCircleConfigs
+    Guid:
+      Value: 3083889286552435639
+  QuantumConfigs:
+  - Key: -26863472
+    Step: 1
+    Map: 108
+    DelayTime:
+      RawValue: 655360
+    WarningTime:
+      RawValue: 983040
+    ShrinkingTime:
+      RawValue: 2949120
+    ShrinkingSizeK:
+      RawValue: 32768
+    NewSafeSpaceAreaSizeK:
+      RawValue: 65536
+    MaxHealthDamage:
+      RawValue: 2032
+    AirdropChance:
+      RawValue: 32768
+    AirdropStartTimeRange:
+      Value1:
         RawValue: 851968
-      WarningTime:
+      Value2:
+        RawValue: 1441792
+    AirdropDropDuration:
+      RawValue: 524288
+    AirdropChest: 19
+    IsStormAnchored: 0
+  - Key: 451837312
+    Step: 2
+    Map: 108
+    DelayTime:
+      RawValue: 524288
+    WarningTime:
+      RawValue: 786432
+    ShrinkingTime:
+      RawValue: 1966080
+    ShrinkingSizeK:
+      RawValue: 19661
+    NewSafeSpaceAreaSizeK:
+      RawValue: 131072
+    MaxHealthDamage:
+      RawValue: 3998
+    AirdropChance:
+      RawValue: 32768
+    AirdropStartTimeRange:
+      Value1:
         RawValue: 655360
-      ShrinkingTime:
-        RawValue: 1310720
-      ShrinkingSizeK:
-        RawValue: 39322
-      NewSafeSpaceAreaSizeK:
-        RawValue: 65536
-      MaxHealthDamage:
-        RawValue: 2032
-      AirdropChance:
-        RawValue: 32768
-      AirdropStartTimeRange:
-        Value1:
-          RawValue: 851968
-        Value2:
-          RawValue: 1114112
-      AirdropDropDuration:
+      Value2:
+        RawValue: 851968
+    AirdropDropDuration:
+      RawValue: 524288
+    AirdropChest: 19
+    IsStormAnchored: 0
+  - Key: 930538096
+    Step: 3
+    Map: 108
+    DelayTime:
+      RawValue: 327680
+    WarningTime:
+      RawValue: 655360
+    ShrinkingTime:
+      RawValue: 1638400
+    ShrinkingSizeK:
+      RawValue: 66
+    NewSafeSpaceAreaSizeK:
+      RawValue: 131072
+    MaxHealthDamage:
+      RawValue: 6619
+    AirdropChance:
+      RawValue: 0
+    AirdropStartTimeRange:
+      Value1:
+        RawValue: 0
+      Value2:
+        RawValue: 0
+    AirdropDropDuration:
+      RawValue: 0
+    AirdropChest: 13
+    IsStormAnchored: 0
+  - Key: 1409238880
+    Step: 4
+    Map: 108
+    DelayTime:
+      RawValue: 655294464
+    WarningTime:
+      RawValue: 0
+    ShrinkingTime:
+      RawValue: 0
+    ShrinkingSizeK:
+      RawValue: 66
+    NewSafeSpaceAreaSizeK:
+      RawValue: 131072
+    MaxHealthDamage:
+      RawValue: 7930
+    AirdropChance:
+      RawValue: 0
+    AirdropStartTimeRange:
+      Value1:
+        RawValue: 0
+      Value2:
+        RawValue: 0
+    AirdropDropDuration:
+      RawValue: 0
+    AirdropChest: 13
+    IsStormAnchored: 0
+  - Key: 1887939664
+    Step: 1
+    Map: 9
+    DelayTime:
+      RawValue: 1310720
+    WarningTime:
+      RawValue: 2621440
+    ShrinkingTime:
+      RawValue: 3932160
+    ShrinkingSizeK:
+      RawValue: 36045
+    NewSafeSpaceAreaSizeK:
+      RawValue: 65536
+    MaxHealthDamage:
+      RawValue: 1376
+    AirdropChance:
+      RawValue: 39322
+    AirdropStartTimeRange:
+      Value1:
+        RawValue: 851968
+      Value2:
+        RawValue: 1245184
+    AirdropDropDuration:
+      RawValue: 983040
+    AirdropChest: 19
+    IsStormAnchored: 0
+  - Key: -1928326848
+    Step: 2
+    Map: 9
+    DelayTime:
+      RawValue: 983040
+    WarningTime:
+      RawValue: 1638400
+    ShrinkingTime:
+      RawValue: 1966080
+    ShrinkingSizeK:
+      RawValue: 32768
+    NewSafeSpaceAreaSizeK:
+      RawValue: 131072
+    MaxHealthDamage:
+      RawValue: 2032
+    AirdropChance:
+      RawValue: 39322
+    AirdropStartTimeRange:
+      Value1:
         RawValue: 327680
-      AirdropChest: 19
-      IsStormAnchored: 0
-    - Key: 1931455520
-      Step: 2
-      Map: 198
-      DelayTime:
+      Value2:
+        RawValue: 917504
+    AirdropDropDuration:
+      RawValue: 983040
+    AirdropChest: 19
+    IsStormAnchored: 0
+  - Key: -1449626064
+    Step: 3
+    Map: 9
+    DelayTime:
+      RawValue: 983040
+    WarningTime:
+      RawValue: 983040
+    ShrinkingTime:
+      RawValue: 983040
+    ShrinkingSizeK:
+      RawValue: 19661
+    NewSafeSpaceAreaSizeK:
+      RawValue: 131072
+    MaxHealthDamage:
+      RawValue: 2687
+    AirdropChance:
+      RawValue: 0
+    AirdropStartTimeRange:
+      Value1:
+        RawValue: 0
+      Value2:
+        RawValue: 0
+    AirdropDropDuration:
+      RawValue: 0
+    AirdropChest: 13
+    IsStormAnchored: 0
+  - Key: -970925280
+    Step: 4
+    Map: 9
+    DelayTime:
+      RawValue: 983040
+    WarningTime:
+      RawValue: 0
+    ShrinkingTime:
+      RawValue: 2949120
+    ShrinkingSizeK:
+      RawValue: 66
+    NewSafeSpaceAreaSizeK:
+      RawValue: 131072
+    MaxHealthDamage:
+      RawValue: 3342
+    AirdropChance:
+      RawValue: 0
+    AirdropStartTimeRange:
+      Value1:
+        RawValue: 0
+      Value2:
+        RawValue: 0
+    AirdropDropDuration:
+      RawValue: 0
+    AirdropChest: 13
+    IsStormAnchored: 0
+  - Key: -492224496
+    Step: 5
+    Map: 9
+    DelayTime:
+      RawValue: 655294464
+    WarningTime:
+      RawValue: 0
+    ShrinkingTime:
+      RawValue: 0
+    ShrinkingSizeK:
+      RawValue: 66
+    NewSafeSpaceAreaSizeK:
+      RawValue: 131072
+    MaxHealthDamage:
+      RawValue: 3998
+    AirdropChance:
+      RawValue: 0
+    AirdropStartTimeRange:
+      Value1:
+        RawValue: 0
+      Value2:
+        RawValue: 0
+    AirdropDropDuration:
+      RawValue: 0
+    AirdropChest: 13
+    IsStormAnchored: 0
+  - Key: -13523712
+    Step: 1
+    Map: 65
+    DelayTime:
+      RawValue: 2293760
+    WarningTime:
+      RawValue: 1310720
+    ShrinkingTime:
+      RawValue: 3932160
+    ShrinkingSizeK:
+      RawValue: 39322
+    NewSafeSpaceAreaSizeK:
+      RawValue: 65536
+    MaxHealthDamage:
+      RawValue: 1376
+    AirdropChance:
+      RawValue: 52429
+    AirdropStartTimeRange:
+      Value1:
+        RawValue: 2490368
+      Value2:
+        RawValue: 2686976
+    AirdropDropDuration:
+      RawValue: 655360
+    AirdropChest: 19
+    IsStormAnchored: 0
+  - Key: 465177072
+    Step: 2
+    Map: 65
+    DelayTime:
+      RawValue: 327680
+    WarningTime:
+      RawValue: 983040
+    ShrinkingTime:
+      RawValue: 2621440
+    ShrinkingSizeK:
+      RawValue: 49152
+    NewSafeSpaceAreaSizeK:
+      RawValue: 131072
+    MaxHealthDamage:
+      RawValue: 2032
+    AirdropChance:
+      RawValue: 52429
+    AirdropStartTimeRange:
+      Value1:
+        RawValue: 131072
+      Value2:
+        RawValue: 327680
+    AirdropDropDuration:
+      RawValue: 524288
+    AirdropChest: 19
+    IsStormAnchored: 0
+  - Key: 943877856
+    Step: 3
+    Map: 65
+    DelayTime:
+      RawValue: 327680
+    WarningTime:
+      RawValue: 983040
+    ShrinkingTime:
+      RawValue: 2293760
+    ShrinkingSizeK:
+      RawValue: 45875
+    NewSafeSpaceAreaSizeK:
+      RawValue: 131072
+    MaxHealthDamage:
+      RawValue: 2687
+    AirdropChance:
+      RawValue: 52429
+    AirdropStartTimeRange:
+      Value1:
+        RawValue: 196608
+      Value2:
         RawValue: 524288
-      WarningTime:
-        RawValue: 655360
-      ShrinkingTime:
-        RawValue: 655360
-      ShrinkingSizeK:
-        RawValue: 32768
-      NewSafeSpaceAreaSizeK:
+    AirdropDropDuration:
+      RawValue: 524288
+    AirdropChest: 19
+    IsStormAnchored: 0
+  - Key: 1422578640
+    Step: 4
+    Map: 65
+    DelayTime:
+      RawValue: 327680
+    WarningTime:
+      RawValue: 983040
+    ShrinkingTime:
+      RawValue: 1638400
+    ShrinkingSizeK:
+      RawValue: 42598
+    NewSafeSpaceAreaSizeK:
+      RawValue: 131072
+    MaxHealthDamage:
+      RawValue: 3342
+    AirdropChance:
+      RawValue: 52429
+    AirdropStartTimeRange:
+      Value1:
+        RawValue: 196608
+      Value2:
+        RawValue: 524288
+    AirdropDropDuration:
+      RawValue: 262144
+    AirdropChest: 19
+    IsStormAnchored: 0
+  - Key: 1901279424
+    Step: 5
+    Map: 65
+    DelayTime:
+      RawValue: 327680
+    WarningTime:
+      RawValue: 983040
+    ShrinkingTime:
+      RawValue: 983040
+    ShrinkingSizeK:
+      RawValue: 32768
+    NewSafeSpaceAreaSizeK:
+      RawValue: 131072
+    MaxHealthDamage:
+      RawValue: 3998
+    AirdropChance:
+      RawValue: 0
+    AirdropStartTimeRange:
+      Value1:
+        RawValue: 0
+      Value2:
+        RawValue: 0
+    AirdropDropDuration:
+      RawValue: 0
+    AirdropChest: 13
+    IsStormAnchored: 0
+  - Key: -1914987088
+    Step: 6
+    Map: 65
+    DelayTime:
+      RawValue: 327680
+    WarningTime:
+      RawValue: 655360
+    ShrinkingTime:
+      RawValue: 655360
+    ShrinkingSizeK:
+      RawValue: 32768
+    NewSafeSpaceAreaSizeK:
+      RawValue: 131072
+    MaxHealthDamage:
+      RawValue: 3998
+    AirdropChance:
+      RawValue: 0
+    AirdropStartTimeRange:
+      Value1:
+        RawValue: 0
+      Value2:
+        RawValue: 65536
+    AirdropDropDuration:
+      RawValue: 0
+    AirdropChest: 13
+    IsStormAnchored: 0
+  - Key: -1436286304
+    Step: 7
+    Map: 65
+    DelayTime:
+      RawValue: 327680
+    WarningTime:
+      RawValue: 655360
+    ShrinkingTime:
+      RawValue: 1966080
+    ShrinkingSizeK:
+      RawValue: 66
+    NewSafeSpaceAreaSizeK:
+      RawValue: 131072
+    MaxHealthDamage:
+      RawValue: 3998
+    AirdropChance:
+      RawValue: 0
+    AirdropStartTimeRange:
+      Value1:
+        RawValue: 0
+      Value2:
+        RawValue: 0
+    AirdropDropDuration:
+      RawValue: 0
+    AirdropChest: 13
+    IsStormAnchored: 0
+  - Key: -957585520
+    Step: 8
+    Map: 65
+    DelayTime:
+      RawValue: 655294464
+    WarningTime:
+      RawValue: 0
+    ShrinkingTime:
+      RawValue: 0
+    ShrinkingSizeK:
+      RawValue: 66
+    NewSafeSpaceAreaSizeK:
+      RawValue: 131072
+    MaxHealthDamage:
+      RawValue: 3998
+    AirdropChance:
+      RawValue: 0
+    AirdropStartTimeRange:
+      Value1:
+        RawValue: 0
+      Value2:
+        RawValue: 0
+    AirdropDropDuration:
+      RawValue: 0
+    AirdropChest: 13
+    IsStormAnchored: 0
+  - Key: -478884736
+    Step: 1
+    Map: 113
+    DelayTime:
+      RawValue: 983040
+    WarningTime:
+      RawValue: 1310720
+    ShrinkingTime:
+      RawValue: 3932160
+    ShrinkingSizeK:
+      RawValue: 32768
+    NewSafeSpaceAreaSizeK:
+      RawValue: 65536
+    MaxHealthDamage:
+      RawValue: 1376
+    AirdropChance:
+      RawValue: 32768
+    AirdropStartTimeRange:
+      Value1:
+        RawValue: 1179648
+      Value2:
+        RawValue: 1835008
+    AirdropDropDuration:
+      RawValue: 524288
+    AirdropChest: 19
+    IsStormAnchored: 0
+  - Key: -183952
+    Step: 2
+    Map: 113
+    DelayTime:
+      RawValue: 983040
+    WarningTime:
+      RawValue: 1310720
+    ShrinkingTime:
+      RawValue: 1966080
+    ShrinkingSizeK:
+      RawValue: 19661
+    NewSafeSpaceAreaSizeK:
+      RawValue: 131072
+    MaxHealthDamage:
+      RawValue: 3342
+    AirdropChance:
+      RawValue: 0
+    AirdropStartTimeRange:
+      Value1:
+        RawValue: 0
+      Value2:
+        RawValue: 0
+    AirdropDropDuration:
+      RawValue: 0
+    AirdropChest: 13
+    IsStormAnchored: 0
+  - Key: 478516832
+    Step: 3
+    Map: 113
+    DelayTime:
+      RawValue: 983040
+    WarningTime:
+      RawValue: 1310720
+    ShrinkingTime:
+      RawValue: 1310720
+    ShrinkingSizeK:
+      RawValue: 16384
+    NewSafeSpaceAreaSizeK:
+      RawValue: 131072
+    MaxHealthDamage:
+      RawValue: 5308
+    AirdropChance:
+      RawValue: 32768
+    AirdropStartTimeRange:
+      Value1:
+        RawValue: 1179648
+      Value2:
+        RawValue: 1835008
+    AirdropDropDuration:
+      RawValue: 524288
+    AirdropChest: 19
+    IsStormAnchored: 0
+  - Key: 957217616
+    Step: 4
+    Map: 113
+    DelayTime:
+      RawValue: 327680
+    WarningTime:
+      RawValue: 655360
+    ShrinkingTime:
+      RawValue: 1638400
+    ShrinkingSizeK:
+      RawValue: 66
+    NewSafeSpaceAreaSizeK:
+      RawValue: 131072
+    MaxHealthDamage:
+      RawValue: 6619
+    AirdropChance:
+      RawValue: 0
+    AirdropStartTimeRange:
+      Value1:
+        RawValue: 0
+      Value2:
+        RawValue: 0
+    AirdropDropDuration:
+      RawValue: 0
+    AirdropChest: 13
+    IsStormAnchored: 0
+  - Key: 1435918400
+    Step: 5
+    Map: 113
+    DelayTime:
+      RawValue: 655294464
+    WarningTime:
+      RawValue: 0
+    ShrinkingTime:
+      RawValue: 0
+    ShrinkingSizeK:
+      RawValue: 66
+    NewSafeSpaceAreaSizeK:
+      RawValue: 131072
+    MaxHealthDamage:
+      RawValue: 7930
+    AirdropChance:
+      RawValue: 0
+    AirdropStartTimeRange:
+      Value1:
+        RawValue: 0
+      Value2:
+        RawValue: 0
+    AirdropDropDuration:
+      RawValue: 0
+    AirdropChest: 13
+    IsStormAnchored: 0
+  - Key: 1914619184
+    Step: 1
+    Map: 114
+    DelayTime:
+      RawValue: 1310720
+    WarningTime:
+      RawValue: 655360
+    ShrinkingTime:
+      RawValue: 2293760
+    ShrinkingSizeK:
+      RawValue: 36045
+    NewSafeSpaceAreaSizeK:
+      RawValue: 65536
+    MaxHealthDamage:
+      RawValue: 1376
+    AirdropChance:
+      RawValue: 52429
+    AirdropStartTimeRange:
+      Value1:
+        RawValue: 2490368
+      Value2:
+        RawValue: 2686976
+    AirdropDropDuration:
+      RawValue: 655360
+    AirdropChest: 19
+    IsStormAnchored: 0
+  - Key: -1901647328
+    Step: 2
+    Map: 114
+    DelayTime:
+      RawValue: 327680
+    WarningTime:
+      RawValue: 655360
+    ShrinkingTime:
+      RawValue: 1638400
+    ShrinkingSizeK:
+      RawValue: 49152
+    NewSafeSpaceAreaSizeK:
+      RawValue: 131072
+    MaxHealthDamage:
+      RawValue: 2032
+    AirdropChance:
+      RawValue: 52429
+    AirdropStartTimeRange:
+      Value1:
         RawValue: 131072
-      MaxHealthDamage:
-        RawValue: 3998
-      AirdropChance:
-        RawValue: 32768
-      AirdropStartTimeRange:
-        Value1:
-          RawValue: 524288
-        Value2:
-          RawValue: 786432
-      AirdropDropDuration:
+      Value2:
         RawValue: 327680
-      AirdropChest: 19
-      IsStormAnchored: 0
-    - Key: -1884810992
-      Step: 3
-      Map: 198
-      DelayTime:
-        RawValue: 327680
-      WarningTime:
-        RawValue: 655360
-      ShrinkingTime:
-        RawValue: 655360
-      ShrinkingSizeK:
-        RawValue: 32768
-      NewSafeSpaceAreaSizeK:
-        RawValue: 131072
-      MaxHealthDamage:
-        RawValue: 6619
-      AirdropChance:
-        RawValue: 0
-      AirdropStartTimeRange:
-        Value1:
-          RawValue: 0
-        Value2:
-          RawValue: 0
-      AirdropDropDuration:
-        RawValue: 0
-      AirdropChest: 13
-      IsStormAnchored: 0
-    - Key: -1406110208
-      Step: 4
-      Map: 198
-      DelayTime:
-        RawValue: 327680
-      WarningTime:
-        RawValue: 655360
-      ShrinkingTime:
-        RawValue: 655360
-      ShrinkingSizeK:
-        RawValue: 32768
-      NewSafeSpaceAreaSizeK:
-        RawValue: 131072
-      MaxHealthDamage:
-        RawValue: 7930
-      AirdropChance:
-        RawValue: 0
-      AirdropStartTimeRange:
-        Value1:
-          RawValue: 0
-        Value2:
-          RawValue: 0
-      AirdropDropDuration:
-        RawValue: 0
-      AirdropChest: 13
-      IsStormAnchored: 0
-    - Key: 713499888
-      Step: 5
-      Map: 198
-      DelayTime:
-        RawValue: 327680
-      WarningTime:
-        RawValue: 655360
-      ShrinkingTime:
-        RawValue: 655360
-      ShrinkingSizeK:
-        RawValue: 32768
-      NewSafeSpaceAreaSizeK:
-        RawValue: 131072
-      MaxHealthDamage:
-        RawValue: 7930
-      AirdropChance:
-        RawValue: 0
-      AirdropStartTimeRange:
-        Value1:
-          RawValue: 0
-        Value2:
-          RawValue: 0
-      AirdropDropDuration:
-        RawValue: 0
-      AirdropChest: 13
-      IsStormAnchored: 0
-    - Key: 1192200672
-      Step: 6
-      Map: 198
-      DelayTime:
-        RawValue: 655294464
-      WarningTime:
-        RawValue: 0
-      ShrinkingTime:
-        RawValue: 0
-      ShrinkingSizeK:
-        RawValue: 66
-      NewSafeSpaceAreaSizeK:
-        RawValue: 131072
-      MaxHealthDamage:
-        RawValue: 7930
-      AirdropChance:
-        RawValue: 0
-      AirdropStartTimeRange:
-        Value1:
-          RawValue: 0
-        Value2:
-          RawValue: 0
-      AirdropDropDuration:
-        RawValue: 0
-      AirdropChest: 13
-      IsStormAnchored: 0
-    - Key: 1670901456
-      Step: 1
-      Map: 200
-      DelayTime:
-        RawValue: 1966080
-      WarningTime:
-        RawValue: 2293760
-      ShrinkingTime:
-        RawValue: 4587520
-      ShrinkingSizeK:
-        RawValue: 39322
-      NewSafeSpaceAreaSizeK:
-        RawValue: 55706
-      MaxHealthDamage:
-        RawValue: 1376
-      AirdropChance:
-        RawValue: 52429
-      AirdropStartTimeRange:
-        Value1:
-          RawValue: 4128768
-        Value2:
-          RawValue: 4259840
-      AirdropDropDuration:
-        RawValue: 655360
-      AirdropChest: 19
-      IsStormAnchored: 0
-    - Key: -2145365056
-      Step: 2
-      Map: 200
-      DelayTime:
+    AirdropDropDuration:
+      RawValue: 524288
+    AirdropChest: 19
+    IsStormAnchored: 0
+  - Key: -1422946544
+    Step: 3
+    Map: 114
+    DelayTime:
+      RawValue: 327680
+    WarningTime:
+      RawValue: 655360
+    ShrinkingTime:
+      RawValue: 1310720
+    ShrinkingSizeK:
+      RawValue: 45875
+    NewSafeSpaceAreaSizeK:
+      RawValue: 131072
+    MaxHealthDamage:
+      RawValue: 2687
+    AirdropChance:
+      RawValue: 52429
+    AirdropStartTimeRange:
+      Value1:
         RawValue: 196608
-      WarningTime:
-        RawValue: 786432
-      ShrinkingTime:
-        RawValue: 3932160
-      ShrinkingSizeK:
-        RawValue: 39322
-      NewSafeSpaceAreaSizeK:
-        RawValue: 98304
-      MaxHealthDamage:
-        RawValue: 2032
-      AirdropChance:
-        RawValue: 13107
-      AirdropStartTimeRange:
-        Value1:
-          RawValue: 393216
-        Value2:
-          RawValue: 524288
-      AirdropDropDuration:
+      Value2:
+        RawValue: 524288
+    AirdropDropDuration:
+      RawValue: 524288
+    AirdropChest: 19
+    IsStormAnchored: 0
+  - Key: -944245760
+    Step: 4
+    Map: 114
+    DelayTime:
+      RawValue: 327680
+    WarningTime:
+      RawValue: 655360
+    ShrinkingTime:
+      RawValue: 983040
+    ShrinkingSizeK:
+      RawValue: 42598
+    NewSafeSpaceAreaSizeK:
+      RawValue: 131072
+    MaxHealthDamage:
+      RawValue: 3998
+    AirdropChance:
+      RawValue: 52429
+    AirdropStartTimeRange:
+      Value1:
+        RawValue: 196608
+      Value2:
+        RawValue: 524288
+    AirdropDropDuration:
+      RawValue: 262144
+    AirdropChest: 19
+    IsStormAnchored: 0
+  - Key: 934034672
+    Step: 5
+    Map: 114
+    DelayTime:
+      RawValue: 327680
+    WarningTime:
+      RawValue: 655360
+    ShrinkingTime:
+      RawValue: 655360
+    ShrinkingSizeK:
+      RawValue: 32768
+    NewSafeSpaceAreaSizeK:
+      RawValue: 131072
+    MaxHealthDamage:
+      RawValue: 5308
+    AirdropChance:
+      RawValue: 0
+    AirdropStartTimeRange:
+      Value1:
+        RawValue: 0
+      Value2:
+        RawValue: 0
+    AirdropDropDuration:
+      RawValue: 0
+    AirdropChest: 13
+    IsStormAnchored: 0
+  - Key: 1412735456
+    Step: 6
+    Map: 114
+    DelayTime:
+      RawValue: 327680
+    WarningTime:
+      RawValue: 655360
+    ShrinkingTime:
+      RawValue: 655360
+    ShrinkingSizeK:
+      RawValue: 32768
+    NewSafeSpaceAreaSizeK:
+      RawValue: 131072
+    MaxHealthDamage:
+      RawValue: 6619
+    AirdropChance:
+      RawValue: 0
+    AirdropStartTimeRange:
+      Value1:
+        RawValue: 0
+      Value2:
+        RawValue: 65536
+    AirdropDropDuration:
+      RawValue: 0
+    AirdropChest: 13
+    IsStormAnchored: 0
+  - Key: 1891436240
+    Step: 7
+    Map: 114
+    DelayTime:
+      RawValue: 327680
+    WarningTime:
+      RawValue: 655360
+    ShrinkingTime:
+      RawValue: 655360
+    ShrinkingSizeK:
+      RawValue: 45875
+    NewSafeSpaceAreaSizeK:
+      RawValue: 131072
+    MaxHealthDamage:
+      RawValue: 7930
+    AirdropChance:
+      RawValue: 0
+    AirdropStartTimeRange:
+      Value1:
+        RawValue: 0
+      Value2:
+        RawValue: 65536
+    AirdropDropDuration:
+      RawValue: 0
+    AirdropChest: 13
+    IsStormAnchored: 0
+  - Key: -1924830272
+    Step: 8
+    Map: 114
+    DelayTime:
+      RawValue: 327680
+    WarningTime:
+      RawValue: 655360
+    ShrinkingTime:
+      RawValue: 655360
+    ShrinkingSizeK:
+      RawValue: 52429
+    NewSafeSpaceAreaSizeK:
+      RawValue: 131072
+    MaxHealthDamage:
+      RawValue: 7930
+    AirdropChance:
+      RawValue: 0
+    AirdropStartTimeRange:
+      Value1:
+        RawValue: 0
+      Value2:
+        RawValue: 65536
+    AirdropDropDuration:
+      RawValue: 0
+    AirdropChest: 13
+    IsStormAnchored: 0
+  - Key: -1446129488
+    Step: 9
+    Map: 114
+    DelayTime:
+      RawValue: 327680
+    WarningTime:
+      RawValue: 655360
+    ShrinkingTime:
+      RawValue: 655360
+    ShrinkingSizeK:
+      RawValue: 52429
+    NewSafeSpaceAreaSizeK:
+      RawValue: 131072
+    MaxHealthDamage:
+      RawValue: 7930
+    AirdropChance:
+      RawValue: 0
+    AirdropStartTimeRange:
+      Value1:
+        RawValue: 0
+      Value2:
+        RawValue: 65536
+    AirdropDropDuration:
+      RawValue: 0
+    AirdropChest: 13
+    IsStormAnchored: 0
+  - Key: -967428704
+    Step: 10
+    Map: 114
+    DelayTime:
+      RawValue: 327680
+    WarningTime:
+      RawValue: 655360
+    ShrinkingTime:
+      RawValue: 655360
+    ShrinkingSizeK:
+      RawValue: 52429
+    NewSafeSpaceAreaSizeK:
+      RawValue: 131072
+    MaxHealthDamage:
+      RawValue: 7930
+    AirdropChance:
+      RawValue: 0
+    AirdropStartTimeRange:
+      Value1:
+        RawValue: 0
+      Value2:
+        RawValue: 65536
+    AirdropDropDuration:
+      RawValue: 0
+    AirdropChest: 13
+    IsStormAnchored: 0
+  - Key: -488727920
+    Step: 11
+    Map: 114
+    DelayTime:
+      RawValue: 327680
+    WarningTime:
+      RawValue: 655360
+    ShrinkingTime:
+      RawValue: 655360
+    ShrinkingSizeK:
+      RawValue: 52429
+    NewSafeSpaceAreaSizeK:
+      RawValue: 131072
+    MaxHealthDamage:
+      RawValue: 7930
+    AirdropChance:
+      RawValue: 0
+    AirdropStartTimeRange:
+      Value1:
+        RawValue: 0
+      Value2:
+        RawValue: 65536
+    AirdropDropDuration:
+      RawValue: 0
+    AirdropChest: 13
+    IsStormAnchored: 0
+  - Key: -10027136
+    Step: 12
+    Map: 114
+    DelayTime:
+      RawValue: 327680
+    WarningTime:
+      RawValue: 655360
+    ShrinkingTime:
+      RawValue: 1966080
+    ShrinkingSizeK:
+      RawValue: 66
+    NewSafeSpaceAreaSizeK:
+      RawValue: 131072
+    MaxHealthDamage:
+      RawValue: 7930
+    AirdropChance:
+      RawValue: 0
+    AirdropStartTimeRange:
+      Value1:
+        RawValue: 0
+      Value2:
+        RawValue: 0
+    AirdropDropDuration:
+      RawValue: 0
+    AirdropChest: 13
+    IsStormAnchored: 0
+  - Key: 468673648
+    Step: 13
+    Map: 114
+    DelayTime:
+      RawValue: 655294464
+    WarningTime:
+      RawValue: 0
+    ShrinkingTime:
+      RawValue: 0
+    ShrinkingSizeK:
+      RawValue: 66
+    NewSafeSpaceAreaSizeK:
+      RawValue: 131072
+    MaxHealthDamage:
+      RawValue: 7930
+    AirdropChance:
+      RawValue: 0
+    AirdropStartTimeRange:
+      Value1:
+        RawValue: 0
+      Value2:
+        RawValue: 0
+    AirdropDropDuration:
+      RawValue: 0
+    AirdropChest: 13
+    IsStormAnchored: 0
+  - Key: 947374432
+    Step: 1
+    Map: 115
+    DelayTime:
+      RawValue: 983040
+    WarningTime:
+      RawValue: 1310720
+    ShrinkingTime:
+      RawValue: 3276800
+    ShrinkingSizeK:
+      RawValue: 39322
+    NewSafeSpaceAreaSizeK:
+      RawValue: 65536
+    MaxHealthDamage:
+      RawValue: 1376
+    AirdropChance:
+      RawValue: 52429
+    AirdropStartTimeRange:
+      Value1:
+        RawValue: 2490368
+      Value2:
+        RawValue: 2686976
+    AirdropDropDuration:
+      RawValue: 655360
+    AirdropChest: 19
+    IsStormAnchored: 0
+  - Key: 1426075216
+    Step: 2
+    Map: 115
+    DelayTime:
+      RawValue: 327680
+    WarningTime:
+      RawValue: 786432
+    ShrinkingTime:
+      RawValue: 2293760
+    ShrinkingSizeK:
+      RawValue: 49152
+    NewSafeSpaceAreaSizeK:
+      RawValue: 131072
+    MaxHealthDamage:
+      RawValue: 2032
+    AirdropChance:
+      RawValue: 13107
+    AirdropStartTimeRange:
+      Value1:
+        RawValue: 524288
+      Value2:
         RawValue: 655360
-      AirdropChest: 19
-      IsStormAnchored: 0
-    - Key: -1666664272
-      Step: 3
-      Map: 200
-      DelayTime:
-        RawValue: 196608
-      WarningTime:
-        RawValue: 786432
-      ShrinkingTime:
-        RawValue: 2621440
-      ShrinkingSizeK:
-        RawValue: 39322
-      NewSafeSpaceAreaSizeK:
-        RawValue: 131072
-      MaxHealthDamage:
-        RawValue: 2687
-      AirdropChance:
-        RawValue: 52429
-      AirdropStartTimeRange:
-        Value1:
-          RawValue: 393216
-        Value2:
-          RawValue: 524288
-      AirdropDropDuration:
+    AirdropDropDuration:
+      RawValue: 655360
+    AirdropChest: 19
+    IsStormAnchored: 0
+  - Key: 1904776000
+    Step: 3
+    Map: 115
+    DelayTime:
+      RawValue: 327680
+    WarningTime:
+      RawValue: 786432
+    ShrinkingTime:
+      RawValue: 1966080
+    ShrinkingSizeK:
+      RawValue: 45875
+    NewSafeSpaceAreaSizeK:
+      RawValue: 131072
+    MaxHealthDamage:
+      RawValue: 2687
+    AirdropChance:
+      RawValue: 19661
+    AirdropStartTimeRange:
+      Value1:
+        RawValue: 524288
+      Value2:
         RawValue: 655360
-      AirdropChest: 19
-      IsStormAnchored: 0
-    - Key: -1187963488
-      Step: 4
-      Map: 200
-      DelayTime:
-        RawValue: 196608
-      WarningTime:
+    AirdropDropDuration:
+      RawValue: 655360
+    AirdropChest: 19
+    IsStormAnchored: 0
+  - Key: -1911490512
+    Step: 4
+    Map: 115
+    DelayTime:
+      RawValue: 327680
+    WarningTime:
+      RawValue: 786432
+    ShrinkingTime:
+      RawValue: 1310720
+    ShrinkingSizeK:
+      RawValue: 42598
+    NewSafeSpaceAreaSizeK:
+      RawValue: 131072
+    MaxHealthDamage:
+      RawValue: 3342
+    AirdropChance:
+      RawValue: 0
+    AirdropStartTimeRange:
+      Value1:
+        RawValue: 524288
+      Value2:
+        RawValue: 655360
+    AirdropDropDuration:
+      RawValue: 655360
+    AirdropChest: 19
+    IsStormAnchored: 0
+  - Key: -1432789728
+    Step: 5
+    Map: 115
+    DelayTime:
+      RawValue: 327680
+    WarningTime:
+      RawValue: 655360
+    ShrinkingTime:
+      RawValue: 786432
+    ShrinkingSizeK:
+      RawValue: 32768
+    NewSafeSpaceAreaSizeK:
+      RawValue: 131072
+    MaxHealthDamage:
+      RawValue: 3998
+    AirdropChance:
+      RawValue: 0
+    AirdropStartTimeRange:
+      Value1:
+        RawValue: 0
+      Value2:
+        RawValue: 0
+    AirdropDropDuration:
+      RawValue: 0
+    AirdropChest: 13
+    IsStormAnchored: 1
+  - Key: -954088944
+    Step: 6
+    Map: 115
+    DelayTime:
+      RawValue: 327680
+    WarningTime:
+      RawValue: 655360
+    ShrinkingTime:
+      RawValue: 6553600
+    ShrinkingSizeK:
+      RawValue: 1966
+    NewSafeSpaceAreaSizeK:
+      RawValue: 131072
+    MaxHealthDamage:
+      RawValue: 6619
+    AirdropChance:
+      RawValue: 0
+    AirdropStartTimeRange:
+      Value1:
+        RawValue: 0
+      Value2:
+        RawValue: 65536
+    AirdropDropDuration:
+      RawValue: 0
+    AirdropChest: 13
+    IsStormAnchored: 1
+  - Key: -1898150752
+    Step: 7
+    Map: 115
+    DelayTime:
+      RawValue: 655294464
+    WarningTime:
+      RawValue: 0
+    ShrinkingTime:
+      RawValue: 0
+    ShrinkingSizeK:
+      RawValue: 66
+    NewSafeSpaceAreaSizeK:
+      RawValue: 131072
+    MaxHealthDamage:
+      RawValue: 7930
+    AirdropChance:
+      RawValue: 0
+    AirdropStartTimeRange:
+      Value1:
+        RawValue: 0
+      Value2:
+        RawValue: 0
+    AirdropDropDuration:
+      RawValue: 0
+    AirdropChest: 13
+    IsStormAnchored: 1
+  - Key: -1419449968
+    Step: 1
+    Map: 197
+    DelayTime:
+      RawValue: 655360
+    WarningTime:
+      RawValue: 655360
+    ShrinkingTime:
+      RawValue: 1310720
+    ShrinkingSizeK:
+      RawValue: 39322
+    NewSafeSpaceAreaSizeK:
+      RawValue: 65536
+    MaxHealthDamage:
+      RawValue: 2032
+    AirdropChance:
+      RawValue: 32768
+    AirdropStartTimeRange:
+      Value1:
+        RawValue: 851968
+      Value2:
+        RawValue: 1114112
+    AirdropDropDuration:
+      RawValue: 327680
+    AirdropChest: 19
+    IsStormAnchored: 0
+  - Key: -940749184
+    Step: 2
+    Map: 197
+    DelayTime:
+      RawValue: 327680
+    WarningTime:
+      RawValue: 655360
+    ShrinkingTime:
+      RawValue: 655360
+    ShrinkingSizeK:
+      RawValue: 32768
+    NewSafeSpaceAreaSizeK:
+      RawValue: 131072
+    MaxHealthDamage:
+      RawValue: 3998
+    AirdropChance:
+      RawValue: 32768
+    AirdropStartTimeRange:
+      Value1:
+        RawValue: 524288
+      Value2:
         RawValue: 786432
-      ShrinkingTime:
-        RawValue: 1966080
-      ShrinkingSizeK:
-        RawValue: 39322
-      NewSafeSpaceAreaSizeK:
-        RawValue: 131072
-      MaxHealthDamage:
-        RawValue: 3997
-      AirdropChance:
+    AirdropDropDuration:
+      RawValue: 327680
+    AirdropChest: 19
+    IsStormAnchored: 0
+  - Key: -462048400
+    Step: 3
+    Map: 197
+    DelayTime:
+      RawValue: 327680
+    WarningTime:
+      RawValue: 655360
+    ShrinkingTime:
+      RawValue: 655360
+    ShrinkingSizeK:
+      RawValue: 32768
+    NewSafeSpaceAreaSizeK:
+      RawValue: 131072
+    MaxHealthDamage:
+      RawValue: 6619
+    AirdropChance:
+      RawValue: 0
+    AirdropStartTimeRange:
+      Value1:
         RawValue: 0
-      AirdropStartTimeRange:
-        Value1:
-          RawValue: 0
-        Value2:
-          RawValue: 0
-      AirdropDropDuration:
+      Value2:
         RawValue: 0
-      AirdropChest: 19
-      IsStormAnchored: 0
-    - Key: -709262704
-      Step: 5
-      Map: 200
-      DelayTime:
-        RawValue: 196608
-      WarningTime:
+    AirdropDropDuration:
+      RawValue: 0
+    AirdropChest: 13
+    IsStormAnchored: 0
+  - Key: 16652384
+    Step: 4
+    Map: 197
+    DelayTime:
+      RawValue: 327680
+    WarningTime:
+      RawValue: 655360
+    ShrinkingTime:
+      RawValue: 655360
+    ShrinkingSizeK:
+      RawValue: 32768
+    NewSafeSpaceAreaSizeK:
+      RawValue: 131072
+    MaxHealthDamage:
+      RawValue: 7930
+    AirdropChance:
+      RawValue: 0
+    AirdropStartTimeRange:
+      Value1:
+        RawValue: 0
+      Value2:
+        RawValue: 0
+    AirdropDropDuration:
+      RawValue: 0
+    AirdropChest: 13
+    IsStormAnchored: 0
+  - Key: 495353168
+    Step: 5
+    Map: 197
+    DelayTime:
+      RawValue: 327680
+    WarningTime:
+      RawValue: 655360
+    ShrinkingTime:
+      RawValue: 655360
+    ShrinkingSizeK:
+      RawValue: 32768
+    NewSafeSpaceAreaSizeK:
+      RawValue: 131072
+    MaxHealthDamage:
+      RawValue: 7930
+    AirdropChance:
+      RawValue: 0
+    AirdropStartTimeRange:
+      Value1:
+        RawValue: 0
+      Value2:
+        RawValue: 0
+    AirdropDropDuration:
+      RawValue: 0
+    AirdropChest: 13
+    IsStormAnchored: 0
+  - Key: 974053952
+    Step: 6
+    Map: 197
+    DelayTime:
+      RawValue: 655294464
+    WarningTime:
+      RawValue: 0
+    ShrinkingTime:
+      RawValue: 0
+    ShrinkingSizeK:
+      RawValue: 66
+    NewSafeSpaceAreaSizeK:
+      RawValue: 131072
+    MaxHealthDamage:
+      RawValue: 7930
+    AirdropChance:
+      RawValue: 0
+    AirdropStartTimeRange:
+      Value1:
+        RawValue: 0
+      Value2:
+        RawValue: 0
+    AirdropDropDuration:
+      RawValue: 0
+    AirdropChest: 13
+    IsStormAnchored: 0
+  - Key: 1452754736
+    Step: 1
+    Map: 198
+    DelayTime:
+      RawValue: 851968
+    WarningTime:
+      RawValue: 655360
+    ShrinkingTime:
+      RawValue: 1310720
+    ShrinkingSizeK:
+      RawValue: 39322
+    NewSafeSpaceAreaSizeK:
+      RawValue: 65536
+    MaxHealthDamage:
+      RawValue: 2032
+    AirdropChance:
+      RawValue: 32768
+    AirdropStartTimeRange:
+      Value1:
+        RawValue: 851968
+      Value2:
+        RawValue: 1114112
+    AirdropDropDuration:
+      RawValue: 327680
+    AirdropChest: 19
+    IsStormAnchored: 0
+  - Key: 1931455520
+    Step: 2
+    Map: 198
+    DelayTime:
+      RawValue: 524288
+    WarningTime:
+      RawValue: 655360
+    ShrinkingTime:
+      RawValue: 655360
+    ShrinkingSizeK:
+      RawValue: 32768
+    NewSafeSpaceAreaSizeK:
+      RawValue: 131072
+    MaxHealthDamage:
+      RawValue: 3998
+    AirdropChance:
+      RawValue: 32768
+    AirdropStartTimeRange:
+      Value1:
+        RawValue: 524288
+      Value2:
         RawValue: 786432
-      ShrinkingTime:
-        RawValue: 1966080
-      ShrinkingSizeK:
-        RawValue: 19661
-      NewSafeSpaceAreaSizeK:
-        RawValue: 131072
-      MaxHealthDamage:
-        RawValue: 5249
-      AirdropChance:
+    AirdropDropDuration:
+      RawValue: 327680
+    AirdropChest: 19
+    IsStormAnchored: 0
+  - Key: -1884810992
+    Step: 3
+    Map: 198
+    DelayTime:
+      RawValue: 327680
+    WarningTime:
+      RawValue: 655360
+    ShrinkingTime:
+      RawValue: 655360
+    ShrinkingSizeK:
+      RawValue: 32768
+    NewSafeSpaceAreaSizeK:
+      RawValue: 131072
+    MaxHealthDamage:
+      RawValue: 6619
+    AirdropChance:
+      RawValue: 0
+    AirdropStartTimeRange:
+      Value1:
         RawValue: 0
-      AirdropStartTimeRange:
-        Value1:
-          RawValue: 0
-        Value2:
-          RawValue: 0
-      AirdropDropDuration:
+      Value2:
         RawValue: 0
-      AirdropChest: 13
-      IsStormAnchored: 1
-    - Key: 726839648
-      Step: 6
-      Map: 200
-      DelayTime:
-        RawValue: 196608
-      WarningTime:
-        RawValue: 786432
-      ShrinkingTime:
-        RawValue: 6553600
-      ShrinkingSizeK:
-        RawValue: 1966
-      NewSafeSpaceAreaSizeK:
-        RawValue: 131072
-      MaxHealthDamage:
-        RawValue: 6619
-      AirdropChance:
+    AirdropDropDuration:
+      RawValue: 0
+    AirdropChest: 13
+    IsStormAnchored: 0
+  - Key: -1406110208
+    Step: 4
+    Map: 198
+    DelayTime:
+      RawValue: 327680
+    WarningTime:
+      RawValue: 655360
+    ShrinkingTime:
+      RawValue: 655360
+    ShrinkingSizeK:
+      RawValue: 32768
+    NewSafeSpaceAreaSizeK:
+      RawValue: 131072
+    MaxHealthDamage:
+      RawValue: 7930
+    AirdropChance:
+      RawValue: 0
+    AirdropStartTimeRange:
+      Value1:
         RawValue: 0
-      AirdropStartTimeRange:
-        Value1:
-          RawValue: 0
-        Value2:
-          RawValue: 0
-      AirdropDropDuration:
+      Value2:
         RawValue: 0
-      AirdropChest: 13
-      IsStormAnchored: 1
-    - Key: 1684241216
-      Step: 7
-      Map: 200
-      DelayTime:
-        RawValue: 655294464
-      WarningTime:
+    AirdropDropDuration:
+      RawValue: 0
+    AirdropChest: 13
+    IsStormAnchored: 0
+  - Key: 713499888
+    Step: 5
+    Map: 198
+    DelayTime:
+      RawValue: 327680
+    WarningTime:
+      RawValue: 655360
+    ShrinkingTime:
+      RawValue: 655360
+    ShrinkingSizeK:
+      RawValue: 32768
+    NewSafeSpaceAreaSizeK:
+      RawValue: 131072
+    MaxHealthDamage:
+      RawValue: 7930
+    AirdropChance:
+      RawValue: 0
+    AirdropStartTimeRange:
+      Value1:
         RawValue: 0
-      ShrinkingTime:
+      Value2:
         RawValue: 0
-      ShrinkingSizeK:
-        RawValue: 66
-      NewSafeSpaceAreaSizeK:
-        RawValue: 131072
-      MaxHealthDamage:
-        RawValue: 7930
-      AirdropChance:
+    AirdropDropDuration:
+      RawValue: 0
+    AirdropChest: 13
+    IsStormAnchored: 0
+  - Key: 1192200672
+    Step: 6
+    Map: 198
+    DelayTime:
+      RawValue: 655294464
+    WarningTime:
+      RawValue: 0
+    ShrinkingTime:
+      RawValue: 0
+    ShrinkingSizeK:
+      RawValue: 66
+    NewSafeSpaceAreaSizeK:
+      RawValue: 131072
+    MaxHealthDamage:
+      RawValue: 7930
+    AirdropChance:
+      RawValue: 0
+    AirdropStartTimeRange:
+      Value1:
         RawValue: 0
-      AirdropStartTimeRange:
-        Value1:
-          RawValue: 0
-        Value2:
-          RawValue: 0
-      AirdropDropDuration:
+      Value2:
         RawValue: 0
-      AirdropChest: 13
-      IsStormAnchored: 1
+    AirdropDropDuration:
+      RawValue: 0
+    AirdropChest: 13
+    IsStormAnchored: 0
+  - Key: 1670901456
+    Step: 1
+    Map: 200
+    DelayTime:
+      RawValue: 1966080
+    WarningTime:
+      RawValue: 2293760
+    ShrinkingTime:
+      RawValue: 4587520
+    ShrinkingSizeK:
+      RawValue: 39322
+    NewSafeSpaceAreaSizeK:
+      RawValue: 55706
+    MaxHealthDamage:
+      RawValue: 1376
+    AirdropChance:
+      RawValue: 52429
+    AirdropStartTimeRange:
+      Value1:
+        RawValue: 4128768
+      Value2:
+        RawValue: 4259840
+    AirdropDropDuration:
+      RawValue: 655360
+    AirdropChest: 19
+    IsStormAnchored: 0
+  - Key: -2145365056
+    Step: 2
+    Map: 200
+    DelayTime:
+      RawValue: 196608
+    WarningTime:
+      RawValue: 786432
+    ShrinkingTime:
+      RawValue: 3932160
+    ShrinkingSizeK:
+      RawValue: 39322
+    NewSafeSpaceAreaSizeK:
+      RawValue: 98304
+    MaxHealthDamage:
+      RawValue: 2032
+    AirdropChance:
+      RawValue: 13107
+    AirdropStartTimeRange:
+      Value1:
+        RawValue: 393216
+      Value2:
+        RawValue: 524288
+    AirdropDropDuration:
+      RawValue: 655360
+    AirdropChest: 19
+    IsStormAnchored: 0
+  - Key: -1666664272
+    Step: 3
+    Map: 200
+    DelayTime:
+      RawValue: 196608
+    WarningTime:
+      RawValue: 786432
+    ShrinkingTime:
+      RawValue: 2621440
+    ShrinkingSizeK:
+      RawValue: 39322
+    NewSafeSpaceAreaSizeK:
+      RawValue: 131072
+    MaxHealthDamage:
+      RawValue: 2687
+    AirdropChance:
+      RawValue: 52429
+    AirdropStartTimeRange:
+      Value1:
+        RawValue: 393216
+      Value2:
+        RawValue: 524288
+    AirdropDropDuration:
+      RawValue: 655360
+    AirdropChest: 19
+    IsStormAnchored: 0
+  - Key: -1187963488
+    Step: 4
+    Map: 200
+    DelayTime:
+      RawValue: 196608
+    WarningTime:
+      RawValue: 786432
+    ShrinkingTime:
+      RawValue: 1966080
+    ShrinkingSizeK:
+      RawValue: 39322
+    NewSafeSpaceAreaSizeK:
+      RawValue: 131072
+    MaxHealthDamage:
+      RawValue: 3997
+    AirdropChance:
+      RawValue: 0
+    AirdropStartTimeRange:
+      Value1:
+        RawValue: 0
+      Value2:
+        RawValue: 0
+    AirdropDropDuration:
+      RawValue: 0
+    AirdropChest: 19
+    IsStormAnchored: 0
+  - Key: -709262704
+    Step: 5
+    Map: 200
+    DelayTime:
+      RawValue: 196608
+    WarningTime:
+      RawValue: 786432
+    ShrinkingTime:
+      RawValue: 1966080
+    ShrinkingSizeK:
+      RawValue: 19661
+    NewSafeSpaceAreaSizeK:
+      RawValue: 131072
+    MaxHealthDamage:
+      RawValue: 5249
+    AirdropChance:
+      RawValue: 0
+    AirdropStartTimeRange:
+      Value1:
+        RawValue: 0
+      Value2:
+        RawValue: 0
+    AirdropDropDuration:
+      RawValue: 0
+    AirdropChest: 13
+    IsStormAnchored: 1
+  - Key: 726839648
+    Step: 6
+    Map: 200
+    DelayTime:
+      RawValue: 196608
+    WarningTime:
+      RawValue: 786432
+    ShrinkingTime:
+      RawValue: 6553600
+    ShrinkingSizeK:
+      RawValue: 1966
+    NewSafeSpaceAreaSizeK:
+      RawValue: 131072
+    MaxHealthDamage:
+      RawValue: 6619
+    AirdropChance:
+      RawValue: 0
+    AirdropStartTimeRange:
+      Value1:
+        RawValue: 0
+      Value2:
+        RawValue: 0
+    AirdropDropDuration:
+      RawValue: 0
+    AirdropChest: 13
+    IsStormAnchored: 1
+  - Key: 1684241216
+    Step: 7
+    Map: 200
+    DelayTime:
+      RawValue: 655294464
+    WarningTime:
+      RawValue: 0
+    ShrinkingTime:
+      RawValue: 0
+    ShrinkingSizeK:
+      RawValue: 66
+    NewSafeSpaceAreaSizeK:
+      RawValue: 131072
+    MaxHealthDamage:
+      RawValue: 7930
+    AirdropChance:
+      RawValue: 0
+    AirdropStartTimeRange:
+      Value1:
+        RawValue: 0
+      Value2:
+        RawValue: 0
+    AirdropDropDuration:
+      RawValue: 0
+    AirdropChest: 13
+    IsStormAnchored: 1

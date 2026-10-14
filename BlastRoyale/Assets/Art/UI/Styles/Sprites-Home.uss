@@ -3,7 +3,6 @@
     --sprite-home__AirdropIconOnfield: url('/Assets/Art/UI/Sprites/Home/AirdropIconOnfield.png');
     --sprite-home__alien-season-reward: url('/Assets/Art/UI/Sprites/Home/alien-season-reward.png');
     --sprite-home__ArrowBig: url('/Assets/Art/UI/Sprites/Home/ArrowBig.png');
-    --sprite-home__background-avatar-nft: url('/Assets/Art/UI/Sprites/Home/background-avatar-nft.png');
     --sprite-home__background-big-bundle: url('/Assets/Art/UI/Sprites/Home/background-big-bundle.png');
     --sprite-home__background-bpchestreward: url('/Assets/Art/UI/Sprites/Home/background-bpchestreward.png');
     --sprite-home__background-bpreward-outline: url('/Assets/Art/UI/Sprites/Home/background-bpreward-outline.png');
@@ -230,7 +229,6 @@
     --sprite-home__malepunk-season-reward: url('/Assets/Art/UI/Sprites/Home/malepunk-season-reward.png');
     --sprite-home__new-battle-pass-banner-ref: url('/Assets/Art/UI/Sprites/Home/new-battle-pass-banner-ref.png');
     --sprite-home__news-icon: url('/Assets/Art/UI/Sprites/Home/news-icon.png');
-    --sprite-home__nft-badge: url('/Assets/Art/UI/Sprites/Home/nft-badge.png');
     --sprite-home__pattern-circle-gradient: url('/Assets/Art/UI/Sprites/Home/pattern-circle-gradient.png');
     --sprite-home__pattern-dots-gradient: url('/Assets/Art/UI/Sprites/Home/pattern-dots-gradient.png');
     --sprite-home__pattern-dots-rotated: url('/Assets/Art/UI/Sprites/Home/pattern-dots-rotated.png');
@@ -292,13 +290,6 @@
     width: 54px;
     height: 84px;
 }
-
-.sprite-home__background-avatar-nft {
-    background-image: var(--sprite-home__background-avatar-nft);
-    width: 128px;
-    height: 128px;
-}
-
 .sprite-home__background-big-bundle {
     background-image: var(--sprite-home__background-big-bundle);
     width: 442px;
@@ -1607,12 +1598,6 @@
     height: 66px;
 }
 
-.sprite-home__nft-badge {
-    background-image: var(--sprite-home__nft-badge);
-    width: 110px;
-    height: 48px;
-}
-
 .sprite-home__pattern-circle-gradient {
     background-image: var(--sprite-home__pattern-circle-gradient);
     width: 466px;
@@ -1864,4 +1849,3 @@
     width: 1280px;
     height: 1228px;
 }
-

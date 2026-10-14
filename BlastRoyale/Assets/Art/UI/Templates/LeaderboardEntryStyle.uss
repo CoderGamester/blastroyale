@@ -225,15 +225,6 @@
     height: 108px;
     align-self: center;
 }
-
-.leaderboard-entry__pfp--nft > .leaderboard-entry__pfp-image {
-    bottom: -33px;
-    top: 0;
-    left: 0;
-    right: -5px;
-    -unity-background-scale-mode: scale-and-crop;
-}
-
 .leaderboard-entry__central-bar {
     flex-grow: 1;
     background-color: rgba(0, 0, 0, 0);

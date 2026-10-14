@@ -46,8 +46,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0008c51fe3af00b4da5d44f02d9b3dff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   BindBehaviour: 1
   ManualDisposal: 0
   GameObjectNameIsEntityRef: 0
@@ -76,8 +76,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 836dcb7e0f6259748b850a10912ce727, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   TransformMode: 0
   Transform2DVertical:
     IsEnabled: 0
@@ -198,7 +198,7 @@ MonoBehaviour:
         Asset:
           Id:
             Value: 0
-        Name: 
+        Name:
   NavMeshSteeringAgent:
     IsEnabled: 0
     MaxSpeed:
@@ -224,8 +224,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0c0b35692d2c86c46934ab2a937c7b0c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   EntityView: {fileID: 7757663921541325714}
   _collectablePlatformView: {fileID: 8697836485763018543}
 --- !u!114 &7331633484137446179
@@ -238,8 +238,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 03a753e255de1ae4484b6a5c7aacae9c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   Prototype:
     Collectable: {fileID: 0}
     NextSpawnTime:
@@ -301,8 +301,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9cf7c7bf57d1493daeb4cad93ccd4e3b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   _renderers:
   - {fileID: 2732338449301725529}
   _particleRenderers:
@@ -323,8 +323,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0ed8fdfddb2f08d42b5e942ab0588215, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   RenderersContainerProxy: {fileID: 4643963747205317835}
   _text: {fileID: 7536896001643873635}
   _progressIndicator: {fileID: 8732573180231493307}
@@ -338,8 +338,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4c8f0f7a3f7faaf4ea32fa2ad42c8f75, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
 --- !u!1 &5356358332211614540
 GameObject:
   m_ObjectHideFlags: 0
@@ -5294,8 +5294,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 0
@@ -5435,8 +5435,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9541d86e2fd84c1d9990edf0852d74ab, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 0
@@ -5445,7 +5445,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 
+  m_text:
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -5517,24 +5517,6 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_renderer: {fileID: 2732338449301725529}
   m_maskType: 0
---- !u!114 &-881262544539562628
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0120b722c3ca5454da1240b65656905f, type: 3}
-  m_Name: LegacyWeaponPlatformSpawnerEntityPrototype
-  m_EditorClassIdentifier: 
-  Settings:
-    Identifier:
-      Path: AddressableResources/QuantumAssets/Spawners/LegacyWeaponPlatformSpawner|EntityPrototype
-      Guid:
-        Value: 3423522033009671601
-  Parent: {fileID: 409028007402901711}
 --- !u!114 &7845361808403847208
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5544,12 +5526,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4d5baec4de8d2754a864a680181831e8, type: 3}
+  m_Script: {fileID: 206745634, guid: b156eeaae3f741b40af66649a4748430, type: 3}
   m_Name: LegacyWeaponPlatformSpawnerEntityView
-  m_EditorClassIdentifier: 
-  Settings:
-    Identifier:
-      Path: AddressableResources/QuantumAssets/Spawners/LegacyWeaponPlatformSpawner|EntityView
-      Guid:
-        Value: 507213235080836660
-  Parent: {fileID: 7757663921541325714}
+  m_EditorClassIdentifier:
+  Identifier:
+    Path: "AddressableResources/QuantumAssets/Spawners/LegacyWeaponPlatformSpawner|EntityView"
+    Guid:
+      Value: 507213235080836660
+  Prefab: {fileID: 3587682744574828602}

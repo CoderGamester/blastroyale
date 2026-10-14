@@ -44,8 +44,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 836dcb7e0f6259748b850a10912ce727, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   TransformMode: 0
   Transform2DVertical:
     IsEnabled: 0
@@ -54,12 +54,16 @@ MonoBehaviour:
     PositionOffset:
       RawValue: 0
   PhysicsCollider:
+    IsEnabled: 0
     IsTrigger: 0
     Material:
       Id:
         Value: 0
     SourceCollider: {fileID: 0}
-    IsEnabled: 0
+    SourceShapeSettings:
+      IsScaledBySource: 0
+      CapsuleDirection2D: 0
+      CapsuleDirection3D: 0
     Shape2D:
       ShapeType: 0
       PolygonCollider:
@@ -67,6 +71,11 @@ MonoBehaviour:
           Value: 0
       CircleRadius:
         RawValue: 0
+      CapsuleSize:
+        X:
+          RawValue: 65536
+        Y:
+          RawValue: 131072
       EdgeExtent:
         RawValue: 0
       BoxExtents:
@@ -84,11 +93,14 @@ MonoBehaviour:
       UserTag: 0
       IsPersistent: 1
       CompoundShapes: []
-      IsSetFromSourceCollider: 0
     Shape3D:
       ShapeType: 0
       SphereRadius:
         RawValue: 0
+      CapsuleRadius:
+        RawValue: 32768
+      CapsuleHeight:
+        RawValue: 131072
       PositionOffset:
         X:
           RawValue: 0
@@ -113,23 +125,31 @@ MonoBehaviour:
       UserTag: 0
       IsPersistent: 1
       CompoundShapes: []
-      IsSetFromSourceCollider: 0
+    LayerSource: 0
     Layer: 0
     CallbackFlags:
       Value: 0
   PhysicsBody:
     IsEnabled: 0
-    Version2D: 0
-    Version3D: 0
     Config2D: 116
     Config3D: 58
     RotationFreeze: 0
+    InertiaMode: 0
     Mass:
       RawValue: 65536
     Drag:
       RawValue: 32768
     AngularDrag:
       RawValue: 32768
+    ExplicitInertia2D:
+      RawValue: 65536
+    ExplicitInertia3D:
+      X:
+        RawValue: 65536
+      Y:
+        RawValue: 65536
+      Z:
+        RawValue: 65536
     CenterOfMass2D:
       X:
         RawValue: 0
@@ -142,6 +162,71 @@ MonoBehaviour:
         RawValue: 0
       Z:
         RawValue: 0
+    ParametricInertiaShape2D:
+      ShapeType: 0
+      PolygonCollider:
+        Id:
+          Value: 0
+      CircleRadius:
+        RawValue: 32768
+      CapsuleSize:
+        X:
+          RawValue: 65536
+        Y:
+          RawValue: 131072
+      EdgeExtent:
+        RawValue: 32768
+      BoxExtents:
+        X:
+          RawValue: 32768
+        Y:
+          RawValue: 32768
+      PositionOffset:
+        X:
+          RawValue: 0
+        Y:
+          RawValue: 0
+      RotationOffset:
+        RawValue: 0
+      UserTag: 0
+      IsPersistent: 1
+      CompoundShapes: []
+    ParametricInertiaShape3D:
+      ShapeType: 0
+      SphereRadius:
+        RawValue: 32768
+      CapsuleRadius:
+        RawValue: 32768
+      CapsuleHeight:
+        RawValue: 131072
+      PositionOffset:
+        X:
+          RawValue: 0
+        Y:
+          RawValue: 0
+        Z:
+          RawValue: 0
+      BoxExtents:
+        X:
+          RawValue: 32768
+        Y:
+          RawValue: 32768
+        Z:
+          RawValue: 32768
+      RotationOffset:
+        X:
+          RawValue: 0
+        Y:
+          RawValue: 0
+        Z:
+          RawValue: 0
+      UserTag: 0
+      IsPersistent: 1
+      CompoundShapes: []
+    InertiaScale:
+      _hasValue: 0
+      _value:
+        RawValue: 65536
     GravityScale:
       _hasValue: 0
       _value:
@@ -166,7 +251,7 @@ MonoBehaviour:
         Asset:
           Id:
             Value: 0
-        Name: 
+        Name:
   NavMeshSteeringAgent:
     IsEnabled: 0
     MaxSpeed:
@@ -192,11 +277,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0008c51fe3af00b4da5d44f02d9b3dff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   BindBehaviour: 1
   ManualDisposal: 0
-  GameObjectNameIsEntityRef: 0
+  ViewFlags: 0
+  InterpolationMode: 0
   ErrorCorrectionRateMin: 3.3
   ErrorCorrectionRateMax: 10
   ErrorPositionBlendStart: 0.25
@@ -222,31 +308,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 88306539e307a864080fec661fef7f0a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   Prototype:
     SpawnerType:
       Value: 0
     BehaviourType:
       Value: 0
---- !u!114 &-5335015958420445853
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0120b722c3ca5454da1240b65656905f, type: 3}
-  m_Name: PlayerSpawnerEntityPrototype
-  m_EditorClassIdentifier: 
-  Settings:
-    Identifier:
-      Path: AddressableResources/QuantumAssets/Spawners/PlayerSpawner|EntityPrototype
-      Guid:
-        Value: 2194276554936782103
-  Parent: {fileID: 3818809833343755871}
 --- !u!114 &8281891606988313191
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -256,12 +324,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4d5baec4de8d2754a864a680181831e8, type: 3}
+  m_Script: {fileID: 206745634, guid: b156eeaae3f741b40af66649a4748430, type: 3}
   m_Name: PlayerSpawnerEntityView
-  m_EditorClassIdentifier: 
-  Settings:
-    Identifier:
-      Path: AddressableResources/QuantumAssets/Spawners/PlayerSpawner|EntityView
-      Guid:
-        Value: 1469853357981699320
-  Parent: {fileID: -5153030661723911475}
+  m_EditorClassIdentifier:
+  Identifier:
+    Path: "AddressableResources/QuantumAssets/Spawners/PlayerSpawner|EntityView"
+    Guid:
+      Value: 1469853357981699320
+  Prefab: {fileID: 2180985777303813592}

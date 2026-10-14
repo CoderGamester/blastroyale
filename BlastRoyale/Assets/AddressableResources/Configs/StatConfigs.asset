@@ -11,74 +11,73 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: efefe8df0702478486bac59fd68c37e2, type: 3}
   m_Name: StatConfigs
-  m_EditorClassIdentifier: 
-  Settings:
-    Identifier:
-      Path: AddressableResources/Configs/StatConfigs
-      Guid:
-        Value: 654199445895457431
-    QuantumConfigs:
-    - StatType: 0
-      BaseValue:
-        RawValue: 655360
-      RarityMultiplier:
-        RawValue: 72090
-      LevelStepMultiplier:
-        RawValue: 3277
-      CeilToInt: 1
-    - StatType: 1
-      BaseValue:
-        RawValue: 3276800
-      RarityMultiplier:
-        RawValue: 65536
-      LevelStepMultiplier:
-        RawValue: 655
-      CeilToInt: 1
-    - StatType: 2
-      BaseValue:
-        RawValue: 6554
-      RarityMultiplier:
-        RawValue: 78512
-      LevelStepMultiplier:
-        RawValue: 1933
-      CeilToInt: 0
-    - StatType: 3
-      BaseValue:
-        RawValue: 655360
-      RarityMultiplier:
-        RawValue: 78512
-      LevelStepMultiplier:
-        RawValue: 1933
-      CeilToInt: 0
-    - StatType: 5
-      BaseValue:
-        RawValue: 13107
-      RarityMultiplier:
-        RawValue: 78512
-      LevelStepMultiplier:
-        RawValue: 1933
-      CeilToInt: 0
-    - StatType: 6
-      BaseValue:
-        RawValue: 655360
-      RarityMultiplier:
-        RawValue: 78512
-      LevelStepMultiplier:
-        RawValue: 1933
-      CeilToInt: 0
-    - StatType: 7
-      BaseValue:
-        RawValue: 655360
-      RarityMultiplier:
-        RawValue: 78512
-      LevelStepMultiplier:
-        RawValue: 1933
-      CeilToInt: 0
-    - StatType: 4
-      BaseValue:
-        RawValue: 655360
-      RarityMultiplier:
-        RawValue: 72090
-      LevelStepMultiplier:
-        RawValue: 3277
-      CeilToInt: 1
+  m_EditorClassIdentifier:
+  Identifier:
+    Path: AddressableResources/Configs/StatConfigs
+    Guid:
+      Value: 654199445895457431
+  QuantumConfigs:
+  - StatType: 0
+    BaseValue:
+      RawValue: 655360
+    RarityMultiplier:
+      RawValue: 72090
+    LevelStepMultiplier:
+      RawValue: 3277
+    CeilToInt: 1
+  - StatType: 1
+    BaseValue:
+      RawValue: 3276800
+    RarityMultiplier:
+      RawValue: 65536
+    LevelStepMultiplier:
+      RawValue: 655
+    CeilToInt: 1
+  - StatType: 2
+    BaseValue:
+      RawValue: 6554
+    RarityMultiplier:
+      RawValue: 78512
+    LevelStepMultiplier:
+      RawValue: 1933
+    CeilToInt: 0
+  - StatType: 3
+    BaseValue:
+      RawValue: 655360
+    RarityMultiplier:
+      RawValue: 78512
+    LevelStepMultiplier:
+      RawValue: 1933
+    CeilToInt: 0
+  - StatType: 5
+    BaseValue:
+      RawValue: 13107
+    RarityMultiplier:
+      RawValue: 78512
+    LevelStepMultiplier:
+      RawValue: 1933
+    CeilToInt: 0
+  - StatType: 6
+    BaseValue:
+      RawValue: 655360
+    RarityMultiplier:
+      RawValue: 78512
+    LevelStepMultiplier:
+      RawValue: 1933
+    CeilToInt: 0
+  - StatType: 7
+    BaseValue:
+      RawValue: 655360
+    RarityMultiplier:
+      RawValue: 78512
+    LevelStepMultiplier:
+      RawValue: 1933
+    CeilToInt: 0
+  - StatType: 4
+    BaseValue:
+      RawValue: 655360
+    RarityMultiplier:
+      RawValue: 72090
+    LevelStepMultiplier:
+      RawValue: 3277
+    CeilToInt: 1

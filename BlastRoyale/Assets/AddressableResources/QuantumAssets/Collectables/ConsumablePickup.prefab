@@ -45,8 +45,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0008c51fe3af00b4da5d44f02d9b3dff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   BindBehaviour: 1
   ManualDisposal: 1
   GameObjectNameIsEntityRef: 0
@@ -75,8 +75,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 836dcb7e0f6259748b850a10912ce727, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   TransformMode: 0
   Transform2DVertical:
     IsEnabled: 0
@@ -197,7 +197,7 @@ MonoBehaviour:
         Asset:
           Id:
             Value: 0
-        Name: 
+        Name:
   NavMeshSteeringAgent:
     IsEnabled: 0
     MaxSpeed:
@@ -223,8 +223,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2dc71ed10b19444eb2cad3870818e8df, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   EntityView: {fileID: 7757663921541325714}
 --- !u!114 &1753099547653222448
 MonoBehaviour:
@@ -236,29 +236,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 661f003d3794497795fb456763bd16f7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   Prototype:
     ConsumableType:
       Value: 0
---- !u!114 &-881262544539562628
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0120b722c3ca5454da1240b65656905f, type: 3}
-  m_Name: ConsumablePickupEntityPrototype
-  m_EditorClassIdentifier: 
-  Settings:
-    Identifier:
-      Path: AddressableResources/QuantumAssets/Collectables/ConsumablePickup|EntityPrototype
-      Guid:
-        Value: 240296495379453662
-  Parent: {fileID: 409028007402901711}
 --- !u!114 &7845361808403847208
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -268,12 +250,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4d5baec4de8d2754a864a680181831e8, type: 3}
+  m_Script: {fileID: 206745634, guid: b156eeaae3f741b40af66649a4748430, type: 3}
   m_Name: ConsumablePickupEntityView
-  m_EditorClassIdentifier: 
-  Settings:
-    Identifier:
-      Path: AddressableResources/QuantumAssets/Collectables/ConsumablePickup|EntityView
-      Guid:
-        Value: 3726627970685454479
-  Parent: {fileID: 7757663921541325714}
+  m_EditorClassIdentifier:
+  Identifier:
+    Path: "AddressableResources/QuantumAssets/Collectables/ConsumablePickup|EntityView"
+    Guid:
+      Value: 3726627970685454479
+  Prefab: {fileID: 3587682744574828602}

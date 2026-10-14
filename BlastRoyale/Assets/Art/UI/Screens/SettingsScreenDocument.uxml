@@ -41,7 +41,6 @@
                                 <FirstLight.Game.UIElements.LocalizedButton localization-key="UITSettings/connect" name="ConnectButton" text="Connect" class="button-long button-long--yellow account-button">
                                     <ui:VisualElement name="ConnectNotification" class="notification-icon button-with-icon__notification" />
                                 </FirstLight.Game.UIElements.LocalizedButton>
-                                <FirstLight.Game.UIElements.LocalizedButton name="Web3Button" text="Web3" class="button-long button-long--yellow account-button" />
                                 <FirstLight.Game.UIElements.LocalizedButton localization-key="LINK DEVICE" name="LinkButton" text="LINK DEVICE" class="button-long button-long--yellow account-button">
                                     <ui:VisualElement name="ConnectNotification" class="notification-icon button-with-icon__notification" style="top: -9px; right: 13px;" />
                                 </FirstLight.Game.UIElements.LocalizedButton>

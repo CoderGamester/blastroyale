@@ -11,14 +11,14 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b922c0839367f0543b7f38d475ba80c7, type: 3}
   m_Name: Deterministic Config
-  m_EditorClassIdentifier: 
+  m_EditorClassIdentifier:
   Config:
     PlayerCount: 0
     ChecksumCrossPlatformDeterminism: 0
     LockstepSimulation: 0
-    AggressiveSendMode: 0
+    InputDeltaCompression: 1
     UpdateFPS: 30
-    ChecksumInterval: 0
+    ChecksumInterval: 60
     RollbackWindow: 20
     InputHardTolerance: 8
     InputRedundancy: 3
@@ -33,5 +33,4 @@ MonoBehaviour:
     InputDelayMin: 0
     InputDelayMax: 500
     InputDelayPingStart: 120
-    InputFixedSizeEnabled: 1
     InputFixedSize: 0

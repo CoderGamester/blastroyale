@@ -11,554 +11,553 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 34c61082b33b44b09493ffaecc80a9fa, type: 3}
   m_Name: BotConfigs
-  m_EditorClassIdentifier: 
-  Settings:
-    Identifier:
-      Path: AddressableResources/Configs/BotConfigs
-      Guid:
-        Value: 1550297457877710414
-    QuantumConfigs:
-    - BehaviourType: 2
-      GameMode: BattleRoyale
-      Difficulty: 0
-      DecisionInterval:
-        RawValue: 131072
-      LookForTargetsToShootAtInterval:
-        RawValue: 85197
-      VisionRangeSqr:
-        RawValue: 104857600
-      AccuracySpreadAngle: 42
-      ChanceToUseSpecial:
-        RawValue: 0
-      SpecialAimingDeviation:
-        RawValue: 262144
-      LoadoutGearNumber: 0
-      LoadoutRarity: 0
-      MaxAimingRange:
-        RawValue: 589824
-      MovementSpeedMultiplier:
-        RawValue: 65536
-      MaxDistanceToTeammateSquared:
-        RawValue: 2359296
-      DamageDoneMultiplier:
-        RawValue: 65536
-      DamageTakenMultiplier:
-        RawValue: 65536
-      MinSpecialCooldown:
-        RawValue: 1966080
-      MaxSpecialCooldown:
-        RawValue: 3932160
-      MinRunFromZoneTime:
-        RawValue: 327680
-      MaxRunFromZoneTime:
-        RawValue: 1966080
-    - BehaviourType: 2
-      GameMode: BattleRoyale
-      Difficulty: 1
-      DecisionInterval:
-        RawValue: 123790
-      LookForTargetsToShootAtInterval:
-        RawValue: 83012
-      VisionRangeSqr:
-        RawValue: 104857600
-      AccuracySpreadAngle: 38
-      ChanceToUseSpecial:
-        RawValue: 3641
-      SpecialAimingDeviation:
-        RawValue: 233017
-      LoadoutGearNumber: 1
-      LoadoutRarity: 0
-      MaxAimingRange:
-        RawValue: 589824
-      MovementSpeedMultiplier:
-        RawValue: 65536
-      MaxDistanceToTeammateSquared:
-        RawValue: 2359296
-      DamageDoneMultiplier:
-        RawValue: 65536
-      DamageTakenMultiplier:
-        RawValue: 65536
-      MinSpecialCooldown:
-        RawValue: 1966080
-      MaxSpecialCooldown:
-        RawValue: 3932160
-      MinRunFromZoneTime:
-        RawValue: 327680
-      MaxRunFromZoneTime:
-        RawValue: 1966080
-    - BehaviourType: 2
-      GameMode: BattleRoyale
-      Difficulty: 2
-      DecisionInterval:
-        RawValue: 116508
-      LookForTargetsToShootAtInterval:
-        RawValue: 80828
-      VisionRangeSqr:
-        RawValue: 104857600
-      AccuracySpreadAngle: 37
-      ChanceToUseSpecial:
-        RawValue: 7282
-      SpecialAimingDeviation:
-        RawValue: 203890
-      LoadoutGearNumber: 2
-      LoadoutRarity: 0
-      MaxAimingRange:
-        RawValue: 589824
-      MovementSpeedMultiplier:
-        RawValue: 65536
-      MaxDistanceToTeammateSquared:
-        RawValue: 2359296
-      DamageDoneMultiplier:
-        RawValue: 65536
-      DamageTakenMultiplier:
-        RawValue: 65536
-      MinSpecialCooldown:
-        RawValue: 1966080
-      MaxSpecialCooldown:
-        RawValue: 3932160
-      MinRunFromZoneTime:
-        RawValue: 327680
-      MaxRunFromZoneTime:
-        RawValue: 1966080
-    - BehaviourType: 2
-      GameMode: BattleRoyale
-      Difficulty: 3
-      DecisionInterval:
-        RawValue: 109227
-      LookForTargetsToShootAtInterval:
-        RawValue: 78643
-      VisionRangeSqr:
-        RawValue: 104857600
-      AccuracySpreadAngle: 34
-      ChanceToUseSpecial:
-        RawValue: 10923
-      SpecialAimingDeviation:
-        RawValue: 174763
-      LoadoutGearNumber: 3
-      LoadoutRarity: 0
-      MaxAimingRange:
-        RawValue: 589824
-      MovementSpeedMultiplier:
-        RawValue: 65536
-      MaxDistanceToTeammateSquared:
-        RawValue: 2359296
-      DamageDoneMultiplier:
-        RawValue: 65536
-      DamageTakenMultiplier:
-        RawValue: 65536
-      MinSpecialCooldown:
-        RawValue: 1966080
-      MaxSpecialCooldown:
-        RawValue: 3932160
-      MinRunFromZoneTime:
-        RawValue: 327680
-      MaxRunFromZoneTime:
-        RawValue: 1966080
-    - BehaviourType: 2
-      GameMode: BattleRoyale
-      Difficulty: 4
-      DecisionInterval:
-        RawValue: 101945
-      LookForTargetsToShootAtInterval:
-        RawValue: 76459
-      VisionRangeSqr:
-        RawValue: 104857600
-      AccuracySpreadAngle: 31
-      ChanceToUseSpecial:
-        RawValue: 14564
-      SpecialAimingDeviation:
-        RawValue: 145636
-      LoadoutGearNumber: 3
-      LoadoutRarity: 0
-      MaxAimingRange:
-        RawValue: 589824
-      MovementSpeedMultiplier:
-        RawValue: 65536
-      MaxDistanceToTeammateSquared:
-        RawValue: 2359296
-      DamageDoneMultiplier:
-        RawValue: 65536
-      DamageTakenMultiplier:
-        RawValue: 65536
-      MinSpecialCooldown:
-        RawValue: 1966080
-      MaxSpecialCooldown:
-        RawValue: 3932160
-      MinRunFromZoneTime:
-        RawValue: 327680
-      MaxRunFromZoneTime:
-        RawValue: 1966080
-    - BehaviourType: 2
-      GameMode: BattleRoyale
-      Difficulty: 5
-      DecisionInterval:
-        RawValue: 94663
-      LookForTargetsToShootAtInterval:
-        RawValue: 74274
-      VisionRangeSqr:
-        RawValue: 104857600
-      AccuracySpreadAngle: 28
-      ChanceToUseSpecial:
-        RawValue: 18204
-      SpecialAimingDeviation:
-        RawValue: 116508
-      LoadoutGearNumber: 3
-      LoadoutRarity: 0
-      MaxAimingRange:
-        RawValue: 589824
-      MovementSpeedMultiplier:
-        RawValue: 65536
-      MaxDistanceToTeammateSquared:
-        RawValue: 2359296
-      DamageDoneMultiplier:
-        RawValue: 65536
-      DamageTakenMultiplier:
-        RawValue: 65536
-      MinSpecialCooldown:
-        RawValue: 1966080
-      MaxSpecialCooldown:
-        RawValue: 3932160
-      MinRunFromZoneTime:
-        RawValue: 327680
-      MaxRunFromZoneTime:
-        RawValue: 1966080
-    - BehaviourType: 2
-      GameMode: BattleRoyale
-      Difficulty: 6
-      DecisionInterval:
-        RawValue: 87381
-      LookForTargetsToShootAtInterval:
-        RawValue: 72090
-      VisionRangeSqr:
-        RawValue: 104857600
-      AccuracySpreadAngle: 25
-      ChanceToUseSpecial:
-        RawValue: 21845
-      SpecialAimingDeviation:
-        RawValue: 87381
-      LoadoutGearNumber: 4
-      LoadoutRarity: 2
-      MaxAimingRange:
-        RawValue: 589824
-      MovementSpeedMultiplier:
-        RawValue: 65536
-      MaxDistanceToTeammateSquared:
-        RawValue: 2359296
-      DamageDoneMultiplier:
-        RawValue: 65536
-      DamageTakenMultiplier:
-        RawValue: 65536
-      MinSpecialCooldown:
-        RawValue: 1966080
-      MaxSpecialCooldown:
-        RawValue: 3932160
-      MinRunFromZoneTime:
-        RawValue: 327680
-      MaxRunFromZoneTime:
-        RawValue: 1966080
-    - BehaviourType: 2
-      GameMode: BattleRoyale
-      Difficulty: 7
-      DecisionInterval:
-        RawValue: 80100
-      LookForTargetsToShootAtInterval:
-        RawValue: 69905
-      VisionRangeSqr:
-        RawValue: 104857600
-      AccuracySpreadAngle: 24
-      ChanceToUseSpecial:
-        RawValue: 25486
-      SpecialAimingDeviation:
-        RawValue: 58254
-      LoadoutGearNumber: 4
-      LoadoutRarity: 4
-      MaxAimingRange:
-        RawValue: 589824
-      MovementSpeedMultiplier:
-        RawValue: 65536
-      MaxDistanceToTeammateSquared:
-        RawValue: 2359296
-      DamageDoneMultiplier:
-        RawValue: 65536
-      DamageTakenMultiplier:
-        RawValue: 65536
-      MinSpecialCooldown:
-        RawValue: 1966080
-      MaxSpecialCooldown:
-        RawValue: 3932160
-      MinRunFromZoneTime:
-        RawValue: 327680
-      MaxRunFromZoneTime:
-        RawValue: 1966080
-    - BehaviourType: 2
-      GameMode: BattleRoyale
-      Difficulty: 8
-      DecisionInterval:
-        RawValue: 72818
-      LookForTargetsToShootAtInterval:
-        RawValue: 67721
-      VisionRangeSqr:
-        RawValue: 104857600
-      AccuracySpreadAngle: 23
-      ChanceToUseSpecial:
-        RawValue: 29127
-      SpecialAimingDeviation:
-        RawValue: 29127
-      LoadoutGearNumber: 4
-      LoadoutRarity: 6
-      MaxAimingRange:
-        RawValue: 589824
-      MovementSpeedMultiplier:
-        RawValue: 65536
-      MaxDistanceToTeammateSquared:
-        RawValue: 2359296
-      DamageDoneMultiplier:
-        RawValue: 65536
-      DamageTakenMultiplier:
-        RawValue: 65536
-      MinSpecialCooldown:
-        RawValue: 1966080
-      MaxSpecialCooldown:
-        RawValue: 3932160
-      MinRunFromZoneTime:
-        RawValue: 327680
-      MaxRunFromZoneTime:
-        RawValue: 1966080
-    - BehaviourType: 2
-      GameMode: BattleRoyale
-      Difficulty: 9
-      DecisionInterval:
-        RawValue: 65536
-      LookForTargetsToShootAtInterval:
-        RawValue: 65536
-      VisionRangeSqr:
-        RawValue: 104857600
-      AccuracySpreadAngle: 22
-      ChanceToUseSpecial:
-        RawValue: 32768
-      SpecialAimingDeviation:
-        RawValue: 0
-      LoadoutGearNumber: 4
-      LoadoutRarity: 8
-      MaxAimingRange:
-        RawValue: 589824
-      MovementSpeedMultiplier:
-        RawValue: 65536
-      MaxDistanceToTeammateSquared:
-        RawValue: 2359296
-      DamageDoneMultiplier:
-        RawValue: 65536
-      DamageTakenMultiplier:
-        RawValue: 65536
-      MinSpecialCooldown:
-        RawValue: 1966080
-      MaxSpecialCooldown:
-        RawValue: 3932160
-      MinRunFromZoneTime:
-        RawValue: 327680
-      MaxRunFromZoneTime:
-        RawValue: 1966080
-    - BehaviourType: 2
-      GameMode: Deathmatch
-      Difficulty: 0
-      DecisionInterval:
-        RawValue: 78643
-      LookForTargetsToShootAtInterval:
-        RawValue: 39322
-      VisionRangeSqr:
-        RawValue: 21233664
-      AccuracySpreadAngle: 55
-      ChanceToUseSpecial:
-        RawValue: 0
-      SpecialAimingDeviation:
-        RawValue: 294912
-      LoadoutGearNumber: 0
-      LoadoutRarity: 0
-      MaxAimingRange:
-        RawValue: 360448
-      MovementSpeedMultiplier:
-        RawValue: 65536
-      MaxDistanceToTeammateSquared:
-        RawValue: 2359296
-      DamageDoneMultiplier:
-        RawValue: 65536
-      DamageTakenMultiplier:
-        RawValue: 65536
-      MinSpecialCooldown:
-        RawValue: 1966080
-      MaxSpecialCooldown:
-        RawValue: 3932160
-      MinRunFromZoneTime:
-        RawValue: 327680
-      MaxRunFromZoneTime:
-        RawValue: 1966080
-    - BehaviourType: 0
-      GameMode: Tutorial
-      Difficulty: 0
-      DecisionInterval:
-        RawValue: 65536
-      LookForTargetsToShootAtInterval:
-        RawValue: 26214
-      VisionRangeSqr:
-        RawValue: 40960000
-      AccuracySpreadAngle: 45
-      ChanceToUseSpecial:
-        RawValue: 0
-      SpecialAimingDeviation:
-        RawValue: 0
-      LoadoutGearNumber: 0
-      LoadoutRarity: 0
-      MaxAimingRange:
-        RawValue: 458752
-      MovementSpeedMultiplier:
-        RawValue: 32768
-      MaxDistanceToTeammateSquared:
-        RawValue: 2359296
-      DamageDoneMultiplier:
-        RawValue: 26214
-      DamageTakenMultiplier:
-        RawValue: 262144
-      MinSpecialCooldown:
-        RawValue: 1966080
-      MaxSpecialCooldown:
-        RawValue: 3932160
-      MinRunFromZoneTime:
-        RawValue: 327680
-      MaxRunFromZoneTime:
-        RawValue: 1966080
-    - BehaviourType: 1
-      GameMode: Tutorial
-      Difficulty: 0
-      DecisionInterval:
-        RawValue: 65536
-      LookForTargetsToShootAtInterval:
-        RawValue: 26214
-      VisionRangeSqr:
-        RawValue: 40960000
-      AccuracySpreadAngle: 70
-      ChanceToUseSpecial:
-        RawValue: 0
-      SpecialAimingDeviation:
-        RawValue: 0
-      LoadoutGearNumber: 0
-      LoadoutRarity: 0
-      MaxAimingRange:
-        RawValue: 458752
-      MovementSpeedMultiplier:
-        RawValue: 45875
-      MaxDistanceToTeammateSquared:
-        RawValue: 2359296
-      DamageDoneMultiplier:
-        RawValue: 26214
-      DamageTakenMultiplier:
-        RawValue: 101581
-      MinSpecialCooldown:
-        RawValue: 1966080
-      MaxSpecialCooldown:
-        RawValue: 3932160
-      MinRunFromZoneTime:
-        RawValue: 327680
-      MaxRunFromZoneTime:
-        RawValue: 1966080
-    - BehaviourType: 2
-      GameMode: BattleRoyale First Game
-      Difficulty: 0
-      DecisionInterval:
-        RawValue: 131072
-      LookForTargetsToShootAtInterval:
-        RawValue: 85197
-      VisionRangeSqr:
-        RawValue: 104857600
-      AccuracySpreadAngle: 42
-      ChanceToUseSpecial:
-        RawValue: 0
-      SpecialAimingDeviation:
-        RawValue: 262144
-      LoadoutGearNumber: 0
-      LoadoutRarity: 0
-      MaxAimingRange:
-        RawValue: 589824
-      MovementSpeedMultiplier:
-        RawValue: 65536
-      MaxDistanceToTeammateSquared:
-        RawValue: 2359296
-      DamageDoneMultiplier:
-        RawValue: 65536
-      DamageTakenMultiplier:
-        RawValue: 65536
-      MinSpecialCooldown:
-        RawValue: 1966080
-      MaxSpecialCooldown:
-        RawValue: 3932160
-      MinRunFromZoneTime:
-        RawValue: 327680
-      MaxRunFromZoneTime:
-        RawValue: 1966080
-    - BehaviourType: 1
-      GameMode: Testing
-      Difficulty: 0
-      DecisionInterval:
-        RawValue: 123790
-      LookForTargetsToShootAtInterval:
-        RawValue: 83012
-      VisionRangeSqr:
-        RawValue: 104857600
-      AccuracySpreadAngle: 38
-      ChanceToUseSpecial:
-        RawValue: 3641
-      SpecialAimingDeviation:
-        RawValue: 233017
-      LoadoutGearNumber: 1
-      LoadoutRarity: 0
-      MaxAimingRange:
-        RawValue: 589824
-      MovementSpeedMultiplier:
-        RawValue: 52429
-      MaxDistanceToTeammateSquared:
-        RawValue: 2359296
-      DamageDoneMultiplier:
-        RawValue: 65536
-      DamageTakenMultiplier:
-        RawValue: 65536
-      MinSpecialCooldown:
-        RawValue: 1966080
-      MaxSpecialCooldown:
-        RawValue: 3932160
-      MinRunFromZoneTime:
-        RawValue: 327680
-      MaxRunFromZoneTime:
-        RawValue: 1966080
-    - BehaviourType: 3
-      GameMode: Testing
-      Difficulty: 0
-      DecisionInterval:
-        RawValue: 116508
-      LookForTargetsToShootAtInterval:
-        RawValue: 80828
-      VisionRangeSqr:
-        RawValue: 104857600
-      AccuracySpreadAngle: 37
-      ChanceToUseSpecial:
-        RawValue: 7282
-      SpecialAimingDeviation:
-        RawValue: 203890
-      LoadoutGearNumber: 2
-      LoadoutRarity: 0
-      MaxAimingRange:
-        RawValue: 589824
-      MovementSpeedMultiplier:
-        RawValue: 58982
-      MaxDistanceToTeammateSquared:
-        RawValue: 2359296
-      DamageDoneMultiplier:
-        RawValue: 32768
-      DamageTakenMultiplier:
-        RawValue: 32768
-      MinSpecialCooldown:
-        RawValue: 1966080
-      MaxSpecialCooldown:
-        RawValue: 3932160
-      MinRunFromZoneTime:
-        RawValue: 327680
-      MaxRunFromZoneTime:
-        RawValue: 1966080
+  m_EditorClassIdentifier:
+  Identifier:
+    Path: AddressableResources/Configs/BotConfigs
+    Guid:
+      Value: 1550297457877710414
+  QuantumConfigs:
+  - BehaviourType: 2
+    GameMode: BattleRoyale
+    Difficulty: 0
+    DecisionInterval:
+      RawValue: 131072
+    LookForTargetsToShootAtInterval:
+      RawValue: 85197
+    VisionRangeSqr:
+      RawValue: 104857600
+    AccuracySpreadAngle: 42
+    ChanceToUseSpecial:
+      RawValue: 0
+    SpecialAimingDeviation:
+      RawValue: 262144
+    LoadoutGearNumber: 0
+    LoadoutRarity: 0
+    MaxAimingRange:
+      RawValue: 589824
+    MovementSpeedMultiplier:
+      RawValue: 65536
+    MaxDistanceToTeammateSquared:
+      RawValue: 2359296
+    DamageDoneMultiplier:
+      RawValue: 65536
+    DamageTakenMultiplier:
+      RawValue: 65536
+    MinSpecialCooldown:
+      RawValue: 1966080
+    MaxSpecialCooldown:
+      RawValue: 3932160
+    MinRunFromZoneTime:
+      RawValue: 327680
+    MaxRunFromZoneTime:
+      RawValue: 1966080
+  - BehaviourType: 2
+    GameMode: BattleRoyale
+    Difficulty: 1
+    DecisionInterval:
+      RawValue: 123790
+    LookForTargetsToShootAtInterval:
+      RawValue: 83012
+    VisionRangeSqr:
+      RawValue: 104857600
+    AccuracySpreadAngle: 38
+    ChanceToUseSpecial:
+      RawValue: 3641
+    SpecialAimingDeviation:
+      RawValue: 233017
+    LoadoutGearNumber: 1
+    LoadoutRarity: 0
+    MaxAimingRange:
+      RawValue: 589824
+    MovementSpeedMultiplier:
+      RawValue: 65536
+    MaxDistanceToTeammateSquared:
+      RawValue: 2359296
+    DamageDoneMultiplier:
+      RawValue: 65536
+    DamageTakenMultiplier:
+      RawValue: 65536
+    MinSpecialCooldown:
+      RawValue: 1966080
+    MaxSpecialCooldown:
+      RawValue: 3932160
+    MinRunFromZoneTime:
+      RawValue: 327680
+    MaxRunFromZoneTime:
+      RawValue: 1966080
+  - BehaviourType: 2
+    GameMode: BattleRoyale
+    Difficulty: 2
+    DecisionInterval:
+      RawValue: 116508
+    LookForTargetsToShootAtInterval:
+      RawValue: 80828
+    VisionRangeSqr:
+      RawValue: 104857600
+    AccuracySpreadAngle: 37
+    ChanceToUseSpecial:
+      RawValue: 7282
+    SpecialAimingDeviation:
+      RawValue: 203890
+    LoadoutGearNumber: 2
+    LoadoutRarity: 0
+    MaxAimingRange:
+      RawValue: 589824
+    MovementSpeedMultiplier:
+      RawValue: 65536
+    MaxDistanceToTeammateSquared:
+      RawValue: 2359296
+    DamageDoneMultiplier:
+      RawValue: 65536
+    DamageTakenMultiplier:
+      RawValue: 65536
+    MinSpecialCooldown:
+      RawValue: 1966080
+    MaxSpecialCooldown:
+      RawValue: 3932160
+    MinRunFromZoneTime:
+      RawValue: 327680
+    MaxRunFromZoneTime:
+      RawValue: 1966080
+  - BehaviourType: 2
+    GameMode: BattleRoyale
+    Difficulty: 3
+    DecisionInterval:
+      RawValue: 109227
+    LookForTargetsToShootAtInterval:
+      RawValue: 78643
+    VisionRangeSqr:
+      RawValue: 104857600
+    AccuracySpreadAngle: 34
+    ChanceToUseSpecial:
+      RawValue: 10923
+    SpecialAimingDeviation:
+      RawValue: 174763
+    LoadoutGearNumber: 3
+    LoadoutRarity: 0
+    MaxAimingRange:
+      RawValue: 589824
+    MovementSpeedMultiplier:
+      RawValue: 65536
+    MaxDistanceToTeammateSquared:
+      RawValue: 2359296
+    DamageDoneMultiplier:
+      RawValue: 65536
+    DamageTakenMultiplier:
+      RawValue: 65536
+    MinSpecialCooldown:
+      RawValue: 1966080
+    MaxSpecialCooldown:
+      RawValue: 3932160
+    MinRunFromZoneTime:
+      RawValue: 327680
+    MaxRunFromZoneTime:
+      RawValue: 1966080
+  - BehaviourType: 2
+    GameMode: BattleRoyale
+    Difficulty: 4
+    DecisionInterval:
+      RawValue: 101945
+    LookForTargetsToShootAtInterval:
+      RawValue: 76459
+    VisionRangeSqr:
+      RawValue: 104857600
+    AccuracySpreadAngle: 31
+    ChanceToUseSpecial:
+      RawValue: 14564
+    SpecialAimingDeviation:
+      RawValue: 145636
+    LoadoutGearNumber: 3
+    LoadoutRarity: 0
+    MaxAimingRange:
+      RawValue: 589824
+    MovementSpeedMultiplier:
+      RawValue: 65536
+    MaxDistanceToTeammateSquared:
+      RawValue: 2359296
+    DamageDoneMultiplier:
+      RawValue: 65536
+    DamageTakenMultiplier:
+      RawValue: 65536
+    MinSpecialCooldown:
+      RawValue: 1966080
+    MaxSpecialCooldown:
+      RawValue: 3932160
+    MinRunFromZoneTime:
+      RawValue: 327680
+    MaxRunFromZoneTime:
+      RawValue: 1966080
+  - BehaviourType: 2
+    GameMode: BattleRoyale
+    Difficulty: 5
+    DecisionInterval:
+      RawValue: 94663
+    LookForTargetsToShootAtInterval:
+      RawValue: 74274
+    VisionRangeSqr:
+      RawValue: 104857600
+    AccuracySpreadAngle: 28
+    ChanceToUseSpecial:
+      RawValue: 18204
+    SpecialAimingDeviation:
+      RawValue: 116508
+    LoadoutGearNumber: 3
+    LoadoutRarity: 0
+    MaxAimingRange:
+      RawValue: 589824
+    MovementSpeedMultiplier:
+      RawValue: 65536
+    MaxDistanceToTeammateSquared:
+      RawValue: 2359296
+    DamageDoneMultiplier:
+      RawValue: 65536
+    DamageTakenMultiplier:
+      RawValue: 65536
+    MinSpecialCooldown:
+      RawValue: 1966080
+    MaxSpecialCooldown:
+      RawValue: 3932160
+    MinRunFromZoneTime:
+      RawValue: 327680
+    MaxRunFromZoneTime:
+      RawValue: 1966080
+  - BehaviourType: 2
+    GameMode: BattleRoyale
+    Difficulty: 6
+    DecisionInterval:
+      RawValue: 87381
+    LookForTargetsToShootAtInterval:
+      RawValue: 72090
+    VisionRangeSqr:
+      RawValue: 104857600
+    AccuracySpreadAngle: 25
+    ChanceToUseSpecial:
+      RawValue: 21845
+    SpecialAimingDeviation:
+      RawValue: 87381
+    LoadoutGearNumber: 4
+    LoadoutRarity: 2
+    MaxAimingRange:
+      RawValue: 589824
+    MovementSpeedMultiplier:
+      RawValue: 65536
+    MaxDistanceToTeammateSquared:
+      RawValue: 2359296
+    DamageDoneMultiplier:
+      RawValue: 65536
+    DamageTakenMultiplier:
+      RawValue: 65536
+    MinSpecialCooldown:
+      RawValue: 1966080
+    MaxSpecialCooldown:
+      RawValue: 3932160
+    MinRunFromZoneTime:
+      RawValue: 327680
+    MaxRunFromZoneTime:
+      RawValue: 1966080
+  - BehaviourType: 2
+    GameMode: BattleRoyale
+    Difficulty: 7
+    DecisionInterval:
+      RawValue: 80100
+    LookForTargetsToShootAtInterval:
+      RawValue: 69905
+    VisionRangeSqr:
+      RawValue: 104857600
+    AccuracySpreadAngle: 24
+    ChanceToUseSpecial:
+      RawValue: 25486
+    SpecialAimingDeviation:
+      RawValue: 58254
+    LoadoutGearNumber: 4
+    LoadoutRarity: 4
+    MaxAimingRange:
+      RawValue: 589824
+    MovementSpeedMultiplier:
+      RawValue: 65536
+    MaxDistanceToTeammateSquared:
+      RawValue: 2359296
+    DamageDoneMultiplier:
+      RawValue: 65536
+    DamageTakenMultiplier:
+      RawValue: 65536
+    MinSpecialCooldown:
+      RawValue: 1966080
+    MaxSpecialCooldown:
+      RawValue: 3932160
+    MinRunFromZoneTime:
+      RawValue: 327680
+    MaxRunFromZoneTime:
+      RawValue: 1966080
+  - BehaviourType: 2
+    GameMode: BattleRoyale
+    Difficulty: 8
+    DecisionInterval:
+      RawValue: 72818
+    LookForTargetsToShootAtInterval:
+      RawValue: 67721
+    VisionRangeSqr:
+      RawValue: 104857600
+    AccuracySpreadAngle: 23
+    ChanceToUseSpecial:
+      RawValue: 29127
+    SpecialAimingDeviation:
+      RawValue: 29127
+    LoadoutGearNumber: 4
+    LoadoutRarity: 6
+    MaxAimingRange:
+      RawValue: 589824
+    MovementSpeedMultiplier:
+      RawValue: 65536
+    MaxDistanceToTeammateSquared:
+      RawValue: 2359296
+    DamageDoneMultiplier:
+      RawValue: 65536
+    DamageTakenMultiplier:
+      RawValue: 65536
+    MinSpecialCooldown:
+      RawValue: 1966080
+    MaxSpecialCooldown:
+      RawValue: 3932160
+    MinRunFromZoneTime:
+      RawValue: 327680
+    MaxRunFromZoneTime:
+      RawValue: 1966080
+  - BehaviourType: 2
+    GameMode: BattleRoyale
+    Difficulty: 9
+    DecisionInterval:
+      RawValue: 65536
+    LookForTargetsToShootAtInterval:
+      RawValue: 65536
+    VisionRangeSqr:
+      RawValue: 104857600
+    AccuracySpreadAngle: 22
+    ChanceToUseSpecial:
+      RawValue: 32768
+    SpecialAimingDeviation:
+      RawValue: 0
+    LoadoutGearNumber: 4
+    LoadoutRarity: 8
+    MaxAimingRange:
+      RawValue: 589824
+    MovementSpeedMultiplier:
+      RawValue: 65536
+    MaxDistanceToTeammateSquared:
+      RawValue: 2359296
+    DamageDoneMultiplier:
+      RawValue: 65536
+    DamageTakenMultiplier:
+      RawValue: 65536
+    MinSpecialCooldown:
+      RawValue: 1966080
+    MaxSpecialCooldown:
+      RawValue: 3932160
+    MinRunFromZoneTime:
+      RawValue: 327680
+    MaxRunFromZoneTime:
+      RawValue: 1966080
+  - BehaviourType: 2
+    GameMode: Deathmatch
+    Difficulty: 0
+    DecisionInterval:
+      RawValue: 78643
+    LookForTargetsToShootAtInterval:
+      RawValue: 39322
+    VisionRangeSqr:
+      RawValue: 21233664
+    AccuracySpreadAngle: 55
+    ChanceToUseSpecial:
+      RawValue: 0
+    SpecialAimingDeviation:
+      RawValue: 294912
+    LoadoutGearNumber: 0
+    LoadoutRarity: 0
+    MaxAimingRange:
+      RawValue: 360448
+    MovementSpeedMultiplier:
+      RawValue: 65536
+    MaxDistanceToTeammateSquared:
+      RawValue: 2359296
+    DamageDoneMultiplier:
+      RawValue: 65536
+    DamageTakenMultiplier:
+      RawValue: 65536
+    MinSpecialCooldown:
+      RawValue: 1966080
+    MaxSpecialCooldown:
+      RawValue: 3932160
+    MinRunFromZoneTime:
+      RawValue: 327680
+    MaxRunFromZoneTime:
+      RawValue: 1966080
+  - BehaviourType: 0
+    GameMode: Tutorial
+    Difficulty: 0
+    DecisionInterval:
+      RawValue: 65536
+    LookForTargetsToShootAtInterval:
+      RawValue: 26214
+    VisionRangeSqr:
+      RawValue: 40960000
+    AccuracySpreadAngle: 45
+    ChanceToUseSpecial:
+      RawValue: 0
+    SpecialAimingDeviation:
+      RawValue: 0
+    LoadoutGearNumber: 0
+    LoadoutRarity: 0
+    MaxAimingRange:
+      RawValue: 458752
+    MovementSpeedMultiplier:
+      RawValue: 32768
+    MaxDistanceToTeammateSquared:
+      RawValue: 2359296
+    DamageDoneMultiplier:
+      RawValue: 26214
+    DamageTakenMultiplier:
+      RawValue: 262144
+    MinSpecialCooldown:
+      RawValue: 1966080
+    MaxSpecialCooldown:
+      RawValue: 3932160
+    MinRunFromZoneTime:
+      RawValue: 327680
+    MaxRunFromZoneTime:
+      RawValue: 1966080
+  - BehaviourType: 1
+    GameMode: Tutorial
+    Difficulty: 0
+    DecisionInterval:
+      RawValue: 65536
+    LookForTargetsToShootAtInterval:
+      RawValue: 26214
+    VisionRangeSqr:
+      RawValue: 40960000
+    AccuracySpreadAngle: 70
+    ChanceToUseSpecial:
+      RawValue: 0
+    SpecialAimingDeviation:
+      RawValue: 0
+    LoadoutGearNumber: 0
+    LoadoutRarity: 0
+    MaxAimingRange:
+      RawValue: 458752
+    MovementSpeedMultiplier:
+      RawValue: 45875
+    MaxDistanceToTeammateSquared:
+      RawValue: 2359296
+    DamageDoneMultiplier:
+      RawValue: 26214
+    DamageTakenMultiplier:
+      RawValue: 101581
+    MinSpecialCooldown:
+      RawValue: 1966080
+    MaxSpecialCooldown:
+      RawValue: 3932160
+    MinRunFromZoneTime:
+      RawValue: 327680
+    MaxRunFromZoneTime:
+      RawValue: 1966080
+  - BehaviourType: 2
+    GameMode: BattleRoyale First Game
+    Difficulty: 0
+    DecisionInterval:
+      RawValue: 131072
+    LookForTargetsToShootAtInterval:
+      RawValue: 85197
+    VisionRangeSqr:
+      RawValue: 104857600
+    AccuracySpreadAngle: 42
+    ChanceToUseSpecial:
+      RawValue: 0
+    SpecialAimingDeviation:
+      RawValue: 262144
+    LoadoutGearNumber: 0
+    LoadoutRarity: 0
+    MaxAimingRange:
+      RawValue: 589824
+    MovementSpeedMultiplier:
+      RawValue: 65536
+    MaxDistanceToTeammateSquared:
+      RawValue: 2359296
+    DamageDoneMultiplier:
+      RawValue: 65536
+    DamageTakenMultiplier:
+      RawValue: 65536
+    MinSpecialCooldown:
+      RawValue: 1966080
+    MaxSpecialCooldown:
+      RawValue: 3932160
+    MinRunFromZoneTime:
+      RawValue: 327680
+    MaxRunFromZoneTime:
+      RawValue: 1966080
+  - BehaviourType: 1
+    GameMode: Testing
+    Difficulty: 0
+    DecisionInterval:
+      RawValue: 123790
+    LookForTargetsToShootAtInterval:
+      RawValue: 83012
+    VisionRangeSqr:
+      RawValue: 104857600
+    AccuracySpreadAngle: 38
+    ChanceToUseSpecial:
+      RawValue: 3641
+    SpecialAimingDeviation:
+      RawValue: 233017
+    LoadoutGearNumber: 1
+    LoadoutRarity: 0
+    MaxAimingRange:
+      RawValue: 589824
+    MovementSpeedMultiplier:
+      RawValue: 52429
+    MaxDistanceToTeammateSquared:
+      RawValue: 2359296
+    DamageDoneMultiplier:
+      RawValue: 65536
+    DamageTakenMultiplier:
+      RawValue: 65536
+    MinSpecialCooldown:
+      RawValue: 1966080
+    MaxSpecialCooldown:
+      RawValue: 3932160
+    MinRunFromZoneTime:
+      RawValue: 327680
+    MaxRunFromZoneTime:
+      RawValue: 1966080
+  - BehaviourType: 3
+    GameMode: Testing
+    Difficulty: 0
+    DecisionInterval:
+      RawValue: 116508
+    LookForTargetsToShootAtInterval:
+      RawValue: 80828
+    VisionRangeSqr:
+      RawValue: 104857600
+    AccuracySpreadAngle: 37
+    ChanceToUseSpecial:
+      RawValue: 7282
+    SpecialAimingDeviation:
+      RawValue: 203890
+    LoadoutGearNumber: 2
+    LoadoutRarity: 0
+    MaxAimingRange:
+      RawValue: 589824
+    MovementSpeedMultiplier:
+      RawValue: 58982
+    MaxDistanceToTeammateSquared:
+      RawValue: 2359296
+    DamageDoneMultiplier:
+      RawValue: 32768
+    DamageTakenMultiplier:
+      RawValue: 32768
+    MinSpecialCooldown:
+      RawValue: 1966080
+    MaxSpecialCooldown:
+      RawValue: 3932160
+    MinRunFromZoneTime:
+      RawValue: 327680
+    MaxRunFromZoneTime:
+      RawValue: 1966080

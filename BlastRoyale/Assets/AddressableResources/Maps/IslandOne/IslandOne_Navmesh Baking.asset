@@ -9,26 +9,26 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cfb2d134f0fd8e447b08e569da2a1031, type: 3}
+  m_Script: {fileID: -1283927171, guid: b156eeaae3f741b40af66649a4748430, type: 3}
   m_Name: IslandOne_Navmesh Baking
-  m_EditorClassIdentifier: 
-  Settings:
-    Identifier:
-      Path: AddressableResources/Maps/IslandOne/IslandOne_Navmesh Baking
-      Guid:
-        Value: 4343785826901058006
-    Name: Navmesh Baking
-    DataAsset:
-      Id:
-        Value: 2284101304238230590
-    DataFilepath: 
-    GridSizeX: 26
-    GridSizeY: 26
-    GridNodeSize: 16
-    WorldOffset:
-      X:
-        RawValue: -13631488
-      Y:
-        RawValue: -13631488
-    MinAgentRadius:
-      RawValue: 14417
+  m_EditorClassIdentifier:
+  Identifier:
+    Path: AddressableResources/Maps/IslandOne/IslandOne_Navmesh Baking
+    Guid:
+      Value: 4343785826901058006
+  Name: Navmesh Baking
+  SerializeType: 1
+  RegionMaskBlockCount: 2
+  DataAsset:
+    Id:
+      Value: 2284101304238230590
+  GridSizeX: 26
+  GridSizeY: 26
+  GridNodeSize: 16
+  WorldOffset:
+    X:
+      RawValue: -13631488
+    Y:
+      RawValue: -13631488
+  MinAgentRadius:
+    RawValue: 14417

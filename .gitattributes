@@ -56,3 +56,10 @@ Assets/Scenes/**/*.asset filter=lfs diff=lfs merge=lfs -diff -merge
 *.so filter=lfs diff=lfs merge=lfs -text
 *.srcaar filter=lfs diff=lfs merge=lfs -text
 * !text !filter !merge !diff
+
+# Unity writes trailing spaces for empty YAML scalars during native serialization.
+*.meta whitespace=-blank-at-eol
+*.asset whitespace=-blank-at-eol
+*.mat whitespace=-blank-at-eol
+*.prefab whitespace=-blank-at-eol
+*.unity whitespace=-blank-at-eol

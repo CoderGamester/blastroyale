@@ -46,8 +46,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0008c51fe3af00b4da5d44f02d9b3dff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   BindBehaviour: 1
   ManualDisposal: 0
   GameObjectNameIsEntityRef: 0
@@ -76,8 +76,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 836dcb7e0f6259748b850a10912ce727, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   TransformMode: 0
   Transform2DVertical:
     IsEnabled: 0
@@ -198,7 +198,7 @@ MonoBehaviour:
         Asset:
           Id:
             Value: 0
-        Name: 
+        Name:
   NavMeshSteeringAgent:
     IsEnabled: 0
     MaxSpeed:
@@ -224,8 +224,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1dd215b86ae9e95498bb114042d3b75e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   EntityView: {fileID: 7757663921541325714}
   _itemTransform: {fileID: 2314415827602187133}
   _collectableView: {fileID: 3490737195945178941}
@@ -239,8 +239,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 35181e0e725004e4b909ae2194a28779, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   Prototype:
     Item:
       GameId:
@@ -346,7 +346,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8394961782085835017, guid: e7f8488bfba364d6ca7639c3f5455f94, type: 3}
       propertyPath: _itemGameObject
-      value: 
+      value:
       objectReference: {fileID: 2314415827602187134}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -372,31 +372,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4a5c4faaf3b0451eb195431260891ebb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
 --- !u!4 &6324209233026971484 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1384128413185055080, guid: e7f8488bfba364d6ca7639c3f5455f94, type: 3}
   m_PrefabInstance: {fileID: 4967879128221675060}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &-881262544539562628
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0120b722c3ca5454da1240b65656905f, type: 3}
-  m_Name: EquipmentPickupEntityPrototype
-  m_EditorClassIdentifier: 
-  Settings:
-    Identifier:
-      Path: AddressableResources/QuantumAssets/Collectables/EquipmentPickup|EntityPrototype
-      Guid:
-        Value: 4070827363264793974
-  Parent: {fileID: 409028007402901711}
 --- !u!114 &7845361808403847208
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -406,12 +388,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4d5baec4de8d2754a864a680181831e8, type: 3}
+  m_Script: {fileID: 206745634, guid: b156eeaae3f741b40af66649a4748430, type: 3}
   m_Name: EquipmentPickupEntityView
-  m_EditorClassIdentifier: 
-  Settings:
-    Identifier:
-      Path: AddressableResources/QuantumAssets/Collectables/EquipmentPickup|EntityView
-      Guid:
-        Value: 3715608968879547668
-  Parent: {fileID: 7757663921541325714}
+  m_EditorClassIdentifier:
+  Identifier:
+    Path: "AddressableResources/QuantumAssets/Collectables/EquipmentPickup|EntityView"
+    Guid:
+      Value: 3715608968879547668
+  Prefab: {fileID: 3587682744574828602}

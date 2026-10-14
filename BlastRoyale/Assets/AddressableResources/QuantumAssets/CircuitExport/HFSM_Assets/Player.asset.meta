@@ -1,8 +1,10 @@
 fileFormatVersion: 2
 guid: c821bf527a77a4970aa1c8944d8e3e50
+labels:
+- QuantumAsset
 NativeFormatImporter:
   externalObjects: {}
   mainObjectFileID: 11400000
-  userData: 
-  assetBundleName: 
-  assetBundleVariant: 
+  userData:
+  assetBundleName:
+  assetBundleVariant:
