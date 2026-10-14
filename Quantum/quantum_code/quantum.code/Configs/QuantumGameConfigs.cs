@@ -30,20 +30,20 @@ namespace Quantum
 		public int TrophyEloRange;
 		public FP TrophyEloK;
 		public FP TrophyMinChange;
-		public uint NftAssumedOwned;
-		public uint MinNftForPoolSizeBonus;
+
+
 		public FP EarningsAugmentationStrengthDropMod ;
 		public FP EarningsAugmentationStrengthSteepnessMod;
-		public uint NftUsageCooldownMinutes;
-		public uint NftRequiredEquippedForPlay;
+
+
 		public FP PlayerVisionRange;
 		public FP AirdropPositionOffsetMultiplier;
 		public FP AirdropRandomAreaMultiplier;
 		public FP AirdropHeight;
 		public FP MultiKillResetTime;
 		public int BotsMaxDifficulty;
-		public FP NftDurabilityDropDays;
-		public FP NonNftDurabilityDropDays;
+
+
 		public int BotsDifficultyTrophiesStep;
 		public FP MightBaseValue;
 		public FP MightRarityMultiplier;

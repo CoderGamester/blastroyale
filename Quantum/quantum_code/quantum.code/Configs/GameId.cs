@@ -102,7 +102,7 @@ namespace Quantum
 					GameId.NOOB, new List<GameIdGroup>
 					{
 						GameIdGroup.Currency,
-						GameIdGroup.CryptoCurrency
+						GameIdGroup.BonusCurrency
 					}.AsReadOnly()
 				},
 				{
@@ -168,182 +168,182 @@ namespace Quantum
 					GameId.PartnerANCIENT8, new List<GameIdGroup>
 					{
 						GameIdGroup.Currency,
-						GameIdGroup.CryptoCurrency
+						GameIdGroup.BonusCurrency
 					}.AsReadOnly()
 				},
 				{
 					GameId.PartnerAPECOIN, new List<GameIdGroup>
 					{
 						GameIdGroup.Currency,
-						GameIdGroup.CryptoCurrency
+						GameIdGroup.BonusCurrency
 					}.AsReadOnly()
 				},
 				{
 					GameId.PartnerBEAM, new List<GameIdGroup>
 					{
 						GameIdGroup.Currency,
-						GameIdGroup.CryptoCurrency
+						GameIdGroup.BonusCurrency
 					}.AsReadOnly()
 				},
 				{
 					GameId.PartnerBLOCKLORDS, new List<GameIdGroup>
 					{
 						GameIdGroup.Currency,
-						GameIdGroup.CryptoCurrency
+						GameIdGroup.BonusCurrency
 					}.AsReadOnly()
 				},
 				{
 					GameId.PartnerBLOODLOOP, new List<GameIdGroup>
 					{
 						GameIdGroup.Currency,
-						GameIdGroup.CryptoCurrency
+						GameIdGroup.BonusCurrency
 					}.AsReadOnly()
 				},
 				{
 					GameId.PartnerCROSSTHEAGES, new List<GameIdGroup>
 					{
 						GameIdGroup.Currency,
-						GameIdGroup.CryptoCurrency
+						GameIdGroup.BonusCurrency
 					}.AsReadOnly()
 				},
 				{
 					GameId.PartnerFARCANA, new List<GameIdGroup>
 					{
 						GameIdGroup.Currency,
-						GameIdGroup.CryptoCurrency
+						GameIdGroup.BonusCurrency
 					}.AsReadOnly()
 				},
 				{
 					GameId.PartnerGAM3SGG, new List<GameIdGroup>
 					{
 						GameIdGroup.Currency,
-						GameIdGroup.CryptoCurrency
+						GameIdGroup.BonusCurrency
 					}.AsReadOnly()
 				},
 				{
 					GameId.PartnerIMMUTABLE, new List<GameIdGroup>
 					{
 						GameIdGroup.Currency,
-						GameIdGroup.CryptoCurrency
+						GameIdGroup.BonusCurrency
 					}.AsReadOnly()
 				},
 				{
 					GameId.PartnerMOCAVERSE, new List<GameIdGroup>
 					{
 						GameIdGroup.Currency,
-						GameIdGroup.CryptoCurrency
+						GameIdGroup.BonusCurrency
 					}.AsReadOnly()
 				},
 				{
 					GameId.PartnerNYANHEROES, new List<GameIdGroup>
 					{
 						GameIdGroup.Currency,
-						GameIdGroup.CryptoCurrency
+						GameIdGroup.BonusCurrency
 					}.AsReadOnly()
 				},
 				{
 					GameId.PartnerPIRATENATION, new List<GameIdGroup>
 					{
 						GameIdGroup.Currency,
-						GameIdGroup.CryptoCurrency
+						GameIdGroup.BonusCurrency
 					}.AsReadOnly()
 				},
 				{
 					GameId.PartnerPIXELMON, new List<GameIdGroup>
 					{
 						GameIdGroup.Currency,
-						GameIdGroup.CryptoCurrency
+						GameIdGroup.BonusCurrency
 					}.AsReadOnly()
 				},
 				{
 					GameId.PartnerPLANETMOJO, new List<GameIdGroup>
 					{
 						GameIdGroup.Currency,
-						GameIdGroup.CryptoCurrency
+						GameIdGroup.BonusCurrency
 					}.AsReadOnly()
 				},
 				{
 					GameId.PartnerSEEDIFY, new List<GameIdGroup>
 					{
 						GameIdGroup.Currency,
-						GameIdGroup.CryptoCurrency
+						GameIdGroup.BonusCurrency
 					}.AsReadOnly()
 				},
 				{
 					GameId.PartnerWILDERWORLD, new List<GameIdGroup>
 					{
 						GameIdGroup.Currency,
-						GameIdGroup.CryptoCurrency
+						GameIdGroup.BonusCurrency
 					}.AsReadOnly()
 				},
 				{
 					GameId.PartnerXBORG, new List<GameIdGroup>
 					{
 						GameIdGroup.Currency,
-						GameIdGroup.CryptoCurrency
+						GameIdGroup.BonusCurrency
 					}.AsReadOnly()
 				},
 				{
 					GameId.PartnerBREED, new List<GameIdGroup>
 					{
 						GameIdGroup.Currency,
-						GameIdGroup.CryptoCurrency
+						GameIdGroup.BonusCurrency
 					}.AsReadOnly()
 				},
 				{
 					GameId.PartnerMEME, new List<GameIdGroup>
 					{
 						GameIdGroup.Currency,
-						GameIdGroup.CryptoCurrency
+						GameIdGroup.BonusCurrency
 					}.AsReadOnly()
 				},
 				{
 					GameId.PartnerYGG, new List<GameIdGroup>
 					{
 						GameIdGroup.Currency,
-						GameIdGroup.CryptoCurrency
+						GameIdGroup.BonusCurrency
 					}.AsReadOnly()
 				},
 				{
 					GameId.FestiveSNOWFLAKE, new List<GameIdGroup>
 					{
 						GameIdGroup.Currency,
-						GameIdGroup.CryptoCurrency
+						GameIdGroup.BonusCurrency
 					}.AsReadOnly()
 				},
 				{
 					GameId.EventTicket, new List<GameIdGroup>
 					{
 						GameIdGroup.Currency,
-						GameIdGroup.CryptoCurrency
+						GameIdGroup.BonusCurrency
 					}.AsReadOnly()
 				},
 				{
 					GameId.FestiveLUNARCOIN, new List<GameIdGroup>
 					{
 						GameIdGroup.Currency,
-						GameIdGroup.CryptoCurrency
+						GameIdGroup.BonusCurrency
 					}.AsReadOnly()
 				},
 				{
 					GameId.FestiveFEATHER, new List<GameIdGroup>
 					{
 						GameIdGroup.Currency,
-						GameIdGroup.CryptoCurrency
+						GameIdGroup.BonusCurrency
 					}.AsReadOnly()
 				},
 				{
 					GameId.FestiveLANTERN, new List<GameIdGroup>
 					{
 						GameIdGroup.Currency,
-						GameIdGroup.CryptoCurrency
+						GameIdGroup.BonusCurrency
 					}.AsReadOnly()
 				},
 				{
 					GameId.FestiveEGG, new List<GameIdGroup>
 					{
 						GameIdGroup.Currency,
-						GameIdGroup.CryptoCurrency
+						GameIdGroup.BonusCurrency
 					}.AsReadOnly()
 				},
 				{
@@ -1169,12 +1169,6 @@ namespace Quantum
 						GameIdGroup.IAP,
 						GameIdGroup.Chest,
 						GameIdGroup.Deprecated
-					}.AsReadOnly()
-				},
-				{
-					GameId.GasTicket, new List<GameIdGroup>
-					{
-						GameIdGroup.Currency
 					}.AsReadOnly()
 				},
 				{
@@ -2570,14 +2564,6 @@ namespace Quantum
 					}.AsReadOnly()
 				},
 				{
-					GameId.AvatarNFTCollection, new List<GameIdGroup>
-					{
-						GameIdGroup.ProfilePicture,
-						GameIdGroup.Collection,
-						GameIdGroup.GenericCollectionItem
-					}.AsReadOnly()
-				},
-				{
 					GameId.AvatarAssasinmask, new List<GameIdGroup>
 					{
 						GameIdGroup.ProfilePicture,
@@ -3486,7 +3472,6 @@ namespace Quantum
 						GameId.FestiveFEATHER,
 						GameId.FestiveLANTERN,
 						GameId.FestiveEGG,
-						GameId.GasTicket
 					}.AsReadOnly()
 				},
 				{
@@ -3954,7 +3939,6 @@ namespace Quantum
 						GameId.Avatar4,
 						GameId.Avatar5,
 						GameId.AvatarRemote,
-						GameId.AvatarNFTCollection,
 						GameId.AvatarAssasinmask,
 						GameId.AvatarBlastcatads,
 						GameId.AvatarBurgerads,
@@ -4253,7 +4237,6 @@ namespace Quantum
 					GameIdGroup.GenericCollectionItem, new List<GameId>
 					{
 						GameId.AvatarRemote,
-						GameId.AvatarNFTCollection
 					}.AsReadOnly()
 				},
 				{
@@ -4265,7 +4248,7 @@ namespace Quantum
 					}.AsReadOnly()
 				},
 				{
-					GameIdGroup.CryptoCurrency, new List<GameId>
+					GameIdGroup.BonusCurrency, new List<GameId>
 					{
 						GameId.NOOB,
 						GameId.PartnerANCIENT8,
@@ -4510,7 +4493,6 @@ namespace Quantum
 						GameId.Avatar4,
 						GameId.Avatar5,
 						GameId.AvatarRemote,
-						GameId.AvatarNFTCollection,
 						GameId.AvatarAssasinmask,
 						GameId.AvatarBlastcatads,
 						GameId.AvatarBurgerads,

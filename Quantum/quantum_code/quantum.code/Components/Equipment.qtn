@@ -1,10 +1,6 @@
 #define EQUIPMENT_SLOT_COUNT 6 
 
 
-struct EquipmentSimulationMetadata {
-    bool IsNft;
-}
-
 struct EquipmentMinified {
     GameId Id;
     EquipmentRarity Rarity;

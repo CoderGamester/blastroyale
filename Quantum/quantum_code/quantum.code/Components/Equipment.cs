@@ -4,7 +4,7 @@ using System.Collections.Generic;
 namespace Quantum
 {
 	/// <summary>
-	/// Holds (NFT) attributes about a piece of equipment (weapon or gear).
+	/// Holds gameplay attributes about a piece of equipment (weapon or gear).
 	/// </summary>
 	[Serializable]
 	public partial struct Equipment : IEquatable<Equipment>
