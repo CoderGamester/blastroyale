@@ -1,0 +1,27 @@
+{
+  "status": "pass",
+  "editor": "6000.3.26f1",
+  "original": {
+    "stage": "Original",
+    "warnings": 0,
+    "missingComponents": 2
+  },
+  "candidate": {
+    "stage": "Candidate",
+    "warnings": 0,
+    "missingComponents": 0
+  },
+  "nativeRemoved": 2,
+  "warningCapture": "Native deserialization occurs before managed log callbacks; log markers are authoritative",
+  "fullBootStartupValidation": "root Main run required",
+  "actualBootInitializationRun": false,
+  "originalSceneSaved": false,
+  "lightingRebake": "not_run",
+  "native_log_warning_counts": {
+    "original": 2,
+    "candidate": 0
+  },
+  "csharp_diagnostics": 0,
+  "native_exceptions": 0,
+  "process_exit_code": 0
+}

@@ -1,0 +1,28 @@
+{
+  "owners": [
+    {
+      "owner": "ExternalServices",
+      "globalId": "GlobalObjectId_V1-2-89c1f74280a0242869a47dbd971fc35a-226939877-0",
+      "hasAssetLocalId": false,
+      "guid": "00000000000000000000000000000000",
+      "localId": 0
+    },
+    {
+      "owner": "!ftraceLightmaps",
+      "globalId": "GlobalObjectId_V1-2-89c1f74280a0242869a47dbd971fc35a-1128303510-0",
+      "hasAssetLocalId": false,
+      "guid": "00000000000000000000000000000000",
+      "localId": 0
+    }
+  ],
+  "paths": [
+    {
+      "guid": "97a8a3caac8b73541aa8a9a1e330f479",
+      "path": ""
+    },
+    {
+      "guid": "b7fa80e7116296f4eb4f49ec1544ee22",
+      "path": ""
+    }
+  ]
+}

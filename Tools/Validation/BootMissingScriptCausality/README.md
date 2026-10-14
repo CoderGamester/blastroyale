@@ -1,0 +1,11 @@
+# Native Boot missing-script causality
+
+`NativeBootMissingScriptProbe.Run` is restricted to the ignored `.local/boot-missing-script-project` using Unity6000.3.26f1. It enters real PlayMode only with the exact two original Boot objects in an otherwise empty scene; it never runs Boot/network initialization. The input retains the original GameObject, Transform and missing MonoBehaviour records for `ExternalServices` and `!ftraceLightmaps`. Native SceneRoots excludes unrelated objects; the external sun reference is cleared for this isolated subset.
+
+The native negative case emits exactly two missing-script warnings and retains two missing components. `GameObjectUtility.RemoveMonoBehavioursWithMissingScript` removes exactly those components, saves a separate native scene and re-enters PlayMode: zero missing components and zero corresponding warnings. Actual native warning messages occur during deserialization before managed log callbacks resume, so count the messages between `[Boot Pair] Begin Original`, `[Boot Pair] Begin Candidate` and the PASS marker in the process log; managed callback counters are not authoritative for this boundary. Prime the real Unity Search database before entering Play to avoid the independently reproduced delayed-startup race.
+
+The guarded integration candidate deletes only two original MonoBehaviour YAML records and their two GameObject component-list entries. All other scene bytes and original `.meta` bytes remain identical. Full source, retired records and SHA-256 values are preserved under ignored `.local/savepoints/boot-retired-components`. Main startup acceptance and a lighting rebake remain separate checks.
+
+Historical PlayFab metadata identifies `97a8a3caac8b73541aa8a9a1e330f479` as `PlayFabHTTP.cs`. Bakery storage GUID `b7fa80e7116296f4eb4f49ec1544ee22` and serialized lightmap/render settings match the prior Maze/Ftue retirement; the omitted Bakery package has no available historical GUID-to-filename metadata.
+
+Evidence: `Docs/Modernization/verification/boot-missing-script-{native-proof,owner-inventory,integration-handoff}.json`; native log `artifacts/boot-missing-script-minimal-second-native.log` (exit0, zero C# diagnostics/exceptions). Initial stricter/clone-boundary probes remain in ignored logs and do not establish acceptance.
