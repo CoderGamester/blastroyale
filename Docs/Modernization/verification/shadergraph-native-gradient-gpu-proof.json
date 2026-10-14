@@ -1,0 +1,23 @@
+{
+    "GraphicsDevice": "Apple M4 Max",
+    "GraphicsApi": "Metal",
+    "ColorSpace": "Gamma",
+    "Rows": [
+        {
+            "Graph": "SG_Indicator_AimCone",
+            "Samples": 4096,
+            "NativeShaderMessages": 0,
+            "MaxRgbError": 7.583294063806534e-7,
+            "MaxAlphaError": 0.0,
+            "UncorrectedV1MaxRgbError": 0.28713589906692507
+        },
+        {
+            "Graph": "SG_Indicator_AimLine",
+            "Samples": 4096,
+            "NativeShaderMessages": 0,
+            "MaxRgbError": 7.362104952335358e-7,
+            "MaxAlphaError": 0.0,
+            "UncorrectedV1MaxRgbError": 0.28713589906692507
+        }
+    ]
+}

@@ -1,0 +1,44 @@
+{
+  "Graphs": [
+    {
+      "Path": "Assets/Art/Shaders/Legacy/SG_Silhouette.shadergraph",
+      "BeforeSha256": "f52d2471113671aa3d8073c09916558db72eb264547038a16295b3475cbabd0d",
+      "MetaSha256": "deec20dfac88490c62da9e01bcb66a31ea891318df6388101d3dfa0442b4885b",
+      "Guid": "b46dfe5e05587f347a64a2315b30791f",
+      "NodeType": "ViewDirection",
+      "AfterSha256": "7ead25a23c9de58cd199899adfad48b0035785129a32733bcff17bfdc4d59665"
+    },
+    {
+      "Path": "Assets/Art/Shaders/Legacy/SG_UnlitPickUp.shadergraph",
+      "BeforeSha256": "570d7ddb6c4d20eba7f05bed94ce339e328452b7547103b5f1dc12a81534c347",
+      "MetaSha256": "320fed86de712805dd4a758787dd85bba86bae69b607e68c9214b5e12a728581",
+      "Guid": "c5122fd65c41a6f429d8a0bcb9a1101e",
+      "NodeType": "ViewDirection",
+      "AfterSha256": "fc9f41fee8d08dc9c97e8b285e8c8bf2d30831c798cc0df247ae25a6921ad20b"
+    },
+    {
+      "Path": "Assets/Art/Shaders/Legacy/SG_Skybox.shadergraph",
+      "BeforeSha256": "807c09d8d5d4179a7e50a31f9ddbd261d4daee8da5a6a5ab64d6f6027f2b4fd3",
+      "MetaSha256": "f5ab5bc14921a1f9499b43b320e3f7a0b9dfb25e04cfcf9e3a9b68d10a84f5cd",
+      "Guid": "49eb59d62e37c7b4181c9144044efa4f",
+      "NodeType": "ViewDirection",
+      "AfterSha256": "8db4e47b9b14a0086cee7777e004419032fd0867a4563603ecf42f9d250c77be"
+    },
+    {
+      "Path": "Assets/Art/Shaders/Legacy/SG_Indicator_AimCone.shadergraph",
+      "BeforeSha256": "36e89433104556e8b00d64f5765d31b65a6428af2b583ddae976a4ab422689ba",
+      "MetaSha256": "a07275e7acc225509d56be991c1bf215d3fa23c4a8d755c0217c721ae279f208",
+      "Guid": "7ae8122422817ca4193fd84d5b34dedf",
+      "NodeType": "SampleGradient",
+      "AfterSha256": "b80998299734a9223804b9d4fccee3729141456e1a08716036a51ec249ce04bf"
+    },
+    {
+      "Path": "Assets/Art/Shaders/Legacy/SG_Indicator_AimLine.shadergraph",
+      "BeforeSha256": "c749d2a564773272446d33626f0f412c3f5a94d44987b029655d6873bcbc023b",
+      "MetaSha256": "29286af948287d5b59a78f7043257f69077714b372e1595dc837f36c26aea7df",
+      "Guid": "8f8a9f4827787094d9a0641494e7b4b6",
+      "NodeType": "SampleGradient",
+      "AfterSha256": "d699a1ae8f95fe4685122aa481dd3a637312dc5a59a4e4007adf492a07c402c9"
+    }
+  ]
+}
