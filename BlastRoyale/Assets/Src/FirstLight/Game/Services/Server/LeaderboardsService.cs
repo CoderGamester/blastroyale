@@ -1,3 +1,4 @@
+using MainInstaller = FirstLight.Game.Utils.MainInstaller;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -163,6 +164,7 @@ namespace FirstLight.Game.Services
 
 		public void UpdateLocalPlayerClientRank()
 		{
+			if (FLEnvironment.Configuration.UseBundledRemoteConfig) return;
 			PlayFabClientAPI.GetLeaderboardAroundPlayer(new ()
 			{
 				StatisticName = GameConstants.Stats.RANKED_LEADERBOARD_LADDER_NAME,

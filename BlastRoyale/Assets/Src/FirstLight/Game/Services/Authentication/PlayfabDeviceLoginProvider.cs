@@ -1,9 +1,10 @@
+using FirstLight.Game.Services;
 using System;
 using Cysharp.Threading.Tasks;
 using FirstLight.FLogger;
 using FirstLight.Game.Data;
 using FirstLight.Game.Utils;
-using FirstLight.Services;
+using GameLovers.Services;
 using PlayFab;
 using PlayFab.ClientModels;
 
@@ -11,11 +12,11 @@ namespace FirstLight.Game.Services.Authentication
 {
 	public class PlayfabDeviceLoginProvider : ILoginProvider
 	{
-		private DataService _localAccountData;
+		private ClientDataService _localAccountData;
 
 		public PlayfabDeviceLoginProvider()
 		{
-			_localAccountData = new DataService();
+			_localAccountData = new ClientDataService();
 			_localAccountData.LoadData<AccountData>();
 			_localAccountData.LoadData<AppData>();
 		}
@@ -43,7 +44,7 @@ namespace FirstLight.Game.Services.Authentication
 			if (!string.IsNullOrEmpty(deviceId)) return deviceId;
 			return null;
 		}
-		
+
 		public UniTask BeforeLogout()
 		{
 			return UniTask.CompletedTask;
@@ -126,10 +127,10 @@ namespace FirstLight.Game.Services.Authentication
 			data.PlayfabID = "";
 			data.DeviceId = "";
 			SaveAccountData();
-#if UNITY_EDITOR || UNITY_STANDALONE_WIN
+#if UNITY_EDITOR || (!UNITY_ANDROID && !UNITY_IOS)
 			var unlinkRequest = new UnlinkCustomIDRequest
 			{
-				CustomId = ParrelHelpers.DeviceID()
+				CustomId = DeviceIdentity.DeviceID()
 			};
 
 			await AsyncPlayfabAPI.ClientAPI.UnlinkCustomID(unlinkRequest);
@@ -160,7 +161,7 @@ namespace FirstLight.Game.Services.Authentication
 			await SendLinkAccountPlayfabRequest();
 			var data = GetAccountData();
 			data.PlayfabID = loginResult.PlayFabId;
-			data.DeviceId = ParrelHelpers.DeviceID();
+			data.DeviceId = DeviceIdentity.DeviceID();
 			SaveAccountData();
 		}
 
@@ -168,7 +169,7 @@ namespace FirstLight.Game.Services.Authentication
 		{
 			var deviceId = GetStoredDeviceID();
 
-#if UNITY_EDITOR
+#if UNITY_EDITOR || (!UNITY_ANDROID && !UNITY_IOS)
 			{
 				var login = new LoginWithCustomIDRequest
 				{
@@ -220,11 +221,11 @@ namespace FirstLight.Game.Services.Authentication
 
 		public async UniTask SendLinkAccountPlayfabRequest()
 		{
-#if UNITY_EDITOR || UNITY_STANDALONE_WIN
+#if UNITY_EDITOR || (!UNITY_ANDROID && !UNITY_IOS)
 			{
 				var link = new LinkCustomIDRequest
 				{
-					CustomId = ParrelHelpers.DeviceID(),
+					CustomId = DeviceIdentity.DeviceID(),
 					ForceLink = true
 				};
 

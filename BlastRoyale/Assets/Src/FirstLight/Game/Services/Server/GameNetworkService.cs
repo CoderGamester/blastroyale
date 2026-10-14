@@ -1,3 +1,6 @@
+using IConfigsProvider = FirstLight.Server.SDK.Modules.GameConfiguration.IConfigsProvider;
+using FirstLight.Game.Services;
+using GameLovers.GameData;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -262,7 +265,6 @@ namespace FirstLight.Game.Services
 
 		public void SetLastRoom()
 		{
-			CurrentRoom.IsOffline = QuantumRunnerConfigs.IsOfflineMode;
 			LastConnectedRoom.Value = CurrentRoom;
 		}
 
@@ -533,15 +535,19 @@ namespace FirstLight.Game.Services
 		private void SetUserId(string id)
 		{
 			QuantumClient.UserId = id;
+			QuantumClient.AuthValues ??= new AuthenticationValues();
+			QuantumClient.AuthValues.UserId = id;
 			QuantumClient.AuthValues.AuthGetParameters = "";
-			QuantumClient.AuthValues.AddAuthParameter("username", id);
+			if (FLEnvironment.Configuration.UsePlayFabPhotonAuthentication)
+				QuantumClient.AuthValues.AddAuthParameter("username", id);
 		}
 
 		private void ResetQuantumProperties()
 		{
 			if (QuantumClient.AuthValues != null)
 			{
-				QuantumClient.AuthValues.AuthType = CustomAuthenticationType.Custom;
+				QuantumClient.AuthValues.AuthType = FLEnvironment.Configuration.UsePlayFabPhotonAuthentication
+					? CustomAuthenticationType.Custom : CustomAuthenticationType.None;
 			}
 
 			QuantumClient.EnableProtocolFallback = true;

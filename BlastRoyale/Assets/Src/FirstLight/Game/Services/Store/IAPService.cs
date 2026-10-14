@@ -1,3 +1,4 @@
+using MainInstaller = FirstLight.Game.Utils.MainInstaller;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,9 +17,9 @@ using FirstLight.Game.Services.Analytics;
 using FirstLight.Game.StateMachines;
 using FirstLight.Game.Utils;
 using FirstLight.Models;
-using FirstLight.SDK.Services;
+using GameLovers.Services;
 using FirstLightServerSDK.Services;
-using I2.Loc;
+using FirstLight.Game.Localization;
 using Newtonsoft.Json;
 using PlayFab.ClientModels;
 using Quantum;
@@ -35,13 +36,6 @@ namespace FirstLight.Game.Services
 		public Func<Product> UnityIapProduct; // TODO: Fix this properly, it shouldn't be a func
 		public ItemData GameItem;
 
-		public bool IsWeb3Purchase() 
-		{
-			var cost = PlayfabProductConfig.StoreItem.VirtualCurrencyPrices.FirstOrDefault();
-			var gameid = PlayfabCurrencies.GetCurrency(cost.Key);
-			return gameid.IsInGroup(GameIdGroup.CryptoCurrency);
-		}
-		
 		public (GameId item, uint amt) GetPrice()
 		{
 			var cost = PlayfabProductConfig.StoreItem.VirtualCurrencyPrices.FirstOrDefault();
@@ -215,7 +209,7 @@ namespace FirstLight.Game.Services
 			var product = AvailableProducts.FirstOrDefault(product => product.ID == data.ProductId);
 			if (product == null) return null;
 			var name = product.UnityIapProduct().metadata.localizedTitle;
-			if (LocalizationManager.TryGetTranslation($"UITStore/transaction_failed_${data.Reason.ToString()}", out var translation))
+			if (GameLocalization.TryGetTranslation($"UITStore/transaction_failed_${data.Reason.ToString()}", out var translation))
 			{
 				return name + ": " + translation;
 			}
@@ -287,7 +281,7 @@ namespace FirstLight.Game.Services
 				_pending.Remove(data.ProductId);
 			}
 
-			PurchaseFinished?.Invoke(null, null, false, data);
+			PurchaseFinished?.Invoke(data.ProductId, null, false, data);
 		}
 
 		public void SetQueuedFailedMessage(IUnityStoreService.PurchaseFailureData data)
@@ -311,10 +305,9 @@ namespace FirstLight.Game.Services
 
 		public void Init()
 		{
-			_playfab.Init();
 			_playfab.OnStoreLoaded += (playfabProducts, playfabBundles) =>
 			{
-				_unityStore.InitializeUnityCatalog(playfabProducts
+				if (!FLEnvironment.Configuration.UseBundledShop) _unityStore.InitializeUnityCatalog(playfabProducts
 					.Select(i => i.CatalogItem.ItemId)
 					.Union(playfabBundles?.Keys.Select(i => i.CatalogItem.ItemId) ?? Array.Empty<string>())
 					.ToHashSet());
@@ -323,6 +316,7 @@ namespace FirstLight.Game.Services
 				ResolveBundles(playfabBundles);
 				UpdateLocalStoreState();
 			};
+			_playfab.Init();
 		}
 
 		private void UpdateLocalStoreState()
@@ -453,6 +447,7 @@ namespace FirstLight.Game.Services
 
 		private void ResolveCategoryProducts(List<PlayfabProductConfig> playfabProducts)
 		{
+			_availableProducts.Clear();
 			foreach (var categoryList in _availableProductCategories.Values)
 			{
 				categoryList.Products.Clear();
@@ -493,9 +488,11 @@ namespace FirstLight.Game.Services
 			}
 			else
 			{
-				FLog.Info("IAP", $"Purchase initiated: {product.UnityIapProduct().definition.id}");
-				_pending.Add(product.ID);
-				_unityStore.Controller.InitiatePurchase(product.UnityIapProduct().definition.id);
+				OnPurchaseFailure(new IUnityStoreService.PurchaseFailureData
+				{
+					ProductId = product.ID, Reason = PurchaseFailureReason.ProductUnavailable,
+					Message = "Real money purchases require a trusted receipt and inventory service. See HUMAN_ACTIONS.md."
+				});
 			}
 		}
 
@@ -506,12 +503,21 @@ namespace FirstLight.Game.Services
 			{
 				await hook(product);
 			}
-			_commandService.ExecuteCommand(new BuyFromStoreCommand()
+			var purchased = _commandService.ExecuteCommandWithResult(new BuyFromStoreCommand()
 			{
 				CatalogItemId = product.PlayfabProductConfig.CatalogItem.ItemId,
 				StoreItemData = product.PlayfabProductConfig.StoreItemData
 			});
 			_pending.Remove(product.ID);
+			if (!purchased)
+			{
+				PurchaseFinished?.Invoke(product.ID, null, false, new IUnityStoreService.PurchaseFailureData
+				{
+					ProductId = product.ID, Reason = PurchaseFailureReason.ProductUnavailable,
+					Message = "The balance or purchase limit changed before this purchase completed."
+				});
+				return;
+			}
 			FLog.Info("IAP", "Purchase finished, calling events");
 			PurchaseFinished?.Invoke(product.ID, item, true, null);
 		}
@@ -542,7 +548,7 @@ namespace FirstLight.Game.Services
 			var shouldUseText = ShouldUseTextConfirmation(generatedItem);
 
 			FLog.Verbose("Logic Purchase Item - should use text ? "+shouldUseText);
-			
+
 			GenericPurchaseDialogPresenter.IPurchaseData screenData = !shouldUseText
 				? new GenericPurchaseDialogPresenter.IconPurchaseData()
 				{
@@ -588,7 +594,7 @@ namespace FirstLight.Game.Services
 		/// <summary>
 		/// This is called when Unity finishes processing the purchase.
 		/// This is also called when application starts in case there was a pending transaction
-		/// 
+		///
 		/// https://docs.unity3d.com/Manual/UnityIAPProcessingPurchases.html
 		/// </summary>
 		public PurchaseProcessingResult ProcessPurchase(PurchaseEventArgs purchaseEvent)
@@ -671,7 +677,6 @@ namespace FirstLight.Game.Services
 			_pending.Remove(product.definition.id);
 			PurchaseFinished?.Invoke(product.definition.id, item, true, null);
 
-			SingularSDK.InAppPurchase(product, null);
 		}
 	}
 
@@ -707,36 +712,38 @@ namespace FirstLight.Game.Services
 		/// </summary>
 		public static async UniTask<BuyProductResult> BuyProductHandleUI(this IIAPService service,
 																		 GameProduct product,
-																		 UIService.UIService uiService,
+																		 FirstLight.Game.UI.UIService uiService,
 																		 IRewardService rewardService,
 																		 IGenericDialogService genericDialogService
 		)
 		{
 			FLog.Verbose("BuyProductHandleUI");
 			var productId = product.PlayfabProductConfig.CatalogItem.ItemId;
-			
+
 			_handled.Add(productId);
 
 			var purchaseFinishTaskSource =
 				new UniTaskCompletionSource<(ItemData data, bool succeeded, IUnityStoreService.PurchaseFailureData failureData)>();
 			var purchaseFinishTask = purchaseFinishTaskSource.Task;
-			
+
 			// Logical purchases there is nothing sketchy with UI because everything is done in the client so we don't need to wait
 			if (!service.IsRealMoney(product))
 			{
-				FLog.Verbose("Handling purchase like real money or web3");
+				FLog.Verbose("Handling purchase using in-game currency");
 				service.PurchaseFinished += OnPurchaseFinished;
 				service.BuyProduct(product);
 				var logicPurchaseResult = await purchaseFinishTask;
+				service.PurchaseFinished -= OnPurchaseFinished;
 				if (!logicPurchaseResult.succeeded)
 				{
 					FLog.Verbose("Logic Purchase Failed "+JsonConvert.SerializeObject(logicPurchaseResult.failureData));
 					if (logicPurchaseResult.failureData.RequiredtoSeeShop)
 					{
+						_handled.Remove(productId);
 						return BuyProductResult.ForcePlayerToShop;
 					}
 
-					_handled.Remove(productId); 
+					_handled.Remove(productId);
 					return BuyProductResult.Rejected;
 				}
 
@@ -788,6 +795,7 @@ namespace FirstLight.Game.Services
 
 			void OnPurchaseFinished(string itemId, ItemData data, bool succeeded, IUnityStoreService.PurchaseFailureData failureData)
 			{
+				if (itemId != productId && failureData?.ProductId != productId) return;
 				purchaseFinishTaskSource.TrySetResult((data, succeeded, failureData));
 			}
 		}

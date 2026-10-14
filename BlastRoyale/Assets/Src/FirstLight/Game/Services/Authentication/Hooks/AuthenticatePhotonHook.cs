@@ -1,6 +1,7 @@
 using Cysharp.Threading.Tasks;
 using FirstLight.Game.Utils;
 using PlayFab.ClientModels;
+using Photon.Realtime;
 
 namespace FirstLight.Game.Services.Authentication.Hooks
 {
@@ -40,6 +41,13 @@ namespace FirstLight.Game.Services.Authentication.Hooks
 
 		public async UniTask AuthenticatePhoton()
 		{
+			if (!FLEnvironment.Configuration.UsePlayFabPhotonAuthentication)
+			{
+				// Free Photon Cloud application with anonymous client identity; custom auth is optional.
+				_networkService.QuantumClient.AuthValues = new AuthenticationValues(_networkService.UserId.Value);
+				_networkService.ConnectPhotonServer();
+				return;
+			}
 			var appId = FLEnvironment.Current.PhotonAppIDRealtime;
 			var getPhotonToken =
 				await AsyncPlayfabAPI.ClientAPI.GetPhotonAuthenticationToken(new GetPhotonAuthenticationTokenRequest {PhotonApplicationId = appId});

@@ -1,18 +1,19 @@
+using FirstLight.Game.Services;
 using Cysharp.Threading.Tasks;
 using FirstLight.Game.Commands;
 using FirstLight.Game.Data;
-using FirstLight.Services;
+using GameLovers.Services;
 using PlayFab.ClientModels;
 
 namespace FirstLight.Game.Services.Authentication.Hooks
 {
 	public class MigrateTutorialDataHook : IAuthenticationHook
 	{
-		private IDataService _dataService;
+		private IClientDataService _dataService;
 		private IGameCommandService _commandService;
 		private TutorialSection _completed;
 
-		public MigrateTutorialDataHook(IDataService dataService, IGameCommandService commandService)
+		public MigrateTutorialDataHook(IClientDataService dataService, IGameCommandService commandService)
 		{
 			_dataService = dataService;
 			_commandService = commandService;

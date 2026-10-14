@@ -1,3 +1,4 @@
+using MainInstaller = FirstLight.Game.Utils.MainInstaller;
 using System;
 using FirstLight.Game.Data;
 using FirstLight.Game.Logic;
@@ -80,7 +81,12 @@ namespace FirstLight.Game.Services.Authentication
 		public static string TrimPlayfabDisplayName(string playerName)
 
 		{
-			return playerName?[..^5];
+			if (string.IsNullOrEmpty(playerName)) return playerName;
+			var suffix = playerName.LastIndexOf('#');
+			if (suffix < 0 || playerName.Length - suffix != 5) return playerName;
+			for (var index = suffix + 1; index < playerName.Length; index++)
+				if (!char.IsDigit(playerName[index])) return playerName;
+			return playerName.Substring(0, suffix);
 		}
 
 		public static string GetLocalPlayerExternalID(this IAuthService authService)

@@ -1,3 +1,4 @@
+using MainInstaller = FirstLight.Game.Utils.MainInstaller;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,7 +15,7 @@ using FirstLight.Game.Services.RoomService;
 using FirstLight.Game.Services.Social;
 using FirstLight.Game.Utils;
 using FirstLight.Game.Utils.UCSExtensions;
-using FirstLight.SDK.Services;
+using GameLovers.Services;
 using Newtonsoft.Json;
 using PlayFab;
 using Quantum;
@@ -1162,7 +1163,7 @@ namespace FirstLight.Game.Services
 		private void OnPartyLobbyKicked()
 		{
 			CurrentPartyLobby = null;
-			if (!PopupPresenter.IsOpen<TeamPopupView>())
+			if (!PopupPresenter.IsPopupOpen<TeamPopupView>())
 			{
 				_inGameNotificationService.QueueNotification($"You left the team");
 			}

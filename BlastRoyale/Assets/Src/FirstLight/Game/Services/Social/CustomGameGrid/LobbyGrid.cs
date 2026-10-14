@@ -1,3 +1,4 @@
+using MainInstaller = FirstLight.Game.Utils.MainInstaller;
 using System;
 using System.Linq;
 using Cysharp.Threading.Tasks;

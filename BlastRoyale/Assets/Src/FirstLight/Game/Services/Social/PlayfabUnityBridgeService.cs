@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using Cysharp.Threading.Tasks;
@@ -7,7 +7,7 @@ using FirstLight.Game.Data;
 using FirstLight.Game.Messages;
 using FirstLight.Game.Utils;
 using FirstLight.Game.Utils.UCSExtensions;
-using FirstLight.SDK.Services;
+using GameLovers.Services;
 using Unity.Services.Authentication;
 using Unity.Services.CloudSave;
 

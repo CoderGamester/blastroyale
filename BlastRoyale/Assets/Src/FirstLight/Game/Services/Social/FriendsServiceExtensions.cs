@@ -1,3 +1,5 @@
+using FirstLight.Game.Services.Authentication;
+using MainInstaller = FirstLight.Game.Utils.MainInstaller;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -90,18 +92,18 @@ namespace FirstLight.Game.Utils.UCSExtensions
 					// The first argument to Query is a list of one or more filters, all must evaluate to true for a result to be included
 					new List<FieldFilter>
 					{
-						new ("player_name", playerName, FieldFilter.OpOptions.EQ, true),
+						new ("player_name", AuthServiceNameExtensions.ReplaceSpacesForSpecialChar(playerName.Trim()), FieldFilter.OpOptions.EQ, true),
 					}
 				);
 
-				var foundPlayers = await CloudSaveService.Instance.Data.Custom.QueryAsync(query);
+				var foundPlayers = await CloudSaveService.Instance.Data.Player.QueryAsync(query, new Unity.Services.CloudSave.Models.Data.Player.QueryOptions());
 				if (foundPlayers.Count == 0)
 				{
 					services.InGameNotificationService.QueueNotification("Player not found");
 					return false;
 				}
 
-				var playerId = foundPlayers.First().Id.Replace("read-only-", "");
+				var playerId = foundPlayers.First().Id;
 				FLog.Info("Found player id " + playerId);
 				await friendsService.AddFriendAsync(playerId).AsUniTask();
 				FLog.Info($"Friend request sent: {playerName}");

@@ -1,0 +1,80 @@
+# Free backend migration
+
+Status: **Partial**. The original authentication, progression, shop, profile and matchmaking call sites now use a connected client-authoritative path without Azure Functions. The public SDK compiles in isolation and the purchase/name behavior harness passes; full game Unity compilation, an authenticated cloud round trip and a playable match have not been verified. No PlayFab Title ID or Unity Project ID was supplied; the supplied Quantum 3 ID was copied only into ignored local configuration.
+
+## Decision and current limits (checked 2026-10-14)
+
+Use PlayFab's free development offering for device/email authentication and private player progression, retain the existing UGS Authentication/Cloud Save/Friends/Lobby integration, and use Photon Cloud for Quantum rooms. This is the smallest change that preserves the game's existing models and command implementations. No Azure Functions, hosted Nakama server, secret-bearing client, billing activation or real money purchase is needed for the default development flow.
+
+| Candidate | Free account scope and setup | Fit and decision |
+| --- | --- | --- |
+| PlayFab without Azure | Development Mode: 1,000 **lifetime-created** players, 10 development titles per studio; documented profile allowance includes 5m reads, 1m writes and 2 GB storage. New anonymous account creation must be enabled for development. | Existing device/email auth, client data and multiplayer contracts already exist. Chosen for the connected migration. This is a development backend, not an unlimited free production backend. |
+| UGS alone | Authentication/Remote Config free; Cloud Save 5 GiB and 1m reads + 1m writes per month; Lobby 10 GiB per month per regional group; Friends 50k active users/month. | Strong long-term fit and already partly installed. Replacing all PlayFab authentication/provider DTOs, matchmaking tickets, stores and leaderboard callers is a larger migration. Retained for the existing social/lobby/config features. |
+| Firebase Spark | No billing information needed; Firestore allowance includes 50k reads/20k writes per day. Cloud Functions require Blaze billing. | Auth and saves are viable, but Azure logic still must move to the client; would introduce a new SDK while Firebase removal is explicitly requested. Rejected. |
+| Nakama/Heroic Cloud | Open-source Nakama is free to self-host. Official managed cloud pricing bills active deployments; a permanent free hosted tier was not established. | Does not meet the no hosting/no server engineering constraint. Rejected. |
+
+Primary sources:
+
+- [PlayFab Development Mode limits](https://learn.microsoft.com/en-us/xbox/playfab/pricing/development-mode) and [public pricing](https://developer.microsoft.com/en-us/games/products/playfab/pricing/).
+- [UGS pricing](https://unity.com/products/gaming-services/pricing).
+- [Firebase pricing plans](https://firebase.google.com/docs/projects/billing/firebase-pricing-plans).
+- [Heroic Cloud pricing](https://heroiclabs.com/pricing/) and [billing](https://heroiclabs.com/docs/heroic-cloud/concepts/organizations/billing-support/).
+
+Current PlayFab documentation says Development Mode is being replaced by Foundation Mode, while the public pricing page still describes the 1,000-player Development Mode. [Foundation onboarding](https://learn.microsoft.com/en-us/xbox/playfab/get-started/foundation-onboarding) has Xbox/Partner Center/approval prerequisites. Do not assume eligibility or silently choose a paid live title. Verify the free mode offered in the human's Game Manager account before testing.
+
+A [September 2026 announcement](https://developer.microsoft.com/en-us/games/articles/2026/09/update-new-titles-move-to-v2-economy-statistics-and-leaderboards/) stops newly created titles using legacy Economy/Statistics/Leaderboards APIs from 2026-11-01. The default bundled virtual shop and disabled leaderboard configuration avoid those legacy calls. Turning off the bundled shop/config switches restores older API paths and requires a separate v2 migration before relying on them for new titles.
+
+## Implemented path
+
+- `FLEnvironment` loads `Assets/Resources/LocalClientConfig.json`, with a committed `.json.template`. Removed Firebase and web3 fields and retired CDN environment redirects. Setup fails with a precise message when required IDs are missing rather than passing removed placeholders to cloud APIs.
+- Public Apache-2.0 PlayFab Unity SDK 2.244.260922 is installed as a local UPM source package, pinned by provenance to commit `04e73b3a78ce1afbba9f3e003f3fe51ba77bd8bd`. It contains no proprietary SDK binaries. One blank project-owned PlayFab settings asset has a repaired script reference; duplicate SDK sample settings were removed.
+- `IPlayerStateBackend`/`PlayFabPlayerStateBackend` implement private cloud load/save and public profiles. Only the explicit progression model whitelist is uploaded. AccountData, device identity, remembered email and local application settings never enter cloud snapshots. Changed models are saved in batches; snapshots contain serialized values, not mutable live references.
+- `GameBackendService` constructs/injects that adapter and runs the original collection/battle-pass/store/cleanup initialization commands locally. Its compatibility callbacks retain the original result DTO, but do not call CloudScript/Azure transport. Unsupported deletion/purchase-grant operations throw an explicit error.
+- `GameCommandService` still executes the original commands once. `ServerCommandQueue` recognizes `IClientAuthorityBackend` and saves immutable snapshots serially instead of executing commands a second time. Failed saves remain queued for retry on the next command. An account switch drops previous-player queued snapshots and uses a captured session ticket for in-flight writes.
+- `ILoginProvider` retains device/email PlayFab authentication; `NullNativeGamesLogin` removes the paid EssentialKit login requirement. UGS signs in anonymously directly with one cached local profile per PlayFab account; there is no server token exchange or token logging. The client maintains public PlayFab ID/name/avatar/trophy fields for the original UGS friend/profile bridge. Friend name lookup queries indexed **public player data**, replacing the old server-written custom-item directory.
+- `UnityRemoteConfigProvider` uses explicit bundled development defaults by default. They include one solo bot mode on MazeMayhem, maintenance/version defaults and queue metadata. UGS Remote Config remains available when explicitly configured.
+- `IShopCatalogBackend` is consumed by the original `PlayfabStoreService`. The bundled development shop offers 10 Blast Bucks for 100 earned COIN; the existing `BuyFromStoreCommand` deducts and grants items, and progression persistence stores the result. No receipt, credit card or paid store account is needed. Real money purchases are blocked before initiating a store transaction because the deleted trusted grant service is not restored.
+- Default matchmaking creates a unique Photon room for the local player with bots. It avoids requiring a PlayFab queue for first play. UGS custom rooms remain the original multiplayer route. Parties with multiple human players must use Custom Game or configure live queues; they cannot silently be split into separate solo matches.
+- `AuthenticatePhotonHook` uses a normal Photon client identity by default; PlayFab custom Photon authentication is an explicit optional config switch.
+- Empty news on a new title no longer calls `First()` and throws.
+
+## Authority boundary and remaining gaps
+
+Every progression/currency/shop change is trusted to the client. This has no independent cheat prevention, inventory grant validation or cross-device write arbitration. `Backend/GameLogicService`, its command handler, mutex and purchase service remain untouched as the reference for future server authority. The persistence/command boundaries carry `SERVER AUTHORITY` comments.
+
+Account deletion cannot securely delete a PlayFab player with a client session. The UI receives an explicit unsupported message; use Game Manager for development deletion. Real money purchases and legacy live leaderboard/statistics are incomplete. Anonymous UGS profiles are local-device cached identities: an email login can restore PlayFab progression on a second device but does not prove the same UGS social identity across devices. The current interfaces still expose some legacy PlayFab DTOs, so a complete provider replacement also needs neutral auth/catalog/matchmaking result types.
+
+A failed cloud save is retried on the next command; pending changes are not persisted across application termination. Successful PlayFab writes and optional public UGS trophy publication are separate requests, not one atomic transaction. Default free capacity is finite, and there is no live evidence of account-specific feature availability.
+
+## Human actions, in order
+
+1. Create/sign in to [PlayFab Game Manager](https://developer.playfab.com/), create a title using the offered free development mode, confirm it has no paid live plan, and copy **Title ID** into `PlayFabTitleId`. Never copy Developer Secret Key into any client file.
+2. For a new title, Settings > API Features > **uncheck the option preventing player creation through anonymous client login APIs**, for development/testing. This setting is disabled by default for titles created after 2025-06-30. [Official instructions](https://learn.microsoft.com/en-us/gaming/playfab/identity/player-identity/platform-specific-authentication/anonymous-login). Leave progression client read/write permitted. Create test accounts sparingly because the 1,000 limit is lifetime creations.
+3. Create a free project in [Unity Cloud](https://cloud.unity.com/), then Unity Editor > Edit > Project Settings > Services > link that project. Put the matching `UnityProjectId` in the ignored JSON. UGS Core's actual `CloudProjectId` source reads `Application.cloudProjectId`; there is no verified arbitrary initialization option that can replace editor linking. Startup checks the IDs match.
+4. Enable Authentication, Cloud Save, Friends and Lobby/Multiplayer services for that free project; create/select the `development` environment. Put its name in `UnityEnvironmentName`; `UnityEnvironmentId` is optional with bundled config, required when explicitly targeting remote configuration. Keep `UseBundledRemoteConfig` and `UseBundledShop` true for first play.
+5. For adding friends by name, Cloud Save > Player Data > Indexes: create an ascending string index for `player_name` in the **Public** access class, then sign in again so data is written after the index exists. [Official query/index instructions](https://docs.unity.com/en-us/cloud-save/concepts/queries). No custom-item directory or server deployment is needed.
+6. Supply the correct Quantum App ID in `PhotonQuantumAppId` and use a Photon Cloud app without custom authentication for first play (`UsePlayFabPhotonAuthentication=false`). A Quantum 3 ID is already copied locally; its supplied value is never recorded in docs or git. Root's Quantum migration determines which SDK/app type is currently usable.
+7. Once the whole Unity project compiles, run the original auth/menu flow: create a guest, enter a solo bot match, earn currency, purchase the virtual exchange, restart, and verify balances/loadout/progression restore. Then test account switching and a second client in a Custom Game. This is required acceptance work, not completed evidence.
+8. Optional email recovery: create a PlayFab recovery email template and supply `PlayFabRecoveryEmailTemplateId`; leave blank to use the service default if available. Real money purchases require a trusted receipt + inventory grant service and paid store setup; they are disabled and unnecessary for development play. Development account deletion must be performed in Game Manager.
+
+## Validation evidence
+
+- `git ls-remote https://github.com/PlayFab/UnitySDK.git HEAD` returned the pinned commit above. SDK `PlayFabSettings` declares 2.244.260922/build 167, and Apache-2.0 license was inspected and copied.
+- Secure credentials read found only the supplied Quantum 3 App ID label. Local config was written mode 0600; no credential value was printed.
+- `dotnet run --project /tmp/blast-csharp-parse/parse.csproj -- BlastRoyale/Assets/Src/FirstLight/Game BlastRoyale/Assets/Src/FirstLight/Tests` parsed 781 C# files with **0 syntax errors**. This Roslyn check does not establish type resolution or Unity compilation.
+- New `BackendClientStateTests` cover credential exclusion from snapshots, immutable queued state and consistency of the bundled solo mode/queue/default configs. **Not run** in Unity yet.
+- Public Unity Core package was read from the official package registry to verify `CloudProjectId.GetCloudProjectId()` returns `Application.cloudProjectId`. No extra server/editor bridge was installed.
+- Azure transport scan over game sources found no `PlayFabCloudScriptAPI` or `ExecuteFunctionRequest` use. The DTO `ExecuteFunctionResult` remains for compatibility only.
+- Cloud authentication/data round trips, title quota settings, UGS permissions/index, Unity compilation, asset load, device purchases and actual matches: **Not run / human setup and project compilation pending**.
+
+Additional SDK verification: the pruned PlayFab source was compiled against the installed Unity 6000.3 managed assemblies with all relevant API defines using `/tmp/blast-playfab-compile/compile.csproj`; **0 warnings, 0 errors**. Removed obsolete social SDK schema/member surfaces and legacy Matchmaker module; enum wire numeric values were verified stable. See `playfab-prune-evidence.json` and the package `PROVENANCE.md`. This proves SDK source type resolution for those assemblies, not a full game build or cloud round trip.
+
+## Bounded review corrections
+
+A source-level review after the package migration found and fixed concrete issues: the network reconnect helper overwrote anonymous Photon auth with Custom auth; Mac/Linux player builds lacked a device-login return branch; first email login could rebind uninitialized logic and successful login initialized it twice; malformed cloud models could leave a previous account's live models available for overwrite; guest retries created extra accounts; short unnumbered display names were sliced by five characters; the new public friend directory saved the UGS name rather than the displayed canonical PlayFab identifier; rejected virtual purchases could report success and partially debit multi-currency prices; shop refreshes duplicated product entries and rejected purchases leaked event subscriptions. Pending full-state saves now retain at most the head and latest snapshot rather than growing without bound during a failure.
+
+Current bundled battle-pass assets cover dates through 2027-12-31, so their dates were not modified. The solo bot path still rejects a party containing multiple humans, and the persistence/catalog interfaces are consumed by the original services rather than being disconnected samples. Account deletion and trusted real-money grants remain explicitly unsupported.
+
+`dotnet run --project Tools/Validation/BackendIsolation/BackendIsolation.csproj -v:q` **passed 8 behavior checks**. It compiles the actual workspace purchase command/name helper and actual server command contract source, links the real already-imported UniTask assembly, and injects test-only model/service collaborators. Cases cover five public-name formats, atomic multi-currency rejection, one successful debit/grant, and purchase-limit rejection resetting a prior success result. It does not compile the full game models, initialize Unity, call cloud APIs, exercise IL2CPP, or prove a playable match. The local harness requires a Unity package import to produce `Library/ScriptAssemblies/UniTask.dll`; `UnityEditorPath` can be overridden on another host.
+
+Fresh Roslyn syntax check after those fixes parsed 807 game/test source files with zero syntax errors. The additional parameterized NUnit name regression tests remain **not run in Unity**.

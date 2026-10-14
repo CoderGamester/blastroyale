@@ -1,9 +1,12 @@
+using IConfigsProvider = FirstLight.Server.SDK.Modules.GameConfiguration.IConfigsProvider;
+using FirstLight.Game.Services;
+using GameLovers.GameData;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
 using Cysharp.Threading.Tasks;
-using FirstLight.Services;
+using GameLovers.Services;
 using PlayFab;
 using PlayFab.MultiplayerModels;
 using FirstLight.FLogger;
@@ -15,10 +18,9 @@ using FirstLight.Game.Services.Party;
 using FirstLight.Game.Services.RoomService;
 using FirstLight.Game.Utils;
 using FirstLight.Game.Utils.UCSExtensions;
-using FirstLight.SDK.Services;
 using FirstLight.Server.SDK.Modules;
 using FirstLight.Server.SDK.Modules.GameConfiguration;
-using I2.Loc;
+using FirstLight.Game.Localization;
 using JetBrains.Annotations;
 using Newtonsoft.Json;
 using PlayFab.Json;
@@ -115,7 +117,7 @@ namespace FirstLight.Game.Services
 		private readonly IGameNetworkService _networkService;
 		private readonly IGameBackendService _backendService;
 		private readonly LocalPrefsService _localPrefsService;
-		private readonly IDataService _localMatchmakingData;
+		private readonly IClientDataService _localMatchmakingData;
 		internal readonly IGameModeService _gameModeService;
 		private MatchmakingData _localData;
 		private MatchmakingPooling _pooling;
@@ -138,7 +140,7 @@ namespace FirstLight.Game.Services
 			_localPrefsService = localPrefsService;
 			_gameModeService = gameModeService;
 
-			_localMatchmakingData = new DataService();
+			_localMatchmakingData = new ClientDataService();
 			_localData = _localMatchmakingData.LoadData<MatchmakingData>();
 
 			_lobbyService.CurrentPartyCallbacks.PlayerJoined += _ => StopMatchmaking();
@@ -242,7 +244,7 @@ namespace FirstLight.Game.Services
 
 			_isMatchmaking.Value = false;
 			FLog.Info($"OnMatchmakingCancelled invoked");
-			_broker.Publish(new MatchmakingLeftMessage()
+			_broker.PublishSafe(new MatchmakingLeftMessage()
 			{
 				Error = error,
 				Reason = reason
@@ -251,6 +253,7 @@ namespace FirstLight.Game.Services
 
 		public async UniTask LeaveMatchmaking()
 		{
+			if (FLEnvironment.Configuration.UseBundledRemoteConfig) { CancelLocalMatchmaking(); return; }
 			using (await _mutex.AcquireAsync())
 			{
 				if (string.IsNullOrEmpty(_localData.LastQueue)) return;
@@ -321,6 +324,19 @@ namespace FirstLight.Game.Services
 			{
 				List<EntityKey> members = null;
 				var partyLobby = _lobbyService.CurrentPartyLobby;
+				if (FLEnvironment.Configuration.UseBundledRemoteConfig)
+				{
+					if (partyLobby != null && partyLobby.Players.Count > 1)
+						throw new InvalidOperationException("Development matchmaking supports solo with bots. Use a Custom Game for multiplayer rooms or configure PlayFab queues and live remote configs.");
+					InvokeMatchFound(new GameMatched
+					{
+						MatchIdentifier = "development-" + Guid.NewGuid().ToString("N"),
+						ExpectedPlayers = new[] { _networkService.UserId },
+						RoomSetup = setup,
+						PlayerProperties = new PlayerJoinRoomProperties { Team = "team1", TeamColor = 0 }
+					});
+					return;
+				}
 				if (partyLobby != null)
 				{
 					members = partyLobby.Players.Where(p => !p.IsLocal())
@@ -370,7 +386,7 @@ namespace FirstLight.Game.Services
 		public void InvokeMatchFound(GameMatched match)
 		{
 			match.RoomSetup.RoomIdentifier = match.MatchIdentifier;
-			_broker.Publish(new MatchmakingMatchFoundMessage() {Game = match});
+			_broker.PublishSafe(new MatchmakingMatchFoundMessage() {Game = match});
 
 			_isMatchmaking.Value = false;
 			var partyLobby = _lobbyService.CurrentPartyLobby;
@@ -388,7 +404,7 @@ namespace FirstLight.Game.Services
 			_localData.LastQueue = queueName;
 			_localData.TicketId = mm.TicketId;
 			_localMatchmakingData.SaveData<MatchmakingData>();
-			_broker.Publish(new MatchmakingJoinedMessage() {Config = mm});
+			_broker.PublishSafe(new MatchmakingJoinedMessage() {Config = mm});
 
 			_isMatchmaking.Value = true;
 			FLog.Info("OnMatchmakingJoined invoked");

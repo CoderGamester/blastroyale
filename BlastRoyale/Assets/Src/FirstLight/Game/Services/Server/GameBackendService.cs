@@ -1,3 +1,5 @@
+using FirstLight.Game.Services;
+using IDataProvider = FirstLight.Server.SDK.Models.IDataProvider;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,17 +13,20 @@ using FirstLight.Game.Logic;
 using FirstLight.Game.Logic.RPC;
 using FirstLight.Game.Messages;
 using FirstLight.Game.Utils;
-using FirstLight.NativeUi;
-using FirstLight.SDK.Services;
+using GameLovers.MobileServices.NativeUi;
+using GameLovers.Services;
 using FirstLight.Server.SDK.Models;
 using FirstLight.Server.SDK.Modules;
-using FirstLight.Services;
-using I2.Loc;
+using FirstLight.Game.Localization;
 using PlayFab;
 using PlayFab.ClientModels;
 using PlayFab.CloudScriptModels;
-using PlayFab.Json;
+using FirstLight.Game.Commands;
+using PlayFab.SharedModels;
+using FirstLight.Server.SDK.Modules.Commands;
 using Unity.Services.Authentication;
+using Unity.Services.CloudSave;
+using FirstLight.Game.Utils.UCSExtensions;
 using UnityEngine;
 
 namespace FirstLight.Game.Services
@@ -35,7 +40,7 @@ namespace FirstLight.Game.Services
 		/// Sets up the backend with the correct cloud environment, per platform
 		/// </summary>
 		UniTask SetupBackendEnvironment();
-		
+
 		/// <summary>
 		/// Execute a function using the generic endcpoint, to see current values look at <see cref="FirstLight.Server.SDK.Modules.Commands"/>
 		/// </summary>
@@ -46,7 +51,6 @@ namespace FirstLight.Game.Services
 		/// Same as <see cref="CallGenericFunction"/>
 		/// </summary>
 		public UniTask<ExecuteFunctionResult> CallGenericFunction(string functionName, Dictionary<string, string> data = null);
-		
 
 		/// <summary>
 		/// Obtains the server state of the logged in player
@@ -64,7 +68,7 @@ namespace FirstLight.Game.Services
 		/// from two different services (Logic Service & Quantum Server)
 		/// </summary>
 		UniTask<bool> CheckIfRewardsMatch();
-		
+
 		/// <summary>
 		/// Requests to check if the game is currently in maintenance
 		/// </summary>
@@ -120,29 +124,33 @@ namespace FirstLight.Game.Services
 	}
 
 	/// <inheritdoc cref="IGameBackendService" />
-	public class GameBackendService : IInternalGameBackendService
+	public class GameBackendService : IInternalGameBackendService, IClientAuthorityBackend
 	{
 		private readonly IMessageBrokerService _messageBrokerService;
 		private readonly IGameDataProvider _dataProvider;
-		private readonly IDataService _dataService;
+		private readonly IClientDataService _dataService;
 		private readonly IGameServices _services;
 
 		public bool ForcedEnvironment { get; private set; }
 
 		private readonly string _leaderboardLadderName;
+		private readonly IPlayerStateBackend _playerBackend;
+		private (string PlayerId, uint Trophies)? _publishedTrophies;
 
-		public GameBackendService(IMessageBrokerService msgBroker, IGameDataProvider dataProvider, IGameServices services, IDataService dataService,
-								  string leaderboardLadderName)
+		public GameBackendService(IMessageBrokerService msgBroker, IGameDataProvider dataProvider, IGameServices services, IClientDataService dataService,
+								  string leaderboardLadderName, IPlayerStateBackend playerBackend = null)
 		{
 			_messageBrokerService = msgBroker;
 			_dataProvider = dataProvider;
 			_dataService = dataService;
 			_services = services;
 			_leaderboardLadderName = leaderboardLadderName;
+			_playerBackend = playerBackend ?? new PlayFabPlayerStateBackend();
 		}
 
 		public async UniTask SetupBackendEnvironment()
 		{
+			FLEnvironment.ValidateClientConfiguration();
 			var quantumSettings = _services.ConfigsProvider.GetConfig<QuantumRunnerConfigs>().PhotonServerSettings;
 			var appData = _dataService.GetData<AppData>();
 
@@ -162,9 +170,9 @@ namespace FirstLight.Game.Services
 					{
 						await _services.AuthService.Logout();
 					}
-					catch (Exception e)
+					catch (Exception)
 					{
-						_services.GenericDialogService.OpenSimpleMessage("Error", "Environment changed, could not logout");
+						_services.GenericDialogService.OpenSimpleMessage("Error", "Environment changed, could not logout").Forget();
 					}
 				}
 
@@ -175,94 +183,90 @@ namespace FirstLight.Game.Services
 			}
 		}
 
-		/// <inheritdoc />
-		public async UniTask<bool> CheckIfRewardsMatch()
-		{
-			var req = new GetUserDataRequest() {Keys = new List<string>() {typeof(PlayerData).FullName}};
-			var result = await AsyncPlayfabAPI.ClientAPI.GetUserReadOnlyData(req);
+		// Rewards are already computed by the local Quantum command path. There is no independent server to compare.
+		public UniTask<bool> CheckIfRewardsMatch() => UniTask.FromResult(true);
 
-			var modelJson = result.Data[typeof(PlayerData).FullName].Value;
-			var model = ModelSerializer.Deserialize<PlayerData>(modelJson);
-			var serverState = model.UncollectedRewards;
-			var clientState = _dataProvider.RewardDataProvider.UnclaimedRewards;
-			var inSync = serverState.SequenceEqual(clientState);
-#if UNITY_EDITOR || DEVELOPMENT_BUILD
-			if (!inSync)
+		public async UniTask PersistPlayerState(ServerState snapshot)
+		{
+			await _playerBackend.Save(snapshot);
+			if (!AuthenticationService.Instance.IsSignedIn || !snapshot.Has<PlayerData>()) return;
+			var player = PlayFabSettings.staticPlayer.PlayFabId;
+			var trophies = snapshot.DeserializeModel<PlayerData>().Trophies;
+			if (_publishedTrophies.HasValue && _publishedTrophies.Value == (player, trophies)) return;
+			await CloudSaveService.Instance.SaveTrophiesAsync(trophies);
+			_publishedTrophies = (player, trophies);
+		}
+
+		public static ServerState CapturePlayerState(IDataProvider data)
+		{
+			var snapshot = new ServerState();
+			foreach (var type in PlayFabPlayerStateBackend.ModelTypes)
 			{
-				FLog.Error("Client Rewards: " + ModelSerializer.Serialize(clientState));
-				FLog.Error("Server Rewards: " + ModelSerializer.Serialize(serverState));
+				if (data.TryGetData(type, out var model)) snapshot.UpdateModel(model);
 			}
-#endif
-			return inSync;
-		}
-
-		public UniTask<ExecuteFunctionResult> CallGenericFunction(string functionName, Dictionary<string, string> data = null)
-		{
-			return CallFunctionAsync("Generic", new LogicRequest()
-			{
-				Command = functionName,
-				Platform = Application.platform.ToString(),
-				Data = data
-			});
-		}
-
-		public void CallGenericFunction(string functionName, Action<ExecuteFunctionResult> onSuccess, Action<PlayFabError> onError,
-										Dictionary<string, string> data = null)
-		{
-			CallFunction("Generic", onSuccess, onError, new LogicRequest()
-			{
-				Command = functionName,
-				Platform = Application.platform.ToString(),
-				Data = data
-			});
-		}
-
-		private async UniTask<ExecuteFunctionResult> CallFunctionAsync(string function, object param = null)
-		{
-			var request = new ExecuteFunctionRequest
-			{
-				FunctionName = function, GeneratePlayStreamEvent = true, FunctionParameter = param,
-				AuthenticationContext = PlayFabSettings.staticPlayer
-			};
-			return await AsyncPlayfabAPI.ExecuteFunction(request);
-		}
-
-		/// <inheritdoc />
-		/// <inheritdoc />
-		private void CallFunction(string functionName, Action<ExecuteFunctionResult> onSuccess,
-								  Action<PlayFabError> onError, object parameter = null)
-		{
-			var request = new ExecuteFunctionRequest
-			{
-				FunctionName = functionName, GeneratePlayStreamEvent = true, FunctionParameter = parameter,
-				AuthenticationContext = PlayFabSettings.staticPlayer
-			};
-
-			PlayFabCloudScriptAPI.ExecuteFunction(request, res =>
-			{
-				var exception = ExtractException(res);
-				if (exception != null)
-				{
-					throw exception;
-				}
-
-				onSuccess(res);
-			}, e => { HandleError(e, onError); });
+			return snapshot;
 		}
 
 		/// <summary>
-		/// Playfab cannot return error codes by default. So we require to wrap errors inside ok results.
-		/// This function unpacks an exception packed with OK result so its visible on client
+		/// Compatibility boundary for the existing game services. Executes locally or via public client APIs.
+		/// SERVER AUTHORITY: restore validation and purchase grants from Backend/ before a production economy.
 		/// </summary>
-		private Exception ExtractException(ExecuteFunctionResult req)
+		public async UniTask<ExecuteFunctionResult> CallGenericFunction(string functionName, Dictionary<string, string> data = null)
 		{
-			var result = req.FunctionResult as JsonObject;
-			if (result != null && result.TryGetValue("error", out var error) && error != null)
+			var result = new LogicResult { Command = functionName, PlayFabId = PlayFabSettings.staticPlayer.PlayFabId,
+				Data = new Dictionary<string, string>() };
+			if (functionName == CommandNames.GET_PLAYER_DATA)
 			{
-				return new Exception(error.ToString());
+				var logic = (IGameLogic) _dataProvider;
+				var context = new CommandExecutionContext(new LogicContainer().Build(logic),
+					new ServiceContainer().Build(_services), _dataService);
+				await new GiveDefaultCollectionItemsCommand().Execute(context);
+				await new InitializeBattlepassSeasonCommand().Execute(context);
+				await new RestartPlayerTrackedStoreDataCommand().Execute(context);
+				await new CleanupOldDataCommand().Execute(context);
+				await PersistPlayerState(CapturePlayerState(_dataService));
 			}
+			else if (functionName == CommandNames.GET_PLAYER_PROFILE)
+			{
+				if (data == null || !data.TryGetValue(CommandFields.PlayerId, out var playerId))
+					throw new ArgumentException("A player ID is required to read a public profile.");
+				ModelSerializer.SerializeToData(result.Data, await _playerBackend.GetPublicProfile(playerId));
+			}
+			else if (functionName == CommandNames.SYNC_NAME)
+			{
+				// Both SDK profiles are updated explicitly by AuthService and UnityCloudHook.
+			}
+			else if (functionName == CommandNames.REMOVE_PLAYER_DATA)
+			{
+				throw new NotSupportedException("Deleting a PlayFab account requires a trusted backend or PlayFab Game Manager. See HUMAN_ACTIONS.md; client credentials must never contain a developer secret.");
+			}
+			else if (functionName == CommandNames.CONSUME_VALIDATE_PURCHASE)
+			{
+				throw new NotSupportedException("Real money purchase grants are disabled until a trusted receipt and inventory service is configured. Virtual currency purchases use BuyFromStoreCommand locally.");
+			}
+			else
+			{
+				throw new NotSupportedException("Unsupported client backend operation: " + functionName);
+			}
+			return new ExecuteFunctionResult
+			{
+				FunctionName = functionName,
+				FunctionResult = ModelSerializer.Serialize(new PlayFabResult<LogicResult> { Result = result }).Value
+			};
+		}
 
-			return null;
+		public void CallGenericFunction(string functionName, Action<ExecuteFunctionResult> onSuccess, Action<PlayFabError> onError,
+			Dictionary<string, string> data = null) => DispatchFunction(functionName, onSuccess, onError, data).Forget();
+
+		private async UniTask DispatchFunction(string functionName, Action<ExecuteFunctionResult> onSuccess,
+			Action<PlayFabError> onError, Dictionary<string, string> data)
+		{
+			try { onSuccess?.Invoke(await CallGenericFunction(functionName, data)); }
+			catch (WrappedPlayFabException exception) { HandleError(exception.Error, onError); }
+			catch (Exception exception)
+			{
+				HandleError(new PlayFabError { Error = PlayFabErrorCode.Unknown, ErrorMessage = exception.Message }, onError);
+			}
 		}
 
 		public void HandleError(PlayFabError error, Action<PlayFabError> callback)
@@ -270,7 +274,7 @@ namespace FirstLight.Game.Services
 			var descriptiveError = error.GenerateErrorReport();
 			FLog.Error(descriptiveError);
 
-			_services.MessageBrokerService?.Publish(new ServerHttpErrorMessage()
+			_services.MessageBrokerService?.PublishSafe(new ServerHttpErrorMessage()
 				{ErrorCode = (HttpStatusCode) error.HttpCode, Message = descriptiveError});
 
 			callback?.Invoke(error);
@@ -278,7 +282,7 @@ namespace FirstLight.Game.Services
 
 		public void HandleRecoverableException(Exception ex)
 		{
-			// Unfortunately we have to log as an Error to send to crash analytics, and it is impossible to send exceptions manually :( 
+			// Unfortunately we have to log as an Error to send to crash analytics, and it is impossible to send exceptions manually :(
 			FLog.Error("recoverable exception", ex);
 		}
 
@@ -299,14 +303,14 @@ namespace FirstLight.Game.Services
 			};
 			_services.GenericDialogService.OpenButtonDialog("Server Error", descriptiveError, false, confirmButton);
 #else
-		FirstLight.NativeUi.NativeUiService.ShowAlertPopUp(false, "Error", descriptiveError, new FirstLight.NativeUi.AlertButton
+		GameLovers.MobileServices.NativeUi.NativeUiService.ShowAlertPopUp(false, "Error", descriptiveError, new GameLovers.MobileServices.NativeUi.AlertButton
 			{
 				Callback = () =>
 				{
 					_services.QuitGame(descriptiveError);
 				},
-					Style = FirstLight.NativeUi.AlertButtonStyle.Negative,
-					Text = I2.Loc.ScriptLocalization.MainMenu.QuitGameButton
+					Style = GameLovers.MobileServices.NativeUi.AlertButtonStyle.Cancel,
+					Text = FirstLight.Game.Localization.ScriptLocalization.MainMenu.QuitGameButton
 			});
 #endif
 		}
@@ -316,38 +320,17 @@ namespace FirstLight.Game.Services
 			return FLEnvironment.Current.Name == FLEnvironment.DEVELOPMENT.Name;
 		}
 
-		public bool RunsSimulationOnServer()
+		public bool RunsSimulationOnServer() => false;
+
+		public void FetchServerState(Action<ServerState> onSuccess, Action<PlayFabError> onError) => FetchState(onSuccess, onError).Forget();
+
+		private async UniTask FetchState(Action<ServerState> onSuccess, Action<PlayFabError> onError)
 		{
-#if UNITY_EDITOR
-			var qtnConfig = MainInstaller.ResolveServices().ConfigsProvider.GetConfig<QuantumRunnerConfigs>();
-			if (!qtnConfig.PhotonServerSettings.AppSettings.UseNameServer)
-			{
-				return true;
-			}
-#endif
-			return FeatureFlags.QUANTUM_CUSTOM_SERVER;
+			try { onSuccess?.Invoke(await FetchServerState()); }
+			catch (WrappedPlayFabException exception) { HandleError(exception.Error, onError); }
 		}
 
-		public void FetchServerState(Action<ServerState> onSuccess, Action<PlayFabError> onError)
-		{
-			PlayFabClientAPI.GetUserReadOnlyData(new GetUserDataRequest(), result =>
-			{
-				onSuccess.Invoke(new ServerState(result.Data
-					.ToDictionary(entry => entry.Key,
-						entry =>
-							entry.Value.Value)));
-			}, e => { HandleError(e, onError); });
-		}
-
-		public async UniTask<ServerState> FetchServerState()
-		{
-			var result = await AsyncPlayfabAPI.ClientAPI.GetUserReadOnlyData(new GetUserDataRequest());
-			return new ServerState(result.Data
-				.ToDictionary(entry => entry.Key,
-					entry =>
-						entry.Value.Value));
-		}
-		
+		public UniTask<ServerState> FetchServerState() => _playerBackend.Load();
 
 		public bool IsGameInMaintenance(out string message)
 		{
@@ -405,7 +388,8 @@ namespace FirstLight.Game.Services
 			var message = string.Format(msg, VersionUtils.VersionExternal,
 				_services.GameBackendService.GetTitleVersion());
 
-			NativeUiService.ShowAlertPopUp(ScriptLocalization.General.NewGameUpdate, message, ScriptLocalization.General.Confirm, OpenStore);
+			NativeUiService.ShowAlertPopUp(false, false, ScriptLocalization.General.NewGameUpdate, message,
+				new AlertButton { Text = ScriptLocalization.General.Confirm, Style = AlertButtonStyle.Default, Callback = OpenStore });
 
 			void OpenStore()
 			{
@@ -422,12 +406,18 @@ namespace FirstLight.Game.Services
 		{
 			var cfg = _dataProvider.RemoteConfigProvider.GetConfig<GameMaintenanceConfig>();
 
-			NativeUiService.ShowAlertPopUp(ScriptLocalization.General.Maintenance, msg, cfg.MaintenanceButtonText, () =>
-			{
-				Application.OpenURL(cfg.MaintenanceButtonLink);
-				_services.QuitGame("Closing game blocked dialog");
-				OpenMaintenanceDialog(msg);
-			});
+			NativeUiService.ShowAlertPopUp(false, false, ScriptLocalization.General.Maintenance, msg,
+				new AlertButton
+				{
+					Text = cfg.MaintenanceButtonText,
+					Style = AlertButtonStyle.Default,
+					Callback = () =>
+					{
+						Application.OpenURL(cfg.MaintenanceButtonLink);
+						_services.QuitGame("Closing game blocked dialog");
+						OpenMaintenanceDialog(msg);
+					}
+				});
 		}
 	}
 }

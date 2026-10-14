@@ -1,4 +1,5 @@
-﻿using System;
+using MainInstaller = FirstLight.Game.Utils.MainInstaller;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using Cysharp.Threading.Tasks;
@@ -43,6 +44,12 @@ namespace FirstLight.Game.Services
 				return config as T;
 			}
 
+			if (FLEnvironment.Configuration.UseBundledRemoteConfig)
+			{
+				var bundled = (T) BundledRemoteConfig.Create(typeof(T));
+				_cachedConfigs[typeof(T)] = bundled;
+				return bundled;
+			}
 			var rawJson = _runtimeConfig.GetJson(typeof(T).Name);
 			var deserialized = ModelSerializer.Deserialize<T>(rawJson);
 			_cachedConfigs[typeof(T)] = deserialized;
@@ -53,6 +60,7 @@ namespace FirstLight.Game.Services
 		{
 			try
 			{
+				if (FLEnvironment.Configuration.UseBundledRemoteConfig) { BundledRemoteConfig.Create(type); return true; }
 				var rawJson = _runtimeConfig.GetJson(type.Name);
 				ModelSerializer.Deserialize(type, rawJson);
 			}
@@ -67,11 +75,16 @@ namespace FirstLight.Game.Services
 
 		public int GetConfigVersion()
 		{
-			return _runtimeConfig.GetInt(CommandFields.ServerConfigurationVersion);
+			return FLEnvironment.Configuration.UseBundledRemoteConfig ? 1 : _runtimeConfig.GetInt(CommandFields.ServerConfigurationVersion);
 		}
 
 		public async UniTask Init()
 		{
+			if (FLEnvironment.Configuration.UseBundledRemoteConfig)
+			{
+				RemoteConfigValidator.ValidateConfigs(this);
+				return;
+			}
 			RemoteConfigService.Instance.SetCustomUserID(AuthenticationService.Instance.PlayerId);
 
 			// Fetch regular configs
@@ -82,6 +95,7 @@ namespace FirstLight.Game.Services
 
 		public async UniTask UpdateRemoteVersion()
 		{
+			if (FLEnvironment.Configuration.UseBundledRemoteConfig) return;
 			var filter = new FilterAttributes();
 			filter.key = new[] {CommandFields.ServerConfigurationVersion};
 			_runtimeConfig = await RemoteConfigService.Instance.FetchConfigsAsync(new UserAttributes(), new AppAttributes(), filter);
@@ -90,6 +104,7 @@ namespace FirstLight.Game.Services
 
 		public async UniTask UpdateConfig(params Type[] types)
 		{
+			if (FLEnvironment.Configuration.UseBundledRemoteConfig) return;
 			var filter = new FilterAttributes();
 			if (types.Length != 0)
 			{
@@ -109,11 +124,12 @@ namespace FirstLight.Game.Services
 			// Fetch regular configs
 			_runtimeConfig = await RemoteConfigService.Instance.FetchConfigsAsync(new UserAttributes(), new AppAttributes(), filter);
 			_lastUpdatedTime = DateTime.Now;
-			MainInstaller.ResolveServices().MessageBrokerService.Publish(new RemoteConfigsLoadedMessage());
+			MainInstaller.ResolveServices().MessageBrokerService.PublishSafe(new RemoteConfigsLoadedMessage());
 		}
 
 		public async UniTask<bool> UpdateConfigWhenExpired(TimeSpan ttl, params Type[] types)
 		{
+			if (FLEnvironment.Configuration.UseBundledRemoteConfig) return false;
 			if (_lastUpdatedTime != default && _lastUpdatedTime + ttl > DateTime.Now)
 			{
 				return false;

@@ -1,3 +1,4 @@
+using FirstLight.Game.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,12 +12,13 @@ using FirstLight.Game.Logic.RPC;
 using FirstLight.Game.Messages;
 using FirstLight.Game.Services.Authentication.Hooks;
 using FirstLight.Game.Utils;
-using FirstLight.SDK.Services;
+using FirstLight.Game.Utils.UCSExtensions;
+using Unity.Services.CloudSave;
+using GameLovers.Services;
 using FirstLight.Server.SDK.Models;
 using FirstLight.Server.SDK.Modules;
 using FirstLight.Server.SDK.Modules.Commands;
-using FirstLight.Services;
-using I2.Loc;
+using FirstLight.Game.Localization;
 using PlayFab;
 using PlayFab.ClientModels;
 using PlayFab.SharedModels;
@@ -182,12 +184,12 @@ namespace FirstLight.Game.Services.Authentication
 		/// </summary>
 		/// <returns></returns>
 		public bool HasDeviceLinked();
-		
+
 		/// <summary>
 		/// Registers an authentication hook
 		/// </summary>
 		public void RegisterHook(IAuthenticationHook hook);
-		
+
 		/// <summary>
 		/// Currently linked login types to this account
 		/// </summary>
@@ -224,9 +226,9 @@ namespace FirstLight.Game.Services.Authentication
 
 		private readonly IMessageBrokerService _msgBroker;
 		private readonly IGameLogicInitializer _logicInitializer;
-		private readonly IDataService _dataService;
+		private readonly IClientDataService _dataService;
 
-		public IReadOnlyCollection<LoginType> LoginTypes { get; private set; } 
+		public IReadOnlyCollection<LoginType> LoginTypes { get; private set; }
 		public async UniTask<bool> CanLinkToNativeAccount()
 		{
 			return LoginTypes.Contains(LoginType.EmailPass) && !LoginTypes.Contains(LoginType.Native) && await CanLoginWithNativeGamesService();
@@ -235,13 +237,15 @@ namespace FirstLight.Game.Services.Authentication
 		public string RawLocalPlayerName { get; private set; }
 		public ISessionData SessionData => _sessionData;
 		private SessionData _sessionData;
+		private bool _logicInitialized;
+		private LoginResult _pendingGuestLogin;
 
 		private List<IAuthenticationHook> _authenticationHooks;
 
 		public AuthService(
 			IGameLogicInitializer logicInitializer,
 			IGameBackendService backendService,
-			IDataService dataService,
+			IClientDataService dataService,
 			IGameRemoteConfigProvider gameRemoteConfigProvider,
 			IGameCommandService gameCommandService,
 			IMessageBrokerService msgBroker, IInternalGameNetworkService networkService)
@@ -264,11 +268,7 @@ namespace FirstLight.Game.Services.Authentication
 				new AuthenticatePhotonHook(networkService),
 				new UpdateContactEmailHook()
 			}.ToList();
-#if (UNITY_ANDROID || UNITY_IOS) && !UNITY_EDITOR
-			_nativeGamesLogin = new NativeAuthenticationProvider();
-#else
 			_nativeGamesLogin = new NullNativeGamesLogin();
-#endif
 		}
 
 		/// <summary>
@@ -277,7 +277,7 @@ namespace FirstLight.Game.Services.Authentication
 		private void OnUnityAuthSetPlayfabName(string name)
 		{
 			RawLocalPlayerName = name;
-			_msgBroker.Publish(new DisplayNameChangedMessage()
+			_msgBroker.PublishSafe(new DisplayNameChangedMessage()
 			{
 				NewPlayfabDisplayName = name
 			});
@@ -285,6 +285,7 @@ namespace FirstLight.Game.Services.Authentication
 
 		public UniTask LoginWithNativeGamesService()
 		{
+			_pendingGuestLogin = null;
 			_sessionData.Email = null;
 			_sessionData.IsAuthenticated = false;
 			_sessionData.IsFirstSession = true;
@@ -308,16 +309,20 @@ namespace FirstLight.Game.Services.Authentication
 			return _nativeGamesLogin.CanAuthenticate();
 		}
 
-		public UniTask LoginWithGuestAccount()
+		public async UniTask LoginWithGuestAccount()
 		{
 			_sessionData.Email = null;
 			_sessionData.IsAuthenticated = false;
 			_sessionData.IsFirstSession = true;
-			return LoginProcess(_loginProvider.LoginWithNewGuestAccount(), false);
+			// A retry after a cloud/network failure must reuse the created guest rather than consume another free player slot.
+			_pendingGuestLogin ??= await _loginProvider.LoginWithNewGuestAccount();
+			await LoginProcess(UniTask.FromResult(_pendingGuestLogin), false);
+			_pendingGuestLogin = null;
 		}
 
 		public UniTask LoginWithDeviceID()
 		{
+			_pendingGuestLogin = null;
 			_sessionData.Email = null;
 			_sessionData.IsAuthenticated = false;
 			_sessionData.IsFirstSession = false;
@@ -326,6 +331,7 @@ namespace FirstLight.Game.Services.Authentication
 
 		public async UniTask LoginWithEmailProcess(string email, string password)
 		{
+			_pendingGuestLogin = null;
 			await LoginProcess(_loginProvider.LoginWithEmailPassword(email, password), true);
 		}
 
@@ -336,6 +342,7 @@ namespace FirstLight.Game.Services.Authentication
 
 		public UniTask LoginWithExistingResult(LoginResult result)
 		{
+			_pendingGuestLogin = null;
 			return LoginProcess(UniTask.FromResult(result));
 		}
 
@@ -346,8 +353,8 @@ namespace FirstLight.Game.Services.Authentication
 			var loginResult = await task;
 			_sessionData.LastLoginResult = loginResult;
 			_sessionData.IsFirstSession = loginResult.NewlyCreated;
-			var hasEmail = !string.IsNullOrWhiteSpace(loginResult.InfoResultPayload.AccountInfo.PrivateInfo.Email);
-			
+			var hasEmail = !string.IsNullOrWhiteSpace(loginResult.InfoResultPayload.AccountInfo.PrivateInfo?.Email);
+
 			_sessionData.IsGuest = !hasEmail;
 			var logins = new HashSet<LoginType>();
 			if (loginResult.InfoResultPayload.AccountInfo.GameCenterInfo != null || loginResult.InfoResultPayload.AccountInfo.GooglePlayGamesInfo != null)
@@ -364,18 +371,13 @@ namespace FirstLight.Game.Services.Authentication
 				logins.Add(LoginType.LegacyDevice);
 			}
 			LoginTypes = logins;
-			_sessionData.Email = loginResult.InfoResultPayload.AccountInfo.PrivateInfo.Email;
+			_sessionData.Email = loginResult.InfoResultPayload.AccountInfo.PrivateInfo?.Email;
 			RawLocalPlayerName = loginResult.InfoResultPayload.PlayerProfile?.DisplayName;
-			var initializePlayerAndFetchState = InitializeServerLogicAndFetchState().Preserve();
-			var tasks = new List<UniTask>()
-			{
-				initializePlayerAndFetchState
-			};
-			tasks.AddRange(_authenticationHooks.Select(a => a.AfterAuthentication(loginResult, previouslyLoggedIn)));
-			await UniTask.WhenAll(tasks);
-
-			var serverState = await initializePlayerAndFetchState;
-			UpdatePlayerDataAndLogic(serverState, previouslyLoggedIn);
+			// UGS authenticates directly and loads remote configuration before client initialization commands run.
+			await UniTask.WhenAll(_authenticationHooks.Select(h => h.AfterAuthentication(loginResult, previouslyLoggedIn)));
+			var state = await _backendService.FetchServerState();
+			UpdatePlayerDataAndLogic(state, previouslyLoggedIn);
+			await InitializeServerSidePlayer();
 			// Check for account deleation
 			if (_dataService.GetData<PlayerData>().Flags.HasFlag(PlayerFlags.Deleted))
 			{
@@ -385,17 +387,11 @@ namespace FirstLight.Game.Services.Authentication
 			await UniTask.WhenAll(_authenticationHooks.Select(a => a.AfterFetchedState(loginResult)));
 
 			_sessionData.IsAuthenticated = true;
-			_msgBroker.Publish(new SuccessfullyAuthenticated()
+			_msgBroker.PublishSafe(new SuccessfullyAuthenticated()
 			{
 				SessionData = _sessionData,
 				PreviouslyLoggedIn = previouslyLoggedIn
 			});
-		}
-
-		private async UniTask<ServerState> InitializeServerLogicAndFetchState()
-		{
-			await InitializeServerSidePlayer();
-			return await _backendService.FetchServerState();
 		}
 
 		public async UniTask<string> SetDisplayName(string newName)
@@ -453,13 +449,14 @@ namespace FirstLight.Game.Services.Authentication
 			try
 			{
 				await AuthenticationService.Instance.UpdatePlayerNameAsync(newNameTrimmed);
+				await CloudSaveService.Instance.SavePlayerNameAsync(playfabResponse.DisplayName);
 			}
 			catch (RequestFailedException e)
 			{
 				return $"Error setting player name: {e.Message}";
 			}
 
-			_msgBroker.Publish(new DisplayNameChangedMessage()
+			_msgBroker.PublishSafe(new DisplayNameChangedMessage()
 			{
 				NewPlayfabDisplayName = playfabResponse.DisplayName
 			});
@@ -474,35 +471,24 @@ namespace FirstLight.Game.Services.Authentication
 
 		private void UpdatePlayerDataAndLogic(Dictionary<string, string> state, bool previouslyLoggedIn)
 		{
-			foreach (var typeFullName in state.Keys)
+			// Parse every known model first. Corrupt cloud data must not retain a previous account's models and then overwrite the cloud.
+			var modelTypes = PlayFabPlayerStateBackend.ModelTypes.ToDictionary(type => type.FullName);
+			var parsed = new Dictionary<Type, object>();
+			foreach (var entry in state)
 			{
-				try
-				{
-					var type = Assembly.GetExecutingAssembly().GetType(typeFullName);
-					// Type does not exists any more, example SeasonData
-					if (type == null)
-					{
-						continue;
-					}
-
-					var dataInstance = ModelSerializer.DeserializeFromData(type, state);
-					_dataService.AddData(type, dataInstance);
-				}
-				catch (Exception e)
-				{
-					FLog.Error("Error reading data type " + typeFullName, e);
-				}
+				if (!modelTypes.TryGetValue(entry.Key, out var type)) continue;
+				var model = ModelSerializer.DeserializeFromData(type, state);
+				if (model == null) throw new InvalidOperationException("Saved player model is empty: " + type.Name);
+				parsed[type] = model;
 			}
-
-			if (previouslyLoggedIn)
-			{
-				_logicInitializer.ReInit();
-				_msgBroker.Publish(new ReinitializeMenuViewsMessage());
-			}
+			foreach (var entry in parsed) _dataService.AddData(entry.Key, entry.Value);
+			if (_logicInitialized) _logicInitializer.ReInit();
+			else { _logicInitializer.Init(); _logicInitialized = true; }
+			if (previouslyLoggedIn) _msgBroker.PublishSafe(new ReinitializeMenuViewsMessage());
 		}
 
 		/// <summary>
-		/// Calls GetPlayerData(misleading name ATM) on server, creating data if not exists and also running initialization commands on the server side
+		/// Runs the client initialization commands and persists their resulting state through the selected backend.
 		/// </summary>
 		private async UniTask InitializeServerSidePlayer()
 		{
@@ -519,7 +505,7 @@ namespace FirstLight.Game.Services.Authentication
 				VersionUtils.ServerBuildCommit = buildCommit;
 			}
 
-			VersionUtils.ValidateServer();
+			// Progression is client-authoritative; there is no Azure server build to validate.
 		}
 
 		public async UniTask AddUserNamePassword(string email, string username, string password)
@@ -536,6 +522,7 @@ namespace FirstLight.Game.Services.Authentication
 
 		public async UniTask Logout()
 		{
+			_pendingGuestLogin = null;
 			await UniTask.WhenAll(_authenticationHooks.Select(a => a.BeforeLogout()));
 			await _loginProvider.Logout();
 			AuthenticationService.Instance.SignOut(true);
@@ -565,7 +552,7 @@ namespace FirstLight.Game.Services.Authentication
 				GetPlayerProfile = true,
 				GetUserAccountInfo = true,
 				GetTitleData = true,
-				GetPlayerStatistics = true
+				GetPlayerStatistics = !FLEnvironment.Configuration.UseBundledRemoteConfig
 			};
 	}
 }

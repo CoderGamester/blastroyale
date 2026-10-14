@@ -1,11 +1,11 @@
+using FirstLight.Game.Services.Infrastructure;
 using System;
 using System.Collections;
 using System.Collections.Generic;
 using FirstLight.FLogger;
 using FirstLight.Game.Messages;
 using FirstLight.Game.Utils;
-using FirstLight.SDK.Services;
-using FirstLight.Services;
+using GameLovers.Services;
 using Photon.Realtime;
 using UnityEngine;
 

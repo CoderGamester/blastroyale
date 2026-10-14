@@ -1,7 +1,7 @@
 using Cysharp.Threading.Tasks;
 using FirstLight.Game.Messages;
 using FirstLight.Game.Utils;
-using FirstLight.SDK.Services;
+using GameLovers.Services;
 using PlayFab.ClientModels;
 
 namespace FirstLight.Game.Services.Authentication.Hooks
@@ -41,7 +41,7 @@ namespace FirstLight.Game.Services.Authentication.Hooks
 			var titleData = result.InfoResultPayload.TitleData;
 			FeatureFlags.ParseFlags(titleData);
 			FeatureFlags.ParseLocalFeatureFlags();
-			_msgBroker.Publish(new FeatureFlagsReceived()
+			_msgBroker.PublishSafe(new FeatureFlagsReceived()
 			{
 				TitleData = titleData
 			});

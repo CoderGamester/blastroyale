@@ -1,5 +1,7 @@
+using FirstLight.Game.Services;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using Cysharp.Threading.Tasks;
 using FirstLight.FLogger;
 using FirstLight.Game.Data;
@@ -7,13 +9,11 @@ using FirstLight.Game.Logic.RPC;
 using FirstLight.Game.Messages;
 using FirstLight.Game.Utils;
 using FirstLight.Game.Utils.UCSExtensions;
-using FirstLight.SDK.Services;
+using GameLovers.Services;
 using FirstLight.Server.SDK.Modules;
 using FirstLight.Server.SDK.Modules.Commands;
-using FirstLight.Services;
 using PlayFab;
 using PlayFab.ClientModels;
-using PlayFab.SharedModels;
 using Unity.Services.Authentication;
 using Unity.Services.CloudSave;
 using Unity.Services.Friends;
@@ -23,13 +23,14 @@ namespace FirstLight.Game.Services.Authentication.Hooks
 {
 	public class UnityCloudHook : IAuthenticationHook
 	{
-		private IDataService _dataService;
+		private IClientDataService _dataService;
 		private IGameBackendService _backendService;
 		private IGameRemoteConfigProvider _gameRemoteConfigProvider;
 		private IMessageBrokerService _msgBroker;
 
 		private HashSet<Func<UniTask>> _postUnityAuthentication = new ();
 		internal event Action<string> OnSetPlayfabName;
+		private string _canonicalPlayFabName;
 
 		/// <summary>
 		///  Called just after the unity authentication finished, services are still not initialized
@@ -41,7 +42,7 @@ namespace FirstLight.Game.Services.Authentication.Hooks
 		}
 
 		public UnityCloudHook(IGameBackendService backendService,
-							  IDataService dataService,
+							  IClientDataService dataService,
 							  IGameRemoteConfigProvider gameRemoteConfigProvider,
 							  IMessageBrokerService msgBroker)
 		{
@@ -50,7 +51,7 @@ namespace FirstLight.Game.Services.Authentication.Hooks
 			_gameRemoteConfigProvider = gameRemoteConfigProvider;
 			_msgBroker = msgBroker;
 		}
-		
+
 		public UniTask BeforeLogout()
 		{
 			if (AuthenticationService.Instance.IsSignedIn) // If is already signed sign out, this is used in retries or logging in
@@ -78,43 +79,23 @@ namespace FirstLight.Game.Services.Authentication.Hooks
 
 		private async UniTask AuthenticateUnityServices(LoginResult playfabLoginResult, bool previouslyLoggedIn)
 		{
-			if (AuthenticationService.Instance.IsSignedIn) // If is already signed sign out, this is used in retries or logging in
-			{
-				AuthenticationService.Instance.SignOut(previouslyLoggedIn);
-			}
-
-			if (AuthenticationService.Instance.SessionTokenExists)
-			{
-				FLog.Info("UnityCloudAuth", "Session token exists!");
-				// This call will sign in the cached player.
-				await AuthenticationService.Instance.SignInAnonymouslyAsync();
-				FLog.Info("UnityCloudAuth", "Cached user sign in succeeded!");
-			}
-			else
-			{
-				await FetchTokenAndAuthenticate();
-			}
-
+			if (AuthenticationService.Instance.IsSignedIn) AuthenticationService.Instance.SignOut();
+			// Cache a separate anonymous UGS player per PlayFab account. This requires no server token exchange.
+			// These two identities are only linked by the client; Backend/ must restore verified linking for production.
+			AuthenticationService.Instance.SwitchProfile("playfab_" + playfabLoginResult.PlayFabId);
+			await AuthenticationService.Instance.SignInAnonymouslyAsync();
 			await PostUnityAuth(playfabLoginResult);
 		}
 
-		public async UniTask FetchTokenAndAuthenticate()
-		{
-			FLog.Info("UnityCloudAuth", "Requesting session token!");
-			var res = await _backendService.CallGenericFunction(CommandNames.AUTHENTICATE_UNITY);
-			var serverResult = ModelSerializer.Deserialize<PlayFabResult<LogicResult>>(res.FunctionResult.ToString());
-			var data = serverResult.Result.Data;
-			FLog.Verbose("UnityCloudAuth", $"Session token received: idToken: {data["idToken"]}, sessionToken: {data["sessionToken"]}!");
-			AuthenticationService.Instance.ProcessAuthenticationTokens(data["idToken"], data["sessionToken"]);
-		}
+		public UniTask FetchTokenAndAuthenticate() => AuthenticationService.Instance.SignInAnonymouslyAsync().AsUniTask();
 
 		private async UniTask PostUnityAuth(LoginResult loginResult)
 		{
 			var tasks = new List<UniTask>();
-			// Add our events 
+			// Add our events
 			tasks.AddRange(_postUnityAuthentication.Select(func => func.Invoke()));
 			tasks.Add(_gameRemoteConfigProvider
-				.Init()); // This should not be here because of manual IoC would require a lo tof changes so fuckit 
+				.Init()); // This should not be here because of manual IoC would require a lo tof changes so fuckit
 			tasks.Add(CloudSaveService.Instance.SavePlayfabIDAsync(PlayFabSettings.staticPlayer.PlayFabId));
 			tasks.Add(AuthenticationService.Instance.GetPlayerNameAsync().AsUniTask());
 			tasks.Add(FriendsService.Instance.InitializeAsync(
@@ -124,18 +105,17 @@ namespace FirstLight.Game.Services.Authentication.Hooks
 						.WithMemberProfile(true))
 				.AsUniTask());
 			await UniTask.WhenAll(tasks);
-
-			// We need this code because, we use Unity Display Name for the friends system, so they have to be on sync
-			CheckNamesUpdates(loginResult)
-				.ContinueWith(TryToRunNameMigration)
-				.Forget();
+			await CheckNamesUpdates(loginResult);
+			if (!string.IsNullOrWhiteSpace(_canonicalPlayFabName))
+				await CloudSaveService.Instance.SavePlayerNameAsync(_canonicalPlayFabName);
 		}
 
 		private async UniTask CheckNamesUpdates(LoginResult loginResult)
 		{
 			try
 			{
-				var playfabName = AuthServiceNameExtensions.TrimPlayfabDisplayName(loginResult.InfoResultPayload?.PlayerProfile?.DisplayName) ?? "";
+				_canonicalPlayFabName = loginResult.InfoResultPayload?.PlayerProfile?.DisplayName;
+				var playfabName = AuthServiceNameExtensions.TrimPlayfabDisplayName(_canonicalPlayFabName) ?? "";
 				var unityName = AuthServiceNameExtensions.TrimUnityDisplayName(AuthenticationService.Instance.PlayerName) ?? "";
 
 				if (string.IsNullOrWhiteSpace(playfabName))
@@ -145,6 +125,7 @@ namespace FirstLight.Game.Services.Authentication.Hooks
 					{
 						DisplayName = unityName.Length > 25 ? unityName.Substring(0, 25) : unityName
 					});
+					_canonicalPlayFabName = playfabResult.DisplayName;
 					OnSetPlayfabName?.Invoke(playfabResult.DisplayName);
 					return;
 				}
@@ -162,20 +143,5 @@ namespace FirstLight.Game.Services.Authentication.Hooks
 			}
 		}
 
-		/// <summary>
-		/// This runs on players whom last login is before the friends release, this copies the player name to unity cloud save so he
-		/// can be found in friend requests
-		/// </summary>
-		private void TryToRunNameMigration()
-		{
-			// GOD FORGIVE ME - GOD MIGHT BUT I WONT :L
-			var migrationData = _dataService.LoadData<LocalMigrationData>();
-			if (!migrationData.RanMigrations.Contains(LocalMigrationData.SYNC_NAME))
-			{
-				_backendService.CallGenericFunction(CommandNames.SYNC_NAME).Forget();
-				migrationData.RanMigrations.Add(LocalMigrationData.SYNC_NAME);
-				_dataService.SaveData<LocalMigrationData>();
-			}
-		}
 	}
 }

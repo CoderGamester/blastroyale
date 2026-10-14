@@ -88,6 +88,7 @@ namespace FirstLight.Game.Services
 		};
 
 		private IGameBackendService _backendService;
+		private readonly IShopCatalogBackend _catalogBackend;
 		private IGameCommandService _gameCommandService;
 		private IGameDataProvider _dataProvider;
 
@@ -150,9 +151,10 @@ namespace FirstLight.Game.Services
 		private readonly Cooldown _storeLoadCooldown;
 
 		
-		public PlayfabStoreService(IGameBackendService backend, IGameCommandService gameCommandService, IGameDataProvider dataProvider)
+		public PlayfabStoreService(IGameBackendService backend, IGameCommandService gameCommandService, IGameDataProvider dataProvider, IShopCatalogBackend catalogBackend = null)
 		{
 			_backendService = backend;
+			_catalogBackend = catalogBackend ?? new PlayFabShopCatalogBackend();
 			_dataProvider = dataProvider;
 			_gameCommandService = gameCommandService;
 			_storeLoadCooldown = new Cooldown(TimeSpan.FromMinutes(1));
@@ -175,8 +177,8 @@ namespace FirstLight.Game.Services
 
 		private async UniTaskVoid LoadPlayfabCatalogsAndStoreItems()
 		{
-			var catalogItemsTask = AsyncPlayfabAPI.GetCatalogItems(new GetCatalogItemsRequest {CatalogVersion = CATALOG_NAME});
-			var mainStoreItemsTask = AsyncPlayfabAPI.GetStoreItems(new GetStoreItemsRequest {CatalogVersion = CATALOG_NAME, StoreId = STORE_NAME});
+			var catalogItemsTask = _catalogBackend.GetCatalog(CATALOG_NAME);
+			var mainStoreItemsTask = _catalogBackend.GetStore(CATALOG_NAME, STORE_NAME);
 			var (catalogItemResult, storeItemsResult) = await UniTask.WhenAll(catalogItemsTask, mainStoreItemsTask).Timeout(TimeSpan.FromSeconds(10));
 			
 			var specialStoresResult = await TryLoadSpecialStores();
@@ -329,7 +331,7 @@ namespace FirstLight.Game.Services
 			{
 				foreach (var specialStoreName in SPECIAL_DEALS_STORES)
 				{
-					fetchSpecialStoreTaskList.Add(AsyncPlayfabAPI.GetStoreItems(new GetStoreItemsRequest {CatalogVersion = CATALOG_NAME, StoreId = specialStoreName}));
+					fetchSpecialStoreTaskList.Add(_catalogBackend.GetStore(CATALOG_NAME, specialStoreName));
 				}
 			}
 			else
@@ -338,7 +340,7 @@ namespace FirstLight.Game.Services
 
 				foreach (var specialStoreName in playerCurrentSpecialStores)
 				{
-					fetchSpecialStoreTaskList.Add(AsyncPlayfabAPI.GetStoreItems(new GetStoreItemsRequest {CatalogVersion = CATALOG_NAME, StoreId = specialStoreName}));
+					fetchSpecialStoreTaskList.Add(_catalogBackend.GetStore(CATALOG_NAME, specialStoreName));
 				}
 			}
 
