@@ -35,14 +35,14 @@ class AddressableIdContractTests(unittest.TestCase):
 
     def test_expression_cannot_hide_a_retired_configuration_id(self):
         table = re.search(r"_addressableConfigs\s*=\s*new List<AddressableConfig>\s*\{", self.source)
-        row = '\nnew AddressableConfig(58 + 0, "Retired/Another.asset", "Assets/Retired.asset", typeof(UnityEngine.Object), new[] {"GenerateIds"}),' 
+        row = '\nnew AddressableConfig(58 + 0, "Retired/Another.asset", "Assets/Retired.asset", typeof(UnityEngine.Object), new[] {"GenerateIds"}),'
         changed = self.source[:table.end()] + row + self.source[table.end():]
         with self.assertRaisesRegex(ValueError, "Unsupported global configuration constructor"):
             guard.validate(changed, self.contract)
 
     def test_duplicate_global_id_is_invalid_even_when_address_matches(self):
         table = re.search(r"_addressableConfigs\s*=\s*new List<AddressableConfig>\s*\{", self.source)
-        row = '\nnew AddressableConfig(0, "Collections/Flags/FlagSkinConfigs.asset", "Assets/Another.asset", typeof(UnityEngine.Object), new[] {"GenerateIds"}),' 
+        row = '\nnew AddressableConfig(0, "Collections/Flags/FlagSkinConfigs.asset", "Assets/Another.asset", typeof(UnityEngine.Object), new[] {"GenerateIds"}),'
         changed = self.source[:table.end()] + row + self.source[table.end():]
         with self.assertRaisesRegex(ValueError, "Duplicate global configuration ID"):
             guard.validate(changed, self.contract)
