@@ -68,10 +68,14 @@ PlayerSettings:
   useOSAutorotation: 1
   use32BitDisplayBuffer: 0
   preserveFramebufferAlpha: 0
+  adjustIOSFPSUsingThermalState: 1
+  thermalStateSeriousIOSFPS: 30
+  thermalStateCriticalIOSFPS: 15
   disableDepthAndStencilBuffers: 0
   androidStartInFullscreen: 1
   androidRenderOutsideSafeArea: 1
   androidUseSwappy: 0
+  androidDisplayOptions: 1
   androidBlitType: 2
   androidResizeableActivity: 0
   androidDefaultWindowWidth: 1920
@@ -88,6 +92,7 @@ PlayerSettings:
   muteOtherAudioSources: 0
   Prepare IOS For Recording: 0
   Force IOS Speakers When Recording: 0
+  audioSpatialExperience: 0
   deferSystemGesturesMode: 4
   hideHomeButton: 0
   submitAnalytics: 1
@@ -114,6 +119,7 @@ PlayerSettings:
   xboxEnableGuest: 0
   xboxEnablePIXSampling: 0
   metalFramebufferOnly: 0
+  metalUseMetalDisplayLink: 0
   xboxOneResolution: 0
   xboxOneSResolution: 0
   xboxOneXResolution: 3
@@ -134,6 +140,7 @@ PlayerSettings:
   switchNVNMaxPublicSamplerIDCount: 0
   switchMaxWorkerMultiple: 8
   switchNVNGraphicsFirmwareMemory: 32
+  switchGraphicsJobsSyncAfterKick: 1
   vulkanNumSwapchainBuffers: 3
   vulkanEnableSetSRGBWrite: 0
   vulkanEnablePreTransform: 0
@@ -143,7 +150,8 @@ PlayerSettings:
   visionOSBundleVersion: 1.0
   tvOSBundleVersion: 1.0
   bundleVersion: 0.29.0
-  preloadedAssets: []
+  preloadedAssets:
+  - {fileID: 11400000, guid: c3452a039b34041249d840c527f7b803, type: 2}
   metroInputSource: 0
   wsaTransparentSwapchain: 0
   m_HolographicPauseOnTrackingLoss: 1
@@ -170,13 +178,14 @@ PlayerSettings:
   buildNumber:
     Standalone: 0
     VisionOS: 0
-    iPhone: 0
+    iPhone: 1
     tvOS: 0
   overrideDefaultApplicationIdentifier: 1
   AndroidBundleVersionCode: 1
-  AndroidMinSdkVersion: 24
+  AndroidMinSdkVersion: 25
   AndroidTargetSdkVersion: 35
   AndroidPreferredInstallLocation: 0
+  AndroidPreferredDataLocation: 1
   aotOptions: 
   stripEngineCode: 1
   iPhoneStrippingLevel: 0
@@ -191,11 +200,11 @@ PlayerSettings:
   VertexChannelCompressionMask: 247
   iPhoneSdkVersion: 988
   iOSSimulatorArchitecture: 0
-  iOSTargetOSVersionString: 13.0
+  iOSTargetOSVersionString: 15.0
   tvOSSdkVersion: 0
   tvOSSimulatorArchitecture: 0
   tvOSRequireExtendedGameController: 0
-  tvOSTargetOSVersionString: 13.0
+  tvOSTargetOSVersionString: 15.0
   VisionOSSdkVersion: 0
   VisionOSTargetOSVersionString: 1.0
   uIPrerenderedIcon: 0
@@ -233,7 +242,6 @@ PlayerSettings:
   iOSLaunchScreeniPadCustomStoryboardPath: 
   iOSDeviceRequirements: []
   iOSURLSchemes:
-  - firebase-game-loop
   - blastroyale
   macOSURLSchemes: []
   iOSBackgroundModes: 0
@@ -243,14 +251,14 @@ PlayerSettings:
   metalCompileShaderBinary: 0
   iOSRenderExtraFrameOnPause: 0
   iosCopyPluginsCodeInsteadOfSymlink: 0
-  appleDeveloperTeamID: 8UB22L9ZW7
+  appleDeveloperTeamID: 
   iOSManualSigningProvisioningProfileID: 
   tvOSManualSigningProvisioningProfileID: 
   VisionOSManualSigningProvisioningProfileID: 
   iOSManualSigningProvisioningProfileType: 0
   tvOSManualSigningProvisioningProfileType: 0
   VisionOSManualSigningProvisioningProfileType: 0
-  appleEnableAutomaticSigning: 1
+  appleEnableAutomaticSigning: 0
   iOSRequireARKit: 0
   iOSAutomaticallyDetectAndAddCapabilities: 1
   appleEnableProMotion: 0
@@ -267,15 +275,19 @@ PlayerSettings:
   useCustomGradleSettingsTemplate: 1
   useCustomProguardFile: 0
   AndroidTargetArchitectures: 3
+  AndroidAllowedArchitectures: -1
   AndroidSplashScreenScale: 2
   androidSplashScreen: {fileID: 0}
-  AndroidKeystoreName: '{inproject}: Certificates/firstlightgames.keystore'
-  AndroidKeyaliasName: blastroyale
+  AndroidKeystoreName: 
+  AndroidKeyaliasName: 
   AndroidEnableArmv9SecurityFeatures: 0
   AndroidEnableArm64MTE: 0
   AndroidBuildApkPerCpuArchitecture: 0
   AndroidTVCompatibility: 0
   AndroidIsGame: 1
+  androidAppCategory: 3
+  useAndroidAppCategory: 1
+  androidAppCategoryOther: 
   AndroidEnableTango: 0
   androidEnableBanner: 1
   androidUseLowAccuracyLocation: 0
@@ -596,6 +608,7 @@ PlayerSettings:
   - serializedVersion: 2
     m_BuildTarget: Standalone
     m_EncodingQuality: 0
+  m_BuildTargetGroupHDRCubemapEncodingQuality: []
   m_BuildTargetGroupLightmapSettings:
   - m_BuildTarget: Android
     m_TextureStreamingEnabled: 0
@@ -626,7 +639,7 @@ PlayerSettings:
   locationUsageDescription: 
   microphoneUsageDescription: 
   bluetoothUsageDescription: 
-  macOSTargetOSVersion: 11.0
+  macOSTargetOSVersion: 12.0
   switchNMETAOverride: 
   switchNetLibKey: 
   switchSocketMemoryPoolSize: 6144
@@ -874,31 +887,33 @@ PlayerSettings:
   webGLMemoryLinearGrowthStep: 16
   webGLMemoryGeometricGrowthStep: 0.2
   webGLMemoryGeometricGrowthCap: 96
-  webGLEnableWebGPU: 0
   webGLPowerPreference: 2
   webGLWebAssemblyTable: 0
   webGLWebAssemblyBigInt: 0
   webGLCloseOnQuit: 0
   webWasm2023: 0
+  webEnableSubmoduleStrippingCompatibility: 0
   scriptingDefineSymbols:
-    Android: QUANTUM_ADDRESSABLES;TextMeshPro;MOREMOUNTAINS_NICEVIBRATIONS;MOREMOUNTAINS_NICEVIBRATIONS_RUMBLE;ODIN_VALIDATOR;ODIN_INSPECTOR;BAKERY_INCLUDED;ODIN_INSPECTOR_3_3;ODIN_VALIDATOR_3_3;ODIN_INSPECTOR_EDITOR_ONLY;ODIN_VALIDATOR_3_1;ODIN_VALIDATOR_3_2;ODIN_INSPECTOR_3;ODIN_INSPECTOR_3_1;ODIN_INSPECTOR_3_2;LOG_LEVEL_VERBOSE;ENABLE_VOXELBUSTERS_ESSENTIAL_KIT
-    EmbeddedLinux: TextMeshPro
-    GameCoreScarlett: 
-    GameCoreXboxOne: TextMeshPro
-    LinuxHeadlessSimulation: 
-    Nintendo Switch: TextMeshPro
-    PS4: TextMeshPro
-    PS5: TextMeshPro
-    QNX: TextMeshPro
-    ReservedCFE: TextMeshPro
-    Stadia: TextMeshPro
-    Standalone: QUANTUM_ADDRESSABLES;TextMeshPro;MOREMOUNTAINS_NICEVIBRATIONS;MOREMOUNTAINS_NICEVIBRATIONS_RUMBLE;ODIN_VALIDATOR;ODIN_INSPECTOR;BAKERY_INCLUDED;ODIN_INSPECTOR_3_3;ODIN_VALIDATOR_3_3;ODIN_INSPECTOR_EDITOR_ONLY;ODIN_VALIDATOR_3_1;ODIN_VALIDATOR_3_2;ODIN_INSPECTOR_3;ODIN_INSPECTOR_3_1;ODIN_INSPECTOR_3_2;LOG_LEVEL_VERBOSE;ENABLE_VOXELBUSTERS_ESSENTIAL_KIT
-    VisionOS: TextMeshPro
-    WebGL: TextMeshPro;BAKERY_INCLUDED;ODIN_VALIDATOR;ODIN_VALIDATOR_3_1;ODIN_VALIDATOR_3_2;ODIN_VALIDATOR_3_3;ODIN_INSPECTOR_EDITOR_ONLY;ODIN_INSPECTOR;ODIN_INSPECTOR_3;ODIN_INSPECTOR_3_1;ODIN_INSPECTOR_3_2;ODIN_INSPECTOR_3_3;LOG_LEVEL_INFO;ENABLE_VOXELBUSTERS_ESSENTIAL_KIT
-    Windows Store Apps: 
-    XboxOne: TextMeshPro
-    iPhone: QUANTUM_ADDRESSABLES;TextMeshPro;LOG_LEVEL_INFO;MOREMOUNTAINS_NICEVIBRATIONS;MOREMOUNTAINS_NICEVIBRATIONS_RUMBLE;ODIN_VALIDATOR;ODIN_INSPECTOR;BAKERY_INCLUDED;ODIN_INSPECTOR_3_3;ODIN_VALIDATOR_3_3;ODIN_INSPECTOR_EDITOR_ONLY;ODIN_VALIDATOR_3_1;ODIN_VALIDATOR_3_2;ODIN_INSPECTOR_3;ODIN_INSPECTOR_3_1;ODIN_INSPECTOR_3_2;ENABLE_VOXELBUSTERS_ESSENTIAL_KIT
-    tvOS: TextMeshPro
+    Android: QUANTUM_ADDRESSABLES;TextMeshPro;MOREMOUNTAINS_NICEVIBRATIONS;MOREMOUNTAINS_NICEVIBRATIONS_RUMBLE;LOG_LEVEL_VERBOSE;DOTWEEN;QUANTUM_ODIN_DISABLED;WIRE_EXCLUDE_WEBSOCKETSHARP;PHOTON_REALTIME_5_OR_NEWER
+    EmbeddedLinux: TextMeshPro;DOTWEEN;WIRE_EXCLUDE_WEBSOCKETSHARP
+    GameCoreScarlett: DOTWEEN;WIRE_EXCLUDE_WEBSOCKETSHARP
+    GameCoreXboxOne: TextMeshPro;DOTWEEN;WIRE_EXCLUDE_WEBSOCKETSHARP
+    Kepler: DOTWEEN;WIRE_EXCLUDE_WEBSOCKETSHARP
+    LinuxHeadlessSimulation: DOTWEEN;WIRE_EXCLUDE_WEBSOCKETSHARP
+    Nintendo Switch: TextMeshPro;DOTWEEN;WIRE_EXCLUDE_WEBSOCKETSHARP
+    Nintendo Switch 2: DOTWEEN;WIRE_EXCLUDE_WEBSOCKETSHARP
+    PS4: TextMeshPro;DOTWEEN;WIRE_EXCLUDE_WEBSOCKETSHARP
+    PS5: TextMeshPro;DOTWEEN;WIRE_EXCLUDE_WEBSOCKETSHARP
+    QNX: TextMeshPro;DOTWEEN;WIRE_EXCLUDE_WEBSOCKETSHARP
+    ReservedCFE: TextMeshPro;WIRE_EXCLUDE_WEBSOCKETSHARP
+    Stadia: TextMeshPro;WIRE_EXCLUDE_WEBSOCKETSHARP
+    Standalone: QUANTUM_ADDRESSABLES;TextMeshPro;MOREMOUNTAINS_NICEVIBRATIONS;MOREMOUNTAINS_NICEVIBRATIONS_RUMBLE;LOG_LEVEL_VERBOSE;DOTWEEN;QUANTUM_ODIN_DISABLED;PHOTON_REALTIME_5_OR_NEWER;WIRE_EXCLUDE_WEBSOCKETSHARP
+    VisionOS: TextMeshPro;DOTWEEN;WIRE_EXCLUDE_WEBSOCKETSHARP
+    WebGL: TextMeshPro;LOG_LEVEL_INFO;DOTWEEN;QUANTUM_ODIN_DISABLED;WIRE_EXCLUDE_WEBSOCKETSHARP
+    Windows Store Apps: DOTWEEN;WIRE_EXCLUDE_WEBSOCKETSHARP
+    XboxOne: TextMeshPro;DOTWEEN;WIRE_EXCLUDE_WEBSOCKETSHARP
+    iPhone: QUANTUM_ADDRESSABLES;TextMeshPro;LOG_LEVEL_INFO;MOREMOUNTAINS_NICEVIBRATIONS;MOREMOUNTAINS_NICEVIBRATIONS_RUMBLE;DOTWEEN;QUANTUM_ODIN_DISABLED;WIRE_EXCLUDE_WEBSOCKETSHARP;PHOTON_REALTIME_5_OR_NEWER
+    tvOS: TextMeshPro;DOTWEEN;WIRE_EXCLUDE_WEBSOCKETSHARP
   additionalCompilerArguments:
     Android: []
     Standalone:
@@ -1028,11 +1043,11 @@ PlayerSettings:
   captureStartupLogs: {}
   activeInputHandler: 1
   windowsGamepadBackendHint: 0
-  cloudProjectId: ***REMOVED***
+  cloudProjectId: 
   framebufferDepthMemorylessMode: 0
   qualitySettingsNames: []
-  projectName: Blast Royale
-  organizationId: first-light-games-***REMOVED***
+  projectName: 
+  organizationId: 
   cloudEnabled: 0
   legacyClampBlendShapeWeights: 0
   hmiLoadingImage: {fileID: 0}
@@ -1041,3 +1056,6 @@ PlayerSettings:
   insecureHttpOption: 1
   androidVulkanDenyFilterList: []
   androidVulkanAllowFilterList: []
+  androidVulkanDeviceFilterListAsset: {fileID: 0}
+  d3d12DeviceFilterListAsset: {fileID: 0}
+  allowedHttpConnections: 3
