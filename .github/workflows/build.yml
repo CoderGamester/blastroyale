@@ -31,6 +31,8 @@ jobs:
         with:
           lfs: true
           persist-credentials: false
+      - name: Preserve serialized Addressable IDs
+        run: python3 Tools/CI/validate_addressable_ids.py
       - name: Check Unity Personal activation secrets
         env:
           UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}

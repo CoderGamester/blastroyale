@@ -12,6 +12,18 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
+  addressable-id-contract:
+    name: Persisted Addressable IDs
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          persist-credentials: false
+      - name: Preserve serialized integer contracts
+        run: |
+          python3 Tools/CI/validate_addressable_ids.py
+          python3 -m unittest discover -s Tools/CI -p test_addressable_id_contract.py
   tests:
     name: ${{ matrix.name }}
     runs-on: ubuntu-24.04

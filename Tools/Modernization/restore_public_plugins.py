@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 """Download checksum-pinned, legitimate public plugin releases into ignored paths."""
+import argparse
 import hashlib
 import pathlib
 import subprocess
@@ -31,6 +32,9 @@ def restore(root, url, checksum, source_prefix, output):
                 if not source.parts or source.parts[0] != source_prefix or entry.is_dir():
                     continue
                 relative = pathlib.Path(*source.parts[1:])
+                # This one-time legacy installer opens a GUI and is unnecessary for the pinned core-only setup.
+                if source_prefix == "DOTween" and relative.name.startswith("DOTweenUpgradeManager"):
+                    continue
                 # Only runtime, native libraries, editor tooling and licenses are required.
                 if relative.parts and relative.parts[0].removesuffix(".meta") in {"Demo", "OlderVersions", "HapticSamples"}:
                     continue
@@ -46,6 +50,7 @@ def restore(root, url, checksum, source_prefix, output):
 
 
 if __name__ == "__main__":
+    argparse.ArgumentParser(description=__doc__).parse_args()
     root = pathlib.Path(__file__).resolve().parents[2]
     for release in RELEASES:
         restore(root, *release)
