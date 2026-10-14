@@ -1,0 +1,206 @@
+{
+  "version": 1,
+  "sdk": "Photon Quantum3.0.14 Stable2241",
+  "component_count": 22,
+  "evidence": "20 unique original field-schema joins; 2 explicitly root-approved authoring-role inferences documented in Docs/Modernization/quantum-asset-recovery.md",
+  "entries": [
+    {
+      "path": "Assets/QuantumUser/View/Generated/QPrototypeGate.cs",
+      "type": "Quantum.QPrototypeGate",
+      "source_sha256": "7cdd94daa74b33f50619f412864e9b451f4fd882b04f351674fed5220261f880",
+      "audited_previous_guid": "04ac57088f151467e8980561fae7b717",
+      "guid": "a51e33178975342038ceb56540a01ef5",
+      "confidence": "one unique matching real Q2 prototype among76 concrete native prototypes, Q3 generated component verifies same component type",
+      "original_authored_occurrences": 4
+    },
+    {
+      "path": "Assets/QuantumUser/View/Generated/QPrototypeTrigger.cs",
+      "type": "Quantum.QPrototypeTrigger",
+      "source_sha256": "9e374e3d57c7c648beaad94617ee291e042e898050a89dc94f4eb0a96156ae5e",
+      "audited_previous_guid": "77fb707747115482d8332b19c997b735",
+      "guid": "4b777c5f346eb48aaaa91d76eb7fbdfb",
+      "confidence": "one unique matching real Q2 prototype among76 concrete native prototypes, Q3 generated component verifies same component type",
+      "original_authored_occurrences": 4
+    },
+    {
+      "path": "Assets/QuantumUser/View/Generated/QPrototypeLandMine.cs",
+      "type": "Quantum.QPrototypeLandMine",
+      "source_sha256": "28c79fdadf24d452782428241b1122924085fff406269cbfe7c84007533f383c",
+      "audited_previous_guid": "3419a1a5ece3743b8b80837045540749",
+      "guid": "2d913f1b7e8192640ab8833622e03ee8",
+      "confidence": "one unique matching real Q2 prototype among76 concrete native prototypes, Q3 generated component verifies same component type",
+      "original_authored_occurrences": 1
+    },
+    {
+      "path": "Assets/QuantumUser/View/Generated/QPrototypeDeathFlag.cs",
+      "type": "Quantum.QPrototypeDeathFlag",
+      "source_sha256": "4de9de6bda0d40b37fa60eebeec1fc8ca00ce0ccd1297e88b461cb96ac0ae85d",
+      "audited_previous_guid": "e4f77fc84b27044018826b488866dcfe",
+      "guid": "933df24fc3c0ee24c9ee5dfdd61f0704",
+      "confidence": "one unique matching real Q2 prototype among76 concrete native prototypes, Q3 generated component verifies same component type",
+      "original_authored_occurrences": 1
+    },
+    {
+      "path": "Assets/QuantumUser/View/Generated/QPrototypePlayerSpawner.cs",
+      "type": "Quantum.QPrototypePlayerSpawner",
+      "source_sha256": "553e31e1d71e9be119e76238a94b70fdccc258677ad9b28e9dca87d37edab11d",
+      "audited_previous_guid": "7b4f99ac9143846529181b7a7f17fe42",
+      "guid": "88306539e307a864080fec661fef7f0a",
+      "confidence": "one unique matching real Q2 prototype among76 concrete native prototypes, Q3 generated component verifies same component type",
+      "original_authored_occurrences": 1524
+    },
+    {
+      "path": "Assets/QuantumUser/View/Generated/QPrototypeCollectablePlatformSpawner.cs",
+      "type": "Quantum.QPrototypeCollectablePlatformSpawner",
+      "source_sha256": "03d4f457c3b1ac14655a019f0d27f81601118e38f3fcd46f1c0ccf154f134516",
+      "audited_previous_guid": "da964d45b8f60419db0029727f393bd6",
+      "guid": "03a753e255de1ae4484b6a5c7aacae9c",
+      "confidence": "one unique matching real Q2 prototype among76 concrete native prototypes, Q3 generated component verifies same component type",
+      "original_authored_occurrences": 639
+    },
+    {
+      "path": "Assets/QuantumUser/View/Generated/QPrototypeConsumable.cs",
+      "type": "Quantum.QPrototypeConsumable",
+      "source_sha256": "61f082b0c0a9c8e8da077b1618b996f5109980cb76b6ba6b9ec236128e6b7e91",
+      "audited_previous_guid": "a2aaf0f70c5fd4d94afeab364da1f721",
+      "guid": "661f003d3794497795fb456763bd16f7",
+      "confidence": "one unique matching real Q2 prototype among76 concrete native prototypes, Q3 generated component verifies same component type",
+      "original_authored_occurrences": 1
+    },
+    {
+      "path": "Assets/QuantumUser/View/Generated/QPrototypeEquipmentCollectable.cs",
+      "type": "Quantum.QPrototypeEquipmentCollectable",
+      "source_sha256": "960d66d2d81942c0fd3c28c0ae5a34b3d7bd34d832728dfa52243c987dd21c98",
+      "audited_previous_guid": "c80cff4ac38b24281b54d5482a337ae5",
+      "guid": "35181e0e725004e4b909ae2194a28779",
+      "confidence": "one unique matching real Q2 prototype among76 concrete native prototypes, Q3 generated component verifies same component type",
+      "original_authored_occurrences": 1
+    },
+    {
+      "path": "Assets/QuantumUser/View/Generated/QPrototypeChest.cs",
+      "type": "Quantum.QPrototypeChest",
+      "source_sha256": "cdbd943c970c0d113b0fe140ef7a69f6252683c7ced8391182f6d1f2b6504595",
+      "audited_previous_guid": "7eb7a757c8e774efa9ac1ff7b1742ef7",
+      "guid": "79710e8ffb2394ad0a37312051d24b72",
+      "confidence": "one unique matching real Q2 prototype among76 concrete native prototypes, Q3 generated component verifies same component type",
+      "original_authored_occurrences": 1
+    },
+    {
+      "path": "Assets/QuantumUser/View/Generated/QPrototypePlayerCharacter.cs",
+      "type": "Quantum.QPrototypePlayerCharacter",
+      "source_sha256": "c982e8d2242cd6627bff77b44c60ff9724b03e237937f59aacf632fefedbb288",
+      "audited_previous_guid": "da9afb3a38e3b447cbe6cf10c7052c77",
+      "guid": "a5ea18823f2b46b78c03098b90bea8e6",
+      "confidence": "one unique matching real Q2 prototype among76 concrete native prototypes, Q3 generated component verifies same component type",
+      "original_authored_occurrences": 1
+    },
+    {
+      "path": "Assets/QuantumUser/View/Generated/QPrototypePlayerInventory.cs",
+      "type": "Quantum.QPrototypePlayerInventory",
+      "source_sha256": "4d64cced06faba3ff0e4ad8ad04bfb8f35921d814818ac6c513786fb17bd1ee6",
+      "audited_previous_guid": "91c3bfb881a2448978851820403e44c3",
+      "guid": "d33c813011c8e46458a3517eebf8ce99",
+      "confidence": "one unique matching real Q2 prototype among76 concrete native prototypes, Q3 generated component verifies same component type",
+      "original_authored_occurrences": 1
+    },
+    {
+      "path": "Assets/QuantumUser/View/Generated/QPrototypeRevivable.cs",
+      "type": "Quantum.QPrototypeRevivable",
+      "source_sha256": "b52edf027e66bfb5b3f6c546cd37bdb974466e307598f0be57ff0f53216ff21d",
+      "audited_previous_guid": "fe0fa2886bca94644afd8e0678a5aaa0",
+      "guid": "d9ae53b228d18c443a77ed7e71b345c0",
+      "confidence": "one unique matching real Q2 prototype among76 concrete native prototypes, Q3 generated component verifies same component type",
+      "original_authored_occurrences": 1
+    },
+    {
+      "path": "Assets/QuantumUser/View/Generated/QPrototypeDummyCharacter.cs",
+      "type": "Quantum.QPrototypeDummyCharacter",
+      "source_sha256": "05682f115ab00aab24f4c55a77226ddec2fa0d3d0cfcabb1bf818f21f76ec008",
+      "audited_previous_guid": "99c2e12c4e845485c8d23bd4a4d011ec",
+      "guid": "e8d4bf3ef7bd8fc41a2c038208c5a361",
+      "confidence": "one unique matching real Q2 prototype among76 concrete native prototypes, Q3 generated component verifies same component type",
+      "original_authored_occurrences": 1
+    },
+    {
+      "path": "Assets/QuantumUser/View/Generated/QPrototypeVisibilityArea.cs",
+      "type": "Quantum.QPrototypeVisibilityArea",
+      "source_sha256": "fa1ab45ebaad51050b5f295c5373722d3333ceb22b6ce417c8d831327f579116",
+      "audited_previous_guid": "fa1a067bf42f941e39583195a96a7235",
+      "guid": "e950cfda5da834440951e39fc6114264",
+      "confidence": "one unique matching real Q2 prototype among76 concrete native prototypes, Q3 generated component verifies same component type",
+      "original_authored_occurrences": 36
+    },
+    {
+      "path": "Assets/QuantumUser/View/Generated/QPrototypeBotLoadout.cs",
+      "type": "Quantum.QPrototypeBotLoadout",
+      "source_sha256": "f945194112e183b39a223888b5241fb7ebc50834d16ab80d9798922c5f9bf20d",
+      "audited_previous_guid": "bb0073c0b78804dee9030bb66b98526c",
+      "guid": "ee90c7e3926dc354f8a89f9e423314d3",
+      "confidence": "one unique matching real Q2 prototype among76 concrete native prototypes, Q3 generated component verifies same component type",
+      "original_authored_occurrences": 7
+    },
+    {
+      "path": "Assets/QuantumUser/View/Generated/QPrototypeCosmeticsHolder.cs",
+      "type": "Quantum.QPrototypeCosmeticsHolder",
+      "source_sha256": "8170d1ef7a2ae1c7b4e3e709730bc0d1033353ab8abadaab7c410b3a071a4bde",
+      "audited_previous_guid": "82383ebb35179494ba552bb8158ee19d",
+      "guid": "7c53b77e6f024bd43bb55443684ddb85",
+      "confidence": "one unique matching real Q2 prototype among76 concrete native prototypes, Q3 generated component verifies same component type",
+      "original_authored_occurrences": 12
+    },
+    {
+      "path": "Assets/QuantumUser/View/Generated/QPrototypeEntityGroup.cs",
+      "type": "Quantum.QPrototypeEntityGroup",
+      "source_sha256": "782e1ab624e82a61e3727b76aaada3eac128629816fda15a9e66da03ee4451a7",
+      "audited_previous_guid": "780e7b345346a4d768e07f89003ae17c",
+      "guid": "4ff0d174816ca4183b5a11985755f3c8",
+      "confidence": "one unique matching real Q2 prototype among76 concrete native prototypes, Q3 generated component verifies same component type",
+      "original_authored_occurrences": 25
+    },
+    {
+      "path": "Assets/QuantumUser/View/Generated/QPrototypeAirDrop.cs",
+      "type": "Quantum.QPrototypeAirDrop",
+      "source_sha256": "ec8b6521bbdccfcf010272f28b6949f6078166a8da05da6e36b68f6a79c8e5c7",
+      "audited_previous_guid": "badbc484590d54621852d6d6981b3b03",
+      "guid": "f30c66b67868040a4993d3d420f093dc",
+      "confidence": "one unique matching real Q2 prototype among76 concrete native prototypes, Q3 generated component verifies same component type",
+      "original_authored_occurrences": 1
+    },
+    {
+      "path": "Assets/QuantumUser/View/Generated/QPrototypeDestructible.cs",
+      "type": "Quantum.QPrototypeDestructible",
+      "source_sha256": "0042ab381e0056dd249079cde03936640c7d2e9d0c9dcf306b5cd35c7348d05d",
+      "audited_previous_guid": "d87cfbac53d994a0d87784c9ae5d94dd",
+      "guid": "0c2d6015076947dba29f1d3f6b58b6e8",
+      "confidence": "one unique matching real Q2 prototype among76 concrete native prototypes, Q3 generated component verifies same component type",
+      "original_authored_occurrences": 2
+    },
+    {
+      "path": "Assets/QuantumUser/View/Generated/QPrototypeTutorialRuntimeData.cs",
+      "type": "Quantum.QPrototypeTutorialRuntimeData",
+      "source_sha256": "2b48ca86db879fe9ce20b8e3559af392e442f7ae8d63c00bd52b4b8774a407e6",
+      "audited_previous_guid": "d009225a1ea59467ba7bd9b2d9db5e8d",
+      "guid": "9ac4f2f5e18b89145b7d424d42b6e3b3",
+      "confidence": "one unique matching real Q2 prototype among76 concrete native prototypes, Q3 generated component verifies same component type",
+      "original_authored_occurrences": 1
+    },
+    {
+      "path": "Assets/QuantumUser/View/Generated/QPrototypeStormAnchor.cs",
+      "type": "Quantum.QPrototypeStormAnchor",
+      "source_sha256": "869ff9d42cafc0fad2728f9c37ae0a8450ca9b861d6c41636a3cfe001763bc63",
+      "audited_previous_guid": "13a21af200e8e4993a97eaf4e79c8785",
+      "guid": "cc93d8b05fb81f64097903acca01b114",
+      "confidence": "high authoring-role inference, explicitly not serialized-schema proof",
+      "original_authored_occurrences": 287
+    },
+    {
+      "path": "Assets/QuantumUser/View/Generated/QPrototypeAirDropSpawner.cs",
+      "type": "Quantum.QPrototypeAirDropSpawner",
+      "source_sha256": "8292798e628273ef0e0b2a2c169f63b2d6550d1d3865225c891beadd597571d2",
+      "audited_previous_guid": "861d895e9ba5d497284e1d5c1ee9e514",
+      "guid": "766a83ac8bfca4045a3c3f4300e21d7a",
+      "confidence": "high authoring-role inference, explicitly not serialized-schema proof",
+      "original_authored_occurrences": 387
+    }
+  ]
+}
