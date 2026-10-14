@@ -1,0 +1,45 @@
+{
+  "entered_play_mode": true,
+  "selected_actual_tutorial_ui": false,
+  "native_authenticated": true,
+  "actual_runner_present": true,
+  "passed": true,
+  "selected_actual_home_play": true,
+  "native_game_started": true,
+  "submitted_actual_name_dialog": false,
+  "selected_tutorial_option": "expert",
+  "native_map": "AddressableResources/Maps/MazeMayhem/MazeMayhem",
+  "error_logs": 0,
+  "first_verified_frame": 19,
+  "last_verified_frame": 289,
+  "player_entities": 36,
+  "bot_entities": 35,
+  "states": [
+    "Initial",
+    "Authentication",
+    "Core"
+  ],
+  "errors": [],
+  "native_state_tree": [
+    "/Core",
+    "/Core/NETWORK - Connected",
+    "/Core/AUDIO - Battle Royale",
+    "/Core/Final",
+    "/Core/Match",
+    "/Core/Match/Game Simulation",
+    "/Core/Match/Game Simulation/Battle Royale Mode",
+    "/Core/Match/Game Simulation/Battle Royale Mode/Alive Hud"
+  ],
+  "active_screens": [
+    "UIVFXScreenPresenter",
+    "HUDScreenPresenter"
+  ],
+  "NativeProcessExit": 0,
+  "GraphicsDevice": "Metal",
+  "CSharpErrors": 0,
+  "CSharpWarnings": 0,
+  "MissingScriptWarnings": 0,
+  "MapRestorationIntegrated": "All8additionalmaps",
+  "DeviceTest": "Not run",
+  "NameEntry": "Previously completed through actual dialog in native runner; persisted on cloud restart"
+}

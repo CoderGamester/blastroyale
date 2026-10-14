@@ -1,0 +1,34 @@
+{
+  "Editor": "6000.3.26f1",
+  "NativePlayMode": {
+    "Passed": 5,
+    "Failed": 0,
+    "Skipped": 0,
+    "UnityExitCode": 0
+  },
+  "SourceCompile": {
+    "Warnings": 0,
+    "Errors": 0
+  },
+  "RuntimeSourceSHA256": "33ac00e0f212e2eeca6f5b40f34cc824c2852b98a9a7e36a852b349a372f568a",
+  "NativeGameAssemblySHA256": "2c5bf988907798db643c2306fe19894047de6447761adf194ef1a672506ed34d",
+  "CausalFinding": "Bundled configuration and solo reservation complete synchronously; MatchmakingJoined publication during a native choice OnTransition reenters that choice before current state commits, publishing two play requests and two distinct rooms in the same frame. NetworkState is the sole actual Photon join caller.",
+  "Correction": "Explicit next-player-loop dispatch boundary, one pending request, account/version checks, Joining/Joined guard, cancel invalidation, and stale-error version guard.",
+  "Cases": [
+    "Native choice commits before synchronous reservation events",
+    "Repeated deferred starts dispatch once",
+    "Cancellation cannot dispatch/release a newer start",
+    "Real native SignedOut cannot dispatch old request",
+    "Actual RealtimeClient Joining rejects another start"
+  ],
+  "Evidence": [
+    "Tools/Validation/NetworkMatchmakingStart/NetworkMatchmakingStartTests.cs",
+    "Tools/Validation/NetworkMatchmakingStart/prepare_network_start_project.py",
+    "Docs/Modernization/verification/network-matchmaking-start-tests.xml"
+  ],
+  "Limits": [
+    "Game-owned orchestration interfaces use NSubstitute; actual NetworkState, Statechart, MessageBroker, Auth3.8 state and Photon RealtimeClient are imported.",
+    "No socket/cloud requests or rendered-game proof is performed by this fixture.",
+    "Real Main Metal normal-game rerun belongs to the integrator and was pending when this evidence was frozen."
+  ]
+}

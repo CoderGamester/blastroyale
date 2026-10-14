@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test-run id="2" testcasecount="5" result="Passed" total="5" passed="5" failed="0" inconclusive="0" skipped="0" asserts="0" engine-version="3.5.0.0" clr-version="4.0.30319.42000" start-time="2026-10-14 17:45:56Z" end-time="2026-10-14 17:45:56Z" duration="0.1698514">
+  <test-suite type="TestSuite" id="1015" name="network-start-project" fullname="network-start-project" runstate="Runnable" testcasecount="5" result="Passed" start-time="2026-10-14 17:45:56Z" end-time="2026-10-14 17:45:56Z" duration="0.169851" total="5" passed="5" failed="0" inconclusive="0" skipped="0" asserts="0">
+    <properties>
+      <property name="platform" value="PlayMode" />
+    </properties>
+    <test-suite type="Assembly" id="1009" name="Unity.Services.Authentication.Tests.dll" fullname="<repo>/.local/network-start-project/Library/ScriptAssemblies/Unity.Services.Authentication.Tests.dll" runstate="Runnable" testcasecount="5" result="Passed" start-time="2026-10-14 17:45:56Z" end-time="2026-10-14 17:45:56Z" duration="0.166309" total="5" passed="5" failed="0" inconclusive="0" skipped="0" asserts="0">
+      <properties>
+        <property name="_PID" value="29974" />
+        <property name="_APPDOMAIN" value="Unity Child Domain" />
+        <property name="platform" value="PlayMode" />
+        <property name="EditorOnly" value="False" />
+      </properties>
+      <test-suite type="TestSuite" id="1010" name="FirstLight" fullname="FirstLight" runstate="Runnable" testcasecount="5" result="Passed" start-time="2026-10-14 17:45:56Z" end-time="2026-10-14 17:45:56Z" duration="0.166115" total="5" passed="5" failed="0" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <test-suite type="TestSuite" id="1011" name="Tests" fullname="FirstLight.Tests" runstate="Runnable" testcasecount="5" result="Passed" start-time="2026-10-14 17:45:56Z" end-time="2026-10-14 17:45:56Z" duration="0.166003" total="5" passed="5" failed="0" inconclusive="0" skipped="0" asserts="0">
+          <properties />
+          <test-suite type="TestSuite" id="1012" name="EditorMode" fullname="FirstLight.Tests.EditorMode" runstate="Runnable" testcasecount="5" result="Passed" start-time="2026-10-14 17:45:56Z" end-time="2026-10-14 17:45:56Z" duration="0.165898" total="5" passed="5" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-suite type="TestSuite" id="1013" name="Network" fullname="FirstLight.Tests.EditorMode.Network" runstate="Runnable" testcasecount="5" result="Passed" start-time="2026-10-14 17:45:56Z" end-time="2026-10-14 17:45:56Z" duration="0.165807" total="5" passed="5" failed="0" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <test-suite type="TestFixture" id="1003" name="NetworkMatchmakingStartTests" fullname="FirstLight.Tests.EditorMode.Network.NetworkMatchmakingStartTests" classname="FirstLight.Tests.EditorMode.Network.NetworkMatchmakingStartTests" runstate="Runnable" testcasecount="5" result="Passed" start-time="2026-10-14 17:45:56Z" end-time="2026-10-14 17:45:56Z" duration="0.165396" total="5" passed="5" failed="0" inconclusive="0" skipped="0" asserts="0">
+                <properties />
+                <test-case id="1006" name="CanceledDeferredStartCannotDispatchOrReleaseANewerStart" fullname="FirstLight.Tests.EditorMode.Network.NetworkMatchmakingStartTests.CanceledDeferredStartCannotDispatchOrReleaseANewerStart" methodname="CanceledDeferredStartCannotDispatchOrReleaseANewerStart" classname="FirstLight.Tests.EditorMode.Network.NetworkMatchmakingStartTests" runstate="Runnable" seed="1749482002" result="Passed" start-time="2026-10-14 17:45:56Z" end-time="2026-10-14 17:45:56Z" duration="0.129878" asserts="0">
+                  <properties>
+                    <property name="_JOINTYPE" value="UnityCombinatorial" />
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                  <output><![CDATA[ (T1 F14)  [NetworkState] Using Photon room matchmaking!
+]]></output>
+                </test-case>
+                <test-case id="1008" name="NativePhotonJoiningStateRejectsAnotherStart" fullname="FirstLight.Tests.EditorMode.Network.NetworkMatchmakingStartTests.NativePhotonJoiningStateRejectsAnotherStart" methodname="NativePhotonJoiningStateRejectsAnotherStart" classname="FirstLight.Tests.EditorMode.Network.NetworkMatchmakingStartTests" runstate="Runnable" seed="820740439" result="Passed" start-time="2026-10-14 17:45:56Z" end-time="2026-10-14 17:45:56Z" duration="0.010912" asserts="0">
+                  <properties>
+                    <property name="_JOINTYPE" value="UnityCombinatorial" />
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+                <test-case id="1007" name="NativeSignedOutAccountCannotDispatchDeferredReservation" fullname="FirstLight.Tests.EditorMode.Network.NetworkMatchmakingStartTests.NativeSignedOutAccountCannotDispatchDeferredReservation" methodname="NativeSignedOutAccountCannotDispatchDeferredReservation" classname="FirstLight.Tests.EditorMode.Network.NetworkMatchmakingStartTests" runstate="Runnable" seed="1382536182" result="Passed" start-time="2026-10-14 17:45:56Z" end-time="2026-10-14 17:45:56Z" duration="0.006681" asserts="0">
+                  <properties>
+                    <property name="_JOINTYPE" value="UnityCombinatorial" />
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+                <test-case id="1005" name="RepeatedStartsBeforeNextFrameDispatchOnlyOneReservation" fullname="FirstLight.Tests.EditorMode.Network.NetworkMatchmakingStartTests.RepeatedStartsBeforeNextFrameDispatchOnlyOneReservation" methodname="RepeatedStartsBeforeNextFrameDispatchOnlyOneReservation" classname="FirstLight.Tests.EditorMode.Network.NetworkMatchmakingStartTests" runstate="Runnable" seed="1501587225" result="Passed" start-time="2026-10-14 17:45:56Z" end-time="2026-10-14 17:45:56Z" duration="0.006519" asserts="0">
+                  <properties>
+                    <property name="_JOINTYPE" value="UnityCombinatorial" />
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                  <output><![CDATA[ (T1 F23)  [NetworkState] Using Photon room matchmaking!
+]]></output>
+                </test-case>
+                <test-case id="1004" name="SynchronousBundledMatchmakingPublishesAfterNativeChoiceCommits" fullname="FirstLight.Tests.EditorMode.Network.NetworkMatchmakingStartTests.SynchronousBundledMatchmakingPublishesAfterNativeChoiceCommits" methodname="SynchronousBundledMatchmakingPublishesAfterNativeChoiceCommits" classname="FirstLight.Tests.EditorMode.Network.NetworkMatchmakingStartTests" runstate="Runnable" seed="1551116224" result="Passed" start-time="2026-10-14 17:45:56Z" end-time="2026-10-14 17:45:56Z" duration="0.006463" asserts="0">
+                  <properties>
+                    <property name="_JOINTYPE" value="UnityCombinatorial" />
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                  <output><![CDATA[ (T1 F26)  [NetworkState] Using Photon room matchmaking!
+Saving results to: <user>/Library/Application Support/DefaultCompany/network-start-project/TestResults.xml
+]]></output>
+                </test-case>
+              </test-suite>
+            </test-suite>
+          </test-suite>
+        </test-suite>
+      </test-suite>
+    </test-suite>
+  </test-suite>
+</test-run>

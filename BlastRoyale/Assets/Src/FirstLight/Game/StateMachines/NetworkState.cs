@@ -53,6 +53,8 @@ namespace FirstLight.Game.StateMachines
 		private Coroutine _criticalDisconnectCoroutine;
 		private Coroutine _tickReconnectAttemptCoroutine;
 		private bool _requiresManualRoomReconnection;
+		private bool _matchmakingStartPending;
+		private long _matchmakingStartVersion;
 
 		public NetworkState(IGameDataProvider dataProvider, IGameServices services,
 							IInternalGameNetworkService networkService, Action<IStatechartEvent> statechartTrigger)
@@ -113,6 +115,7 @@ namespace FirstLight.Game.StateMachines
 
 		private void UnsubscribeEvents()
 		{
+			CancelPendingMatchmakingStart();
 			_services?.MessageBrokerService?.UnsubscribeAll(this);
 		}
 
@@ -205,32 +208,56 @@ namespace FirstLight.Game.StateMachines
 
 		private void OnMatchmakingCancelled(MatchmakingLeftMessage matchmakingLeftMessage)
 		{
+			CancelPendingMatchmakingStart();
 			_statechartTrigger(CanceledMatchmakingEvent);
+		}
+
+		private void CancelPendingMatchmakingStart()
+		{
+			++_matchmakingStartVersion;
+			_matchmakingStartPending = false;
 		}
 
 		private async UniTaskVoid StartRandomMatchmaking(MatchRoomSetup setup)
 		{
-			_gameDataProvider.AppDataProvider.LastFrameSnapshot.Value = default;
-			_networkService.JoinSource.Value = JoinRoomSource.FirstJoin;
-
-			FLog.Verbose("Using Photon room matchmaking!");
-			_networkService.LastUsedSetup.Value = setup;
-			var isConfigsValid = await IsCurrentConfigsValid(setup);
-			if (!isConfigsValid)
-			{
-				_statechartTrigger(CanceledMatchmakingEvent);
-				return;
-			}
-
+			if (_matchmakingStartPending || _services.RoomService.InRoom ||
+				_networkService.QuantumClient.State is ClientState.Joining or ClientState.Joined) return;
+			var version = ++_matchmakingStartVersion;
+			_matchmakingStartPending = true;
 			try
 			{
+				var account = UgsAccountSession.Capture();
+				// Bundled configuration and a solo reservation complete synchronously. Let the
+				// originating choice transition commit before matchmaking publishes another graph event.
+				await UniTask.NextFrame();
+				if (version != _matchmakingStartVersion) return;
+				account.ThrowIfChanged();
+				_gameDataProvider.AppDataProvider.LastFrameSnapshot.Value = default;
+				_networkService.JoinSource.Value = JoinRoomSource.FirstJoin;
+				_networkService.LastUsedSetup.Value = setup;
+				FLog.Verbose("Using Photon room matchmaking!");
+				var isConfigsValid = await IsCurrentConfigsValid(setup);
+				if (version != _matchmakingStartVersion) return;
+				account.ThrowIfChanged();
+				if (!isConfigsValid)
+				{
+					_statechartTrigger(CanceledMatchmakingEvent);
+					return;
+				}
 				await _services.MatchmakingService.JoinMatchmaking(setup);
 			}
+			catch (OperationCanceledException) { }
 			catch (Exception ex)
 			{
+				if (version != _matchmakingStartVersion) return;
 				_services.InGameNotificationService.QueueNotification("Failed to join matchmaking!", InGameNotificationStyle.Error);
 				FLog.Error("Failed to join Photon room matchmaking", ex);
 				_statechartTrigger(CanceledMatchmakingEvent);
+			}
+			finally
+			{
+				// An older canceled completion cannot release a newer request's gate.
+				if (version == _matchmakingStartVersion) _matchmakingStartPending = false;
 			}
 		}
 
@@ -563,7 +590,7 @@ namespace FirstLight.Game.StateMachines
 
 		private void OnMatchmakingCancelMessage(MatchmakingCancelMessage obj)
 		{
-			Debug.Log("POCO LEAVING MATCHMAKING");
+			CancelPendingMatchmakingStart();
 			_services.MatchmakingService.LeaveMatchmaking();
 		}
 
