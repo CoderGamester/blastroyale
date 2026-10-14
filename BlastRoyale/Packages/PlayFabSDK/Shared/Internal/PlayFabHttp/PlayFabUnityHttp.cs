@@ -78,11 +78,11 @@ namespace PlayFab.Internal
                     request = new UnityWebRequest(fullUrl, "POST");
                     request.uploadHandler = (UploadHandler)new UploadHandlerRaw(payload);
                     request.SetRequestHeader("Content-Type", "application/json");
-                    
+
                     if (PlayFabSettings.staticSettings.CompressResponses)
                     {
                         request.SetRequestHeader("Accept-Encoding", "gzip");
-                        request.downloadHandler = PlayFabSettings.staticSettings.DecompressWithDownloadHandler ? new GzipDownloadHandler() 
+                        request.downloadHandler = PlayFabSettings.staticSettings.DecompressWithDownloadHandler ? new GzipDownloadHandler()
                                                                                                                : new DownloadHandlerBuffer();
                     }
                     else

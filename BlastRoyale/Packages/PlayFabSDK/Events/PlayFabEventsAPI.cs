@@ -202,7 +202,7 @@ namespace PlayFab
 
             PlayFabHttp.MakeApiCall("/Event/WriteTelemetryEvents", request, AuthType.TelemetryKey, resultCallback, errorCallback, customData, extraHeaders, context, callSettings);
         }
-    
+
     }
 }
 
