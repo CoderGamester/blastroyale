@@ -9,8 +9,10 @@ namespace FirstLight.Game.UI
 
 		internal override async UniTask OnScreenOpenedInternal(bool reload = false, UIService uiService = null)
 		{
-			await base.OnScreenOpenedInternal(reload, uiService);
+			// Opening makes controls interactive before its asynchronous animation finishes.
+			// Prepare the result first so an early click is valid and is not discarded afterwards.
 			ResetResult();
+			await base.OnScreenOpenedInternal(reload, uiService);
 		}
 
 		public T GetResult()

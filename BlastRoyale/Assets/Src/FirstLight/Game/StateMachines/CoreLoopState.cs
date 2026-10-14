@@ -108,6 +108,8 @@ namespace FirstLight.Game.StateMachines
 
 		private async UniTask WaitForPhotonConnection()
 		{
+			// Let the native split finish entering before a cached connection completes this task.
+			await UniTask.NextFrame();
 			while (!_services.NetworkService.QuantumClient.IsConnectedAndReady ||
 				   _services.NetworkService.QuantumClient.Server == ServerConnection.NameServer)
 			{

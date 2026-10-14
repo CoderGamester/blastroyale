@@ -238,13 +238,15 @@ namespace FirstLight.Game.Presenters
 		// A hack to show the minimap after the transition screen is closed since the minimap is old UI and shows over it
 		private async UniTaskVoid ShowMinimapDelayed()
 		{
-			await UniTask.WaitUntil(() => !_gameServices.UIService.IsScreenOpen<SwipeTransitionScreenPresenter>());
+			if (await UniTask.WaitUntil(() => !_gameServices.UIService.IsScreenOpen<SwipeTransitionScreenPresenter>(),
+				cancellationToken: GetCancellationTokenOnClose()).SuppressCancellationThrow()) return;
 			// TECH DEBT, when reconnecting dead players will first open the HUD (this screen) then open the spectator in the
 			// next frame, so this is no longer visible
 			// Ideally we would not open the hud if the player is dead, but currently we open the hud before starting the simulation
 			// so we don't know if the player is dead or alive
-			if (!Root.IsAttached()) return;
-			_legacyMinimap.SetActive(_gameServices.RoomService.CurrentRoom.GameModeConfig.ShowUIMinimap);
+			var room = _gameServices.RoomService.CurrentRoom;
+			if (!Root.IsAttached() || room == null) return;
+			_legacyMinimap.SetActive(room.GameModeConfig.ShowUIMinimap);
 		}
 
 		private bool IsMenuVisible()

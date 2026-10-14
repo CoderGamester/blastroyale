@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test-run id="2" testcasecount="5" result="Passed" total="5" passed="5" failed="0" inconclusive="0" skipped="0" asserts="0" engine-version="3.5.0.0" clr-version="4.0.30319.42000" start-time="2026-10-14 15:43:50Z" end-time="2026-10-14 15:43:51Z" duration="1.583381">
+  <test-suite type="TestSuite" id="1014" name="ui-boot-project" fullname="ui-boot-project" runstate="Runnable" testcasecount="5" result="Passed" start-time="2026-10-14 15:43:50Z" end-time="2026-10-14 15:43:51Z" duration="1.583381" total="5" passed="5" failed="0" inconclusive="0" skipped="0" asserts="0">
+    <properties>
+      <property name="platform" value="PlayMode" />
+    </properties>
+    <test-suite type="Assembly" id="1007" name="FirstLight.NativeUi.Tests.dll" fullname="<repo>/.local/ui-boot-project/Library/ScriptAssemblies/FirstLight.NativeUi.Tests.dll" runstate="Runnable" testcasecount="5" result="Passed" start-time="2026-10-14 15:43:50Z" end-time="2026-10-14 15:43:51Z" duration="1.579544" total="5" passed="5" failed="0" inconclusive="0" skipped="0" asserts="0">
+      <properties>
+        <property name="_PID" value="7144" />
+        <property name="_APPDOMAIN" value="Unity Child Domain" />
+        <property name="platform" value="PlayMode" />
+        <property name="EditorOnly" value="False" />
+      </properties>
+      <test-suite type="TestSuite" id="1008" name="FirstLight" fullname="FirstLight" runstate="Runnable" testcasecount="5" result="Passed" start-time="2026-10-14 15:43:50Z" end-time="2026-10-14 15:43:51Z" duration="1.579229" total="5" passed="5" failed="0" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <test-suite type="TestSuite" id="1009" name="Tests" fullname="FirstLight.Tests" runstate="Runnable" testcasecount="5" result="Passed" start-time="2026-10-14 15:43:50Z" end-time="2026-10-14 15:43:51Z" duration="1.579045" total="5" passed="5" failed="0" inconclusive="0" skipped="0" asserts="0">
+          <properties />
+          <test-suite type="TestSuite" id="1010" name="PlayMode" fullname="FirstLight.Tests.PlayMode" runstate="Runnable" testcasecount="5" result="Passed" start-time="2026-10-14 15:43:50Z" end-time="2026-10-14 15:43:51Z" duration="1.578831" total="5" passed="5" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-suite type="TestSuite" id="1011" name="UI" fullname="FirstLight.Tests.PlayMode.UI" runstate="Runnable" testcasecount="5" result="Passed" start-time="2026-10-14 15:43:50Z" end-time="2026-10-14 15:43:51Z" duration="1.578603" total="5" passed="5" failed="0" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <test-suite type="TestFixture" id="1001" name="UiPresenterLifecycleTests" fullname="FirstLight.Tests.PlayMode.UI.UiPresenterLifecycleTests" classname="FirstLight.Tests.PlayMode.UI.UiPresenterLifecycleTests" runstate="Runnable" testcasecount="5" result="Passed" start-time="2026-10-14 15:43:50Z" end-time="2026-10-14 15:43:51Z" duration="1.578023" total="5" passed="5" failed="0" inconclusive="0" skipped="0" asserts="0">
+                <properties />
+                <test-case id="1002" name="AuthoredCanvasVfxOpensAndCompletesPooledAnimation" fullname="FirstLight.Tests.PlayMode.UI.UiPresenterLifecycleTests.AuthoredCanvasVfxOpensAndCompletesPooledAnimation" methodname="AuthoredCanvasVfxOpensAndCompletesPooledAnimation" classname="FirstLight.Tests.PlayMode.UI.UiPresenterLifecycleTests" runstate="Runnable" seed="746037231" result="Passed" start-time="2026-10-14 15:43:50Z" end-time="2026-10-14 15:43:51Z" duration="1.472758" asserts="0">
+                  <properties>
+                    <property name="_JOINTYPE" value="UnityCombinatorial" />
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+                <test-case id="1003" name="ConfiguredToolkitDocumentBindsRootAndRunsCallbacks" fullname="FirstLight.Tests.PlayMode.UI.UiPresenterLifecycleTests.ConfiguredToolkitDocumentBindsRootAndRunsCallbacks" methodname="ConfiguredToolkitDocumentBindsRootAndRunsCallbacks" classname="FirstLight.Tests.PlayMode.UI.UiPresenterLifecycleTests" runstate="Runnable" seed="858694837" result="Passed" start-time="2026-10-14 15:43:51Z" end-time="2026-10-14 15:43:51Z" duration="0.092317" asserts="0">
+                  <properties>
+                    <property name="_JOINTYPE" value="UnityCombinatorial" />
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                  <output><![CDATA[No Theme Style Sheet set to PanelSettings , UI will not render properly
+]]></output>
+                </test-case>
+                <test-case id="1005" name="ExplicitEmptyToolkitDocumentFailsWithoutCanvasFallback" fullname="FirstLight.Tests.PlayMode.UI.UiPresenterLifecycleTests.ExplicitEmptyToolkitDocumentFailsWithoutCanvasFallback" methodname="ExplicitEmptyToolkitDocumentFailsWithoutCanvasFallback" classname="FirstLight.Tests.PlayMode.UI.UiPresenterLifecycleTests" runstate="Runnable" seed="704428236" result="Passed" start-time="2026-10-14 15:43:51Z" end-time="2026-10-14 15:43:51Z" duration="0.002547" asserts="0">
+                  <properties>
+                    <property name="_JOINTYPE" value="UnityCombinatorial" />
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+                <test-case id="1006" name="MissingToolkitAndCanvasFailsWithoutOpeningInvisibleScreen" fullname="FirstLight.Tests.PlayMode.UI.UiPresenterLifecycleTests.MissingToolkitAndCanvasFailsWithoutOpeningInvisibleScreen" methodname="MissingToolkitAndCanvasFailsWithoutOpeningInvisibleScreen" classname="FirstLight.Tests.PlayMode.UI.UiPresenterLifecycleTests" runstate="Runnable" seed="456175112" result="Passed" start-time="2026-10-14 15:43:51Z" end-time="2026-10-14 15:43:51Z" duration="0.001504" asserts="0">
+                  <properties>
+                    <property name="_JOINTYPE" value="UnityCombinatorial" />
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+                <test-case id="1004" name="ToolkitMissingRootFailsAndRemovesFailedScreen" fullname="FirstLight.Tests.PlayMode.UI.UiPresenterLifecycleTests.ToolkitMissingRootFailsAndRemovesFailedScreen" methodname="ToolkitMissingRootFailsAndRemovesFailedScreen" classname="FirstLight.Tests.PlayMode.UI.UiPresenterLifecycleTests" runstate="Runnable" seed="452254622" result="Passed" start-time="2026-10-14 15:43:51Z" end-time="2026-10-14 15:43:51Z" duration="0.003827" asserts="0">
+                  <properties>
+                    <property name="_JOINTYPE" value="UnityCombinatorial" />
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                  <output><![CDATA[No Theme Style Sheet set to PanelSettings , UI will not render properly
+Saving results to: <user>/Library/Application Support/DefaultCompany/ui-boot-project/TestResults.xml
+]]></output>
+                </test-case>
+              </test-suite>
+            </test-suite>
+          </test-suite>
+        </test-suite>
+      </test-suite>
+    </test-suite>
+  </test-suite>
+</test-run>

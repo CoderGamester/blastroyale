@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test-run id="2" testcasecount="1" result="Failed(Child)" total="1" passed="0" failed="1" inconclusive="0" skipped="0" asserts="0" engine-version="3.5.0.0" clr-version="4.0.30319.42000" start-time="2026-10-14 16:30:05Z" end-time="2026-10-14 16:30:05Z" duration="0.1939114">
+  <test-suite type="TestSuite" id="1016" name="ui-boot-project" fullname="ui-boot-project" runstate="Runnable" testcasecount="7" result="Failed" site="Child" start-time="2026-10-14 16:30:05Z" end-time="2026-10-14 16:30:05Z" duration="0.193911" total="1" passed="0" failed="1" inconclusive="0" skipped="0" asserts="0">
+    <properties>
+      <property name="platform" value="PlayMode" />
+    </properties>
+    <failure>
+      <message><![CDATA[One or more child tests had errors]]></message>
+    </failure>
+    <test-suite type="Assembly" id="1009" name="FirstLight.NativeUi.Tests.dll" fullname="<repo>/.local/ui-boot-project/Library/ScriptAssemblies/FirstLight.NativeUi.Tests.dll" runstate="Runnable" testcasecount="7" result="Failed" site="Child" start-time="2026-10-14 16:30:05Z" end-time="2026-10-14 16:30:05Z" duration="0.188909" total="1" passed="0" failed="1" inconclusive="0" skipped="0" asserts="0">
+      <properties>
+        <property name="_PID" value="44220" />
+        <property name="_APPDOMAIN" value="Unity Child Domain" />
+        <property name="platform" value="PlayMode" />
+        <property name="EditorOnly" value="False" />
+      </properties>
+      <failure>
+        <message><![CDATA[One or more child tests had errors]]></message>
+      </failure>
+      <test-suite type="TestSuite" id="1010" name="FirstLight" fullname="FirstLight" runstate="Runnable" testcasecount="7" result="Failed" site="Child" start-time="2026-10-14 16:30:05Z" end-time="2026-10-14 16:30:05Z" duration="0.188337" total="1" passed="0" failed="1" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <failure>
+          <message><![CDATA[One or more child tests had errors]]></message>
+        </failure>
+        <test-suite type="TestSuite" id="1011" name="Tests" fullname="FirstLight.Tests" runstate="Runnable" testcasecount="7" result="Failed" site="Child" start-time="2026-10-14 16:30:05Z" end-time="2026-10-14 16:30:05Z" duration="0.188007" total="1" passed="0" failed="1" inconclusive="0" skipped="0" asserts="0">
+          <properties />
+          <failure>
+            <message><![CDATA[One or more child tests had errors]]></message>
+          </failure>
+          <test-suite type="TestSuite" id="1012" name="PlayMode" fullname="FirstLight.Tests.PlayMode" runstate="Runnable" testcasecount="7" result="Failed" site="Child" start-time="2026-10-14 16:30:05Z" end-time="2026-10-14 16:30:05Z" duration="0.187696" total="1" passed="0" failed="1" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <failure>
+              <message><![CDATA[One or more child tests had errors]]></message>
+            </failure>
+            <test-suite type="TestSuite" id="1013" name="UI" fullname="FirstLight.Tests.PlayMode.UI" runstate="Runnable" testcasecount="7" result="Failed" site="Child" start-time="2026-10-14 16:30:05Z" end-time="2026-10-14 16:30:05Z" duration="0.187268" total="1" passed="0" failed="1" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <failure>
+                <message><![CDATA[One or more child tests had errors]]></message>
+              </failure>
+              <test-suite type="TestFixture" id="1001" name="UiPresenterLifecycleTests" fullname="FirstLight.Tests.PlayMode.UI.UiPresenterLifecycleTests" classname="FirstLight.Tests.PlayMode.UI.UiPresenterLifecycleTests" runstate="Runnable" testcasecount="7" result="Failed" site="Child" start-time="2026-10-14 16:30:05Z" end-time="2026-10-14 16:30:05Z" duration="0.186344" total="1" passed="0" failed="1" inconclusive="0" skipped="0" asserts="0">
+                <properties />
+                <failure>
+                  <message><![CDATA[One or more child tests had errors]]></message>
+                </failure>
+                <test-case id="1003" name="ResultClickDuringOpenAnimationCompletesWaiterAndSurvivesOpening" fullname="FirstLight.Tests.PlayMode.UI.UiPresenterLifecycleTests.ResultClickDuringOpenAnimationCompletesWaiterAndSurvivesOpening" methodname="ResultClickDuringOpenAnimationCompletesWaiterAndSurvivesOpening" classname="FirstLight.Tests.PlayMode.UI.UiPresenterLifecycleTests" runstate="Runnable" seed="80207906" result="Failed" label="Error" start-time="2026-10-14 16:30:05Z" end-time="2026-10-14 16:30:05Z" duration="0.179314" asserts="0">
+                  <properties>
+                    <property name="_JOINTYPE" value="UnityCombinatorial" />
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                  <failure>
+                    <message><![CDATA[System.Reflection.TargetInvocationException : Exception has been thrown by the target of an invocation.
+  ----> System.NullReferenceException : Object reference not set to an instance of an object]]></message>
+                    <stack-trace><![CDATA[  at System.Reflection.RuntimeMethodInfo.Invoke (System.Object obj, System.Reflection.BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x00083] in <4ac0ee785b7843ea944af6fc649f4ee5>:0 
+  at System.Reflection.MethodBase.Invoke (System.Object obj, System.Object[] parameters) [0x00000] in <4ac0ee785b7843ea944af6fc649f4ee5>:0 
+  at FirstLight.Tests.PlayMode.UI.UiPresenterLifecycleTests.Click (UnityEngine.UIElements.Button button) [0x00000] in <repo>/.local/ui-boot-project/Assets/Tests/UiPresenterLifecycleTests.cs:89 
+  at FirstLight.Tests.PlayMode.UI.UiPresenterLifecycleTests.<ResultClickDuringOpenAnimationCompletesWaiterAndSurvivesOpening>b__9_0 () [0x000ed] in <repo>/.local/ui-boot-project/Assets/Tests/UiPresenterLifecycleTests.cs:102 
+  at Cysharp.Threading.Tasks.CompilerServices.AsyncUniTask`1[TStateMachine].GetResult (System.Int16 token) [0x00000] in ./Library/PackageCache/com.cysharp.unitask@bf35135da627/Runtime/CompilerServices/StateMachineRunner.cs:218 
+  at Cysharp.Threading.Tasks.UniTaskExtensions+ToCoroutineEnumerator.RunTask (Cysharp.Threading.Tasks.UniTask task) [0x00020] in ./Library/PackageCache/com.cysharp.unitask@bf35135da627/Runtime/UniTaskExtensions.cs:807 
+  at Cysharp.Threading.Tasks.UniTaskExtensions+ToCoroutineEnumerator.MoveNext () [0x0002b] in ./Library/PackageCache/com.cysharp.unitask@bf35135da627/Runtime/UniTaskExtensions.cs:838 
+  at UnityEngine.TestTools.TestEnumerator+<Execute>d__7.MoveNext () [0x0003a] in ./Library/PackageCache/com.unity.test-framework@bd7f943e9647/UnityEngine.TestRunner/NUnitExtensions/Attributes/TestEnumerator.cs:44 
+--NullReferenceException
+  at FirstLight.Game.UI.UIPresenterResult`1[T].SetResult (T result) [0x00007] in <repo>/.local/ui-boot-project/Assets/Runtime/UI/UIPresenterResult.cs:24 
+  at FirstLight.Tests.PlayMode.UI.TestResultPresenter.<QueryElements>b__10_0 () [0x00000] in <repo>/.local/ui-boot-project/Assets/Tests/TestResultPresenter.cs:16 
+  at UnityEngine.UIElements.Clickable.Invoke (UnityEngine.UIElements.EventBase evt) [0x00001] in /Users/bokken/build/output/unity/unity/Modules/UIElements/Core/Clickable.cs:289 
+  at (wrapper managed-to-native) System.Reflection.RuntimeMethodInfo.InternalInvoke(System.Reflection.RuntimeMethodInfo,object,object[],System.Exception&)
+  at System.Reflection.RuntimeMethodInfo.Invoke (System.Object obj, System.Reflection.BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x0006a] in <4ac0ee785b7843ea944af6fc649f4ee5>:0 ]]></stack-trace>
+                  </failure>
+                  <output><![CDATA[No Theme Style Sheet set to PanelSettings , UI will not render properly
+Saving results to: <user>/Library/Application Support/DefaultCompany/ui-boot-project/TestResults.xml
+]]></output>
+                </test-case>
+              </test-suite>
+            </test-suite>
+          </test-suite>
+        </test-suite>
+      </test-suite>
+    </test-suite>
+  </test-suite>
+</test-run>

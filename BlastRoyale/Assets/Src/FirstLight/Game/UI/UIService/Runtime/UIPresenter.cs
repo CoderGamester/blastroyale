@@ -36,7 +36,13 @@ namespace FirstLight.Game.UI
 		protected override void OnInitialized()
 		{
 			base.OnInitialized();
-			if (_document == null) _document = GetComponent<UIDocument>();
+			// Legacy Canvas screens deliberately leave this reference unset. RequireComponent
+			// also adds an empty UIDocument to those prefabs; it is not a Toolkit screen.
+			if (_document == null && TryGetComponent<UIDocument>(out var document) &&
+				document.visualTreeAsset != null)
+			{
+				_document = document;
+			}
 		}
 
 		private void OnEnable()
@@ -78,9 +84,15 @@ namespace FirstLight.Game.UI
 			_closed = false;
 			// Assert.AreEqual(typeof(T), Data.GetType(), $"Screen opened with incorrect data type {Data.GetType()} instead of {typeof(T)}");
 
-			if (_document != null) // TODO: Only here to support legacy lobby screen, remove when it's UITK
+			if (_document == null && !TryGetComponent<Canvas>(out _))
 			{
-				Root = _document.rootVisualElement.Q(UIService.ID_ROOT);
+				throw new InvalidOperationException($"Screen {GetType().Name} requires a configured UIDocument or a legacy Canvas.");
+			}
+
+			if (_document != null)
+			{
+				Root = _document.rootVisualElement?.Q(UIService.ID_ROOT) ??
+					throw new InvalidOperationException($"Screen {GetType().Name} UIDocument is missing the required '{UIService.ID_ROOT}' element.");
 				Root.AssignQueryResults(this);
 				Root.AssignQueryViews(this, this);
 				QueryElements();

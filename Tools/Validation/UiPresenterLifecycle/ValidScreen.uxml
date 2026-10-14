@@ -1,0 +1,1 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements"><ui:VisualElement name="root"><ui:Label text="Native fixture screen" /></ui:VisualElement></ui:UXML>

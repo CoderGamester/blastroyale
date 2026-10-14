@@ -157,8 +157,11 @@ namespace FirstLight.Game.Views.MatchHudViews
 
 		private void OnSpectatedPlayerChanged(SpectatedPlayer previous, SpectatedPlayer current)
 		{
+			// Simulation teardown clears the spectated player before a frame may exist.
+			var frame = QuantumRunner.Default?.Game?.Frames.Predicted;
+			if (!current.Entity.IsValid || frame == null) return;
 			// NOTE: If / when we have the minimap when spectating different players the friendlies pool needs to be cleared here
-			foreach (var (entity, pc) in QuantumRunner.Default.Game.Frames.Predicted.GetComponentIterator<PlayerCharacter>())
+			foreach (var (entity, pc) in frame.GetComponentIterator<PlayerCharacter>())
 			{
 				var spectatedPlayer = _matchServices.SpectateService.SpectatedPlayer.Value;
 				if (pc.TeamId > 0 && pc.TeamId == spectatedPlayer.Team && spectatedPlayer.Entity != entity)
@@ -464,6 +467,9 @@ namespace FirstLight.Game.Views.MatchHudViews
 		[InspectorAction(OnlyInPlayMode = true)]
 		private void RenderMinimap()
 		{
+			// A headless player has no render device; camera submission can crash Unity's null backend.
+			if (SystemInfo.graphicsDeviceType == UnityEngine.Rendering.GraphicsDeviceType.Null) return;
+
 			if (_mapConfigCameraSize != 0)
 			{
 				_minimapCamera.orthographicSize = _mapConfigCameraSize;

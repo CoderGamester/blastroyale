@@ -1,0 +1,384 @@
+{
+  "UnityVersion": "6000.3.26f1",
+  "NativeProject": ".local/ui-boot-project",
+  "SourceOverlay": {
+    "Files": [
+      {
+        "Path": "BlastRoyale/Assets/Src/FirstLight/Game/UI/UIService/Runtime/UIPresenter.cs",
+        "BeforeSHA256": "a94af546665b2d6e6a81c5370d12f053e7da5c5bdbfc8f9d7023bf498592cbca",
+        "AfterSHA256": "0fd4afcbb6226cbd99a0b85015812cd8c66cf54f75861c3b2189a4ccbda0faac",
+        "OverlayPath": ".local/ui-boot-patches/BlastRoyale/Assets/Src/FirstLight/Game/UI/UIService/Runtime/UIPresenter.cs"
+      }
+    ],
+    "PreservedMetadata": {
+      "Path": "BlastRoyale/Assets/Src/FirstLight/Game/UI/UIService/Runtime/UIPresenter.cs.meta",
+      "SHA256": "6946e74c370e613bdc1c70c997e256c56b0b7f5b73a9623e293d5feebb51e71c"
+    },
+    "AssetChanges": []
+  },
+  "WholeGameNativeCompile": {
+    "Assemblies": [
+      "FirstLight.Game",
+      "FirstLight.Inspector"
+    ],
+    "ExitCode": 0,
+    "CSharpDiagnostics": 0,
+    "Command": "python3 .local/compile-ui-boot-overlay.py",
+    "Logs": [
+      "artifacts/ui-boot-overlay-firstlight.game-compile.log",
+      "artifacts/ui-boot-overlay-firstlight.inspector-compile.log"
+    ]
+  },
+  "FinalPlayMode": {
+    "ExitCode": 0,
+    "Total": 5,
+    "Passed": 5,
+    "Failed": 0,
+    "Cases": [
+      {
+        "Name": "AuthoredCanvasVfxOpensAndCompletesPooledAnimation",
+        "Result": "Passed"
+      },
+      {
+        "Name": "ConfiguredToolkitDocumentBindsRootAndRunsCallbacks",
+        "Result": "Passed"
+      },
+      {
+        "Name": "ExplicitEmptyToolkitDocumentFailsWithoutCanvasFallback",
+        "Result": "Passed"
+      },
+      {
+        "Name": "MissingToolkitAndCanvasFailsWithoutOpeningInvisibleScreen",
+        "Result": "Passed"
+      },
+      {
+        "Name": "ToolkitMissingRootFailsAndRemovesFailedScreen",
+        "Result": "Passed"
+      }
+    ],
+    "XML": "Docs/Modernization/verification/ui-presenter-lifecycle-tests.xml",
+    "SourceLog": "artifacts/ui-presenter-lifecycle-final-tests.log",
+    "CSharpDiagnostics": 0
+  },
+  "BeforeFixReproduction": {
+    "ExitCode": 2,
+    "Total": 1,
+    "Passed": 0,
+    "Failed": 1,
+    "FailureMessage": "System.NullReferenceException : Object reference not set to an instance of an object",
+    "TopFrame": "at FirstLight.Game.UI.UIPresenter.OnScreenOpenedInternal (System.Boolean reload, FirstLight.Game.UI.UIService uiService) [0x00137] in <repo>/.local/ui-boot-project/Assets/Runtime/UI/UIPresenter.cs:95",
+    "XML": "Docs/Modernization/verification/ui-presenter-lifecycle-before-fix-tests.xml",
+    "SourceLog": "artifacts/ui-presenter-lifecycle-before-fix-tests.log"
+  },
+  "AuthoredPrefab": {
+    "Path": "BlastRoyale/Assets/AddressableResources/UI/UIVFXScreen.prefab",
+    "SHA256": "6952938e080f92f2707701544506a0621eefc59dadac835164656a784b253ccf",
+    "NativeProbeSHA256": "6952938e080f92f2707701544506a0621eefc59dadac835164656a784b253ccf",
+    "MetadataSHA256": "eb3ad17c2600e990344f95c4a262ec13cb28e490e04052c343441a820c6336f7",
+    "Changed": false
+  },
+  "ExactNativeInputs": {
+    "Inputs": [
+      {
+        "Source": ".local/ui-boot-patches/BlastRoyale/Assets/Src/FirstLight/Game/UI/UIService/Runtime/UIPresenter.cs",
+        "Target": "Assets/Runtime/UI/UIPresenter.cs",
+        "SHA256": "0fd4afcbb6226cbd99a0b85015812cd8c66cf54f75861c3b2189a4ccbda0faac"
+      },
+      {
+        "Source": "BlastRoyale/Assets/Src/FirstLight/Game/UI/UIService/Runtime/UIServiceUtils.cs",
+        "Target": "Assets/Runtime/UI/UIServiceUtils.cs",
+        "SHA256": "11bb4123a93033ca70a5a80b8ad1b42387f7efc996103cdaa6d7d7c6c100b7b3"
+      },
+      {
+        "Source": "BlastRoyale/Assets/Src/FirstLight/Game/UI/UIService/Runtime/UIPresenterResult.cs",
+        "Target": "Assets/Runtime/UI/UIPresenterResult.cs",
+        "SHA256": "853d097de897d12f80928e2050efd456e8d696c54272562c0019ccf17d56c738"
+      },
+      {
+        "Source": "BlastRoyale/Assets/Src/FirstLight/Game/UI/UIService/Runtime/UIService.cs",
+        "Target": "Assets/Runtime/UI/UIService.cs",
+        "SHA256": "b3d319a020befec4ea897858ddf1dbe90de7c33e0cad43664cc428b6d69a57dc"
+      },
+      {
+        "Source": "BlastRoyale/Assets/Src/FirstLight/Game/UI/UIService/Runtime/SafeAreaHelperView.cs",
+        "Target": "Assets/Runtime/UI/SafeAreaHelperView.cs",
+        "SHA256": "b9d9d61facf80238d56cf6444b922c02765ac7a8cffba9edcc9df8a09b3cb75d"
+      },
+      {
+        "Source": "BlastRoyale/Assets/Src/FirstLight/Game/UI/UIService/Runtime/QView.cs",
+        "Target": "Assets/Runtime/UI/QView.cs",
+        "SHA256": "ca29bddc4894d7c60e0e696b3d97f55afaab1cb637cdd786962ede9a917cd529"
+      },
+      {
+        "Source": "BlastRoyale/Assets/Src/FirstLight/Game/UI/UIService/Runtime/UILayer.cs",
+        "Target": "Assets/Runtime/UI/UILayer.cs",
+        "SHA256": "00a361887785183f4965b39cd2138e8c20ac0b71a288da85573ec79f435da0c1"
+      },
+      {
+        "Source": "BlastRoyale/Assets/Src/FirstLight/Game/UI/UIService/Runtime/UIPresenterData.cs",
+        "Target": "Assets/Runtime/UI/UIPresenterData.cs",
+        "SHA256": "599f8b64e9ef7d159e602f33fa6636a41364a4f999dc9325263ff19cbf098465"
+      },
+      {
+        "Source": "BlastRoyale/Assets/Src/FirstLight/Game/UI/UIService/Runtime/UILayerAttribute.cs",
+        "Target": "Assets/Runtime/UI/UILayerAttribute.cs",
+        "SHA256": "4233711db111a8cc08761c5c1576a6d7fc9cf1ad53bbb4df5ee08a31fb6fad81"
+      },
+      {
+        "Source": "BlastRoyale/Assets/Src/FirstLight/Game/UI/UIService/Runtime/UIView.cs",
+        "Target": "Assets/Runtime/UI/UIView.cs",
+        "SHA256": "cbd8c358a96f1047d0add836edf8372159e146c3ad3b3c8f07452cd1421ea215"
+      },
+      {
+        "Source": "BlastRoyale/Assets/Src/FirstLight/Game/UI/UIService/Runtime/NonDrawingView.cs",
+        "Target": "Assets/Runtime/UI/NonDrawingView.cs",
+        "SHA256": "4cf7ee11d8f36636cff784f92990dce0b54a99839c8dafa4bf9b4a406e694621"
+      },
+      {
+        "Source": "BlastRoyale/Assets/Src/FirstLight/Game/UI/UIService/Runtime/UIServiceExtensions.cs",
+        "Target": "Assets/Runtime/UI/UIServiceExtensions.cs",
+        "SHA256": "99a40df4597d1438c0e5545e2ee0af9e9c62241ea8869bd5a84f45c0240b0f17"
+      },
+      {
+        "Source": "BlastRoyale/Assets/Src/FirstLight/Game/Presenters/UIVFXScreenPresenter.cs",
+        "Target": "Assets/Runtime/UIVFXScreenPresenter.cs",
+        "SHA256": "f8059be17ba57d6e3bb8ab4297bf65eae5fe71df8ff00be2084079f812738855"
+      },
+      {
+        "Source": "BlastRoyale/Assets/Src/FirstLight/Game/Views/UiVfxImage.cs",
+        "Target": "Assets/Runtime/UiVfxImage.cs",
+        "SHA256": "70f330407ca0de54129d38e4d3ad706a7141b3653c5db08946d4b862f2374293"
+      },
+      {
+        "Source": "BlastRoyale/Assets/Src/FirstLight/Game/Domains/HomeScreen/UI/MainMenuFloatingTextView.cs",
+        "Target": "Assets/Runtime/MainMenuFloatingTextView.cs",
+        "SHA256": "c5fcd2c878a9e19adb317b6651c4e804eef4101e8c61ff0c5a7102e178e47a79"
+      },
+      {
+        "Source": "BlastRoyale/Assets/Src/FirstLight/Inspector/FirstLight.Inspector.asmdef",
+        "Target": "Assets/Inspector/FirstLight.Inspector.asmdef",
+        "SHA256": "b614d13c6c1c4cc2c354de413817da9aaa82760f5b7c1bb8635b71d7870ba9cc"
+      },
+      {
+        "Source": "BlastRoyale/Assets/Src/FirstLight/Inspector/InspectorFieldAttribute.cs.meta",
+        "Target": "Assets/Inspector/InspectorFieldAttribute.cs.meta",
+        "SHA256": "9fe114bead4afec7c9e7b1f886d10d8465d160edbb78181f3fc3d92c2c0393b5"
+      },
+      {
+        "Source": "BlastRoyale/Assets/Src/FirstLight/Inspector/FirstLight.Inspector.asmdef.meta",
+        "Target": "Assets/Inspector/FirstLight.Inspector.asmdef.meta",
+        "SHA256": "4256261b98f6b763b7047a234c61a5dcf5f675e572f30f44be63240bb0c59d4d"
+      },
+      {
+        "Source": "BlastRoyale/Assets/Src/FirstLight/Inspector/InspectorFieldAttribute.cs",
+        "Target": "Assets/Inspector/InspectorFieldAttribute.cs",
+        "SHA256": "534e642d03b60aa00a9b750d80b88a38d9ec2f5f945d0a275b1c38a845a13c3e"
+      },
+      {
+        "Source": "BlastRoyale/Assets/Src/FirstLight/Game/Utils/Extensions.cs",
+        "ExactMethods": [
+          "IsDestroyed",
+          "LateCall",
+          "LateCallAwaitable"
+        ],
+        "SHA256": "8358d96bc46eb9636730a703f64906933730ee003b821d638bef7c70a0c31a45"
+      },
+      {
+        "Source": "BlastRoyale/Assets/Plugins/Demigiant/DOTween/DOTween.dll",
+        "Target": "Assets/Plugins/DOTween.dll",
+        "SHA256": "c51b065925bb37c308f9a05a776cdf09f49a97a6f7c2393b4fb3b3f01c045232"
+      },
+      {
+        "Source": "BlastRoyale/Assets/Plugins/Demigiant/DOTween/Modules/DOTweenModuleAudio.cs",
+        "Target": "Assets/DOTween.Modules/DOTweenModuleAudio.cs",
+        "SHA256": "4352a6a6fe6deecf3ee1c61187f7dd608f70d5ce6033b3c579f69f23c1277f16"
+      },
+      {
+        "Source": "BlastRoyale/Assets/Plugins/Demigiant/DOTween/Modules/DOTweenModuleUnityVersion.cs.meta",
+        "Target": "Assets/DOTween.Modules/DOTweenModuleUnityVersion.cs.meta",
+        "SHA256": "4aae72ff2b638b6fe052f1b850122711567c50c0d7a882a907edcc6c784aadf2"
+      },
+      {
+        "Source": "BlastRoyale/Assets/Plugins/Demigiant/DOTween/Modules/DOTweenModulePhysics.cs",
+        "Target": "Assets/DOTween.Modules/DOTweenModulePhysics.cs",
+        "SHA256": "26678b87b7fc1a56441910a12aef1647558dc83feb94604d588c4369c690fc81"
+      },
+      {
+        "Source": "BlastRoyale/Assets/Plugins/Demigiant/DOTween/Modules/DOTweenModuleUtils.cs.meta",
+        "Target": "Assets/DOTween.Modules/DOTweenModuleUtils.cs.meta",
+        "SHA256": "bfeaca8ea3ac1824f408cb0ade727e83b6b3bdc6a7421deb9a6323b30f37cd08"
+      },
+      {
+        "Source": "BlastRoyale/Assets/Plugins/Demigiant/DOTween/Modules/DOTweenModuleUnityVersion.cs",
+        "Target": "Assets/DOTween.Modules/DOTweenModuleUnityVersion.cs",
+        "SHA256": "26126010ad8b836b74ebe7524baccd6d4cc04da4064cd840e92d4060194cf71d"
+      },
+      {
+        "Source": "BlastRoyale/Assets/Plugins/Demigiant/DOTween/Modules/DOTweenModulePhysics2D.cs",
+        "Target": "Assets/DOTween.Modules/DOTweenModulePhysics2D.cs",
+        "SHA256": "7f3dd38cb0ac650de48028ac3d2600c4ea3afb9452a4ccccbd1d6fbf5b7deb82"
+      },
+      {
+        "Source": "BlastRoyale/Assets/Plugins/Demigiant/DOTween/Modules/DOTweenModuleUtils.cs",
+        "Target": "Assets/DOTween.Modules/DOTweenModuleUtils.cs",
+        "SHA256": "6a21fe7335a3626180e5c5342d8a19946de647ba3666fdfc4713c84fdfcc4609"
+      },
+      {
+        "Source": "BlastRoyale/Assets/Plugins/Demigiant/DOTween/Modules/DOTweenModulePhysics.cs.meta",
+        "Target": "Assets/DOTween.Modules/DOTweenModulePhysics.cs.meta",
+        "SHA256": "8fca4c1f148cd34564af75f347923e9b4eceaa712d645f6e45d5519eb550300d"
+      },
+      {
+        "Source": "BlastRoyale/Assets/Plugins/Demigiant/DOTween/Modules/DOTweenModulePhysics2D.cs.meta",
+        "Target": "Assets/DOTween.Modules/DOTweenModulePhysics2D.cs.meta",
+        "SHA256": "131dee0e3760d564709947390a17e40fae80325000c7edf76b3cdb0706b97f95"
+      },
+      {
+        "Source": "BlastRoyale/Assets/Plugins/Demigiant/DOTween/Modules/DOTweenModuleUI.cs.meta",
+        "Target": "Assets/DOTween.Modules/DOTweenModuleUI.cs.meta",
+        "SHA256": "0a7f6ab56a9ee7445ca3d102bba597f2af946cf8ff274288e2b004a4ac4c7059"
+      },
+      {
+        "Source": "BlastRoyale/Assets/Plugins/Demigiant/DOTween/Modules/DOTweenModuleAudio.cs.meta",
+        "Target": "Assets/DOTween.Modules/DOTweenModuleAudio.cs.meta",
+        "SHA256": "58f60f3cb3a578405ade376627064f7fe809ccb049e36417157d06bf7b5754ca"
+      },
+      {
+        "Source": "BlastRoyale/Assets/Plugins/Demigiant/DOTween/Modules/DOTweenModuleEPOOutline.cs",
+        "Target": "Assets/DOTween.Modules/DOTweenModuleEPOOutline.cs",
+        "SHA256": "b31faa9d2d8c3f00721dc21d680dbd107abf66716bcc754cb721e4995ee022b9"
+      },
+      {
+        "Source": "BlastRoyale/Assets/Plugins/Demigiant/DOTween/Modules/DOTween.Modules.asmdef",
+        "Target": "Assets/DOTween.Modules/DOTween.Modules.asmdef",
+        "SHA256": "07a91f54139e21d23a52deaf439d03bc650758d2180d679ad2a51233367db0ee"
+      },
+      {
+        "Source": "BlastRoyale/Assets/Plugins/Demigiant/DOTween/Modules/DOTweenModuleUI.cs",
+        "Target": "Assets/DOTween.Modules/DOTweenModuleUI.cs",
+        "SHA256": "24a9c989ce632168827b57290b7f30132bf2e3dd119edb180546ae7ce13a340e"
+      },
+      {
+        "Source": "BlastRoyale/Assets/Plugins/Demigiant/DOTween/Modules/DOTween.Modules.asmdef.meta",
+        "Target": "Assets/DOTween.Modules/DOTween.Modules.asmdef.meta",
+        "SHA256": "423cbeed478881ab28ef2fc055465b46366553bee11e311f6ae94b66ca8145cc"
+      },
+      {
+        "Source": "BlastRoyale/Assets/Plugins/Demigiant/DOTween/Modules/DOTweenModuleSprite.cs",
+        "Target": "Assets/DOTween.Modules/DOTweenModuleSprite.cs",
+        "SHA256": "008b0398dc3235220aa9ec9f025d7fda51e935544249829d828eef935c29f578"
+      },
+      {
+        "Source": "BlastRoyale/Assets/Plugins/Demigiant/DOTween/Modules/DOTweenModuleEPOOutline.cs.meta",
+        "Target": "Assets/DOTween.Modules/DOTweenModuleEPOOutline.cs.meta",
+        "SHA256": "ac4ae60655a7ff43c4d0a6a26c0ea0ee6817b45fbd26b26f2fa5bbb6bcaa6d54"
+      },
+      {
+        "Source": "BlastRoyale/Assets/Plugins/Demigiant/DOTween/Modules/DOTweenModuleUIToolkit.cs.meta",
+        "Target": "Assets/DOTween.Modules/DOTweenModuleUIToolkit.cs.meta",
+        "SHA256": "51816d41e6b359c6fb140de901eff28f2d6e56c9ea778bd5aa2134a9bf3898dd"
+      },
+      {
+        "Source": "BlastRoyale/Assets/Plugins/Demigiant/DOTween/Modules/DOTweenModuleUIToolkit.cs",
+        "Target": "Assets/DOTween.Modules/DOTweenModuleUIToolkit.cs",
+        "SHA256": "6a8d50769554305b9294cb89b40e3ef88bbd44b59ce494a8c8afc9759426258d"
+      },
+      {
+        "Source": "BlastRoyale/Assets/Plugins/Demigiant/DOTween/Modules/DOTweenModuleSprite.cs.meta",
+        "Target": "Assets/DOTween.Modules/DOTweenModuleSprite.cs.meta",
+        "SHA256": "731e82df7bbcb4d38125ddcb436e1f5f3039163b27478c4e58d5c992de03d9e1"
+      },
+      {
+        "Source": "BlastRoyale/Assets/AddressableResources/UI/UIVFXScreen.prefab",
+        "Target": "Assets/AddressableResources/UI/UIVFXScreen.prefab",
+        "SHA256": "6952938e080f92f2707701544506a0621eefc59dadac835164656a784b253ccf"
+      },
+      {
+        "Source": "BlastRoyale/Assets/Art/ModernizationPlaceholders/Materials/PLACEHOLDER_54b3ed35361584c0bb6a8d0a8a882451.mat",
+        "Target": "Assets/Art/ModernizationPlaceholders/Materials/PLACEHOLDER_54b3ed35361584c0bb6a8d0a8a882451.mat",
+        "SHA256": "cb3a864603e1fe2cec83b534a8067cef87a2b339685a7c3d0007c0a3e746c9c3"
+      },
+      {
+        "Source": "BlastRoyale/Assets/AddressableResources/Sprites/Shared/CS.png",
+        "Target": "Assets/AddressableResources/Sprites/Shared/CS.png",
+        "SHA256": "691e0d51726821505dcbcde9321ccee796c38a88ed5f5d5ae35f8c14e2ec9ae2"
+      },
+      {
+        "Source": "Tools/Validation/UiPresenterLifecycle/UiPresenterLifecycleTests.cs",
+        "Target": "Assets/Tests/UiPresenterLifecycleTests.cs",
+        "SHA256": "b920ae7f67c513abd14da38d459a3230635fd93d9a78013d6f4d26448205e9e2"
+      },
+      {
+        "Source": "Tools/Validation/UiPresenterLifecycle/TestToolkitPresenter.cs",
+        "Target": "Assets/Tests/TestToolkitPresenter.cs",
+        "SHA256": "1dbe7a226d10646a98440d64ab534a79a61b310c06f5593c5e28048a210df64f"
+      },
+      {
+        "Source": "Tools/Validation/UiPresenterLifecycle/ValidScreen.uxml",
+        "Target": "Assets/Tests/ValidScreen.uxml",
+        "SHA256": "2a41bff2ecd8b4cd89d0c3c71c03aa58a41e800e95a520bfde741a18f7e756b2"
+      },
+      {
+        "Source": "Tools/Validation/UiPresenterLifecycle/MissingRootScreen.uxml",
+        "Target": "Assets/Tests/MissingRootScreen.uxml",
+        "SHA256": "15fce60d355650d429de89b9e54f39f1714c1aa56eaef4cd9816f3f00d5abf17"
+      }
+    ],
+    "ExternalAssetGuids": [
+      "0000000000000000e000000000000000",
+      "0cd44c1031e13a943bb63640046fad76",
+      "52f2744543c10a141af84f3e0544199c",
+      "650dd9526735d5b46b79224bc6e94025",
+      "d0353a89b1f911e48b9e16bdc9f2e058",
+      "d7b331517660d474596db465e3089916",
+      "f4688fdb7df04437aeb418b961361dc5",
+      "fe87c0e1cc204ed48ad3b37840f39efc"
+    ],
+    "Packages": {
+      "com.cysharp.unitask": "https://github.com/Cysharp/UniTask.git?path=src/UniTask/Assets/Plugins/UniTask#a77a1b4a89824fb6df293099de3060daf2a432c1",
+      "com.quickeye.ui-toolkit-plus": "https://github.com/ErnSur/UI-Toolkit-Plus.git#e954c009b99edad93d3f1144b23eb363be171878",
+      "com.gamelovers.gamedata": "https://github.com/CoderGamester/Unity-GameData.git#3c6147829ba6154d92a0dd257c69bf167b20c3b7",
+      "com.gamelovers.services": "https://github.com/CoderGamester/Unity-Services.git#dd2b87a6398288e13201330be065a4e3a3429bb3",
+      "com.gamelovers.uiservice": "https://github.com/CoderGamester/Unity-UiService.git#aa5fa65457b53601de647bcd6c925e435485698e",
+      "com.unity.addressables": "2.10.3",
+      "com.unity.render-pipelines.universal": "17.3.0",
+      "com.unity.ugui": "2.0.0",
+      "com.unity.test-framework": "1.6.0",
+      "com.unity.test-framework.performance": "3.5.0",
+      "com.unity.nuget.newtonsoft-json": "3.2.2",
+      "com.unity.modules.accessibility": "1.0.0",
+      "com.unity.modules.ai": "1.0.0",
+      "com.unity.modules.androidjni": "1.0.0",
+      "com.unity.modules.animation": "1.0.0",
+      "com.unity.modules.assetbundle": "1.0.0",
+      "com.unity.modules.audio": "1.0.0",
+      "com.unity.modules.cloth": "1.0.0",
+      "com.unity.modules.director": "1.0.0",
+      "com.unity.modules.imageconversion": "1.0.0",
+      "com.unity.modules.imgui": "1.0.0",
+      "com.unity.modules.jsonserialize": "1.0.0",
+      "com.unity.modules.particlesystem": "1.0.0",
+      "com.unity.modules.physics": "1.0.0",
+      "com.unity.modules.physics2d": "1.0.0",
+      "com.unity.modules.screencapture": "1.0.0",
+      "com.unity.modules.terrain": "1.0.0",
+      "com.unity.modules.terrainphysics": "1.0.0",
+      "com.unity.modules.tilemap": "1.0.0",
+      "com.unity.modules.ui": "1.0.0",
+      "com.unity.modules.uielements": "1.0.0",
+      "com.unity.modules.umbra": "1.0.0",
+      "com.unity.modules.unityanalytics": "1.0.0",
+      "com.unity.modules.unitywebrequest": "1.0.0",
+      "com.unity.modules.unitywebrequestassetbundle": "1.0.0",
+      "com.unity.modules.unitywebrequestaudio": "1.0.0",
+      "com.unity.modules.unitywebrequesttexture": "1.0.0",
+      "com.unity.modules.unitywebrequestwww": "1.0.0",
+      "com.unity.modules.vehicles": "1.0.0",
+      "com.unity.modules.video": "1.0.0",
+      "com.unity.modules.vr": "1.0.0",
+      "com.unity.modules.wind": "1.0.0",
+      "com.unity.modules.xr": "1.0.0"
+    }
+  },
+  "Scope": "Exact authored Canvas VFX asset and game UI adapter/native package lifecycle; no Main process/writes, cloud requests, remote Addressables bundle, full boot, device or visual appearance claim."
+}

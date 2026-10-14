@@ -1,0 +1,30 @@
+{
+  "Version": 1,
+  "Files": [
+    {
+      "Path": "BlastRoyale/Assets/Src/FirstLight/Game/StateMachines/CoreLoopState.cs",
+      "BeforeSHA256": "b99651f141f1a2afab0e146ba5982b9f81beb4016957d304009216f0b580581e",
+      "OverlayPath": ".local/core-taskwait-patches/BlastRoyale/Assets/Src/FirstLight/Game/StateMachines/CoreLoopState.cs",
+      "AfterSHA256": "3d1363700d1a0cca25173735ad819a4348b8b1132db11018b8a18a3195ef416f",
+      "PreservedMetadataSHA256": "d257ceea7504e7987484f1b0f659bbed3316eae2f621df758fc8eb061a3cb961"
+    }
+  ],
+  "MainChangedByAgent": false,
+  "ValidationPending": null,
+  "NativeValidation": {
+    "Unity": "6000.3.26f1",
+    "Statechart": "21aabc10111ffe4adbe5d4a7e4843a648994ce39",
+    "Services": "dd2b87a6398288e13201330be065a4e3a3429bb3",
+    "UniTask": "a77a1b4a89824fb6df293099de3060daf2a432c1",
+    "Log": "artifacts/core-taskwait-runtime-causality-native.log",
+    "LogSHA256": "e8edec2b4d8b739104f29f34553e4a0f9dae13b89d6876f864297353d6e37b5c",
+    "ExitCode": 0,
+    "CSharpDiagnostics": 0,
+    "OriginalBindAttempts": 2,
+    "AlreadyConnectedWithNextFrameBindAttempts": 1,
+    "InitiallyDisconnectedWithNextFrameBindAttempts": 1,
+    "PositiveCasesFixtureErrors": 0,
+    "CoreEntriesPerCase": 1,
+    "DiagnosticScope": "Expected TaskWait/Installer negative-control errors are captured explicitly; unrelated old-clone import diagnostics are not claimed absent."
+  }
+}
