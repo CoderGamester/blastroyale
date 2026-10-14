@@ -1,10 +1,10 @@
+using GameLovers.GameData;
 using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Threading;
 using Cysharp.Threading.Tasks;
-using FirstLight.AddressablesExtensions;
-using FirstLight.AssetImporter;
+using GameLovers.Services.AssetsImporter;
 using FirstLight.FLogger;
 using UnityEngine;
 using UnityEngine.AddressableAssets;
@@ -41,7 +41,7 @@ namespace FirstLight.Game.Services
 			where TAsset : Object;
 
 		/// <summary>
-		///  Load asset by reference 
+		///  Load asset by reference
 		/// </summary>
 		UniTask<TAsset> LoadAssetByReference<TAsset>(AssetReference assetReference, bool loadAsynchronously = true,
 													 bool instantiate = true,
@@ -72,13 +72,13 @@ namespace FirstLight.Game.Services
 			where TId : struct;
 
 		/// <summary>
-		/// Loads all assets previously added from <seealso cref="IAssetAdderService.AddConfigs{TId,TAsset}(FirstLight.AssetImporter.AssetConfigsScriptableObject{TId,TAsset})"/>
+		/// Loads all assets previously added from <seealso cref="IAssetAdderService.AddConfigs{TId,TAsset}(GameLovers.Services.AssetsImporter.AssetConfigsScriptableObject{TId,TAsset})"/>
 		/// Has the option from the params to <paramref name="loadAsynchronously"/> and have a <paramref name="onLoadCallback"/>
 		/// for each asset being loaded.
 		/// Returns the full list of assets loaded into memory.
 		/// </summary>
 		/// <remarks>
-		/// Will require to call <see cref="UnloadAssets{TId,TAsset}(bool,FirstLight.AssetImporter.AssetConfigsScriptableObject{TId,TAsset})"/>
+		/// Will require to call <see cref="UnloadAssets{TId,TAsset}(bool,GameLovers.Services.AssetsImporter.AssetConfigsScriptableObject{TId,TAsset})"/>
 		/// to clean the assets from memory again
 		/// </remarks>
 		UniTask<List<Pair<TId, TAsset>>> LoadAllAssets<TId, TAsset>(bool loadAsynchronously = true,
@@ -127,7 +127,7 @@ namespace FirstLight.Game.Services
 		void AddConfigs<TId, TAsset>(AssetConfigsScriptableObject<TId, TAsset> configs)
 			where TId : struct;
 
-		/// <inheritdoc cref="AddConfigs{TId,TAsset}(FirstLight.AssetImporter.AssetConfigsScriptableObject{TId,TAsset})"/>
+		/// <inheritdoc cref="AddConfigs{TId,TAsset}(GameLovers.Services.AssetsImporter.AssetConfigsScriptableObject{TId,TAsset})"/>
 		void AddConfigs<TId, TAsset>(Type assetType, List<Pair<TId, AssetReference>> configs)
 			where TId : struct;
 

@@ -1,9 +1,10 @@
+using MainInstaller = FirstLight.Game.Utils.MainInstaller;
 using System;
 using Cysharp.Threading.Tasks;
 using FirstLight.FLogger;
 using FirstLight.Game.Utils;
 using FirstLight.Game.Services;
-using FirstLight.UIService;
+using FirstLight.Game.UI;
 using UnityEngine;
 using UnityEngine.UIElements;
 using Vector3 = UnityEngine.Vector3;
@@ -19,10 +20,10 @@ namespace FirstLight.Game.Presenters
 		private const string BLOCKER_ELEMENT_STYLE = "blocker-element-blocker";
 		private const string HIGHLIGHT_ELEMENT_STYLE = "highlight-element";
 		private const string PARENT_ELEMENT_STYLE = "blocker-root";
-		
+
 		private const float CIRCLE_DEFAULT_SIZE = 32;
 		private const float SQUARE_DEFAULT_SIZE = 512;
-		
+
 		[SerializeField] private GameObject _guideHandRoot;
 		[SerializeField] private Animator _guideHandAnimator;
 
@@ -40,7 +41,7 @@ namespace FirstLight.Game.Presenters
 		private VisualElement _blockerElementTop;
 
 		private VisualElement _highlighterElement;
-		
+
 		private readonly float _guideHandRotation = 45; // rotation that already is from the art image
 		private float _guideHandRotationDegreeDegreesOffset;
 
@@ -105,7 +106,7 @@ namespace FirstLight.Game.Presenters
 			await UniTask.WaitUntil(() => _services.UIService.IsScreenOpen<T>());
 			var root = _services.UIService.GetScreen<T>().Root;
 			var element = root.Q(elementName, className);
-			
+
 			CreateBlockers(element);
 		}
 
@@ -135,7 +136,7 @@ namespace FirstLight.Game.Presenters
 		}
 
 		/// <summary>
-		/// Highligts the ui element object with passed class or name from T, with an animation of a circle shringking. 
+		/// Highligts the ui element object with passed class or name from T, with an animation of a circle shringking.
 		/// </summary>
 		/// <param name="className"></param>
 		/// <param name="elementName"></param>
@@ -147,7 +148,7 @@ namespace FirstLight.Game.Presenters
 		{
 			var root = _services.UIService.GetScreen<T>().Root;
 			var element = root.Q(elementName, className);
-			
+
 			CreateHighlight(element, sizeMultiplier);
 		}
 
@@ -159,7 +160,7 @@ namespace FirstLight.Game.Presenters
 			_highlighterElement.experimental.animation.Scale(_initialScale, GameConstants.Tutorial.TIME_HIGHLIGHT_FADE)
 				.OnCompleted(DeleteHighLightElement);
 		}
-		
+
 		public void ShowGuideHand()
 		{
 			_guideHandRoot.SetActive(true);
@@ -171,7 +172,7 @@ namespace FirstLight.Game.Presenters
 			_guideHandRoot.SetActive(false);
 			_guideHandAnimator.enabled = false;
 		}
-		
+
 		public void SetGuideHandScreenPosition(Vector2 screenPosition, float fingerRotation = 45)
 		{
 			_guideHandRoot.transform.position = screenPosition;
@@ -243,7 +244,7 @@ namespace FirstLight.Game.Presenters
 			objSize *= sizeMultiplier;
 
 			float circleHighlightingSize = objSize;
-			
+
 			_initialScale = _blockerRoot.worldBound.width * 2 / CIRCLE_DEFAULT_SIZE;
 			_highlightedScale = circleHighlightingSize / CIRCLE_DEFAULT_SIZE;
 			_highlighterElement.style.top = objElement.worldBound.y - SQUARE_DEFAULT_SIZE / 2 + objElement.resolvedStyle.height / 2;

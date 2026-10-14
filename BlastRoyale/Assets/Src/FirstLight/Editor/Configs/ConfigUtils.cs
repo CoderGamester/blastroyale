@@ -1,7 +1,6 @@
 using System;
 using System.Collections.Generic;
-using FirstLightEditor;
-using FirstLightEditor.GoogleSheetImporter;
+using GameLoversEditor.GoogleSheetImporter;
 
 namespace FirstLight.Editor.Configs
 {
@@ -27,7 +26,7 @@ namespace FirstLight.Editor.Configs
 					{
 						var importer = Activator.CreateInstance(type) as IGoogleSheetConfigsImporter;
 						var soType = ((IScriptableObjectImporter) importer)!.ScriptableObjectType;
-						
+
 						importers.Add(soType, Activator.CreateInstance(type) as IGoogleSheetConfigsImporter);
 					}
 				}

@@ -1,8 +1,9 @@
+using FirstLight.Inspector;
+using GameLovers.Services.Pooling;
 using DG.Tweening;
-using FirstLight.Services;
+using GameLovers.Services;
 using Photon.Deterministic;
 using Quantum;
-using Sirenix.OdinInspector;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -28,21 +29,21 @@ namespace FirstLight.Game.Views.MatchHudViews
 		/// </summary>
 		public EntityRef Entity { get; set; }
 
-		[SerializeField, Required, Title("Refs")]
+		[SerializeField, InspectorField(Required = true), UnityEngine.Header("Refs")]
 		private Image _timerImage;
 
-		[SerializeField, Required] private RectTransform _container;
-		[SerializeField, Required] private RectTransform _rectTransform;
+		[SerializeField, InspectorField(Required = true)] private RectTransform _container;
+		[SerializeField, InspectorField(Required = true)] private RectTransform _rectTransform;
 
-		[SerializeField, Required] private Image _timerBackground;
-		[SerializeField, Required] private Image _icon;
-		[SerializeField, Required] private Image _innerCircle;
+		[SerializeField, InspectorField(Required = true)] private Image _timerBackground;
+		[SerializeField, InspectorField(Required = true)] private Image _icon;
+		[SerializeField, InspectorField(Required = true)] private Image _innerCircle;
 
-		[SerializeField, Title("Colors")] private Color _iconLandedColor;
+		[SerializeField, UnityEngine.Header("Colors")] private Color _iconLandedColor;
 		[SerializeField] private Color _glowLandedColor;
 		[SerializeField] private float _innerCircleWithinBoundsOpacity;
 
-		[SerializeField, Title("Animation")] private Ease _showEase = Ease.OutSine;
+		[SerializeField, UnityEngine.Header("Animation")] private Ease _showEase = Ease.OutSine;
 		[SerializeField] private float _showDuration = 0.3f;
 		[SerializeField] private Ease _hideEase = Ease.InSine;
 		[SerializeField] private float _hideDuration = 0.3f;

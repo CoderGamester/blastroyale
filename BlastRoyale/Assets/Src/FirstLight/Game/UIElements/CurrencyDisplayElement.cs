@@ -1,3 +1,5 @@
+using MainInstaller = FirstLight.Game.Utils.MainInstaller;
+using GameLovers.GameData;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,7 +11,7 @@ using FirstLight.Game.Ids;
 using FirstLight.Game.Logic;
 using FirstLight.Game.Services;
 using FirstLight.Game.Utils;
-using FirstLight.Services;
+using GameLovers.Services;
 using Quantum;
 using UnityEngine;
 using UnityEngine.UIElements;
@@ -20,7 +22,8 @@ namespace FirstLight.Game.UIElements
 	/// <summary>
 	/// A small widget displaying the selected currency with it's icon. Also handles flying VFX for it.
 	/// </summary>
-	public class CurrencyDisplayElement : VisualElement
+	[UxmlElement("CurrencyDisplayElement", new Type[0])]
+	public partial class CurrencyDisplayElement : VisualElement
 	{
 		/* Class names are at the top in const fields */
 		private const string UssBlock = "currency-display";
@@ -29,7 +32,18 @@ namespace FirstLight.Game.UIElements
 		private const string LabelUssClassName = UssBlock + "__label";
 
 		/* UXML attributes */
-		private GameId Currency { get; set; }
+		private GameId _currency = GameId.CS;
+		[UxmlAttribute("currency")]
+		private GameId Currency
+		{
+			get => _currency;
+			set
+			{
+				if (!value.IsInGroup(GameIdGroup.Currency))
+					throw new ArgumentOutOfRangeException(nameof(value), value, "UXML currency must be a currency GameId.");
+				SetCurrency(value);
+			}
+		}
 		private bool _hideIfPlayerDoesntHaveIt = false;
 
 		/* VisualElements created within this element */
@@ -67,17 +81,18 @@ namespace FirstLight.Game.UIElements
 			Add(_label);
 
 			RegisterCallback<ClickEvent>(OnClicked);
+			UpdateCurrencyView();
 		}
 
 		public void SetCurrency(GameId gameId)
 		{
-			Currency = gameId;
+			_currency = gameId;
 			UpdateCurrencyView();
 		}
 
 		public void SetCurrency(GameId gameId, ulong amount)
 		{
-			Currency = gameId;
+			_currency = gameId;
 			UpdateCurrencyView();
 			_label.text = amount.ToString();
 		}
@@ -137,7 +152,7 @@ namespace FirstLight.Game.UIElements
 		{
 			OnCurrencyChanged(previous, current);
 		}
-		
+
 		private void OnCurrencyChanged(ulong previous, ulong current)
 		{
 			this.SetDisplay(current > 0 || !_hideIfPlayerDoesntHaveIt);
@@ -199,41 +214,6 @@ namespace FirstLight.Game.UIElements
 				}
 
 				Playing = false;
-			}
-		}
-
-		/* The factory is at the bottom - this allows you to use the element in UXML with it's C# class name */
-		public new class UxmlFactory : UxmlFactory<CurrencyDisplayElement, UxmlTraits>
-		{
-		}
-
-		/* Traits are last, you set up custom UXML attributes here. */
-		public new class UxmlTraits : VisualElement.UxmlTraits
-		{
-			/* This is a custom attribute (that can be set from UXML / UI Builder. In this example it's a GameID enum for Currency */
-			private readonly UxmlEnumAttributeDescription<GameId> _currencyAttribute = new ()
-			{
-				name = "currency",
-				defaultValue = GameId.CS,
-				restriction = new UxmlEnumeration
-					{values = GameIdGroup.Currency.GetIds().Select(id => id.ToString()).ToArray()},
-				use = UxmlAttributeDescription.Use.Required
-			};
-
-			/* Tells UIT that this element cannot have children (see base implementation for more info) */
-			public override IEnumerable<UxmlChildElementDescription> uxmlChildElementsDescription
-			{
-				get { yield break; }
-			}
-
-			/* Custom attributes are initialized / set to the VisualElement here. */
-			public override void Init(VisualElement ve, IUxmlAttributes bag, CreationContext cc)
-			{
-				base.Init(ve, bag, cc);
-
-				var cde = (CurrencyDisplayElement) ve;
-
-				cde.SetCurrency(_currencyAttribute.GetValueFromBag(bag, cc));
 			}
 		}
 	}

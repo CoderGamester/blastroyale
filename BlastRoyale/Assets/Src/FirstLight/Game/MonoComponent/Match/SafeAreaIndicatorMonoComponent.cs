@@ -1,13 +1,13 @@
+using FirstLight.Inspector;
 using FirstLight.FLogger;
 using Quantum;
-using Sirenix.OdinInspector;
 using UnityEngine;
 
 namespace FirstLight.Game.MonoComponent.Match
 {
 	public class SafeAreaIndicatorMonoComponent : MonoBehaviour, IIndicator
 	{
-		[SerializeField, Required] private GameObject _indicator;
+		[SerializeField, InspectorField(Required = true)] private GameObject _indicator;
 
 		public bool VisualState => _indicator.activeSelf;
 
@@ -17,13 +17,13 @@ namespace FirstLight.Game.MonoComponent.Match
 		private float _safeAreaRadius = -1f;
 		private int _shrinkingStartTime;
 
-		public void Init(EntityView playerEntityView)
+		public void Init(QuantumEntityView playerEntityView)
 		{
 			var ct = transform;
 
 			ct.SetParent(playerEntityView.transform, false);
 			ct.localPosition = Vector3.zero;
-			
+
 			_indicator.SetActive(false);
 		}
 

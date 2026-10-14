@@ -3,7 +3,8 @@ using UnityEngine.UIElements;
 
 namespace FirstLight.Game.UIElements
 {
-	public class ProfilePictureRewardSummaryItemElement : RewardSummaryItemElement
+	[UxmlElement]
+	public partial class ProfilePictureRewardSummaryItemElement : RewardSummaryItemElement
 	{
 		public override RewardSummaryItemElement SetReward(IItemViewModel itemViewModel)
 		{
@@ -12,8 +13,5 @@ namespace FirstLight.Game.UIElements
 			return this;
 		}
 
-		public new class UxmlFactory : UxmlFactory<CollectionRewardsSummaryElement, UxmlTraits>
-		{
-		}
 	}
 }

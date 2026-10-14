@@ -1,7 +1,7 @@
+using FirstLight.Inspector;
 using Quantum;
 using Quantum.Commands;
 using Quantum.Prototypes;
-using Sirenix.OdinInspector;
 using UnityEngine;
 
 namespace FirstLight.Game.MonoComponent.Ftue
@@ -11,13 +11,13 @@ namespace FirstLight.Game.MonoComponent.Ftue
 	/// </summary>
 	public class FtueCollectablePlatformSpawnerMonoComponent : MonoBehaviour
 	{
-		[SerializeField, Required] private CollectablePlatformSpawner_Prototype _collectable;
-		
+		[SerializeField, InspectorField(Required = true)] private CollectablePlatformSpawnerPrototype _collectable;
+
 		private void Start()
 		{
 			QuantumRunner.Default.Game.SendCommand(new CheatCollectablePlatformSpawnCommand
 			{
-				Position = transform.position.ToFPVector3(), 
+				Position = transform.position.ToFPVector3(),
 				Collectable = _collectable.GameId,
 				RespawnTimeInSec = _collectable.RespawnTimeInSec,
 				InitialSpawnDelayInSec = _collectable.InitialSpawnDelayInSec

@@ -1,3 +1,5 @@
+using FirstLight.Game.Services;
+using IDataProvider = FirstLight.Server.SDK.Models.IDataProvider;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,11 +11,12 @@ using FirstLight.Server.SDK.Models;
 using FirstLight.Server.SDK.Modules;
 using FirstLight.Server.SDK.Modules.Commands;
 using FirstLight.Server.SDK.Modules.GameConfiguration;
-using FirstLight.Services;
+using GameLovers.Services;
 using Newtonsoft.Json;
 using PlayFab;
 using PlayFab.CloudScriptModels;
 using PlayFab.SharedModels;
+using Cysharp.Threading.Tasks;
 
 namespace FirstLight.Game.Services
 {
@@ -22,14 +25,16 @@ namespace FirstLight.Game.Services
 	/// </summary>
 	public class ServerCommandQueue
 	{
-		private IDataService _data;
+		private IClientDataService _data;
 		private IGameLogic _logic;
 		private IGameLogicInitializer _logicInitializer;
 		private IGameBackendService _gameBackend;
 		private Queue<ServerCommandQueueEntry> _queue;
 		private IGameServices _services;
+		private readonly Queue<(string PlayerId, ServerState State)> _clientSaves = new ();
+		private bool _saving;
 
-		public ServerCommandQueue(IDataService data, IGameLogic logic, IGameBackendService gameBackend, IGameServices services)
+		public ServerCommandQueue(IClientDataService data, IGameLogic logic, IGameBackendService gameBackend, IGameServices services)
 		{
 			_data = data;
 			_logic = logic;
@@ -91,12 +96,57 @@ namespace FirstLight.Game.Services
 				return;
 			}
 
+			if (_gameBackend is IClientAuthorityBackend clientBackend)
+			{
+				// Commands already execute locally in GameCommandService. Do not execute them a second time.
+				// SERVER AUTHORITY: Backend/GameLogicService validates and executes commands in the future version.
+				// Full snapshots supersede intermediate pending states. Retain the in-flight/head snapshot and the latest one only.
+				if (_clientSaves.Count > 1)
+				{
+					var head = _clientSaves.Dequeue();
+					_clientSaves.Clear();
+					_clientSaves.Enqueue(head);
+				}
+				_clientSaves.Enqueue((PlayFabSettings.staticPlayer.PlayFabId, GameBackendService.CapturePlayerState(_data)));
+				if (!_saving) SaveClientSnapshots(clientBackend).Forget();
+				return;
+			}
+
 			var entry = new ServerCommandQueueEntry(GetClientDelta(_data), command);
 			_queue.Enqueue(entry);
 			if (_queue.Count == 1)
 			{
 				RunNext();
 			}
+		}
+
+		private async UniTask SaveClientSnapshots(IClientAuthorityBackend backend)
+		{
+			_saving = true;
+			try
+			{
+				while (_clientSaves.Count > 0)
+				{
+					var snapshot = _clientSaves.Peek();
+					if (snapshot.PlayerId != PlayFabSettings.staticPlayer.PlayFabId)
+					{
+						_clientSaves.Dequeue();
+						continue;
+					}
+					try
+					{
+						await backend.PersistPlayerState(snapshot.State);
+						_clientSaves.Dequeue();
+					}
+					catch (Exception exception)
+					{
+						// Keep the immutable snapshot queued; the next command retries it before later changes.
+						FLog.Warn("Progression could not be saved. It will retry on the next command; do not close the game before saving succeeds.", exception);
+						break;
+					}
+				}
+			}
+			finally { _saving = false; }
 		}
 
 		/// <summary>
@@ -130,8 +180,8 @@ namespace FirstLight.Game.Services
 			{
 				if (desynchs.Count > 0)
 				{
-#if !DISABLE_SRDEBUGGER && !UNITY_EDITOR
-					SROptions.Current.SendQuietBugReport($"models desynched {string.Join(',', desynchs)}");
+#if DEVELOPMENT_BUILD && !UNITY_EDITOR
+					DebugOptions.Current.SendQuietBugReport($"models desynched {string.Join(',', desynchs)}");
 #endif
 
 					OnCommandException($"Models desynched: {string.Join(',', desynchs)}", 0);
@@ -179,13 +229,13 @@ namespace FirstLight.Game.Services
 				_services.GenericDialogService.OpenButtonDialog("Server Error", exceptionMsg + "\n" + message, false, confirmButton,
 					() => _services.QuitGame(exceptionMsg));
 #else
-			FirstLight.NativeUi.NativeUiService.ShowAlertPopUp(false, "Error", "Desynch", new FirstLight.NativeUi.AlertButton
+			GameLovers.MobileServices.NativeUi.NativeUiService.ShowAlertPopUp(false, "Error", "Desynch", new GameLovers.MobileServices.NativeUi.AlertButton
 			{
 				Callback = () =>
 				{
 					_services.QuitGame(message);
 				},
-				Style = FirstLight.NativeUi.AlertButtonStyle.Negative,
+				Style = GameLovers.MobileServices.NativeUi.AlertButtonStyle.Cancel,
 				Text = "Quit Game"
 			});
 #endif

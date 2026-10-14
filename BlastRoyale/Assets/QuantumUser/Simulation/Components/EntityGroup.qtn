@@ -1,0 +1,4 @@
+component EntityGroup {
+    [AllocateOnComponentAdded, FreeOnComponentRemoved] list<entity_ref> Entities;
+    byte EntitiesToKeep;
+}

@@ -1,3 +1,5 @@
+using MainInstaller = FirstLight.Game.Utils.MainInstaller;
+using FirstLight.Game.Services.Infrastructure;
 using FirstLight.Game.Utils;
 using UnityEngine;
 using UnityEngine.UIElements;
@@ -7,7 +9,8 @@ namespace FirstLight.Game.UIElements
 	/// <summary>
 	/// A death notification - displays a killer and a victim.
 	/// </summary>
-	public class DeathNotificationElement : VisualElement
+	[UxmlElement]
+	public partial class DeathNotificationElement : VisualElement
 	{
 		private const string USS_BLOCK = "death-notification";
 		private const string USS_CONTAINER = USS_BLOCK + "__container";
@@ -140,12 +143,5 @@ namespace FirstLight.Game.UIElements
 			}
 		}
 
-		public new class UxmlFactory : UxmlFactory<DeathNotificationElement, UxmlTraits>
-		{
-		}
-
-		public new class UxmlTraits : VisualElement.UxmlTraits
-		{
-		}
 	}
 }

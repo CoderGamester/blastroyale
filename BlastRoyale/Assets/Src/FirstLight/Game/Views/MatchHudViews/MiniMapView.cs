@@ -1,3 +1,6 @@
+using FirstLight.Inspector;
+using MainInstaller = FirstLight.Game.Utils.MainInstaller;
+using GameLovers.Services.Pooling;
 using System;
 using System.Collections.Generic;
 using Cysharp.Threading.Tasks;
@@ -10,10 +13,9 @@ using FirstLight.Game.MonoComponent.EntityPrototypes;
 using FirstLight.Game.MonoComponent.EntityViews;
 using FirstLight.Game.Services;
 using FirstLight.Game.Utils;
-using FirstLight.Services;
+using GameLovers.Services;
 using Photon.Deterministic;
 using Quantum;
-using Sirenix.OdinInspector;
 using UnityEngine;
 using UnityEngine.UI;
 using Button = UnityEngine.UI.Button;
@@ -41,33 +43,35 @@ namespace FirstLight.Game.Views.MatchHudViews
 
 		private readonly TimeSpan RADAR_UPDATE_FREQ = TimeSpan.FromSeconds(2);
 
-		[SerializeField, Required, Title("Minimap")] [ValidateInput("@!_minimapCamera.gameObject.activeSelf", "Camera should be disabled!")]
+		[SerializeField, InspectorField(Required = true, Validate = nameof(IsMinimapCameraDisabled), ValidationMessage = "Camera should be disabled!"), UnityEngine.Header("Minimap")]
 		private Camera _minimapCamera;
 
-		[SerializeField, Required] private RectTransform _rectTransform;
-		[SerializeField, Required] private Image _backgroundImage;
-		[SerializeField, Required] private RectTransform _fullScreenContainer;
-		[SerializeField, Required] private Button _button;
-		[SerializeField, Required] private Button _fullScreenButton;
-		[SerializeField, Required] private float _fullScreenPadding = 50f;
+		private static bool IsMinimapCameraDisabled(Camera camera) => camera && !camera.gameObject.activeSelf;
+
+		[SerializeField, InspectorField(Required = true)] private RectTransform _rectTransform;
+		[SerializeField, InspectorField(Required = true)] private Image _backgroundImage;
+		[SerializeField, InspectorField(Required = true)] private RectTransform _fullScreenContainer;
+		[SerializeField, InspectorField(Required = true)] private Button _button;
+		[SerializeField, InspectorField(Required = true)] private Button _fullScreenButton;
+		[SerializeField] private float _fullScreenPadding = 50f;
 		[SerializeField, Range(0f, 1f)] private float _viewportSize = 0.2f;
 		[SerializeField] private int _cameraHeight = 10;
 
-		[SerializeField, Title("Animation")] private Ease _openCloseEase = Ease.OutSine;
-		[SerializeField, Required] private float _duration = 0.2f;
+		[SerializeField, UnityEngine.Header("Animation")] private Ease _openCloseEase = Ease.OutSine;
+		[SerializeField] private float _duration = 0.2f;
 
-		[SerializeField, Required, Title("Shrinking Circle")]
+		[SerializeField, InspectorField(Required = true), UnityEngine.Header("Shrinking Circle")]
 		private RawImage _minimapImage;
 
-		[SerializeField, Required, Title("Indicators")]
+		[SerializeField, InspectorField(Required = true), UnityEngine.Header("Indicators")]
 		private RectTransform _playerIndicator;
 
-		[SerializeField, Required] private AnimationCurve _playersFade;
+		[SerializeField, InspectorField(Required = true)] private AnimationCurve _playersFade;
 
-		[SerializeField, Required] private MinimapAirdropView _airdropIndicatorRef;
-		[SerializeField, Required] private MinimapFriendlyView _friendlyIndicatorRef;
-		[SerializeField, Required] private RectTransform _safeAreaArrow;
-		[SerializeField, Required] private MinimapPingView _pingIndicatorRef;
+		[SerializeField, InspectorField(Required = true)] private MinimapAirdropView _airdropIndicatorRef;
+		[SerializeField, InspectorField(Required = true)] private MinimapFriendlyView _friendlyIndicatorRef;
+		[SerializeField, InspectorField(Required = true)] private RectTransform _safeAreaArrow;
+		[SerializeField, InspectorField(Required = true)] private MinimapPingView _pingIndicatorRef;
 
 		private IGameServices _services;
 		private IMatchServices _matchServices;
@@ -117,11 +121,11 @@ namespace FirstLight.Game.Views.MatchHudViews
 			_minimapMat = _minimapImage.material = Instantiate(_minimapImage.material);
 			_matchServices = MainInstaller.Resolve<IMatchServices>();
 			_services = MainInstaller.Resolve<IGameServices>();
-			_airdropPool = new ObjectRefPool<MinimapAirdropView>(1, _airdropIndicatorRef,
+			_airdropPool = new GameObjectPool<MinimapAirdropView>(1, _airdropIndicatorRef,
 				GameObjectPool<MinimapAirdropView>.Instantiator);
-			_friendliesPool = new ObjectRefPool<MinimapFriendlyView>(1, _friendlyIndicatorRef,
+			_friendliesPool = new GameObjectPool<MinimapFriendlyView>(1, _friendlyIndicatorRef,
 				GameObjectPool<MinimapFriendlyView>.Instantiator);
-			_pingPool = new ObjectRefPool<MinimapPingView>(1, _pingIndicatorRef,
+			_pingPool = new GameObjectPool<MinimapPingView>(1, _pingIndicatorRef,
 				GameObjectPool<MinimapPingView>.Instantiator);
 			_defaultPlayerSize = _minimapImage.materialForRendering.GetFloat(_playerCircleSizePID);
 
@@ -233,7 +237,7 @@ namespace FirstLight.Game.Views.MatchHudViews
 		private void UpdateMinimapSize(float f)
 		{
 			// Reference averageMapCameraSize and player ping size that works for most of the maps
-			// This is the "average" value of MinimapCameraSize that you can find on QuantumMapConfig.assets 
+			// This is the "average" value of MinimapCameraSize that you can find on QuantumMapConfig.assets
 			var referenceMinimapCameraSize = 120;
 
 			// Calculate the adjusted player size based on the current map's camera size (Get from Quantum)
@@ -457,7 +461,7 @@ namespace FirstLight.Game.Views.MatchHudViews
 			_backgroundImage.raycastTarget = false;
 		}
 
-		[Button, HideInEditorMode]
+		[InspectorAction(OnlyInPlayMode = true)]
 		private void RenderMinimap()
 		{
 			if (_mapConfigCameraSize != 0)

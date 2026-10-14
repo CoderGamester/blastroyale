@@ -6,7 +6,8 @@ using UnityEngine.UIElements;
 
 namespace FirstLight.Game.UIElements
 {
-	public class CurrencyRewardSummaryItemElement : RewardSummaryItemElement
+	[UxmlElement]
+	public partial class CurrencyRewardSummaryItemElement : RewardSummaryItemElement
 	{
 		public override RewardSummaryItemElement SetReward(IItemViewModel itemViewModel)
 		{
@@ -15,8 +16,5 @@ namespace FirstLight.Game.UIElements
 			return this;
 		}
 
-		public new class UxmlFactory : UxmlFactory<RewardSummaryItemElement, UxmlTraits>
-		{
-		}
 	}
 }

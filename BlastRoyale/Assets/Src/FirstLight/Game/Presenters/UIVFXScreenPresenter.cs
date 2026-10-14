@@ -1,9 +1,10 @@
+using FirstLight.Inspector;
+using GameLovers.Services.Pooling;
 using FirstLight.Game.Domains.HomeScreen.UI;
 using FirstLight.Game.Utils;
 using FirstLight.Game.Views;
-using FirstLight.Services;
-using FirstLight.UIService;
-using Sirenix.OdinInspector;
+using GameLovers.Services;
+using FirstLight.Game.UI;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -16,9 +17,9 @@ namespace FirstLight.Game.Presenters
 	[UILayer(UILayer.LegacyVFXHack)]
 	public class UIVFXScreenPresenter : UIPresenter
 	{
-		[SerializeField, Required] private UiVfxImage _imageRef;
-		[SerializeField, Required] private Transform _defaultFloatingTextTransform;
-		[SerializeField, Required] private MainMenuFloatingTextView _floatingTextRef;
+		[SerializeField, InspectorField(Required = true)] private UiVfxImage _imageRef;
+		[SerializeField, InspectorField(Required = true)] private Transform _defaultFloatingTextTransform;
+		[SerializeField, InspectorField(Required = true)] private MainMenuFloatingTextView _floatingTextRef;
 
 		private IObjectPool<UiVfxImage> _imagePool;
 		private IObjectPool<MainMenuFloatingTextView> _floatingTextPool;
@@ -31,7 +32,7 @@ namespace FirstLight.Game.Presenters
 
 		/// <summary>
 		/// Plays the VFX animation with the necessary information to play the moving animation to the given <paramref name="targetWorldPosition"/>
-		/// It will execute the given <paramref name="onCompleteCallback"/> when the VFX ends 
+		/// It will execute the given <paramref name="onCompleteCallback"/> when the VFX ends
 		/// </summary>
 		public void PlayAnimation(Sprite sprite, float delay, Vector3 originWorldPosition, Vector3 targetWorldPosition,
 			UnityAction onCompleteCallback)

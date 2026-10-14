@@ -1,3 +1,4 @@
+using MainInstaller = FirstLight.Game.Utils.MainInstaller;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,10 +18,10 @@ using FirstLight.Game.UIElements;
 using FirstLight.Game.Utils;
 using FirstLight.Game.Views;
 using FirstLight.Game.Views.UITK;
-using FirstLight.Services;
+using GameLovers.Services;
 using FirstLight.UiService;
-using FirstLight.UIService;
-using I2.Loc;
+using FirstLight.Game.UI;
+using FirstLight.Game.Localization;
 using Quantum;
 using UnityEngine;
 using UnityEngine.Purchasing;
@@ -137,7 +138,7 @@ namespace FirstLight.Game.Presenters
 			_services.MessageBrokerService.Subscribe<BattlePassLevelPurchasedMessage>(OnBoughtBpLevel);
 			_services.IAPService.PurchaseFinished += OnPurchaseFinished;
 
-			
+
 			// We hide all cosmetics rewards as "infinite" seasons will have none
 			_endGraphicContainer.SetVisibility(false);
 			_endGraphicContainer.Q<VisualElement>("RewardNameCloud").Required().SetVisibility(false);
@@ -615,7 +616,7 @@ namespace FirstLight.Game.Presenters
 				Items = rewards,
 				OnFinish = () =>
 				{
-					_services.MessageBrokerService.Publish(new FinishedClaimingBpRewardsMessage());
+					_services.MessageBrokerService.PublishSafe(new FinishedClaimingBpRewardsMessage());
 					_services.UIService.OpenScreen<BattlePassScreenPresenter>(battlePassData).Forget();
 				}
 			}).Forget();

@@ -1,3 +1,5 @@
+using IgnoreServerSerialization = FirstLight.Server.SDK.Modules.GameConfiguration.IgnoreServerSerialization;
+using GameLovers.GameData;
 using System.Collections.Generic;
 using FirstLight.Server.SDK.Modules.GameConfiguration;
 using Quantum;
@@ -11,13 +13,13 @@ namespace FirstLight.Game.Configs
 	///
 	[IgnoreServerSerialization] // This is only used in quantum to setup bots and in the create custom game screen
 	[CreateAssetMenu(fileName = "BotDifficultyConfigs", menuName = "ScriptableObjects/Configs/BotDifficultyConfigs")]
-	public class BotDifficultyConfigs : QuantumBotDifficultyConfigsAsset, IConfigsContainer<QuantumBotDifficultyConfig>
+	public class BotDifficultyConfigs : QuantumBotDifficultyConfigs, IConfigsContainer<QuantumBotDifficultyConfig>
 	{
 		// ReSharper disable once ConvertToAutoProperty
 		public List<QuantumBotDifficultyConfig> Configs
 		{
-			get => Settings.BotDifficulties;
-			set => Settings.BotDifficulties = value;
+			get => BotDifficulties;
+			set => BotDifficulties = value;
 		}
 	}
 }

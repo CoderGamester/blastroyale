@@ -1,3 +1,4 @@
+using MainInstaller = FirstLight.Game.Utils.MainInstaller;
 using FirstLight.Game.Services;
 using FirstLight.Game.Utils;
 using UnityEngine;

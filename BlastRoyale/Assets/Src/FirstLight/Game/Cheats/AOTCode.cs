@@ -1,3 +1,4 @@
+using MainInstaller = FirstLight.Game.Utils.MainInstaller;
 using System.Collections.Generic;
 using FirstLight.Game.Commands;
 using FirstLight.Game.Data;
@@ -18,7 +19,7 @@ namespace FirstLight.Game.Cheats
 		public List<RngData> RngData;
 		public List<PlayerData> PlayerData;
 		public List<CollectionTrait> CollectionMeta;
-		
+
 		/// <summary>
 		/// Forces the Vibration to be added to the Android manifest
 		/// </summary>
@@ -32,7 +33,7 @@ namespace FirstLight.Game.Cheats
 		private void Commands()
 		{
 			var services = MainInstaller.Resolve<IGameServices>();
-			
+
 			services.CommandService.ExecuteCommand(new CollectUnclaimedRewardsCommand());
 			services.CommandService.ExecuteCommand(new UpdateLoadoutCommand());
 			services.CommandService.ExecuteCommand(new EndOfGameCalculationsCommand());

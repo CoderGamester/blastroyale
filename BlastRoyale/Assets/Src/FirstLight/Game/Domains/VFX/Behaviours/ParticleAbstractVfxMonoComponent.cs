@@ -1,8 +1,8 @@
+using FirstLight.Inspector;
 using System;
 using FirstLight.Game.Domains.VFX;
 using FirstLight.Game.Ids;
-using FirstLight.Services;
-using Sirenix.OdinInspector;
+using GameLovers.Services;
 using UnityEngine;
 
 namespace FirstLight.Game.MonoComponent.Vfx
@@ -13,7 +13,7 @@ namespace FirstLight.Game.MonoComponent.Vfx
 	/// </remarks>
 	public class ParticleVfxMonoBehaviour : VfxMonoBehaviour
 	{
-		[SerializeField, Required] private ParticleSystem _particle;
+		[SerializeField, InspectorField(Required = true)] private ParticleSystem _particle;
 		private float _particleLifeTime;
 
 		private void Awake()

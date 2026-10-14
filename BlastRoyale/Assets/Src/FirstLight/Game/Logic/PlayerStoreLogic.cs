@@ -1,4 +1,6 @@
-﻿using System;
+using IDataProvider = FirstLight.Server.SDK.Models.IDataProvider;
+using GameLovers.GameData;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using FirstLight.Game.Data;
@@ -20,7 +22,7 @@ namespace FirstLight.Game.Logic
 		/// Check if Player has purchased the bundle already.
 		/// </summary>
 		bool HasPurchasedProductsBundle(string bundleId);
-		
+
 		/// <summary>
 		/// Check if the banner has already shown to the Player.
 		/// </summary>
@@ -36,17 +38,17 @@ namespace FirstLight.Game.Logic
 		/// Get Player's Daily Deals Store current configuration
 		/// </summary>
 		PlayerDailyDealsConfiguration GetPlayerDailyStoreConfiguration();
-		
+
 		/// <summary>
 		/// Check if it already passed a day since the player has updated the DailyStore
 		/// </summary>
 		bool IsDailyDealExpired();
 	}
 
-	
+
 	public interface IPlayerStoreLogic : IPlayerStoreDataProvider
 	{
-		
+
 		void UpdateLastPlayerPurchase(string CatalogItemId, StoreItemData storeItemData);
 
 		void TryResetTrackedStoreData();
@@ -54,25 +56,25 @@ namespace FirstLight.Game.Logic
 		bool IsPurchasedAllowed(string CatalogItemId, StoreItemData storeItemData);
 
 		void MarkProductsBundleAsSeen(string bundleId);
-		
+
 		void MarkProductsBundleAsPurchased(string bundleId);
-		
+
 		DateTime MarkProductsBundleFirstAppeared(string bundleId);
 
 		void UpdatePlayerDailyDeals(PlayerDailyDealsConfiguration playerDailyDealsConfiguration);
 	}
 
-	
+
 	public class PlayerStoreLogic : AbstractBaseLogic<PlayerStoreData>, IPlayerStoreLogic, IGameLogicInitializer
 	{
 
 		private IObservableList<StorePurchaseData> _trackedPlayerPurchases;
 		public IObservableListReader<StorePurchaseData> TrackedPlayerPurchases => _trackedPlayerPurchases;
-		
+
 		public PlayerStoreLogic(IGameLogic gameLogic, IDataProvider dataProvider) : base(gameLogic, dataProvider)
 		{
 		}
-		
+
 		public void Init()
 		{
 
@@ -86,7 +88,7 @@ namespace FirstLight.Game.Logic
 		public List<StorePurchaseData> GetTrackedPlayerPurchases()
 		{
 			TryResetTrackedStoreData();
-			
+
 			return _trackedPlayerPurchases.ToList();
 		}
 
@@ -107,7 +109,7 @@ namespace FirstLight.Game.Logic
 			var bundle = Data.ProductsBundlePurchases.SingleOrDefault(pbp => pbp.ProductsBundleId == bundleId);
 			return bundle?.ProductsBundleFirstAppearance;
 		}
-		
+
 		public DateTime MarkProductsBundleFirstAppeared(string bundleId)
 		{
 			var bundlePurchaseData = Data.ProductsBundlePurchases.SingleOrDefault(pbp => pbp.ProductsBundleId == bundleId);
@@ -115,7 +117,7 @@ namespace FirstLight.Game.Logic
 			if (bundlePurchaseData == null)
 			{
 				var firstAppearance = DateTime.UtcNow;
-				
+
 				Data.ProductsBundlePurchases.Add(new ProductBundlePurchaseData(bundleId)
 				{
 					ProductsBundleFirstAppearance = firstAppearance
@@ -142,10 +144,10 @@ namespace FirstLight.Game.Logic
 				{
 					HasSeenProductsBundleBanner = true
 				});
-				
+
 				return;
 			}
-			
+
 			bundle.HasSeenProductsBundleBanner = true;
 		}
 
@@ -157,22 +159,22 @@ namespace FirstLight.Game.Logic
 			{
 				Data.ProductsBundlePurchases.Add(new ProductBundlePurchaseData(bundleId)
 				{
-					HasSeenProductsBundleBanner = true,	
+					HasSeenProductsBundleBanner = true,
 					ProductsBundleFirstAppearance = DateTime.UtcNow,
 					HasPurchasedProductsBundle = true
 				});
 				return;
 			}
-			
-			bundle.HasSeenProductsBundleBanner = true;	
+
+			bundle.HasSeenProductsBundleBanner = true;
 			bundle.HasPurchasedProductsBundle = true;
 			bundle.HasPurchasedProductsBundleAt = DateTime.UtcNow;
 		}
 
-		
+
 		public void UpdateLastPlayerPurchase(string CatalogItemId, StoreItemData storeItemData)
 		{
-			
+
 			if (!ShouldTrackProductAfterPurchase(storeItemData)) return;
 
 			TryResetTrackedStoreData();
@@ -184,7 +186,7 @@ namespace FirstLight.Game.Logic
 				Data.TrackedStorePurchases.Add(new StorePurchaseData(
 					CatalogItemId,
 					storeItemData.ShouldDailyReset));
-				
+
 				return;
 			}
 
@@ -221,7 +223,7 @@ namespace FirstLight.Game.Logic
 
 			return true;
 		}
-		
+
 		// Determine if the product has restrictions that require tracking after purchase.
 		// Examples of such restrictions include:
 		// - A maximum quantity that can be purchased within a specific timeframe (e.g., daily or lifetime limits).
@@ -231,8 +233,8 @@ namespace FirstLight.Game.Logic
 		{
 			return storeItemData.MaxAmount > 0 || storeItemData.PurchaseCooldown > 0;
 		}
-		
-		
+
+
 		//Daily Deal Store methods
 		public PlayerDailyDealsConfiguration GetPlayerDailyStoreConfiguration()
 		{
@@ -243,6 +245,6 @@ namespace FirstLight.Game.Logic
 		{
 			return Data.PlayerDailyDealsConfiguration != null && DateTime.UtcNow > Data.PlayerDailyDealsConfiguration.ResetDealsAt;
 		}
-		
+
 	}
 }

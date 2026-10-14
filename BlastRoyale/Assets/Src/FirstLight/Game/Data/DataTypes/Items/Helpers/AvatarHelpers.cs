@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using FirstLight.Game.Configs;
 using FirstLight.Server.SDK.Modules;
 using Quantum;
@@ -7,8 +7,6 @@ namespace FirstLight.Game.Data.DataTypes.Helpers
 {
 	public static class AvatarHelpers
 	{
-		private static readonly string NFT_COLLECTION_FORMAT = "https://mainnetprodflghubstorage.blob.core.windows.net/collections/{0}/{1}.png";
-		private static readonly string NFT_COLLECTION_PFP_SUFFIX = "-pfp";
 
 		public static string GetAvatarUrl(ItemData item, AvatarCollectableConfig config)
 		{
@@ -18,16 +16,6 @@ namespace FirstLight.Game.Data.DataTypes.Helpers
 					&& metadata.TryGetTrait(CollectionTraits.URL, out var url))
 				{
 					return url;
-				}
-			}
-
-			if (item.Id == GameId.AvatarNFTCollection)
-			{
-				if (item.TryGetMetadata<CollectionMetadata>(out var metadata)
-					&& metadata.TryGetTrait(CollectionTraits.NFT_COLLECTION, out var collection)
-					&& metadata.TryGetTrait(CollectionTraits.TOKEN_ID, out var token))
-				{
-					return string.Format(NFT_COLLECTION_FORMAT, $"{collection.ToLowerInvariant()}{NFT_COLLECTION_PFP_SUFFIX}", token);
 				}
 			}
 

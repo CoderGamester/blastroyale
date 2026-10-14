@@ -1,3 +1,4 @@
+using GameLovers.GameData;
 using FirstLight.Game.Utils;
 using Quantum;
 using UnityEngine.UIElements;
@@ -7,7 +8,8 @@ namespace FirstLight.Game.UIElements
 	/// <summary>
 	/// A button with a title text and a price / icon deisplayed above.
 	/// </summary>
-	public class MultiPriceButton : ImageButton
+	[UxmlElement]
+	public partial class MultiPriceButton : ImageButton
 	{
 		private const string UssButtonStyle = "button-long";
 		private const string UssBlock = "multi-price-button";
@@ -21,7 +23,13 @@ namespace FirstLight.Game.UIElements
 		private VisualElement _holder;
 		private Label _title;
 
-		private string localizationKey { get; set; }
+		private string _localizationKey;
+		[UxmlAttribute("localization-key")]
+		private string localizationKey
+		{
+			get => _localizationKey;
+			set { _localizationKey = value; _title.text = value.LocalizeKey(); }
+		}
 
 		public MultiPriceButton()
 		{
@@ -37,7 +45,7 @@ namespace FirstLight.Game.UIElements
 		/// <summary>
 		/// Sets the price amounts and icons for each cost.
 		/// </summary>
-		public void SetPrice(Pair<GameId, uint>[] prices,bool isNft, bool[] insufficient, bool overrideDisablePrice = false)
+		public void SetPrice(Pair<GameId, uint>[] prices, bool[] insufficient, bool overrideDisablePrice = false)
 		{
 			_holder.Clear();
 
@@ -59,36 +67,14 @@ namespace FirstLight.Game.UIElements
 				}
 			}
 
-			_holder.SetDisplay(!isNft);
-			_title.EnableInClassList(UssOffsetTitle, isNft);
+			_holder.SetDisplay(true);
+			_title.EnableInClassList(UssOffsetTitle, false);
 
 			if (overrideDisablePrice)
 			{
 				_holder.SetDisplay(false);
 				_title.EnableInClassList(UssOffsetTitle, true);
 				_holder.Clear();
-			}
-		}
-
-		public new class UxmlFactory : UxmlFactory<MultiPriceButton, UxmlTraits>
-		{
-		}
-
-		public new class UxmlTraits : AutoFocusTrait
-		{
-			UxmlStringAttributeDescription _localizationKeyAttribute = new()
-			{
-				name = "localization-key",
-				use = UxmlAttributeDescription.Use.Required
-			};
-
-			public override void Init(VisualElement ve, IUxmlAttributes bag, CreationContext cc)
-			{
-				base.Init(ve, bag, cc);
-
-				var mpb = (MultiPriceButton) ve;
-				mpb.localizationKey = _localizationKeyAttribute.GetValueFromBag(bag, cc);
-				mpb._title.text = mpb.localizationKey.LocalizeKey();
 			}
 		}
 

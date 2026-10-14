@@ -1,3 +1,4 @@
+using MainInstaller = FirstLight.Game.Utils.MainInstaller;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -14,7 +15,7 @@ using FirstLight.Game.UIElements;
 using FirstLight.Game.Utils;
 using FirstLight.Game.Utils.UCSExtensions;
 using FirstLight.Game.Views;
-using FirstLight.UIService;
+using FirstLight.Game.UI;
 using JetBrains.Annotations;
 using PlayFab;
 using PlayFab.ClientModels;
@@ -252,7 +253,7 @@ namespace FirstLight.Game.Presenters
 			{
 				_headerIcon.SetVisibility(true);
 			}
-			
+
 			if (string.IsNullOrEmpty(seasonConfig.ExtraButtonLink))
 			{
 				_discordButtonHolder.SetVisibility(true);
@@ -277,7 +278,7 @@ namespace FirstLight.Game.Presenters
 				_endsIn.text = $"Not Scheduled";
 				_endsInContainer.SetDisplay(false);
 				_endsInContainer.SetVisibility(false);
-				
+
 				return;
 			}
 			else

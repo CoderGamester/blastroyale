@@ -1,13 +1,13 @@
+using MainInstaller = FirstLight.Game.Utils.MainInstaller;
 using System.Collections.Generic;
 using Cysharp.Threading.Tasks;
-using ExitGames.Client.Photon.StructWrapping;
 using FirstLight.Game.Logic;
 using FirstLight.Game.Messages;
 using FirstLight.Game.Services;
 using FirstLight.Game.Services.Collection;
 using FirstLight.Game.UIElements;
 using FirstLight.Game.Utils;
-using FirstLight.UIService;
+using FirstLight.Game.UI;
 using Photon.Deterministic;
 using Quantum;
 using Quantum.Systems;
@@ -24,7 +24,7 @@ namespace FirstLight.Game.Views.UITK
 		private IGameServices _services;
 		private IGameDataProvider _dataProvider;
 		private ICollectionService _collectionService;
-		
+
 		private readonly Dictionary<EntityRef, SquadMemberElement> _squadMembers = new ();
 
 		protected override void Attached()
@@ -163,9 +163,9 @@ namespace FirstLight.Game.Views.UITK
 					var cosmetics = f.ResolveList(f.Get<CosmeticsHolder>(e).Cosmetics);
 					 _collectionService.LoadCollectionItemSprite(_collectionService.GetCosmeticForGroup(cosmetics, GameIdGroup.PlayerSkin))
 									   .ContinueWith(loadedAvatar => squadMember.SetPlayer(pc.Player, playerName, loadedAvatar, playerNameColor));
-					
+
 					 squadMember.SetPlayer(pc.Player, playerName, null, playerNameColor);
-					
+
 					if (f.TryGet<Stats>(e, out var stats))
 					{
 						var maxHealth = FPMath.RoundToInt(stats.GetStatData(StatType.Health).StatValue);

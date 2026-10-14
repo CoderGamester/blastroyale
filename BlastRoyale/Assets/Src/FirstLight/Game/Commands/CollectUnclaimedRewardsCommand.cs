@@ -6,7 +6,7 @@ using FirstLight.Game.Data;
 using FirstLight.Game.Data.DataTypes;
 using FirstLight.Game.Logic;
 using FirstLight.Game.Messages;
-using FirstLight.Services;
+using GameLovers.Services;
 using FirstLight.Game.Services;
 using FirstLight.Server.SDK.Modules.Commands;
 using Quantum;
@@ -39,22 +39,18 @@ namespace FirstLight.Game.Commands
 			if (UncollectedReward != null)
 			{
 				var given = new List<ItemData>();
-				
+
 				if (UncollectedReward.Id == GameId.Bundle)
 				{
 					given.AddRange(ctx.Logic.RewardLogic().ClaimUnclaimedRewards());
 				}
 				else
 				{
-					given.Add(ctx.Logic.RewardLogic().ClaimUnclaimedReward(UncollectedReward));	
+					given.Add(ctx.Logic.RewardLogic().ClaimUnclaimedReward(UncollectedReward));
 				}
 
-				if (given.Any(e => e.Id.IsInGroup(GameIdGroup.CryptoCurrency)))
-				{
-					ctx.Logic.RewardLogic().Reward(new [] { ItemFactory.Currency(GameId.GasTicket, 1) });
-				}
 				GivenRewards = given.ToArray();
-				ctx.Services.MessageBrokerService().Publish(new ShopClaimedRewardsMessage()
+				ctx.Services.MessageBrokerService().PublishSafe(new ShopClaimedRewardsMessage()
 				{
 					Rewards = given
 				});
@@ -63,11 +59,8 @@ namespace FirstLight.Game.Commands
 
 			var trophiesBefore = ctx.Logic.PlayerLogic().Trophies.Value;
 			var rewards = ctx.Logic.RewardLogic().ClaimUnclaimedRewards();
-			if (rewards.Any(e => e.Id.IsInGroup(GameIdGroup.CryptoCurrency)))
-			{
-				ctx.Logic.RewardLogic().Reward(new [] { ItemFactory.Currency(GameId.GasTicket, 1) });
-			}
-			ctx.Services.MessageBrokerService().Publish(new ClaimedRewardsMessage()
+
+			ctx.Services.MessageBrokerService().PublishSafe(new ClaimedRewardsMessage()
 			{
 				Rewards = rewards
 			});
@@ -75,7 +68,7 @@ namespace FirstLight.Game.Commands
 			var trophiesAfter = ctx.Logic.PlayerLogic().Trophies.Value;
 			if (trophiesBefore != trophiesAfter)
 			{
-				ctx.Services.MessageBrokerService().Publish(new TrophiesUpdatedMessage()
+				ctx.Services.MessageBrokerService().PublishSafe(new TrophiesUpdatedMessage()
 				{
 					Season = ctx.Data.GetData<PlayerData>().TrophySeason,
 					NewValue = trophiesAfter,

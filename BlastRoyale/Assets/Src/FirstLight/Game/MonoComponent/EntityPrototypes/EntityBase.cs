@@ -1,3 +1,4 @@
+using MainInstaller = FirstLight.Game.Utils.MainInstaller;
 using System;
 using FirstLight.Game.Data.DataTypes;
 using FirstLight.Game.Messages;
@@ -14,10 +15,10 @@ namespace FirstLight.Game.MonoComponent.EntityPrototypes
 	/// Inherit this class if you plan to add extra functionality between the Game World and Quantum.
 	/// This controller base does not provide the pointer to the <see cref="IComponent"/>, only a copy of the data itself.
 	/// </summary>
-	[RequireComponent(typeof(EntityView))]
+	[RequireComponent(typeof(QuantumEntityView))]
 	public abstract class EntityBase : MonoBehaviour
 	{
-		public EntityView EntityView;
+		public QuantumEntityView EntityView;
 
 		private IGameServices _services;
 
@@ -32,7 +33,7 @@ namespace FirstLight.Game.MonoComponent.EntityPrototypes
 
 		private void OnValidate()
 		{
-			EntityView = EntityView ? EntityView : GetComponent<EntityView>();
+			EntityView = EntityView ? EntityView : GetComponent<QuantumEntityView>();
 		}
 
 		private void Awake()
@@ -58,7 +59,7 @@ namespace FirstLight.Game.MonoComponent.EntityPrototypes
 
 		protected T GetComponentData<T>(QuantumGame game) where T : unmanaged, IComponent
 		{
-			return EntityView.BindBehaviour == EntityViewBindBehaviour.Verified
+			return EntityView.BindBehaviour == QuantumEntityViewBindBehaviour.Verified
 				? GetComponentVerifiedData<T>(game)
 				: GetComponentPredictedData<T>(game);
 		}
@@ -75,14 +76,14 @@ namespace FirstLight.Game.MonoComponent.EntityPrototypes
 
 		protected Frame GetFrame(QuantumGame game)
 		{
-			return EntityView.BindBehaviour == EntityViewBindBehaviour.Verified
+			return EntityView.BindBehaviour == QuantumEntityViewBindBehaviour.Verified
 				? game.Frames.Verified
 				: game.Frames.Predicted;
 		}
 
 		protected bool TryGetComponentData<T>(QuantumGame game, out T component) where T : unmanaged, IComponent
 		{
-			return EntityView.BindBehaviour == EntityViewBindBehaviour.Verified
+			return EntityView.BindBehaviour == QuantumEntityViewBindBehaviour.Verified
 				? TryGetComponentVerifiedData(game, out component)
 				: TryGetComponentPredictedData(game, out component);
 		}
@@ -119,12 +120,12 @@ namespace FirstLight.Game.MonoComponent.EntityPrototypes
 			cacheTransform.localPosition = Vector3.zero;
 			cacheTransform.localRotation = Quaternion.identity;
 			cacheTransform.localRotation = Quaternion.identity;
-			Services.MessageBrokerService.Publish(new EntityViewLoaded()
+			Services.MessageBrokerService.PublishSafe(new EntityViewLoaded()
 			{
 				Entity = this, View = EntityView
 			});
 		}
-		
+
 		/// <summary>
 		/// Get the name of the game object for the entity
 		/// </summary>

@@ -1,3 +1,5 @@
+using IgnoreServerSerialization = FirstLight.Server.SDK.Modules.GameConfiguration.IgnoreServerSerialization;
+using GameLovers.GameData;
 using System;
 using System.Collections.Generic;
 using System.Linq;

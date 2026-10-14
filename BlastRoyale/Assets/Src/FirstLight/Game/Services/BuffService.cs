@@ -35,12 +35,12 @@ namespace FirstLight.Game.Services
 			if (stat == BuffStat.PctBonusCoins) return "Coins";
 			if (stat == BuffStat.PctBonusBPP) return "BPPs";
 			if (stat == BuffStat.PctBonusNoob) return "Noob";
-			if (stat == BuffStat.PctBonusPartnerToken) return "Crypto";
+			if (stat == BuffStat.PctBonusPartnerToken) return "Bonus Currency";
 			if (stat == BuffStat.PctBonusBBs) return "Blast Bucks";
 			if (stat == BuffStat.PctBonusFestiveCurrencies) return "Festive Currencies";
 			return "Goo";
 		}
-		
+
 		public BuffVirtualEntity MetaEntity => _data.BuffsLogic.CalculateMetaEntity();
 	}
 }

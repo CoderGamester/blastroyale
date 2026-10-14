@@ -1,8 +1,8 @@
+using GameLovers.GameData;
 using System;
 using System.Collections.Generic;
 using Photon.Deterministic;
 using Quantum;
-using Sirenix.OdinInspector;
 using UnityEngine;
 using UnityEngine.Serialization;
 
@@ -11,10 +11,10 @@ namespace FirstLight.Game.Configs
 	[Serializable]
 	public struct MatchmakingAndRoomConfig
 	{
-		[SerializeField, Required, MinValue(0),InfoBox("How much time is waited before starting a matchmaking game")]
+		[SerializeField, UnityEngine.Min(0), UnityEngine.Tooltip("How much time is waited before starting a matchmaking game")]
 		public int MatchmakingLoadingTimeout;
 
-		[SerializeField, Required, MinValue(0),InfoBox("How much time players can select the dropzone after the custom game room locks")]
+		[SerializeField, UnityEngine.Min(0), UnityEngine.Tooltip("How much time players can select the dropzone after the custom game room locks")]
 		public int SecondsToLoadCustomGames;
 	}
 

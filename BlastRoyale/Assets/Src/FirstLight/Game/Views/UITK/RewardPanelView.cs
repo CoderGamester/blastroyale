@@ -2,7 +2,7 @@ using System;
 using System.Threading.Tasks;
 using FirstLight.Game.Utils;
 using FirstLight.UiService;
-using FirstLight.UIService;
+using FirstLight.Game.UI;
 using UnityEngine.UIElements;
 
 namespace FirstLight.Game.Views
@@ -33,7 +33,7 @@ namespace FirstLight.Game.Views
 		{
 			_gained = gained;
 			_total = total;
-			
+
 			_gainedLabel.text = "0";
 			_totalLabel.text = total.ToString();
 		}
@@ -44,12 +44,12 @@ namespace FirstLight.Game.Views
 		public async Task Animate()
 		{
 			ShowPanel();
-			
+
 			if (_gained == 0)
 			{
 				return;
 			}
-			
+
 			var currentGained = 0;
 			var currentTotal = _total;
 			var increment = _gained < 0 ? -1 : 1;

@@ -1,3 +1,4 @@
+using FirstLight.Inspector;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -6,7 +7,6 @@ using FirstLight.Game.Configs.AssetConfigs;
 using FirstLight.Game.Ids;
 using FirstLight.Game.Utils;
 using Quantum;
-using Sirenix.OdinInspector;
 using UnityEngine;
 using UnityEngine.AddressableAssets;
 
@@ -14,7 +14,7 @@ namespace FirstLight.Editor.EditorTools.Skins
 {
 	public class SpawnerDebugMonoComponent : MonoBehaviour
 	{
-		[SerializeField, Required] private Transform _sceneDebug;
+		[SerializeField, InspectorField(Required = true)] private Transform _sceneDebug;
 
 		private void Start()
 		{
@@ -36,8 +36,8 @@ namespace FirstLight.Editor.EditorTools.Skins
 #if UNITY_EDITOR
 		public async UniTaskVoid ShowDebugIcon()
 		{
-			var component = GetComponentInParent<EntityComponentCollectablePlatformSpawner>();
-			if (component == null) component = GetComponentInChildren<EntityComponentCollectablePlatformSpawner>();
+			var component = GetComponentInParent<QPrototypeCollectablePlatformSpawner>();
+			if (component == null) component = GetComponentInChildren<QPrototypeCollectablePlatformSpawner>();
 			if (component == null) return;
 			var toSpawn = component.Prototype.GameId;
 			while (_sceneDebug.childCount > 0)

@@ -1,3 +1,4 @@
+using MainInstaller = FirstLight.Game.Utils.MainInstaller;
 using System;
 using System.Collections.Generic;
 using FirstLight.Game.Data;
@@ -6,7 +7,7 @@ using FirstLight.Game.Services;
 using FirstLight.Game.UIElements;
 using FirstLight.Game.Utils;
 using FirstLight.UiService;
-using FirstLight.UIService;
+using FirstLight.Game.UI;
 using UnityEngine;
 using UnityEngine.UIElements;
 using Button = UnityEngine.UIElements.Button;
@@ -23,7 +24,7 @@ namespace FirstLight.Game.Presenters
 		private readonly string USS_MENU_CLOSED = "menu__options--closed";
 		private readonly string USS_OPENER_CLOSED = "menu__opener-icon--closed";
 		private readonly string USS_DISABLED = "item-disabled";
-		
+
 		private List<SerializedVisualElementSetup> _originals = new();
 		private HashSet<VisualElement> _customizable = new ();
 		private Vector2 _lastPos;
@@ -42,7 +43,7 @@ namespace FirstLight.Game.Presenters
 		private Label _opacityLabel;
 		private bool _open = true;
 		private List<VisualElement> _disabled = new();
-		
+
 		public class StateData
 		{
 			public Action<IReadOnlyCollection<VisualElement>> OnSave;
@@ -83,10 +84,10 @@ namespace FirstLight.Game.Presenters
 			joy2.RemoveListeners();
 			MakeCustomizable(joy1, onlyInsideParent:true);
 			MakeCustomizable(joy2, onlyInsideParent:true);
-			
+
 			_services.ControlsSetup.SetControlPositions(Root);
 		}
-		
+
 		private void EnableAll()
 		{
 			foreach (var d in _disabled)
@@ -111,7 +112,7 @@ namespace FirstLight.Game.Presenters
 				_openCloseIcon.AddToClassList(USS_OPENER_CLOSED);
 			}
 		}
-		
+
 		private void Reset()
 		{
 			foreach (var o in _originals)
@@ -128,7 +129,7 @@ namespace FirstLight.Game.Presenters
 			var value = Math.Max(MIN_SIZE, ev.newValue) * 2;
 			_selected.style.scale = new Scale(new Vector2(value, value));
 		}
-		
+
 		private void OnOpacityChange(ChangeEvent<float> ev)
 		{
 			if (_selected == null) return;
@@ -140,7 +141,7 @@ namespace FirstLight.Game.Presenters
 		{
 			MakeCustomizable(e, false);
 		}
-		
+
 		private void MakeCustomizable(VisualElement e, bool onlyInsideParent)
 		{
 			_originals.Add(new SerializedVisualElementSetup().FromElement(e));
@@ -176,8 +177,8 @@ namespace FirstLight.Game.Presenters
 
 		private void CancelEvent(EventBase e)
 		{
-			e.PreventDefault();
 			e.StopImmediatePropagation();
+			(e.currentTarget as VisualElement)?.focusController?.IgnoreEvent(e);
 		}
 	}
 }

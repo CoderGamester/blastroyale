@@ -13,7 +13,8 @@ namespace FirstLight.Game.Presenters.BattlePass
 	/// <summary>
 	/// Displays a glint over an element. Must be used with a vector mask for shaped glints.
 	/// </summary>
-	public class BattlepassSegmentButtonElement : VisualElement
+	[UxmlElement]
+	public partial class BattlepassSegmentButtonElement : VisualElement
 	{
 		private const string UssSpriteRarityModifier = "--sprite-home__pattern-rewardglow-";
 		private const string UssClaimableButton = "reward__button-claimable";
@@ -36,10 +37,61 @@ namespace FirstLight.Game.Presenters.BattlePass
 		private VisualElement _lock;
 
 		public BattlePassSegmentData SegmentData { get; private set; }
-		public bool UnlockedPremium { get; private set; }
-		public RewardState RewardState { get; private set; }
+		[UxmlAttribute("unlocked-premium")]
+		public bool UnlockedPremium
+		{
+			get => _uxmlUnlockedPremium;
+			private set { _uxmlUnlockedPremium = value; ScheduleUxmlPreview(); }
+		}
+		[UxmlAttribute("state")]
+		public RewardState RewardState
+		{
+			get => _uxmlRewardState;
+			private set { _uxmlRewardState = value; ScheduleUxmlPreview(); }
+		}
 
-		public PassType PassType { get; private set; }
+		[UxmlAttribute("pass-type")]
+		public PassType PassType
+		{
+			get => _uxmlPassType;
+			private set { _uxmlPassType = value; ScheduleUxmlPreview(); }
+		}
+		[UxmlAttribute("reward")]
+		private GameId PreviewReward
+		{
+			get => _uxmlPreviewReward;
+			set { _uxmlPreviewReward = value; ScheduleUxmlPreview(); }
+		}
+		[UxmlAttribute("debug-mode")]
+		private bool DebugMode
+		{
+			get => _uxmlDebugMode;
+			set { _uxmlDebugMode = value; ScheduleUxmlPreview(); }
+		}
+		private bool _uxmlUnlockedPremium = false;
+		private RewardState _uxmlRewardState = RewardState.Claimable;
+		private PassType _uxmlPassType = PassType.Free;
+		private GameId _uxmlPreviewReward = GameId.PlayerSkinBrandMale;
+		private bool _uxmlDebugMode = false;
+		private bool _hasRuntimeData;
+
+		private IVisualElementScheduledItem _previewRefresh;
+
+		private void ScheduleUxmlPreview()
+		{
+			if (_hasRuntimeData) return;
+			_previewRefresh?.Pause();
+			_previewRefresh = schedule.Execute(() =>
+			{
+				if (!DebugMode || _hasRuntimeData) return;
+				ApplyData(new BattlePassSegmentData
+				{
+					PassType = PassType,
+					RewardConfig = new EquipmentRewardConfig { GameId = PreviewReward, Amount = 1 },
+					SegmentLevel = 1, LevelAfterClaiming = 2, PointsAfterClaiming = 2
+				}, RewardState, UnlockedPremium, false);
+			});
+		}
 
 		public BattlepassSegmentButtonElement()
 		{
@@ -59,6 +111,7 @@ namespace FirstLight.Game.Presenters.BattlePass
 			_lock = element.Q("Lock").Required();
 			_imageContainer = _rewardImage.parent;
 			_button.clicked += () => Clicked?.Invoke(this);
+			RegisterCallback<AttachToPanelEvent>(_ => ScheduleUxmlPreview());
 		}
 
 		/// <summary>
@@ -66,9 +119,16 @@ namespace FirstLight.Game.Presenters.BattlePass
 		/// </summary>
 		public void SetData(BattlePassSegmentData data, RewardState state, bool unlockedPremium, bool small = false)
 		{
+			_hasRuntimeData = true;
+			_previewRefresh?.Pause();
+			ApplyData(data, state, unlockedPremium, small);
+		}
+
+		private void ApplyData(BattlePassSegmentData data, RewardState state, bool unlockedPremium, bool small)
+		{
 			SegmentData = data;
-			RewardState = state;
-			UnlockedPremium = unlockedPremium;
+			_uxmlRewardState = state;
+			_uxmlUnlockedPremium = unlockedPremium;
 			SetStatusVisuals();
 			_rewardRoot.RemoveModifiers();
 			if (small)
@@ -127,65 +187,6 @@ namespace FirstLight.Game.Presenters.BattlePass
 			}
 
 			_title.text = itemView.GameId.IsInGroup(GameIdGroup.ProfilePicture) ? "" : itemView.DisplayName.ToUpperInvariant();
-		}
-
-		public new class UxmlFactory : UxmlFactory<BattlepassSegmentButtonElement, UxmlTraits>
-		{
-		}
-
-		public new class UxmlTraits : VisualElement.UxmlTraits
-		{
-			private readonly UxmlBoolAttributeDescription _debugMode = new ()
-			{
-				name = "debug-mode",
-				defaultValue = false,
-			};
-
-			private readonly UxmlEnumAttributeDescription<RewardState> _state = new ()
-			{
-				name = "state",
-				defaultValue = RewardState.Claimable,
-			};
-
-			private readonly UxmlBoolAttributeDescription _unlockedPremium = new ()
-			{
-				name = "unlocked-premium",
-				defaultValue = false,
-			};
-
-			private readonly UxmlEnumAttributeDescription<GameId> _rewardId = new ()
-			{
-				name = "reward",
-				defaultValue = GameId.PlayerSkinBrandMale,
-			};
-
-			private readonly UxmlEnumAttributeDescription<PassType> _passType = new ()
-			{
-				name = "pass-type",
-				defaultValue = PassType.Free,
-			};
-
-			public override void Init(VisualElement ve, IUxmlAttributes bag, CreationContext cc)
-			{
-				base.Init(ve, bag, cc);
-
-				var el = (BattlepassSegmentButtonElement) ve;
-				el.RewardState = _state.GetValueFromBag(bag, cc);
-				el.UnlockedPremium = _unlockedPremium.GetValueFromBag(bag, cc);
-				if (_debugMode.GetValueFromBag(bag, cc))
-					el.SetData(new BattlePassSegmentData()
-					{
-						PassType = _passType.GetValueFromBag(bag, cc),
-						RewardConfig = new EquipmentRewardConfig()
-						{
-							GameId = _rewardId.GetValueFromBag(bag, cc),
-							Amount = 1,
-						},
-						SegmentLevel = 1,
-						LevelAfterClaiming = 2,
-						PointsAfterClaiming = 2,
-					}, RewardState.Claimable, false);
-			}
 		}
 	}
 

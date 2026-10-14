@@ -1,5 +1,4 @@
-﻿using System.Linq;
-using ExitGames.Client.Photon.StructWrapping;
+using System.Linq;
 using FirstLight.Game.Data.DataTypes;
 using FirstLight.Game.Services;
 using FirstLight.Game.Utils;
@@ -8,16 +7,17 @@ using UnityEngine.UIElements;
 
 namespace FirstLight.Game.Presenters.ProductsBundle
 {
-	public class RewardDisplayContainerElement : VisualElement 
+	[UxmlElement]
+	public partial class RewardDisplayContainerElement : VisualElement
 	{
 
 		[Q] private VisualElement _rewardIcon;
 		[Q] private Label _rewardCurrency;
-		[Q] private Label _rewardItemCategory; 
-		
+		[Q] private Label _rewardItemCategory;
+
 		private string[] _nonCurrencyItemClasses = new[] {"Avatar", "Character", "Flag", "Melee", "Glider"};
 		private string[] _iconModifiersAllowedItemClasses = new[] {"Character"};
-		
+
 		public RewardDisplayContainerElement()
 		{
 			this.LoadTemplateAndBind("TemplateRewardDisplayContainer");
@@ -28,14 +28,14 @@ namespace FirstLight.Game.Presenters.ProductsBundle
 			_rewardIcon.RemoveModifiers();
 
 			var itemClass = bundleProduct.PlayfabProductConfig.CatalogItem.ItemClass;
-			
+
 			if (_nonCurrencyItemClasses.Contains(itemClass))
 			{
 				if (_iconModifiersAllowedItemClasses.Contains(itemClass))
 				{
 					_rewardIcon.AddToClassList($"reward-display-icon--{itemClass.ToLowerInvariant()}");
-				} 
-				
+				}
+
 				_rewardCurrency.SetDisplay(false);
 			}
 			else
@@ -44,7 +44,7 @@ namespace FirstLight.Game.Presenters.ProductsBundle
 				var itemMetaData = bundleProduct.GameItem.GetMetadata<CurrencyMetadata>();
 
 				if (itemMetaData != null)
-				{ 
+				{
 					_rewardIcon.AddToClassList("reward-display-icon--currency");
 					_rewardCurrency.text = itemMetaData.Amount.ToString();
 				}
@@ -54,15 +54,12 @@ namespace FirstLight.Game.Presenters.ProductsBundle
 				}
 			}
 
-			var itemView = bundleProduct.GameItem.GetViewModel(); 
+			var itemView = bundleProduct.GameItem.GetViewModel();
 			itemView.DrawIcon(_rewardIcon);
 			_rewardItemCategory.text = bundleProduct.PlayfabProductConfig.CatalogItem.ItemClass;
 
 			return this;
 		}
 
-		public new class UxmlFactory : UxmlFactory<RewardDisplayContainerElement, UxmlTraits>
-		{
-		}
 	}
 }

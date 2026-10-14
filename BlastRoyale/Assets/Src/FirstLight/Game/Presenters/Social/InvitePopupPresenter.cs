@@ -1,3 +1,4 @@
+using MainInstaller = FirstLight.Game.Utils.MainInstaller;
 using System;
 using Cysharp.Threading.Tasks;
 using FirstLight.Game.Data.DataTypes;
@@ -6,8 +7,8 @@ using FirstLight.Game.Services.Authentication;
 using FirstLight.Game.UIElements;
 using FirstLight.Game.Utils;
 using FirstLight.Game.Utils.UCSExtensions;
-using FirstLight.UIService;
-using I2.Loc;
+using FirstLight.Game.UI;
+using FirstLight.Game.Localization;
 using Unity.Services.Friends;
 using UnityEngine.UIElements;
 

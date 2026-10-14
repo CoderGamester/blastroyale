@@ -1,3 +1,4 @@
+using MainInstaller = FirstLight.Game.Utils.MainInstaller;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,7 +9,7 @@ using FirstLight.Game.UIElements;
 using FirstLight.Game.Utils;
 using FirstLight.Game.Views.UITK;
 using FirstLight.UiService;
-using FirstLight.UIService;
+using FirstLight.Game.UI;
 using UnityEngine.UIElements;
 using Button = UnityEngine.UIElements.Button;
 
@@ -26,7 +27,7 @@ namespace FirstLight.Game.Presenters.News
 		private const string USS_CATEGORY_INDICATOR = "category-button__indicator";
 
 		private IGameServices _services;
-		
+
 		private VisualElement _categoriesContainer;
 		private VisualElement _container;
 		private VisualElement _loading;
@@ -81,7 +82,7 @@ namespace FirstLight.Game.Presenters.News
 				}
 			}
 		}
-		
+
 		private void OnClickCategory(string category)
 		{
 			if (_categories.TryGetValue(_selectedCategory, out var oldBtn))

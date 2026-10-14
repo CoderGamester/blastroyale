@@ -1,3 +1,5 @@
+using FirstLight.Inspector;
+using MainInstaller = FirstLight.Game.Utils.MainInstaller;
 using System;
 using System.Collections.Generic;
 using Cysharp.Threading.Tasks;
@@ -6,10 +8,9 @@ using FirstLight.Game.Services;
 using FirstLight.Game.UIElements;
 using FirstLight.Game.Utils;
 using FirstLight.Game.Views.UITK.Popups;
-using FirstLight.UIService;
-using I2.Loc;
+using FirstLight.Game.UI;
+using FirstLight.Game.Localization;
 using Quantum;
-using Sirenix.OdinInspector;
 using UnityEngine;
 using UnityEngine.UIElements;
 
@@ -28,17 +29,17 @@ namespace FirstLight.Game.Presenters
 		}
 
 		// Unity can't serialize 'Type' so we need to be explicit here
-		[SerializeField, Required] private VisualTreeAsset _joinWithCodeDocument;
-		[SerializeField, Required] private VisualTreeAsset _selectNumberDocument;
-		[SerializeField, Required] private VisualTreeAsset _selectMapDocument;
-		[SerializeField, Required] private VisualTreeAsset _selectSquadSizeDocument;
-		[SerializeField, Required] private VisualTreeAsset _selectMutatorsDocument;
-		[SerializeField, Required] private VisualTreeAsset _selectWeaponsDocument;
-		[SerializeField, Required] private VisualTreeAsset _partyDocument;
-		[SerializeField, Required] private VisualTreeAsset _inviteFriendsDocument;
-		[SerializeField, Required] private VisualTreeAsset _enterCreatorCodeDocument;
-		[SerializeField, Required] private VisualTreeAsset _genericInfoDocument;
-		[SerializeField, Required] private VisualTreeAsset _genericConfirmDocument;
+		[SerializeField, InspectorField(Required = true)] private VisualTreeAsset _joinWithCodeDocument;
+		[SerializeField, InspectorField(Required = true)] private VisualTreeAsset _selectNumberDocument;
+		[SerializeField, InspectorField(Required = true)] private VisualTreeAsset _selectMapDocument;
+		[SerializeField, InspectorField(Required = true)] private VisualTreeAsset _selectSquadSizeDocument;
+		[SerializeField, InspectorField(Required = true)] private VisualTreeAsset _selectMutatorsDocument;
+		[SerializeField, InspectorField(Required = true)] private VisualTreeAsset _selectWeaponsDocument;
+		[SerializeField, InspectorField(Required = true)] private VisualTreeAsset _partyDocument;
+		[SerializeField, InspectorField(Required = true)] private VisualTreeAsset _inviteFriendsDocument;
+		[SerializeField, InspectorField(Required = true)] private VisualTreeAsset _enterCreatorCodeDocument;
+		[SerializeField, InspectorField(Required = true)] private VisualTreeAsset _genericInfoDocument;
+		[SerializeField, InspectorField(Required = true)] private VisualTreeAsset _genericConfirmDocument;
 
 		private GenericPopupElement _popup;
 
@@ -124,7 +125,7 @@ namespace FirstLight.Game.Presenters
 		{
 			return OpenPopup(new TeamPopupView(), ScriptTerms.UITHomeScreen.party);
 		}
-		
+
 
 		public static UniTaskVoid OpenInviteFriends()
 		{
@@ -165,7 +166,7 @@ namespace FirstLight.Game.Presenters
 			});
 		}
 
-		public static bool IsOpen<T>() where T : UIView
+		public static bool IsPopupOpen<T>() where T : UIView
 		{
 			var services = MainInstaller.ResolveServices();
 			if (!services.UIService.IsScreenOpen<PopupPresenter>())

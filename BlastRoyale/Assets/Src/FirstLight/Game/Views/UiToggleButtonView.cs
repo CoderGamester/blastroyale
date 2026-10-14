@@ -1,3 +1,4 @@
+using MainInstaller = FirstLight.Game.Utils.MainInstaller;
 using System.Collections;
 using System.Collections.Generic;
 using DG.Tweening;
@@ -28,13 +29,13 @@ namespace FirstLight.UiService
 		public AnimationClip ToggleOnPressedClip;
 		public AnimationClip ToggleOffPressedClip;
 		public List<Image> CustomTargetGraphics;
-		
+
 		[HideInInspector] public Animation Animation;
 		[HideInInspector] public RectTransform RectTransform;
-		
+
 		private Coroutine _coroutine;
 		protected IGameServices _services;
-		
+
 #if UNITY_EDITOR
 		/// <inheritdoc />
 		protected override void OnValidate()
@@ -44,21 +45,21 @@ namespace FirstLight.UiService
 
 			base.OnValidate();
 		}
-#endif	
+#endif
 		/// <inheritdoc />
 		protected override void Awake()
 		{
 			base.Awake();
 #if UNITY_EDITOR
 			if (Application.isPlaying)
-#endif	
+#endif
 			{
 				_services = MainInstaller.Resolve<IGameServices>();
 			}
-			
+
 			onValueChanged.AddListener(OnValueChanged);
 		}
-		
+
 		/// <inheritdoc />
 		protected override void OnDestroy()
 		{
@@ -70,14 +71,14 @@ namespace FirstLight.UiService
 			}
 			onValueChanged?.RemoveListener(OnValueChanged);
 		}
-		
+
 		public void SetInitialValue(bool valueOn)
 		{
 			SetIsOnWithoutNotify(valueOn);
 			ToggleOff.SetActive(!valueOn);
 			ToggleOn.SetActive(valueOn);
 			Animation.clip = isOn ? ToggleOnPressedClip : ToggleOffPressedClip;
-			Animation.Rewind(); 
+			Animation.Rewind();
 			Animation.Play();
 		}
 
@@ -90,12 +91,12 @@ namespace FirstLight.UiService
 			{
 				return;
 			}
-			
+
 			if (Animation.isPlaying)
 			{
 				Animation.Stop();
 			}
-			
+
 			if (_coroutine != null)
 			{
 				_services.CoroutineService.StopCoroutine(_coroutine);
@@ -103,7 +104,7 @@ namespace FirstLight.UiService
 			}
 			_coroutine = _services.CoroutineService.StartCoroutine(ScaleAfterPointerEventCo(PressedScale));
 		}
-		
+
 		/// <inheritdoc />
 		public override void OnPointerClick(PointerEventData eventData)
 		{
@@ -111,7 +112,7 @@ namespace FirstLight.UiService
 			{
 				return;
 			}
-			
+
 			OnClick();
 			base.OnPointerClick(eventData);
 		}
@@ -123,19 +124,19 @@ namespace FirstLight.UiService
 			{
 				return;
 			}
-			
+
 			base.OnPointerUp(eventData);
-			
+
 			if (_coroutine != null)
 			{
 				_services.CoroutineService.StopCoroutine(_coroutine);
 				_coroutine = null;
 			}
-			
+
 			if (!RectTransformUtility.RectangleContainsScreenPoint(RectTransform, eventData.position))
 			{
 				_services.AudioFxService.PlayClip2D(AudioId.SettingsToggle);
-				
+
 				_coroutine = _services.CoroutineService.StartCoroutine(ScaleAfterPointerEventCo(Vector3.one));
 			}
 		}
@@ -157,9 +158,9 @@ namespace FirstLight.UiService
 		protected virtual void OnClick()
 		{
 			_services.AudioFxService.PlayClip2D(AudioId.SettingsToggle);
-			
+
 			Animation.clip = !isOn ? ToggleOnPressedClip : ToggleOffPressedClip;
-			Animation.Rewind(); 
+			Animation.Rewind();
 			Animation.Play();
 		}
 
@@ -176,22 +177,22 @@ namespace FirstLight.UiService
 				yield return null;
 				UpdateScaleAfterPointerEvent(endTime, fromScale, targetScale, PressedEase);
 			}
-			
+
 			Anchor.localScale = targetScale;
 			_coroutine = null;
 		}
-		
+
 		private void UpdateScaleAfterPointerEvent(float endTime, Vector3 fromScale, Vector3 targetScale, Ease ease)
 		{
 			var deltaTime = endTime - Time.time;
 			var t = 1f - (deltaTime / PressedDuration);
 			var localScale = Anchor.localScale;
-			
+
 			localScale.x = DOVirtual.EasedValue(fromScale.x, targetScale.x, t, ease);
 			localScale.y = DOVirtual.EasedValue(fromScale.y, targetScale.y, t, ease);
 			Anchor.localScale = localScale;
 		}
-		
+
 		private void OnValueChanged(bool on)
 		{
 			ToggleOff.SetActive(!on);

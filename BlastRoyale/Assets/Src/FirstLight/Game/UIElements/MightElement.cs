@@ -1,4 +1,4 @@
-using I2.Loc;
+using FirstLight.Game.Localization;
 using UnityEngine.UIElements;
 
 namespace FirstLight.Game.UIElements
@@ -6,7 +6,8 @@ namespace FirstLight.Game.UIElements
 	/// <summary>
 	/// Displays the might graphic.
 	/// </summary>
-	public class MightElement : VisualElement
+	[UxmlElement]
+	public partial class MightElement : VisualElement
 	{
 		private const string UssBlock = "might-display";
 		private const string UssLabel = UssBlock + "__label";
@@ -40,7 +41,7 @@ namespace FirstLight.Game.UIElements
 			{
 				SetValue(_label, value);
 			}
-			
+
 			_currentMight = value;
 		}
 
@@ -49,8 +50,5 @@ namespace FirstLight.Game.UIElements
 			label.text = string.Format(ScriptLocalization.UITEquipment.might, value.ToString("F0"));
 		}
 
-		public new class UxmlFactory : UxmlFactory<MightElement>
-		{
-		}
 	}
 }

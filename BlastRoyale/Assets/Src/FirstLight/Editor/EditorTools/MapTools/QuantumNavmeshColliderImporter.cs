@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using FirstLight.Game.MonoComponent.EditorOnly;
 using Quantum;
@@ -10,7 +10,7 @@ namespace FirstLight.Editor.EditorTools.MapTools
 {
 	public class QuantumNavmeshColliderImporter : MapDataBakerCallback
 	{
-		public override void OnBeforeBake(MapData data, MapDataBaker.BuildTrigger buildTrigger, QuantumMapDataBakeFlags bakeFlags)
+		public override void OnBeforeBake(QuantumMapData data, QuantumMapDataBaker.BuildTrigger buildTrigger, QuantumMapDataBakeFlags bakeFlags)
 		{
 			// This is called before quantum starts building the navmesh, is it called even before it triggers the unity navmesh builder
 			if (bakeFlags.HasFlag(QuantumMapDataBakeFlags.BakeUnityNavMesh))
@@ -21,15 +21,15 @@ namespace FirstLight.Editor.EditorTools.MapTools
 		}
 
 
-		public override void OnCollectNavMeshes(MapData data, List<NavMesh> navmeshes)
+		public override void OnCollectNavMeshes(QuantumMapData data, List<NavMesh> navmeshes)
 		{
 		}
 
-		public override void OnBeforeBake(MapData data)
+		public override void OnBeforeBake(QuantumMapData data)
 		{
 		}
 
-		public override void OnBake(MapData data)
+		public override void OnBake(QuantumMapData data)
 		{
 		}
 	}

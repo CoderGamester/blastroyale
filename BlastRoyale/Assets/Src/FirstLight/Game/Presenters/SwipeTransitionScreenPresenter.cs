@@ -1,12 +1,12 @@
 using Cysharp.Threading.Tasks;
 using FirstLight.Game.Utils;
-using FirstLight.UIService;
+using FirstLight.Game.UI;
 using UnityEngine.UIElements;
 
 namespace FirstLight.Game.Presenters
 {
 	/// <summary>
-	/// Presenter for the swipe transition 
+	/// Presenter for the swipe transition
 	/// </summary>
 	[UILayer(UILayer.Loading)]
 	public class SwipeTransitionScreenPresenter : UIPresenter
@@ -17,12 +17,12 @@ namespace FirstLight.Game.Presenters
 		protected override void QueryElements()
 		{
 			_swipeParent = Root.Q<VisualElement>("SwipeParent").Required();
-			
+
 			_swipeParent.RegisterCallback<TransitionStartEvent>(e =>
 			{
 				_transitionRunning = true;
 			});
-			
+
 			_swipeParent.RegisterCallback<TransitionEndEvent>(e =>
 			{
 				_transitionRunning = false;

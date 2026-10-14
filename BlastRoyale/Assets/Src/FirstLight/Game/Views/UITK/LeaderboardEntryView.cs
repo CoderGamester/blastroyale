@@ -1,3 +1,5 @@
+using MainInstaller = FirstLight.Game.Utils.MainInstaller;
+using FirstLight.Game.Services.Infrastructure;
 using System;
 using System.Collections.Generic;
 using Cysharp.Threading.Tasks;
@@ -6,7 +8,7 @@ using FirstLight.Game.Services;
 using FirstLight.Game.Services.Collection;
 using FirstLight.Game.UIElements;
 using FirstLight.Game.Utils;
-using FirstLight.UIService;
+using FirstLight.Game.UI;
 using QuickEye.UIToolkit;
 using UnityEngine;
 using UnityEngine.UIElements;
@@ -23,8 +25,6 @@ namespace FirstLight.Game.Views
 		private const string USS_LEADERBOARD_ENTRY_SECOND = USS_LEADERBOARD_ENTRY + "--second";
 		private const string USS_LEADERBOARD_ENTRY_THIRD = USS_LEADERBOARD_ENTRY + "--third";
 		private const string USS_LEADERBOARD_ENTRY_LOCAL = USS_LEADERBOARD_ENTRY + "--local";
-
-		private const string USS_AVATAR_NFT = "leaderboard-entry__pfp--nft";
 
 		private string _playerId;
 		[Q("MainContainer")] private VisualElement _leaderboardEntry;

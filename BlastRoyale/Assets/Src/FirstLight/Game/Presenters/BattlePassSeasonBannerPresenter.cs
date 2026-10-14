@@ -1,3 +1,4 @@
+using MainInstaller = FirstLight.Game.Utils.MainInstaller;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,9 +14,8 @@ using FirstLight.Game.UIElements;
 using FirstLight.Game.UIElements.Kit;
 using FirstLight.Game.Utils;
 using FirstLight.Game.Views;
-using FirstLight.Modules.UIService.Runtime;
-using FirstLight.UIService;
-using I2.Loc;
+using FirstLight.Game.UI;
+using FirstLight.Game.Localization;
 using Quantum;
 using QuickEye.UIToolkit;
 using UnityEngine;
@@ -219,7 +219,7 @@ namespace FirstLight.Game.Presenters
 			var data = MainInstaller.ResolveData();
 			var currentSeason = data.BattlePassDataProvider.GetCurrentSeasonConfig();
 			var endsAt = currentSeason.Season.GetEndsAtDateTime();
-			
+
 			_timeLeft.text = "<sprite name=\"ClockIcon\"> " + (endsAt - DateTime.UtcNow).ToDayAndHours(true);
 			if (!string.IsNullOrEmpty(currentSeason.Season.Title))
 			{
@@ -230,16 +230,16 @@ namespace FirstLight.Game.Presenters
 				_seasonNumber.text = string.Format(ScriptLocalization.UITBattlePass.season_number,
 					currentSeason.Season.Number);
 			}
-			
+
 			// We hide all cosmetics rewards as "infinite" seasons will have none
 			_characterImage.SetVisibility(false);
 			Root.Q<VisualElement>("RewardsContainerFree").SetVisibility(false);
 			Root.Q<LabelOutlined>("FreeLabel").SetVisibility(false);
 			Root.Q<VisualElement>("RewardsPremium").SetVisibility(false);
-			
+
 			// FillGoodies(PassType.Paid);
 			// FillGoodies(PassType.Free);
-			
+
 			// if (string.IsNullOrEmpty(currentSeason.Season.BannerGraphicImageClass))
 			// {
 			// 	_characterImage.SetDisplay(false);
@@ -250,7 +250,7 @@ namespace FirstLight.Game.Presenters
 			// 	_characterImage.AddToClassList(currentSeason.Season.BannerGraphicImageClass);
 			// 	_characterImage.SetDisplay(true);
 			// }
-			
+
 			return base.OnScreenOpen(reload);
 		}
 

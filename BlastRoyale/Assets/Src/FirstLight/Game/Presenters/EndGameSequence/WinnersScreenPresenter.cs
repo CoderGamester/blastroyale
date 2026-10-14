@@ -1,3 +1,5 @@
+using FirstLight.Inspector;
+using MainInstaller = FirstLight.Game.Utils.MainInstaller;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,10 +10,9 @@ using FirstLight.Game.Services;
 using FirstLight.Game.UIElements;
 using FirstLight.Game.Utils;
 using FirstLight.Game.Views;
-using FirstLight.UIService;
-using I2.Loc;
+using FirstLight.Game.UI;
+using FirstLight.Game.Localization;
 using Quantum;
-using Sirenix.OdinInspector;
 using UnityEngine;
 using UnityEngine.UIElements;
 
@@ -37,7 +38,7 @@ namespace FirstLight.Game.Presenters
 		}
 
 		[SerializeField] private CharacterList[] _characters;
-		[SerializeField, Required] private VisualTreeAsset _playerNameTemplate;
+		[SerializeField, InspectorField(Required = true)] private VisualTreeAsset _playerNameTemplate;
 
 		private IMatchServices _matchServices;
 		private IGameServices _gameServices;

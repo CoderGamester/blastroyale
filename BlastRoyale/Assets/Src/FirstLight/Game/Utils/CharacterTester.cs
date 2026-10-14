@@ -1,8 +1,8 @@
 #if UNITY_EDITOR
+using FirstLight.Inspector;
 using System.Collections.Generic;
 using System.Linq;
 using FirstLight.Game.MonoComponent.Collections;
-using Sirenix.OdinInspector;
 using UnityEditor;
 using UnityEngine;
 using Path = System.IO.Path;
@@ -11,13 +11,13 @@ namespace FirstLight.Editor.EditorTools.ArtTools
 {
 	public class CharacterTester : MonoBehaviour
 	{
-		[ShowInInspector, ValueDropdown("GetAllWeapons", FlattenTreeView = true), OnValueChanged("GiveWeapons")]
+		[UnityEngine.SerializeField, InspectorField(Options = "GetAllWeapons", OnChanged = "GiveWeapons")]
 		private GameObject _weapon;
 
-		[ShowInInspector, ValueDropdown("GetAllGliders", FlattenTreeView = true), OnValueChanged("GiveGliders")]
+		[UnityEngine.SerializeField, InspectorField(Options = "GetAllGliders", OnChanged = "GiveGliders")]
 		private GameObject _glider;
 
-		[Button]
+		[InspectorAction]
 		private void RefreshCharacters()
 		{
 			const float SPACING = 1.5f;
@@ -51,21 +51,21 @@ namespace FirstLight.Editor.EditorTools.ArtTools
 			}
 		}
 
-		private IEnumerable<ValueDropdownItem<GameObject>> GetAllWeapons()
+		private IEnumerable<InspectorOption> GetAllWeapons()
 		{
 			var weapons = AssetDatabase.FindAssets("t:Prefab Weapon_", new[] {"Assets/AddressableResources/Weapons"});
 
 			return weapons.Select(AssetDatabase.GUIDToAssetPath)
-				.Select(path => new ValueDropdownItem<GameObject>(Path.GetFileNameWithoutExtension(path).Replace("Weapon_", ""),
+				.Select(path => new InspectorOption(Path.GetFileNameWithoutExtension(path).Replace("Weapon_", ""),
 					AssetDatabase.LoadAssetAtPath<GameObject>(path)));
 		}
 
-		private IEnumerable<ValueDropdownItem<GameObject>> GetAllGliders()
+		private IEnumerable<InspectorOption> GetAllGliders()
 		{
 			var gliders = AssetDatabase.FindAssets("t:Prefab Glider_", new[] {"Assets/AddressableResources/Gliders"});
 
 			return gliders.Select(AssetDatabase.GUIDToAssetPath)
-				.Select(path => new ValueDropdownItem<GameObject>(Path.GetFileNameWithoutExtension(path).Replace("Glider_", ""),
+				.Select(path => new InspectorOption(Path.GetFileNameWithoutExtension(path).Replace("Glider_", ""),
 					AssetDatabase.LoadAssetAtPath<GameObject>(path)));
 		}
 

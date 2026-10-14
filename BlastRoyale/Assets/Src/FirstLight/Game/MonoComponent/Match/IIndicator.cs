@@ -13,12 +13,12 @@ namespace FirstLight.Game.MonoComponent.Match
 		/// Call <seealso cref="SetVisualState"/> to change it
 		/// </summary>
 		bool VisualState { get; }
-		
+
 		/// <summary>
 		/// Requests the <see cref="IndicatorVfxId"/> representing this indicator type
 		/// </summary>
 		IndicatorVfxId IndicatorVfxId { get; }
-		
+
 		/// <summary>
 		/// Set's the visual state of the indicator based on the given parameter values.
 		/// </summary>
@@ -28,16 +28,16 @@ namespace FirstLight.Game.MonoComponent.Match
 		/// Set's the indicator visual properties to allow to update them on a loop if necessary
 		/// </summary>
 		void SetVisualProperties(float size, float minRange, float maxRange);
-		
+
 		/// <summary>
 		/// Repositions the indicator to the given HUD stick <paramref name="position"/>
 		/// </summary>
 		void SetTransformState(Vector2 position);
-		
+
 		/// <summary>
 		/// Initializes this indicator view with the given data
 		/// </summary>
-		void Init(EntityView playerEntityView);
+		void Init(QuantumEntityView playerEntityView);
 
 		/// <summary>
 		/// Sets the color of material of this indicator to <paramref name="c"/> color

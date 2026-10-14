@@ -1,9 +1,9 @@
+using FirstLight.Inspector;
 using Cysharp.Threading.Tasks;
 using FirstLight.Game.Messages;
 using FirstLight.Game.MonoComponent.EntityViews;
 using FirstLight.Game.Utils;
 using Quantum;
-using Sirenix.OdinInspector;
 using UnityEngine;
 
 namespace FirstLight.Game.MonoComponent.EntityPrototypes
@@ -13,8 +13,8 @@ namespace FirstLight.Game.MonoComponent.EntityPrototypes
 	/// </summary>
 	public class EquipmentCollectableMonoComponent : EntityBase
 	{
-		[SerializeField, Required] private Transform _itemTransform;
-		[SerializeField, Required] private CollectableViewMonoComponent _collectableView;
+		[SerializeField, InspectorField(Required = true)] private Transform _itemTransform;
+		[SerializeField, InspectorField(Required = true)] private CollectableViewMonoComponent _collectableView;
 
 		protected override void OnEntityInstantiated(QuantumGame game)
 		{
@@ -40,7 +40,7 @@ namespace FirstLight.Game.MonoComponent.EntityPrototypes
 			cacheTransform.localPosition = Vector3.zero;
 			cacheTransform.localScale = Vector3.one;
 			cacheTransform.localRotation = Quaternion.identity;
-			Services.MessageBrokerService.Publish(new EquipmentInstantiatedMessage()
+			Services.MessageBrokerService.PublishSafe(new EquipmentInstantiatedMessage()
 			{
 				Equipment = item,
 				Object = instance

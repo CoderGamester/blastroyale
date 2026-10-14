@@ -1,8 +1,9 @@
+using FirstLight.Inspector;
+using MainInstaller = FirstLight.Game.Utils.MainInstaller;
 using FirstLight.Game.Ids;
 using FirstLight.Game.Services;
 using FirstLight.Game.Utils;
 using Quantum;
-using Sirenix.OdinInspector;
 using UnityEngine;
 
 namespace FirstLight.Game.MonoComponent.EntityViews
@@ -12,9 +13,9 @@ namespace FirstLight.Game.MonoComponent.EntityViews
 	/// </summary>
 	public class WeaponViewMonoComponent : EntityViewBase
 	{
-		[SerializeField, Required] private ParticleSystem _particleSystem;
-		[SerializeField, Required] private int _shells;
-		[SerializeField, Required] private bool _shellsPlaySound;
+		[SerializeField, InspectorField(Required = true)] private ParticleSystem _particleSystem;
+		[SerializeField] private int _shells;
+		[SerializeField] private bool _shellsPlaySound;
 		private IGameServices _services;
 		private IMatchServices _matchServices;
 

@@ -11,13 +11,13 @@ namespace FirstLight.Game.Configs
 	[IgnoreServerSerialization]
 	public class QuantumRunnerConfigs : ScriptableObject
 	{
-		
+
 		[SerializeField] private RuntimeConfig _runtimeConfig;
-		[SerializeField] private DeterministicSessionConfigAsset _deterministicConfigAsset;
+		[SerializeField] private QuantumDeterministicSessionConfigAsset _deterministicConfigAsset;
 		[SerializeField] private PhotonServerSettings _serverSettings;
 
-		/// <inheritdoc cref="DeterministicSessionConfigAsset"/>
-		public DeterministicSessionConfigAsset DeterministicSessionConfigAsset => _deterministicConfigAsset;
+		/// <inheritdoc cref="QuantumDeterministicSessionConfigAsset"/>
+		public QuantumDeterministicSessionConfigAsset QuantumDeterministicSessionConfigAsset => _deterministicConfigAsset;
 
 		/// <inheritdoc cref="PhotonServerSettings"/>
 		public PhotonServerSettings PhotonServerSettings => _serverSettings;
@@ -31,6 +31,6 @@ namespace FirstLight.Game.Configs
 		/// Returns the <see cref="RuntimeConfig"/> used to build the simulation from the client side
 		/// </summary>
 		public RuntimeConfig RuntimeConfig => _runtimeConfig;
-	
+
 	}
 }

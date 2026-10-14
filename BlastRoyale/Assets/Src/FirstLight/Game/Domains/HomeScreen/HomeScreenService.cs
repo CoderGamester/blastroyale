@@ -1,3 +1,4 @@
+using MainInstaller = FirstLight.Game.Utils.MainInstaller;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,8 +13,8 @@ using FirstLight.Game.Presenters;
 using FirstLight.Game.Services;
 using FirstLight.Game.Services.RoomService;
 using FirstLight.Game.Utils;
-using FirstLight.SDK.Services;
-using I2.Loc;
+using GameLovers.Services;
+using FirstLight.Game.Localization;
 using Quantum;
 
 namespace FirstLight.Game.Domains.HomeScreen
@@ -48,7 +49,7 @@ namespace FirstLight.Game.Domains.HomeScreen
 		enum ProcessorResult
 		{
 			None, // Nothing needs to be done after finishing handling
-			OpenOriginalScreen, // After finishing handling the original screen should be opened 
+			OpenOriginalScreen, // After finishing handling the original screen should be opened
 			CustomBehaviour // Break the current notification flow and let the handler to everything
 		}
 
@@ -62,7 +63,7 @@ namespace FirstLight.Game.Domains.HomeScreen
 	public class HomeScreenService : IHomeScreenService
 	{
 		private readonly IGameDataProvider _gameDataProvider;
-		private readonly UIService.UIService _uiService;
+		private readonly FirstLight.Game.UI.UIService _uiService;
 		private readonly IRoomService _roomService;
 		private readonly IMessageBrokerService _msgBroker;
 		private readonly IGameCommandService _commandService;
@@ -70,7 +71,7 @@ namespace FirstLight.Game.Domains.HomeScreen
 		private readonly IGenericDialogService _genericDialogService;
 		private readonly List<IHomeScreenService.QueueProcessorDelegate> _queuedNotificationHandlers;
 
-		public HomeScreenService(IGameDataProvider gameDataProvider, UIService.UIService uiService, IMessageBrokerService msgBroker,
+		public HomeScreenService(IGameDataProvider gameDataProvider, FirstLight.Game.UI.UIService uiService, IMessageBrokerService msgBroker,
 								 IRoomService roomService, IGameCommandService commandService, IGameBackendService gameBackendService,
 								 IGenericDialogService genericDialogService)
 		{
@@ -234,11 +235,11 @@ namespace FirstLight.Game.Domains.HomeScreen
 			};
 			_genericDialogService.OpenButtonDialog("Server Error", "Desync", false, confirmButton).Forget();
 #else
-				FirstLight.NativeUi.NativeUiService.ShowAlertPopUp(false, "Error", "Desync",
-					new FirstLight.NativeUi.AlertButton
+				GameLovers.MobileServices.NativeUi.NativeUiService.ShowAlertPopUp(false, "Error", "Desync",
+					new GameLovers.MobileServices.NativeUi.AlertButton
 					{
 						Callback = () => MainInstaller.ResolveServices().QuitGame("Server Desync"),
-						Style = FirstLight.NativeUi.AlertButtonStyle.Negative,
+						Style = GameLovers.MobileServices.NativeUi.AlertButtonStyle.Cancel,
 						Text = "Quit Game"
 					});
 #endif

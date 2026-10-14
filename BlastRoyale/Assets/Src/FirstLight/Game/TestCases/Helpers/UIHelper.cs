@@ -1,10 +1,11 @@
+using MainInstaller = FirstLight.Game.Utils.MainInstaller;
 using System;
 using System.Collections;
 using System.Linq;
 using FirstLight.Game.Presenters;
 using FirstLight.Game.Services;
 using FirstLight.Game.Utils;
-using FirstLight.UIService;
+using FirstLight.Game.UI;
 using UnityEngine;
 using UnityEngine.UIElements;
 using Object = UnityEngine.Object;
@@ -38,7 +39,7 @@ namespace FirstLight.Game.TestCases.Helpers
 		{
 			foreach (var type in types)
 			{
-				var screen = Object.FindObjectOfType(type) as UIPresenter;
+				var screen = Object.FindFirstObjectByType(type) as UIPresenter;
 				if (screen != null && screen.gameObject.activeSelf)
 				{
 					return screen;
@@ -63,14 +64,14 @@ namespace FirstLight.Game.TestCases.Helpers
 
 		public T GetPresenter2<T>() where T : UIPresenter
 		{
-			return Object.FindObjectOfType<T>();
+			return Object.FindFirstObjectByType<T>();
 		}
 
 		public IEnumerator WaitForGenericDialog(float timeout = 30f, string title = "")
 		{
 			yield return TestTools.Until(() =>
 				{
-					var dialog = Object.FindObjectOfType<GenericButtonDialogPresenter>();
+					var dialog = Object.FindFirstObjectByType<GenericButtonDialogPresenter>();
 					return dialog != null && dialog.gameObject.activeSelf && (title == "" || dialog.Title == title);
 				},
 				timeout,
@@ -81,14 +82,14 @@ namespace FirstLight.Game.TestCases.Helpers
 		{
 			yield return TestTools.Until(() =>
 				{
-					var dialog = Object.FindObjectOfType<GenericInputDialogPresenter>();
+					var dialog = Object.FindFirstObjectByType<GenericInputDialogPresenter>();
 					return dialog != null && dialog.gameObject.activeSelf && (title == "" || dialog.Title == title);
 				},
 				timeout,
 				$"Generic input dialog with title {title} did not open.");
 
 			// Wait a little to be able to view the inputs
-			var presenter = Object.FindObjectOfType<GenericInputDialogPresenter>();
+			var presenter = Object.FindFirstObjectByType<GenericInputDialogPresenter>();
 			var dialogRoot = presenter.GetComponent<UIDocument>().rootVisualElement;
 			var input = dialogRoot.Q<TextField>();
 			input.Focus();
@@ -112,7 +113,7 @@ namespace FirstLight.Game.TestCases.Helpers
 		public (VisualElement, VisualElement)? SearchForElementGlobally(
 			string name, Func<UQueryBuilder<VisualElement>, UQueryBuilder<VisualElement>> queryProcessor = null)
 		{
-			foreach (var foundObject in Object.FindObjectsOfType<UIPresenter>())
+			foreach (var foundObject in Object.FindObjectsByType<UIPresenter>(FindObjectsSortMode.None))
 			{
 				var root = foundObject.Root;
 

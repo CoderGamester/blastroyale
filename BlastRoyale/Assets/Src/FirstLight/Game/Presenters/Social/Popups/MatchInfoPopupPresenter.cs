@@ -1,3 +1,5 @@
+using MainInstaller = FirstLight.Game.Utils.MainInstaller;
+using FirstLight.Game.Services.Infrastructure;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,9 +11,8 @@ using FirstLight.Game.Services;
 using FirstLight.Game.UIElements;
 using FirstLight.Game.UIElements.Kit;
 using FirstLight.Game.Utils;
-using FirstLight.Modules.UIService.Runtime;
-using FirstLight.UIService;
-using I2.Loc;
+using FirstLight.Game.UI;
+using FirstLight.Game.Localization;
 using Quantum;
 using QuickEye.UIToolkit;
 using UnityEngine;
@@ -127,7 +128,7 @@ namespace FirstLight.Game.Views.UITK.Popups
 				mutatorLabel.RegisterCallback<ClickEvent>((ev) =>
 				{
 					mutatorLabel.OpenTooltip(_content.panel.visualTree,
-						LocalizationManager.GetTranslation(mutator.GetDescriptionLocalizationKey()),
+						GameLocalization.GetTranslation(mutator.GetDescriptionLocalizationKey()),
 						position: TooltipPosition.Top,
 						maxWidth: 350);
 				});

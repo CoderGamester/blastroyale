@@ -1,5 +1,6 @@
+using IDataProvider = FirstLight.Server.SDK.Models.IDataProvider;
 using FirstLight.Server.SDK.Models;
-using FirstLight.Services;
+using GameLovers.Services;
 
 namespace FirstLight.Game.Logic
 {
@@ -12,7 +13,7 @@ namespace FirstLight.Game.Logic
 		protected readonly IDataProvider DataProvider;
 
 		protected TData Data => DataProvider.GetData<TData>();
-		
+
 		private AbstractBaseLogic() {}
 
 		public AbstractBaseLogic(IGameLogic gameLogic, IDataProvider dataProvider)

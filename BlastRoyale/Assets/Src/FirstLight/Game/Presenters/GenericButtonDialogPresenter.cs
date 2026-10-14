@@ -1,6 +1,6 @@
-﻿using System;
+using System;
 using FirstLight.Game.Services;
-using FirstLight.UIService;
+using FirstLight.Game.UI;
 
 namespace FirstLight.Game.Presenters
 {
@@ -18,4 +18,3 @@ namespace FirstLight.Game.Presenters
 		}
 	}
 }
-

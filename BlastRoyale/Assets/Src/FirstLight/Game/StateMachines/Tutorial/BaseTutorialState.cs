@@ -6,7 +6,7 @@ using FirstLight.Game.Data;
 using FirstLight.Game.Messages;
 using FirstLight.Game.Presenters;
 using FirstLight.Game.Services;
-using FirstLight.Statechart;
+using GameLovers.StatechartMachine;
 
 namespace FirstLight.Game.StateMachines
 {

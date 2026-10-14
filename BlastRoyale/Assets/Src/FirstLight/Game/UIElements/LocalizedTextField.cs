@@ -1,18 +1,31 @@
 using System;
 using FirstLight.Game.Utils;
-using I2.Loc;
+using FirstLight.Game.Localization;
 using UnityEngine;
 using UnityEngine.UIElements;
 
 namespace FirstLight.Game.UIElements
 {
 	/// <summary>
-	/// A button that has it's text set from a I2 Localization key.
+	/// A button that has it's text set from a bundled game translation key.
 	/// </summary>
-	public class LocalizedTextField : TextField
+	[UxmlElement]
+	public partial class LocalizedTextField : TextField
 	{
-		private string labelLocalizationKey { get; set; }
-		private bool showCopyButton { get; set; }
+		private string _labelLocalizationKey;
+		[UxmlAttribute("label-localization-key")]
+		private string labelLocalizationKey
+		{
+			get => _labelLocalizationKey;
+			set => LocalizeLabel(value);
+		}
+		private bool _showCopyButton;
+		[UxmlAttribute("show-copy-button")]
+		private bool showCopyButton
+		{
+			get => _showCopyButton;
+			set => EnableCopyButton(value);
+		}
 		public event Action OnCopied;
 
 		private ImageButton _copyButton;
@@ -31,9 +44,9 @@ namespace FirstLight.Game.UIElements
 		/// </summary>
 		public void LocalizeLabel(string labelKey)
 		{
-			labelLocalizationKey = labelKey;
+			_labelLocalizationKey = labelKey;
 			label = string.IsNullOrEmpty(labelKey) ? string.Empty :
-				LocalizationManager.TryGetTranslation(labelKey, out var translation) ? translation : $"#{labelKey}#";
+				GameLocalization.TryGetTranslation(labelKey, out var translation) ? translation : $"#{labelKey}#";
 		}
 
 		/// <summary>
@@ -41,13 +54,13 @@ namespace FirstLight.Game.UIElements
 		/// </summary>
 		public void EnableCopyButton(bool enable)
 		{
-			showCopyButton = enable;
+			_showCopyButton = enable;
 			if (enable && _copyButton == null)
 			{
 				_copyButton = new ImageButton {name = "copy-button"};
 				Add(_copyButton);
 				_copyButton.AddToClassList("unity-text-field__copy-button");
-				
+
 				_copyButton.clicked += () =>
 				{
 					UIUtils.SaveToClipboard(value);
@@ -58,36 +71,6 @@ namespace FirstLight.Game.UIElements
 			{
 				_copyButton.RemoveFromHierarchy();
 				_copyButton = null;
-			}
-		}
-
-		public new class UxmlFactory : UxmlFactory<LocalizedTextField, UxmlTraits>
-		{
-		}
-
-		public new class UxmlTraits : TextField.UxmlTraits
-		{
-			private readonly UxmlStringAttributeDescription _labelLocalizationKeyAttribute = new ()
-			{
-				name = "label-localization-key",
-				use = UxmlAttributeDescription.Use.Required
-			};
-
-			private readonly UxmlBoolAttributeDescription _showCopyButton = new ()
-			{
-				name = "show-copy-button",
-				use = UxmlAttributeDescription.Use.Optional,
-				defaultValue = false
-			};
-
-			public override void Init(VisualElement ve, IUxmlAttributes bag, CreationContext cc)
-			{
-				base.Init(ve, bag, cc);
-
-				var ltf = (LocalizedTextField) ve;
-
-				ltf.LocalizeLabel(_labelLocalizationKeyAttribute.GetValueFromBag(bag, cc));
-				ltf.EnableCopyButton(_showCopyButton.GetValueFromBag(bag, cc));
 			}
 		}
 	}

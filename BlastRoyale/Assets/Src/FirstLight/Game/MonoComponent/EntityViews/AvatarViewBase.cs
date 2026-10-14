@@ -1,7 +1,8 @@
+using MainInstaller = FirstLight.Game.Utils.MainInstaller;
 using System;
 using System.Collections;
 using FirstLight.Game.Domains.VFX;
-using FirstLight.Services;
+using GameLovers.Services;
 using FirstLight.Game.Ids;
 using FirstLight.Game.MonoComponent.Collections;
 using FirstLight.Game.MonoComponent.Vfx;
@@ -9,7 +10,6 @@ using FirstLight.Game.Services;
 using FirstLight.Game.Utils;
 using Photon.Deterministic;
 using Quantum;
-using Sirenix.OdinInspector;
 using UnityEngine;
 
 namespace FirstLight.Game.MonoComponent.EntityViews

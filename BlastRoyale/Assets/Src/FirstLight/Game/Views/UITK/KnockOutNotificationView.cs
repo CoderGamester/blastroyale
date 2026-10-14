@@ -1,13 +1,14 @@
+using FirstLight.Inspector;
+using MainInstaller = FirstLight.Game.Utils.MainInstaller;
 using System;
 using FirstLight.Game.Messages;
 using FirstLight.Game.Services;
 using FirstLight.Game.UIElements;
 using FirstLight.Game.Utils;
 using FirstLight.Server.SDK.Modules.GameConfiguration;
-using FirstLight.UIService;
+using FirstLight.Game.UI;
 using Quantum;
 using Quantum.Systems;
-using Sirenix.OdinInspector;
 using UnityEngine;
 using UnityEngine.Playables;
 using UnityEngine.UIElements;
@@ -20,8 +21,8 @@ namespace FirstLight.Game.Views.UITK
 	[Serializable]
 	public class KnockOutNotificationView : UIView
 	{
-		[Required, SerializeField] private PlayableDirector _friendKnockedOutPlayable;
-		[Required, SerializeField] private PlayableDirector _knockedOutPlayable;
+		[SerializeField, InspectorField(Required = true)] private PlayableDirector _friendKnockedOutPlayable;
+		[SerializeField, InspectorField(Required = true)] private PlayableDirector _knockedOutPlayable;
 
 		private IGameNetworkService _gameNetworkService;
 		private IConfigsProvider _configsProvider;

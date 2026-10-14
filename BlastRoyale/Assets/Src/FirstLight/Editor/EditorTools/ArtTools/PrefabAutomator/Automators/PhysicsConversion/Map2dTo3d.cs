@@ -1,3 +1,4 @@
+using Quantum;
 using UnityEditor;
 using UnityEngine;
 
@@ -17,7 +18,7 @@ namespace FirstLight.Editor.EditorTools.ArtTools
 			GUILayout.Label("Update Map Colliders", EditorStyles.boldLabel);
 			GUILayout.Label("Ports all quantum static colliders to 3d static colliders.");
 		}
-       
+
 		protected override bool OnUpdateGameObject(GameObject o)
 		{
 			return TryMigrateBox(o) || TryMigrateSphere(o);
@@ -38,7 +39,7 @@ namespace FirstLight.Editor.EditorTools.ArtTools
 
 			return true;
 		}
-       
+
 		private bool TryMigrateSphere(GameObject o)
 		{
 			var colliders = o.GetComponentsInChildren<QuantumStaticCircleCollider2D>();

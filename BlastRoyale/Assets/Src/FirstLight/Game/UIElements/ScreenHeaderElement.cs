@@ -1,6 +1,6 @@
 using System;
 using FirstLight.Game.Utils;
-using FirstLight.UIService;
+using FirstLight.Game.UI;
 using Photon.Realtime;
 using UnityEngine.UIElements;
 
@@ -9,7 +9,8 @@ namespace FirstLight.Game.UIElements
 	/// <summary>
 	/// Displays the common header element with a title and a subtitle.
 	/// </summary>
-	public class ScreenHeaderElement : VisualElement
+	[UxmlElement]
+	public partial class ScreenHeaderElement : VisualElement
 	{
 		private const string USS_BLOCK = "screen-header";
 
@@ -26,8 +27,20 @@ namespace FirstLight.Game.UIElements
 		/// </summary>
 		public Action backClicked;
 
-		private string titleKey { get; set; }
-		private string subtitleKey { get; set; }
+		private string _titleKey;
+		[UxmlAttribute("title-key")]
+		private string titleKey
+		{
+			get => _titleKey;
+			set { _titleKey = value; _title.text = string.IsNullOrWhiteSpace(value) ? "" : value.LocalizeKey(); }
+		}
+		private string _subtitleKey;
+		[UxmlAttribute("subtitle-key")]
+		private string subtitleKey
+		{
+			get => _subtitleKey;
+			set { _subtitleKey = value; SetSubtitle(string.IsNullOrWhiteSpace(value) ? "" : value.LocalizeKey()); }
+		}
 
 		public VisualElement Title => _title;
 
@@ -38,6 +51,7 @@ namespace FirstLight.Game.UIElements
 
 		public ScreenHeaderElement()
 		{
+			focusable = true;
 			AddToClassList(USS_BLOCK);
 			// AddToClassList("anim-delay-0");
 			// AddToClassList("anim-fade");
@@ -52,7 +66,7 @@ namespace FirstLight.Game.UIElements
 
 			_safeAreaContainer.Add(_back = new ImageButton {name = "back"});
 			_back.AddToClassList(USS_BACK);
-			_back.AddToClassList(UIService.UIService.SFX_CLICK_BACKWARDS);
+			_back.AddToClassList(FirstLight.Game.UI.UIService.SFX_CLICK_BACKWARDS);
 			_back.clicked += () => backClicked?.Invoke();
 
 			_safeAreaContainer.Add(_title = new LabelOutlined("Title") {name = "title"});
@@ -64,6 +78,7 @@ namespace FirstLight.Game.UIElements
 			var centerContent = new VisualElement {name = "separator", pickingMode = PickingMode.Ignore};
 			centerContent.AddToClassList(USS_SEPARATOR);
 			_safeAreaContainer.Add(centerContent);
+			SetTitle("");
 		}
 
 		public void AdjustLabelWidthConsidering(float offset, params VisualElement[] elements)
@@ -114,37 +129,6 @@ namespace FirstLight.Game.UIElements
 			{
 				_subTitle.style.display = DisplayStyle.Flex;
 				_subTitle.text = subtitle;
-			}
-		}
-
-		public new class UxmlFactory : UxmlFactory<ScreenHeaderElement, UxmlTraits>
-		{
-		}
-
-		public new class UxmlTraits : ImageButton.AutoFocusTrait
-		{
-			private readonly UxmlStringAttributeDescription _titleKeyAttribute = new ()
-			{
-				name = "title-key",
-				use = UxmlAttributeDescription.Use.Required
-			};
-
-			private readonly UxmlStringAttributeDescription _subTitleKeyAttribute = new ()
-			{
-				name = "subtitle-key",
-				use = UxmlAttributeDescription.Use.Optional
-			};
-
-			public override void Init(VisualElement ve, IUxmlAttributes bag, CreationContext cc)
-			{
-				base.Init(ve, bag, cc);
-
-				var she = (ScreenHeaderElement) ve;
-				she.titleKey = _titleKeyAttribute.GetValueFromBag(bag, cc);
-				she.subtitleKey = _subTitleKeyAttribute.GetValueFromBag(bag, cc);
-
-				she.SetTitle(string.IsNullOrWhiteSpace(she.titleKey) ? "" : she.titleKey.LocalizeKey(),
-					string.IsNullOrWhiteSpace(she.subtitleKey) ? "" : she.subtitleKey.LocalizeKey());
 			}
 		}
 	}

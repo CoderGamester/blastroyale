@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Cysharp.Threading.Tasks;
@@ -9,15 +9,15 @@ using FirstLight.Game.Services.Authentication;
 using FirstLight.Game.Utils;
 using FirstLight.Game.Utils.UCSExtensions;
 using FirstLight.Server.SDK.Modules.GameConfiguration;
-using FirstLight.Services;
-using I2.Loc;
+using GameLovers.Services;
+using FirstLight.Game.Localization;
 using JetBrains.Annotations;
 using Photon.Realtime;
 using Quantum;
 using Unity.Services.Authentication;
 using UnityEngine;
 using Assert = UnityEngine.Assertions.Assert;
-using Hashtable = ExitGames.Client.Photon.Hashtable;
+using Hashtable = Photon.Client.PhotonHashtable;
 using UniTaskCompletionSource = Cysharp.Threading.Tasks.UniTaskCompletionSource;
 
 namespace FirstLight.Game.Services.RoomService
@@ -87,7 +87,7 @@ namespace FirstLight.Game.Services.RoomService
 		QuantumGameModeConfig GetGameModeConfig(string gameModeId);
 
 		/// <summary>
-		/// 
+		///
 		/// Join a specified room by name
 		/// </summary>
 		/// <param name="roomName">Name of the room to join</param>
@@ -243,11 +243,14 @@ namespace FirstLight.Game.Services.RoomService
 		{
 			Assert.IsNull(_roomJoinTcs, "JoinRoomAsync called while another join operation is in progress");
 
-			_roomJoinTcs = new UniTaskCompletionSource();
-
-			JoinRoom(roomName, playerProperties);
-
-			return _roomJoinTcs.Task;
+			var completion = new UniTaskCompletionSource();
+			_roomJoinTcs = completion;
+			if (!JoinRoom(roomName, playerProperties))
+			{
+				_roomJoinTcs = null;
+				completion.TrySetException(new InvalidOperationException("Photon did not accept the room join request."));
+			}
+			return completion.Task;
 		}
 
 		/// <summary>
@@ -273,11 +276,14 @@ namespace FirstLight.Game.Services.RoomService
 		{
 			Assert.IsNull(_roomCreationTcs, "CreateRoomAsync called while another create operation is in progress");
 
-			_roomCreationTcs = new UniTaskCompletionSource();
-
-			CreateRoom(setup, false, playerJoinRoomProperties);
-
-			return _roomCreationTcs.Task;
+			var completion = new UniTaskCompletionSource();
+			_roomCreationTcs = completion;
+			if (!CreateRoom(setup, false, playerJoinRoomProperties))
+			{
+				_roomCreationTcs = null;
+				completion.TrySetException(new InvalidOperationException("Photon did not accept the room creation request."));
+			}
+			return completion.Task;
 		}
 
 		/// <summary>
@@ -317,7 +323,7 @@ namespace FirstLight.Game.Services.RoomService
 
 			FLog.Info("LeaveRoom");
 
-			return _networkService.QuantumClient.OpLeaveRoom(becomeInactive, true);
+			return _networkService.QuantumClient.OpLeaveRoom(becomeInactive);
 		}
 
 		public byte GetMaxSpectators(MatchType matchType)
@@ -625,7 +631,7 @@ namespace FirstLight.Game.Services.RoomService
 		private void ResetLocalPlayerProperties(PlayerJoinRoomProperties properties = null)
 		{
 			FLog.Verbose("Setting local player properties");
-			// reconnection edge case where 
+			// reconnection edge case where
 			if (_networkService.QuantumClient.State == ClientState.Joining)
 			{
 				FLog.Warn("Skipped property reset, client was still joining");

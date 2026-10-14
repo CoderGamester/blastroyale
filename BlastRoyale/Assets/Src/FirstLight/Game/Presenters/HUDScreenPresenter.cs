@@ -1,3 +1,5 @@
+using FirstLight.Inspector;
+using MainInstaller = FirstLight.Game.Utils.MainInstaller;
 using System.Threading.Tasks;
 using Cysharp.Threading.Tasks;
 using FirstLight.FLogger;
@@ -11,10 +13,9 @@ using FirstLight.Game.Utils;
 using FirstLight.Game.Views.MatchHudViews;
 using FirstLight.Game.Views.UITK;
 using FirstLight.UiService;
-using FirstLight.UIService;
+using FirstLight.Game.UI;
 using Quantum;
 using Quantum.Systems;
-using Sirenix.OdinInspector;
 using UnityEngine;
 using UnityEngine.InputSystem.LowLevel;
 using UnityEngine.Playables;
@@ -26,64 +27,64 @@ namespace FirstLight.Game.Presenters
 	{
 		private const string USS_SKYDIVING = "skydiving";
 
-		[SerializeField, Required] private GameObject _legacyMinimap;
-		[SerializeField, Required] private MiniMapView _legacyMinimapView;
+		[SerializeField, InspectorField(Required = true)] private GameObject _legacyMinimap;
+		[SerializeField, InspectorField(Required = true)] private MiniMapView _legacyMinimapView;
 
-		[SerializeField, Required, TabGroup("Animation")]
+		[SerializeField, InspectorField(Required = true), UnityEngine.Header("Animation")]
 		private PlayableDirector _areaShrinkingDirector;
 
-		[SerializeField, Required, TabGroup("Animation")]
+		[SerializeField, InspectorField(Required = true)]
 		private PlayableDirector _blasted1Director;
 
-		[SerializeField, Required, TabGroup("Animation")]
+		[SerializeField, InspectorField(Required = true)]
 		private PlayableDirector _blasted2Director;
 
-		[SerializeField, Required, TabGroup("Animation")]
+		[SerializeField, InspectorField(Required = true)]
 		private PlayableDirector _blasted3Director;
 
-		[SerializeField, Required, TabGroup("Animation")]
+		[SerializeField, InspectorField(Required = true)]
 		private PlayableDirector _blastedBeastDirector;
 
-		[SerializeField, Required, TabGroup("Animation")]
+		[SerializeField, InspectorField(Required = true)]
 		private Gradient _outOfAmmoGradient;
 
-		[SerializeField, Required, TabGroup("Animation")]
+		[SerializeField]
 		private int _lowHPThreshold = 10;
 
-		[SerializeField, Required, TabGroup("Input")]
+		[SerializeField, InspectorField(Required = true), UnityEngine.Header("Input")]
 		private UnityInputScreenControl _moveDirectionJoystickInput;
 
-		[SerializeField, Required, TabGroup("Input")]
+		[SerializeField, InspectorField(Required = true)]
 		private UnityInputScreenControl _moveDownJoystickInput;
 
-		[SerializeField, Required, TabGroup("Input")]
+		[SerializeField, InspectorField(Required = true)]
 		private UnityInputScreenControl _aimDirectionJoystickInput;
 
-		[SerializeField, Required, TabGroup("Input")]
+		[SerializeField, InspectorField(Required = true)]
 		private UnityInputScreenControl _aimDownJoystickInput;
 
-		[SerializeField, Required, TabGroup("Input")]
+		[SerializeField, InspectorField(Required = true)]
 		private UnityInputScreenControl _weaponSwitchInput;
 
-		[SerializeField, Required, TabGroup("Input")]
+		[SerializeField, InspectorField(Required = true)]
 		private UnityInputScreenControl _special0PressedInput;
 
-		[SerializeField, Required, TabGroup("Input")]
+		[SerializeField, InspectorField(Required = true)]
 		private UnityInputScreenControl _special1PressedInput;
 
-		[SerializeField, Required, TabGroup("Input")]
+		[SerializeField, InspectorField(Required = true)]
 		private UnityInputScreenControl _specialAimInput;
 
-		[SerializeField, Required, TabGroup("Input")]
+		[SerializeField, InspectorField(Required = true)]
 		private UnityInputScreenControl _specialCancelInput;
-		
-		[SerializeField, Required, TabGroup("Input")]
+
+		[SerializeField, InspectorField(Required = true)]
 		private UnityInputScreenControl _minimapToggleInput;
 
 		private IGameServices _gameServices;
 		private IGameDataProvider _dataProvider;
 
-		[SerializeField, TabGroup("Views")] private KnockOutNotificationView _knockOutNotificationView = new ();
+		[SerializeField, UnityEngine.Header("Views")] private KnockOutNotificationView _knockOutNotificationView = new ();
 
 		// ReSharper disable NotAccessedField.Local
 		private WeaponDisplayView _weaponDisplayView;
@@ -139,7 +140,7 @@ namespace FirstLight.Game.Presenters
 			_weaponDisplayView.OutOfAmmoColors = _outOfAmmoGradient;
 			_matchTimerView.SetAreaShrinkingDirector(_areaShrinkingDirector);
 			_statusNotificationsView.Init(_blasted1Director, _blasted2Director, _blasted3Director, _blastedBeastDirector, _lowHPThreshold);
-			
+
 			// TODO: Move all the joystick stuff into a view
 			if (_gameServices.LocalPrefsService.SwapJoysticks)
 			{
@@ -176,7 +177,7 @@ namespace FirstLight.Game.Presenters
 			_specialButtonsView.OnSpecial1Pressed += e => InputState.Change(_special1PressedInput.control, e);
 			_specialButtonsView.OnDrag += e => InputState.Change(_specialAimInput.control, e);
 			_specialButtonsView.OnCancel += e => InputState.Change(_specialCancelInput.control, e);
-			
+
 			_legacyMinimap.SetActive(false);
 		}
 
@@ -220,9 +221,9 @@ namespace FirstLight.Game.Presenters
 				_statusBarsView.InitAll();
 				SetKnockedOutStatus(ReviveSystem.IsKnockedOut(f, playerEntity));
 			});
-			
+
 			ShowMinimapDelayed().Forget();
-			
+
 			return base.OnScreenOpen(reload);
 		}
 
@@ -238,7 +239,7 @@ namespace FirstLight.Game.Presenters
 		private async UniTaskVoid ShowMinimapDelayed()
 		{
 			await UniTask.WaitUntil(() => !_gameServices.UIService.IsScreenOpen<SwipeTransitionScreenPresenter>());
-			// TECH DEBT, when reconnecting dead players will first open the HUD (this screen) then open the spectator in the 
+			// TECH DEBT, when reconnecting dead players will first open the HUD (this screen) then open the spectator in the
 			// next frame, so this is no longer visible
 			// Ideally we would not open the hud if the player is dead, but currently we open the hud before starting the simulation
 			// so we don't know if the player is dead or alive
@@ -254,7 +255,7 @@ namespace FirstLight.Game.Presenters
 
 		private void OnMenuClicked()
 		{
-			_gameServices.MessageBrokerService.Publish(new QuitGameClickedMessage());
+			_gameServices.MessageBrokerService.PublishSafe(new QuitGameClickedMessage());
 		}
 
 		private void HideControls(bool hide)

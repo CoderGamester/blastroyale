@@ -1,19 +1,18 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Reflection;
 using FirstLight.Game.Configs;
 using Quantum;
-using Quantum.Inspector;
-using Sirenix.OdinInspector;
-using Sirenix.OdinInspector.Editor;
-using Sirenix.Utilities;
+using UnityEditor;
+using UnityEngine;
 
 namespace FirstLight.Editor.Inspector
 {
-	public class MetaItemDropOverwriteProcessor : OdinAttributeProcessor<MetaItemDropOverwrite>
+	/// <summary>Native drawers retain the former config choices and numeric constraints.</summary>
+	[CustomPropertyDrawer(typeof(MetaItemDropOverwrite))]
+	public class MetaItemDropOverwriteDrawer : NativeConfigDrawer
 	{
-		private static IEnumerable<GameId> ValidMetaItems = new[]
+		private static readonly GameId[] ValidMetaItems =
 		{
 			GameId.NOOB, GameId.COIN, GameId.BPP, GameId.BlastBuck, GameId.NOOBGolden, GameId.NOOBRainbow, GameId.NOOBSilver,
 			GameId.PartnerANCIENT8, GameId.PartnerAPECOIN, GameId.PartnerBEAM, GameId.PartnerBLOCKLORDS,
@@ -23,107 +22,104 @@ namespace FirstLight.Editor.Inspector
 			GameId.PartnerXBORG, GameId.PartnerBREED, GameId.PartnerMEME, GameId.PartnerYGG, GameId.FestiveSNOWFLAKE,
 			GameId.EventTicket, GameId.FestiveLUNARCOIN, GameId.FestiveFEATHER, GameId.FestiveLANTERN, GameId.FestiveEGG
 		};
-
-		public override void ProcessChildMemberAttributes(InspectorProperty parentProperty, MemberInfo member, List<Attribute> attributes)
+		protected override void DrawField(Rect position, SerializedProperty property)
 		{
-			var className = GetType().GetNiceFullName();
-
-			switch (member.Name)
-			{
-				case nameof(MetaItemDropOverwrite.Id):
-				{
-					attributes.Add(new ValueDropdownAttribute($"@{className}.{nameof(ValidMetaItems)}"));
-					break;
-				}
-			}
+			if (property.name != nameof(MetaItemDropOverwrite.Id)) { base.DrawField(position, property); return; }
+			var values = ValidMetaItems.Select(value => (int) value).ToArray();
+			var names = ValidMetaItems.Select(value => value.ToString()).ToArray();
+			property.intValue = EditorGUI.IntPopup(position, property.displayName, property.intValue, names, values);
 		}
 	}
 
-	public class SimulationMatchProcessor : OdinAttributeProcessor<SimulationMatchConfig>
+	[CustomPropertyDrawer(typeof(SimulationMatchConfig))]
+	public class SimulationMatchConfigDrawer : NativeConfigDrawer
 	{
-		public override void ProcessChildMemberAttributes(InspectorProperty parentProperty, MemberInfo member, List<Attribute> attributes)
+		protected override void DrawField(Rect position, SerializedProperty property)
 		{
-			var className = GetType().GetNiceFullName();
-			if (attributes.Any(a => a.GetType() == typeof(HideInInspectorAttribute)))
-			{
-				attributes.Add(new HideIfAttribute("@true"));
-				return;
-			}
-
-			switch (member.Name)
+			switch (property.name)
 			{
 				case nameof(SimulationMatchConfig.GameModeID):
-				{
-					attributes.Add(new ValueDropdownAttribute($"@{className}.{nameof(GameModes)}"));
+					DrawStringChoice(position, property, GameConfigsLoader.EditorConfigProvider.GetProvider().GetConfigsList<QuantumGameModeConfig>().Select(config => config.Id));
 					break;
-				}
 				case nameof(SimulationMatchConfig.TeamSize):
-				{
-					attributes.Add(new PropertyRangeAttribute(1, 6));
+					property.longValue = EditorGUI.IntSlider(position, property.displayName, (int) property.longValue, 1, 6);
 					break;
-				}
 				case nameof(SimulationMatchConfig.MapId):
-				{
-					attributes.Add(new ValueDropdownAttribute($"@{className}.{nameof(GetMapIds)}()"));
+					DrawStringChoice(position, property, new[] { GameId.Any.ToString() }.Concat(GameConfigsLoader.EditorConfigProvider.GetProvider().GetConfigsList<QuantumMapConfig>().Select(config => config.Map.ToString())));
 					break;
-				}
 				case nameof(SimulationMatchConfig.Mutators):
-				{
-					attributes.Add(new ValueDropdownAttribute($"@{className}.{nameof(Mutators)}"));
+					property.intValue = (int) (Mutator) EditorGUI.EnumPopup(position, property.displayName, (Mutator) property.intValue);
 					break;
-				}
 				case nameof(SimulationMatchConfig.BotOverwriteDifficulty):
 				{
-					attributes.Add(new ValueDropdownAttribute($"@{className}.{nameof(GetBotDifficulties)}(this.GameModeID)"));
+					var gameMode = property.serializedObject.FindProperty(property.propertyPath.Substring(0, property.propertyPath.LastIndexOf('.') + 1) + nameof(SimulationMatchConfig.GameModeID))?.stringValue;
+					var configs = GameConfigsLoader.EditorConfigProvider.LoadFromAddressable<BotConfigs>();
+					var values = new[] { -1 }.Concat(configs.Configs.Where(config => config.GameMode == gameMode).Select(config => (int) config.Difficulty)).Distinct().ToArray();
+					var names = values.Select(value => value == -1 ? "Automatic" : "Difficulty " + value).ToArray();
+					property.intValue = EditorGUI.IntPopup(position, property.displayName, property.intValue, names, values);
 					break;
 				}
 				case nameof(SimulationMatchConfig.MaxPlayersOverwrite):
 				{
-					attributes.Add(new ValueDropdownAttribute($"@{className}.{nameof(GetMaxPlayersOverwrite)}()"));
+					var values = Enumerable.Range(0, 49).ToArray();
+					property.intValue = EditorGUI.IntPopup(position, property.displayName, property.intValue, values.Select(value => value == 0 ? "Automatic" : value + " Players").ToArray(), values);
 					break;
 				}
 				case nameof(SimulationMatchConfig.UniqueConfigId):
-				{
-					attributes.Add(new ReadOnlyAttribute());
+					using (new EditorGUI.DisabledScope(true)) base.DrawField(position, property);
 					break;
+				default: base.DrawField(position, property); break;
+			}
+		}
+
+		private static void DrawStringChoice(Rect position, SerializedProperty property, IEnumerable<string> options)
+		{
+			var values = options.Distinct().ToList();
+			// Preserve a remote/custom value rather than silently replacing it when local catalogues differ.
+			if (!values.Contains(property.stringValue)) values.Insert(0, property.stringValue);
+			var selected = EditorGUI.Popup(position, property.displayName, values.IndexOf(property.stringValue), values.ToArray());
+			if (selected >= 0) property.stringValue = values[selected];
+		}
+	}
+
+	public abstract class NativeConfigDrawer : PropertyDrawer
+	{
+		public override float GetPropertyHeight(SerializedProperty property, GUIContent label)
+		{
+			var height = EditorGUIUtility.singleLineHeight;
+			if (property.isExpanded)
+				foreach (var child in Children(property)) height += EditorGUI.GetPropertyHeight(child, true) + EditorGUIUtility.standardVerticalSpacing;
+			return height;
+		}
+		public override void OnGUI(Rect position, SerializedProperty property, GUIContent label)
+		{
+			EditorGUI.BeginProperty(position, label, property);
+			var line = new Rect(position.x, position.y, position.width, EditorGUIUtility.singleLineHeight);
+			property.isExpanded = EditorGUI.Foldout(line, property.isExpanded, label, true);
+			if (property.isExpanded)
+			{
+				EditorGUI.indentLevel++;
+				foreach (var child in Children(property))
+				{
+					line.y += line.height + EditorGUIUtility.standardVerticalSpacing;
+					line.height = EditorGUI.GetPropertyHeight(child, true);
+					DrawField(line, child);
 				}
+				EditorGUI.indentLevel--;
 			}
+			EditorGUI.EndProperty();
 		}
-
-		public static IEnumerable<string> GameModes => GameConfigsLoader.EditorConfigProvider.GetProvider().GetConfigsList<QuantumGameModeConfig>().Select(c => c.Id);
-		public static IEnumerable<string> Mutators => Enum.GetValues(typeof(Mutator)).Cast<Mutator>().Select(m => m.ToString());
-
-		public static ValueDropdownList<int> GetMaxPlayersOverwrite()
+		protected virtual void DrawField(Rect position, SerializedProperty property) => EditorGUI.PropertyField(position, property, true);
+		private static IEnumerable<SerializedProperty> Children(SerializedProperty property)
 		{
-			var values = new ValueDropdownList<int>();
-			values.Add("Automatic", 0);
-			values.AddRange(Enumerable.Range(1, 48).Select(a => new ValueDropdownItem<int>(a + " Players", a)));
-			return values;
-		}
-
-		public static ValueDropdownList<string> GetMapIds()
-		{
-			var gms = new ValueDropdownList<string>();
-			gms.Add("Any", GameId.Any.ToString());
-			foreach (var gm in GameConfigsLoader.EditorConfigProvider.GetProvider().GetConfigsList<QuantumMapConfig>())
+			var child = property.Copy();
+			var end = property.GetEndProperty();
+			if (!child.NextVisible(true)) yield break;
+			do
 			{
-				gms.Add(gm.Map.ToString(), gm.Map.ToString());
-			}
-
-			return gms;
-		}
-
-		public static ValueDropdownList<int> GetBotDifficulties(string gameMode)
-		{
-			var gms = new ValueDropdownList<int>();
-			gms.Add("Automatic", -1);
-			var botConfigs = GameConfigsLoader.EditorConfigProvider.LoadFromAddressable<BotConfigs>();
-			foreach (var gm in botConfigs.Configs.Where(gm => gm.GameMode == gameMode))
-			{
-				gms.Add("Difficulty " + gm.Difficulty, (int) gm.Difficulty);
-			}
-
-			return gms;
+				if (SerializedProperty.EqualContents(child, end) || child.depth <= property.depth) yield break;
+				yield return child.Copy();
+			} while (child.NextVisible(false));
 		}
 	}
 }

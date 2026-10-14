@@ -3,8 +3,8 @@ using Cysharp.Threading.Tasks;
 using FirstLight.Game.Logic;
 using FirstLight.Game.Presenters;
 using FirstLight.Game.Utils;
-using FirstLight.UIService;
-using I2.Loc;
+using FirstLight.Game.UI;
+using FirstLight.Game.Localization;
 using Quantum;
 using UnityEngine;
 using UnityEngine.Events;
@@ -85,10 +85,10 @@ namespace FirstLight.Game.Services
 	/// <inheritdoc />
 	public class GenericDialogService : IGenericDialogService
 	{
-		private readonly UIService.UIService _uiService;
+		private readonly FirstLight.Game.UI.UIService _uiService;
 		private readonly ICurrencyDataProvider _currencyDataProvider;
 
-		public GenericDialogService(UIService.UIService uiService, ICurrencyDataProvider currencyDataProvider)
+		public GenericDialogService(FirstLight.Game.UI.UIService uiService, ICurrencyDataProvider currencyDataProvider)
 		{
 			_uiService = uiService;
 			_currencyDataProvider = currencyDataProvider;
@@ -148,16 +148,8 @@ namespace FirstLight.Game.Services
 
 		public async UniTask OpenPurchaseOrNotEnough(GenericPurchaseDialogPresenter.IPurchaseData data)
 		{
-			var priceCoin = data.Price.Id;
 			var ownedCurrency = _currencyDataProvider.GetCurrencyAmount(data.Price.Id);
-			if (priceCoin.IsInGroup(GameIdGroup.CryptoCurrency) && MainInstaller.ResolveWeb3().IsEnabled())
-			{
-				// we validate on client based on the prediction
-				ownedCurrency = MainInstaller.ResolveWeb3().GetWeb3Currencies()[priceCoin].TotalPredicted.Value;
-				
-				// TODO: Validate pending transactions to ensure consistency
-			}
-		
+
 			await _uiService.OpenScreen<GenericPurchaseDialogPresenter>(new GenericPurchaseDialogPresenter.StateData
 			{
 				PurchaseData = data,

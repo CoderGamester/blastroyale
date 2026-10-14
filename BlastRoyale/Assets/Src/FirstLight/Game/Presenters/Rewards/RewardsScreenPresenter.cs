@@ -1,3 +1,5 @@
+using FirstLight.Inspector;
+using MainInstaller = FirstLight.Game.Utils.MainInstaller;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,8 +11,7 @@ using FirstLight.Game.Services;
 using FirstLight.Game.UIElements;
 using FirstLight.Game.Utils;
 using FirstLight.UiService;
-using FirstLight.UIService;
-using Sirenix.OdinInspector;
+using FirstLight.Game.UI;
 using UnityEngine;
 using UnityEngine.Playables;
 using UnityEngine.UIElements;
@@ -19,7 +20,7 @@ using Button = UnityEngine.UIElements.Button;
 namespace FirstLight.Game.Presenters
 {
 	/// <summary>
-	/// Display a list of rewards, currently used inside the Battlepass Screen, but can be used anywhere. 
+	/// Display a list of rewards, currently used inside the Battlepass Screen, but can be used anywhere.
 	/// </summary>
 	public class RewardsScreenPresenter : UIPresenterData<RewardsScreenPresenter.StateData>
 	{
@@ -36,17 +37,17 @@ namespace FirstLight.Game.Presenters
 
 		#region Dependencies
 
-		[SerializeField, Required] private AnimatedBackground _animatedBackground;
-		[SerializeField, Required] private AnimatedBackground.AnimatedBackgroundColor _genericRewardBgColor;
-		[SerializeField, Required] private AnimatedBackground.AnimatedBackgroundColor _summaryBgColor;
+		[SerializeField, InspectorField(Required = true)] private AnimatedBackground _animatedBackground;
+		[SerializeField, InspectorField(Required = true)] private AnimatedBackground.AnimatedBackgroundColor _genericRewardBgColor;
+		[SerializeField, InspectorField(Required = true)] private AnimatedBackground.AnimatedBackgroundColor _summaryBgColor;
 
-		[SerializeField, Required, TabGroup("Animation")]
+		[SerializeField, InspectorField(Required = true), UnityEngine.Header("Animation")]
 		private PlayableDirector _genericRewardDirector;
 
-		[SerializeField, Required, TabGroup("Animation")]
+		[SerializeField, InspectorField(Required = true)]
 		private PlayableDirector _summaryDirector;
 
-		[SerializeField, Required, TabGroup("Animation")]
+		[SerializeField, InspectorField(Required = true)]
 		private PlayableDirector _fameSummaryDirector;
 
 		#endregion

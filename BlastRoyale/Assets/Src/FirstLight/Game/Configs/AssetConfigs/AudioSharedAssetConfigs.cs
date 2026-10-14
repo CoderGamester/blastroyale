@@ -1,4 +1,5 @@
-using FirstLight.AssetImporter;
+using FirstLight.Game.Configs;
+using GameLovers.Services.AssetsImporter;
 using FirstLight.Game.Ids;
 using FirstLight.Server.SDK.Modules.GameConfiguration;
 using UnityEngine;
@@ -10,7 +11,7 @@ namespace FirstLight.Game.Configs.AssetConfigs
 	/// </summary>
 	[IgnoreServerSerialization]
 	[CreateAssetMenu(fileName = "AudioSharedAssetConfigs", menuName = "ScriptableObjects/AssetConfigs/AudioSharedAssetConfigs")]
-	public class AudioSharedAssetConfigs : AssetConfigsScriptableObjectSimple<AudioId, AudioClipConfig>
+	public class AudioSharedAssetConfigs : DirectAssetConfigs<AudioId, AudioClipConfig>
 	{
 	}
 }

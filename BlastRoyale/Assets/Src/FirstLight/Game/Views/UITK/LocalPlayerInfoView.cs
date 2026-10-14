@@ -1,10 +1,11 @@
+using MainInstaller = FirstLight.Game.Utils.MainInstaller;
 using Cysharp.Threading.Tasks;
 using FirstLight.Game.Data;
 using FirstLight.Game.Logic;
 using FirstLight.Game.Services;
 using FirstLight.Game.UIElements;
 using FirstLight.Game.Utils;
-using FirstLight.UIService;
+using FirstLight.Game.UI;
 using Photon.Deterministic;
 using Quantum;
 using Quantum.Systems;

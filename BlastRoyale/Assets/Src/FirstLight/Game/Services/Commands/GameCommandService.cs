@@ -1,3 +1,5 @@
+using GameLovers.Services.Commands;
+using FirstLight.Game.Services;
 using System;
 using System.Linq;
 using FirstLight.FLogger;
@@ -6,15 +8,15 @@ using FirstLight.Game.Data;
 using FirstLight.Game.Logic;
 using FirstLight.Game.Logic.RPC;
 using FirstLight.Game.Utils;
-using FirstLight.NativeUi;
+using GameLovers.MobileServices.NativeUi;
 using FirstLight.Server.SDK.Modules;
 using FirstLight.Server.SDK.Modules.Commands;
-using FirstLight.Services;
+using GameLovers.Services;
 using PlayFab;
 
 namespace FirstLight.Game.Services
 {
-	
+
 	/// <summary>
 	/// Some player data might have intentional desyncs due to lack of realtime communication
 	/// This is to allow cheats not to screw em up
@@ -22,7 +24,7 @@ namespace FirstLight.Game.Services
 	[AttributeUsage(AttributeTargets.Struct | AttributeTargets.Class)]
 	public class IgnoredInForceUpdate : Attribute { }
 
-	
+
 	/// <inheritdoc cref="ICommandService{TGameLogic}"/>
 	public interface IGameCommandService
 	{
@@ -38,13 +40,13 @@ namespace FirstLight.Game.Services
 	/// <inheritdoc />
 	public class GameCommandService : IGameCommandService
 	{
-		private readonly IDataService _dataService;
+		private readonly IClientDataService _dataService;
 		private readonly IGameServices _services;
 		private readonly IGameLogic _logic;
 		private readonly ServerCommandQueue _serverCommandQueue;
 		private CommandExecutionContext _commandContext;
 
-		public GameCommandService(IGameBackendService gameBackendService, IGameLogic gameLogic, IDataService dataService,
+		public GameCommandService(IGameBackendService gameBackendService, IGameLogic gameLogic, IClientDataService dataService,
 								  IGameServices services)
 		{
 			_logic = gameLogic;
@@ -99,7 +101,7 @@ namespace FirstLight.Game.Services
 				var button = new AlertButton
 				{
 					Callback = () => { _services.QuitGame("Closing game exception popup"); },
-					Style = AlertButtonStyle.Negative,
+					Style = AlertButtonStyle.Cancel,
 					Text = "Quit Game"
 				};
 
@@ -146,8 +148,8 @@ namespace FirstLight.Game.Services
 				{
 					_services.QuitGame("Server desynch");
 				},
-				Style = AlertButtonStyle.Negative,
-				Text = "Quit Game"	
+				Style = AlertButtonStyle.Cancel,
+				Text = "Quit Game"
 			});
 #endif
 		}

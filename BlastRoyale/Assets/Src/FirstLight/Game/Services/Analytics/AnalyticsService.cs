@@ -1,5 +1,3 @@
-using Facebook.Unity;
-using Firebase.Analytics;
 using FirstLight.Game.Logic;
 using FirstLight.Game.Services.Analytics.Events;
 using FirstLight.Game.Utils;
@@ -35,7 +33,7 @@ namespace FirstLight.Game.Services.Analytics
 		public AnalyticsCallsUi UiCalls { get; }
 		public AnalyticsCallLeveling LevelingCalls { get; }
 
-		public AnalyticsService(IGameServices services, IGameDataProvider gameDataProvider, UIService.UIService uiService)
+		public AnalyticsService(IGameServices services, IGameDataProvider gameDataProvider, FirstLight.Game.UI.UIService uiService)
 		{
 			MatchCalls = new AnalyticsCallsMatch(this, services);
 			TutorialCalls = new AnalyticsCallsTutorial(this);
@@ -50,16 +48,6 @@ namespace FirstLight.Game.Services.Analytics
 			// Unity
 			Unity.Services.Analytics.AnalyticsService.Instance?.RecordEvent(e);
 
-			var eventName = e.ToEventName();
-			
-			// Firebase
-			FirebaseAnalytics.LogEvent(eventName, e.ToFirebaseParameters());
-			
-			// Facebook
-			if (FB.IsInitialized)
-			{
-				FB.LogAppEvent(eventName, parameters: e.ToFacebookParameters());	
-			}
 		}
 	}
 }

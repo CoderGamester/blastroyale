@@ -1,9 +1,9 @@
-﻿using System;
+using UnityEngine;
 
 namespace FirstLight.Game.Utils.Attributes
 
 {
-	public class SpriteClassAttribute : Attribute
+	public class SpriteClassAttribute : PropertyAttribute
 	{
 	}
 }

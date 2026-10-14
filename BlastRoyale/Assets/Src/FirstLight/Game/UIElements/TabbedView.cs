@@ -10,11 +10,9 @@ namespace FirstLight.Game.UIElements
 	///
 	/// Used to create a tabbed view with a tab bar and a content area.
 	/// </summary>
-	public class TabbedView : VisualElement
+	[UxmlElement]
+	public partial class TabbedView : VisualElement
 	{
-		public new class UxmlFactory : UxmlFactory<TabbedView, UxmlTraits>
-		{
-		}
 
 		private const string k_styleName = "TabbedView";
 		private const string s_UssClassName = "unity-tabbed-view";

@@ -1,3 +1,4 @@
+using MainInstaller = FirstLight.Game.Utils.MainInstaller;
 using System.Collections.Generic;
 using System.Linq;
 using Quantum;

@@ -1,8 +1,9 @@
+using FirstLight.Inspector;
+using MainInstaller = FirstLight.Game.Utils.MainInstaller;
 using System.Threading.Tasks;
 using FirstLight.Game.Ids;
 using FirstLight.Game.Utils;
 using Quantum;
-using Sirenix.OdinInspector;
 using UnityEngine;
 
 namespace FirstLight.Game.MonoComponent.EntityViews
@@ -18,15 +19,15 @@ namespace FirstLight.Game.MonoComponent.EntityViews
 
 		public ParticleSystem DestroyEffect;
 		public AudioId DestroyAudio;
-		
-		[SerializeField, Required] private Animator _animator;
+
+		[SerializeField, InspectorField(Required = true)] private Animator _animator;
 
 		protected override void OnAwake()
 		{
 			QuantumEvent.Subscribe<EventOnDestructibleScheduled>(this, HandleDestructionScheduled);
 			QuantumEvent.Subscribe<EventOnPlayerAttackHit>(this, HandleProjectileHit);
 		}
-		
+
 		protected override void OnInit(QuantumGame game)
 		{
 			var frame = game.Frames.Verified;
@@ -36,7 +37,7 @@ namespace FirstLight.Game.MonoComponent.EntityViews
 				var lifetime = destructible.TimeToDestroy - frame.Time;
 				StartDestruction(lifetime.AsFloat, destructible.SplashRadius.AsFloat);
 			}
-			
+
 			EntityView.OnEntityDestroyed.AddListener(OnEntityDestroyed);
 		}
 
@@ -54,7 +55,7 @@ namespace FirstLight.Game.MonoComponent.EntityViews
 			{
 				return;
 			}
-			
+
 			_animator.SetTrigger(_hitHash);
 		}
 
@@ -64,7 +65,7 @@ namespace FirstLight.Game.MonoComponent.EntityViews
 			{
 				return;
 			}
-			
+
 			var lifetime = callback.Destructible.TimeToDestroy - callback.Game.Frames.Verified.Time;
 
 			StartDestruction(Mathf.Max(0f, lifetime.AsFloat), callback.Destructible.SplashRadius.AsFloat);
@@ -84,7 +85,7 @@ namespace FirstLight.Game.MonoComponent.EntityViews
 			{
 				MainInstaller.ResolveServices().AudioFxService.PlayClip2D(DestroyAudio);
 			}
-			
+
 			await Task.Delay((int) (lifetime * 1000));
 
 			if (this.IsDestroyed())

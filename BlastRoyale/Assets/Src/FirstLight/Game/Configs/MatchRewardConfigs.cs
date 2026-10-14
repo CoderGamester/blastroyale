@@ -1,3 +1,4 @@
+using GameLovers.GameData;
 using System;
 using System.Collections.Generic;
 using FirstLight.Game.Utils;
@@ -32,5 +33,5 @@ namespace FirstLight.Game.Configs
 		}
 	}
 
-	
+
 }

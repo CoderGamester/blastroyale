@@ -1,3 +1,4 @@
+using GameLovers.GameData;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -12,7 +13,7 @@ namespace FirstLight.Game.Utils
 	public class SerializedDictionary<TKey,TValue> : UnitySerializedDictionary<TKey, TValue>
 	{
 	}
-	
+
 	public static class ConfigDictExtensions
 	{
 		public static TV Get<TK, TV>(this  List<Pair<TK, TV>> d, TK key) => d.First(kp => kp.Key.Equals(key)).Value;

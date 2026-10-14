@@ -1,3 +1,4 @@
+using MainInstaller = FirstLight.Game.Utils.MainInstaller;
 using FirstLight.Editor.Artifacts;
 using FirstLight.Game.Services;
 using FirstLight.Game.Utils;
@@ -8,7 +9,7 @@ using UnityEngine;
 namespace FirstLight.Editor.EditorTools
 {
 	/// <summary>
-	/// Editor menu regarding first light games game backend. 
+	/// Editor menu regarding first light games game backend.
 	/// </summary>
 	public static class BackendMenu
 	{
@@ -18,7 +19,7 @@ namespace FirstLight.Editor.EditorTools
 			$"{Application.dataPath}/../Assets/Libs/Photon/Quantum/Assemblies/";
 
 		private static string _backendPath => $"{Application.dataPath}/../../Backend";
-		
+
 		private static string _backendLibsPath => $"{_backendPath}/Lib";
 		private static string _backendResources => $"{_backendPath}/ServerCommon/Resources";
 
@@ -164,7 +165,7 @@ namespace FirstLight.Editor.EditorTools
 		[MenuItem("FLG/Backend/Clear Frame Snapshot")]
 		private static void OpenCurrentAccount()
 		{
-			var srv = new DataService();
+			var srv = new ClientDataService();
 			var data = srv.LoadData<AppData>();
 			data.LastCapturedFrameSnapshot = default;
 			srv.SaveData<AppData>();

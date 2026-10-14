@@ -1,3 +1,5 @@
+using FirstLight.Inspector;
+using MainInstaller = FirstLight.Game.Utils.MainInstaller;
 using System;
 using System.Linq;
 using Cinemachine;
@@ -13,7 +15,6 @@ using FirstLight.Game.Utils;
 using Photon.Deterministic;
 using Quantum;
 using Quantum.Systems.Bots;
-using Sirenix.OdinInspector;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -24,16 +25,16 @@ namespace FirstLight.Game.MonoComponent.Match
 	/// </summary>
 	public class FixedAdventureCameraMonoComponent : MonoBehaviour
 	{
-		[SerializeField, Required] private CinemachineVirtualCamera _spawnCamera;
-		[SerializeField, Required] private CinemachineVirtualCamera _adventureCamera;
-		[SerializeField, Required] private CinemachineVirtualCamera _deathCamera;
-		[SerializeField, Required] private CinemachineVirtualCamera _specialAimCamera;
-		[SerializeField, Required] private CinemachineVirtualCamera _winnerCamera;
+		[SerializeField, InspectorField(Required = true)] private CinemachineVirtualCamera _spawnCamera;
+		[SerializeField, InspectorField(Required = true)] private CinemachineVirtualCamera _adventureCamera;
+		[SerializeField, InspectorField(Required = true)] private CinemachineVirtualCamera _deathCamera;
+		[SerializeField, InspectorField(Required = true)] private CinemachineVirtualCamera _specialAimCamera;
+		[SerializeField, InspectorField(Required = true)] private CinemachineVirtualCamera _winnerCamera;
 
 		[SerializeField] private CinemachineVirtualCamera[] _spectateCameras;
 
 		//this object is locked to the player and used for more intriacate camera control
-		[SerializeField, Required] private GameObject _followObject;
+		[SerializeField, InspectorField(Required = true)] private GameObject _followObject;
 
 		private IGameServices _services;
 		private IMatchServices _matchServices;

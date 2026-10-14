@@ -1,3 +1,5 @@
+using MainInstaller = FirstLight.Game.Utils.MainInstaller;
+using FirstLight.Game.Services.Infrastructure;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -11,15 +13,15 @@ using FirstLight.Game.Messages;
 using FirstLight.Game.Services;
 using FirstLight.Game.Utils;
 using FirstLight.Game.Utils.UCSExtensions;
-using FirstLight.Statechart;
-using I2.Loc;
+using GameLovers.StatechartMachine;
+using FirstLight.Game.Localization;
 using Photon.Realtime;
 using PlayFab;
 using Quantum;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using ErrorCode = Photon.Realtime.ErrorCode;
-using Hashtable = ExitGames.Client.Photon.Hashtable;
+using Hashtable = Photon.Client.PhotonHashtable;
 using Random = UnityEngine.Random;
 
 namespace FirstLight.Game.StateMachines
@@ -375,7 +377,7 @@ namespace FirstLight.Game.StateMachines
 			}
 
 			_statechartTrigger(JoinedRoomEvent);
-			_services.MessageBrokerService.Publish(new JoinRoomMessage());
+			_services.MessageBrokerService.PublishSafe(new JoinRoomMessage());
 		}
 
 		public void OnJoinRoomFailed(short returnCode, string message)
@@ -455,7 +457,7 @@ namespace FirstLight.Game.StateMachines
 			FLog.Info("OnPingedRegions" + regionHandler.GetResults());
 			_services.ThreadService.MainThreadDispatcher.Enqueue(() =>
 			{
-				_services.MessageBrokerService.Publish(new PingedRegionsMessage()
+				_services.MessageBrokerService.PublishSafe(new PingedRegionsMessage()
 				{
 					RegionHandler = regionHandler
 				});

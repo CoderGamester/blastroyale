@@ -1,8 +1,8 @@
+using IDataProvider = FirstLight.Server.SDK.Models.IDataProvider;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
-using ExitGames.Client.Photon.StructWrapping;
 using FirstLight.Game.Configs;
 using FirstLight.Game.Configs.Remote;
 using FirstLight.Game.Data;

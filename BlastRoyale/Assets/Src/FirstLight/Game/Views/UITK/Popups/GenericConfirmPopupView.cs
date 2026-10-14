@@ -1,6 +1,6 @@
 using System;
 using FirstLight.Game.UIElements;
-using FirstLight.UIService;
+using FirstLight.Game.UI;
 using QuickEye.UIToolkit;
 using UnityEngine.UIElements;
 
@@ -18,7 +18,7 @@ namespace FirstLight.Game.Views.UITK.Popups
         private readonly string _confirmText;
         private readonly Action _onConfirmAction;
         private readonly Action _onCancelAction;
-        
+
 		public GenericConfirmPopupView(string confirmText, Action onConfirmAction, Action onCancelAction)
         {
             _confirmText = confirmText;

@@ -26,7 +26,7 @@ namespace FirstLight.Editor.AssetImporters
 
 			var svg = assetImporter as SVGImporter;
 			if (svg == null) return;
-			svg.SvgType = SVGType.UIToolkit;
+			svg.SvgType = SVGType.VectorImage;
 		}
 
 		public void OnPreprocessTexture()

@@ -1,3 +1,5 @@
+using MainInstaller = FirstLight.Game.Utils.MainInstaller;
+using FirstLight.Game.Services.Infrastructure;
 using System;
 using System.Threading;
 using System.Threading.Tasks;
@@ -16,7 +18,8 @@ namespace FirstLight.Game.UIElements
 	/// Used for loading remote avatars, it automatically handles the loading state
 	/// use <see cref="SetAvatar(string)"/> method to load the texture
 	/// </summary>
-	public class RemoteAvatarElement : VisualElement
+	[UxmlElement]
+	public partial class RemoteAvatarElement : VisualElement
 	{
 		private const string USS_BLOCK = "remote-avatar";
 		private const string USS_REAL = "remote-avatar__real";
@@ -39,7 +42,7 @@ namespace FirstLight.Game.UIElements
 			// because the elements detached and gets cleaned up
 			// RegisterCallback<DetachFromPanelEvent>(OnDetachFromPanel);
 		}
-		
+
 		private void OnDetachFromPanel(DetachFromPanelEvent evt)
 		{
 			UnregisterCallback<DetachFromPanelEvent>(OnDetachFromPanel);
@@ -48,7 +51,7 @@ namespace FirstLight.Game.UIElements
 				_realAvatar.style.backgroundImage = null;
 				_realAvatar.style.opacity = 0;
 			}
-				
+
 			if (_texture == null) return;
 			UnityEngine.Object.Destroy(_texture);
 			_texture  = null;
@@ -70,7 +73,7 @@ namespace FirstLight.Game.UIElements
 			var task = MainInstaller.ResolveServices().RemoteTextureService.RequestTexture(url, true, cancellationToken);
 			if (!cancellationToken.IsCancellationRequested)
 			{
-				await SetAvatar(task);	
+				await SetAvatar(task);
 			}
 		}
 
@@ -148,8 +151,5 @@ namespace FirstLight.Game.UIElements
 			_realAvatar.style.opacity = 0;
 		}
 
-		public new class UxmlFactory : UxmlFactory<RemoteAvatarElement>
-		{
-		}
 	}
 }

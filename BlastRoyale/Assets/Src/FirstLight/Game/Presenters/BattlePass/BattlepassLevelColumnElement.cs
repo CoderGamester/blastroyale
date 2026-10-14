@@ -10,7 +10,8 @@ namespace FirstLight.Game.Presenters.BattlePass
 	/// <summary>
 	/// Displays a glint over an element. Must be used with a vector mask for shaped glints.
 	/// </summary>
-	public class BattlepassLevelColumnElement : VisualElement
+	[UxmlElement]
+	public partial class BattlepassLevelColumnElement : VisualElement
 	{
 		private const string USS_BAR_GRAY = "bar__level--gray";
 
@@ -39,7 +40,6 @@ namespace FirstLight.Game.Presenters.BattlePass
 			//DisablePaid();
 		}
 
-
 		private void QueryBar()
 		{
 			var element = this.Q<VisualElement>("BattlePassLevelBar").Required();
@@ -59,7 +59,7 @@ namespace FirstLight.Game.Presenters.BattlePass
 		{
 			this.PaidReward.SetDisplay(false);
 		}
-		
+
 		public void SetBarData(uint level, bool completed, bool currentLevel, uint buyLevelPrice)
 		{
 			Level = level;
@@ -82,12 +82,5 @@ namespace FirstLight.Game.Presenters.BattlePass
 			_currentLevelArrow.AnimateTransform(new UnityEngine.Vector3(0, -25), 1000, true, Easing.InOutBack);
 		}
 
-		public new class UxmlFactory : UxmlFactory<BattlepassLevelColumnElement, UxmlTraits>
-		{
-		}
-
-		public new class UxmlTraits : VisualElement.UxmlTraits
-		{
-		}
 	}
 }

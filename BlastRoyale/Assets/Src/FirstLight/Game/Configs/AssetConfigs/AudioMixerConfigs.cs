@@ -1,6 +1,7 @@
+using FirstLight.Game.Configs;
 using System;
 using System.Collections.Generic;
-using FirstLight.AssetImporter;
+using GameLovers.Services.AssetsImporter;
 using FirstLight.Game.Ids;
 using FirstLight.Server.SDK.Modules.GameConfiguration;
 using UnityEngine;
@@ -12,7 +13,7 @@ namespace FirstLight.Game.Configs.AssetConfigs
 	{
 		Default
 	}
-	
+
 	[Serializable]
 	public struct AudioMixerConfig
 	{
@@ -25,13 +26,13 @@ namespace FirstLight.Game.Configs.AssetConfigs
 		public string MixerVoiceKey;
 		public string MixerAmbientKey;
 	}
-	
+
 	/// <summary>
 	/// Scriptable object containing all MainMenu audio assets configurations
 	/// </summary>
 	[CreateAssetMenu(fileName = "AudioMixerConfigs", menuName = "ScriptableObjects/AssetConfigs/AudioMixerConfigs")]
 	[IgnoreServerSerialization]
-	public class AudioMixerConfigs : AssetConfigsScriptableObjectSimple<AudioMixerID, AudioMixerConfig>
+	public class AudioMixerConfigs : DirectAssetConfigs<AudioMixerID, AudioMixerConfig>
 	{
 	}
 }

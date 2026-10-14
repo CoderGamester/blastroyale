@@ -1,13 +1,14 @@
-﻿using System;
+using System;
 using FirstLight.Game.Utils;
-using I2.Loc;
+using FirstLight.Game.Localization;
 using UnityEngine;
 using UnityEngine.UIElements;
 using Color = UnityEngine.Color;
 
 namespace FirstLight.Game.UIElements.Kit
 {
-	public class KitButton : ImageButton
+	[UxmlElement]
+	public partial class KitButton : ImageButton
 	{
 		private static string PRIMARY = "-primary";
 		private static string SECONDARY = "-secondary";
@@ -26,6 +27,7 @@ namespace FirstLight.Game.UIElements.Kit
 		private static string USS_BUTTON_COLOR_ERROR = USS_BUTTON_CLASS + ERROR;
 		private static string USS_BUTTON_DEFAULT_GAP = USS_BUTTON_CLASS + "-default-gap"; // This is a hack because unity doesn't support gap property
 
+		[UxmlAttribute("btn-style")]
 		public ButtonStyle BtnStyle
 		{
 			get => _btnStyle;
@@ -36,6 +38,7 @@ namespace FirstLight.Game.UIElements.Kit
 			}
 		}
 
+		[UxmlAttribute("btn-color")]
 		public ButtonColor BtnColor
 		{
 			get => _btnColor;
@@ -46,6 +49,7 @@ namespace FirstLight.Game.UIElements.Kit
 			}
 		}
 
+		[UxmlAttribute("btn-shape")]
 		public ButtonShape BtnShape
 		{
 			get => _btnShape;
@@ -57,6 +61,7 @@ namespace FirstLight.Game.UIElements.Kit
 		}
 
 		/// <see cref="FirstLight.Game.UIElements.Kit"/>
+		[UxmlAttribute("btn-icon")]
 		public string BtnIcon
 		{
 			get => _btnIcon;
@@ -67,6 +72,7 @@ namespace FirstLight.Game.UIElements.Kit
 			}
 		}
 
+		[UxmlAttribute("btn-text")]
 		public string BtnText
 		{
 			get => _text;
@@ -81,10 +87,15 @@ namespace FirstLight.Game.UIElements.Kit
 		private Label _textElement;
 		private ButtonStyle _btnStyle = ButtonStyle.Solid;
 		private ButtonColor _btnColor = ButtonColor.Primary;
-		private ButtonShape _btnShape = ButtonShape.Long;
+		private ButtonShape _btnShape = ButtonShape.Square;
 
-		private string _btnIcon;
-		private string _text;
+		private string _btnIcon = "";
+		private string _text = "";
+
+		public KitButton()
+		{
+			UpdateClasses();
+		}
 
 		private void UpdateClasses()
 		{
@@ -178,61 +189,13 @@ namespace FirstLight.Game.UIElements.Kit
 		public void Localize(string key)
 		{
 			if (string.IsNullOrWhiteSpace(key)) return;
-			if (!LocalizationManager.TryGetTranslation(key, out var translation))
+			if (!GameLocalization.TryGetTranslation(key, out var translation))
 			{
 				translation = key;
 				Debug.LogWarning($"Could not find translation for key {key} in element " + name);
 			}
 
 			BtnText = translation;
-		}
-
-		public new class UxmlFactory : UxmlFactory<KitButton, UxmlTraits>
-		{
-		}
-
-		public new class UxmlTraits : ImageButton.UxmlTraits
-		{
-			private readonly UxmlEnumAttributeDescription<ButtonShape> _buttonShape = new ()
-			{
-				name = "btn-shape",
-				defaultValue = ButtonShape.Square
-			};
-
-			private readonly UxmlEnumAttributeDescription<ButtonColor> _buttonColor = new ()
-			{
-				name = "btn-color",
-				defaultValue = ButtonColor.Primary
-			};
-
-			private readonly UxmlEnumAttributeDescription<ButtonStyle> _buttonStyle = new ()
-			{
-				name = "btn-style",
-				defaultValue = ButtonStyle.Solid
-			};
-
-			private readonly UxmlStringAttributeDescription _buttonIcon = new ()
-			{
-				name = "btn-icon",
-				defaultValue = ""
-			};
-
-			private readonly UxmlStringAttributeDescription _buttonText = new ()
-			{
-				name = "btn-text",
-				defaultValue = ""
-			};
-
-			public override void Init(VisualElement ve, IUxmlAttributes bag, CreationContext cc)
-			{
-				base.Init(ve, bag, cc);
-				var btn = (KitButton) ve;
-				btn.BtnStyle = _buttonStyle.GetValueFromBag(bag, cc);
-				btn.BtnColor = _buttonColor.GetValueFromBag(bag, cc);
-				btn.BtnShape = _buttonShape.GetValueFromBag(bag, cc);
-				btn.BtnIcon = _buttonIcon.GetValueFromBag(bag, cc);
-				btn.BtnText = _buttonText.GetValueFromBag(bag, cc);
-			}
 		}
 	}
 

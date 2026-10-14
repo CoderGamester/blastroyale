@@ -4,8 +4,6 @@ using FirstLight.Game.Utils;
 using JetBrains.Annotations;
 using Photon.Deterministic;
 using Quantum;
-using Sirenix.OdinInspector;
-using Sirenix.OdinInspector.Editor;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -15,7 +13,7 @@ using Object = UnityEngine.Object;
 
 namespace FirstLight.Editor.EditorTools.ArtTools
 {
-	public class MapLayerFixer 
+	public class MapLayerFixer
 	{
 		[MenuItem("FLG/Art/Fix Map Layers & Colliders")]
 		private static void OpenWindow()
@@ -31,7 +29,7 @@ namespace FirstLight.Editor.EditorTools.ArtTools
 					} else if (o.layer == LayerMask.NameToLayer(PhysicsLayers.PLAYER_TRIGGERS))
 					{
 						// not a bush but its in Player Triggers
-						if (!o.GetComponentInChildren<EntityComponentVisibilityArea>())
+						if (!o.GetComponentInChildren<QPrototypeVisibilityArea>())
 						{
 							o.SetLayer(LayerMask.NameToLayer(PhysicsLayers.OBSTACLES));
 							Debug.Log($"{o.name} layer set to {PhysicsLayers.OBSTACLES}");
@@ -39,12 +37,12 @@ namespace FirstLight.Editor.EditorTools.ArtTools
 					}
 				}
 
-				if (o.GetComponentInChildren<EntityComponentVisibilityArea>() != null)
+				if (o.GetComponentInChildren<QPrototypeVisibilityArea>() != null)
 				{
 					o.SetLayer(LayerMask.NameToLayer(PhysicsLayers.PLAYER_TRIGGERS));
 					Debug.Log($"{o.name} layer set to {PhysicsLayers.PLAYER_TRIGGERS}");
 
-					var p = o.GetComponentInChildren<EntityPrototype>();
+					var p = o.GetComponentInChildren<QuantumEntityPrototype>();
 					if (p != null)
 					{
 						p.PhysicsCollider.Layer = LayerMask.NameToLayer(PhysicsLayers.PLAYER_TRIGGERS);

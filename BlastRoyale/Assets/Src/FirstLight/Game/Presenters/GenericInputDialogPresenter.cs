@@ -1,7 +1,7 @@
-﻿using System;
+using System;
 using FirstLight.Game.Services;
 using FirstLight.Game.Utils;
-using FirstLight.UIService;
+using FirstLight.Game.UI;
 using UnityEngine;
 using UnityEngine.UIElements;
 

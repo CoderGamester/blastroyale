@@ -1,3 +1,4 @@
+using MainInstaller = FirstLight.Game.Utils.MainInstaller;
 using System.Threading.Tasks;
 using FirstLight.Game.UIElements;
 using FirstLight.Game.Utils;

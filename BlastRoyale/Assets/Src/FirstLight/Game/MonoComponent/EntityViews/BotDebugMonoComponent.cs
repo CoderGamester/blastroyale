@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Threading;
@@ -15,7 +15,7 @@ namespace FirstLight.Game.MonoComponent.EntityViews
 {
 	public class BotDebugMonoComponent : MonoBehaviour
 	{
-		private EntityView _view;
+		private QuantumEntityView _view;
 		private EntityRef _entityRef => _view.EntityRef;
 		private VisualElement _element;
 		private Label _decisionDelay;
@@ -56,7 +56,7 @@ namespace FirstLight.Game.MonoComponent.EntityViews
 			WorldDebugPresenter.Instance.DebugElement(this.transform, _decisionDelay);
 			WorldDebugPresenter.Instance.DebugElement(this.transform, _waypointStatus);
 
-			_view = GetComponent<EntityView>();
+			_view = GetComponent<QuantumEntityView>();
 			QuantumEvent.Subscribe<EventBotDebugInfo>(this, OnBotDebugInfoReceived);
 			QuantumCallback.Subscribe<CallbackUpdateView>(this, HandleUpdateView);
 		}

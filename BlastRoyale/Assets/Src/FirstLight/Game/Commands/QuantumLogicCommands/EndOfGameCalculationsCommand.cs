@@ -1,3 +1,4 @@
+using GameLovers.Services.Commands;
 using FirstLight.Game.Logic;
 using System.Collections.Generic;
 using System.Linq;
@@ -48,8 +49,8 @@ namespace FirstLight.Game.Commands
 			};
 
 			var rewards = ctx.Logic.RewardLogic().GiveMatchRewards(rewardSource, out var trophyChange);
-	
-			ctx.Services.MessageBrokerService().Publish(new GameCompletedRewardsMessage
+
+			ctx.Services.MessageBrokerService().PublishSafe(new GameCompletedRewardsMessage
 			{
 				Rewards = rewards,
 				TrophiesChange = trophyChange,
@@ -57,7 +58,7 @@ namespace FirstLight.Game.Commands
 			});
 			return UniTask.CompletedTask;
 		}
-		
+
 
 		public void FromFrame(Frame frame, QuantumValues quantumValues)
 		{
@@ -68,7 +69,7 @@ namespace FirstLight.Game.Commands
 			QuantumValues = quantumValues;
 
 			var executingData = PlayersMatchData[QuantumValues.ExecutingPlayer];
-			
+
 			var farmedItems = frame.ResolveDictionary(executingData.Data.CollectedMetaItems);
 			EarnedGameItems = new Dictionary<GameId, ushort>();
 			foreach (var kp in farmedItems)
@@ -78,7 +79,7 @@ namespace FirstLight.Game.Commands
 
 			// TODO: Find better way to determine tutorial mode. GameConstants ID perhaps? Something that backend has access to
 			RunningTutorialMode = frame.Context.GameModeConfig.Id.Contains("Tutorial");
-			
+
 			if (!frame.Context.GameModeConfig.AllowEarlyRewards && !gameContainer->IsGameCompleted &&
 				!gameContainer->IsGameOver)
 			{

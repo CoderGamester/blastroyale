@@ -1,15 +1,16 @@
+using FirstLight.Inspector;
 using DebugUI;
 #if UNITY_EDITOR
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Reflection;
 using FirstLight.Game.MonoComponent.Collections;
-using FirstLight.Game.Utils;
 using Quantum;
-using Sirenix.OdinInspector;
 using UnityEditor;
 using UnityEngine;
+using UnityEngine.UIElements;
 using Quaternion = UnityEngine.Quaternion;
 using Vector3 = UnityEngine.Vector3;
 #endif
@@ -71,7 +72,8 @@ namespace FirstLight.Game.MonoComponent.EditorOnly
 
 				if (!_currentWeapon) continue;
 				var weaponInstance = (GameObject) PrefabUtility.InstantiatePrefab(_currentWeapon, skin.WeaponAnchor);
-				weaponInstance.SetLayer(skin.gameObject.layer);
+				foreach (var child in weaponInstance.GetComponentsInChildren<Transform>(true))
+					child.gameObject.layer = skin.gameObject.layer;
 				// TODO: Temporary if, new weapons don't have a child
 				if (weaponInstance.transform.childCount > 0)
 				{
@@ -148,7 +150,7 @@ namespace FirstLight.Game.MonoComponent.EditorOnly
 					path => AssetDatabase.LoadAssetAtPath<GameObject>(path));
 		}
 
-		[Button("Load all skins")]
+		[InspectorAction("Load all skins")]
 		public void LoadAll()
 		{
 			DestroyAllSkins();
@@ -190,7 +192,6 @@ namespace FirstLight.Game.MonoComponent.EditorOnly
 			{
 				options.Title = "Debug Character";
 				options.Draggable = true;
-				options.Expanded = true;
 			});
 
 			var chars = AssetDatabase.FindAssets("t:Prefab Char_", new[] {"Assets/AddressableResources/Collections/CharacterSkins"})
@@ -198,13 +199,14 @@ namespace FirstLight.Game.MonoComponent.EditorOnly
 			_currentCharacter = chars.First().Value;
 
 			chars.Add("All", ALL_VALUE);
-			builder.AddField("Skin", chars, (id) =>
+			builder.Factories.Add(new CharacterChoiceFactory<string>("Skin", chars, () => _currentCharacter, id =>
 			{
 				_currentCharacter = id;
 				LoadSkin(id);
-			}, () => _currentCharacter);
+			}));
 
-			builder.AddField("Trigger", GetTriggers(), (id) => _currentTrigger = id, () => _currentTrigger);
+			builder.Factories.Add(new CharacterChoiceFactory<MethodInfo>("Trigger", GetTriggers(), () => _currentTrigger,
+				id => _currentTrigger = id));
 			builder.AddButton("Play", Trigger);
 
 			var cameras = new Dictionary<string, Transform>();
@@ -225,30 +227,79 @@ namespace FirstLight.Game.MonoComponent.EditorOnly
 			});
 			var weaponDict = GetAllWeapons();
 			weaponDict["None"] = null;
-			builder.AddField("Weapon", weaponDict, (v) =>
+			builder.Factories.Add(new CharacterChoiceFactory<GameObject>("Weapon", weaponDict, () => _currentWeapon, v =>
 			{
 				_currentWeapon = v;
 				UpdateCurrentWeapon();
-			}, () => _currentWeapon);
+			}));
 			builder.AddField("Weapon Type", () => _weaponType, (v) =>
 			{
 				_weaponType = v;
 				UpdateAnimationState();
 			});
-			builder.AddField("Camera", cameras, (c) =>
+			builder.Factories.Add(new CharacterChoiceFactory<Transform>("Camera", cameras, () => _currentCamera, c =>
 			{
 				_currentCamera = c;
 				ActivateCamera(c);
-			}, () => _currentCamera);
+			}));
 			builder.AddSlider("Character Rotation", 0, 360, () => _characterRotation, (v) =>
 			{
 				_characterRotation = v;
 				UpdateCharacterRotation();
 			});
 			UpdateCharacterRotation();
-			ActivateCamera(cameras.First().Value);
+			_currentCamera = cameras.First().Value;
+			ActivateCamera(_currentCamera);
 			UpdateAnimationState();
 			UpdateCurrentWeapon();
+		}
+
+		// The current public DebugUI builder supports primitive/enum fields. Its actual
+		// factory extension point supplies the typed choices needed by this game tool.
+		private sealed class CharacterChoiceFactory<T> : IDebugUIElementFactory
+		{
+			private readonly string _label;
+			private readonly Dictionary<string, T> _choices;
+			private readonly Func<T> _getter;
+			private readonly Action<T> _setter;
+
+			public CharacterChoiceFactory(string label, Dictionary<string, T> choices, Func<T> getter, Action<T> setter)
+			{
+				_label = label;
+				_choices = choices;
+				_getter = getter;
+				_setter = setter;
+			}
+
+			public VisualElement CreateVisualElement(ICollection<IDisposable> disposables)
+			{
+				var labels = _choices.Keys.ToList();
+				var field = new DropdownField(_label, labels, 0);
+				void Refresh()
+				{
+					var selected = _getter();
+					foreach (var choice in _choices)
+					{
+						if (!EqualityComparer<T>.Default.Equals(choice.Value, selected)) continue;
+						field.SetValueWithoutNotify(choice.Key);
+						return;
+					}
+				}
+				Refresh();
+				field.RegisterValueChangedCallback(evt => _setter(_choices[evt.newValue]));
+				field.RegisterCallback<AttachToPanelEvent>(_ =>
+					field.GetFirstAncestorOfType<DebugUI.UIElements.DebugWindow>()?.SetValueWithoutNotify(true));
+				var update = field.schedule.Execute(Refresh).Every(100);
+				disposables.Add(new ScheduledChoiceRefresh(update));
+				return field;
+			}
+		}
+
+		private sealed class ScheduledChoiceRefresh : IDisposable
+		{
+			private readonly IVisualElementScheduledItem _update;
+			public ScheduledChoiceRefresh(IVisualElementScheduledItem update) => _update = update;
+			public void Dispose() => _update.Pause();
 		}
 
 		protected override void Awake()

@@ -1,3 +1,4 @@
+using GameLovers.Services.Commands;
 using Cysharp.Threading.Tasks;
 using FirstLight.Game.Data;
 using FirstLight.Game.Data.DataTypes;
@@ -13,7 +14,7 @@ namespace FirstLight.Game.Commands
 	public struct EquipCollectionItemCommand : IGameCommand
 	{
 		public ItemData Item;
-		
+
 		public CommandAccessLevel AccessLevel() => CommandAccessLevel.Player;
 
 		public CommandExecutionMode ExecutionMode() => CommandExecutionMode.Server;
@@ -22,7 +23,7 @@ namespace FirstLight.Game.Commands
 		public UniTask Execute(CommandExecutionContext ctx)
 		{
 			var category = ctx.Logic.CollectionLogic().Equip(Item);
-			ctx.Services.MessageBrokerService().Publish(new CollectionItemEquippedMessage()
+			ctx.Services.MessageBrokerService().PublishSafe(new CollectionItemEquippedMessage()
 			{
 				Category = category,
 				EquippedItem = Item

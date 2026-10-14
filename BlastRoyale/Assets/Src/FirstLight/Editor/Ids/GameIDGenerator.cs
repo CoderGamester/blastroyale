@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -13,7 +13,7 @@ namespace FirstLight.Editor.Ids
 		private const string _name = "GameId";
 		private const string _nameGroup = "GameIdGroup";
 		private const string _namespace = "FirstLight.Game.Ids";
-		
+
 		/// <summary>
 		/// Adds a new character to the game ids. Project needs to be rebuilt after this
 		/// </summary>
@@ -22,7 +22,7 @@ namespace FirstLight.Editor.Ids
 			var path = Path.Combine(Application.dataPath, "Src", "FirstLight", "Editor", "Ids", "Ids.cs");
 			var id = ids[0];
 			ids.RemoveAt(0);
-			
+
 			var content = File.ReadAllText(path).Replace(
 				"// SKINS GENERATION TOKEN KEEP THIS HERE",
 				$"{{\"PlayerSkin{characterName}\", {id}, PlayerSkin, Collection}},\n\t\t\t// SKINS GENERATION TOKEN KEEP THIS HERE"
@@ -31,7 +31,7 @@ namespace FirstLight.Editor.Ids
 			File.WriteAllText(path, content);
 			AssetDatabase.ImportAsset(path);
 		}
-		
+
 		public static void AddNewMeleeGameId(string name, int id)
 		{
 			var path = Path.Combine(Application.dataPath, "Src", "FirstLight", "Editor", "Ids", "Ids.cs");
@@ -257,7 +257,7 @@ namespace FirstLight.Editor.Ids
 		{
 			var stringBuilder = new StringBuilder();
 
-			stringBuilder.AppendLine("using I2.Loc;");
+			stringBuilder.AppendLine("using FirstLight.Game.Localization;");
 			stringBuilder.AppendLine("using Quantum;");
 			stringBuilder.AppendLine("using System.Collections.Generic;");
 			stringBuilder.AppendLine("using System.Collections.ObjectModel;");

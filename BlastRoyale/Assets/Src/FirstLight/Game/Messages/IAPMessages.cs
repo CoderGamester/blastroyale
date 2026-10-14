@@ -1,16 +1,16 @@
 using FirstLight.Game.Data.DataTypes;
-using FirstLight.SDK.Services;
+using GameLovers.Services;
 
 namespace FirstLight.Game.Messages
 {
-	public struct PurchaseClaimedMessage : IMessage
+	public struct PurchaseClaimedMessage : IMessage, FirstLight.SDK.Services.IMessage
 	{
 		public ItemData ItemPurchased;
 		public string SupportingContentCreator;
 		public string PricePaid;
 		public string PriceCurrencyId;
 	}
-	
+
 	public struct BattlePassPurchasedMessage : IMessage
 	{
 	}
@@ -18,6 +18,6 @@ namespace FirstLight.Game.Messages
 
 	public struct BattlePassLevelPurchasedMessage : IMessage
 	{
-		
+
 	}
 }

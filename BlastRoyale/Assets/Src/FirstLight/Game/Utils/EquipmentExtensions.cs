@@ -23,7 +23,7 @@ namespace FirstLight.Game.Utils
 				{ "rarity", equipment.Rarity.ToString() },
 			};
 		}
-		
+
 		/// <summary>
 		/// TODO: Gabriel delete when we update the backend
 		/// </summary>
@@ -32,36 +32,34 @@ namespace FirstLight.Game.Utils
 			return equipment.GetCurrentDurability(DateTime.UtcNow.Ticks) == 0;
 		}
 
-
 		/// <summary>
 		/// TODO: Gabriel delete when we update the backend
 		/// </summary>
 		public static uint GetCurrentDurability(this Equipment equipment, long timestamp)
 		{
-			return equipment.GetCurrentDurability(false, default, timestamp);
+			return equipment.GetCurrentDurability(default, timestamp);
 		}
-
 
 		/// <summary>
 		/// Shared encapsulated code to detect if a given given <paramref name="equipment"/> is broken.
 		/// This code is to be used in Hub & Game Servers to validate given equipments are valid.
 		/// </summary>
-		public static bool IsBroken(this Equipment equipment, bool isNft, QuantumGameConfig config)
+		public static bool IsBroken(this Equipment equipment, QuantumGameConfig config)
 		{
-			return equipment.GetCurrentDurability(isNft, config, DateTime.UtcNow.Ticks) == 0;
+			return equipment.GetCurrentDurability(config, DateTime.UtcNow.Ticks) == 0;
 		}
 
 		/// <summary>
 		/// OBSOLETE
 		/// </summary>
-		public static uint GetCurrentDurability(this Equipment equipment, bool isNft, QuantumGameConfig config, long timestamp)
+		public static uint GetCurrentDurability(this Equipment equipment, QuantumGameConfig config, long timestamp)
 		{
 			return 1;
 		}
 
 		/// <summary>
 		/// Calculate equipment stats given a configuration.
-		/// This is used across other backend services (game-logic service, blockchain service)
+		/// This is used across other backend services (game-logic service)
 		/// </summary>
 		public static Dictionary<EquipmentStatType, float> GetStats(this Equipment equipment, IConfigsProvider configs)
 		{
@@ -110,7 +108,7 @@ namespace FirstLight.Game.Utils
 				stats.Add(EquipmentStatType.NumberOfShots, weaponConfig.NumberOfShots);
 				stats.Add(EquipmentStatType.ReloadTime, weaponConfig.ReloadTime.AsFloat);
 				stats.Add(EquipmentStatType.MagazineSize, Math.Max(0, weaponConfig.MagazineSize));
-				
+
 				stats.Add(EquipmentStatType.Damage, weaponConfig.PowerToDamageRatio.AsFloat * power);
 			}
 			else
@@ -155,7 +153,7 @@ namespace FirstLight.Game.Utils
 		{
 			return SPECIAL_TYPES.Contains(type);
 		}
-		
+
 		public static string GetValueFormat(EquipmentStatType type)
 		{
 			return type switch
@@ -171,7 +169,7 @@ namespace FirstLight.Game.Utils
 				_ => "N0"
 			};
 		}
-		
+
 		// Max values below are PER ITEM
 		public static readonly Dictionary<EquipmentStatType, float> MAX_VALUES = new()
 		{
@@ -190,7 +188,7 @@ namespace FirstLight.Game.Utils
 			EquipmentStatType.AttackCooldown,
 			EquipmentStatType.MinAttackAngle
 		};
-		
+
 		public static readonly HashSet<EquipmentStatType> SPECIAL_TYPES = new()
 		{
 			EquipmentStatType.SpecialId0,

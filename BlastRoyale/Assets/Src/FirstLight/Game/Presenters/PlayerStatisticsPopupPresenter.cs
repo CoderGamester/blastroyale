@@ -1,3 +1,5 @@
+using MainInstaller = FirstLight.Game.Utils.MainInstaller;
+using FirstLight.Game.Services.Infrastructure;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,9 +17,9 @@ using FirstLight.Game.Utils;
 using FirstLight.Game.UIElements;
 using FirstLight.Game.Utils.UCSExtensions;
 using FirstLight.Server.SDK.Models;
-using FirstLight.UIService;
+using FirstLight.Game.UI;
 using FirstLightServerSDK.Modules;
-using I2.Loc;
+using FirstLight.Game.Localization;
 using PlayFab;
 using Quantum;
 using Unity.Services.Authentication;
@@ -171,7 +173,7 @@ namespace FirstLight.Game.Presenters
 			_services.UIService.CloseScreen<PlayerStatisticsPopupPresenter>();
 			_services.UIService.OpenScreen<GlobalLeaderboardScreenPresenter>(new GlobalLeaderboardScreenPresenter.StateData()
 			{
-				OnBackClicked = () => _services.MessageBrokerService.Publish(new MainMenuShouldReloadMessage()),
+				OnBackClicked = () => _services.MessageBrokerService.PublishSafe(new MainMenuShouldReloadMessage()),
 				ShowSpecificLeaderboard = new GameLeaderboard(leaderboardName, metric)
 			}).Forget();
 		}

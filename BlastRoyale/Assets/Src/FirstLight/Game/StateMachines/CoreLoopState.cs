@@ -1,4 +1,5 @@
 using System;
+using IAssetAdderService = FirstLight.Game.Services.IAssetAdderService;
 using Cysharp.Threading.Tasks;
 using FirstLight.FLogger;
 using FirstLight.Game.Commands;
@@ -12,8 +13,8 @@ using FirstLight.Game.Presenters;
 using FirstLight.Game.Services;
 using FirstLight.Game.Services.RoomService;
 using FirstLight.Game.Utils;
-using FirstLight.Services;
-using FirstLight.Statechart;
+using GameLovers.Services;
+using GameLovers.StatechartMachine;
 using Photon.Realtime;
 using Quantum;
 using Unity.Services.Friends;
@@ -41,7 +42,7 @@ namespace FirstLight.Game.StateMachines
 
 		private Coroutine _csPoolTimerCoroutine;
 
-		public CoreLoopState(ReconnectionState reconnection, IGameServices services, IGameDataProvider dataProvider, IDataService dataService,
+		public CoreLoopState(ReconnectionState reconnection, IGameServices services, IGameDataProvider dataProvider, IClientDataService dataService,
 							 IInternalGameNetworkService networkService,
 							 IAssetAdderService assetAdderService, Action<IStatechartEvent> statechartTrigger, IRoomService roomService)
 		{
@@ -78,10 +79,10 @@ namespace FirstLight.Game.StateMachines
 
 			firstMatchCheck.Transition().Condition(() => AUTO_TEST_SCENE).Target(joinTestScene);
 			firstMatchCheck.Transition().Condition(InRoom)
-				.OnTransition(() => _services.MessageBrokerService.Publish(new CoreLoopInitialized {ConnectedToMatch = true}))
+				.OnTransition(() => _services.MessageBrokerService.PublishSafe(new CoreLoopInitialized {ConnectedToMatch = true}))
 				.Target(match);
 			firstMatchCheck.Transition().Condition(HasCompletedFirstGameTutorial)
-				.OnTransition(() => _services.MessageBrokerService.Publish(new CoreLoopInitialized {ConnectedToMatch = false}))
+				.OnTransition(() => _services.MessageBrokerService.PublishSafe(new CoreLoopInitialized {ConnectedToMatch = false}))
 				.Target(mainMenu);
 			firstMatchCheck.Transition().Target(joinTutorialRoom);
 
@@ -125,7 +126,7 @@ namespace FirstLight.Game.StateMachines
 				await UniTask.Delay(GameConstants.Tutorial.TIME_1000MS);
 			}
 
-			_services.MessageBrokerService.Publish(new RequestStartFirstGameTutorialMessage());
+			_services.MessageBrokerService.PublishSafe(new RequestStartFirstGameTutorialMessage());
 		}
 
 		private UniTask TransitionScreen()
@@ -142,9 +143,7 @@ namespace FirstLight.Game.StateMachines
 		{
 			await UniTask.Delay(250);
 
-			var config = await Addressables.LoadAssetAsync<SimulationConfigAsset>(AddressableId.Configs_Settings_SimulationConfig.GetConfig()
-				.Address);
-			config.Settings.DeltaTimeType = SimulationUpdateTime.EngineDeltaTime;
+
 			_services.RoomService.CreateRoom(new MatchRoomSetup()
 			{
 				RoomIdentifier = Guid.NewGuid().ToString(),

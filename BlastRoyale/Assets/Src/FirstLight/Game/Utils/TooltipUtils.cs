@@ -5,7 +5,7 @@ using Cysharp.Threading.Tasks;
 using FirstLight.Game.Presenters;
 using FirstLight.Game.UIElements;
 using FirstLight.Game.Utils.UCSExtensions;
-using I2.Loc;
+using FirstLight.Game.Localization;
 using Photon.Realtime;
 using Unity.Services.Friends;
 using Unity.Services.Friends.Models;
@@ -81,7 +81,7 @@ namespace FirstLight.Game.Utils
 
 		{
 			string text;
-			if (LocalizationManager.TryGetTranslation(term, out var translation))
+			if (GameLocalization.TryGetTranslation(term, out var translation))
 			{
 				text = translation;
 			}
@@ -234,7 +234,7 @@ namespace FirstLight.Game.Utils
 					}
 				}
 
-				tooltip.transform.position = pos;
+				tooltip.style.translate = new Translate(pos.x, pos.y);
 				tooltip.SetTip(CalculateTipDirection(position));
 				tooltip.MarkDirtyRepaint();
 				if (trigerred) return;

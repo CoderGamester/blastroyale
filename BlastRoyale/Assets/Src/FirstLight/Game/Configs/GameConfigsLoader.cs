@@ -1,3 +1,7 @@
+using ConfigsProvider = FirstLight.Server.SDK.Modules.GameConfiguration.ConfigsProvider;
+using IConfigsAdder = FirstLight.Server.SDK.Modules.GameConfiguration.IConfigsAdder;
+using IgnoreServerSerialization = FirstLight.Server.SDK.Modules.GameConfiguration.IgnoreServerSerialization;
+using GameLovers.GameData;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,7 +12,7 @@ using FirstLight.Server.SDK.Modules.GameConfiguration;
 using Quantum;
 using UnityEngine;
 using Cysharp.Threading.Tasks;
-using FirstLight.AssetImporter;
+using GameLovers.Services.AssetsImporter;
 using FirstLight.FLogger;
 using FirstLight.Game.Configs.AssetConfigs;
 using UnityEngine.Video;
@@ -34,7 +38,7 @@ namespace FirstLight.Game.Configs
 		public IEnumerable<UniTask> LoadAssetConfigTasks(IAssetAdderService assetService);
 
 		/// <summary>
-		/// Loads a specific config using the given asset resolver. 
+		/// Loads a specific config using the given asset resolver.
 		/// </summary>
 		UniTask LoadConfig<TContainer>(AddressableId id, Action<TContainer> onLoadComplete) where TContainer : ScriptableObject;
 	}
@@ -63,7 +67,7 @@ namespace FirstLight.Game.Configs
 			return new List<IConfigLoadHandler>
 			{
 				// last type argument is the one added to the container
-				// TODO: Remove this pile of shit 
+				// TODO: Remove this pile of shit
 				AddStringKeyValue<GameModeConfigs, QuantumGameModeConfig>(Configs_GameModeConfigs, v => v.Id),
 				AddStringKeyValue<MapConfigs, QuantumMapConfig>(Configs_QuantumMapConfigs, v => v.Map.ToString()),
 				AddKeyValue<LiveopsFeatureFlagConfigs, LiveopsFeatureFlagConfig>(Configs_LiveopsFeatureFlagConfigs,

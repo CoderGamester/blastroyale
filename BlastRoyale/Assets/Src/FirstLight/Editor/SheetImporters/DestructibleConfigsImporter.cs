@@ -1,9 +1,10 @@
+using GameLovers.GoogleSheetImporter;
 using System.Collections.Generic;
 using FirstLight.Editor.EditorTools;
 using FirstLight.Game.Configs;
 using FirstLight.Game.Configs.AssetConfigs;
 using FirstLight.Game.Utils;
-using FirstLight.GoogleSheetImporter;
+using GameLoversEditor.GoogleSheetImporter;
 using Quantum;
 using UnityEditor;
 
@@ -14,7 +15,7 @@ namespace FirstLight.Editor.SheetImporters
 	{
 		/// <inheritdoc />
 		public override string GoogleSheetUrl => "***REMOVED***/edit#gid=538072828";
-		
+
 		protected override QuantumDestructibleConfig DeserializeAsset(Dictionary<string, string> data, QuantumPrototypeAssetConfigs assetConfigs)
 		{
 			var config = QuantumDeserializer.DeserializeTo<QuantumDestructibleConfig>(data);

@@ -1,7 +1,7 @@
-﻿using System;
+using System;
 using FirstLight.Game.Logic;
 using FirstLight.Game.Utils;
-using I2.Loc;
+using FirstLight.Game.Localization;
 using Photon.Realtime;
 using TMPro;
 using UnityEngine;
@@ -39,14 +39,14 @@ namespace FirstLight.Game.Views.MatchHudViews
 		{
 			_kickButton.onClick.RemoveAllListeners();
 		}
-		
+
 		/// <summary>
 		/// Set the information of this player entry based on the given strings and host status
 		/// </summary>
 		public void SetInfo(Player player, bool isLocal, bool isHost, bool isLoaded, string partyId, Action<Player> kickPlayerClickedCallback, Color color)
 		{
 			Player = player;
-			
+
 			if (player == null)
 			{
 				IsHost = false;

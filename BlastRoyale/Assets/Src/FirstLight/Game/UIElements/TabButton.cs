@@ -1,5 +1,5 @@
 using System;
-using I2.Loc;
+using FirstLight.Game.Localization;
 using UnityEngine;
 using UnityEngine.UIElements;
 
@@ -8,45 +8,29 @@ namespace FirstLight.Game.UIElements
 	/// <summary>
 	/// Copied from Shader Graph package
 	/// </summary>
-	public class TabButton : VisualElement
+	[UxmlElement]
+	public partial class TabButton : VisualElement
 	{
-		internal new class UxmlFactory : UxmlFactory<TabButton, UxmlTraits>
-		{
-		}
-
-		internal new class UxmlTraits : VisualElement.UxmlTraits
-		{
-			private readonly UxmlStringAttributeDescription m_Text = new UxmlStringAttributeDescription {name = "text"};
-
-			private readonly UxmlStringAttributeDescription m_Target = new UxmlStringAttributeDescription
-				{name = "target"};
-
-			private readonly UxmlStringAttributeDescription _localizationKeyAttribute = new ()
-			{
-				name = "localization-key",
-				use = UxmlAttributeDescription.Use.Required
-			};
-
-			public override void Init(VisualElement ve, IUxmlAttributes bag, CreationContext cc)
-			{
-				base.Init(ve, bag, cc);
-				TabButton item = ve as TabButton;
-
-				item.m_Label.text = m_Text.GetValueFromBag(bag, cc);
-				item.TargetId = m_Target.GetValueFromBag(bag, cc);
-				item.LocalizeLabel(_localizationKeyAttribute.GetValueFromBag(bag, cc));
-			}
-		}
 
 		static readonly string s_UssClassName = "unity-tab-button";
 		static readonly string s_UssActiveClassName = s_UssClassName + "--active";
 
 		private Label m_Label;
 
+		[UxmlAttribute("text")]
+		public string Text { get => m_Label.text; set => m_Label.text = value; }
+
 		public bool IsCloseable { get; set; }
+		[UxmlAttribute("target")]
 		public string TargetId { get; private set; }
 		public VisualElement Target { get; set; }
-		private string localizationKey { get; set; }
+		private string _localizationKey;
+		[UxmlAttribute("localization-key")]
+		private string localizationKey
+		{
+			get => _localizationKey;
+			set => LocalizeLabel(value);
+		}
 
 		public event Action<TabButton> OnSelect;
 		public event Action<TabButton> OnClose;
@@ -54,6 +38,7 @@ namespace FirstLight.Game.UIElements
 		public TabButton()
 		{
 			Init();
+			LocalizeLabel(null);
 		}
 
 		public TabButton(string text, VisualElement target)
@@ -65,8 +50,8 @@ namespace FirstLight.Game.UIElements
 
 		public void LocalizeLabel(string labelKey)
 		{
-			localizationKey = labelKey;
-			m_Label.text = LocalizationManager.TryGetTranslation(labelKey, out var translation)
+			_localizationKey = labelKey;
+			m_Label.text = GameLocalization.TryGetTranslation(labelKey, out var translation)
 				? translation
 				: $"#{labelKey}#";
 		}

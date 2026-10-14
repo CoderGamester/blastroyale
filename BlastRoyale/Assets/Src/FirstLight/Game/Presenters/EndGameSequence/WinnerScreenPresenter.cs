@@ -1,3 +1,4 @@
+using MainInstaller = FirstLight.Game.Utils.MainInstaller;
 using System;
 using Cysharp.Threading.Tasks;
 using FirstLight.FLogger;
@@ -7,7 +8,7 @@ using FirstLight.Game.Services;
 using FirstLight.Game.Timeline;
 using FirstLight.Game.UIElements;
 using FirstLight.Game.Utils;
-using FirstLight.UIService;
+using FirstLight.Game.UI;
 using Quantum;
 using UnityEngine;
 using UnityEngine.Playables;
@@ -37,7 +38,7 @@ namespace FirstLight.Game.Presenters
 		private Button _nextButton;
 
 		private Transform _entityViewTransform;
-		
+
 		private void Awake()
 		{
 			_matchService = MainInstaller.Resolve<IMatchServices>();
@@ -63,7 +64,7 @@ namespace FirstLight.Game.Presenters
 			var game = QuantumRunner.Default.Game;
 			var playerData = game.GeneratePlayersMatchDataLocal(out var leader, out var localWinner);
 			var playerWinner = localWinner ? playerData[game.GetLocalPlayerRef()] : playerData[leader];
-			
+
 			if (playerWinner.Data.IsValid)
 			{
 				_playerWinnerEntity = playerWinner.Data.Entity;
@@ -83,9 +84,9 @@ namespace FirstLight.Game.Presenters
 			{
 				_entityViewTransform = entityView.transform;
 
-				_services.MessageBrokerService.Publish(new WinnerSetCameraMessage {WinnerTrasform = _entityViewTransform});
+				_services.MessageBrokerService.PublishSafe(new WinnerSetCameraMessage {WinnerTrasform = _entityViewTransform});
 			}
-			
+
 
 			return base.OnScreenOpen(reload);
 		}

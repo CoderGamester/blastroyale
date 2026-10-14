@@ -1,3 +1,4 @@
+using GameLovers.Services.Commands;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
@@ -50,7 +51,7 @@ namespace FirstLight.Game.Commands
 					}
 
 					ctx.Logic.CollectionLogic().UnlockCollectionItem(collectible);
-					ctx.Services.MessageBrokerService().Publish(new CollectionItemUnlockedMessage()
+					ctx.Services.MessageBrokerService().PublishSafe(new CollectionItemUnlockedMessage()
 					{
 						Source = CollectionUnlockSource.DefaultItem,
 						EquippedItem = collectible
@@ -115,7 +116,7 @@ namespace FirstLight.Game.Commands
 				}
 
 				ctx.Logic.CollectionLogic().UnlockCollectionItem(collectible);
-				ctx.Services.MessageBrokerService().Publish(new CollectionItemUnlockedMessage()
+				ctx.Services.MessageBrokerService().PublishSafe(new CollectionItemUnlockedMessage()
 				{
 					EquippedItem = collectible
 				});

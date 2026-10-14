@@ -8,7 +8,8 @@ namespace FirstLight.Game.UIElements
 	/// <summary>
 	/// Displays a health bar (e.g. for destructibles).
 	/// </summary>
-	public class HealthStatusBarElement : VisualElement
+	[UxmlElement]
+	public partial class HealthStatusBarElement : VisualElement
 	{
 		public const int DAMAGE_ANIMATION_DURATION = 1500;
 
@@ -47,8 +48,5 @@ namespace FirstLight.Game.UIElements
 			_opacityAnimationHandle.ExecuteLater(GameConstants.Visuals.GAMEPLAY_POST_ATTACK_HEALTHBAR_HIDE_DURATION);
 		}
 
-		public new class UxmlFactory : UxmlFactory<HealthStatusBarElement, UxmlTraits>
-		{
-		}
 	}
 }

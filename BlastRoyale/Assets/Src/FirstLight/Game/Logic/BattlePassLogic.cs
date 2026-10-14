@@ -1,3 +1,5 @@
+using IDataProvider = FirstLight.Server.SDK.Models.IDataProvider;
+using GameLovers.GameData;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -219,8 +221,8 @@ namespace FirstLight.Game.Logic
 		/// </summary>
 		private BattlePassSeasonLogic _currentSeason;
 
-		private IObservableField<uint> _currentLevel;
-		private IObservableField<uint> _currentPoints;
+		private ObservableResolverField<uint> _currentLevel;
+		private ObservableResolverField<uint> _currentPoints;
 
 		public IObservableFieldReader<uint> CurrentLevel => _currentLevel;
 
@@ -244,9 +246,8 @@ namespace FirstLight.Game.Logic
 		public void ReInit()
 		{
 			SetCurrentSeasonToNow();
-			var listeners = _currentLevel.GetObservers();
-			_currentPoints = new ObservableResolverField<uint>(() => GetCurrentSeasonData().Points, val => GetCurrentSeasonData().Points = val);
-			_currentLevel.AddObservers(listeners);
+			_currentLevel.Rebind(() => GetCurrentSeasonData().Level, val => GetCurrentSeasonData().Level = val);
+			_currentPoints.Rebind(() => GetCurrentSeasonData().Points, val => GetCurrentSeasonData().Points = val);
 			_currentLevel.InvokeUpdate();
 			_currentPoints.InvokeUpdate();
 		}
@@ -465,7 +466,7 @@ namespace FirstLight.Game.Logic
 
 			var newPoints = GetCurrentSeasonData().Points + neededPoints - predictedPoints;
 			GetCurrentSeasonData().Points = newPoints;
-			GameLogic.MessageBrokerService.Publish(new BattlePassLevelPurchasedMessage());
+			GameLogic.MessageBrokerService.PublishSafe(new BattlePassLevelPurchasedMessage());
 			return true;
 		}
 
@@ -481,7 +482,7 @@ namespace FirstLight.Game.Logic
 			if (config.Season.RemovePaid) throw new LogicException("Unable to buy season! RemovePaid = true");
 			if (GetCurrentSeasonData().Purchased) throw new LogicException("Player already have the BP purchased!");
 			GetCurrentSeasonData().Purchased = true;
-			GameLogic.MessageBrokerService.Publish(new BattlePassPurchasedMessage());
+			GameLogic.MessageBrokerService.PublishSafe(new BattlePassPurchasedMessage());
 			return true;
 		}
 

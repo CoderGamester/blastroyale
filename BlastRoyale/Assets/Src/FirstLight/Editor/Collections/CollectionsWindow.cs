@@ -1,132 +1,107 @@
+using System;
 using System.Collections.Generic;
+using System.IO;
+using System.Linq;
 using FirstLight.Game.MonoComponent.Collections;
-using Sirenix.OdinInspector;
-using Sirenix.OdinInspector.Editor;
 using UnityEditor;
+using UnityEditor.AddressableAssets;
 using UnityEditor.SceneManagement;
 using UnityEngine;
-using Path = System.IO.Path;
 
 namespace FirstLight.Editor.Collections
 {
-	public class CollectionsWindow : OdinMenuEditorWindow
+	/// <summary>Native asset browser for character models, icons, and Unity previews.</summary>
+	public class CollectionsWindow : EditorWindow
 	{
-		private const string PATH_CHARACTERS = "Assets/AddressableResources/Collections/CharacterSkins";
+		private const string CharactersPath = "Assets/AddressableResources/Collections/CharacterSkins";
+		private readonly List<string> _paths = new();
+		private string _selectedPath;
+		private string _search = "";
+		private GameObject _prefab;
+		private Sprite _icon;
+		private Texture2D _texture;
+		private UnityEditor.Editor _preview;
+		private Vector2 _scroll;
+		private Vector2 _detailScroll;
 
 		[MenuItem("FLG/Collections/Open Menu")]
-		private static void OpenWindow()
+		private static void OpenWindow() => GetWindow<CollectionsWindow>("Collections").Show();
+		private void OnEnable() => RefreshAssets();
+		private void OnDisable() { if (_preview != null) DestroyImmediate(_preview); }
+
+		private void RefreshAssets()
 		{
-			GetWindow<CollectionsWindow>("Collections").Show();
+			_paths.Clear();
+			_paths.AddRange(AssetDatabase.FindAssets("t:Model t:Prefab Char_", new[] {CharactersPath})
+				.Select(AssetDatabase.GUIDToAssetPath).OrderBy(path => path));
 		}
 
-		protected override OdinMenuTree BuildMenuTree()
+		private void Load(string path)
 		{
-			var tree = new OdinMenuTree();
-
-			// Characters
-			tree.Add("Characters", new CharactersGroup());
-			var characterPrefabs = AssetDatabase.FindAssets("t:Model t:Prefab Char_", new[] {PATH_CHARACTERS});
-			foreach (var guid in characterPrefabs)
-			{
-				var path = AssetDatabase.GUIDToAssetPath(guid);
-				var iconPath = path.Replace(".prefab", ".png").Replace(".fbx", ".png").Replace("Char_", "Icon_Char_");
-				var characterName = Path.GetFileName(path).Replace("Char_", "").Replace(".prefab", "").Replace(".fbx", "");
-				var icon = AssetDatabase.LoadAssetAtPath<Sprite>(iconPath);
-				Debug.Log($"IconPath({characterName}): {iconPath}");
-
-				tree.Add($"Characters/{characterName}", new CharacterSkinWrapper(path, icon), icon);
-			}
-
-			tree.Selection.SelectionChanged += OnSelectionChanged;
-
-			return tree;
+			_selectedPath = path;
+			_prefab = path == null ? null : AssetDatabase.LoadAssetAtPath<GameObject>(path);
+			_icon = path == null ? null : AssetDatabase.LoadAssetAtPath<Sprite>(path.Replace(".prefab", ".png").Replace(".fbx", ".png").Replace("Char_", "Icon_Char_"));
+			_texture = path == null ? null : AssetDatabase.LoadAssetAtPath<Texture2D>(path.Replace("Char_", "T_Char_").Replace(".fbx", ".png").Replace(".prefab", ".png"));
+			if (_preview != null) DestroyImmediate(_preview);
+			_preview = _prefab == null ? null : UnityEditor.Editor.CreateEditor(_prefab);
 		}
 
-
-		private void OnSelectionChanged(SelectionChangedType selectionChangedType)
+		private void OnGUI()
 		{
-			if (MenuTree.Selection.SelectedValue is ICollectionWrapper selectedItem)
+			using (new EditorGUILayout.HorizontalScope(EditorStyles.toolbar))
 			{
-				selectedItem.Load();
+				_search = GUILayout.TextField(_search, EditorStyles.toolbarSearchField);
+				if (GUILayout.Button("Refresh", EditorStyles.toolbarButton, GUILayout.Width(65))) RefreshAssets();
 			}
-		}
-
-		private class CharacterSkinWrapper : ICollectionWrapper
-		{
-			private string PrefabPath { get; set; }
-
-			[TitleGroup("Model")]
-			[HorizontalGroup("Model/Split")]
-			[VerticalGroup("Model/Split/Left")]
-			[BoxGroup("Model/Split/Left/Info")]
-			[InfoBox("These values are defined by the files / file names and cannot be changed here!")]
-			[ShowInInspector, EnableGUI, InlineButton("@UnityEngine.GUIUtility.systemCopyBuffer = ID", "Copy")]
-			private string ID { get; set; }
-
-			[BoxGroup("Model/Split/Left/Assets")]
-			[ShowInInspector]
-			[DisableIf("@true")]
-			private GameObject Prefab { get; set; }
-
-			[ShowInInspector]
-			[PreviewField(ObjectFieldAlignment.Left)]
-			[BoxGroup("Model/Split/Left/Assets")]
-			[DisableIf("@true")]
-			private Sprite Icon { get; set; }
-
-			[ShowInInspector]
-			[PreviewField(ObjectFieldAlignment.Left)]
-			[BoxGroup("Model/Split/Left/Assets")]
-			[DisableIf("@true")]
-			private Texture2D Texture { get; set; }
-
-			[BoxGroup("Model/Split/Preview")]
-			[InlineEditor(InlineEditorModes.LargePreview, PreviewHeight = 254, ObjectFieldMode = InlineEditorObjectFieldModes.Hidden)]
-			[ShowInInspector]
-			private GameObject Preview => Prefab;
-
-			[TitleGroup("Animations")]
-			[ShowInInspector, HideLabel]
-			private string ComingSoon => "Coming soon...";
-
-			public CharacterSkinMonoComponent Skin { get; private set; }
-
-
-			public CharacterSkinWrapper(string prefabPath, Sprite icon)
+			using (new EditorGUILayout.HorizontalScope())
 			{
-				Icon = icon;
-				PrefabPath = prefabPath;
+				using (new EditorGUILayout.VerticalScope(GUILayout.Width(220)))
+				{
+					_scroll = EditorGUILayout.BeginScrollView(_scroll);
+					if (GUILayout.Button("Characters / Tools")) Load(null);
+					foreach (var path in _paths)
+					{
+						var name = Path.GetFileNameWithoutExtension(path).Replace("Char_", "");
+						if (!name.Contains(_search, StringComparison.OrdinalIgnoreCase)) continue;
+						if (GUILayout.Toggle(path == _selectedPath, name, "Button") && path != _selectedPath) Load(path);
+					}
+					EditorGUILayout.EndScrollView();
+				}
+				using (new EditorGUILayout.VerticalScope())
+				{
+					_detailScroll = EditorGUILayout.BeginScrollView(_detailScroll);
+					if (_selectedPath == null)
+					{
+						EditorGUILayout.LabelField("Character tools", EditorStyles.boldLabel);
+						if (GUILayout.Button("Open Character Testing Scene")) EditorSceneManager.OpenScene("Assets/Art/SceneTests/AnimTest.unity");
+						EditorGUILayout.LabelField("Collections_Characters Addressable paths", EditorStyles.boldLabel);
+						var group = AddressableAssetSettingsDefaultObject.Settings?.FindGroup("Collections_Characters");
+						if (group == null) EditorGUILayout.HelpBox("The Collections_Characters Addressable group is missing.", MessageType.Warning);
+						else foreach (var entry in group.entries) EditorGUILayout.SelectableLabel(entry.AssetPath, GUILayout.Height(EditorGUIUtility.singleLineHeight));
+					}
+					else
+					{
+						EditorGUILayout.HelpBox("IDs and asset references come from the imported files. Edit the assets through their Inspector.", MessageType.Info);
+						using (new EditorGUILayout.HorizontalScope())
+						{
+							EditorGUILayout.SelectableLabel(Path.GetFileNameWithoutExtension(_selectedPath), GUILayout.Height(EditorGUIUtility.singleLineHeight));
+							if (GUILayout.Button("Copy ID", GUILayout.Width(75))) GUIUtility.systemCopyBuffer = Path.GetFileNameWithoutExtension(_selectedPath);
+						}
+						using (new EditorGUI.DisabledScope(true))
+						{
+							EditorGUILayout.ObjectField("Model", _prefab, typeof(GameObject), false);
+							EditorGUILayout.ObjectField("Icon", _icon, typeof(Sprite), false);
+							EditorGUILayout.ObjectField("Texture", _texture, typeof(Texture2D), false);
+							EditorGUILayout.ObjectField("Skin component", _prefab?.GetComponent<CharacterSkinMonoComponent>(), typeof(CharacterSkinMonoComponent), false);
+						}
+						if (_prefab != null && GUILayout.Button("Inspect Model")) Selection.activeObject = _prefab;
+						if (_preview != null && _preview.HasPreviewGUI()) _preview.OnInteractivePreviewGUI(GUILayoutUtility.GetRect(200, 254, GUILayout.ExpandWidth(true)), GUIStyle.none);
+						EditorGUILayout.LabelField("Animations", EditorStyles.boldLabel);
+						EditorGUILayout.LabelField("Coming soon…");
+					}
+					EditorGUILayout.EndScrollView();
+				}
 			}
-
-			public void Load()
-			{
-				ID = Path.GetFileNameWithoutExtension(PrefabPath);
-				Prefab = AssetDatabase.LoadAssetAtPath<GameObject>(PrefabPath);
-				Skin = Prefab.GetComponent<CharacterSkinMonoComponent>();
-				Texture = AssetDatabase.LoadAssetAtPath<Texture2D>(PrefabPath.Replace("Char_", "T_Char_").Replace(".fbx", ".png").Replace(".prefab", ".png"));
-			}
-		}
-
-		private class CharactersGroup
-		{
-			[ShowInInspector]
-			[TitleGroup("Characters")]
-			[BoxGroup("Characters/Split/Addressable Paths")]
-			[HorizontalGroup("Characters/Split")]
-			[HideLabel]
-			[ListDrawerSettings(DefaultExpandedState = true, IsReadOnly = true, NumberOfItemsPerPage = 5)]
-			private List<string> AddressablesGroups { get; } = AddressablesUtility.GetAssetPathsInGroup("Collections_Characters");
-
-			[Button, BoxGroup("Characters/Split/Tools")]
-			private void OpenCharacterTestingScene()
-			{
-				EditorSceneManager.OpenScene("Assets/Art/SceneTests/AnimTest.unity");
-			}
-		}
-
-		private interface ICollectionWrapper
-		{
-			void Load();
 		}
 	}
 }

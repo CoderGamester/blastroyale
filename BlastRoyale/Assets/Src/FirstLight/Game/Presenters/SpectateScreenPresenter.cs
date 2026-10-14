@@ -1,3 +1,4 @@
+using MainInstaller = FirstLight.Game.Utils.MainInstaller;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,8 +11,7 @@ using FirstLight.Game.UIElements;
 using FirstLight.Game.Utils;
 using FirstLight.Game.Utils.UCSExtensions;
 using FirstLight.Game.Views.UITK;
-using FirstLight.Modules.UIService.Runtime;
-using FirstLight.UIService;
+using FirstLight.Game.UI;
 using Quantum;
 using QuickEye.UIToolkit;
 using Unity.Services.Friends;
@@ -204,7 +204,7 @@ namespace FirstLight.Game.Presenters
 			{
 				return;
 			}
-			
+
 			if (relationship == null)
 			{
 				_addFriend.enabled = true;

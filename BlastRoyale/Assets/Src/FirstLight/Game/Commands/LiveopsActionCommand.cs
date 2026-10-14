@@ -1,8 +1,9 @@
+using GameLovers.Services.Commands;
 using System;
 using Cysharp.Threading.Tasks;
 using FirstLight.Game.Logic;
 using FirstLight.Game.Logic.RPC;
-using FirstLight.Services;
+using GameLovers.Services;
 using FirstLight.Game.Services;
 using FirstLight.Server.SDK.Modules.Commands;
 
@@ -14,7 +15,7 @@ namespace FirstLight.Game.Commands
 	public struct LiveopsActionCommand : IGameCommand
 	{
 		public int ActionIdentifier;
-		
+
 		public CommandAccessLevel AccessLevel() => CommandAccessLevel.Player;
 
 		public CommandExecutionMode ExecutionMode() => CommandExecutionMode.Server;

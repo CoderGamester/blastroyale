@@ -9,7 +9,8 @@ using UnityEngine.UIElements;
 
 namespace FirstLight.Game.UIElements
 {
-	public class PlayerAvatarElement : VisualElement
+	[UxmlElement]
+	public partial class PlayerAvatarElement : VisualElement
 	{
 		private const string USS_BLOCK = "player-avatar";
 		private const string USS_AVATAR = USS_BLOCK + "__avatar";
@@ -22,7 +23,6 @@ namespace FirstLight.Game.UIElements
 		private const string USS_FAME_STAR_3 = USS_BLOCK + "__fame-star-3";
 		private const string USS_FAME_STAR_4 = USS_BLOCK + "__fame-star-4";
 		private const string USS_FAME_STAR_5 = USS_BLOCK + "__fame-star-5";
-		private const string USS_AVATAR_NFT = USS_BLOCK + "--nft";
 
 		private const string USS_STARS_BRONZE = USS_FAME_STARS_HOLDER + "--bronze";
 		private const string USS_STARS_SILVER = USS_FAME_STARS_HOLDER + "--silver";
@@ -129,8 +129,5 @@ namespace FirstLight.Game.UIElements
 			}
 		}
 
-		public new class UxmlFactory : UxmlFactory<PlayerAvatarElement>
-		{
-		}
 	}
 }

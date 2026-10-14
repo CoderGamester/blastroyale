@@ -1,3 +1,4 @@
+using MainInstaller = FirstLight.Game.Utils.MainInstaller;
 using System;
 using System.Collections.Generic;
 using Cysharp.Threading.Tasks;
@@ -9,8 +10,8 @@ using FirstLight.Game.Services;
 using FirstLight.Game.UIElements;
 using FirstLight.Game.UIElements.Kit;
 using FirstLight.Game.Utils;
-using FirstLight.UIService;
-using I2.Loc;
+using FirstLight.Game.UI;
+using FirstLight.Game.Localization;
 using Quantum;
 using QuickEye.UIToolkit;
 using UnityEngine.UIElements;
@@ -83,7 +84,7 @@ namespace FirstLight.Game.Presenters
 			}
 
 			string errorMessage =
-				LocalizationManager.TryGetTranslation("UITLoginRegister/invalid_input", out var translation)
+				GameLocalization.TryGetTranslation("UITLoginRegister/invalid_input", out var translation)
 					? translation
 					: $"#{"UITLoginRegister/invalid_input"}#";
 			MainInstaller.ResolveServices().InGameNotificationService.QueueNotification(errorMessage);
@@ -107,7 +108,7 @@ namespace FirstLight.Game.Presenters
 			if (!AuthenticationUtils.IsEmailFieldValid(_emailField.value))
 			{
 				string errorMessage =
-					LocalizationManager.TryGetTranslation("UITLoginRegister/invalid_input", out var translation)
+					GameLocalization.TryGetTranslation("UITLoginRegister/invalid_input", out var translation)
 						? translation
 						: $"#{"UITLoginRegister/invalid_input"}#";
 				MainInstaller.ResolveServices().InGameNotificationService.QueueNotification(errorMessage);

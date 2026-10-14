@@ -1,10 +1,13 @@
+using IDataProvider = FirstLight.Server.SDK.Models.IDataProvider;
+using FirstLight.Game.Utils;
+using GameLovers.GameData;
 using System;
 using FirstLight.Game.Configs;
 using FirstLight.Game.Data;
 using FirstLight.Game.Data.DataTypes;
 using FirstLight.Game.Infos;
 using FirstLight.Server.SDK.Models;
-using FirstLight.Services;
+using GameLovers.Services;
 using Quantum;
 
 namespace FirstLight.Game.Logic
@@ -21,7 +24,7 @@ namespace FirstLight.Game.Logic
 
 		/// <summary>
 		/// Requests the current <see cref="ResourcePoolInfo"/> of a given <paramref name="poolType"/>,
-		/// based on various factors, such as amount of NFTs owned
+		/// based on the pool configuration and elapsed time
 		/// </summary>
 		ResourcePoolInfo GetResourcePoolInfo(GameId poolType);
 	}
@@ -39,11 +42,11 @@ namespace FirstLight.Game.Logic
 	/// <inheritdoc cref="IResourceLogic"/>
 	public class ResourceLogic : AbstractBaseLogic<PlayerData>, IResourceLogic, IGameLogicInitializer
 	{
-		private IObservableDictionary<GameId, ResourcePoolData> _resourcePools;
-		
+		private ObservableDictionary<GameId, ResourcePoolData> _resourcePools;
+
 		/// <inheritdoc />
 		public IObservableDictionaryReader<GameId, ResourcePoolData> ResourcePools => _resourcePools;
-		
+
 		private QuantumGameConfig GameConfig => GameLogic.ConfigsProvider.GetConfig<QuantumGameConfig>();
 
 		public ResourceLogic(IGameLogic gameLogic, IDataProvider dataProvider) : base(gameLogic, dataProvider)
@@ -54,8 +57,8 @@ namespace FirstLight.Game.Logic
 		public void Init()
 		{
 			var defaultValues = new PlayerData().ResourcePools;
-			
-			_resourcePools = new ObservableDictionary<GameId, ResourcePoolData>(Data.ResourcePools);
+
+			_resourcePools = new ObservableDictionary<GameId, ResourcePoolData>(Data.ResourcePools) {ObservableUpdateFlag = ObservableUpdateFlag.Both};
 
 			foreach (var pair in defaultValues)
 			{
@@ -69,13 +72,11 @@ namespace FirstLight.Game.Logic
 		public void ReInit()
 		{
 			var defaultValues = new PlayerData().ResourcePools;
-			
+
 			{
-				var listeners = _resourcePools.GetObservers();
-				_resourcePools = new ObservableDictionary<GameId, ResourcePoolData>(Data.ResourcePools);
-				_resourcePools.AddObservers(listeners);
+				_resourcePools.Rebind(Data.ResourcePools);
 			}
-			
+
 			foreach (var pair in defaultValues)
 			{
 				if (!_resourcePools.ContainsKey(pair.Key))
@@ -83,8 +84,8 @@ namespace FirstLight.Game.Logic
 					_resourcePools.Add(pair.Key, pair.Value);
 				}
 			}
-			
-			_resourcePools.InvokeUpdate();
+
+			_resourcePools.NotifyAll();
 		}
 
 		/// <inheritdoc />
@@ -122,7 +123,7 @@ namespace FirstLight.Game.Logic
 
 			poolData.CurrentResourceAmountInPool = poolInfo.CurrentAmount - amountWithdrawn;
 			poolData.LastPoolRestockTime = poolInfo.IsFull ? DateTime.UtcNow : restockTime;
-			
+
 			_resourcePools[poolType] = poolData;
 
 			return amountWithdrawn;
@@ -134,7 +135,7 @@ namespace FirstLight.Game.Logic
 			// https://firstlightgames.atlassian.net/wiki/spaces/BB/pages/1789034519/Pool+System#Taking-from-pools-setup
 			//
 			// This calculation can be tested by using specific equipment.
-			// Get this test equipment by using SROptions.Cheats.RemoveAllEquipment, and then SROptions.Cheats.UnlockEquipmentSet
+			// Get this test equipment by using DebugOptions.Cheats.RemoveAllEquipment, and then DebugOptions.Cheats.UnlockEquipmentSet
 			// Test calculations for this algorithm can be found at the bottom of this spreadsheet:
 			// https://docs.google.com/spreadsheets/d/1LrHGwlNi2tbb7I8xmQVNCKKbc9YgEJjYyA8EFsIFarw/edit#gid=1028779545
 

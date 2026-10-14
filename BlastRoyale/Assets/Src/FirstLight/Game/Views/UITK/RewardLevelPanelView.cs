@@ -4,8 +4,8 @@ using System.Threading.Tasks;
 using FirstLight.Game.Infos;
 using FirstLight.Game.Utils;
 using FirstLight.UiService;
-using FirstLight.UIService;
-using I2.Loc;
+using FirstLight.Game.UI;
+using FirstLight.Game.Localization;
 using Quantum;
 using UnityEngine.UIElements;
 
@@ -24,7 +24,7 @@ namespace FirstLight.Game.Views
 			public int Total;
 			public int MaxLevel;
 		}
-		
+
 		private Label _gainedLabel;
 		private Label _nextLevelLabel;
 		private Label _toLevelLabel;
@@ -34,7 +34,7 @@ namespace FirstLight.Game.Views
 		private Label _next;
 		private Label _gainedWeek;
 		private Label _totalWeek;
-		
+
 		private List<LevelLevelRewardInfo> _levelRewardsInfo;
 
 		protected override void Attached()
@@ -49,7 +49,7 @@ namespace FirstLight.Game.Views
 			_next = Element.Q<Label>("Next");
 			_totalWeek = Element.Q<Label>("TotalWeek");
 			_toLevelLabel = Element.Q<Label>("ToLevel");
-			
+
 			HidePanel();
 		}
 
@@ -65,7 +65,7 @@ namespace FirstLight.Game.Views
 
 			UpdatePool(poolInfo);
 		}
-		
+
 		/// <summary>
 		/// Set the reward data without pool info
 		/// </summary>
@@ -81,7 +81,7 @@ namespace FirstLight.Game.Views
 		{
 			_nextLevelLabel.SetDisplay(false);
 		}
-		
+
 		/// <summary>
 		/// Animates the values up to the total
 		/// </summary>
@@ -89,7 +89,7 @@ namespace FirstLight.Game.Views
 		{
 			// Reconnection edge case
 			if (_levelRewardsInfo == null) return;
-			
+
 			ShowPanel();
 
 			var currentGained = 0;
@@ -110,12 +110,12 @@ namespace FirstLight.Game.Views
 				_previousPointsBar.style.width = Length.Percent(previousPointsPercentage);
 
 				var maxBppForLevel = Math.Min(levelRewardInfo.Start + levelRewardInfo.Total, levelRewardInfo.MaxForLevel);
-				
+
 				while (levelGained < maxBppForLevel)
 				{
 					// TODO: Make this work based on the current framerate
 					await Task.Delay(5);
-					
+
 					var increase = Math.Min(levelGained + increaseNumber, levelRewardInfo.Start+levelRewardInfo.Total) - levelGained;
 					levelGained += increase;
 					currentGained += increase;
@@ -137,7 +137,7 @@ namespace FirstLight.Game.Views
 				}
 			}
 		}
-		
+
 		private void UpdatePool(ResourcePoolInfo poolInfo)
 		{
 			var timeLeft = poolInfo.NextRestockTime - DateTime.UtcNow;

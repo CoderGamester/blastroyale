@@ -1,6 +1,6 @@
+using FirstLight.Inspector;
 using FirstLight.Game.Utils;
 using Quantum;
-using Sirenix.OdinInspector;
 using UnityEngine;
 
 namespace FirstLight.Game.MonoComponent.Match
@@ -11,7 +11,7 @@ namespace FirstLight.Game.MonoComponent.Match
 	public class RangeIndicatorMonoComponent : MonoBehaviour, IIndicator
 	{
 		[SerializeField] private float _localHeight = 0.25f;
-		[SerializeField, Required] private MeshRenderer _indicator;
+		[SerializeField, InspectorField(Required = true)] private MeshRenderer _indicator;
 		private Color _originalColor;
 		private static readonly int _color = Shader.PropertyToID("_Color");
 
@@ -19,7 +19,7 @@ namespace FirstLight.Game.MonoComponent.Match
 		public bool VisualState => _indicator.enabled;
 		/// <inheritdoc />
 		public IndicatorVfxId IndicatorVfxId => IndicatorVfxId.Range;
-		
+
 		private void Awake()
 		{
 			_indicator.enabled = false;
@@ -58,13 +58,13 @@ namespace FirstLight.Game.MonoComponent.Match
 		}
 
 		/// <inheritdoc />
-		public void Init(EntityView playerEntityView)
+		public void Init(QuantumEntityView playerEntityView)
 		{
 			var cacheTransform = transform;
 			if (gameObject == null || cacheTransform == null) return;
-			
+
 			cacheTransform.SetParent(playerEntityView.transform);
-			
+
 			cacheTransform.localPosition = new Vector3(0, _localHeight, 0);
 		}
 	}

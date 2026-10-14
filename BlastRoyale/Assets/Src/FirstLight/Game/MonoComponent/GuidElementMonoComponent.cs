@@ -1,3 +1,5 @@
+using MainInstaller = FirstLight.Game.Utils.MainInstaller;
+using GameLovers.GameData;
 using System.Collections.Generic;
 using FirstLight.Game.Ids;
 using FirstLight.Game.Services;
@@ -7,7 +9,7 @@ using UnityEngine;
 namespace FirstLight.Game.MonoComponent
 {
 	/// <summary>
-	/// 
+	///
 	/// </summary>
 	public interface IGuidElement
 	{
@@ -15,7 +17,7 @@ namespace FirstLight.Game.MonoComponent
 		/// Request the GuidId for this element
 		/// </summary>
 		GuidId Id { get; }
-		
+
 		/// <summary>
 		/// The references GameObjects this GUID Id element is setting up to
 		/// </summary>
@@ -26,7 +28,7 @@ namespace FirstLight.Game.MonoComponent
 		/// </summary>
 		void SetState(bool active);
 	}
-	
+
 	/// <inheritdoc cref="IGuidElement" />
 	public class GuidElementMonoComponent : MonoBehaviour, IGuidElement
 	{

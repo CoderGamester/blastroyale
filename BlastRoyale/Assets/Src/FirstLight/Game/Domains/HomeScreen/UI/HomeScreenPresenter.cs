@@ -1,3 +1,4 @@
+using MainInstaller = FirstLight.Game.Utils.MainInstaller;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -20,8 +21,8 @@ using FirstLight.Game.Utils;
 using FirstLight.Game.Utils.UCSExtensions;
 using FirstLight.Game.Views;
 using FirstLight.Game.Views.UITK;
-using FirstLight.UIService;
-using I2.Loc;
+using FirstLight.Game.UI;
+using FirstLight.Game.Localization;
 using PlayFab;
 using PlayFab.ClientModels;
 using Quantum;
@@ -187,7 +188,7 @@ namespace FirstLight.Game.Domains.HomeScreen.UI
 		private async UniTaskVoid CheckStoreUpdateForNotification()
 		{
 			await UniTask.WaitUntil(() => _services.IAPService.UnityStore.Initialized);
-			
+
 			_storeNotification.SetDisplay(_services.IAPService.HasStoreItemsUpdate());
 		}
 
@@ -263,8 +264,8 @@ namespace FirstLight.Game.Domains.HomeScreen.UI
 
 			SetHasNewsNotification(false);
 			_services.NewsService.HasNotSeenNews().ContinueWith(SetHasNewsNotification);
-			
-			
+
+
 #if DEVELOPMENT_BUILD && !UNITY_EDITOR
 			_outOfSyncWarningLabel.SetDisplay(VersionUtils.IsOutOfSync());
 #else
@@ -491,7 +492,7 @@ namespace FirstLight.Game.Domains.HomeScreen.UI
 		{
 			_matchmakingStatusView.Show(show);
 
-			// When this screen is opened we aren't officially matchmaking yet, so we force the loading state for the 
+			// When this screen is opened we aren't officially matchmaking yet, so we force the loading state for the
 			// first few seconds - should be changed when we allow interaction on home screen during matchmaking.
 			UpdatePlayButton(show);
 		}

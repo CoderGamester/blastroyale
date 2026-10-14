@@ -6,7 +6,8 @@ namespace FirstLight.Game.UIElements
 	/// <summary>
 	/// Displays the might graphic.
 	/// </summary>
-	public class DotsLoadingElement : VisualElement
+	[UxmlElement]
+	public partial class DotsLoadingElement : VisualElement
 	{
 		private static readonly CustomStyleProperty<Color> S_Color = new ("--color");
 		private static readonly CustomStyleProperty<Color> S_SecondaryColor = new ("--secondary-color");
@@ -97,8 +98,5 @@ namespace FirstLight.Game.UIElements
 			}).Every(_speed).StartingIn(_speed);
 		}
 
-		public new class UxmlFactory : UxmlFactory<DotsLoadingElement, UxmlTraits>
-		{
-		}
 	}
 }

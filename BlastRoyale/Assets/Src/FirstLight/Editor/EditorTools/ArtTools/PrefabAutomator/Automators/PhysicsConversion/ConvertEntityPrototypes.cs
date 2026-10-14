@@ -19,7 +19,7 @@ namespace FirstLight.Editor.EditorTools.ArtTools
           GUILayout.Label("Update Entity Prototypes", EditorStyles.boldLabel);
           GUILayout.Label("Ports all prototypes in folder from 3d to 2d.");
        }
-       
+
        protected override bool OnUpdateGameObject(GameObject o)
        {
           return TryMigrateBox(o) || TryMigrateSphere(o);
@@ -27,13 +27,13 @@ namespace FirstLight.Editor.EditorTools.ArtTools
 
        private bool TryMigrateBox(GameObject o)
        {
-          var e = o.GetComponentsInChildren<EntityPrototype>();
+          var e = o.GetComponentsInChildren<QuantumEntityPrototype>();
 
           foreach (var c in e)
           {
-             if (c.TransformMode == EntityPrototypeTransformMode.Transform3D)
+             if (c.TransformMode == QuantumEntityPrototypeTransformMode.Transform3D)
              {
-                c.TransformMode = EntityPrototypeTransformMode.Transform2D;
+                c.TransformMode = QuantumEntityPrototypeTransformMode.Transform2D;
                 if (c.PhysicsCollider.IsEnabled)
                 {
                    if (c.PhysicsCollider.Shape3D.ShapeType == Shape3DType.Box)
@@ -48,7 +48,7 @@ namespace FirstLight.Editor.EditorTools.ArtTools
                    }else if (c.PhysicsCollider.Shape3D.ShapeType == Shape3DType.Compound)
                    {
                       c.PhysicsCollider.Shape2D.ShapeType = Shape2DType.Compound;
-                      
+
                       c.PhysicsCollider.Shape2D.CompoundShapes = c.PhysicsCollider.Shape3D.CompoundShapes.Select((s, i) => new Shape2DConfig.CompoundShapeData2D()
                       {
                          ShapeType = s.ShapeType == Shape3DType.Box ? Shape2DType.Box : Shape2DType.Circle,
@@ -58,12 +58,12 @@ namespace FirstLight.Editor.EditorTools.ArtTools
                    }
                 }
              }
-             
+
           }
 
           return true;
        }
-       
+
        private bool TryMigrateSphere(GameObject o)
        {
           var colliders = o.GetComponentsInChildren<QuantumStaticSphereCollider3D>();
@@ -81,9 +81,3 @@ namespace FirstLight.Editor.EditorTools.ArtTools
        }
     }
 }
-
-
-
-
-
-

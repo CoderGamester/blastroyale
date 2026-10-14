@@ -1,3 +1,4 @@
+using GameLovers.Services.Commands;
 using Cysharp.Threading.Tasks;
 using FirstLight.Game.Ids;
 using FirstLight.Game.Logic;
@@ -8,7 +9,7 @@ using FirstLight.Server.SDK.Modules.Commands;
 namespace FirstLight.Game.Commands
 {
 	/// <summary>
-	/// Scraps an Non-NFT item and awards the player resources 
+	/// Scraps an equipment item and awards the player resources
 	/// </summary>
 	public struct RepairItemCommand : IGameCommand
 	{
@@ -23,10 +24,10 @@ namespace FirstLight.Game.Commands
 			var logic = ctx.Logic.EquipmentLogic();
 			var info = logic.GetInfo(Item);
 			var item = logic.Inventory[Item];
-			var cost = logic.GetRepairCost(item, false);
+			var cost = logic.GetRepairCost(item);
 
 			ctx.Logic.CurrencyLogic().DeductCurrency(cost.Key, cost.Value);
-			ctx.Services.MessageBrokerService().Publish(new CurrencyChangedMessage
+			ctx.Services.MessageBrokerService().PublishSafe(new CurrencyChangedMessage
 			{
 				Id = cost.Key,
 				Change = -(int) cost.Value,
@@ -35,7 +36,7 @@ namespace FirstLight.Game.Commands
 			});
 			logic.Repair(Item);
 
-			ctx.Services.MessageBrokerService().Publish(new ItemRepairedMessage
+			ctx.Services.MessageBrokerService().PublishSafe(new ItemRepairedMessage
 			{
 				Id = Item,
 				GameId = info.Equipment.GameId,

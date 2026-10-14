@@ -9,7 +9,8 @@ namespace FirstLight.Game.UIElements
 	/// <summary>
 	/// A single item in the summary part of the RewardsScreen
 	/// </summary>
-	public class UnlockRewardSummaryElement : RewardSummaryItemElement
+	[UxmlElement]
+	public partial class UnlockRewardSummaryElement : RewardSummaryItemElement
 	{
 		/// <summary>
 		/// Update the current displayed reward
@@ -23,8 +24,5 @@ namespace FirstLight.Game.UIElements
 			return this;
 		}
 
-		public new class UxmlFactory : UxmlFactory<UnlockRewardSummaryElement, UxmlTraits>
-		{
-		}
 	}
 }

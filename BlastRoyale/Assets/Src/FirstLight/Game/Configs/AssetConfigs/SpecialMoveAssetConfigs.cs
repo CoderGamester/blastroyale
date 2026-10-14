@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using FirstLight.AssetImporter;
+using GameLovers.Services.AssetsImporter;
 using FirstLight.Game.Ids;
 using Quantum;
 using UnityEngine;

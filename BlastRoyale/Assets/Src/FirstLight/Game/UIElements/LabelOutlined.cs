@@ -4,13 +4,26 @@ using UnityEngine.UIElements;
 
 namespace FirstLight.Game.UIElements
 {
-	public class LabelOutlined : Label
+	[UxmlElement]
+	public partial class LabelOutlined : Label
 	{
 		private Label _internalLabel;
 
 		public override VisualElement contentContainer => outlineHack ? _internalLabel : this;
 
-		protected bool outlineHack { get; set; }
+		private bool _outlineHack;
+		private bool _callbacksRegistered;
+		[UxmlAttribute("outline-hack")]
+		protected bool outlineHack
+		{
+			get => _outlineHack;
+			set
+			{
+				if (_outlineHack == value) return;
+				_outlineHack = value;
+				Init();
+			}
+		}
 
 #if UNITY_EDITOR
 		private IVisualElementScheduledItem _scheduledEditorUpdate;
@@ -20,8 +33,23 @@ namespace FirstLight.Game.UIElements
 			if (_internalLabel != null)
 			{
 				hierarchy.Remove(_internalLabel);
+				_internalLabel = null;
 			}
 
+			if (!_callbacksRegistered)
+			{
+				_callbacksRegistered = true;
+				this.RegisterValueChangedCallback(valueChange =>
+				{
+					if (_internalLabel == null || valueChange.target != this) return;
+					_internalLabel.text = valueChange.newValue;
+					if (resolvedStyle.textOverflow == TextOverflow.Ellipsis) SetTextEllipticEnd(valueChange.newValue);
+				});
+				RegisterCallback<GeometryChangedEvent>(_ => Sync());
+			}
+#if UNITY_EDITOR
+			_scheduledEditorUpdate?.Pause();
+#endif
 			if (outlineHack)
 			{
 				_internalLabel = new Label()
@@ -37,23 +65,9 @@ namespace FirstLight.Game.UIElements
 				};
 				hierarchy.Add(_internalLabel);
 
-				this.RegisterValueChangedCallback(valueChange =>
-				{
-					if (valueChange.target != _internalLabel.parent) return;
-
-					_internalLabel.text = valueChange.newValue;
-					if (resolvedStyle.textOverflow == TextOverflow.Ellipsis)
-					{
-						SetTextEllipticEnd(valueChange.newValue);
-					}
-				});
 				Sync();
 
 				_internalLabel.RegisterCallback<AttachToPanelEvent>((_) =>
-				{
-					Sync();
-				});
-				RegisterCallback<GeometryChangedEvent>((_) =>
 				{
 					Sync();
 				});
@@ -110,22 +124,22 @@ namespace FirstLight.Game.UIElements
 		}
 
 		/// <summary>
-		/// Do not call this method constructor, only used for unity internals!
+		/// Creates the default outlined label for UXML and programmatic use.
 		/// </summary>
-		[Obsolete("Do not use default constructor", false)]
-		public LabelOutlined()
+		public LabelOutlined() : this(string.Empty)
 		{
 		}
 
 		public LabelOutlined(string text, bool outlineHack = true)
 		{
-			this.outlineHack = outlineHack;
+			_outlineHack = outlineHack;
 			this.text = text;
 			Init();
 		}
 
 		private void Sync()
 		{
+			if (_internalLabel == null) return;
 			_internalLabel.text = text;
 			_internalLabel.style.whiteSpace = resolvedStyle.whiteSpace;
 			_internalLabel.parseEscapeSequences = parseEscapeSequences;
@@ -137,28 +151,6 @@ namespace FirstLight.Game.UIElements
 			if (_internalLabel.resolvedStyle.textOverflow == TextOverflow.Ellipsis)
 			{
 				SetTextEllipticEnd(text);
-			}
-		}
-
-		public new class UxmlFactory : UxmlFactory<LabelOutlined, UxmlTraits>
-		{
-		}
-
-		public new class UxmlTraits : TextElement.UxmlTraits
-		{
-			UxmlBoolAttributeDescription _outlineHack = new ()
-			{
-				name = "outline-hack",
-				use = UxmlAttributeDescription.Use.Optional,
-				defaultValue = true,
-			};
-
-			public override void Init(VisualElement ve, IUxmlAttributes bag, CreationContext cc)
-			{
-				base.Init(ve, bag, cc);
-				var labelOutlined = (LabelOutlined) ve;
-				labelOutlined.outlineHack = _outlineHack.GetValueFromBag(bag, cc);
-				labelOutlined.Init();
 			}
 		}
 	}

@@ -1,17 +1,16 @@
 using FirstLight.FLogger;
 using FirstLight.Game.Configs.Remote;
 using FirstLight.Game.Messages;
-using FirstLight.NativeUi;
-using FirstLight.SDK.Services;
+using GameLovers.MobileServices.NativeUi;
+using GameLovers.Services;
 using FirstLightServerSDK.Services;
 using UnityEngine;
-using VoxelBusters.EssentialKit;
 using Object = UnityEngine.Object;
 
 namespace FirstLight.Game.Services
 {
 	/// <summary>
-	/// This service handles logic for determining showing review prompt 
+	/// This service handles logic for determining showing review prompt
 	/// </summary>
 	public class RateAndReviewService
 	{
@@ -74,14 +73,28 @@ namespace FirstLight.Game.Services
 
 		private void OpenRateAndReviewPrompt()
 		{
-			RateMyApp.AskForReviewNow(skipConfirmation: true);
+			if (!RequestStoreReview()) return;
 			_localPrefsService.RateAndReviewPromptShown.Value = true;
-			_messageBrokerService.Unsubscribe<GameCompletedRewardsMessage>(OnGameCompletedRewardsMessage);
-			_messageBrokerService.Unsubscribe<CollectionItemEquippedMessage>(OnCollectionItemEquippedMessage);
-			_messageBrokerService.Unsubscribe<BattlePassLevelUpMessage>(OnBattlePassLevelUpMessage);
-			_messageBrokerService.Unsubscribe<MainMenuOpenedMessage>(OnPlayScreenOpenedMessage);
+			_messageBrokerService.Unsubscribe<GameCompletedRewardsMessage>(this);
+			_messageBrokerService.Unsubscribe<CollectionItemEquippedMessage>(this);
+			_messageBrokerService.Unsubscribe<BattlePassLevelUpMessage>(this);
+			_messageBrokerService.Unsubscribe<MainMenuOpenedMessage>(this);
 
 			FLog.Info($"RateAndReviewService->OpenRateAndReviewPrompt");
+		}
+
+		private static bool RequestStoreReview()
+		{
+#if UNITY_IOS && !UNITY_EDITOR
+			return UnityEngine.iOS.Device.RequestStoreReview();
+#elif UNITY_ANDROID && !UNITY_EDITOR
+			// Uses the app's actual package identifier; a published store listing is
+			// required for reviews, but is not a prerequisite for local play.
+			Application.OpenURL("market://details?id=" + Application.identifier);
+			return true;
+#else
+			return false;
+#endif
 		}
 
 		private void OnPlayScreenOpenedMessage(MainMenuOpenedMessage message)

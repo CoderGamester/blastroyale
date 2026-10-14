@@ -1,3 +1,4 @@
+using MainInstaller = FirstLight.Game.Utils.MainInstaller;
 using System;
 using Cysharp.Threading.Tasks;
 using FirstLight.FLogger;
@@ -5,7 +6,7 @@ using FirstLight.Game.Data.DataTypes;
 using FirstLight.Game.Services;
 using FirstLight.Game.UIElements;
 using FirstLight.Game.Utils;
-using FirstLight.UIService;
+using FirstLight.Game.UI;
 using Quantum;
 using Quantum.Systems;
 using UnityEngine;
@@ -102,7 +103,7 @@ namespace FirstLight.Game.Views.UITK
 				FLog.Warn("Failed to update WeaponDisplayView because simulation was not running");
 				return;
 			}
-			
+
 			var playerEntity = QuantumRunner.Default.Game.GetLocalPlayerEntityRef();
 			var f = QuantumRunner.Default.Game.Frames.Verified;
 
@@ -185,7 +186,7 @@ namespace FirstLight.Game.Views.UITK
 				StopOutOfAmmoAnimation(true);
 			}
 
-			// Low ammo glow effect 
+			// Low ammo glow effect
 			SetLowAmmo(IsLowAmmo(ammoPct));
 
 			//TODO: this callback does not apply when you first spawn in for some reason, even though it should
@@ -243,7 +244,7 @@ namespace FirstLight.Game.Views.UITK
 			});
 			animation.OnCompleted(() =>
 			{
-				// if there is another animation running stop the loop 
+				// if there is another animation running stop the loop
 				if (_outOfAmmoProgressAnimation != animation)
 				{
 					return;

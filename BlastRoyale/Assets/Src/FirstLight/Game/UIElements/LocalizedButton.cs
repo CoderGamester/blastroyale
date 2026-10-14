@@ -1,17 +1,19 @@
 using System;
-using I2.Loc;
+using FirstLight.Game.Localization;
 using UnityEngine;
 using UnityEngine.UIElements;
 
 namespace FirstLight.Game.UIElements
 {
 	/// <summary>
-	/// A button that has it's text set from a I2 Localization key.
+	/// A button that has it's text set from a bundled game translation key.
 	/// </summary>
-	public sealed class LocalizedButton : ButtonOutlined
+	[UxmlElement]
+	public sealed partial class LocalizedButton : ButtonOutlined
 	{
 		private string _localizationKey;
 
+		[UxmlAttribute("localization-key")]
 		public string LocalizationKey
 		{
 			get => _localizationKey;
@@ -19,7 +21,7 @@ namespace FirstLight.Game.UIElements
 			{
 				_localizationKey = value;
 				if (string.IsNullOrWhiteSpace(_localizationKey)) return;
-				if (!LocalizationManager.TryGetTranslation(_localizationKey, out var translation))
+				if (!GameLocalization.TryGetTranslation(_localizationKey, out var translation))
 				{
 					translation = _localizationKey;
 					Debug.LogWarning($"Could not find translation for key {_localizationKey} in element " + name);
@@ -29,7 +31,6 @@ namespace FirstLight.Game.UIElements
 			}
 		}
 
-		[Obsolete("Do not use default constructor")]
 		public LocalizedButton()
 		{
 		}
@@ -37,26 +38,6 @@ namespace FirstLight.Game.UIElements
 		public LocalizedButton(string localizationKey = null, Action action = null) : base(localizationKey, action)
 		{
 			LocalizationKey = localizationKey;
-		}
-
-		public new class UxmlFactory : UxmlFactory<LocalizedButton, UxmlTraits>
-		{
-		}
-
-		public new class UxmlTraits : ButtonOutlined.UxmlTraits
-		{
-			UxmlStringAttributeDescription _localizationKeyAttribute = new ()
-			{
-				name = "localization-key",
-				use = UxmlAttributeDescription.Use.Optional
-			};
-
-			public override void Init(VisualElement ve, IUxmlAttributes bag, CreationContext cc)
-			{
-				base.Init(ve, bag, cc);
-				var labelOutlined = (LocalizedButton) ve;
-				labelOutlined.LocalizationKey = _localizationKeyAttribute.GetValueFromBag(bag, cc);
-			}
 		}
 	}
 }

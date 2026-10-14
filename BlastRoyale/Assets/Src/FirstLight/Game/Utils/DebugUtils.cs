@@ -1,3 +1,4 @@
+using IDataProvider = FirstLight.Server.SDK.Models.IDataProvider;
 using System;
 using System.IO;
 using System.Threading.Tasks;
@@ -5,7 +6,7 @@ using FirstLight.FLogger;
 using FirstLight.Game.Services;
 using FirstLight.Server.SDK.Models;
 using FirstLight.Server.SDK.Modules;
-using FirstLight.Services;
+using GameLovers.Services;
 using UnityEngine;
 using Environment = System.Environment;
 

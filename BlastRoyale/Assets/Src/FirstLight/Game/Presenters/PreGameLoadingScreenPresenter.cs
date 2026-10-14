@@ -1,3 +1,4 @@
+using MainInstaller = FirstLight.Game.Utils.MainInstaller;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -14,8 +15,8 @@ using FirstLight.Game.Services;
 using FirstLight.Game.Services.RoomService;
 using FirstLight.Game.UIElements;
 using FirstLight.Game.Utils;
-using FirstLight.UIService;
-using I2.Loc;
+using FirstLight.Game.UI;
+using FirstLight.Game.Localization;
 using Photon.Realtime;
 using Quantum;
 using UnityEngine;
@@ -238,8 +239,8 @@ namespace FirstLight.Game.Presenters
 				var mapWidth = _mapImage.contentRect.width;
 				var markerPos = new Vector2(memberDropPosition.x * mapWidth, -memberDropPosition.y * mapWidth);
 
-				var oldPos = partyMarker.transform.position;
-				partyMarker.transform.position = markerPos;
+				var oldPos = partyMarker.resolvedStyle.translate;
+				partyMarker.style.translate = new Translate(markerPos.x, markerPos.y);
 				var oldVec = new Vector2(oldPos.x, oldPos.y);
 				if (Vector2.Distance(oldVec, markerPos) > 150)
 				{
@@ -303,7 +304,7 @@ namespace FirstLight.Game.Presenters
 			// Combining a list of mutators
 			for (int i = 0; i < mutators.Length; i++)
 			{
-				mutatorsString += LocalizationManager.GetTranslation(mutators[i].GetLocalizationKey());
+				mutatorsString += GameLocalization.GetTranslation(mutators[i].GetLocalizationKey());
 				mutatorsString += i < (mutators.Length - 1) ? ", " : "";
 				subtitlesCounter++;
 				if (subtitlesCounter == 4)
@@ -465,7 +466,7 @@ namespace FirstLight.Game.Presenters
 			_markerLocalPosition = new Vector3(localPos.x - mapWidthHalf, localPos.y - mapHeightHalf, 0);
 			FLog.Verbose("Map local position " + _markerLocalPosition);
 			_mapMarker.EnableInClassList(USS_MAP_MARKER_LEFT, _markerLocalPosition.y < MOVE_LOCATION_LEFT);
-			_mapMarker.transform.position = _markerLocalPosition;
+			_mapMarker.style.translate = new Translate(_markerLocalPosition.x, _markerLocalPosition.y);
 
 			return true;
 		}
@@ -482,7 +483,7 @@ namespace FirstLight.Game.Presenters
 
 			if (sendEvent)
 			{
-				_services.MessageBrokerService.Publish(new MapDropPointSelectedMessage());
+				_services.MessageBrokerService.PublishSafe(new MapDropPointSelectedMessage());
 			}
 
 			var mapWidth = _mapImage.contentRect.width;

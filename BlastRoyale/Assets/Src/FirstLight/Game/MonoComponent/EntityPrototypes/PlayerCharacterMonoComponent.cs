@@ -1,3 +1,4 @@
+using MainInstaller = FirstLight.Game.Utils.MainInstaller;
 using Cysharp.Threading.Tasks;
 using FirstLight.Game.Data;
 using FirstLight.Game.Messages;
@@ -7,7 +8,6 @@ using FirstLight.Game.Utils;
 using Quantum;
 using Quantum.Systems;
 using Quantum.Systems.Bots;
-using Sirenix.OdinInspector;
 using UnityEngine;
 using Extensions = FirstLight.Game.Utils.Extensions;
 
@@ -165,7 +165,7 @@ namespace FirstLight.Game.MonoComponent.EntityPrototypes
 			if (colorTag.HasValue) _circleIndicator.color = colorTag.Value;
 			_circleIndicator.gameObject.SetActive(ShouldDisplayColorTag());
 
-			_services.MessageBrokerService.Publish(new PlayerCharacterInstantiated()
+			_services.MessageBrokerService.PublishSafe(new PlayerCharacterInstantiated()
 			{
 				Character = this
 			});

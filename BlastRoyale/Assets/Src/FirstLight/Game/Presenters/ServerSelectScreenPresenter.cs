@@ -1,3 +1,5 @@
+using FirstLight.Inspector;
+using MainInstaller = FirstLight.Game.Utils.MainInstaller;
 using System;
 using Cysharp.Threading.Tasks;
 using FirstLight.FLogger;
@@ -5,10 +7,9 @@ using FirstLight.Game.Logic;
 using FirstLight.Game.Messages;
 using FirstLight.Game.Services;
 using FirstLight.Game.Utils;
-using FirstLight.NativeUi;
-using FirstLight.UIService;
-using I2.Loc;
-using Sirenix.OdinInspector;
+using GameLovers.MobileServices.NativeUi;
+using FirstLight.Game.UI;
+using FirstLight.Game.Localization;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
@@ -21,11 +22,11 @@ namespace FirstLight.Game.Presenters
 	[UILayer(UILayer.Popup)]
 	public class ServerSelectScreenPresenter : UIPresenter
 	{
-		[SerializeField, Required] private GameObject _selectorAndButtonsContainer;
-		[SerializeField, Required] private TMP_Text _statusText;
-		[SerializeField, Required] private Button _connectButton;
-		[SerializeField, Required] private Button _backButton;
-		[SerializeField, Required] private TMP_Dropdown _serverSelectDropdown;
+		[SerializeField, InspectorField(Required = true)] private GameObject _selectorAndButtonsContainer;
+		[SerializeField, InspectorField(Required = true)] private TMP_Text _statusText;
+		[SerializeField, InspectorField(Required = true)] private Button _connectButton;
+		[SerializeField, InspectorField(Required = true)] private Button _backButton;
+		[SerializeField, InspectorField(Required = true)] private TMP_Dropdown _serverSelectDropdown;
 
 		private IGameServices _services;
 
@@ -98,7 +99,7 @@ namespace FirstLight.Game.Presenters
 
 			if (changedServer)
 			{
-				_services.MessageBrokerService.Publish(new ChangedServerRegionMessage());
+				_services.MessageBrokerService.PublishSafe(new ChangedServerRegionMessage());
 				_services.GenericDialogService.OpenSimpleMessage(ScriptLocalization.UITSettings.connected_to_server_title,
 					string.Format(ScriptLocalization.UITSettings.connected_to_server_desc, _services.LocalPrefsService.ServerRegion.Value.GetPhotonRegionTranslation()));
 			}
@@ -148,7 +149,7 @@ namespace FirstLight.Game.Presenters
 		{
 			var button = new AlertButton
 			{
-				Style = AlertButtonStyle.Positive,
+				Style = AlertButtonStyle.Default,
 				Text = ScriptLocalization.General.Confirm
 			};
 

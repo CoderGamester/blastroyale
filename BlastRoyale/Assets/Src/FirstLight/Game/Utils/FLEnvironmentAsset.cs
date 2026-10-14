@@ -1,4 +1,4 @@
-using Sirenix.OdinInspector;
+using FirstLight.Inspector;
 using UnityEngine;
 
 namespace FirstLight.Game.Utils
@@ -8,7 +8,7 @@ namespace FirstLight.Game.Utils
 	/// </summary>
 	public class FLEnvironmentAsset : ScriptableObject
 	{
-		[InfoBox("Do not edit this manually. This value is set at build time.")] [DisableIf("@true")]
+		[InspectorField(ReadOnly = true), UnityEngine.Tooltip("Do not edit this manually. This value is set at build time.")]
 		// ReSharper disable once InconsistentNaming
 		public string EnvironmentName = "development";
 	}

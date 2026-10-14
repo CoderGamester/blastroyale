@@ -1,7 +1,8 @@
+using MainInstaller = FirstLight.Game.Utils.MainInstaller;
 using System.Collections;
 using FirstLight.Game.Services.RoomService;
 using FirstLight.Game.Utils;
-using I2.Loc;
+using FirstLight.Game.Localization;
 using Quantum;
 
 namespace FirstLight.Game.TestCases
@@ -45,9 +46,9 @@ namespace FirstLight.Game.TestCases
 					yield return GameConfigHelper.DecreaseMatchmakingTime();
 					yield return Quantum.DecreaseCircleTimesForNextMatch();
 				}
-				
+
 				MainInstaller.ResolveServices().GameModeService.SelectedMap = _map;
-				
+
 				yield return Quantum.UseBotBehaviourForNextMatch();
 				yield return UIHome.ClickPlayButton();
 				yield return UIGame.WaitDropZoneSelectScreen();

@@ -1,3 +1,4 @@
+using GameLovers.Services.Commands;
 using System.Linq;
 using Cysharp.Threading.Tasks;
 using FirstLight.Game.Data;
@@ -14,11 +15,13 @@ namespace FirstLight.Game.Commands
 	/// Command used to process Logical purchases from the store, only used for InGame currencies
 	/// for real money purchases it doesn't use any command and syncs directly with server see more at <see cref="IAPService"/>
 	/// </summary>
-	public class BuyFromStoreCommand : IGameCommand
+	public class BuyFromStoreCommand : IGameCommandWithResult<bool>
 	{
 		public string CatalogItemId;
 
 		public StoreItemData StoreItemData;
+		private bool _wasPurchased;
+		public bool GetResult() => _wasPurchased;
 
 		public CommandAccessLevel AccessLevel() => CommandAccessLevel.Player;
 
@@ -26,11 +29,12 @@ namespace FirstLight.Game.Commands
 
 		public async UniTask Execute(CommandExecutionContext ctx)
 		{
+			_wasPurchased = false;
 			var catalogItem = await ctx.Services.CatalogService().GetCatalogItem(CatalogItemId);
 
 			var playerDailyDealsConfiguration = ctx.Data.GetData<PlayerStoreData>().PlayerDailyDealsConfiguration;
 			var dealStore = playerDailyDealsConfiguration?.SpecialStoreList.FirstOrDefault(s => s.IsActive && s.SpecialStoreItemIDs.Contains(CatalogItemId));
-			
+
 			var storeSetup = await ctx.Services.StoreService().GetItemPrice(CatalogItemId, dealStore?.SpecialStoreName);
 
 			if (!ctx.Logic.PlayerStoreLogic().IsPurchasedAllowed(CatalogItemId, StoreItemData))
@@ -38,26 +42,15 @@ namespace FirstLight.Game.Commands
 				return;
 			}
 
-			foreach (var p in storeSetup.Price)
-			{
-				var id = PlayfabCurrencies.GetCurrency(p.Key);
-				var amt = p.Value;
-				// This purchase is validated in BlastRoyale server plugin
-				if (id == GameId.NOOB && ctx.Logic.Web3().CanUseWeb3())
-				{
-					var web3Data = ctx.Data.GetData<Web3PlayerData>();
-					web3Data.NoobPurchases += amt;
-					web3Data.Version++;
-				}
-				else
-				{
-					ctx.Logic.CurrencyLogic().DeductCurrency(id, amt);
-				}
-			}
+			// Validate every cost before any debit so a rejected multi-currency purchase leaves all balances unchanged.
+			foreach (var price in storeSetup.Price)
+				if (ctx.Logic.CurrencyLogic().GetCurrencyAmount(PlayfabCurrencies.GetCurrency(price.Key)) < price.Value) return;
+			foreach (var price in storeSetup.Price)
+				ctx.Logic.CurrencyLogic().DeductCurrency(PlayfabCurrencies.GetCurrency(price.Key), price.Value);
 
 			ctx.Logic.RewardLogic().Reward(new[] {catalogItem});
 			ctx.Logic.PlayerStoreLogic().UpdateLastPlayerPurchase(CatalogItemId, StoreItemData);
-			
+
 			var mainPrice = storeSetup.Price.FirstOrDefault();
 			var msg = new PurchaseClaimedMessage
 			{
@@ -66,7 +59,8 @@ namespace FirstLight.Game.Commands
 				PriceCurrencyId = mainPrice.Key,
 				PricePaid = mainPrice.Value.ToString(),
 			};
-			ctx.Services.MessageBrokerService().Publish(msg);
+			_wasPurchased = true;
+			ctx.Services.MessageBrokerService().PublishSafe(msg);
 		}
 	}
 }

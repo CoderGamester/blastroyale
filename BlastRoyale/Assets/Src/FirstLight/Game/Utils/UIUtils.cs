@@ -1,3 +1,4 @@
+using MainInstaller = FirstLight.Game.Utils.MainInstaller;
 using System;
 using System.Linq;
 using Cysharp.Threading.Tasks;
@@ -9,9 +10,8 @@ using FirstLight.Game.Logic;
 using FirstLight.Game.Services;
 using FirstLight.Game.UIElements;
 using FirstLight.Game.Views.UITK;
-using FirstLight.Modules.UIService.Runtime;
-using FirstLight.UIService;
-using I2.Loc;
+using FirstLight.Game.UI;
+using FirstLight.Game.Localization;
 using Quantum;
 using UnityEngine;
 using UnityEngine.UIElements;
@@ -42,7 +42,7 @@ namespace FirstLight.Game.Utils
 		/// </summary>
 		public static void SetupClicks(this VisualElement root, IGameServices gameServices)
 		{
-			foreach (var ve in root.Query(null, UIService.UIService.SFX_CLICK_FORWARDS).Build())
+			foreach (var ve in root.Query(null, FirstLight.Game.UI.UIService.SFX_CLICK_FORWARDS).Build())
 			{
 				ve.RegisterCallback<PointerDownEvent, IGameServices>(
 					(_, service) => { service.AudioFxService.PlayClip2D(AudioId.ButtonClickForward); },
@@ -50,7 +50,7 @@ namespace FirstLight.Game.Utils
 					TrickleDown.TrickleDown);
 			}
 
-			foreach (var ve in root.Query(null, UIService.UIService.SFX_CLICK_BACKWARDS).Build())
+			foreach (var ve in root.Query(null, FirstLight.Game.UI.UIService.SFX_CLICK_BACKWARDS).Build())
 			{
 				ve.RegisterCallback<PointerDownEvent, IGameServices>(
 					(_, service) => { service.AudioFxService.PlayClip2D(AudioId.ButtonClickBackward); },
@@ -143,7 +143,7 @@ namespace FirstLight.Game.Utils
 		/// </summary>
 		public static string LocalizeKey(this string key)
 		{
-			return LocalizationManager.TryGetTranslation(key, out var translation)
+			return GameLocalization.TryGetTranslation(key, out var translation)
 				? translation
 				: $"{key}";
 		}
@@ -256,8 +256,8 @@ namespace FirstLight.Game.Utils
 
 		/// <summary>
 		/// Get the position inside the Panel of a World Position
-		/// Example: Damage numbers: get the position of the player in the world, call this function, and then use 
-		/// the result to set the element inside the panel  
+		/// Example: Damage numbers: get the position of the player in the world, call this function, and then use
+		/// the result to set the element inside the panel
 		/// </summary>
 		public static Vector2 WorldPositionToPanel(IPanel panel, Vector3 worldPosition)
 		{
@@ -273,7 +273,8 @@ namespace FirstLight.Game.Utils
 		public static void SetPositionBasedOnWorldPosition(this VisualElement element, Vector3 worldPosition)
 		{
 			element.style.position = Position.Absolute;
-			element.transform.position = WorldPositionToPanel(element.panel, worldPosition);
+			var panelPosition = WorldPositionToPanel(element.panel, worldPosition);
+			element.style.translate = new Translate(panelPosition.x, panelPosition.y);
 		}
 
 		public static void SetPadding(this IStyle st, int padding)
@@ -340,22 +341,22 @@ namespace FirstLight.Game.Utils
 			tree.CloneTree(visualElement);
 			visualElement.AssignElementResults(visualElement);
 		}
-		
+
 		/*
-		 * An Extension method that formats the given Label text to Cooldown/Expires from UTC now to given time in miliseconds  
+		 * An Extension method that formats the given Label text to Cooldown/Expires from UTC now to given time in miliseconds
 		 */
 		public static void ShowCooldown(this Label cooldownTimeLabel, DateTime cooldownRemaining, bool showClockSprite = false, Action cooldownExpiredCallback = null)
 		{
 
 			var cooldownRemainingSeconds = (cooldownRemaining - DateTime.UtcNow).TotalSeconds;
-			
+
 			cooldownTimeLabel.schedule.Execute(() =>
 				{
 
 					var currentCooldown = TimeSpan.FromSeconds(cooldownRemainingSeconds);
-					
+
 					cooldownTimeLabel.text = currentCooldown.ToDaysHourMinutesOrHourMinutesSeconds(true);
-					
+
 					if (showClockSprite)
 					{
 						cooldownTimeLabel.text = "<sprite name=\"ClockIcon\"> " + cooldownTimeLabel.text;
@@ -371,7 +372,7 @@ namespace FirstLight.Game.Utils
 				.Every(1000)
 				.Until(() => cooldownRemainingSeconds <= 0);
 		}
-		
+
 
 		public static VisualElement GetRoot(this VisualElement vs)
 		{

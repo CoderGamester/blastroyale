@@ -3,7 +3,7 @@ using FirstLight.Game.Configs;
 using FirstLight.Game.Ids;
 using FirstLight.Game.Infos;
 using FirstLight.Game.Services.Party;
-using I2.Loc;
+using FirstLight.Game.Localization;
 using Quantum;
 using Unity.Services.Authentication;
 
@@ -32,7 +32,7 @@ namespace FirstLight.Game.Utils
 		/// </summary>
 		public static string GetTranslationGameIdString(this string gameId)
 		{
-			return LocalizationManager.GetTranslation(GetTranslationKeyGameIdString(gameId));
+			return GameLocalization.GetTranslation(GetTranslationKeyGameIdString(gameId));
 		}
 		/// <summary>
 		/// Requests the localization key for the given <paramref name="gameId"/> as a string
@@ -47,7 +47,7 @@ namespace FirstLight.Game.Utils
 		/// </summary>
 		public static string GetLocalization(this StatType stat)
 		{
-			return LocalizationManager.GetTranslation($"{nameof(ScriptTerms.General)}/{stat.ToString()}");
+			return GameLocalization.GetTranslation($"{nameof(ScriptTerms.General)}/{stat.ToString()}");
 		}
 
 		/// <summary>
@@ -55,7 +55,7 @@ namespace FirstLight.Game.Utils
 		/// </summary>
 		public static string GetLocalization(this GameId id)
 		{
-			return LocalizationManager.TryGetTranslation(id.GetLocalizationKey(), out var translation) ? translation : id.ToString();
+			return GameLocalization.TryGetTranslation(id.GetLocalizationKey(), out var translation) ? translation : id.ToString();
 		}
 
 		/// <summary>
@@ -72,12 +72,12 @@ namespace FirstLight.Game.Utils
 		public static string GetCurrencyLocalization(this GameId id, ulong amount)
 		{
 			var key = id.GetLocalizationKey();
-			if (amount != 1 && LocalizationManager.TryGetTranslation(key + "_Plural", out var translation))
+			if (amount != 1 && GameLocalization.TryGetTranslation(key + "_Plural", out var translation))
 			{
 				return translation;
 			}
 
-			return LocalizationManager.GetTranslation(key);
+			return GameLocalization.GetTranslation(key);
 		}
 
 		/// <summary>
@@ -86,7 +86,7 @@ namespace FirstLight.Game.Utils
 		public static string GetGameIdGroupLocalization(this GameIdGroup id)
 		{
 			var key = id.GetLocalizationKey();
-			return LocalizationManager.GetTranslation(key);
+			return GameLocalization.GetTranslation(key);
 		}
 
 		/// <summary>
@@ -94,7 +94,7 @@ namespace FirstLight.Game.Utils
 		/// </summary>
 		public static string GetDescriptionLocalization(this GameId id)
 		{
-			var localized = LocalizationManager.GetTranslation(id.GetDescriptionLocalizationKey());
+			var localized = GameLocalization.GetTranslation(id.GetDescriptionLocalizationKey());
 			if (string.IsNullOrEmpty(localized)) return id.ToString();
 			return localized;
 		}
@@ -112,7 +112,7 @@ namespace FirstLight.Game.Utils
 		/// </summary>
 		public static string GetLocalization(this ConsumableType id)
 		{
-			return LocalizationManager.GetTranslation($"{nameof(ScriptTerms.GameIds)}/{id.ToString()}");
+			return GameLocalization.GetTranslation($"{nameof(ScriptTerms.GameIds)}/{id.ToString()}");
 		}
 
 		/// <summary>
@@ -128,7 +128,7 @@ namespace FirstLight.Game.Utils
 		/// </summary>
 		public static string GetLocalization(this EquipmentStatType stat)
 		{
-			return LocalizationManager.GetTranslation(stat.GetLocalizationKey()).ToUpperInvariant();
+			return GameLocalization.GetTranslation(stat.GetLocalizationKey()).ToUpperInvariant();
 		}
 
 		/// <summary>
@@ -157,7 +157,7 @@ namespace FirstLight.Game.Utils
 
 		public static string GetLocalization(this EquipmentRarity rarity)
 		{
-			return LocalizationManager.GetTranslation(GetLocalizationKey(rarity));
+			return GameLocalization.GetTranslation(GetLocalizationKey(rarity));
 		}
 
 		/// <summary>
@@ -165,7 +165,7 @@ namespace FirstLight.Game.Utils
 		/// </summary>
 		public static string GetLocalization(this MatchType id)
 		{
-			return LocalizationManager.GetTranslation($"{nameof(ScriptTerms.GameIds)}/{id.ToString()}");
+			return GameLocalization.GetTranslation($"{nameof(ScriptTerms.GameIds)}/{id.ToString()}");
 		}
 
 		/// <summary>
@@ -173,7 +173,7 @@ namespace FirstLight.Game.Utils
 		/// </summary>
 		public static string GetMapDropPointLocalization(this string dropPointName)
 		{
-			return LocalizationManager.GetTranslation($"MapDropPoints/{dropPointName}");
+			return GameLocalization.GetTranslation($"MapDropPoints/{dropPointName}");
 		}
 
 		/// <summary>
@@ -181,7 +181,7 @@ namespace FirstLight.Game.Utils
 		/// </summary>
 		public static string GetLocalization(this EquipmentGrade grade)
 		{
-			return LocalizationManager.GetTranslation($"UITEquipment/grade_{(int) grade + 1}");
+			return GameLocalization.GetTranslation($"UITEquipment/grade_{(int) grade + 1}");
 		}
 
 		/// <summary>
@@ -189,7 +189,7 @@ namespace FirstLight.Game.Utils
 		/// </summary>
 		public static string GetLocalization(this EquipmentManufacturer manufacturer)
 		{
-			return LocalizationManager.GetTranslation(
+			return GameLocalization.GetTranslation(
 				$"UITEquipment/manufacturer_{manufacturer.ToString().ToLowerInvariant()}");
 		}
 
@@ -198,7 +198,7 @@ namespace FirstLight.Game.Utils
 		/// </summary>
 		public static string GetLocalization(this EquipmentEdition edition)
 		{
-			return LocalizationManager.GetTranslation($"UITEquipment/edition_{edition.ToString().ToLowerInvariant()}");
+			return GameLocalization.GetTranslation($"UITEquipment/edition_{edition.ToString().ToLowerInvariant()}");
 		}
 
 		/// <summary>
@@ -206,7 +206,7 @@ namespace FirstLight.Game.Utils
 		/// </summary>
 		public static string GetLocalization(this EquipmentMaterial material)
 		{
-			return LocalizationManager.GetTranslation($"UITEquipment/material_{material.ToString().ToLowerInvariant()}");
+			return GameLocalization.GetTranslation($"UITEquipment/material_{material.ToString().ToLowerInvariant()}");
 		}
 
 		/// <summary>
@@ -214,7 +214,7 @@ namespace FirstLight.Game.Utils
 		/// </summary>
 		public static string GetLocalization(this EquipmentFaction faction)
 		{
-			return LocalizationManager.GetTranslation($"UITEquipment/faction_{faction.ToString().ToLowerInvariant()}");
+			return GameLocalization.GetTranslation($"UITEquipment/faction_{faction.ToString().ToLowerInvariant()}");
 		}
 
 		/// <summary>
@@ -223,7 +223,7 @@ namespace FirstLight.Game.Utils
 		public static string GetTranslationForGameModeId(string gameModeId)
 		{
 			var term = $"{nameof(ScriptTerms.UITShared)}/gamemode_{gameModeId}";
-			if (LocalizationManager.TryGetTranslation(term, out var translation))
+			if (GameLocalization.TryGetTranslation(term, out var translation))
 			{
 				return translation;
 			}
@@ -237,7 +237,7 @@ namespace FirstLight.Game.Utils
 		public static string GetTranslationForTeamSize(uint teamSize)
 		{
 			var term = $"{nameof(ScriptTerms.UITShared)}/team_size_{teamSize}";
-			if (LocalizationManager.TryGetTranslation(term, out var translation))
+			if (GameLocalization.TryGetTranslation(term, out var translation))
 			{
 				return translation;
 			}
@@ -253,7 +253,7 @@ namespace FirstLight.Game.Utils
 		public static string GetTranslation(this UnlockSystem unlockSystem)
 		{
 			var term = $"{nameof(ScriptTerms.UnlockSystems)}/" + unlockSystem.ToString();
-			if (LocalizationManager.TryGetTranslation(term, out var translation))
+			if (GameLocalization.TryGetTranslation(term, out var translation))
 			{
 				return translation;
 			}

@@ -125,7 +125,7 @@ namespace FirstLight.Editor.Build
 			}
 		}
 
-		private static void SetupAddressables(bool remoteAddressables)
+		internal static void SetupAddressables(bool remoteAddressables)
 		{
 			var addressableSettings = AddressableAssetSettingsDefaultObject.Settings;
 

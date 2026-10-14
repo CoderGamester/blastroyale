@@ -1,3 +1,4 @@
 {
-  "name": "FirstLight.Models"
+    "name": "FirstLight.Models",
+    "references": []
 }

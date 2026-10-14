@@ -1,3 +1,5 @@
+using MainInstaller = FirstLight.Game.Utils.MainInstaller;
+using FirstLight.Game.Services.Infrastructure;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -18,8 +20,8 @@ using FirstLight.Game.Services;
 using FirstLight.Game.StateMachines;
 using FirstLight.Game.Utils;
 using FirstLight.Game.Utils.UCSExtensions;
-using FirstLight.Statechart;
-using I2.Loc;
+using GameLovers.StatechartMachine;
+using FirstLight.Game.Localization;
 using Quantum;
 using Unity.Services.Lobbies.Models;
 using UnityEngine;
@@ -113,7 +115,7 @@ namespace FirstLight.Game.Domains.HomeScreen
 
 		private void OnMainMenuLoaded()
 		{
-			_services.MessageBrokerService.Publish(new MainMenuLoadedMessage());
+			_services.MessageBrokerService.PublishSafe(new MainMenuLoadedMessage());
 		}
 
 		private void MainMenuSetup(IStateFactory stateFactory)
@@ -352,21 +354,16 @@ namespace FirstLight.Game.Domains.HomeScreen
 
 		private async UniTask PreloadQuantumSettings()
 		{
-			var assets = UnityDB.CollectAddressableAssets();
-			foreach (var asset in assets)
+			foreach (var asset in QuantumUnityDB.Global.Entries)
 			{
-				if (!asset.Item1.StartsWith("Settings"))
-				{
-					continue;
-				}
-
-				await _assetAdderService.LoadAssetAsync<AssetBase>(asset.Item1);
+				if (asset?.Source is not QuantumAssetObjectSourceAddressable source || !(asset.Path?.StartsWith("Settings") ?? false)) continue;
+				await _assetAdderService.LoadAssetAsync<AssetObject>(source.RuntimeKey);
 			}
 		}
 
 		private bool NeedsToEnterDisplayName()
 		{
-			// If first enter prompt tutorial not completed, and tutorial is not completed 
+			// If first enter prompt tutorial not completed, and tutorial is not completed
 			return !_services.TutorialService.HasCompletedTutorialSection(TutorialSection.ENTER_NAME_PROMPT);
 		}
 
@@ -377,12 +374,12 @@ namespace FirstLight.Game.Domains.HomeScreen
 
 		private void SendPlayReadyMessage()
 		{
-			_services.MessageBrokerService.Publish(new LocalPlayerClickedPlayMessage());
+			_services.MessageBrokerService.PublishSafe(new LocalPlayerClickedPlayMessage());
 		}
 
 		private void SendCancelMatchmakingMessage()
 		{
-			_services.MessageBrokerService.Publish(new MatchmakingCancelMessage());
+			_services.MessageBrokerService.PublishSafe(new MatchmakingCancelMessage());
 		}
 
 		private bool CheckIsNotPartyLeader()
@@ -417,7 +414,7 @@ namespace FirstLight.Game.Domains.HomeScreen
 			_services.UIService.OpenScreen<GameModeScreenPresenter>(data)
 				.ContinueWith((_) =>
 				{
-					_services.MessageBrokerService.Publish(new GameModeScreenOpenedMessage());
+					_services.MessageBrokerService.PublishSafe(new GameModeScreenOpenedMessage());
 				}).Forget();
 		}
 
@@ -465,7 +462,7 @@ namespace FirstLight.Game.Domains.HomeScreen
 				OnHomeClicked = () => { activity.Complete(); },
 			};
 			await _services.UIService.OpenScreen<StoreScreenPresenter>(data);
-			_services.MessageBrokerService.Publish(new ShopScreenOpenedMessage());
+			_services.MessageBrokerService.PublishSafe(new ShopScreenOpenedMessage());
 		}
 
 		private void OpenCustomGameLobby()
@@ -539,14 +536,14 @@ namespace FirstLight.Game.Domains.HomeScreen
 					.Forget();
 			}
 
-			_services.MessageBrokerService.Publish(new MainMenuOpenedMessage());
+			_services.MessageBrokerService.PublishSafe(new MainMenuOpenedMessage());
 		}
 
 		private void OpenDisconnectedScreen()
 		{
 			var data = new DisconnectedScreenPresenter.StateData
 			{
-				ReconnectClicked = () => _services.MessageBrokerService.Publish(new AttemptManualReconnectionMessage())
+				ReconnectClicked = () => _services.MessageBrokerService.PublishSafe(new AttemptManualReconnectionMessage())
 			};
 
 			_services.UIService.OpenScreen<DisconnectedScreenPresenter>(data).Forget();
@@ -585,7 +582,7 @@ namespace FirstLight.Game.Domains.HomeScreen
 		private async UniTask RequestDelayed()
 		{
 			await UniTask.NextFrame(); // TODO: Hack because we get into a loop and Unity freezes without it
-			_services.MessageBrokerService.Publish(new RequestStartMetaMatchTutorialMessage());
+			_services.MessageBrokerService.PublishSafe(new RequestStartMetaMatchTutorialMessage());
 		}
 
 		private void BeforeLoadingMenu()
@@ -601,12 +598,12 @@ namespace FirstLight.Game.Domains.HomeScreen
 				});
 			}
 
-			// Removing non-nft equipments
-			var nonNfts = _gameDataProvider.EquipmentDataProvider.GetInventoryEquipmentCount(EquipmentFilter.NoNftOnly);
-			if (nonNfts > 0)
+			// Converting legacy equipment to in-game currency
+			var equipmentCount = _gameDataProvider.EquipmentDataProvider.GetInventoryEquipmentCount(EquipmentFilter.All);
+			if (equipmentCount > 0)
 			{
-				FLog.Info("Converting non-nfts to blast bucks");
-				_services.CommandService.ExecuteCommand(new NonNftConvertCommand());
+				FLog.Info("Converting legacy equipment to Blast Bucks");
+				_services.CommandService.ExecuteCommand(new ConvertEquipmentCommand());
 			}
 		}
 

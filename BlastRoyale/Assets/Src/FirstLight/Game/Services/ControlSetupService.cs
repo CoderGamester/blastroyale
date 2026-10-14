@@ -1,8 +1,9 @@
+using FirstLight.Game.Services;
 using System.Collections.Generic;
 using System.Linq;
 using FirstLight.Game.Data;
 using FirstLight.Game.Presenters;
-using FirstLight.Services;
+using GameLovers.Services;
 using UnityEngine.UIElements;
 
 namespace FirstLight.Game.Services
@@ -22,14 +23,14 @@ namespace FirstLight.Game.Services
 		/// </summary>
 		void SetControlPositions(VisualElement root);
 	}
-	
+
 	public class ControlSetupService : IControlSetupService
 	{
-		private readonly DataService _localData;
+		private readonly ClientDataService _localData;
 
 		public ControlSetupService()
 		{
-			_localData = new DataService();
+			_localData = new ClientDataService();
 			_localData.LoadData<UIPositionData>();
 		}
 
@@ -48,7 +49,7 @@ namespace FirstLight.Game.Services
 				saved.ToElement(e);
 			}
 		}
-		
+
 		private UIPositionData Data => _localData.GetData<UIPositionData>();
 		private void Save() => _localData.SaveData<UIPositionData>();
 

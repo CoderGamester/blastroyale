@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using Cysharp.Threading.Tasks;
@@ -6,7 +6,7 @@ using FirstLight.Game.Configs.AssetConfigs;
 using FirstLight.Game.Domains.VFX;
 using FirstLight.Game.Ids;
 using FirstLight.Server.SDK.Modules.GameConfiguration;
-using FirstLight.Services;
+using GameLovers.Services;
 using Quantum;
 using UnityEngine;
 using UnityEngine.AddressableAssets;

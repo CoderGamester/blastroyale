@@ -1,3 +1,4 @@
+using GameLovers.GameData;
 using System;
 using System.Collections.Generic;
 using FirstLight.Game.Utils;
@@ -10,7 +11,7 @@ namespace FirstLight.Game.Configs
 	/// <summary>
 	/// This struct stores a "Chest of Equipment"
 	/// That means it defines base rules to generate a given equipment
-	/// The rewards are non-NFTs, and are generated from a list of possibilities and ranges (GameID + Chance)
+	/// The rewards are equipment items, and are generated from a list of possibilities and ranges (GameID + Chance)
 	/// </summary>
 	[Serializable]
 	public struct EquipmentRewardConfig

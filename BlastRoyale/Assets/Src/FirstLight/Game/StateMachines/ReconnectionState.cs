@@ -6,8 +6,8 @@ using FirstLight.Game.Logic;
 using FirstLight.Game.Presenters;
 using FirstLight.Game.Services;
 using FirstLight.Game.Utils;
-using FirstLight.Statechart;
-using FirstLight.UIService;
+using GameLovers.StatechartMachine;
+using FirstLight.Game.UI;
 using UnityEngine;
 
 namespace FirstLight.Game.StateMachines
@@ -27,7 +27,7 @@ namespace FirstLight.Game.StateMachines
 		private readonly IGameServices _services;
 		private readonly IGameDataProvider _dataProvider;
 		private readonly IInternalGameNetworkService _networkService;
-		private readonly UIService.UIService _uiService;
+		private readonly FirstLight.Game.UI.UIService _uiService;
 		private readonly MatchState _matchState;
 		private readonly Action<IStatechartEvent> _statechartTrigger;
 

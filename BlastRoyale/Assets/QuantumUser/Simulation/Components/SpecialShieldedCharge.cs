@@ -1,0 +1,98 @@
+using Photon.Deterministic;
+
+namespace Quantum
+{
+	/// <summary>
+	/// This class handles behaviour for the <see cref="SpecialShieldedCharge"/>
+	/// </summary>
+	public static class SpecialShieldedCharge
+	{
+		public static unsafe bool Use(Frame f, EntityRef e, in Special special, FPVector2 aimInput, FP maxRange)
+		{
+			var targetPosition = FPVector2.Zero;
+			var attackerPosition = f.Unsafe.GetPointer<Transform2D>(e)->Position;
+
+			if (!f.TryGet<Targetable>(e, out var targetable))
+			{
+				return false;
+			}
+
+			if (f.TryGet<BotCharacter>(e, out var bot))
+			{
+				// Try to find a target in a range automatically
+				var iterator = f.Unsafe.GetComponentBlockIterator<Targetable>();
+				foreach (var target in iterator)
+				{
+					if (!QuantumHelpers.IsAttackable(f, target.Entity, targetable.Team) ||
+					    !QuantumHelpers.IsEntityInRange(f, e, target.Entity, FP._0, maxRange))
+					{
+						continue;
+					}
+
+					targetPosition = f.Unsafe.GetPointer<Transform2D>(target.Entity)->Position;
+
+					break;
+				}
+
+				// We make a random deviation based on bot's accuracy with specials
+				var randomDirection = FPVector2.Rotate(FPVector2.Left, f.RNG->Next(FP._0, FP.PiTimes2));
+				var randomDistance = f.RNG->Next(FP._0, bot.SpecialAimingDeviation);
+				targetPosition = targetPosition + randomDirection * randomDistance;
+			}
+			else
+			{
+				aimInput = FPVector2.ClampMagnitude(aimInput, FP._1);
+				targetPosition = attackerPosition + (aimInput * maxRange);
+			}
+
+			// Testing 2 or more positions on the way towards targetPosition to find the last navmesh valid position before unsuitable one
+			var previousTestPos = attackerPosition;
+			var stepsToCheck = FPMath.Max(FPMath.CeilToInt((targetPosition - attackerPosition).Magnitude / Constants.CHARGE_VALIDITY_CHECK_DISTANCE_STEP), FP._2);
+			for (var i = 0; i < stepsToCheck; i++)
+			{
+				var testPos = FPVector2.Lerp(attackerPosition, targetPosition, (FP)i / (stepsToCheck - 1));
+
+				// TODO: Verify this
+				if (f.NavMesh.Contains(testPos.XOY, NavMeshRegionMask.Default))
+				{
+					previousTestPos = testPos;
+				}
+				else
+				{
+					break;
+				}
+			}
+			targetPosition = previousTestPos;
+
+			var chargeDistance = (targetPosition - attackerPosition).Magnitude;
+
+			// If there's no valid position to move then we cancel the usage of a special
+			if (chargeDistance == FP._0)
+			{
+				return false;
+			}
+
+			var chargeDuration = chargeDistance / special.Speed;
+
+			var chargeComponent = new PlayerCharging
+			{
+				ChargeDuration = chargeDuration,
+				ChargeStartPos = attackerPosition,
+				ChargeEndPos = targetPosition,
+				ChargeStartTime = f.Time,
+				PowerAmount = special.SpecialPower,
+			};
+
+			QuantumHelpers.LookAt2d(f, e, targetPosition, FP._0);
+			StatusModifiers.AddStatusModifierToEntity(f, e, StatusModifierType.Immunity, chargeDuration, true);
+
+			f.Signals.PlayerColliderDisabled(e);
+
+			f.Add(e, chargeComponent);
+
+			f.Events.OnShieldedChargeUsed(e, chargeDuration);
+
+			return true;
+		}
+	}
+}

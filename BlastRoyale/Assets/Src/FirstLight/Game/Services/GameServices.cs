@@ -1,8 +1,12 @@
+using GameLovers.Services.Pooling;
+using GameLovers.Services.Commands;
+using FirstLight.Game.Services.Infrastructure;
+using FirstLight.Game.Services;
 using Cysharp.Threading.Tasks;
 using FirstLight.Game.Domains.HomeScreen;
 using FirstLight.Game.Domains.VFX;
 using FirstLight.Game.Logic;
-using FirstLight.Services;
+using GameLovers.Services;
 using FirstLight.Game.Ids;
 using FirstLight.Game.Messages;
 using FirstLight.Game.MonoComponent.Match;
@@ -14,7 +18,6 @@ using FirstLight.Game.Services.Collection;
 using FirstLight.Game.Services.Social;
 using FirstLight.Game.StateMachines;
 using FirstLight.Game.Utils;
-using FirstLight.SDK.Services;
 using FirstLight.Server.SDK.Modules.GameConfiguration;
 using Unity.Services.RemoteConfig;
 
@@ -30,10 +33,10 @@ namespace FirstLight.Game.Services
 	/// </remarks>
 	public interface IGameServices
 	{
-		/// <inheritdoc cref="IDataSaver"/>
-		IDataSaver DataSaver { get; }
+		/// <inheritdoc cref="IClientDataSaver"/>
+		IClientDataSaver DataSaver { get; }
 
-		IDataService DataService { get; }
+		IClientDataService DataService { get; }
 
 		/// <inheritdoc cref="IConfigsProvider"/>
 		IConfigsProvider ConfigsProvider { get; }
@@ -103,7 +106,7 @@ namespace FirstLight.Game.Services
 
 		public RateAndReviewService RateAndReviewService { get; }
 
-		public UIService.UIService UIService { get; }
+		public FirstLight.Game.UI.UIService UIService { get; }
 		public UIVFXService UIVFXService { get; }
 
 		public ICollectionService CollectionService { get; }
@@ -149,8 +152,8 @@ namespace FirstLight.Game.Services
 	/// </summary>
 	public class GameServices : IGameServices
 	{
-		public IDataSaver DataSaver { get; }
-		public IDataService DataService { get; }
+		public IClientDataSaver DataSaver { get; }
+		public IClientDataService DataService { get; }
 		public IConfigsProvider ConfigsProvider { get; }
 		public IGuidService GuidService { get; }
 		public IGameNetworkService NetworkService { get; }
@@ -175,7 +178,7 @@ namespace FirstLight.Game.Services
 		public IMatchmakingService MatchmakingService { get; }
 		public IIAPService IAPService { get; }
 		public RateAndReviewService RateAndReviewService { get; }
-		public UIService.UIService UIService { get; }
+		public FirstLight.Game.UI.UIService UIService { get; }
 		public UIVFXService UIVFXService { get; }
 		public ICollectionService CollectionService { get; }
 		public IControlSetupService ControlsSetup { get; }
@@ -210,7 +213,7 @@ namespace FirstLight.Game.Services
 		/// <param name="gameLogic"></param>
 		/// <param name="assetResolverService"></param>
 		public GameServices(IInternalGameNetworkService networkService, IMessageBrokerService messageBrokerService,
-							ITimeService timeService, IDataService dataService, IConfigsAdder configsProvider,
+							ITimeService timeService, IClientDataService dataService, IConfigsAdder configsProvider,
 							IGameLogic gameLogic, IAssetResolverService assetResolverService)
 		{
 			NetworkService = networkService;
@@ -223,7 +226,7 @@ namespace FirstLight.Game.Services
 			LocalPrefsService = new LocalPrefsService();
 			AudioFxService = new GameAudioFxService(assetResolverService, LocalPrefsService);
 
-			UIService = new UIService.UIService();
+			UIService = new FirstLight.Game.UI.UIService();
 			GenericDialogService = new GenericDialogService(UIService, gameLogic.CurrencyDataProvider);
 			UIVFXService = new UIVFXService(this, assetResolverService);
 			UIVFXService.Init().Forget();
@@ -283,7 +286,7 @@ namespace FirstLight.Game.Services
 		/// <inheritdoc />
 		public void QuitGame(string reason)
 		{
-			MessageBrokerService.Publish(new ApplicationQuitMessage());
+			MessageBrokerService.PublishSafe(new ApplicationQuitMessage());
 			QuitReason = reason;
 #if UNITY_EDITOR
 			UnityEditor.EditorApplication.isPlaying = false;

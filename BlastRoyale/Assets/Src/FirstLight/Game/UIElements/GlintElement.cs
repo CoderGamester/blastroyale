@@ -7,13 +7,15 @@ namespace FirstLight.Game.UIElements
 	/// <summary>
 	/// Displays a glint over an element. Must be used with a vector mask for shaped glints.
 	/// </summary>
-	public class GlintElement : VisualElement
+	[UxmlElement]
+	public partial class GlintElement : VisualElement
 	{
 		private const string UssBlock = "glint-element";
 		private const string UssGlint = UssBlock + "__glint";
 		private const string UssGlintSwiped = UssGlint + "--swiped";
 
-		public bool AutoStart { get; private set; }
+		[UxmlAttribute("auto-start")]
+		public bool AutoStart { get; private set; } = true;
 
 		private readonly GradientElement _glint;
 
@@ -62,27 +64,6 @@ namespace FirstLight.Game.UIElements
 		{
 			_glint.RemoveFromClassList(UssGlintSwiped);
 			_glint.schedule.Execute(() => _glint.AddToClassList(UssGlintSwiped)).StartingIn(10);
-		}
-
-		public new class UxmlFactory : UxmlFactory<GlintElement, UxmlTraits>
-		{
-		}
-
-		public new class UxmlTraits : VisualElement.UxmlTraits
-		{
-			private readonly UxmlBoolAttributeDescription _autoStartAttribute = new()
-			{
-				name = "auto-start",
-				defaultValue = true
-			};
-
-			public override void Init(VisualElement ve, IUxmlAttributes bag, CreationContext cc)
-			{
-				base.Init(ve, bag, cc);
-
-				var ge = (GlintElement) ve;
-				ge.AutoStart = _autoStartAttribute.GetValueFromBag(bag, cc);
-			}
 		}
 	}
 }

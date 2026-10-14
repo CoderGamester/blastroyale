@@ -1,3 +1,4 @@
+using GameLovers.GameData;
 using System;
 using System.Collections.Generic;
 using Cysharp.Threading.Tasks;
@@ -86,7 +87,7 @@ namespace FirstLight.Game.Services
 		private readonly IGameServices _gameServices;
 		private readonly IMatchServices _matchServices;
 		private readonly FP _playerVisionRange;
-		private readonly IObservableField<SpectatedPlayer> _spectatedPlayer = new ObservableField<SpectatedPlayer>(false);
+		private readonly IObservableField<SpectatedPlayer> _spectatedPlayer = new ObservableField<SpectatedPlayer>();
 
 		public IObservableFieldReader<SpectatedPlayer> SpectatedPlayer => _spectatedPlayer;
 
@@ -121,7 +122,7 @@ namespace FirstLight.Game.Services
 			var localPlayer = ev.Game.GetLocalPlayerData(false, out var f);
 			SetSpectatedEntity(ev.Game.Frames.Verified, ev.Entity, localPlayer.Player, false);
 		}
-		
+
 		public void OnMatchStarted(QuantumGame game, bool isReconnect)
 		{
 			if (_gameServices.RoomService.IsLocalPlayerSpectator)
@@ -141,7 +142,7 @@ namespace FirstLight.Game.Services
 			{
 				// This is a workaround until we refactor how we load assets and match start flow
 				// The initial spectator update depends on having the entity view loaded else camera will fail
-				// setting its target. 
+				// setting its target.
 				UniTask.NextFrame().ContinueWith(async () =>
 				{
 					await UniTaskUtils.WaitUntilTimeout(
@@ -156,7 +157,7 @@ namespace FirstLight.Game.Services
 		{
 			return _matchServices.EntityViewUpdaterService.TryGetView(e, out var _);
 		}
-		
+
 		public void OnMatchEnded(QuantumGame game, bool isDisconnected)
 		{
 			var playerData = game.GeneratePlayersMatchDataLocal(out var leader, out var localWinner);
@@ -197,7 +198,7 @@ namespace FirstLight.Game.Services
 			var game = callback.Game;
 
 			var entityIsValid = _spectatedPlayer.Value.Entity.IsValid;
-			
+
 			// This stupidity along with all the TryGetNextPlayer nonsense is needed because apparently Quantum lags
 			// behind when we're in Spectate mode, meaning that we aren't able to fetch the initial spectated player
 			// on the first frame the same way we can in normal mode. SMH.

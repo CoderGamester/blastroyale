@@ -1,3 +1,4 @@
+using System.Linq;
 using MainInstaller = FirstLight.Game.Utils.MainInstaller;
 using AssetResolverService = FirstLight.Game.Services.AssetResolverService;
 using RngData = FirstLight.Game.Data.RngData;
@@ -52,7 +53,26 @@ namespace FirstLight.Tests.EditorMode
 		[OneTimeSetUp]
 		public void SetupOnce()
 		{
-			var serializedConfig = File.ReadAllText($"{_serverResourcesPath}/gameConfig.json");
+			var legacyJson = Newtonsoft.Json.Linq.JObject.Parse(File.ReadAllText($"{_serverResourcesPath}/gameConfig.json"));
+			// Backend remains an immutable Q2 reference; adapt only this test's in-memory type keys.
+			var configRows = (Newtonsoft.Json.Linq.JObject) legacyJson["Configs"];
+			foreach (var entry in configRows.Properties().ToArray())
+			{
+				if (!entry.Name.StartsWith("Quantum.") || !entry.Name.Contains(", quantum.code,")) continue;
+				var typeName = entry.Name.Split(',')[0];
+				var currentType = typeof(Quantum.QuantumGameModeConfig).Assembly.GetType(typeName, throwOnError: true);
+				configRows[currentType.AssemblyQualifiedName] = entry.Value;
+				entry.Remove();
+			}
+			// Newtonsoft also embeds the old simulation assembly inside dictionary $type values.
+			foreach (var property in legacyJson.Descendants().OfType<Newtonsoft.Json.Linq.JProperty>())
+			{
+				if (property.Name != "$type" || property.Value.Type != Newtonsoft.Json.Linq.JTokenType.String) continue;
+				var serializedType = (string) property.Value;
+				if (serializedType.Contains(", quantum.code]"))
+					property.Value = serializedType.Replace(", quantum.code]", ", " + typeof(Quantum.QuantumGameModeConfig).Assembly.GetName().Name + "]");
+			}
+			var serializedConfig = legacyJson.ToString();
 			TestConfigs = new ConfigsSerializer().Deserialize<ConfigsProvider>(serializedConfig);
 
 			// TODO: Fix async issue with asset resolver on NUnit

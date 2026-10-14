@@ -11,10 +11,23 @@ namespace FirstLight.Game.UIElements
 	/// This element allegedly doesn't work with flexGrow as it leads to undefined behaviour (recursion).
 	/// Use Size/Width[%] and Size/Height attributes instead
 	/// </summary>
-	public sealed class AutoSizeLabel : LabelOutlined
+	[UxmlElement]
+	public sealed partial class AutoSizeLabel : LabelOutlined
 	{
-		private int minFontSize { get; set; }
-		private int maxFontSize { get; set; }
+		private int _minFontSize = 10;
+		[UxmlAttribute("min-font-size"), Min(1)]
+		private int minFontSize
+		{
+			get => _minFontSize;
+			set { _minFontSize = Mathf.Max(value, 1); UpdateFontSize(); }
+		}
+		private int _maxFontSize = 200;
+		[UxmlAttribute("max-font-size"), Min(1)]
+		private int maxFontSize
+		{
+			get => _maxFontSize;
+			set { _maxFontSize = Mathf.Max(value, 1); UpdateFontSize(); }
+		}
 
 		public override string text
 		{
@@ -59,36 +72,6 @@ namespace FirstLight.Game.UIElements
 			if (Mathf.Abs(newFontSize - fontSize) > 1)
 			{
 				style.fontSize = new StyleLength(new Length(newFontSize));
-			}
-		}
-
-		public new class UxmlFactory : UxmlFactory<AutoSizeLabel, UxmlTraits>
-		{
-		}
-
-		public new class UxmlTraits : LabelOutlined.UxmlTraits
-		{
-			readonly UxmlIntAttributeDescription _minFontSize = new ()
-			{
-				name = "min-font-size",
-				defaultValue = 10,
-				restriction = new UxmlValueBounds {min = "1"}
-			};
-
-			readonly UxmlIntAttributeDescription _maxFontSize = new ()
-			{
-				name = "max-font-size",
-				defaultValue = 200,
-				restriction = new UxmlValueBounds {min = "1"}
-			};
-
-			public override void Init(VisualElement ve, IUxmlAttributes bag, CreationContext cc)
-			{
-				var instance = (AutoSizeLabel) ve;
-				instance.minFontSize = Mathf.Max(_minFontSize.GetValueFromBag(bag, cc), 1);
-				instance.maxFontSize = Mathf.Max(_maxFontSize.GetValueFromBag(bag, cc), 1);
-
-				base.Init(ve, bag, cc);
 			}
 		}
 	}

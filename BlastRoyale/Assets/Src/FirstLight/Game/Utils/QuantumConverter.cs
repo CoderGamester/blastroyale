@@ -23,12 +23,12 @@ namespace FirstLight.Game.Utils
 		/// </remarks>
 		public static string QuantumPathPrototype(string path)
 		{
-			return QuantumPath(path) + "|EntityPrototype";
+			return QuantumPath(path) + "EntityPrototype";
 		}
-		
+
 		/// <summary>
 		/// This extension helps to get the quantum's asset path of the given generic path for the Quantum's
-		/// <see cref="UnityDB"/> asset loading
+		/// <see cref="QuantumUnityDB"/> asset loading
 		/// </summary>
 		public static string QuantumPath(string path)
 		{
@@ -43,16 +43,17 @@ namespace FirstLight.Game.Utils
 		}
 
 		/// <summary>
-		/// Requests the <see cref="AssetRefEntityPrototype"/> defined in the given project path
+		/// Requests the <see cref="AssetRef<Quantum.EntityPrototype>"/> defined in the given project path
 		/// </summary>
 		/// <remarks>
 		/// Avoid doing this call at runtime because might be an expensive operation
 		/// </remarks>
-		public static AssetRefEntityPrototype QuantumEntityRef(string path)
+		public static AssetRef<Quantum.EntityPrototype> QuantumEntityRef(string path)
 		{
-			if (UnityDB.DefaultResourceManager.TryGetAssetResource(QuantumPathPrototype(path), out var resource))
+			var guid = QuantumUnityDB.GetGlobalAssetGuid(QuantumPathPrototype(path));
+			if (guid.IsValid)
 			{
-				return new AssetRefEntityPrototype { Id = resource.Guid };
+				return new AssetRef<Quantum.EntityPrototype> { Id = guid };
 			}
 
 			throw new ArgumentException($"There is no Quantum asset configured for in the path: {path}");

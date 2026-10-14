@@ -1,9 +1,9 @@
-﻿using System;
+using FirstLight.Inspector;
+using System;
 using System.Globalization;
 using FirstLight.Game.Services;
 using FirstLight.Game.Utils.Attributes;
-using I2.Loc;
-using Sirenix.OdinInspector;
+using FirstLight.Game.Localization;
 using UnityEngine;
 
 namespace FirstLight.Game.Configs.Utils
@@ -19,10 +19,10 @@ namespace FirstLight.Game.Configs.Utils
 	[Serializable]
 	public struct AnimatorParams
 	{
-		[Required] public bool ApplyRootMotion;
-		[Required] public AnimatorUpdateMode UpdateMode;
-		[Required] public AnimatorCullingMode CullingMode;
-		[Required] public RuntimeAnimatorController Controller;
+		 public bool ApplyRootMotion;
+		 public AnimatorUpdateMode UpdateMode;
+		 public AnimatorCullingMode CullingMode;
+		[InspectorField(Required = true)] public RuntimeAnimatorController Controller;
 	}
 
 	[Serializable]
@@ -30,10 +30,10 @@ namespace FirstLight.Game.Configs.Utils
 	{
 		[SerializeField] private bool _useLocalization;
 
-		[ShowIf("_useLocalization"), LocalizationTerm, SerializeField]
+		[LocalizationTerm, SerializeField, InspectorField(VisibleWhen = "_useLocalization")]
 		private string _localizationTerm;
 
-		[ShowIf("@!_useLocalization")] [SerializeField]
+		[SerializeField, InspectorField(VisibleWhen = nameof(_useLocalization), InvertVisibility = true)]
 		private string _text;
 
 		public string LocalizationTerm => _localizationTerm;
@@ -42,7 +42,7 @@ namespace FirstLight.Game.Configs.Utils
 
 		public string GetText()
 		{
-			return _useLocalization ? LocalizationManager.GetTranslation(_localizationTerm) : _text;
+			return _useLocalization ? GameLocalization.GetTranslation(_localizationTerm) : _text;
 		}
 
 		public static LocalizableString FromText(string text)
@@ -74,10 +74,10 @@ namespace FirstLight.Game.Configs.Utils
 			return DateTime.ParseExact(datetime, DATE_FORMAT, CultureInfo.InvariantCulture, DateTimeStyles.AssumeUniversal | DateTimeStyles.AdjustToUniversal);
 		}
 
-		[ValidateInput("IsValidDate", "Invalid date format! Use: '" + DATE_FORMAT + "'")]
+		[InspectorField(Validate = "IsValidDate", ValidationMessage = "Invalid date format! Use: '" + DATE_FORMAT + "'")]
 		public string StartsAt;
 
-		[ValidateInput("IsValidDate", "Invalid date format! Use: '" + DATE_FORMAT + "'")]
+		[InspectorField(Validate = "IsValidDate", ValidationMessage = "Invalid date format! Use: '" + DATE_FORMAT + "'")]
 		public string EndsAt;
 
 		public static bool IsValidDate(string input)

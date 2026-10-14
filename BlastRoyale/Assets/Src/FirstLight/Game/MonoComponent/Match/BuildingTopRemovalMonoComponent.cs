@@ -1,3 +1,4 @@
+using MainInstaller = FirstLight.Game.Utils.MainInstaller;
 using System.Collections.Generic;
 using FirstLight.Game.Messages;
 using FirstLight.Game.MonoComponent.EntityViews;
@@ -17,8 +18,8 @@ namespace FirstLight.Game.MonoComponent.Match
 		private static readonly int _topAnimatorPlayerInsideParamNameHash = Animator.StringToHash("PlayerInside");
 
 		[SerializeField] private Animator _topRemovalAnimator;
-		
-		[SerializeField] private EntityView _visibilityArea;
+
+		[SerializeField] private QuantumEntityView _visibilityArea;
 
 		private IGameServices _services;
 		private IMatchServices _matchServices;
@@ -43,7 +44,7 @@ namespace FirstLight.Game.MonoComponent.Match
 			_services?.MessageBrokerService?.UnsubscribeAll(this);
 			_matchServices?.SpectateService?.SpectatedPlayer?.StopObserving(OnSpectatedPlayerChanged);
 		}
-		
+
 		private void OnMatchEnded(MatchEndedMessage msg)
 		{
 			_currentlyCollidingEntities.Clear();
@@ -53,14 +54,14 @@ namespace FirstLight.Game.MonoComponent.Match
 		{
 			CheckUpdateBuildingTop();
 		}
-		
+
 		private void OnMatchStartedMessage(MatchStartedMessage msg)
 		{
 			if (!msg.IsResync) return;
 
 			CheckUpdateBuildingTop();
 		}
-		
+
 		private void OnPlayerDead(EventOnPlayerDead callback)
 		{
 			if (_currentlyCollidingEntities.Contains(callback.Entity))
@@ -69,17 +70,17 @@ namespace FirstLight.Game.MonoComponent.Match
 				CheckUpdateBuildingTop();
 			}
 		}
-		
+
 		private void OnEnterVisibilityArea(EventOnEnterVisibilityArea callback)
 		{
 			if (_visibilityArea.EntityRef != callback.Area)
 			{
 				return;
-			} 
-			
+			}
+
 			//Debug.LogWarning("BuildingTopRemovalMonoComponent->OnEnterVisibilityArea");
 			_currentlyCollidingEntities.Add(callback.Entity);
-				
+
 			if (callback.Entity == _matchServices.SpectateService.SpectatedPlayer.Value.Entity)
 			{
 				UpdateBuildingTop(true);
@@ -91,18 +92,18 @@ namespace FirstLight.Game.MonoComponent.Match
 			if (_visibilityArea.EntityRef != callback.Area)
 			{
 				return;
-			}  
-			
+			}
+
 			//Debug.LogWarning("BuildingTopRemovalMonoComponent->OnLeaveVisibilityArea");
 			_currentlyCollidingEntities.Remove(callback.Entity);
-			
+
 			if (callback.Entity == _matchServices.SpectateService.SpectatedPlayer.Value.Entity &&
 				!_currentlyCollidingEntities.Contains(callback.Entity))
 			{
 				UpdateBuildingTop(false);
 			}
 		}
-		
+
 		private void CheckUpdateBuildingTop()
 		{
 			foreach (var entity in _currentlyCollidingEntities)
@@ -113,7 +114,7 @@ namespace FirstLight.Game.MonoComponent.Match
 					return;
 				}
 			}
-			
+
 			UpdateBuildingTop(false);
 		}
 

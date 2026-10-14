@@ -1,9 +1,8 @@
 using System;
 using System.Collections.Generic;
-using FirstLight.AssetImporter;
+using GameLovers.Services.AssetsImporter;
 using FirstLight.Game.Ids;
 using FirstLight.Server.SDK.Modules.GameConfiguration;
-using Sirenix.OdinInspector;
 using UnityEngine;
 using UnityEngine.AddressableAssets;
 
@@ -16,14 +15,14 @@ namespace FirstLight.Game.Configs.AssetConfigs
 	[IgnoreServerSerialization]
 	public class PooledVFXConfigs : ScriptableObject
 	{
-		[TableList] public List<VfxConfigEntry> Configs = new ();
+		 public List<VfxConfigEntry> Configs = new ();
 
 		[Serializable]
 		public class VfxConfigEntry
 		{
 			public VfxId Id;
 			public AssetReferenceGameObject AssetRef;
-			[MinValue(0)] public int InitialPoolCount;
+			[UnityEngine.Min(0)] public int InitialPoolCount;
 		}
 	}
 }

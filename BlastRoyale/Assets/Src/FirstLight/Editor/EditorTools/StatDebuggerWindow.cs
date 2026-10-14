@@ -1,6 +1,4 @@
 using Quantum;
-using Sirenix.OdinInspector;
-using Sirenix.OdinInspector.Editor;
 using UnityEditor;
 using UnityEngine;
 
@@ -11,33 +9,24 @@ namespace FirstLight.Editor.EditorTools
 	///
 	/// NOTE: Only works in Play mode.
 	/// </summary>
-	public class StatDebuggerWindow : OdinEditorWindow
+	public class StatDebuggerWindow : EditorWindow
 	{
 		private PlayerRef _LocalPlayer;
 		private bool _Initialized = false;
 
 		[Header("Defence Stats")]
-		[ShowInInspector, ReadOnly]
 		public float Health = 0;
-		[ShowInInspector, ReadOnly]
 		public float ShieldCapacity = 0;
-		[ShowInInspector, ReadOnly]
 		public float MaxShieldCapacity = 0;
-		[ShowInInspector, ReadOnly]
 		public float Armor = 0;
 
 		[Header("Offence Stats")]
-		[ShowInInspector, ReadOnly]
 		public float Power = 0;
-		[ShowInInspector, ReadOnly]
 		public float AttackRange = 0;
 
 		[Header("Utility Stats")]
-		[ShowInInspector, ReadOnly]
 		public float PickupSpeed = 0;
-		[ShowInInspector, ReadOnly]
 		public float Speed = 0;
-		[ShowInInspector, ReadOnly]
 		public float AmmoCapacity = 0;
 
 		[MenuItem("FLG/Stat Debugger")]
@@ -45,12 +34,27 @@ namespace FirstLight.Editor.EditorTools
 		{
 			GetWindow<StatDebuggerWindow>("Stat Debugger").Show();
 		}
-		
-		
 
-		protected override void OnImGUI()
+
+
+		private void OnGUI()
 		{
-			base.OnImGUI();
+			EditorGUILayout.HelpBox("Live stats update from the local player's Quantum events while in Play Mode.", MessageType.Info);
+			using (new EditorGUI.DisabledScope(true))
+			{
+				EditorGUILayout.LabelField("Defence Stats", EditorStyles.boldLabel);
+				EditorGUILayout.FloatField("Health", Health);
+				EditorGUILayout.FloatField("Shield Capacity", ShieldCapacity);
+				EditorGUILayout.FloatField("Max Shield Capacity", MaxShieldCapacity);
+				EditorGUILayout.FloatField("Armor", Armor);
+				EditorGUILayout.LabelField("Offence Stats", EditorStyles.boldLabel);
+				EditorGUILayout.FloatField("Power", Power);
+				EditorGUILayout.FloatField("Attack Range", AttackRange);
+				EditorGUILayout.LabelField("Utility Stats", EditorStyles.boldLabel);
+				EditorGUILayout.FloatField("Pickup Speed", PickupSpeed);
+				EditorGUILayout.FloatField("Speed", Speed);
+				EditorGUILayout.FloatField("Ammo Capacity", AmmoCapacity);
+			}
 
 			if (Application.isPlaying && !_Initialized)
 			{
@@ -65,10 +69,10 @@ namespace FirstLight.Editor.EditorTools
 			}
 		}
 
-		protected override void OnDestroy()
+		private void OnDisable()
 		{
 			QuantumEvent.UnsubscribeListener(this);
-			base.OnDestroy();
+			_Initialized = false;
 		}
 
 		public void GetLocalPlayer(EventOnLocalPlayerSpawned callback)

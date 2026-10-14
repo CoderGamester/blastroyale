@@ -1,4 +1,5 @@
-﻿using FirstLight.Game.Domains.Flags.View;
+using MainInstaller = FirstLight.Game.Utils.MainInstaller;
+using FirstLight.Game.Domains.Flags.View;
 using FirstLight.Game.Services;
 using FirstLight.Game.Utils;
 using Quantum;
@@ -25,7 +26,7 @@ namespace FirstLight.Game.MonoComponent.EntityPrototypes
 		{
 			_matchServices ??= MainInstaller.Resolve<IMatchServices>();
 			// could potentially happen if a person dies as the game unloads?
-			if (_matchServices == null) return; 
+			if (_matchServices == null) return;
 			var deathFlagId = GetComponentData<DeathFlag>(game).ID;
 			var flag = _matchServices.FlagService.Spawn(deathFlagId);
 			OnLoaded(deathFlagId, flag.gameObject, true);

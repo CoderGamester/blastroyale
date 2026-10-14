@@ -1,4 +1,4 @@
-using Sirenix.OdinInspector;
+using FirstLight.Inspector;
 using UnityEngine;
 
 namespace FirstLight.Game.MonoComponent.Match
@@ -9,9 +9,9 @@ namespace FirstLight.Game.MonoComponent.Match
 	public class CircleLineRendererMonoComponent : MonoBehaviour
 	{
 		[SerializeField] private float _lineWidth = 1;
-		[SerializeField, Required] private LineRenderer _lineRenderer;
+		[SerializeField, InspectorField(Required = true)] private LineRenderer _lineRenderer;
 
-		
+
 		/// <summary>
 		/// Set an overall multiplier that is applied to the LineRenderer.widthCurve to get the final width of the line.
 		/// </summary>
@@ -21,29 +21,29 @@ namespace FirstLight.Game.MonoComponent.Match
 		}
 
 		public LineRenderer Line => _lineRenderer;
-		
+
 		private void Awake()
 		{
 			var circleVertexResolution = 120;
 			var circlePositions = new Vector3[circleVertexResolution];
-			
+
 			_lineRenderer.positionCount = circleVertexResolution;
-			
+
 			var angle = 2 * Mathf.PI / circleVertexResolution;
 
 			for (var i = 0; i < circleVertexResolution; i++)
 			{
 				var cos = Mathf.Cos(angle * i);
 				var sin = Mathf.Sin(angle * i);
-				
+
 				var rotationMatrix = new Matrix4x4(new Vector4(cos, sin, 0, 0),
 					new Vector4(-sin, cos, 0, 0),
 					new Vector4(0, 0, 1, 0),
 					new Vector4(0, 0, 0, 1));
-				
+
 				circlePositions[i] = rotationMatrix.MultiplyPoint(new Vector3(0, 1, 0));
 			}
-			
+
 			_lineRenderer.SetPositions(circlePositions);
 		}
 	}

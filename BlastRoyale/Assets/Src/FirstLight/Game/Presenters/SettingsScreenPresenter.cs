@@ -1,3 +1,5 @@
+using MainInstaller = FirstLight.Game.Utils.MainInstaller;
+using GameLovers.GameData;
 using System;
 using System.Linq;
 using FirstLight.Game.Data;
@@ -5,12 +7,12 @@ using FirstLight.Game.Services;
 using FirstLight.Game.Utils;
 using FirstLight.Game.Logic;
 using FirstLight.Game.UIElements;
-using I2.Loc;
+using FirstLight.Game.Localization;
 using UnityEngine.UIElements;
 using Button = UnityEngine.UIElements.Button;
 using Cysharp.Threading.Tasks;
 using FirstLight.Game.Services.Authentication;
-using FirstLight.UIService;
+using FirstLight.Game.UI;
 using PlayFab;
 using Unity.Services.Authentication;
 using UnityEngine;
@@ -41,10 +43,9 @@ namespace FirstLight.Game.Presenters
 		private LocalizedButton _logoutButton;
 		private LocalizedButton _deleteAccountButton;
 		private LocalizedButton _connectIdButton;
-		private LocalizedButton _web3Button;
 		private LocalizedButton _supportButton;
 		private LocalizedLabel _accountStatusLabel;
-		
+
 		private TextField _playerIDField;
 
 		private void Awake()
@@ -90,7 +91,6 @@ namespace FirstLight.Game.Presenters
 			SetupToggle(Root.Q<Toggle>("ShowLatency").Required(), _services.LocalPrefsService.ShowLatency);
 
 			// Account
-			_web3Button = Root.Q<LocalizedButton>("Web3Button").Required();
 			_logoutButton = Root.Q<LocalizedButton>("LogoutButton");
 			_logoutButton.clicked += OnLogoutClicked;
 			_deleteAccountButton = Root.Q<LocalizedButton>("DeleteAccountButton");
@@ -108,15 +108,7 @@ namespace FirstLight.Game.Presenters
 
 			var link = Root.Q<LocalizedButton>("LinkButton").Required();
 			link.SetDisplay(false);
-			
-			if (MainInstaller.ResolveWeb3().IsEnabled())
-			{
-				_web3Button.clicked += () => _services.UIService.OpenScreen<Web3PopupPresenter>().Forget();
-			}
-			else
-			{
-				_web3Button.SetDisplay(false);
-			}
+
 			Root.SetupClicks(_services);
 
 			_services.AuthService.CanLinkToNativeAccount().ContinueWith(canUseNative =>
@@ -135,9 +127,7 @@ namespace FirstLight.Game.Presenters
 				};
 			}).Forget();
 		}
-		
-		
-		
+
 		private void SetupToggle(Toggle toggle, ObservableField<bool> observable)
 		{
 			toggle.value = observable.Value;

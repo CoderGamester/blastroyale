@@ -8,7 +8,8 @@ using UnityEngine.UIElements.Experimental;
 
 namespace FirstLight.Game.UIElements
 {
-	public class SquadMemberElement : VisualElement
+	[UxmlElement]
+	public partial class SquadMemberElement : VisualElement
 	{
 		private const int DAMAGE_ANIMATION_DURATION = 500;
 		private const int WOUNDED_PING_DURATION = 1000;
@@ -128,10 +129,6 @@ namespace FirstLight.Game.UIElements
 			_damageAnimation.Stop();
 			_bg.style.opacity = 1;
 			_damageAnimationHandle.ExecuteLater(1000);
-		}
-
-		public new class UxmlFactory : UxmlFactory<SquadMemberElement, UxmlTraits>
-		{
 		}
 
 		public void SetTeamColor(Color? teamColor)

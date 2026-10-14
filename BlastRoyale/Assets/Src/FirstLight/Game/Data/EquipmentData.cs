@@ -7,13 +7,12 @@ using Quantum;
 namespace FirstLight.Game.Data
 {
 	/// <summary>
-	/// Holds NFT metadata for the weapons a given player have. 
+	/// Holds the equipment inventory owned by a player.
 	/// </summary>
 	[Serializable]
 	public class EquipmentData
 	{
 		public readonly Dictionary<UniqueId, Equipment> Inventory = new();
-		public readonly Dictionary<UniqueId, NftEquipmentData> NftInventory = new();
 		public ulong LastUpdateTimestamp;
 
 		public override int GetHashCode()
@@ -23,11 +22,6 @@ namespace FirstLight.Game.Data
 			foreach (var item in Inventory.Values)
 			{
 				hash = hash * 23 + GetItemHash(item);
-			}
-
-			foreach (var item in NftInventory.Values)
-			{
-				hash = hash * 23 + item.GetHashCode();
 			}
 
 			return hash;

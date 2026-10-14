@@ -1,11 +1,11 @@
 using System.Collections.Generic;
 using FirstLight.Game.Data.DataTypes;
 using FirstLight.Game.Logic;
-using FirstLight.SDK.Services;
+using GameLovers.Services;
 
 namespace FirstLight.Game.Messages
 {
-	public struct BattlePassLevelUpMessage : IMessage
+	public struct BattlePassLevelUpMessage : IMessage, FirstLight.SDK.Services.IMessage
 	{
 		public IEnumerable<ItemData> Rewards;
 		public uint PreviousLevel;
@@ -19,25 +19,25 @@ namespace FirstLight.Game.Messages
 		public ulong NewValue;
 		public uint Season;
 	}
-	
+
 	/// <summary>
 	/// Message for claiming rewards. Only works for the end of game claiming as BPP Fame and IAP has their own
-	/// claiming messages and code :( 
+	/// claiming messages and code :(
 	/// </summary>
-	public class ClaimedRewardsMessage : IMessage
+	public class ClaimedRewardsMessage : IMessage, FirstLight.SDK.Services.IMessage
 	{
 		public List<ItemData> Rewards;
 	}
-	
+
 	public class ShopClaimedRewardsMessage : IMessage
 	{
 		public List<ItemData> Rewards;
 	}
-	
+
 	public class NewBattlePassSeasonMessage : IMessage
 	{
 	}
-	
+
 	public class PurchasedBundleMessage : IMessage
 	{
 	}
@@ -45,7 +45,7 @@ namespace FirstLight.Game.Messages
 
 	public struct FinishedClaimingBpRewardsMessage : IMessage
 	{
-		
+
 	}
 
 	public struct OpenedCoreMessage : IMessage
@@ -53,7 +53,7 @@ namespace FirstLight.Game.Messages
 		public ItemData Core;
 		public ItemData [] Results;
 	}
-	
+
 	public class ItemRewardedMessage : IMessage
 	{
 		public ItemData Item;
@@ -64,7 +64,7 @@ namespace FirstLight.Game.Messages
 		}
 	}
 
-	public struct GameCompletedRewardsMessage : IMessage
+	public struct GameCompletedRewardsMessage : IMessage, FirstLight.SDK.Services.IMessage
 	{
 		public MatchRewardsResult Rewards;
 		public int TrophiesChange;

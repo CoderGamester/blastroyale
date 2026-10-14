@@ -1,7 +1,8 @@
+using FirstLight.Inspector;
+using MainInstaller = FirstLight.Game.Utils.MainInstaller;
 using FirstLight.Game.Ids;
 using FirstLight.Game.Services;
 using FirstLight.Game.Utils;
-using Sirenix.OdinInspector;
 using UnityEngine;
 
 namespace FirstLight.Game.MonoComponent.Ftue
@@ -11,10 +12,10 @@ namespace FirstLight.Game.MonoComponent.Ftue
 	/// </summary>
 	public class FtueArrowIndicatorMonoComponent : MonoBehaviour
 	{
-		[SerializeField, Required] private LineRenderer _lineRenderer;
-		
+		[SerializeField, InspectorField(Required = true)] private LineRenderer _lineRenderer;
+
 		private Transform _playerTransform;
-		
+
 		private void Start()
 		{
 			_playerTransform = MainInstaller.Resolve<IGameServices>().GuidService.GetElement(GuidId.PlayerCharacter).Elements[0].transform;
@@ -25,7 +26,7 @@ namespace FirstLight.Game.MonoComponent.Ftue
 			var diff = _lineRenderer.transform.position - _playerTransform.position;
 
 			diff.y = 0;
-			
+
 			_lineRenderer.SetPosition(1, diff);
 		}
 	}

@@ -6,7 +6,8 @@ namespace FirstLight.Game.UIElements
 	/// <summary>
 	/// An element to show a map / gun / mutator...
 	/// </summary>
-	public class MatchSettingsSelectionElement : ImageButton
+	[UxmlElement]
+	public partial class MatchSettingsSelectionElement : ImageButton
 	{
 		private const string USS_BLOCK = "match-settings-selection";
 		private const string USS_TITLE = USS_BLOCK + "__title";
@@ -14,8 +15,25 @@ namespace FirstLight.Game.UIElements
 		private const string USS_TEXT_CONTAINER = USS_BLOCK + "__text-container";
 		private const string USS_IMAGE = USS_BLOCK + "__image";
 
-		public string titleLocalizationKey { get; set; }
-		public string subtitleLocalizationKey { get; set; }
+		private string _titleLocalizationKey;
+		[UxmlAttribute("title-localization-key")]
+		public string titleLocalizationKey
+		{
+			get => _titleLocalizationKey;
+			set { _titleLocalizationKey = value; _title.Localize(value); }
+		}
+		private string _subtitleLocalizationKey;
+		[UxmlAttribute("subtitle-localization-key")]
+		public string subtitleLocalizationKey
+		{
+			get => _subtitleLocalizationKey;
+			set
+			{
+				_subtitleLocalizationKey = value;
+				_subtitle.style.display = string.IsNullOrEmpty(value) ? DisplayStyle.None : DisplayStyle.Flex;
+				_subtitle.Localize(value);
+			}
+		}
 
 		private LocalizedLabel _title;
 		private LocalizedLabel _subtitle;
@@ -36,13 +54,13 @@ namespace FirstLight.Game.UIElements
 				textContainer.Add(_title = new LocalizedLabel(titleKey) {name = "title"});
 				_title.AddToClassList(USS_TITLE);
 
-				if (!string.IsNullOrEmpty(subtitleKey))
 				{
 					textContainer.Add(_subtitle = new LocalizedLabel(subtitleKey) {name = "subtitle"});
-					_subtitle.AddToClassList(USS_SUBTITLE);	
+					_subtitle.AddToClassList(USS_SUBTITLE);
+					_subtitle.style.display = string.IsNullOrEmpty(subtitleKey) ? DisplayStyle.None : DisplayStyle.Flex;
 				}
 
-				
+
 			}
 
 			Add(_image = new VisualElement {name = "image"});
@@ -52,38 +70,6 @@ namespace FirstLight.Game.UIElements
 		public void SetImage(Sprite sprite)
 		{
 			_image.style.backgroundImage = new StyleBackground(sprite);
-		}
-
-		public new class UxmlFactory : UxmlFactory<MatchSettingsSelectionElement, UxmlTraits>
-		{
-		}
-
-		public new class UxmlTraits : ImageButton.UxmlTraits
-		{
-			private readonly UxmlStringAttributeDescription _titleLocalizationKeyAttribute = new ()
-			{
-				name = "title-localization-key",
-				use = UxmlAttributeDescription.Use.Required
-			};
-
-			private readonly UxmlStringAttributeDescription _subtitleLocalizationKeyAttribute = new ()
-			{
-				name = "subtitle-localization-key",
-				use = UxmlAttributeDescription.Use.Required
-			};
-
-			public override void Init(VisualElement ve, IUxmlAttributes bag, CreationContext cc)
-			{
-				base.Init(ve, bag, cc);
-
-				var msse = (MatchSettingsSelectionElement) ve;
-
-				msse.titleLocalizationKey = _titleLocalizationKeyAttribute.GetValueFromBag(bag, cc);
-				msse._title.Localize(msse.titleLocalizationKey);
-
-				msse.subtitleLocalizationKey = _subtitleLocalizationKeyAttribute.GetValueFromBag(bag, cc);
-				msse._subtitle.Localize(msse.subtitleLocalizationKey);
-			}
 		}
 	}
 }

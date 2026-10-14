@@ -1,3 +1,4 @@
+using GameLovers.GameData;
 using System;
 using System.Collections.Generic;
 using FirstLight.Game.Data;
@@ -13,7 +14,7 @@ namespace FirstLight.Game.Services
 			CreateObjectSetting(nameof(FailedTransactionMessages), new Dictionary<string, IUnityStoreService.PurchaseFailureData>());
 
 		/// <summary>
-		/// Stores the last selected gamemode 
+		/// Stores the last selected gamemode
 		/// </summary>
 		public ObservableField<string> SelectedGameMode { get; } = CreateStringSetting(nameof(SelectedGameMode), string.Empty);
 
@@ -86,14 +87,14 @@ namespace FirstLight.Game.Services
 		/// If we show the rate and review prompt
 		/// </summary>
 		public ObservableField<bool> RateAndReviewPromptShown { get; } = CreateBoolSetting(nameof(RateAndReviewPromptShown), false);
-		
+
 		/// <summary>
 		/// If we show the rate and review prompt
 		/// </summary>
 		public ObservableField<bool> AcceptedPrivacyTerms { get; } = CreateBoolSetting(nameof(AcceptedPrivacyTerms), false);
 
 		/// <summary>
-		/// Number of games played 
+		/// Number of games played
 		/// </summary>
 		public ObservableField<int> GamesPlayed { get; } = CreateIntSetting(nameof(GamesPlayed), 0);
 
@@ -102,12 +103,11 @@ namespace FirstLight.Game.Services
 		/// </summary>
 		public ObservableField<CustomMatchSettings> LastCustomMatchSettings { get; } =
 			CreateObjectSetting(nameof(LastCustomMatchSettings), new CustomMatchSettings());
-		
+
 		/// <summary>
 		/// Last Store Category/Products loaded to player
 		/// </summary>
 		public ObservableField<LocalStoreStateData> LastStoreState { get; } = CreateObjectSetting(nameof(LastStoreState), new LocalStoreStateData());
-
 
 		/// <summary>
 		/// If we show the rate and review prompt
@@ -184,11 +184,7 @@ namespace FirstLight.Game.Services
 		{
 			const string PREFIX = "ss_";
 
-#if UNITY_EDITOR
-			return PREFIX + id + ParrelSync.ClonesManager.GetArgument();
-#else
 			return PREFIX + id;
-#endif
 		}
 	}
 }

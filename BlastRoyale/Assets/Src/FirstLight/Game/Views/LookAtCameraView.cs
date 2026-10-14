@@ -1,4 +1,3 @@
-using Sirenix.OdinInspector;
 using UnityEngine;
 
 namespace FirstLight.Game.Views
@@ -9,8 +8,8 @@ namespace FirstLight.Game.Views
 	[RequireComponent(typeof(Canvas))]
 	public class LookAtCameraView : MonoBehaviour
 	{
-		[InfoBox("We fetch Camera.main in Start() if this isn't assigned.", InfoMessageType.Info, "@_mainCamera == null")]
-		[SerializeField] private Camera _mainCamera;
+		[SerializeField, UnityEngine.Tooltip("We fetch Camera.main in Start() if this isn't assigned.")]
+		 private Camera _mainCamera;
 
 		[SerializeField] private float _distance;
 		[SerializeField] private float _height;

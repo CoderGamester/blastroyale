@@ -1,7 +1,9 @@
+using FirstLight.Inspector;
+using MainInstaller = FirstLight.Game.Utils.MainInstaller;
+using FirstLight.Game.Services.Infrastructure;
 using System;
 using FirstLight.Game.Services;
 using FirstLight.Game.Utils;
-using Sirenix.OdinInspector;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -12,9 +14,9 @@ namespace FirstLight.Game.Views
 	/// </summary>
 	public class RemoteTextureView : MonoBehaviour
 	{
-		[SerializeField, Required] private LoadingSpinnerView _loadingSpinner;
-		[SerializeField, Required] private Image _errorSprite;
-		[SerializeField, Required] private RawImage _image;
+		[SerializeField, InspectorField(Required = true)] private LoadingSpinnerView _loadingSpinner;
+		[SerializeField, InspectorField(Required = true)] private Image _errorSprite;
+		[SerializeField, InspectorField(Required = true)] private RawImage _image;
 
 		private IMainMenuServices _mainMenuServices;
 
@@ -46,7 +48,7 @@ namespace FirstLight.Game.Views
 				OnError();
 				return;
 			}
-			
+
 			// Do nothing if we're already loading this url or if it's successfully loaded
 			if (_currentUrl == url && (_textureRequestHandle >= 0 || _loadedSuccessfully)) return;
 

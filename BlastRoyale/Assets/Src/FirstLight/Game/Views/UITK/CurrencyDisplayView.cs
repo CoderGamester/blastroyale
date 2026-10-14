@@ -1,8 +1,9 @@
+using MainInstaller = FirstLight.Game.Utils.MainInstaller;
 using FirstLight.Game.Logic;
 using FirstLight.Game.Services;
 using FirstLight.Game.UIElements;
 using FirstLight.Game.Utils;
-using FirstLight.UIService;
+using FirstLight.Game.UI;
 
 namespace FirstLight.Game.Views.UITK
 {
@@ -22,7 +23,7 @@ namespace FirstLight.Game.Views.UITK
 				MainInstaller.Resolve<IGameServices>());
 			_currency.SubscribeToEvents();
 		}
-		
+
 
 		public override void OnScreenClose()
 		{

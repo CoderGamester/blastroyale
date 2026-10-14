@@ -1,3 +1,6 @@
+using IDataProvider = FirstLight.Server.SDK.Models.IDataProvider;
+using FirstLight.Game.Utils;
+using GameLovers.GameData;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -170,7 +173,7 @@ namespace FirstLight.Game.Logic
 	{
 		public const int EXTRA_GAME_MODE_CHECK_MINUTES = 10;
 
-		private IObservableList<ItemData> _unclaimedRewards;
+		private ObservableList<ItemData> _unclaimedRewards;
 
 		public IObservableListReader<ItemData> UnclaimedRewards => _unclaimedRewards;
 
@@ -185,10 +188,8 @@ namespace FirstLight.Game.Logic
 
 		public void ReInit()
 		{
-			var listeners = _unclaimedRewards.GetObservers();
-			_unclaimedRewards = new ObservableList<ItemData>(Data.UncollectedRewards);
-			_unclaimedRewards.AddObservers(listeners);
-			_unclaimedRewards.InvokeUpdate();
+			_unclaimedRewards.Rebind(Data.UncollectedRewards);
+			_unclaimedRewards.NotifyAll();
 		}
 
 		public static int GetModifiedReward(int currentValue, GameId id, SimulationMatchConfig config, bool CollectedInGame,
@@ -284,7 +285,7 @@ namespace FirstLight.Game.Logic
 			usedTicket = hasTicket;
 			return hasTicket;
 		}
-		
+
 		public bool AreBuffsAllowed(SimulationMatchConfig matchConfig)
 		{
 			var events = GameLogic.RemoteConfigProvider.GetConfig<EventGameModesConfig>();
@@ -292,7 +293,7 @@ namespace FirstLight.Game.Logic
 
 			return foundEvent != null && foundEvent.AreBuffsAllowed;
 		}
-		
+
 
 		public MatchRewardsResult CalculateMatchRewards(RewardSource source, out int trophyChange)
 		{
@@ -376,7 +377,7 @@ namespace FirstLight.Game.Logic
 			CalculateXPReward(result, rewardConfig, usedSimConfig);
 			CalculateCollectedRewards(result, source, usedSimConfig);
 			CalculateBuffs(result, usedSimConfig);
-			
+
 			return result;
 		}
 
@@ -396,7 +397,7 @@ namespace FirstLight.Game.Logic
 				{
 					var id = reward.Id;
 					double mp = 1;
-					
+
 					if (AreBuffsAllowed(simConfig))
 					{
 						switch (id)
@@ -425,7 +426,7 @@ namespace FirstLight.Game.Logic
 								break;
 						}
 					}
-					
+
 					if (result.CollectedRewards.TryGetValue(reward.Id, out var collected))
 					{
 						result.CollectedBonuses[reward.Id] = (int) Math.Round(collected * mp) - collected;
@@ -682,7 +683,7 @@ namespace FirstLight.Game.Logic
 		// TODO: implement adapters
 		private ItemData AddItemToPlayerInventory(ItemData reward)
 		{
-			GameLogic.MessageBrokerService.Publish(new ItemRewardedMessage(reward));
+			GameLogic.MessageBrokerService.PublishSafe(new ItemRewardedMessage(reward));
 			if (reward.TryGetMetadata<EquipmentMetadata>(out var eqMeta))
 			{
 				GameLogic.EquipmentLogic.AddToInventory(eqMeta.Equipment);
@@ -699,7 +700,7 @@ namespace FirstLight.Game.Logic
 			{
 				var generated = OpenCoreById(reward.Id);
 				AddItemToPlayerInventory(generated);
-				GameLogic.MessageBrokerService.Publish(new OpenedCoreMessage()
+				GameLogic.MessageBrokerService.PublishSafe(new OpenedCoreMessage()
 				{
 					Core = reward,
 					Results = new[] {generated}

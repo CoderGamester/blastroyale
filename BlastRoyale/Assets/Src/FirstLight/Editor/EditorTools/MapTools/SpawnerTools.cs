@@ -5,8 +5,6 @@ using FirstLight.Game.Utils;
 using JetBrains.Annotations;
 using Photon.Deterministic;
 using Quantum;
-using Sirenix.OdinInspector;
-using Sirenix.OdinInspector.Editor;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -16,7 +14,7 @@ using Object = UnityEngine.Object;
 
 namespace FirstLight.Editor.EditorTools.MapTools
 {
-	public static class SpawnerTool 
+	public static class SpawnerTool
 	{
 		[MenuItem("FLG/Map/Spawners/Show")]
 		private static void ShowSpawners()
@@ -26,7 +24,7 @@ namespace FirstLight.Editor.EditorTools.MapTools
 				_ = o.ShowDebugIcon();
 			}
 		}
-		
+
 		[MenuItem("FLG/Map/Spawners/Hide")]
 		private static void HideSpawners()
 		{

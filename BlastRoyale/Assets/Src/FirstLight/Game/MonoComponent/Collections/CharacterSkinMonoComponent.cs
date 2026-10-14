@@ -38,7 +38,6 @@ namespace FirstLight.Game.MonoComponent.Collections
 		[SerializeField] private Animator _animator;
 
 		public event Action OnTriggerFlair;
-		private static RuntimeAnimatorController _animatorController;
 
 		public Transform WeaponAnchor => _weaponAnchor;
 		public Transform WeaponMeleeAnchor => _weaponMeleeAnchor;

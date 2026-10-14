@@ -1,3 +1,4 @@
+using MainInstaller = FirstLight.Game.Utils.MainInstaller;
 using FirstLight.Game.Messages;
 using FirstLight.Game.MonoComponent.EntityViews;
 using FirstLight.Game.Services;
@@ -22,7 +23,7 @@ namespace FirstLight.Game.MonoComponent.Ftue
 		{
 			if (other.gameObject.TryGetComponent<PlayerCharacterViewMonoComponent>(out _))
 			{
-				_gameServices.MessageBrokerService.Publish(new FtueEndedMessage() );
+				_gameServices.MessageBrokerService.PublishSafe(new FtueEndedMessage() );
 			}
 		}
 	}

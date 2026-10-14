@@ -1,3 +1,4 @@
+using MainInstaller = FirstLight.Game.Utils.MainInstaller;
 using System;
 using System.Collections.Generic;
 using Cysharp.Threading.Tasks;
@@ -23,7 +24,7 @@ namespace FirstLight.Game.Services
 		/// This is basically the game "input" to run at the moment.
 		/// </summary>
 		IReadOnlyDictionary<string, string> AppData { get; }
-		
+
 		/// <summary>
 		/// Gets device performance data
 		/// </summary>
@@ -61,7 +62,7 @@ namespace FirstLight.Game.Services
 				FLog.Verbose("Pause behaviour disabled");
 				return;
 			}
-			
+
 			FLog.Verbose("Pause behaviour enabled");
 			_services.MessageBrokerService.Subscribe<ApplicationFocusMessage>(OnApplicationFocus);
 			_services.MessageBrokerService.Subscribe<ApplicationPausedMessage>(OnApplicationPause);

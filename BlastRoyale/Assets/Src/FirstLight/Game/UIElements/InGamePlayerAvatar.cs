@@ -1,9 +1,10 @@
-﻿using UnityEngine;
+using UnityEngine;
 using UnityEngine.UIElements;
 
 namespace FirstLight.Game.UIElements
 {
-	public class InGamePlayerAvatar : VisualElement
+	[UxmlElement]
+	public partial class InGamePlayerAvatar : VisualElement
 	{
 		private readonly VisualElement _pfp;
 		private const string USS_BLOCK = "in-game-avatar";
@@ -64,8 +65,5 @@ namespace FirstLight.Game.UIElements
 			return this;
 		}
 
-		public new class UxmlFactory : UxmlFactory<InGamePlayerAvatar>
-		{
-		}
 	}
 }

@@ -1,8 +1,10 @@
+using FirstLight.Inspector;
+using IgnoreServerSerialization = FirstLight.Server.SDK.Modules.GameConfiguration.IgnoreServerSerialization;
+using GameLovers.GameData;
 using System;
 using System.Collections.Generic;
 using FirstLight.Server.SDK.Modules.GameConfiguration;
 using Quantum;
-using Sirenix.OdinInspector;
 using UnityEngine;
 using UnityEngine.AddressableAssets;
 
@@ -17,9 +19,9 @@ namespace FirstLight.Game.Configs
 	[Serializable]
 	public struct CosmeticConfigEntry
 	{
-		[Required] public GameId GameId;
-		[Required] public AssetReferenceGameObject Prefab;
-		[Required] public AssetReferenceSprite Sprite;
+		 public GameId GameId;
+		[InspectorField(Required = true)] public AssetReferenceGameObject Prefab;
+		[InspectorField(Required = true)] public AssetReferenceSprite Sprite;
 	}
 
 	[CreateAssetMenu(fileName = "CharacterSkinConfigs", menuName = "ScriptableObjects/Configs/Collection/CharacterSkinContainer"),

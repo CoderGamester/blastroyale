@@ -1,8 +1,10 @@
-﻿using System;
+using GameLovers.Services.Pooling;
+using GameLovers.GameData;
+using System;
 using Cysharp.Threading.Tasks;
 using FirstLight.FLogger;
 using FirstLight.Game.Ids;
-using FirstLight.Services;
+using GameLovers.Services;
 using UnityEngine;
 
 namespace FirstLight.Game.Domains.VFX

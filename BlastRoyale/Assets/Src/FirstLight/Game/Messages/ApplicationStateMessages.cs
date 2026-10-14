@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 using FirstLight.Server.SDK.Modules.GameConfiguration;
-using FirstLight.SDK.Services;
+using GameLovers.Services;
 
 namespace FirstLight.Game.Messages
 {

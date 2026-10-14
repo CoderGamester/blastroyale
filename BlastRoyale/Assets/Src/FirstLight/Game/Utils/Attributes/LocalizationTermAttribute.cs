@@ -1,8 +1,8 @@
-﻿using System;
+using UnityEngine;
 
 namespace FirstLight.Game.Utils.Attributes
 {
-	public class LocalizationTermAttribute : Attribute
+	public class LocalizationTermAttribute : PropertyAttribute
 	{
 	}
 }

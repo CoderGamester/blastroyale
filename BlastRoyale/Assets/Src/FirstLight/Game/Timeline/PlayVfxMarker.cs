@@ -1,3 +1,4 @@
+using GameLovers.GameData;
 using System.ComponentModel;
 using FirstLight.Game.Ids;
 using UnityEngine;
@@ -16,7 +17,7 @@ namespace FirstLight.Game.Timeline
 	public class PlayVfxMarker : Marker, INotification
 	{
 		[SerializeField] private EnumSelector<VfxId> _vfxId;
-		
+
 		public PropertyName id { get; }
 		public VfxId Vfx => _vfxId;
 	}

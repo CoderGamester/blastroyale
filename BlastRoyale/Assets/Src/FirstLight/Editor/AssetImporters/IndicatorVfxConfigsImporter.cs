@@ -1,6 +1,6 @@
 using FirstLight.Game.Configs.AssetConfigs;
 using FirstLight.Game.Ids;
-using FirstLightEditor.AssetImporter;
+using GameLovers.Services.AssetsImporter.Editor;
 using Quantum;
 using UnityEngine;
 using UnityEngine.AddressableAssets;

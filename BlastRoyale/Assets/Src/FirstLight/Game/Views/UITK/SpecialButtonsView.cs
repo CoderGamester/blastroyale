@@ -1,9 +1,10 @@
+using MainInstaller = FirstLight.Game.Utils.MainInstaller;
 using System;
 using FirstLight.FLogger;
 using FirstLight.Game.Services;
 using FirstLight.Game.UIElements;
 using FirstLight.Game.Utils;
-using FirstLight.UIService;
+using FirstLight.Game.UI;
 using Quantum;
 using Quantum.Systems;
 using UnityEngine;

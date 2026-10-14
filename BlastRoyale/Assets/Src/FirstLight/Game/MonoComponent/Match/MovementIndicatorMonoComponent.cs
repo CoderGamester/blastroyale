@@ -1,6 +1,6 @@
+using FirstLight.Inspector;
 using FirstLight.Game.Utils;
 using Quantum;
-using Sirenix.OdinInspector;
 using UnityEngine;
 
 namespace FirstLight.Game.MonoComponent.Match
@@ -10,7 +10,7 @@ namespace FirstLight.Game.MonoComponent.Match
 	/// </summary>
 	public class MovementIndicatorMonoComponent: MonoBehaviour, IIndicator
 	{
-		[SerializeField, Required] private GameObject _indicator;
+		[SerializeField, InspectorField(Required = true)] private GameObject _indicator;
 		[SerializeField] private float _playerDistance = 2f;
 		[SerializeField] private float _localHeight = 0.025f;
 
@@ -21,7 +21,7 @@ namespace FirstLight.Game.MonoComponent.Match
 		public bool VisualState => _indicator.activeSelf;
 		/// <inheritdoc />
 		public IndicatorVfxId IndicatorVfxId => IndicatorVfxId.Movement;
-		
+
 		private void Awake()
 		{
 			_indicator.SetActive(false);
@@ -47,7 +47,7 @@ namespace FirstLight.Game.MonoComponent.Match
 		}
 
 		/// <inheritdoc />
-		public void Init(EntityView playerEntityView)
+		public void Init(QuantumEntityView playerEntityView)
 		{
 			_playerTransform = playerEntityView.transform;
 		}
@@ -64,13 +64,13 @@ namespace FirstLight.Game.MonoComponent.Match
 			var myPos = localTransform.position;
 			localTransform.rotation = Quaternion.LookRotation(myPos - playerPos);
 		}
-		
+
 		/// <inheritdoc />
 		public void SetColor(Color c)
 		{
 			// Not implemented
 		}
-		
+
 		/// <inheritdoc />
 		public void ResetColor()
 		{

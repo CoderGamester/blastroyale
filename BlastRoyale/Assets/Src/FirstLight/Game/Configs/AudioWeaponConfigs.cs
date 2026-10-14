@@ -1,3 +1,5 @@
+using IgnoreServerSerialization = FirstLight.Server.SDK.Modules.GameConfiguration.IgnoreServerSerialization;
+using GameLovers.GameData;
 using System;
 using System.Collections.Generic;
 using FirstLight.Game.Ids;
@@ -22,7 +24,7 @@ namespace FirstLight.Game.Configs
 		public AudioId ProjectileEndOfLife;
 		public AudioId ChangeMagazineId;
 	}
-	
+
 	/// <summary>
 	/// Scriptable Object tool to import the <seealso cref="QuantumWeaponConfig"/> sheet data
 	/// </summary>

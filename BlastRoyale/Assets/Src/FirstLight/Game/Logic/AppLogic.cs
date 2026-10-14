@@ -1,3 +1,5 @@
+using IDataProvider = FirstLight.Server.SDK.Models.IDataProvider;
+using GameLovers.GameData;
 using System;
 using System.Collections.Generic;
 using FirstLight.Game.Data;

@@ -1,4 +1,4 @@
-﻿using Sirenix.OdinInspector;
+using FirstLight.Inspector;
 using TMPro;
 using UnityEngine;
 
@@ -9,14 +9,14 @@ namespace FirstLight.Game.Domains.HomeScreen.UI
 	/// </summary>
 	public class MainMenuFloatingTextView : MonoBehaviour
 	{
-		[SerializeField, Required] private TextMeshProUGUI _floatingText;
-		[SerializeField, Required] private Animation _animation;
+		[SerializeField, InspectorField(Required = true)] private TextMeshProUGUI _floatingText;
+		[SerializeField, InspectorField(Required = true)] private Animation _animation;
 
 		/// <summary>
 		/// Requests the Floating text animation play lenght
 		/// </summary>
 		public float AnimationLength => _animation.clip.length;
-		
+
 		/// <summary>
 		/// Sets this notification state when the Loot Screen Presenter is opened.
 		/// </summary>

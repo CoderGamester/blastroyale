@@ -1,3 +1,4 @@
+using MainInstaller = FirstLight.Game.Utils.MainInstaller;
 using System;
 using System.Collections;
 using System.Diagnostics;
@@ -28,14 +29,14 @@ namespace FirstLight.Game.MonoComponent.EntityViews
 	public class PlayerCharacterViewMonoComponent : AvatarViewBase
 	{
 		private static readonly float TURN_RATE = 0.4f;
-		
+
 		[SerializeField] private MatchCharacterViewMonoComponent _characterView;
 
 		private static readonly int _playerPos = Shader.PropertyToID("_PlayerPos");
-		private const float SPEED_THRESHOLD_SQUARED = 0.45f * 0.45f; // unity units per second	
-		private const float KNOCKED_OUT_SPEED_THRESHOLD_SQUARED = 0.1f * 0.1f; // unity units per second	
+		private const float SPEED_THRESHOLD_SQUARED = 0.45f * 0.45f; // unity units per second
+		private const float KNOCKED_OUT_SPEED_THRESHOLD_SQUARED = 0.1f * 0.1f; // unity units per second
 		private Vector3 _clientPredictionDirection;
-		
+
 		/// <summary>
 		/// Deprecated, should be removed.
 		/// This is only used for buildings.
@@ -100,7 +101,7 @@ namespace FirstLight.Game.MonoComponent.EntityViews
 			QuantumCallback.Subscribe<CallbackUpdateView>(this, HandleUpdateView);
 			QuantumEvent.Subscribe<EventOnRadarUsed>(this, HandleOnRadarUsed);
 		}
-		
+
 		/// <summary>
 		/// Handles player rotation. This is done 100% on the client side
 		/// </summary>
@@ -112,16 +113,16 @@ namespace FirstLight.Game.MonoComponent.EntityViews
 			{
 				return;
 			}
-			
+
 			if (!f.Unsafe.TryGetPointer<AIBlackboardComponent>(EntityRef, out var bb)) return;
 
 			var aim = bb->GetVector2(f, Constants.AIM_DIRECTION_KEY);
 			var lastShotAt = bb->GetFP(f, Constants.LAST_SHOT_AT);
 			var aiming = bb->GetBoolean(f, Constants.IS_AIM_PRESSED_KEY);
-			
+
 			var dir = EntityRef.GetKccMoveDirection(f);
 			var kcc = f.Unsafe.GetPointer<TopDownController>(EntityRef);
-			
+
 			if (f.TryGet<BotCharacter>(EntityRef, out var bot))
 			{
 				if (bot.BehaviourType != BotBehaviourType.Static)
@@ -133,15 +134,15 @@ namespace FirstLight.Game.MonoComponent.EntityViews
 					dir = aim;
 				}
 			}
-			
+
 			// Wait to rotate a bit after attack for smoother animation
 			var attackOnCooldown = lastShotAt > 0 && f.Time < lastShotAt + FP._0_25;
-		
+
 			if (attackOnCooldown && !aiming)
 			{
 				return;
 			}
-			
+
 			PredictedAimDirection = aiming ? aim : dir;
 			if (PredictedAimDirection == FPVector2.Zero)
 			{
@@ -167,7 +168,7 @@ namespace FirstLight.Game.MonoComponent.EntityViews
 		public override void SetCulled(bool culled)
 		{
 			if (_characterView == null || this.IsDestroyed()) return;
-			
+
 			if (culled)
 			{
 			 	if (_playerFullyGrounded)
@@ -176,7 +177,7 @@ namespace FirstLight.Game.MonoComponent.EntityViews
 			 	}
 			}
 			else
-			{ 
+			{
 				_skin.AnimationEnabled = true;
 			}
 
@@ -280,7 +281,7 @@ namespace FirstLight.Game.MonoComponent.EntityViews
 				}
 			}
 		}
-		
+
 		protected override void OnAvatarEliminated(QuantumGame game)
 		{
 			if (_attackHideRendererCoroutine != null)
@@ -319,7 +320,7 @@ namespace FirstLight.Game.MonoComponent.EntityViews
 
 			yield return new WaitForSeconds(GameConstants.Visuals.GAMEPLAY_BUSH_ATTACK_REVEAL_SECONDS);
 			if (!CanUpdate()) yield break;
-		
+
 			if (IsInInvisibilityArea())
 			{
 				SetRenderContainerVisible(MatchServices.EntityVisibilityService.CanSpectatedPlayerSee(EntityRef));
@@ -507,7 +508,7 @@ namespace FirstLight.Game.MonoComponent.EntityViews
 			if (EntityView.EntityRef != callback.Entity) return;
 
 
-			//TODO: bespoke animation for each special 
+			//TODO: bespoke animation for each special
 			//AnimatorWrapper.SetTrigger(Triggers.Special);
 			TryStartAttackWithinVisVolume();
 		}
@@ -559,7 +560,7 @@ namespace FirstLight.Game.MonoComponent.EntityViews
 					}
 				}).Forget();
 		}
-		
+
 
 		private async UniTaskVoid HandleDelayedFX(FP delayTime, Vector3 targetPosition, VfxId explosionVfxId)
 		{
@@ -634,7 +635,7 @@ namespace FirstLight.Game.MonoComponent.EntityViews
 			{
 				return;
 			}
-			
+
 			var knockedOut = ReviveSystem.IsKnockedOut(f, EntityRef);
 			var currentPosition = transform.position;
 			var deltaPosition = currentPosition - _lastPosition;
@@ -648,7 +649,7 @@ namespace FirstLight.Game.MonoComponent.EntityViews
 				isMoving = moveDir != FPVector2.Zero;
 			}
 			var isAiming = bb->GetBoolean(f, Constants.IS_AIM_PRESSED_KEY) && !knockedOut;
-			
+
 			_skin.Moving = isMoving || _lastMoving > DateTime.UtcNow - TimeSpan.FromSeconds(0.1);
 			_wasMoving = isMoving;
 			if (isMoving)
@@ -656,7 +657,7 @@ namespace FirstLight.Game.MonoComponent.EntityViews
 				_lastMoving = DateTime.UtcNow;
 			}
 			_characterView.PrintFootsteps = isMoving && !knockedOut;
-			
+
 			_skin.Aiming = isAiming;
 			_lastPosition = currentPosition;
 

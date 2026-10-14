@@ -1,3 +1,4 @@
+using MainInstaller = FirstLight.Game.Utils.MainInstaller;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,10 +17,9 @@ using FirstLight.Game.Services;
 using FirstLight.Game.UIElements;
 using FirstLight.Game.Utils;
 using FirstLight.Game.Views.UITK;
-using FirstLight.UIService;
-using I2.Loc;
+using FirstLight.Game.UI;
+using FirstLight.Game.Localization;
 using Quantum;
-using SRF;
 using UnityEngine;
 using UnityEngine.UIElements;
 
@@ -245,7 +245,7 @@ namespace FirstLight.Game.Presenters
 		}
 
 		/// <summary>
-		/// Update the data in this menu. Sometimes we may want to update data without opening the screen. 
+		/// Update the data in this menu. Sometimes we may want to update data without opening the screen.
 		/// </summary>
 		private void ViewOwnedItemsFromCategory(CollectionCategory category)
 		{
@@ -330,7 +330,8 @@ namespace FirstLight.Game.Presenters
 			_anchorObject = new GameObject("Collection 3D Object Anchor");
 			_anchorObject.transform.position = _selectedCategory.Id == GameIdGroup.Glider ? _gliderSpawnPosition : _collectionSpawnPosition;
 			_collectionObject.transform.SetParent(_anchorObject.transform);
-			_collectionObject.transform.ResetLocal();
+			_collectionObject.transform.SetLocalPositionAndRotation(Vector3.zero, Quaternion.identity);
+			_collectionObject.transform.localScale = Vector3.one;
 			_renderTexture.visible = true;
 
 			if (_selectedCategory.Id == GameIdGroup.Glider)
@@ -381,7 +382,7 @@ namespace FirstLight.Game.Presenters
 			_anchorObject.transform.localRotation = Quaternion.Euler(eulerAngles.x, _degreesToRotate, eulerAngles.z);
 		}
 
-		/// Updated cost of Collection items / has it been equipped, etc. 
+		/// Updated cost of Collection items / has it been equipped, etc.
 		private void UpdateCollectionDetails(CollectionCategory category)
 		{
 			var selectedItem = GetSelectedItem();
@@ -404,7 +405,7 @@ namespace FirstLight.Game.Presenters
 			var owned = _gameDataProvider.CollectionDataProvider.IsItemOwned(GetSelectedItem());
 			_nameLockedIcon.SetDisplay(!owned);
 			_equipButton.SetDisplay(owned);
-			_infoButton.SetDisplay(buffs.Count > 0 && selectedItem.IsNft());
+			_infoButton.SetDisplay(buffs.Count > 0);
 		}
 
 		private void OnInfoClicked()
@@ -489,7 +490,6 @@ namespace FirstLight.Game.Presenters
 				card.SetIsOwned(owned);
 				card.SetIsEquipped(equipped != null && equipped.Equals(selectedItem));
 				card.SetSelected(itemIndex == _selectedIndex);
-				card.SetIsNft(selectedItem.IsNft());
 				card.SetNotificationPip(isUnseenItem);
 			}
 		}

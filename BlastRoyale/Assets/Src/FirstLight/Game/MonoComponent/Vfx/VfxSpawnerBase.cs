@@ -1,5 +1,5 @@
+using FirstLight.Inspector;
 using System;
-using Sirenix.OdinInspector;
 using UnityEngine;
 
 namespace FirstLight.Game.MonoComponent.Vfx
@@ -9,7 +9,7 @@ namespace FirstLight.Game.MonoComponent.Vfx
 	/// </summary>
 	public abstract class VfxSpawnerBase : MonoBehaviour
 	{
-		[SerializeField, Required] protected Transform _target;
+		[SerializeField, InspectorField(Required = true)] protected Transform _target;
 		[SerializeField] protected Vector3 _offset = Vector3.zero;
 		[SerializeField] private Vector3 _additionalRotation = Vector3.zero;
 
@@ -32,17 +32,17 @@ namespace FirstLight.Game.MonoComponent.Vfx
 		{
 			return _target.rotation * Quaternion.Euler(_additionalRotation);
 		}
-		
+
 #if UNITY_EDITOR
 		// For use by the custom editor.
 		public Vector3 SpawnPosition => GetSpawnPosition();
 		public Quaternion SpawnRotation => GetSpawnRotation();
-		public Vector3 SpawnTargetPosition => _target.position; 
+		public Vector3 SpawnTargetPosition => _target.position;
 		public Vector3 Offset { set => _offset = _target.InverseTransformDirection(value); }
 		public Vector3 AdditionalRotation { set => _additionalRotation = value; }
 #endif
 	}
-	
+
 	/// <inheritdoc />
 	public abstract class VfxSpawnerBase<T> : VfxSpawnerBase where T : struct, Enum
 	{

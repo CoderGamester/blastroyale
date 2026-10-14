@@ -1,4 +1,5 @@
 using System;
+using IAssetAdderService = FirstLight.Game.Services.IAssetAdderService;
 using System.Collections.Generic;
 using System.Linq;
 using Cysharp.Threading.Tasks;
@@ -9,7 +10,7 @@ using FirstLight.Game.Services;
 using FirstLight.Game.Services.Analytics;
 using FirstLight.Game.Utils;
 using FirstLight.Server.SDK.Modules.GameConfiguration;
-using FirstLight.Services;
+using GameLovers.Services;
 using UnityEngine;
 
 namespace FirstLight.Game
@@ -44,6 +45,6 @@ namespace FirstLight.Game
 
 			await UniTask.WhenAll(audioTasks);
 		}
-		
+
 	}
 }

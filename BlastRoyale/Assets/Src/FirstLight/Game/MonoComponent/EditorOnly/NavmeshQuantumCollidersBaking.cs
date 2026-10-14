@@ -1,48 +1,59 @@
-﻿using System;
+using FirstLight.Inspector;
+using System;
 using System.Collections.Generic;
 using Cysharp.Threading.Tasks;
-using Sirenix.OdinInspector;
 using Unity.AI.Navigation;
 using UnityEngine;
+using Quantum;
 using Object = UnityEngine.Object;
 
 namespace FirstLight.Game.MonoComponent.EditorOnly
 {
-	public class NavmeshQuantumCollidersBaking : MonoBehaviour, ISelfValidator
+	public class NavmeshQuantumCollidersBaking : MonoBehaviour, IInspectorValidator
 	{
 		[Serializable]
 		public class GroupConfig
 		{
 			public string Name;
-			[ChildGameObjectsOnly] public Transform Destination;
+			[InspectorField(ChildObjectsOnly = true)] public Transform Destination;
 			public Transform[] SourceTransform;
 			public bool Walkable;
 		}
 
-		[SerializeField, FoldoutGroup("Config", expanded: false)]
+		[SerializeField, UnityEngine.Header("Config")]
 		private GroupConfig[] _groups;
 
-		[SerializeField, FoldoutGroup("Config", expanded: false)]
+		[SerializeField]
 		private NavMeshCleaner _cleaner;
 
 		[SerializeField, HideInInspector] private Transform _floorObj;
 
-		public void Validate(SelfValidationResult result)
+		public IEnumerable<InspectorIssue> GetInspectorIssues()
 		{
 #if UNITY_EDITOR
-			foreach (var groupConfig in _groups)
+			if (_groups == null || _groups.Length == 0)
 			{
-				if (groupConfig.SourceTransform.Length == 0)
+				yield return new InspectorIssue("No collider groups configured.", InspectorIssueSeverity.Error);
+			}
+			else
+			{
+				foreach (var groupConfig in _groups)
 				{
-					result.AddError("No source colliders configured for group " + groupConfig.Name + "!");
+					if (groupConfig == null || groupConfig.SourceTransform == null || groupConfig.SourceTransform.Length == 0)
+					{
+						yield return new InspectorIssue("No source colliders configured for group " + groupConfig?.Name + "!",
+							InspectorIssueSeverity.Error);
+					}
 				}
 			}
 
-			if ((_cleaner.m_WalkablePoint?.Count ?? 0) == 0)
+			if (!_cleaner || (_cleaner.m_WalkablePoint?.Count ?? 0) == 0)
 			{
-				result.AddWarning("There is no walkable points configured in the Cleaner script!\nCleaner will do nothing!");
+				yield return new InspectorIssue("There are no walkable points configured in the Cleaner script!\nCleaner will do nothing!",
+					InspectorIssueSeverity.Warning);
 			}
 #endif
+			yield break;
 		}
 
 #if UNITY_EDITOR
@@ -51,9 +62,9 @@ namespace FirstLight.Game.MonoComponent.EditorOnly
 			_cleaner ??= GetComponentInChildren<NavMeshCleaner>();
 		}
 
-		[FoldoutGroup("Debug", expanded: false)]
-		[GUIColor(0.21f, 0.65f, 0.45f)]
-		[Button(ButtonSizes.Small, Name = "Create Colliders", Icon = SdfIconType.PlusCircle)]
+		[InspectorAction("Create Colliders")]
+
+
 		public void CreateColliders()
 		{
 			CreateFloor();
@@ -73,9 +84,9 @@ namespace FirstLight.Game.MonoComponent.EditorOnly
 			}
 		}
 
-		[FoldoutGroup("Debug", expanded: false)]
-		[GUIColor(0.65f, 0.16f, 0.18f)]
-		[Button(ButtonSizes.Small, Name = "Delete Colliders", Icon = SdfIconType.DashCircle)]
+		[InspectorAction("Delete Colliders")]
+
+
 		public void DeleteColliders()
 		{
 			if (_floorObj != null)
@@ -95,9 +106,9 @@ namespace FirstLight.Game.MonoComponent.EditorOnly
 			children.ForEach(DestroyImmediate);
 		}
 
-		[FoldoutGroup("Debug", expanded: false)]
-		[GUIColor(0.21f, 0.65f, 0.45f)]
-		[Button(ButtonSizes.Small, Name = "Apply Cleaner", Icon = SdfIconType.PlusSquare)]
+		[InspectorAction("Apply Cleaner")]
+
+
 		private void ApplyCleaner()
 		{
 			_cleaner.Build();
@@ -109,9 +120,9 @@ namespace FirstLight.Game.MonoComponent.EditorOnly
 			}
 		}
 
-		[FoldoutGroup("Debug", expanded: false)]
-		[GUIColor(0.65f, 0.16f, 0.18f)]
-		[Button(ButtonSizes.Small, Name = "Reset Cleaner", Icon = SdfIconType.DashSquare)]
+		[InspectorAction("Reset Cleaner")]
+
+
 		private void ResetCleaner()
 		{
 			_cleaner.Reset();
@@ -150,7 +161,7 @@ namespace FirstLight.Game.MonoComponent.EditorOnly
 				DestroyImmediate(_floorObj.gameObject);
 			}
 
-			var mapSize = GetComponentInParent<MapData>().Asset.Settings.WorldSize;
+			var mapSize = GetComponentInParent<QuantumMapData>().GetAsset(true).WorldSize;
 			_floorObj = new GameObject("TempColliderFloor", typeof(BoxCollider),typeof(NavMeshModifier)).transform;
 			_floorObj.parent = this.transform;
 			_floorObj.transform.position = Vector3.zero;
@@ -181,8 +192,8 @@ namespace FirstLight.Game.MonoComponent.EditorOnly
 			DeleteColliders();
 		}
 
-		[GUIColor(1f, 0f, 1f)]
-		[Button(ButtonSizes.Large, Icon = SdfIconType.Hammer, Name = "Bake Navmesh", Style = ButtonStyle.Box, Expanded = true)]
+		[InspectorAction("Bake Navmesh")]
+
 		public void BakeUnityNavMesh(bool applyCleaner = true)
 		{
 			Bake(applyCleaner).Forget();

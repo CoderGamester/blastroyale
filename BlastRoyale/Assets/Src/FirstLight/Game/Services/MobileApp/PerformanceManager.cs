@@ -1,3 +1,4 @@
+using MainInstaller = FirstLight.Game.Utils.MainInstaller;
 using System;
 using System.Collections.Generic;
 using Cysharp.Threading.Tasks;
@@ -16,19 +17,19 @@ namespace FirstLight.Game.Services
 		/// <summary>
 		/// Game will look bad, but should run
 		/// </summary>
-		Low, 
-		
+		Low,
+
 		/// <summary>
 		/// Game shoud look fine, shoud be our current setup
 		/// </summary>
-		Mid, 
-		
+		Mid,
+
 		/// <summary>
 		/// Game has capabilities of turning cool shit on
 		/// </summary>
 		High
 	}
-	
+
 	public class PerformanceManager
 	{
 		public PerformanceMode Mode { get; private set; }
@@ -38,7 +39,7 @@ namespace FirstLight.Game.Services
 		public float CurrentResolutionRatio { get; private set; } = 1f;
 		public float GraphicCardMemory { get; private set; }
 		private PerformanceConfig _config;
-		
+
 		public void LoadSetup()
 		{
 			_config = MainInstaller.ResolveData().RemoteConfigProvider.GetConfig<PerformanceConfig>();
@@ -48,7 +49,7 @@ namespace FirstLight.Game.Services
 			GraphicCardMemory = SystemInfo.graphicsMemorySize / 1024.0f;
 			DeviceDPI = Screen.dpi;
 			Mode = PerformanceMode.Mid;
-			
+
 			var services = MainInstaller.ResolveServices();
 			if (services.LocalPrefsService.Performance.Value != -1)
 			{
@@ -68,9 +69,9 @@ namespace FirstLight.Game.Services
 			FLog.Info($"Performance Mode: {Mode}, DPI={DeviceDPI}, Resolution={CurrentResolutionRatio}");
 		}
 
-		public bool CanBeHigh() 
+		public bool CanBeHigh()
 		{
-			return SystemInfo.batteryLevel > _config.HighMinBattery 
+			return SystemInfo.batteryLevel > _config.HighMinBattery
 				&& TotalMemoryGigas >= _config.HighMinMemory
 				&& CPUCount >= _config.HighMinCpu
 				&& GraphicCardMemory > _config.HighMinGpuMemory;
@@ -82,7 +83,7 @@ namespace FirstLight.Game.Services
 				&& CPUCount >= _config.MidMinCpu;
 		}
 
-		private PerformanceMode GetIOSPerformanceMode() 
+		private PerformanceMode GetIOSPerformanceMode()
 		{
 			return !CanBeHigh() ? PerformanceMode.Mid : PerformanceMode.High;
 		}
@@ -92,7 +93,7 @@ namespace FirstLight.Game.Services
 			Mode = power;
 			UpdateGraphicsQuality();
 		}
-		
+
 		private PerformanceMode GetAndroidPerformanceMode()
 		{
 			if (!CanBeMid())

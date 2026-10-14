@@ -1,5 +1,6 @@
 using Quantum.Editor;
 using UnityEngine;
+using System.IO;
 
 namespace FirstLight.Editor.Artifacts
 {
@@ -7,7 +8,7 @@ namespace FirstLight.Editor.Artifacts
 	{
 		public void CopyTo(string directory)
 		{
-			AssetDBGeneration.Export(directory + "assetDatabase.json");
+			QuantumUnityDBUtilities.ExportAsJson(Path.Combine(directory, "assetDatabase.json"));
 			Debug.Log("Exported Quantum asset database");
 		}
 	}

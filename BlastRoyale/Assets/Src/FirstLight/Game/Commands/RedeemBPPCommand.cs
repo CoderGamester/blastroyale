@@ -1,3 +1,4 @@
+using GameLovers.Services.Commands;
 using Cysharp.Threading.Tasks;
 using FirstLight.Game.Logic;
 using FirstLight.Game.Logic.RPC;
@@ -12,7 +13,7 @@ namespace FirstLight.Game.Commands
 	public struct RedeemBPPCommand : IGameCommand
 	{
 		public PassType PassType;
-		
+
 		public CommandAccessLevel AccessLevel() => CommandAccessLevel.Player;
 
 		public CommandExecutionMode ExecutionMode() => CommandExecutionMode.Server;
@@ -32,7 +33,7 @@ namespace FirstLight.Game.Commands
 			}
 			var rewardItems = ctx.Logic.RewardLogic().CreateItemsFromConfigs(rewards);
 			ctx.Logic.RewardLogic().Reward(rewardItems);
-			ctx.Services.MessageBrokerService().Publish(new BattlePassLevelUpMessage
+			ctx.Services.MessageBrokerService().PublishSafe(new BattlePassLevelUpMessage
 			{
 				Rewards = rewardItems,
 				PreviousLevel = bppLevelBeforeClaim,
@@ -40,7 +41,7 @@ namespace FirstLight.Game.Commands
 				Completed =  ctx.Logic.BattlePassLogic().CurrentLevel.Value == ctx.Logic.BattlePassLogic().MaxLevel
 			});
 			return UniTask.CompletedTask;
-			
+
 		}
 	}
 }

@@ -1,10 +1,10 @@
-﻿using System;
+using System;
 using Cysharp.Threading.Tasks;
 using FirstLight.Game.Commands;
 using FirstLight.Game.Logic;
 using FirstLight.Game.Presenters;
 using FirstLight.Game.Services;
-using FirstLight.Statechart;
+using GameLovers.StatechartMachine;
 using Quantum;
 
 
@@ -49,11 +49,11 @@ namespace FirstLight.Game.StateMachines
 			collectionMenuState.OnEnter(OpenCollectionScreen);
 			collectionMenuState.Event(_backButtonClickedEvent).Target(final);
 			collectionMenuState.Event(_closeButtonClickedEvent).Target(final);
-			
+
 			final.OnEnter(SendLoadoutUpdateCommand);
 		}
 
-		
+
 		private void OpenCollectionScreen()
 		{
 			var data = new CollectionScreenPresenter.StateData
@@ -67,7 +67,7 @@ namespace FirstLight.Game.StateMachines
 					_statechartTrigger(_backButtonClickedEvent);
 				},
 			};
-			
+
 			_services.UIService.OpenScreen<CollectionScreenPresenter>(data).Forget();
 		}
 

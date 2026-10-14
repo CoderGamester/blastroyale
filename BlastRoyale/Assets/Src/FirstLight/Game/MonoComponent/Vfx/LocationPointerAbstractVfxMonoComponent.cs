@@ -1,22 +1,22 @@
+using FirstLight.Inspector;
 using FirstLight.FLogger;
 using FirstLight.Game.Domains.VFX;
-using Sirenix.OdinInspector;
 using UnityEngine;
 
 namespace FirstLight.Game.MonoComponent.Vfx
 {
 	public class LocationPointerVfxMonoBehaviour : VfxMonoBehaviour
 	{
-		[SerializeField, Required]
+		[SerializeField, InspectorField(Required = true)]
 		private LineRenderer _lineRenderer;
-		[SerializeField, Required]
+		[SerializeField]
 		private float _arrowAnimationSpeed;
 		[SerializeField]
 		private Transform _followedTransform;
-		
+
 		private Vector2 _offSet;
 		private float _distanceToHide = 1.1f;
-		
+
 		public void SetFollowedObject(Transform transform)
 		{
 			_followedTransform = transform;
@@ -24,11 +24,11 @@ namespace FirstLight.Game.MonoComponent.Vfx
 
 		private void Update()
 		{
-		
+
 			var startPosition = _followedTransform == null
 				? transform.position + Vector3.forward * 3 // we just put a position that shows some of the line
 				: _followedTransform.position;
-			
+
 			var followedDirection = (startPosition - transform.position).normalized;
 			startPosition -= followedDirection;
 			// We move the position a bit out of the center of the circle (doesn't look good)

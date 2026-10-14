@@ -1,0 +1,26 @@
+component Consumable
+{
+	[HideInInspector] ConsumableType ConsumableType;
+}
+
+enum ConsumableType : Byte
+{
+	Health,
+	Rage,
+	Ammo,
+	Shield,
+	ShieldCapacity,
+    Energy,
+    SpecialRefresh,
+    Special,
+    GameItem,
+}
+
+synced event OnConsumableCollected
+{
+	entity_ref Entity;
+	player_ref Player;
+	entity_ref PlayerEntity;
+}
+
+signal OnConsumableCollected(player_ref playerRef, entity_ref entityRef, ConsumableType consumableType, GameId collectableGameId);

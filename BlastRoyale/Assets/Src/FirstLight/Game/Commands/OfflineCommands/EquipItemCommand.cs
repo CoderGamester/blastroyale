@@ -1,10 +1,11 @@
+using GameLovers.Services.Commands;
 using Cysharp.Threading.Tasks;
 using FirstLight.Game.Ids;
 using FirstLight.Game.Logic;
 using FirstLight.Game.Messages;
 using FirstLight.Game.Services;
 using FirstLight.Server.SDK.Modules.Commands;
-using FirstLight.Services;
+using GameLovers.Services;
 
 namespace FirstLight.Game.Commands.OfflineCommands
 {
@@ -23,7 +24,7 @@ namespace FirstLight.Game.Commands.OfflineCommands
 		public UniTask Execute(CommandExecutionContext ctx)
 		{
 			ctx.Logic.EquipmentLogic().Equip(Item);
-			ctx.Services.MessageBrokerService().Publish(new EquippedItemMessage(){ItemID = Item});
+			ctx.Services.MessageBrokerService().PublishSafe(new EquippedItemMessage(){ItemID = Item});
 			return UniTask.CompletedTask;
 		}
 	}

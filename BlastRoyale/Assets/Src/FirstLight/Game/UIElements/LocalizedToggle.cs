@@ -1,11 +1,18 @@
-using I2.Loc;
+using FirstLight.Game.Localization;
 using UnityEngine.UIElements;
 
 namespace FirstLight.Game.UIElements
 {
-	public class LocalizedToggle : Toggle
+	[UxmlElement]
+	public partial class LocalizedToggle : Toggle
 	{
-		protected string localizationKey { get; set; }
+		private string _localizationKey;
+		[UxmlAttribute("localization-key")]
+		protected string localizationKey
+		{
+			get => _localizationKey;
+			set => Localize(value);
+		}
 		private Label _label;
 
 		public LocalizedToggle() : this(string.Empty)
@@ -25,27 +32,8 @@ namespace FirstLight.Game.UIElements
 		/// </summary>
 		public void Localize(string key)
 		{
-			localizationKey = key;
-			_label.text = LocalizationManager.TryGetTranslation(key, out var translation) ? translation : $"#{key}#";
-		}
-
-		public new class UxmlFactory : UxmlFactory<LocalizedToggle, UxmlTraits>
-		{
-		}
-
-		public new class UxmlTraits : Toggle.UxmlTraits
-		{
-			UxmlStringAttributeDescription _localizationKeyAttribute = new ()
-			{
-				name = "localization-key",
-				use = UxmlAttributeDescription.Use.Required
-			};
-
-			public override void Init(VisualElement ve, IUxmlAttributes bag, CreationContext cc)
-			{
-				base.Init(ve, bag, cc);
-				((LocalizedToggle) ve).Localize(_localizationKeyAttribute.GetValueFromBag(bag, cc));
-			}
+			_localizationKey = key;
+			_label.text = GameLocalization.TryGetTranslation(key, out var translation) ? translation : $"#{key}#";
 		}
 	}
 }

@@ -14,14 +14,14 @@ using FirstLight.Game.Services;
 using FirstLight.Game.Services.Authentication;
 using FirstLight.Game.Services.Authentication.Hooks;
 using FirstLight.Game.Utils;
-using FirstLight.NativeUi;
+using GameLovers.MobileServices.NativeUi;
 using FirstLight.Server.SDK.Modules;
 using FirstLight.Server.SDK.Modules.GameConfiguration;
-using FirstLight.Services;
-using FirstLight.Statechart;
-using FirstLight.UIService;
+using GameLovers.Services;
+using GameLovers.StatechartMachine;
+using FirstLight.Game.UI;
 using FirstLightServerSDK.Services;
-using I2.Loc;
+using FirstLight.Game.Localization;
 using Newtonsoft.Json;
 using PlayFab;
 using PlayFab.ClientModels;
@@ -49,7 +49,7 @@ namespace FirstLight.Game.StateMachines
 
 		private readonly GameLogic _gameLogic;
 		private readonly IGameServices _services;
-		private readonly IDataService _dataService;
+		private readonly IClientDataService _dataService;
 		private readonly Action<IStatechartEvent> _statechartTrigger;
 		private IConfigsAdder _configsAdder;
 		private UniTask _asyncLogin;
@@ -62,7 +62,7 @@ namespace FirstLight.Game.StateMachines
 
 		public InnerState State;
 
-		public AuthenticationState(GameLogic gameLogic, IGameServices services, IDataService dataService, Action<IStatechartEvent> statechartTrigger)
+		public AuthenticationState(GameLogic gameLogic, IGameServices services, IClientDataService dataService, Action<IStatechartEvent> statechartTrigger)
 		{
 			_gameLogic = gameLogic;
 			_services = services;
@@ -163,7 +163,7 @@ namespace FirstLight.Game.StateMachines
 				}
 
 				var result = await skipTutorialScreen.WaitForResult();
-				if (result == SkipTutorialPopupPresenter.AllowedOptions.Login) 
+				if (result == SkipTutorialPopupPresenter.AllowedOptions.Login)
 				{
 					if (loggedIn)
 					{
@@ -183,7 +183,7 @@ namespace FirstLight.Game.StateMachines
 					_services.AuthService.CanLoginWithNativeGamesService().ContinueWith(can =>
 					{
 						if(can) _services.AuthService.TryToLinkNativeAccount().Forget();
-					});
+					}).Forget();
 					loggedInWithUserPassword = true;
 					loggedIn = true;
 				}
@@ -403,8 +403,8 @@ namespace FirstLight.Game.StateMachines
 
 		private void InitializeGameLogic()
 		{
-			_gameLogic.Init();
-			_services.MessageBrokerService.Publish(new LogicInitializedMessage());
+			// AuthService initializes/rebinds logic before client initialization commands and migration hooks run.
+			_services.MessageBrokerService.PublishSafe(new LogicInitializedMessage());
 			InitUserReporting(_services, _gameLogic.RemoteConfigProvider).Forget(); // TODO: Move this to Startup when we can await for auth there
 		}
 

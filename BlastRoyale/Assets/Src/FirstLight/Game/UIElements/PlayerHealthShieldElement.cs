@@ -5,7 +5,8 @@ using UnityEngine.UIElements.Experimental;
 
 namespace FirstLight.Game.UIElements
 {
-	public class PlayerHealthShieldElement : VisualElement
+	[UxmlElement]
+	public partial class PlayerHealthShieldElement : VisualElement
 	{
 		private const int HEALTH_SEPARATORS = 3;
 
@@ -133,8 +134,5 @@ namespace FirstLight.Game.UIElements
 			}
 		}
 
-		public new class UxmlFactory : UxmlFactory<PlayerHealthShieldElement, UxmlTraits>
-		{
-		}
 	}
 }

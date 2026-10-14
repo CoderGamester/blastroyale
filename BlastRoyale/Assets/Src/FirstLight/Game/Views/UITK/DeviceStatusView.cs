@@ -1,8 +1,9 @@
+using MainInstaller = FirstLight.Game.Utils.MainInstaller;
 using System.Collections.Generic;
 using System.Linq;
 using FirstLight.Game.Services;
 using FirstLight.Game.Utils;
-using FirstLight.UIService;
+using FirstLight.Game.UI;
 using UnityEngine;
 using UnityEngine.UIElements;
 
@@ -30,7 +31,7 @@ namespace FirstLight.Game.Views.UITK
 		private VisualElement _batteryIcon;
 		private Label _latency;
 
-		private readonly Queue<int> _latencySamples = new (LATENCY_WINDOW_SIZE);
+		private readonly Queue<long> _latencySamples = new (LATENCY_WINDOW_SIZE);
 
 		private IVisualElementScheduledItem _tickScheduledItem;
 
@@ -40,7 +41,7 @@ namespace FirstLight.Game.Views.UITK
 
 			_batteryIcon = Element.Q("BatteryIcon").Required();
 			_latency = Element.Q<Label>("LatencyLabel").Required();
-			
+
 			_latency.SetDisplay(_gameServices.LocalPrefsService.ShowLatency.Value);
 		}
 
@@ -104,12 +105,12 @@ namespace FirstLight.Game.Views.UITK
 		{
 // TODO: Uncomment when feature is tested
 // #if DEVELOPMENT_BUILD || UNITY_EDITOR
-// 			return _gameServices.NetworkService.QuantumClient.LoadBalancingPeer.LastRoundTripTime
+// 			return _gameServices.NetworkService.QuantumClient.RealtimePeer.Stats.LastRoundtripTime
 // #else
 			// Latency displayed is calculated as a moving average of the last 5 samples. When the current latency is lower than the average,
 			// the average is reset to the current latency. In effect this means that latency drops are reflected immediately, while increases
 			// are smoothed out over time.
-			var currentLatency = _gameServices.NetworkService.QuantumClient.LoadBalancingPeer.LastRoundTripTime;
+			var currentLatency = _gameServices.NetworkService.QuantumClient.RealtimePeer.Stats.LastRoundtripTime;
 			var currentAverage = _latencySamples.Count > 0 ? (int) _latencySamples.Average() : int.MaxValue;
 
 			if (currentLatency < currentAverage)
@@ -120,15 +121,15 @@ namespace FirstLight.Game.Views.UITK
 			else if (_latencySamples.Count >= LATENCY_WINDOW_SIZE)
 			{
 				_latencySamples.Dequeue();
-				_latencySamples.Enqueue(_gameServices.NetworkService.QuantumClient.LoadBalancingPeer.LastRoundTripTime);
+				_latencySamples.Enqueue(_gameServices.NetworkService.QuantumClient.RealtimePeer.Stats.LastRoundtripTime);
 			}
 			else
 			{
-				_latencySamples.Enqueue(_gameServices.NetworkService.QuantumClient.LoadBalancingPeer.LastRoundTripTime);
+				_latencySamples.Enqueue(_gameServices.NetworkService.QuantumClient.RealtimePeer.Stats.LastRoundtripTime);
 			}
 
 			// We add a sneaky modifier because players don't like seeing high numbers :)
-			return (int) (_latencySamples.Average() * LATENCY_MODIFIER);
+			return (int) System.Math.Min(int.MaxValue, System.Math.Max(0, _latencySamples.Average() * LATENCY_MODIFIER));
 //#endif
 		}
 	}

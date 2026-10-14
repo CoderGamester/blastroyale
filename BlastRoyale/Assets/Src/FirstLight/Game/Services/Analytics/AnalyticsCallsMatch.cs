@@ -103,7 +103,7 @@ namespace FirstLight.Game.Services.Analytics
 			var localPlayerData = new QuantumPlayerMatchData(f, game.GetLocalPlayerRef());
 			var totalPlayers = 0;
 
-			for (var i = 0; i < f.PlayerCount; i++)
+			for (var i = 0; i < f.MaxPlayerCount; i++)
 			{
 				if (f.GetPlayerData(i) != null)
 				{

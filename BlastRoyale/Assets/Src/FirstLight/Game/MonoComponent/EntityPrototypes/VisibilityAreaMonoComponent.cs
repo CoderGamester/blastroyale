@@ -1,6 +1,6 @@
+using FirstLight.Inspector;
 using FirstLight.Game.MonoComponent.EntityViews;
 using Quantum;
-using Sirenix.OdinInspector;
 using UnityEngine;
 
 namespace FirstLight.Game.MonoComponent.EntityPrototypes
@@ -10,8 +10,8 @@ namespace FirstLight.Game.MonoComponent.EntityPrototypes
 	/// </summary>
 	public class VisibilityAreaMonoComponent : EntityBase
 	{
-		[SerializeField, Required] private VisibilityAreaViewMonoComponent _view;
-		
+		[SerializeField, InspectorField(Required = true)] private VisibilityAreaViewMonoComponent _view;
+
 		protected override void OnEntityInstantiated(QuantumGame game)
 		{
 			_view.SetEntityView(game, EntityView);

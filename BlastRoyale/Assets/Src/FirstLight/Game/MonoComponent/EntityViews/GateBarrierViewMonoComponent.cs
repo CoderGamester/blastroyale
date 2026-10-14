@@ -1,5 +1,5 @@
+using FirstLight.Inspector;
 using Quantum;
-using Sirenix.OdinInspector;
 using UnityEngine;
 
 namespace FirstLight.Game.MonoComponent.EntityViews
@@ -13,9 +13,9 @@ namespace FirstLight.Game.MonoComponent.EntityViews
 		private static readonly int _openWide = Animator.StringToHash("open_wide");
 		private static readonly int _openSpeed = Animator.StringToHash("open_speed");
 
-		[SerializeField, Required] private Animator _animator;
-		[SerializeField, Required] private bool _isOpenWide;
-		
+		[SerializeField, InspectorField(Required = true)] private Animator _animator;
+		[SerializeField] private bool _isOpenWide;
+
 		protected override void OnAwake()
 		{
 			QuantumEvent.Subscribe<EventOnGateStartOpening>(this, OnGateStartOpening);

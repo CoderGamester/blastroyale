@@ -1,3 +1,5 @@
+using FirstLight.Inspector;
+using MainInstaller = FirstLight.Game.Utils.MainInstaller;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -9,7 +11,6 @@ using FirstLight.Game.MonoComponent.MainMenu;
 using FirstLight.Game.Services;
 using FirstLight.Game.Utils;
 using Quantum;
-using Sirenix.OdinInspector;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -22,8 +23,8 @@ namespace FirstLight.Game.MonoComponent
 	{
 		protected bool IsLoaded = false;
 
-		[SerializeField, Required] protected UnityEvent _characterLoadedEvent;
-		[SerializeField, Required] protected Transform _characterAnchor;
+		[SerializeField, InspectorField(Required = true)] protected UnityEvent _characterLoadedEvent;
+		[SerializeField, InspectorField(Required = true)] protected Transform _characterAnchor;
 		public Vector3 Anchor => _characterAnchor.position;
 		protected MainMenuCharacterViewComponent _characterViewComponent;
 		protected IGameServices _services;

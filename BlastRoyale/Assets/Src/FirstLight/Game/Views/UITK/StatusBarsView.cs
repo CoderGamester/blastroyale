@@ -1,3 +1,4 @@
+using MainInstaller = FirstLight.Game.Utils.MainInstaller;
 using System.Collections.Generic;
 using FirstLight.FLogger;
 using FirstLight.Game.Logic;
@@ -5,8 +6,8 @@ using FirstLight.Game.MonoComponent.EntityPrototypes;
 using FirstLight.Game.Services;
 using FirstLight.Game.UIElements;
 using FirstLight.Game.Utils;
-using FirstLight.UIService;
-using I2.Loc;
+using FirstLight.Game.UI;
+using FirstLight.Game.Localization;
 using Quantum;
 using UnityEngine;
 using UnityEngine.Pool;
@@ -162,7 +163,7 @@ namespace FirstLight.Game.Views.UITK
 				screenPoint.y = _camera.pixelHeight - screenPoint.y;
 
 				var panelPos = RuntimePanelUtils.ScreenToPanel(Element.panel, screenPoint);
-				bar.transform.position = panelPos;
+				bar.style.translate = new Translate(panelPos.x, panelPos.y);
 			}
 
 			// Duplicates above ^
@@ -180,7 +181,7 @@ namespace FirstLight.Game.Views.UITK
 				screenPoint.y = _camera.pixelHeight - screenPoint.y;
 
 				var panelPos = RuntimePanelUtils.ScreenToPanel(Element.panel, screenPoint);
-				bar.transform.position = panelPos;
+				bar.style.translate = new Translate(panelPos.x, panelPos.y);
 			}
 		}
 
@@ -188,7 +189,7 @@ namespace FirstLight.Game.Views.UITK
 		{
 			var f = QuantumRunner.Default.Game.Frames.Predicted;
 			var dataArray = f.Unsafe.GetPointerSingleton<GameContainer>()->PlayersData;
-			for (int i = 0; i < f.PlayerCount; i++)
+			for (int i = 0; i < f.MaxPlayerCount; i++)
 			{
 				var p = dataArray[i];
 				InitPlayer(f, p.Entity);

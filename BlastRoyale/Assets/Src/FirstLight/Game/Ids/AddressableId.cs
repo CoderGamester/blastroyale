@@ -1,8 +1,9 @@
 /* AUTO GENERATED CODE */
 
 using System.Collections.Generic;
+using Quantum;
 using System.Collections.ObjectModel;
-using FirstLight.AddressablesExtensions;
+using GameLovers.Services.AssetsImporter;
 
 // ReSharper disable InconsistentNaming
 // ReSharper disable once CheckNamespace
@@ -101,7 +102,10 @@ namespace FirstLight.Game.Ids
 
 		public static AddressableConfig GetConfig(this AddressableId addressable)
 		{
-			return _addressableConfigs[(int) addressable];
+			// Retired entries leave gaps; the persisted numeric ID is independent of list position.
+			foreach (var config in _addressableConfigs)
+				if (config.Id == (int) addressable) return config;
+			throw new KeyNotFoundException($"No active Addressable configuration for {addressable} ({(int) addressable}).");
 		}
 
 		public static IList<AddressableConfig> GetConfigs(this AddressableLabel label)
@@ -130,11 +134,10 @@ namespace FirstLight.Game.Ids
 				{
 					new AddressableConfig(0, "Collections/CharacterSkins/Config.asset", "Assets/AddressableResources/Collections/CharacterSkins/Config.asset", typeof(FirstLight.Game.Configs.CharacterSkinConfigs), new [] {"GenerateIds","ScriptableObjectsOnly"}),
 					new AddressableConfig(1, "Configs/MapAssetConfigs.asset", "Assets/AddressableResources/Maps/MapAssetsConfig.asset", typeof(FirstLight.Game.Configs.MapAssetConfigIndex), new [] {"GenerateIds","ScriptableObjectsOnly"}),
-					new AddressableConfig(2, "Configs/Settings/SimulationConfig.asset", "Assets/AddressableResources/Configs/Settings/SimulationConfig.asset", typeof(SimulationConfigAsset), new [] {"GenerateIds","Quantum"}),
+					new AddressableConfig(2, "Configs/Settings/SimulationConfig.asset", "Assets/AddressableResources/Configs/Settings/SimulationConfig.asset", typeof(Quantum.SimulationConfig), new [] {"GenerateIds","Quantum"}),
 					new AddressableConfig(3, "Configs/Settings/QuantumRunnerConfigs.asset", "Assets/AddressableResources/Configs/Settings/QuantumRunnerConfigs.asset", typeof(FirstLight.Game.Configs.QuantumRunnerConfigs), new [] {"GenerateIds","Quantum"}),
 					new AddressableConfig(4, "Configs/Settings/PhotonServerSettings.asset", "Assets/AddressableResources/Configs/Settings/PhotonServerSettings.asset", typeof(PhotonServerSettings), new [] {"GenerateIds","Quantum"}),
-					new AddressableConfig(5, "Configs/Settings/Deterministic Config.asset", "Assets/AddressableResources/Configs/Settings/Deterministic Config.asset", typeof(DeterministicSessionConfigAsset), new [] {"GenerateIds","Quantum"}),
-					new AddressableConfig(6, "Configs/Settings/AssetResources.asset", "Assets/AddressableResources/Configs/Settings/AssetResources.asset", typeof(Quantum.AssetResourceContainer), new [] {"GenerateIds","Quantum"}),
+					new AddressableConfig(5, "Configs/Settings/Deterministic Config.asset", "Assets/AddressableResources/Configs/Settings/Deterministic Config.asset", typeof(QuantumDeterministicSessionConfigAsset), new [] {"GenerateIds","Quantum"}),
 					new AddressableConfig(7, "Configs/WeaponConfigs.asset", "Assets/AddressableResources/Configs/WeaponConfigs.asset", typeof(FirstLight.Game.Configs.WeaponConfigs), new [] {"GenerateIds","Quantum"}),
 					new AddressableConfig(8, "Configs/VideoAssetConfigs.asset", "Assets/AddressableResources/Configs/VideoAssetConfigs.asset", typeof(FirstLight.Game.Configs.AssetConfigs.VideoAssetConfigs), new [] {"GenerateIds","Quantum"}),
 					new AddressableConfig(9, "Configs/UpgradeDataConfigs.asset", "Assets/AddressableResources/Configs/UpgradeDataConfigs.asset", typeof(FirstLight.Game.Configs.UpgradeDataConfigs), new [] {"GenerateIds","Quantum"}),
@@ -256,11 +259,10 @@ namespace FirstLight.Game.Ids
 			new AddressableConfig(55, "Configs/UpgradeDataConfigs.asset", "Assets/AddressableResources/Configs/UpgradeDataConfigs.asset", typeof(FirstLight.Game.Configs.UpgradeDataConfigs), new [] {"GenerateIds","Quantum"}),
 			new AddressableConfig(56, "Configs/VideoAssetConfigs.asset", "Assets/AddressableResources/Configs/VideoAssetConfigs.asset", typeof(FirstLight.Game.Configs.AssetConfigs.VideoAssetConfigs), new [] {"GenerateIds","Quantum"}),
 			new AddressableConfig(57, "Configs/WeaponConfigs.asset", "Assets/AddressableResources/Configs/WeaponConfigs.asset", typeof(FirstLight.Game.Configs.WeaponConfigs), new [] {"GenerateIds","Quantum"}),
-			new AddressableConfig(58, "Configs/Settings/AssetResources.asset", "Assets/AddressableResources/Configs/Settings/AssetResources.asset", typeof(Quantum.AssetResourceContainer), new [] {"GenerateIds","Quantum"}),
-			new AddressableConfig(59, "Configs/Settings/Deterministic Config.asset", "Assets/AddressableResources/Configs/Settings/Deterministic Config.asset", typeof(DeterministicSessionConfigAsset), new [] {"GenerateIds","Quantum"}),
+			new AddressableConfig(59, "Configs/Settings/Deterministic Config.asset", "Assets/AddressableResources/Configs/Settings/Deterministic Config.asset", typeof(QuantumDeterministicSessionConfigAsset), new [] {"GenerateIds","Quantum"}),
 			new AddressableConfig(60, "Configs/Settings/PhotonServerSettings.asset", "Assets/AddressableResources/Configs/Settings/PhotonServerSettings.asset", typeof(PhotonServerSettings), new [] {"GenerateIds","Quantum"}),
 			new AddressableConfig(61, "Configs/Settings/QuantumRunnerConfigs.asset", "Assets/AddressableResources/Configs/Settings/QuantumRunnerConfigs.asset", typeof(FirstLight.Game.Configs.QuantumRunnerConfigs), new [] {"GenerateIds","Quantum"}),
-			new AddressableConfig(62, "Configs/Settings/SimulationConfig.asset", "Assets/AddressableResources/Configs/Settings/SimulationConfig.asset", typeof(SimulationConfigAsset), new [] {"GenerateIds","Quantum"}),
+			new AddressableConfig(62, "Configs/Settings/SimulationConfig.asset", "Assets/AddressableResources/Configs/Settings/SimulationConfig.asset", typeof(Quantum.SimulationConfig), new [] {"GenerateIds","Quantum"}),
 			new AddressableConfig(63, "Configs/MapAssetConfigs.asset", "Assets/AddressableResources/Maps/MapAssetsConfig.asset", typeof(FirstLight.Game.Configs.MapAssetConfigIndex), new [] {"GenerateIds","ScriptableObjectsOnly"}),
 			new AddressableConfig(64, "Collections/CharacterSkins/Config.asset", "Assets/AddressableResources/Collections/CharacterSkins/Config.asset", typeof(FirstLight.Game.Configs.CharacterSkinConfigs), new [] {"GenerateIds","ScriptableObjectsOnly"})
 		}.AsReadOnly();

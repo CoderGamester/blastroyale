@@ -1,3 +1,5 @@
+using MainInstaller = FirstLight.Game.Utils.MainInstaller;
+using FirstLight.Game.Services;
 using System;
 using System.Threading;
 using Cysharp.Threading.Tasks;
@@ -6,7 +8,7 @@ using FirstLight.Game.Data;
 using FirstLight.Game.Logic;
 using FirstLight.Game.Messages;
 using FirstLight.Game.Utils;
-using FirstLight.Services;
+using GameLovers.Services;
 using Photon.Deterministic;
 using Quantum;
 using UnityEngine.Serialization;
@@ -15,7 +17,7 @@ using BitStream = Photon.Deterministic.BitStream;
 namespace FirstLight.Game.Services
 {
 	/// <summary>
-	/// This service provides the possibility of storing and retrieving match snapshots, which can be used to start 
+	/// This service provides the possibility of storing and retrieving match snapshots, which can be used to start
 	/// a quantum game from certain points.
 	/// A snapshot is a serialized data of a MatchSetup and a Frame of the game, which can be restored by either
 	/// simply using the match setup to reconnect to the game or re-create the game based that given certain point.
@@ -68,13 +70,13 @@ namespace FirstLight.Game.Services
 
 	public class FrameSnapshotService : IFrameSnapshotService, IMatchService
 	{
-		private readonly IDataService _dataService;
+		private readonly IClientDataService _dataService;
 		private readonly IGameServices _services;
 		private readonly IGameDataProvider _data;
 
 		private readonly CancellationTokenSource _disposeCancelation = new CancellationTokenSource();
 
-		public FrameSnapshotService(IDataService dataService)
+		public FrameSnapshotService(IClientDataService dataService)
 		{
 			_data = MainInstaller.Resolve<IGameDataProvider>();
 			_services = MainInstaller.Resolve<IGameServices>();

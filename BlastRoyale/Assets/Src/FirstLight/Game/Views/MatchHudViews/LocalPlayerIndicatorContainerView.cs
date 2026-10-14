@@ -1,3 +1,4 @@
+using MainInstaller = FirstLight.Game.Utils.MainInstaller;
 using System;
 using Cysharp.Threading.Tasks;
 using FirstLight.FLogger;
@@ -19,9 +20,9 @@ namespace FirstLight.Game.Views.MatchHudViews
 	public class LocalPlayerIndicatorContainerView : IDisposable
 	{
 		private readonly IGameServices _services;
-		
+
 		private EntityRef _localPlayerEntity;
-		private EntityView _playerView;
+		private QuantumEntityView _playerView;
 		private QuantumWeaponConfig _weaponConfig;
 		private AudioWeaponConfig _weaponAudioConfig;
 		private IndicatorVfxId _shootIndicatorId;
@@ -93,7 +94,7 @@ namespace FirstLight.Game.Views.MatchHudViews
 		{
 			_localPlayerLanded = true;
 			if (!IsInitialized()) return;
-		
+
 			GetIndicator((int) IndicatorVfxId.Movement)?.SetVisualProperties(1, -1, -1);
 		}
 
@@ -132,7 +133,7 @@ namespace FirstLight.Game.Views.MatchHudViews
 		/// <summary>
 		/// Initializes this container with the player's <paramref name="playerView"/> to follow
 		/// </summary>
-		public void Init(EntityView playerView)
+		public void Init(QuantumEntityView playerView)
 		{
 			_localPlayerEntity = playerView.EntityRef;
 			_playerView = playerView;
@@ -146,7 +147,7 @@ namespace FirstLight.Game.Views.MatchHudViews
 				_specialIndicators[i] = null;
 				_specialRadiusIndicators[i] = null;
 			}
-			
+
 			foreach (var indicator in _indicators)
 			{
 				try

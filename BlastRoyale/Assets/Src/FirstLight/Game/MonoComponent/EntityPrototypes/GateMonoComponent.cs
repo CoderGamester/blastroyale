@@ -1,6 +1,6 @@
+using FirstLight.Inspector;
 using FirstLight.Game.MonoComponent.EntityViews;
 using Quantum;
-using Sirenix.OdinInspector;
 using UnityEngine;
 
 namespace FirstLight.Game.MonoComponent.EntityPrototypes
@@ -10,8 +10,8 @@ namespace FirstLight.Game.MonoComponent.EntityPrototypes
 	/// </summary>
 	public class GateMonoComponent : EntityBase
 	{
-		[SerializeField, Required] private GateBarrierViewMonoComponent _gateView;
-		
+		[SerializeField, InspectorField(Required = true)] private GateBarrierViewMonoComponent _gateView;
+
 		protected override void OnEntityInstantiated(QuantumGame game)
 		{
 			_gateView.SetEntityView(game, EntityView);

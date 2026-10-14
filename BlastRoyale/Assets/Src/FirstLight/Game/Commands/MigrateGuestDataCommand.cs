@@ -1,10 +1,11 @@
+using GameLovers.Services.Commands;
 using System;
 using System.Linq;
 using Cysharp.Threading.Tasks;
 using FirstLight.Game.Data;
 using FirstLight.Game.Logic;
 using FirstLight.Game.Logic.RPC;
-using FirstLight.Services;
+using GameLovers.Services;
 using FirstLight.Game.Services;
 using FirstLight.Server.SDK.Modules.Commands;
 using UnityEngine;
@@ -18,7 +19,7 @@ namespace FirstLight.Game.Commands
 	public struct MigrateGuestDataCommand : IGameCommand
 	{
 		public MigrationData GuestMigrationData;
-		
+
 		public CommandAccessLevel AccessLevel() => CommandAccessLevel.Player;
 		public CommandExecutionMode ExecutionMode() => CommandExecutionMode.Server;
 
@@ -26,7 +27,7 @@ namespace FirstLight.Game.Commands
 		public UniTask Execute(CommandExecutionContext ctx)
 		{
 			if (ctx.Logic.PlayerLogic().MigratedGuestAccount) return UniTask.CompletedTask;
-			
+
 			// Mark all flags that were completed in guest data, but not player data
 			foreach (TutorialSection section in Enum.GetValues(typeof(TutorialSection)))
 			{
@@ -35,7 +36,7 @@ namespace FirstLight.Game.Commands
 					ctx.Logic.PlayerLogic().MarkTutorialSectionCompleted(section);
 				}
 			}
-			
+
 			ctx.Logic.PlayerLogic().MarkGuestAccountMigrated();
 			return UniTask.CompletedTask;
 		}

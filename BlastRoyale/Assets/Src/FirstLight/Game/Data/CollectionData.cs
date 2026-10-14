@@ -22,8 +22,6 @@ namespace FirstLight.Game.Data
 	public static class CollectionTraits
 	{
 		public static readonly string URL = "url";
-		public static readonly string TOKEN_ID = "token";
-		public static readonly string NFT_COLLECTION = "nft_collection";
 	}
 
 	/// <summary>

@@ -1,0 +1,102 @@
+#define EQUIPMENT_SLOT_COUNT 6
+
+
+struct EquipmentMinified {
+    GameId Id;
+    EquipmentRarity Rarity;
+    uint Level;
+}
+
+struct Equipment
+{
+	GameId GameId;
+	EquipmentRarity Rarity;
+	EquipmentMaterial Material;
+    UInt16 Level;
+
+	[HideInInspector] EquipmentEdition Edition;
+	[HideInInspector] EquipmentGrade Grade;
+	[HideInInspector] EquipmentFaction Faction;
+	[HideInInspector] EquipmentAdjective Adjective;
+}
+
+enum EquipmentEdition : Byte
+{
+	Genesis,
+	TOTAL,            // Used to know the total amount of this type without the need of reflection
+}
+
+enum EquipmentRarity : Byte
+{
+	Common,
+	CommonPlus,
+	Uncommon,
+	UncommonPlus,
+	Rare,
+	RarePlus,
+	Epic,
+	EpicPlus,
+	Legendary,
+	LegendaryPlus,
+	TOTAL,            // Used to know the total amount of this type without the need of reflection
+}
+
+enum EquipmentGrade
+{
+	GradeI,
+	GradeII,
+	GradeIII,
+	GradeIV,
+	GradeV,
+	TOTAL,            // Used to know the total amount of this type without the need of reflection
+}
+
+enum EquipmentFaction : Byte
+{
+	Order,
+	Chaos,
+	Organic,
+	Dark,
+	Shadow,
+	Celestial,
+	Dimensional,
+	TOTAL,            // Used to know the total amount of this type without the need of reflection
+}
+
+enum EquipmentAdjective : Byte
+{
+	Regular,
+	Cool,
+	Ornate,
+	Posh,
+	Exquisite,
+	Majestic,
+	Marvelous,
+	Magnificent,
+	Royal,
+	Divine,
+	TOTAL,            // Used to know the total amount of this type without the need of reflection
+}
+
+enum EquipmentMaterial : Byte
+{
+	Plastic,
+	Steel,
+	Bronze,
+	Carbon,
+	Golden,
+	TOTAL,            // Used to know the total amount of this type without the need of reflection
+}
+
+enum EquipmentManufacturer : Byte
+{
+	Military,
+	Futuristic,
+	Apocalyptic,
+	RunAndRiot,
+	AnimalTactics,
+	LostAndFound,
+	Bruteforce,
+	SportingChance,
+	TOTAL,            // Used to know the total amount of this type without the need of reflection
+}

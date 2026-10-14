@@ -1,13 +1,17 @@
+using Quantum;
+using MainInstaller = FirstLight.Game.Utils.MainInstaller;
+using FirstLight.Game.Services;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using FirstLight.FLogger;
 using FirstLight.Game.Data;
 using FirstLight.Server.SDK.Modules;
-using FirstLight.Services;
+using GameLovers.Services;
 using UnityEditor;
 using UnityEditor.SceneManagement;
 using UnityEngine;
@@ -20,13 +24,13 @@ namespace FirstLight.Editor.EditorTools
 	/// </summary>
 	public class EditorShortcuts
 	{
-		
+
 		[MenuItem("FLG/Reserialize")]
 		private static void ReserializeAll()
 		{
 			AssetDatabase.ForceReserializeAssets();
 		}
-		
+
 		[MenuItem("FLG/Scene/Open FTUE Deck Scene")]
 		private static void OpenFtueDeckScene()
 		{
@@ -169,19 +173,19 @@ namespace FirstLight.Editor.EditorTools
 		[MenuItem("FLG/Cheats/Refill Ammo And Specials %m")]
 		private static void RefillAmmoAndSpecials()
 		{
-			SROptions.Current.RefillAmmoAndSpecials();
+			QuantumRunner.Default?.Game?.SendCommand(new Quantum.Commands.CheatRefillAmmoAndSpecials());
 		}
 
 		[MenuItem("FLG/Cheats/Make Player Super Tough %l")]
 		private static void MakePlayerSuperTough()
 		{
-			SROptions.Current.MakeLocalPlayerSuperTough();
+			QuantumRunner.Default?.Game?.SendCommand(new Quantum.Commands.CheatMakeLocalPlayerSuperToughCommand());
 		}
 
 		[MenuItem("FLG/Cheats/Skip Tutorial Step %o")]
 		private static void SkipTutorialSection()
 		{
-			SROptions.Current.SkipTutorialSection();
+			MainInstaller.ResolveServices().TutorialService.SkipTutorial();
 		}
 
 		[MenuItem("FLG/Backend/Netcode/Simulate Disconnection")]
@@ -254,7 +258,7 @@ namespace FirstLight.Editor.EditorTools
 				newCollider.center = position;
 				newCollider.size = scale;
 
-				// Adds a Quantum Box collider to the object 
+				// Adds a Quantum Box collider to the object
 				QuantumStaticBoxCollider3D newQuantumCollider = go.AddComponent<QuantumStaticBoxCollider3D>();
 				newQuantumCollider.SourceCollider = newCollider;
 			}
@@ -471,7 +475,7 @@ namespace FirstLight.Editor.EditorTools
 			// Generate classes
 			foreach (var path in arg)
 			{
-				names[path] = $"sprite-{GetCleanAtlasName(arg.Key)}__{Path.GetFileNameWithoutExtension(path)}";
+				names[path] = $"sprite-{GetCleanAtlasName(arg.Key)}__{SanitizeSpriteIdentifier(Path.GetFileNameWithoutExtension(path))}";
 			}
 
 			return names;
@@ -480,7 +484,7 @@ namespace FirstLight.Editor.EditorTools
 		public static string GetClassForSprite(string path)
 		{
 			var folder = path.Split('/')[4];
-			return $"sprite-{GetCleanAtlasName(folder)}__{Path.GetFileNameWithoutExtension(path)}";
+			return $"sprite-{GetCleanAtlasName(folder)}__{SanitizeSpriteIdentifier(Path.GetFileNameWithoutExtension(path))}";
 		}
 
 		private static string GenerateSpriteUss(IGrouping<string, string> arg)
@@ -494,7 +498,7 @@ namespace FirstLight.Editor.EditorTools
 			sb.AppendLine(":root {");
 			foreach (var path in arg)
 			{
-				var name = GenerateSpriteVar(arg.Key, path, true);
+				var name = GenerateSpriteVar(arg.Key, path, false);
 
 				if (names.Contains(name))
 				{
@@ -512,7 +516,7 @@ namespace FirstLight.Editor.EditorTools
 			// Generate classes
 			foreach (var path in arg)
 			{
-				var filename = Path.GetFileNameWithoutExtension(path);
+				var filename = SanitizeSpriteIdentifier(Path.GetFileNameWithoutExtension(path));
 
 				// Pressed versions get the :active pseudo class
 				if (filename.EndsWith("-pressed"))
@@ -530,7 +534,7 @@ namespace FirstLight.Editor.EditorTools
 						throw new NotSupportedException($"Found a file that isn't a sprite: {path}");
 					}
 
-					sb.AppendLine($".sprite-{GetCleanAtlasName(arg.Key)}__{Path.GetFileNameWithoutExtension(path)} {{");
+					sb.AppendLine($".sprite-{GetCleanAtlasName(arg.Key)}__{SanitizeSpriteIdentifier(Path.GetFileNameWithoutExtension(path))} {{");
 					sb.AppendLine($"    background-image: var({GenerateSpriteVar(arg.Key, path, false)});");
 					sb.AppendLine($"    width: {sprite.texture.width}px;");
 					sb.AppendLine($"    height: {sprite.texture.height}px;");
@@ -546,9 +550,11 @@ namespace FirstLight.Editor.EditorTools
 
 		private static string GenerateSpriteVar(string atlas, string path, bool full)
 		{
-			return $"--sprite-{GetCleanAtlasName(atlas)}__{Path.GetFileNameWithoutExtension(path)}" +
+			return $"--sprite-{GetCleanAtlasName(atlas)}__{SanitizeSpriteIdentifier(Path.GetFileNameWithoutExtension(path))}" +
 				(full ? $": url('/{path}');" : "");
 		}
+
+		private static string SanitizeSpriteIdentifier(string value) => Regex.Replace(value, @"[^A-Za-z0-9_-]", "-");
 
 		private static string GetCleanAtlasName(string atlas, bool lowercase = true)
 		{
@@ -562,13 +568,13 @@ namespace FirstLight.Editor.EditorTools
 				atlas = atlas.Replace(" ", string.Empty);
 			}
 
-			return atlas;
+			return SanitizeSpriteIdentifier(atlas);
 		}
 
 		[MenuItem("FLG/Print App Data")]
 		private static void PrintAppData()
 		{
-			var srv = new DataService();
+			var srv = new ClientDataService();
 			var data = srv.LoadData<AppData>();
 			EditorUtility.DisplayDialog("Data", ModelSerializer.PrettySerialize(data), "Ok");
 			FLog.Info(ModelSerializer.PrettySerialize(data));

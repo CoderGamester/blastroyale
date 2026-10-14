@@ -1,6 +1,5 @@
 using FirstLight.Game.Utils;
 using Quantum;
-using Sirenix.OdinInspector;
 using UnityEngine;
 
 public class BulletMonoComponent : MonoBehaviour
@@ -17,18 +16,18 @@ public class BulletMonoComponent : MonoBehaviour
 	}
 #endif
 
-	private EntityView View => GetComponent<EntityView>() ?? GetComponentInParent<EntityView>();
+	private QuantumEntityView View => GetComponent<QuantumEntityView>() ?? GetComponentInParent<QuantumEntityView>();
 
 	void Awake()
 	{
 		View.OnEntityInstantiated.AddListener(SetupBulletColor);
 	}
-	
+
 	public void SetupBulletColor(QuantumGame game)
 	{
 		if (_renderer == null) return;
 		var f = game.Frames.Predicted;
-		var view = GetComponent<EntityView>() ?? GetComponentInParent<EntityView>();
+		var view = GetComponent<QuantumEntityView>() ?? GetComponentInParent<QuantumEntityView>();
 		if (!f.TryGet<Projectile>(view.EntityRef, out var projectile))
 		{
 			return;

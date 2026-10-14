@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using FirstLight.FLogger;
@@ -111,11 +111,11 @@ namespace FirstLight.Game.Services.RoomService
 			return _room.Players.Values.Count(player => !GetPlayerProperties(player).Spectator.Value);
 		}
 
-		/// <inheritdoc cref="QuantumRunner.StartParameters"/>
+		/// <inheritdoc cref="SessionRunner.Arguments"/>
 		/// <remarks>
 		/// Default values to start the Quantum simulation based on the current selected adventure
 		/// </remarks>
-		public QuantumRunner.StartParameters GetDefaultStartParameters()
+		public SessionRunner.Arguments GetDefaultStartParameters()
 		{
 			var runnerConfigs = _roomService._configsProvider.GetConfig<QuantumRunnerConfigs>();
 
@@ -128,30 +128,30 @@ namespace FirstLight.Game.Services.RoomService
 				roomSize = playersInRoom;
 			}
 
-			var quitBehaviour = QuantumNetworkCommunicator.QuitBehaviour.LeaveRoomAndBecomeInactive;
+			var quitBehaviour = ShutdownConnectionOptions.LeaveRoomAndBecomeInactive;
 
 			FLog.Info($"Starting simulation for {roomSize} players");
 
 			if (_room.IsOffline)
 			{
 				gameMode = DeterministicGameMode.Local;
-				quitBehaviour = QuantumNetworkCommunicator.QuitBehaviour.None;
+				quitBehaviour = ShutdownConnectionOptions.None;
 			}
-			
+
 			var recordInput = FeatureFlags.GetLocalConfiguration().RecordQuantumInput;
-			return new QuantumRunner.StartParameters
+			return new SessionRunner.Arguments
 			{
 				RuntimeConfig = runnerConfigs.RuntimeConfig,
-				DeterministicConfig = runnerConfigs.DeterministicSessionConfigAsset.Config,
+				SessionConfig = runnerConfigs.QuantumDeterministicSessionConfigAsset.Config,
 				ReplayProvider = null,
 				GameMode = gameMode,
 				RunnerId = "DEFAULT",
-				QuitBehaviour = quitBehaviour,
-				LocalPlayerCount = 1,
+				Communicator = _room.IsOffline ? null : new QuantumNetworkCommunicator(_roomService._networkService.QuantumClient, quitBehaviour),
 				StartGameTimeoutInSeconds = 15,
-				RecordingFlags = recordInput ? RecordingFlags.Input : RecordingFlags.None,
-				ResourceManagerOverride = null,
-				InstantReplayConfig = default,
+				RecordingFlags = recordInput ? RecordingFlags.Input | RecordingFlags.Checksums : RecordingFlags.None,
+				GameParameters = QuantumRunnerUnityFactory.CreateGameParameters,
+				DeltaTimeType = Properties.SimulationMatchConfig.Value.GameModeID == "Testing" ? SimulationUpdateTime.EngineDeltaTime : default,
+				InstantReplaySettings = default,
 				HeapExtraCount = 0,
 				PlayerCount = roomSize
 			};
@@ -160,7 +160,7 @@ namespace FirstLight.Game.Services.RoomService
 		/// <summary>
 		/// Defines the <see cref="RuntimeConfig"/> to set on the Quantum's simulation when starting
 		/// </summary>
-		public void SetRuntimeConfig(MapAsset mapAsset)
+		public void SetRuntimeConfig(Quantum.Map mapAsset)
 		{
 			var simulationConfig = Properties.SimulationMatchConfig.Value;
 			var runtimeConfig = _roomService._configsProvider.GetConfig<QuantumRunnerConfigs>().RuntimeConfig;
@@ -174,7 +174,7 @@ namespace FirstLight.Game.Services.RoomService
 			}
 
 			runtimeConfig.MatchConfigs = simulationConfig;
-			runtimeConfig.Map = mapAsset.Settings;
+			runtimeConfig.Map = mapAsset;
 		}
 
 		/// <summary>

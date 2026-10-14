@@ -6,7 +6,8 @@ namespace FirstLight.Game.UIElements
 	/// <summary>
 	/// Draws a vertical or horizontal gradient between two colors.
 	/// </summary>
-	public class GradientElement : VisualElement
+	[UxmlElement]
+	public partial class GradientElement : VisualElement
 	{
 		private static readonly ushort[] Indices = {0, 1, 2, 2, 3, 0};
 		private static readonly Vertex[] Vertices = new Vertex[4];
@@ -14,6 +15,7 @@ namespace FirstLight.Game.UIElements
 		private static readonly CustomStyleProperty<Color> GradientFrom = new("--gradient-from");
 		private static readonly CustomStyleProperty<Color> GradientTo = new("--gradient-to");
 
+		[UxmlAttribute("vertical")]
 		private bool vertical { get; set; }
 
 		private Color startColor;
@@ -55,25 +57,5 @@ namespace FirstLight.Game.UIElements
 			mwd.SetAllIndices(Indices);
 		}
 
-		public new class UxmlFactory : UxmlFactory<GradientElement, GradientUxmlTraits>
-		{
-		}
-
-		public class GradientUxmlTraits : UxmlTraits
-		{
-			private readonly UxmlBoolAttributeDescription _verticalAttribute = new()
-			{
-				name = "vertical",
-				defaultValue = false
-			};
-
-			public override void Init(VisualElement ve, IUxmlAttributes bag, CreationContext cc)
-			{
-				base.Init(ve, bag, cc);
-
-				var ge = (GradientElement) ve;
-				ge.vertical = _verticalAttribute.GetValueFromBag(bag, cc);
-			}
-		}
 	}
 }

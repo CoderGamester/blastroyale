@@ -1,7 +1,8 @@
+using FirstLight.Inspector;
+using GameLovers.Services.Pooling;
 using System;
 using System.Collections.Generic;
-using FirstLight.Services;
-using Sirenix.OdinInspector;
+using GameLovers.Services;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -14,9 +15,9 @@ namespace FirstLight.Game.Views
 	[RequireComponent(typeof(RectTransform))]
 	public class OverlayWorldView : MonoBehaviour, IPoolEntityDespawn
 	{
-		[SerializeField, Required] private RectTransform _rectTransform;
-		[SerializeField, Required] private Vector2 _screenOffset;
-		[SerializeField, ReadOnly] private List<Graphic> _graphics;
+		[SerializeField, InspectorField(Required = true)] private RectTransform _rectTransform;
+		[SerializeField] private Vector2 _screenOffset;
+		[SerializeField, InspectorField(ReadOnly = true)] private List<Graphic> _graphics;
 
 		private bool _isTargetFollow;
 		private Transform _target;

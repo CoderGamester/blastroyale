@@ -1,3 +1,5 @@
+using MainInstaller = FirstLight.Game.Utils.MainInstaller;
+using FirstLight.Game.Services.Infrastructure;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,7 +9,7 @@ using FirstLight.Game.Services;
 using FirstLight.Game.UIElements;
 using FirstLight.Game.Utils;
 using FirstLight.Models;
-using I2.Loc;
+using FirstLight.Game.Localization;
 using PlayFab.ClientModels;
 using Quantum;
 using UnityEngine;
@@ -25,7 +27,8 @@ namespace FirstLight.Game.Presenters.Store
 		MAXAMOUNT = 1 << 6
 	}
 
-	public class StoreGameProductElement : VisualElement
+	[UxmlElement]
+	public partial class StoreGameProductElement : VisualElement
 	{
 		//USS Modifiers
 		private const string USS_PRODUCT_NAME = "product-name";
@@ -48,9 +51,27 @@ namespace FirstLight.Game.Presenters.Store
 		private const string USS_PURCHASE_AMOUNT = "purchased-amount";
 		private const string USS_SPRITE_CURRENCIES_BLASTBUCK = "sprite-currencies__blastbuck-1";
 
-		public StoreDisplaySize Size { get; set; }
-		public GameId GameId { get; set; }
-		public string ImageOverwrite { get; set; }
+		private StoreDisplaySize _uxmlSize = StoreDisplaySize.Full;
+		[UxmlAttribute("small")]
+		public StoreDisplaySize Size
+		{
+			get => _uxmlSize;
+			set { _uxmlSize = value; ScheduleUxmlPreview(); }
+		}
+		private GameId _uxmlGameId = GameId.FemaleCorpos;
+		[UxmlAttribute("game-id")]
+		public GameId GameId
+		{
+			get => _uxmlGameId;
+			set { _uxmlGameId = value; ScheduleUxmlPreview(); }
+		}
+		private string _uxmlImageOverwrite = "";
+		[UxmlAttribute("image-overwrite")]
+		public string ImageOverwrite
+		{
+			get => _uxmlImageOverwrite;
+			set { _uxmlImageOverwrite = value; ScheduleUxmlPreview(); }
+		}
 
 		public Action<GameProduct> OnClicked;
 		private GameProduct _product;
@@ -77,55 +98,78 @@ namespace FirstLight.Game.Presenters.Store
 		private Label _name;
 		private VisualElement _icon;
 		private Label _price;
-		
+
 		private ImageButton _infoButton;
 		private VisualElement _infoIcon;
 		private VisualElement _ownedStamp;
-	
+
 		private VisualElement _purchaseDisabledOverlay;
-		
+
 		private VisualElement _cooldownArea;
 		private Label _cooldownTimeLabel;
-		
+
 		private VisualElement _purchasedAmountArea;
 		private Label _purchasedAmountLabel;
-		
+
 		private VisualElement _newItemNotificationArea;
+
+		private bool _hasRuntimeData;
+		private IVisualElementScheduledItem _previewRefresh;
+
+		private void ScheduleUxmlPreview()
+		{
+			if (_hasRuntimeData) return;
+			_previewRefresh?.Pause();
+			_previewRefresh = schedule.Execute(() =>
+			{
+				if (_hasRuntimeData) return;
+				ApplyData(new GameProduct
+				{
+					GameItem = ItemFactory.Legacy(new LegacyItemData { RewardId = GameId, Value = 1 }),
+					PlayfabProductConfig = new PlayfabProductConfig
+					{
+						StoreItemData = new StoreItemData { Size = Size, ImageOverride = ImageOverwrite },
+						StoreItem = new StoreItem { VirtualCurrencyPrices = new Dictionary<string, uint> { { "RM", 10000 } } }
+					}
+				}, 0, null, false, null, this);
+			});
+		}
 
 		public StoreGameProductElement()
 		{
 			var treeAsset = Resources.Load<VisualTreeAsset>("StoreGameProductElement");
 			treeAsset.CloneTree(this);
-			
+
 			_purchaseDisabledOverlay = this.Q("PurchaseDisabled").Required();
 			_background = this.Q<ImageButton>("ProductWidgetWrapper").Required();
 			_background.clicked += () => OnClicked?.Invoke(_product);
-			
+
 			_name = this.Q<Label>("ProductName").Required();
 			_infoIcon = this.Q("InformationIcon").Required();
 			_price = this.Q<Label>("ProductPrice").Required();
-			
+
 			_icon = this.Q("ProductImage").Required();
 			_icon.AddToClassList(USS_SPRITE_CURRENCIES_BLASTBUCK);
-			
+
 			_ownedStamp = this.Q("OwnedStamp").Required();
 			_ownedStamp.SetDisplay(false);
-			
+
 			_infoButton = this.Q<ImageButton>("InformationClickArea").Required();
 			_infoButton.clicked += OnClickInfo;
 
 			_cooldownArea = this.Q<VisualElement>("CooldownArea").Required();
 			_cooldownTimeLabel = this.Q<Label>("CooldownTime").Required();
 			_cooldownArea.SetDisplay(false);
-			
+
 			_purchasedAmountArea = this.Q<VisualElement>("PurchasedAmountArea").Required();
 			_purchasedAmountLabel = this.Q<Label>("PurchasedAmount").Required();
 			_purchasedAmountArea.SetDisplay(false);
 
 			_newItemNotificationArea = this.Q<VisualElement>("NewItemNotificationArea").Required();
-			
+
 			// Apply the pop-up effect to the product widget
 			_ = new PopUpEffectAnimation(_background);
+			RegisterCallback<AttachToPanelEvent>(_ => ScheduleUxmlPreview());
 		}
 
 		private void OnClickInfo()
@@ -137,16 +181,24 @@ namespace FirstLight.Game.Presenters.Store
 		public void SetData(GameProduct product, ProductFlags flags, StorePurchaseData trackedPurchasedItem, bool isNewItem,
 							Action<GameProduct> CooldownExpiredAction, VisualElement rootDocument)
 		{
+			_hasRuntimeData = true;
+			_previewRefresh?.Pause();
+			ApplyData(product, flags, trackedPurchasedItem, isNewItem, CooldownExpiredAction, rootDocument);
+		}
+
+		private void ApplyData(GameProduct product, ProductFlags flags, StorePurchaseData trackedPurchasedItem, bool isNewItem,
+			Action<GameProduct> CooldownExpiredAction, VisualElement rootDocument)
+		{
 			_root = rootDocument;
 			_product = product;
-			
+
 			var itemView = product.GameItem.GetViewModel();
 			_name.text = "";
-			
+
 			if (itemView.Amount > 1) _name.text += itemView.Amount + " ";
 			_name.text += itemView.DisplayName;
 
-			
+
 			if ((flags.HasFlag(ProductFlags.COOLDOWN) || product.PlayfabProductConfig.StoreItemData.ShouldDailyReset) && trackedPurchasedItem != null)
 			{
 				ShowCooldown(product.PlayfabProductConfig.StoreItemData, trackedPurchasedItem, CooldownExpiredAction);
@@ -156,14 +208,14 @@ namespace FirstLight.Game.Presenters.Store
 			{
 				var amountPurchased = trackedPurchasedItem != null ? trackedPurchasedItem.AmountPurchased : 0;
 				var maxAmountPurchaseAllowed = product.PlayfabProductConfig.StoreItemData.MaxAmount;
-				
+
 				_purchasedAmountLabel.text = (maxAmountPurchaseAllowed - amountPurchased) +  "/" + maxAmountPurchaseAllowed;
-				
+
 				_purchasedAmountArea.SetDisplay(true);
 
 				if (!flags.HasFlag(ProductFlags.COOLDOWN))
 				{
-					_purchaseDisabledOverlay.SetDisplay(maxAmountPurchaseAllowed <= amountPurchased);	
+					_purchaseDisabledOverlay.SetDisplay(maxAmountPurchaseAllowed <= amountPurchased);
 				}
 			}
 
@@ -190,7 +242,9 @@ namespace FirstLight.Game.Presenters.Store
 			}
 			else if (price.item == GameId.RealMoney)
 			{
-				_price.text = product.UnityIapProduct().metadata.localizedPriceString;
+				_price.text = _hasRuntimeData
+					? product.UnityIapProduct()?.metadata.localizedPriceString ?? string.Empty
+					: price.amt.ToString();
 			}
 			else
 			{
@@ -200,7 +254,7 @@ namespace FirstLight.Game.Presenters.Store
 			itemView.DrawIcon(_icon);
 
 			_infoButton.SetDisplay(flags.HasFlag(ProductFlags.OWNED) || !string.IsNullOrEmpty(_product.PlayfabProductConfig.StoreItemData.Description));
-			
+
 			FormatByStoreData();
 		}
 
@@ -225,10 +279,10 @@ namespace FirstLight.Game.Presenters.Store
 			}
 			else
 			{
-				cooldownRemainingSeconds = storeItemData.PurchaseCooldown - (DateTime.UtcNow - trackedPurchasedItem.LastPurchaseTime).TotalSeconds;	
+				cooldownRemainingSeconds = storeItemData.PurchaseCooldown - (DateTime.UtcNow - trackedPurchasedItem.LastPurchaseTime).TotalSeconds;
 			}
-		
-			
+
+
 
 			schedule.Execute(() =>
 				{
@@ -277,7 +331,7 @@ namespace FirstLight.Game.Presenters.Store
 
 		private void FormatByStoreData()
 		{
-			Size = _product.PlayfabProductConfig.StoreItemData.Size;
+			_uxmlSize = _product.PlayfabProductConfig.StoreItemData.Size;
 			if (_product.PlayfabProductConfig.StoreItemData.Size == StoreDisplaySize.Half)
 			{
 				foreach (var sizeable in _sizeable)
@@ -298,68 +352,13 @@ namespace FirstLight.Game.Presenters.Store
 			}
 
 			var imageOverride = _product.PlayfabProductConfig.StoreItemData.ImageOverride;
-			if (!string.IsNullOrEmpty(imageOverride))
+			if (!string.IsNullOrEmpty(imageOverride) && Application.isPlaying)
 			{
 				_icon.ClearClassList();
 				MainInstaller.ResolveServices().RemoteTextureService.RequestTexture(imageOverride, texture2D =>
 				{
 					_icon.style.backgroundImage = new StyleBackground(texture2D);
 				});
-			}
-		}
-
-		public new class UxmlFactory : UxmlFactory<StoreGameProductElement, UxmlTraits>
-		{
-		}
-
-		public new class UxmlTraits : VisualElement.UxmlTraits
-		{
-			private readonly UxmlEnumAttributeDescription<StoreDisplaySize> _size = new ()
-			{
-				name = "small",
-				defaultValue = StoreDisplaySize.Full,
-			};
-
-			private readonly UxmlEnumAttributeDescription<GameId> _gameId = new ()
-			{
-				name = "game-id",
-				defaultValue = GameId.FemaleCorpos,
-			};
-
-			private readonly UxmlStringAttributeDescription _imageOverwrite = new ()
-			{
-				name = "image-overwrite",
-				defaultValue = "",
-			};
-
-			public override void Init(VisualElement ve, IUxmlAttributes bag, CreationContext cc)
-			{
-				base.Init(ve, bag, cc);
-
-				var ge = (StoreGameProductElement) ve;
-				ge.SetData(new GameProduct
-				{
-					GameItem = ItemFactory.Legacy(new LegacyItemData()
-					{
-						RewardId = _gameId.GetValueFromBag(bag, cc),
-						Value = 1,
-					}),
-					PlayfabProductConfig = new PlayfabProductConfig()
-					{
-						StoreItemData = new StoreItemData()
-						{
-							Size = _size.GetValueFromBag(bag, cc),
-							ImageOverride = _imageOverwrite.GetValueFromBag(bag, cc)
-						},
-						StoreItem = new StoreItem()
-						{
-							VirtualCurrencyPrices = new Dictionary<string, uint>()
-							{
-								{"RM", 10000}
-							}
-						}
-					},
-				}, 0, null, false, null, ve);
 			}
 		}
 	}

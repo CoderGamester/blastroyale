@@ -11,9 +11,9 @@ using FirstLight.Game.Presenters;
 using FirstLight.Game.Services;
 using FirstLight.Game.Services.Tutorial;
 using FirstLight.Game.Utils;
-using FirstLight.Statechart;
-using FirstLight.UIService;
-using I2.Loc;
+using GameLovers.StatechartMachine;
+using FirstLight.Game.UI;
+using FirstLight.Game.Localization;
 using UnityEngine;
 
 namespace FirstLight.Game.StateMachines
@@ -36,7 +36,7 @@ namespace FirstLight.Game.StateMachines
 			_sequence = new MetaTutorialSequence(_services, TutorialSection.FIRST_GUIDE_MATCH);
 		}
 
-		/// <summary> 
+		/// <summary>
 		/// Setups the audio state - root state, and then per gamemode type nested states
 		/// </summary>
 		public void Setup(IStateFactory stateFactory)
@@ -51,12 +51,12 @@ namespace FirstLight.Game.StateMachines
 			var createTutorialRoom = stateFactory.State("Join Room");
 			var waitSimulationStart = stateFactory.State("WaitSimulationStart");
 
-			
+
 			initial.Transition().Target(completionCheck);
 			initial.OnExit(SubscribeMessages);
 			initial.OnExit(_services.GameModeService.SelectDefaultRankedMode);
 			initial.OnExit(GetTutorialScreenRefs);
-			
+
 			enterName.OnEnter(() =>
 			{
 				_sequence.EnterStep(TutorialClientStep.EnterName);
@@ -69,7 +69,7 @@ namespace FirstLight.Game.StateMachines
 				_services.TutorialService.CompleteTutorialSection(TutorialSection.ENTER_NAME_PROMPT);
 			}).Target(completionCheck);
 			enterName.Event(NetworkState.PhotonCriticalDisconnectedEvent).Target(disconnected);
-			
+
 			completionCheck.OnEnter(_sequence.SendCurrentStepCompletedAnalytics);
 			completionCheck.Transition().Condition(EnterNamePromptConditionsCheck).Target(enterName);
 			completionCheck.Transition().Target(playGame);
@@ -105,7 +105,7 @@ namespace FirstLight.Game.StateMachines
 
 		private bool EnterNamePromptConditionsCheck()
 		{
-			// If first enter prompt tutorial not completed, and tutorial is not completed 
+			// If first enter prompt tutorial not completed, and tutorial is not completed
 			return !_services.TutorialService.HasCompletedTutorial() &&
 				!_services.TutorialService.HasCompletedTutorialSection(TutorialSection.ENTER_NAME_PROMPT);
 		}
@@ -149,14 +149,14 @@ namespace FirstLight.Game.StateMachines
 			await _tutorialOverlay.BlockAround<HomeScreenPresenter>("play-button");
 			_tutorialOverlay.Highlight<HomeScreenPresenter>("play-button");
 		}
-		
+
 		private void OnEnterNameEnter()
 		{
 			_services.TutorialService.CurrentRunningTutorial.Value = TutorialSection.ENTER_NAME_PROMPT;
 			_tutorialOverlay.Dialog.ShowDialog(ScriptLocalization.UITTutorial.enter_your_name, CharacterType.Female, CharacterDialogMoodType.Neutral, CharacterDialogPosition.TopLeft);
 		}
-		
-		
+
+
 		private void OnPlayGameExit()
 		{
 			CloseTutorialUi();

@@ -1,3 +1,4 @@
+using MainInstaller = FirstLight.Game.Utils.MainInstaller;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -12,7 +13,7 @@ using FirstLight.Game.Ids;
 using FirstLight.Game.Input;
 using FirstLight.Game.Services;
 using FirstLight.Server.SDK.Modules;
-using I2.Loc;
+using FirstLight.Game.Localization;
 using Photon.Realtime;
 using Quantum;
 using UnityEngine;
@@ -47,11 +48,11 @@ namespace FirstLight.Game.Utils
 		}
 
 		/// <summary>
-		/// Get Photon region translation for the given <paramref name="regionKey"/> 
+		/// Get Photon region translation for the given <paramref name="regionKey"/>
 		/// </summary>
 		public static string GetPhotonRegionTranslation(this string regionKey)
 		{
-			if (LocalizationManager.TryGetTranslation("UITSettings/region_" + regionKey.ToLowerInvariant(), out var translation))
+			if (GameLocalization.TryGetTranslation("UITSettings/region_" + regionKey.ToLowerInvariant(), out var translation))
 			{
 				return translation;
 			}
@@ -228,7 +229,7 @@ namespace FirstLight.Game.Utils
 
 			return ts.Hours + (simplified ? "h" : " hours");
 		}
-		
+
 		/// <summary>
 		/// Formats a string in seconds to Days, Hours and Minutes or Hours Minutes and Seconds
 		/// </summary>
@@ -310,7 +311,7 @@ namespace FirstLight.Game.Utils
 
 			var term = ScriptTerms.BotNames.Bot1.Remove(ScriptTerms.BotNames.Bot1.Length - 1);
 
-			return LocalizationManager.GetTranslation($"{term}{nameIndex.ToString()}");
+			return GameLocalization.GetTranslation($"{term}{nameIndex.ToString()}");
 		}
 
 		/// <summary>
@@ -371,14 +372,14 @@ namespace FirstLight.Game.Utils
 		public static unsafe ref PlayerMatchData GetLocalPlayerData(this QuantumGame game, bool isVerified, out Frame f)
 		{
 			f = isVerified ? game.Frames.Verified : game.Frames.Predicted;
-			if (game.Frames.Verified == null || game.IsSessionDestroyed)
+			if (game.Frames.Verified == null || game.Session == null)
 			{
 				FLog.Warn("Trying to access simulation data without simulation running.");
 				return ref _defaultPlayerMatchDataReference;
 			}
 
 			var localPlayers = game.GetLocalPlayers();
-			if (localPlayers.Length == 0) return ref _defaultPlayerMatchDataReference;
+			if (localPlayers.Count == 0) return ref _defaultPlayerMatchDataReference;
 			return ref *f.Unsafe.GetPointerSingleton<GameContainer>()->PlayersData.GetPointer(localPlayers[0]);
 		}
 
@@ -389,7 +390,7 @@ namespace FirstLight.Game.Utils
 		public static PlayerRef GetLocalPlayerRef(this QuantumGame game)
 		{
 			var localPlayers = game.GetLocalPlayers();
-			return localPlayers.Length == 0 ? PlayerRef.None : localPlayers[0];
+			return localPlayers.Count == 0 ? PlayerRef.None : localPlayers[0];
 		}
 
 		/// <summary>

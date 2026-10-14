@@ -1,3 +1,4 @@
+using MainInstaller = FirstLight.Game.Utils.MainInstaller;
 using FirstLight.FLogger;
 using FirstLight.Game.Services;
 using FirstLight.Game.Utils;
@@ -6,20 +7,20 @@ using UnityEngine;
 
 namespace FirstLight.Game.MonoComponent.EntityViews
 {
-	
+
 	/// <summary>
-	/// Inherit from this class if you need a reference to a parent <see cref="EntityView"/>.
-	/// All <see cref="EntityView"/> live in the same prefab where <see cref="Quantum.EntityPrototype"/> live
+	/// Inherit from this class if you need a reference to a parent <see cref="QuantumEntityView"/>.
+	/// All <see cref="QuantumEntityView"/> live in the same prefab where <see cref="Quantum.EntityPrototype"/> live
 	/// </summary>
 	public abstract class EntityViewBase : MonoBehaviour
 	{
 		protected IGameServices Services;
 		protected IMatchServices MatchServices;
-		
+
 		/// <summary>
-		/// Requests the <see cref="EntityView"/> representing this view execution base
+		/// Requests the <see cref="QuantumEntityView"/> representing this view execution base
 		/// </summary>
-		public EntityView EntityView { get; private set; }
+		public QuantumEntityView EntityView { get; private set; }
 
 		/// <summary>
 		/// Requests the <see cref="EntityRef"/> that this entity view is referencing to
@@ -44,7 +45,7 @@ namespace FirstLight.Game.MonoComponent.EntityViews
 		/// <summary>
 		/// Sets this entity view reference to be the same of the parent <see cref="Quantum.EntityPrototype"/>
 		/// </summary>
-		public void SetEntityView(QuantumGame game, EntityView entityView)
+		public void SetEntityView(QuantumGame game, QuantumEntityView entityView)
 		{
 			if (EntityRef.IsValid)
 			{
@@ -60,10 +61,10 @@ namespace FirstLight.Game.MonoComponent.EntityViews
 
 		protected virtual void OnInit(QuantumGame game) { }
 	}
-	
+
 	/// <inheritdoc />
 	/// <remarks>
-	/// Inherit this view base for the main view representing the defined <see cref="EntityView"/>
+	/// Inherit this view base for the main view representing the defined <see cref="QuantumEntityView"/>
 	/// </remarks>
 	[RequireComponent(typeof(RenderersContainerMonoComponent))]
 	[RequireComponent(typeof(RenderersContainerProxyMonoComponent))]
@@ -75,10 +76,10 @@ namespace FirstLight.Game.MonoComponent.EntityViews
 		{
 			get => _visible;
 		}
-		
+
 		public bool Culled
 		{
-			get => _culled; 
+			get => _culled;
 		}
 
 		[SerializeField] protected RenderersContainerProxyMonoComponent RenderersContainerProxy;

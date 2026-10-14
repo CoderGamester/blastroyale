@@ -1,9 +1,10 @@
+using GameLovers.GoogleSheetImporter;
 using System.Collections.Generic;
 using System.Linq;
 using FirstLight.Editor.EditorTools;
 using FirstLight.Game.Configs;
 using FirstLight.Game.Configs.AssetConfigs;
-using FirstLight.GoogleSheetImporter;
+using GameLoversEditor.GoogleSheetImporter;
 using Quantum;
 using UnityEditor;
 
@@ -36,7 +37,7 @@ namespace FirstLight.Editor.SheetImporters
 			}
 			scriptableObject.Configs = configs;
 		}
-		
+
 		protected override QuantumWeaponConfig DeserializeAsset(Dictionary<string, string> data, CustomAssetConfigs assetConfigs)
 		{
 			var config = QuantumDeserializer.DeserializeTo<QuantumWeaponConfig>(data);

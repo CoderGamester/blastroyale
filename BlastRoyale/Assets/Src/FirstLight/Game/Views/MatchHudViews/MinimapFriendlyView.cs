@@ -1,7 +1,8 @@
+using FirstLight.Inspector;
+using GameLovers.Services.Pooling;
 using DG.Tweening;
-using FirstLight.Services;
+using GameLovers.Services;
 using Quantum;
-using Sirenix.OdinInspector;
 using UnityEngine;
 using UnityEngine.Serialization;
 using UnityEngine.UI;
@@ -39,13 +40,13 @@ namespace FirstLight.Game.Views.MatchHudViews
 		/// </summary>
 		public bool Alive { get; private set; } = true;
 
-		[SerializeField, Required] private RectTransform _container;
-		[SerializeField, Required] private RectTransform _rectTransform;
-		[SerializeField, Required] private GameObject _alive;
-		[SerializeField, Required] private GameObject _dead;
-		[SerializeField, Required] private Image _aliveIcon;
-		[SerializeField, Required] private Image _deadIcon;
-		[SerializeField, Required] private Image _characterAvatar;
+		[SerializeField, InspectorField(Required = true)] private RectTransform _container;
+		[SerializeField, InspectorField(Required = true)] private RectTransform _rectTransform;
+		[SerializeField, InspectorField(Required = true)] private GameObject _alive;
+		[SerializeField, InspectorField(Required = true)] private GameObject _dead;
+		[SerializeField, InspectorField(Required = true)] private Image _aliveIcon;
+		[SerializeField, InspectorField(Required = true)] private Image _deadIcon;
+		[SerializeField, InspectorField(Required = true)] private Image _characterAvatar;
 
 		private Transform _playerTransform;
 		private Vector3 _playerTransformPosition;
@@ -81,7 +82,7 @@ namespace FirstLight.Game.Views.MatchHudViews
 			_aliveIcon.color = color;
 			_deadIcon.color = color;
 		}
-		
+
 		/// <summary>
 		/// Sets the color of the player.
 		/// </summary>

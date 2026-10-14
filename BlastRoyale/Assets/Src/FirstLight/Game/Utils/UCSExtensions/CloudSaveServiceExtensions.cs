@@ -47,6 +47,20 @@ namespace FirstLight.Game.Utils.UCSExtensions
 			}, new SaveOptions(new PublicWriteAccessClassOptions()));
 		}
 
+		public static UniTask SaveTrophiesAsync(this ICloudSaveService cloudSave, uint trophies)
+		{
+			return cloudSave.Data.Player.SaveAsync(new Dictionary<string, object> { { KEY_TROPHIES, trophies } },
+				new SaveOptions(new PublicWriteAccessClassOptions())).AsUniTask();
+		}
+
+		public static UniTask SavePlayerNameAsync(this ICloudSaveService cloudSave, string playerName)
+		{
+			return cloudSave.Data.Player.SaveAsync(new Dictionary<string, object>
+			{
+				{ "player_name", playerName }
+			}, new SaveOptions(new PublicWriteAccessClassOptions())).AsUniTask();
+		}
+
 		/// <summary>
 		/// Loads the playfab master id for the given UCS player id. Returns null if it can't find it.
 		/// </summary>
@@ -77,7 +91,6 @@ namespace FirstLight.Game.Utils.UCSExtensions
 					data.Trophies = trophies;
 				}
 
-				data.AvatarURL = avatarUrl.Value.GetAsString();
 			}
 
 			return data;

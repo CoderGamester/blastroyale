@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using FirstLight.Game.Ids;
 using Quantum;
-using Hashtable = ExitGames.Client.Photon.Hashtable;
+using Hashtable = Photon.Client.PhotonHashtable;
 
 namespace FirstLight.Game.Services.RoomService
 {

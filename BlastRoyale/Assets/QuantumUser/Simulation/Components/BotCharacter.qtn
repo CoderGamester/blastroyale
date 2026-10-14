@@ -1,0 +1,115 @@
+enum BotBehaviourType
+{
+    Static,
+    WanderAndShoot,
+	BattleRoyale,
+    StaticShooting,
+}
+
+enum BotMovementType {
+    None,
+    GoToCollectable,
+    GoToSafeArea,
+    Combat,
+    GoCloserToTeamMate,
+    Wander
+}
+
+component BotLoadout {
+    Equipment Weapon;
+}
+
+component BotCharacter
+{
+    //
+    // Configs from start of the game
+    //
+	BotBehaviourType BehaviourType;
+	Int32 BotNameIndex;
+
+	FP DecisionInterval;
+    FP LookForTargetsToShootAtInterval;
+    bool SpeedResetAfterLanding;
+
+    // How far the bot can see (square value)
+    // Set to -1 to allow a bot fully cheat and don't check range
+    FP VisionRangeSqr;
+
+    // Determines how inaccurate the bot is in its aiming where 0 is the perfect accuracy
+    UInt32 AccuracySpreadAngle;
+
+    // [0;1] where 0 is "never use" and 1 is "always use"
+    FP ChanceToUseSpecial;
+
+    // Random deviation up to this value from the center of aiming (used inside the code of specials)
+    FP SpecialAimingDeviation;
+
+    // Defines how many categories of gear a bot will get from crates
+    UInt32 LoadoutGearNumber;
+
+    // Defines the rarity of equipment a bot gets in their loadout
+    EquipmentRarity LoadoutRarity;
+
+    // This setting limits a distance from which bots will aim/shoot
+    FP MaxAimingRange;
+
+    // This setting multiplies the base movement speed
+    FP MovementSpeedMultiplier;
+
+    // If teammate is further than this distance then I'll try to get closer
+    FP MaxDistanceToTeammateSquared;
+
+    FP DamageTakenMultiplier;
+    FP DamageDoneMultiplier;
+
+    // Special min and max cooldown applies a random between X and Y
+    FPVector2 SpecialCooldown;
+
+    // Time left to the circle to shrink
+    FP TimeStartRunningFromCircle;
+
+    Int32 TeamSize;
+
+    GameId FavoriteWeapon;
+
+    bool WillFightInZone;
+    /*
+    ===============================================================
+     __   __  ___     __              ___     __  ___      ___  ___
+    |__) /  \  |     / _`  /\   |\/| |__     /__`  |   /\   |  |__
+    |__) \__/  |     \__> /~~\  |  | |___    .__/  |  /~~\  |  |___
+    ===============================================================
+    */
+    FP NextDecisionTime;
+	FP NextLookForTargetsToShootAtTime;
+	entity_ref Target;
+	entity_ref MoveTarget;
+	entity_ref RandomTeammate;
+	FPVector2 StuckDetectionPosition;
+
+	// Direction used in the wander behaviour, it changes if the direction is blocked
+	bool WanderDirection;
+	bool SharpShootNextShot;
+
+	// Targets we tried to move the bot to, but pathfinding failed
+	hash_set<EntityRef> InvalidMoveTargets;
+
+	// Next time bot is allowed to use special, this is to track state
+	FP NextAllowedSpecialUseTime;
+
+	// Flag used to reset bots movement speed after revive
+	bool IsMoveSpeedReseted;
+
+	BotMovementType MovementType;
+}
+
+synced event BotDebugInfo {
+    entity_ref Bot;
+    QString<1024> Action;
+    byte TraceLevel;
+}
+
+synced event OnDummyCharacterKilled
+{
+	entity_ref Entity;
+}

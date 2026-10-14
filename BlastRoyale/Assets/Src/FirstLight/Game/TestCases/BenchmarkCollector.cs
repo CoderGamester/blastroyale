@@ -1,10 +1,10 @@
+using MainInstaller = FirstLight.Game.Utils.MainInstaller;
 using System.Collections.Generic;
 using Cysharp.Threading.Tasks;
 using FirstLight.Game.Messages;
 using FirstLight.Game.Services;
-using FirstLight.Game.TestCases.FirebaseLab;
 using FirstLight.Game.Utils;
-using FirstLight.SDK.Services;
+using GameLovers.Services;
 using UnityEngine;
 using UnityEngine.Profiling;
 
@@ -15,11 +15,11 @@ namespace FirstLight.Game.TestCases
 		private int matchCount = 0;
 		private string currentLocation = "Loading";
 		private TimeFrameCollected currentTimeFrame;
-		private TestLabManager _manager;
+		private TestResultWriter _manager;
 		private IMessageBrokerService _messageBroker;
 		private readonly PlayTestCase _testCase;
 
-		public BenchmarkCollector(TestLabManager manager, PlayTestCase testCase)
+		public BenchmarkCollector(TestResultWriter manager, PlayTestCase testCase)
 		{
 			_manager = manager;
 			_testCase = testCase;
@@ -31,7 +31,6 @@ namespace FirstLight.Game.TestCases
 			_manager.WriteHeaders();
 			VersionUtils.LoadVersionData();
 			_manager.AppendGeneralInfo(_testCase.GetType().Name);
-			Statechart.Statechart.OnStateEntered += (state) => LogMessage("StateEntered " + state);
 			CollectFPS().Forget();
 			PublishFPS().Forget();
 			WaitForServices().Forget();

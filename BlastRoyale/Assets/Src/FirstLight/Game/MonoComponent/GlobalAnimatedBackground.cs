@@ -1,13 +1,13 @@
+using FirstLight.Inspector;
 using System;
 using FirstLight.FLogger;
 using FirstLight.Game.Core;
 using Quantum;
-using Sirenix.OdinInspector;
 using UnityEngine;
 
 public class GlobalAnimatedBackground : MonoSingleton<GlobalAnimatedBackground>
 {
-	[Required] [SerializeField] private AnimatedBackground _animatedBackground;
+	[SerializeField, InspectorField(Required = true)]  private AnimatedBackground _animatedBackground;
 
 	protected override void _Awake()
 	{

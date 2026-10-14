@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using FirstLight.Game.Data;
 using FirstLight.Game.StateMachines;
 using FirstLight.Game.Utils;
-using FirstLight.Statechart;
+using GameLovers.StatechartMachine;
 
 namespace FirstLight.Game.Services.Tutorial
 {
@@ -16,7 +16,7 @@ namespace FirstLight.Game.Services.Tutorial
 		private IGameServices _services;
 		private HashSet<TutorialClientStep> _completed = new();
 		private TutorialClientStep? _initialStep;
-		
+
 		public string SectionName { get; set; }
 		public int SectionVersion { get; set; } = 1;
 		public TutorialClientStep CurrentStep { get; set; }

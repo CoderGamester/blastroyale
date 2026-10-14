@@ -1,5 +1,6 @@
+using FirstLight.Game.Configs;
 using System.Collections.Generic;
-using FirstLight.AssetImporter;
+using GameLovers.Services.AssetsImporter;
 using FirstLight.Game.Ids;
 using UnityEngine;
 using UnityEngine.AddressableAssets;
@@ -10,7 +11,7 @@ namespace FirstLight.Game.Configs.AssetConfigs
 	/// Scriptable object containing all MainMenu audio assets configurations
 	/// </summary>
 	[CreateAssetMenu(fileName = "AudioMainMenuAssetConfigs", menuName = "ScriptableObjects/AssetConfigs/AudioMainMenuAssetConfigs")]
-	public class AudioMainMenuAssetConfigs : AssetConfigsScriptableObjectSimple<AudioId, AudioClipConfig>
+	public class AudioMainMenuAssetConfigs : DirectAssetConfigs<AudioId, AudioClipConfig>
 	{
 	}
 }

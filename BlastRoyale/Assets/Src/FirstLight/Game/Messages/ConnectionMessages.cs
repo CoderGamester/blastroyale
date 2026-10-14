@@ -1,6 +1,6 @@
 using System.Net;
 using Photon.Realtime;
-using FirstLight.SDK.Services;
+using GameLovers.Services;
 
 namespace FirstLight.Game.Messages
 {
@@ -12,13 +12,13 @@ namespace FirstLight.Game.Messages
 		public HttpStatusCode ErrorCode;
 		public string Message;
 	}
-	
+
 	public struct PingedRegionsMessage : IMessage { public RegionHandler RegionHandler; }
 
 	public struct ChangedServerRegionMessage : IMessage
 	{
 	}
-	
+
 	public struct NetworkActionWhileDisconnectedMessage : IMessage { }
 	public struct AttemptManualReconnectionMessage : IMessage { }
 }

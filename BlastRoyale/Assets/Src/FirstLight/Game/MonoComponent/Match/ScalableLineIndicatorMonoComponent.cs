@@ -1,5 +1,5 @@
+using FirstLight.Inspector;
 using Quantum;
-using Sirenix.OdinInspector;
 using UnityEngine;
 
 namespace FirstLight.Game.MonoComponent.Match
@@ -12,9 +12,9 @@ namespace FirstLight.Game.MonoComponent.Match
 	public class ScalableLineIndicatorMonoComponent : MonoBehaviour, IIndicator
 	{
 		private static readonly int _color = Shader.PropertyToID("_Color");
-		
+
 		[SerializeField] private Color _reloadColor = new Color(255, 64, 118);
-		[SerializeField, Required] private MeshRenderer _indicator;
+		[SerializeField, InspectorField(Required = true)] private MeshRenderer _indicator;
 		[SerializeField] private float _localHeight = 0.25f;
 
 		private Quaternion _rotation;
@@ -26,7 +26,7 @@ namespace FirstLight.Game.MonoComponent.Match
 		public bool VisualState => _indicator.enabled;
 		/// <inheritdoc />
 		public IndicatorVfxId IndicatorVfxId => IndicatorVfxId.ScalableLine;
-		
+
 		private void Awake()
 		{
 			_indicator.enabled = false;
@@ -54,12 +54,12 @@ namespace FirstLight.Game.MonoComponent.Match
 		}
 
 		/// <inheritdoc />
-		public void Init(EntityView playerEntityView)
+		public void Init(QuantumEntityView playerEntityView)
 		{
 			var cacheTransform = transform;
-			
+
 			cacheTransform.SetParent(playerEntityView.transform);
-			
+
 			cacheTransform.localRotation = Quaternion.identity;
 			cacheTransform.localPosition = new Vector3(0, _localHeight, 0);
 		}
@@ -71,7 +71,7 @@ namespace FirstLight.Game.MonoComponent.Match
 			{
 				return;
 			}
-			
+
 			var cacheTransform = transform;
 			var magnitude = Mathf.Clamp(position.magnitude, _minRange / (_maxRange * 1.5f), 1.5f);
 
@@ -79,13 +79,13 @@ namespace FirstLight.Game.MonoComponent.Match
 			cacheTransform.rotation = _rotation;
 			cacheTransform.localScale = new Vector3(cacheTransform.localScale.x, 1f, magnitude * _maxRange);
 		}
-		
+
 		/// <inheritdoc />
 		public void SetColor(Color c)
 		{
 			_indicator.material.SetColor(_color, c);
 		}
-		
+
 		/// <inheritdoc />
 		public void ResetColor()
 		{

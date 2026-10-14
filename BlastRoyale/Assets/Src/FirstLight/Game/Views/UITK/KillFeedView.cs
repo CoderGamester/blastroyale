@@ -1,9 +1,10 @@
+using MainInstaller = FirstLight.Game.Utils.MainInstaller;
 using System.Collections.Generic;
 using FirstLight.Game.Services;
 using FirstLight.Game.Services.Collection;
 using FirstLight.Game.UIElements;
 using FirstLight.Game.Utils;
-using FirstLight.UIService;
+using FirstLight.Game.UI;
 using Quantum;
 using UnityEngine;
 using UnityEngine.UIElements;
@@ -68,10 +69,10 @@ namespace FirstLight.Game.Views.UITK
 			var f = callback.Game.Frames.Verified;
 			var killerCosmetics = PlayerLoadout.GetCosmetics(f, killerData.Data.Entity);
 			var victimCosmetics = PlayerLoadout.GetCosmetics(f, victimData.Data.Entity);
-			
+
 			var killerCharacterPfpSprite = await _collectionService.LoadCollectionItemSprite(_collectionService.GetCosmeticForGroup(killerCosmetics, GameIdGroup.PlayerSkin));
 			var victimCharacterPfpSprite = await _collectionService.LoadCollectionItemSprite(_collectionService.GetCosmeticForGroup(victimCosmetics, GameIdGroup.PlayerSkin));
-			
+
 			SpawnDeathNotification(killerData.GetPlayerName(), killerFriendly, killerCharacterPfpSprite, victimData.GetPlayerName(), victimFriendly,
 				victimCharacterPfpSprite, killerData.Data.Player == victimData.Data.Player, killerNameColor, victimNameColor);
 		}

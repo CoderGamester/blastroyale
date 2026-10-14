@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Numerics;
-using ExitGames.Client.Photon;
+using Photon.Client;
+using Hashtable = Photon.Client.PhotonHashtable;
 using Photon.Deterministic;
 using Quantum;
 

@@ -8,7 +8,7 @@ using FirstLight.Game.Configs;
 using FirstLight.Game.Configs.AssetConfigs;
 using FirstLight.Game.Ids;
 using FirstLight.Game.Utils;
-using FirstLight.Services;
+using GameLovers.Services;
 using UnityEngine;
 using UnityEngine.Audio;
 

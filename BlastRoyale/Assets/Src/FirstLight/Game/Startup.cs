@@ -1,11 +1,12 @@
+using FirstLight.Inspector;
+using MainInstaller = FirstLight.Game.Utils.MainInstaller;
+using IAssetAdderService = FirstLight.Game.Services.IAssetAdderService;
+using AssetResolverService = FirstLight.Game.Services.AssetResolverService;
 using System;
 using System.Collections.Generic;
 using System.Reflection;
 using System.Threading.Tasks;
 using Cysharp.Threading.Tasks;
-using Facebook.Unity;
-using Firebase;
-using Firebase.Analytics;
 using FirstLight.FLogger;
 using FirstLight.Game.Data;
 using FirstLight.Game.Logic;
@@ -17,18 +18,16 @@ using FirstLight.Game.TestCases;
 using FirstLight.Game.Utils;
 using FirstLight.SDK.Modules;
 using FirstLight.Server.SDK.Modules.GameConfiguration;
-using FirstLight.Services;
-using Sirenix.OdinInspector;
+using GameLovers.Services;
 using Unity.Services.Authentication;
 using Unity.Services.Core;
 using Unity.Services.Core.Environments;
-using Unity.Services.Lobbies;
 using Unity.Services.RemoteConfig;
 using UnityEngine;
 using UnityEngine.AddressableAssets;
 using UnityEngine.InputSystem.EnhancedTouch;
 using UnityEngine.Rendering;
-using AnalyticsService = Unity.Services.Analytics.AnalyticsService;
+using UnityEngine.UnityConsent;
 using Debug = UnityEngine.Debug;
 using GameObject = UnityEngine.GameObject;
 
@@ -39,7 +38,7 @@ namespace FirstLight.Game
 	/// </summary>
 	public class Startup : MonoBehaviour
 	{
-		[SerializeField, Required] private AudioSource _audioSource;
+		[SerializeField, InspectorField(Required = true)] private AudioSource _audioSource;
 
 		private void Start()
 		{
@@ -57,10 +56,10 @@ namespace FirstLight.Game
 			await VersionUtils.LoadVersionDataAsync();
 			await FLEnvironment.CheckForEnvironmentRedirect(VersionUtils.BuildNumber);
 			await InitUnityServices();
-			await InitAnalytics();
+			InitAnalytics();
 
 			FLGTestRunner.Instance.CheckAutomations();
-			FLGTestRunner.Instance.CheckFirebaseRun();
+			FLGTestRunner.Instance.BeforeGameAwaken();
 
 			TouchSimulation.Enable();
 			EnhancedTouchSupport.Enable();
@@ -142,15 +141,15 @@ namespace FirstLight.Game
 		// TODO: This should not return the tuple, but we need UI Service before we await config loading
 		private static (IGameServices, IAssetAdderService, IConfigsAdder) InitFLGServices()
 		{
-			var messageBroker = new InMemoryMessageBrokerService();
+			var messageBroker = new MessageBrokerService();
 			var timeService = new TimeService();
-			var dataService = new DataService();
+			var dataService = new ClientDataService();
 			dataService.LoadData<AppData>();
 			var assetResolver = new AssetResolverService();
 			var configsProvider = new ConfigsProvider();
 			var serverConfigProvider = new UnityRemoteConfigProvider();
 			var networkService = new GameNetworkService(configsProvider);
-			
+
 			var gameLogic = new GameLogic(messageBroker, serverConfigProvider, timeService, dataService, configsProvider);
 			MainInstaller.Bind<IGameDataProvider>(gameLogic);
 			var gameServices = new GameServices(networkService, messageBroker, timeService, dataService, configsProvider, gameLogic, assetResolver);
@@ -158,7 +157,6 @@ namespace FirstLight.Game
 			networkService.StartNetworking(gameLogic, gameServices);
 			networkService.EnableQuantumPingCheck(true);
 
-			MainInstaller.Bind<IWeb3Service>(new NoWeb3());
 			MainInstaller.Bind<IGameServices>(gameServices);
 			MainInstaller.Bind<IGameStateMachine>(new GameStateMachine(gameLogic, gameServices, networkService, assetResolver));
 
@@ -167,44 +165,27 @@ namespace FirstLight.Game
 
 		private static async UniTask InitUnityServices()
 		{
+			// UGS Core reads Application.cloudProjectId; an arbitrary initialization option cannot override it.
+			// The local ID verifies the developer linked the intended free project in Editor > Project Settings > Services.
+			var localProjectId = FLEnvironment.Configuration.UnityProjectId;
+			if (string.IsNullOrWhiteSpace(localProjectId) || localProjectId != Application.cloudProjectId)
+				throw new InvalidOperationException("Link your free Unity Cloud project in Project Settings > Services and put its Project ID in Assets/Resources/LocalClientConfig.json.");
 			var initOpts = new InitializationOptions();
 
 			FLog.Info("Using unity environment: " + FLEnvironment.Current.UCSEnvironmentName);
 			initOpts.SetEnvironmentName(FLEnvironment.Current.UCSEnvironmentName);
-			RemoteConfigService.Instance.SetEnvironmentID(FLEnvironment.Current.UCSEnvironmentID);
+			if (!string.IsNullOrWhiteSpace(FLEnvironment.Current.UCSEnvironmentID))
+				RemoteConfigService.Instance.SetEnvironmentID(FLEnvironment.Current.UCSEnvironmentID);
 			await UnityServices.InitializeAsync(initOpts).AsUniTask();
 			await Addressables.InitializeAsync().Task.AsUniTask();
-			((ILobbyServiceSDKConfiguration) LobbyService.Instance).EnableLocalPlayerLobbyEvents(true);
 
-#if UNITY_EDITOR
-			if (ParrelSync.ClonesManager.IsClone())
-			{
-				AuthenticationService.Instance.SwitchProfile("_clone_" + ParrelSync.ClonesManager.GetArgument());
-			}
-#endif
 		}
 
-		private static async UniTask InitAnalytics()
+		private static void InitAnalytics()
 		{
-			var trackingAllowed = ATTrackingUtils.IsTrackingAllowed();
-
-			var dependencyStatus = await FirebaseApp.CheckAndFixDependenciesAsync().AsUniTask();
-
-			if (dependencyStatus == DependencyStatus.Available)
-			{
-				FirebaseApp.Create();
-				FirebaseAnalytics.SetAnalyticsCollectionEnabled(trackingAllowed);
-			}
-			else
-			{
-				FLog.Warn($"Firebase could not be initialized properly. Status: {dependencyStatus}");
-			}
-
-			if (trackingAllowed)
-			{
-				AnalyticsService.Instance.StartDataCollection();
-				SingularSDK.InitializeSingularSDK();
-			}
+			var consent = EndUserConsent.GetConsentState();
+			consent.AnalyticsIntent = ATTrackingUtils.IsTrackingAllowed() ? ConsentStatus.Granted : ConsentStatus.Denied;
+			EndUserConsent.SetConsentState(consent);
 		}
 
 		private void OhYeah()
@@ -217,10 +198,10 @@ namespace FirstLight.Game
 
 		private static void InitPlugins()
 		{
-#if !DISABLE_SRDEBUGGER
-			SRDebug.Init();
+#if UNITY_EDITOR || DEVELOPMENT_BUILD
+			FirstLight.Game.Cheats.RuntimeDebugPanel.Initialize();
 #endif
-			
+
 			Debug.developerConsoleEnabled = false;
 			DebugManager.instance.enableRuntimeUI = false;
 			FLog.Init();
@@ -243,7 +224,6 @@ namespace FirstLight.Game
 				Application.targetFrameRate = limitEnabled ? 30 : 60;
 			});
 		}
-		
 
 	}
 }

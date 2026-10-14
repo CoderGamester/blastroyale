@@ -1,4 +1,5 @@
-﻿using System;
+using MainInstaller = FirstLight.Game.Utils.MainInstaller;
+using System;
 using System.Linq;
 using System.Threading.Tasks;
 using Cysharp.Threading.Tasks;
@@ -12,8 +13,8 @@ using FirstLight.Game.Logic;
 using FirstLight.Game.Messages;
 using FirstLight.Game.Presenters;
 using FirstLight.Game.Utils;
-using FirstLight.SDK.Services;
-using I2.Loc;
+using GameLovers.Services;
+using FirstLight.Game.Localization;
 
 namespace FirstLight.Game.Services
 {
@@ -70,7 +71,7 @@ namespace FirstLight.Game.Services
 				if (result == BattlePassSeasonBannerPresenter.ScreenResult.GoToBattlePass)
 				{
 					MarkSeen();
-					_msgBroker.Publish(new NewBattlePassSeasonMessage());
+					_msgBroker.PublishSafe(new NewBattlePassSeasonMessage());
 					return IHomeScreenService.ProcessorResult.CustomBehaviour;
 				}
 
@@ -87,7 +88,7 @@ namespace FirstLight.Game.Services
 					if (purchaseResult == IAPHelpers.BuyProductResult.Rewarded)
 					{
 						MarkSeen();
-						_msgBroker.Publish(new NewBattlePassSeasonMessage());
+						_msgBroker.PublishSafe(new NewBattlePassSeasonMessage());
 						return IHomeScreenService.ProcessorResult.CustomBehaviour;
 					}
 
@@ -106,7 +107,7 @@ namespace FirstLight.Game.Services
 					{
 						continue;
 					}
-					
+
 				}
 
 				return IHomeScreenService.ProcessorResult.None;

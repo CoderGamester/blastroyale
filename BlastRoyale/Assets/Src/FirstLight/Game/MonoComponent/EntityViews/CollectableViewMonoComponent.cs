@@ -1,3 +1,5 @@
+using FirstLight.Inspector;
+using MainInstaller = FirstLight.Game.Utils.MainInstaller;
 using System;
 using System.Collections.Generic;
 using FirstLight.Game.Ids;
@@ -6,7 +8,6 @@ using FirstLight.Game.Services;
 using FirstLight.Game.Utils;
 using Photon.Deterministic;
 using Quantum;
-using Sirenix.OdinInspector;
 using UnityEngine;
 using System.Collections;
 using FirstLight.FLogger;
@@ -30,8 +31,8 @@ namespace FirstLight.Game.MonoComponent.EntityViews
 		/// </summary>
 		private const float RADIUS_CORRECTION = 0.9f;
 
-		[SerializeField, Required] private Transform _collectableIndicatorAnchor;
-		[SerializeField, Required] private Animation _animation;
+		[SerializeField, InspectorField(Required = true)] private Transform _collectableIndicatorAnchor;
+		[SerializeField, InspectorField(Required = true)] private Animation _animation;
 
 		//[SerializeField, Required] private AnimationClip _spawnClip;
 		[SerializeField] private AnimationClip _idleClip;
@@ -298,7 +299,7 @@ namespace FirstLight.Game.MonoComponent.EntityViews
 			{
 				return;
 			}
-			
+
 			_collectors.Remove(callback.CollectorEntity);
 			RefreshVfx(MatchServices.SpectateService.SpectatedPlayer.Value);
 		}
@@ -356,7 +357,7 @@ namespace FirstLight.Game.MonoComponent.EntityViews
 					? VfxId.CollectableIndicatorLarge
 					: VfxId.CollectableIndicator;
 				_collectingVfx = (CollectableIndicatorVfxMonoBehaviour) MatchServices.VfxService.Spawn(vfxId);
-				
+
 				UpdateVfxPosition();
 				_collectingVfx.transform.rotation = Quaternion.AngleAxis(145, Vector3.up);
 				_collectingVfx.transform.localScale = new Vector3(_pickupCircle.localScale.x * 2.5f, 1f,

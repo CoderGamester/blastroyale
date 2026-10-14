@@ -1,9 +1,11 @@
+using FirstLight.Inspector;
+using IgnoreServerSerialization = FirstLight.Server.SDK.Modules.GameConfiguration.IgnoreServerSerialization;
+using GameLovers.GameData;
 using System;
 using System.Collections.Generic;
 using FirstLight.Game.Utils;
 using FirstLight.Server.SDK.Modules.GameConfiguration;
 using Quantum;
-using Sirenix.OdinInspector;
 using UnityEngine;
 using UnityEngine.AddressableAssets;
 
@@ -18,8 +20,8 @@ namespace FirstLight.Game.Configs.Collection
 	[Serializable]
 	public struct WeaponSkinConfigEntry
 	{
-		[Required] public AssetReferenceGameObject Prefab;
-		[Required] public AssetReferenceSprite Sprite;
+		[InspectorField(Required = true)] public AssetReferenceGameObject Prefab;
+		[InspectorField(Required = true)] public AssetReferenceSprite Sprite;
 	}
 
 	/// <summary>

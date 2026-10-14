@@ -1,3 +1,5 @@
+using IgnoreServerSerialization = FirstLight.Server.SDK.Modules.GameConfiguration.IgnoreServerSerialization;
+using GameLovers.GameData;
 using System;
 using System.Collections.Generic;
 using FirstLight.Server.SDK.Modules.GameConfiguration;
@@ -23,7 +25,7 @@ namespace FirstLight.Game.Configs
 			return hash;
 		}
 	}
-	
+
 	/// <summary>
 	/// Scriptable Object tool to import the <seealso cref="LiveopsSegmentActionConfig"/> sheet data
 	/// </summary>
@@ -32,7 +34,7 @@ namespace FirstLight.Game.Configs
 	public class LiveopsFeatureFlagConfigs : ScriptableObject, IConfigsContainer<LiveopsFeatureFlagConfig>
 	{
 		[SerializeField] private List<LiveopsFeatureFlagConfig> _configs = new ();
-		
+
 		/// <inheritdoc />
 		public List<LiveopsFeatureFlagConfig> Configs
 		{

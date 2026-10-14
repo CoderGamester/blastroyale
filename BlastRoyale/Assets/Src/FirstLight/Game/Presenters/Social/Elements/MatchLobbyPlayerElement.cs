@@ -6,7 +6,8 @@ namespace FirstLight.Game.UIElements
 	/// <summary>
 	/// A single player in a match lobby.
 	/// </summary>
-	public class MatchLobbyPlayerElement : ImageButton
+	[UxmlElement]
+	public partial class MatchLobbyPlayerElement : ImageButton
 	{
 		private const string USS_BLOCK = "match-lobby-player";
 		private const string USS_NAME = USS_BLOCK + "__name";
@@ -38,7 +39,7 @@ namespace FirstLight.Game.UIElements
 
 			Add(_crown = new VisualElement {name = "crown"});
 			_crown.AddToClassList(USS_CROWN);
-			
+
 			Add(_plus = new VisualElement {name = "plus"});
 			_plus.AddToClassList(USS_PLUS);
 
@@ -52,7 +53,7 @@ namespace FirstLight.Game.UIElements
 
 			SetData(playerName, host, local, ready);
 		}
-		
+
 		public string GetCurrentPlayerName() => _nameLabel.text;
 
 		public void SetData(string playerName, bool host, bool local, bool ready)
@@ -65,8 +66,5 @@ namespace FirstLight.Game.UIElements
 			EnableInClassList(USS_EMPTY, string.IsNullOrEmpty(playerName));
 		}
 
-		public new class UxmlFactory : UxmlFactory<MatchLobbyPlayerElement>
-		{
-		}
 	}
 }

@@ -1,7 +1,7 @@
 using System;
 using Cysharp.Threading.Tasks;
 using FirstLight.Game.Utils;
-using I2.Loc;
+using FirstLight.Game.Localization;
 using UnityEngine;
 using UnityEngine.UIElements;
 using UnityEngine.UIElements.Experimental;
@@ -11,7 +11,8 @@ namespace FirstLight.Game.UIElements
 	/// <summary>
 	/// The default popup element for the game.
 	/// </summary>
-	public class GenericPopupElement : VisualElement
+	[UxmlElement]
+	public partial class GenericPopupElement : VisualElement
 	{
 		private const string USS_BLOCK = "generic-popup";
 		private const string USS_NO_PADDING_MODIFIER = USS_BLOCK + "--no-padding";
@@ -22,9 +23,27 @@ namespace FirstLight.Game.UIElements
 		private const string USS_GLOW = USS_CONTENT + "__glow";
 		private const string USS_CLOSE_BUTTON = USS_BLOCK + "__close-button";
 		private const string USS_CLOSE_BUTTON_CONTAINER = USS_CLOSE_BUTTON + "-container";
-		private string TitleLocalizationKey { get; set; }
-		private bool GlowEffect { get; set; }
-		private bool DisableCloseButton { get; set; }
+		private string _TitleLocalizationKey;
+		[UxmlAttribute("title-localization-key")]
+		private string TitleLocalizationKey
+		{
+			get => _TitleLocalizationKey;
+			set => LocalizeTitle(value);
+		}
+		private bool _glowEffect;
+		[UxmlAttribute("glow-effect")]
+		private bool GlowEffect
+		{
+			get => _glowEffect;
+			set { _glowEffect = value; SetGlowEffect(value); }
+		}
+		private bool _disableCloseButton;
+		[UxmlAttribute("disable-close-button")]
+		private bool DisableCloseButton
+		{
+			get => _disableCloseButton;
+			set { _disableCloseButton = value; SetCloseButton(!value); }
+		}
 
 		private readonly VisualElement _header;
 		private readonly Label _title;
@@ -54,6 +73,7 @@ namespace FirstLight.Game.UIElements
 			contentContainer = _content;
 			SetCloseButton(!DisableCloseButton);
 			SetGlowEffect(GlowEffect);
+			LocalizeTitle(null);
 		}
 
 		public async UniTask AnimateOpen()
@@ -133,55 +153,16 @@ namespace FirstLight.Game.UIElements
 
 		public void LocalizeTitle(string labelKey)
 		{
-			TitleLocalizationKey = labelKey;
-			_title.text = LocalizationManager.TryGetTranslation(labelKey, out var translation)
+			_TitleLocalizationKey = labelKey;
+			_title.text = GameLocalization.TryGetTranslation(labelKey, out var translation)
 				? translation
 				: $"#{labelKey}#";
 		}
 
 		public void SetTitle(string title)
 		{
-			TitleLocalizationKey = null;
+			_TitleLocalizationKey = null;
 			_title.text = title;
-		}
-
-		public new class UxmlFactory : UxmlFactory<GenericPopupElement, UxmlTraits>
-		{
-		}
-
-		public new class UxmlTraits : VisualElement.UxmlTraits
-		{
-			private readonly UxmlStringAttributeDescription _titleLocalizationKeyAttribute = new ()
-			{
-				name = "title-localization-key",
-				use = UxmlAttributeDescription.Use.Required
-			};
-
-			private readonly UxmlBoolAttributeDescription _glowEffect = new ()
-			{
-				name = "glow-effect",
-				defaultValue = false,
-				use = UxmlAttributeDescription.Use.Required
-			};
-
-			private readonly UxmlBoolAttributeDescription _disableCloseButton = new ()
-			{
-				name = "disable-close-button",
-				defaultValue = false,
-				use = UxmlAttributeDescription.Use.Required
-			};
-
-			public override void Init(VisualElement ve, IUxmlAttributes bag, CreationContext cc)
-			{
-				base.Init(ve, bag, cc);
-
-				var el = ((GenericPopupElement) ve);
-				el.GlowEffect = _glowEffect.GetValueFromBag(bag, cc);
-				el.DisableCloseButton = _disableCloseButton.GetValueFromBag(bag, cc);
-				el.LocalizeTitle(_titleLocalizationKeyAttribute.GetValueFromBag(bag, cc));
-				el.SetGlowEffect(_glowEffect.GetValueFromBag(bag, cc));
-				el.SetCloseButton(!_disableCloseButton.GetValueFromBag(bag, cc));
-			}
 		}
 	}
 }

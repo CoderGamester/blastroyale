@@ -1,3 +1,4 @@
+using MainInstaller = FirstLight.Game.Utils.MainInstaller;
 #nullable enable
 using System;
 using System.Collections;
@@ -15,7 +16,6 @@ namespace FirstLight.Game.TestCases
 	public class TestRunnerBehaviour : MonoBehaviour
 	{
 	}
-
 
 	public class FLGTestRunner
 	{
@@ -46,7 +46,7 @@ namespace FirstLight.Game.TestCases
 		private GameObject _runnerGameObject = null!;
 		public bool UseBotBehaviour = false;
 		public Func<string, IEnumerator>? FailInstruction { private get; set; }
-		private readonly FirebaseLab.TestLabManager _testLabManager = FirebaseLab.TestLabManager.Instantiate();
+		private readonly TestResultWriter _resultWriter = new TestResultWriter();
 		private TestInstaller? _helpers;
 
 		/// <summary>
@@ -65,7 +65,6 @@ namespace FirstLight.Game.TestCases
 			yield return Run(testCase, true);
 		}
 
-
 		public IEnumerator Fail(string reason)
 		{
 			if (_failCalled)
@@ -74,7 +73,7 @@ namespace FirstLight.Game.TestCases
 			}
 
 			_failCalled = true;
-			_testLabManager.AppendResult(false, reason);
+			_resultWriter.AppendResult(false, reason);
 
 			// Idk what happens with metrics if quit instant
 			yield return new WaitForSeconds(5);
@@ -83,10 +82,9 @@ namespace FirstLight.Game.TestCases
 				yield return FailInstruction(reason);
 			}
 
-			_testLabManager.EarlyQuitApp();
+			_resultWriter.EarlyQuitApp();
 			Debug.LogError("Test failed with reason: " + reason);
 		}
-
 
 		private void Setup(PlayTestCase testCase)
 		{
@@ -96,13 +94,12 @@ namespace FirstLight.Game.TestCases
 			_runnerGameObject = new GameObject();
 			Object.DontDestroyOnLoad(_runnerGameObject);
 			_testRunnerBehaviour = _runnerGameObject.AddComponent<TestRunnerBehaviour>();
-			var benchmarkCollector = new BenchmarkCollector(_testLabManager, testCase);
+			var benchmarkCollector = new BenchmarkCollector(_resultWriter, testCase);
 			benchmarkCollector.Start();
 			_helpers = SetupHelpers();
 			_runningTest.SetInstaller(_helpers);
 			Application.logMessageReceived += OnLogReceived;
 		}
-
 
 		private IEnumerator Run(PlayTestCase testCase, bool onTests = true)
 		{
@@ -121,21 +118,19 @@ namespace FirstLight.Game.TestCases
 				yield break;
 			}
 
-			_testLabManager.AppendResult(true, _errors.Count > 0 ? "Test finished with exceptions!" : "Success test!");
-
+			_resultWriter.AppendResult(_errors.Count == 0, _errors.Count > 0 ? "Test finished with exceptions!" : "Success test!");
 
 			MainInstaller.ResolveServices().QuitGame("Success Test");
 		}
 
-		private void OnLogReceived(string logMessage, string trace, LogType type)
+		private void OnLogReceived(string logMessage, string trace, UnityEngine.LogType type)
 		{
-			if (type is LogType.Error or LogType.Exception)
+			if (type is UnityEngine.LogType.Error or UnityEngine.LogType.Exception)
 			{
-				_testLabManager.AppendException(logMessage);
+				_resultWriter.AppendException(logMessage);
 				_errors.Add(logMessage);
 			}
 		}
-
 
 		private IEnumerator LoadBootScene()
 		{
@@ -163,31 +158,6 @@ namespace FirstLight.Game.TestCases
 			testInstaller.Bind(new GamemodeUIHelper(this, uiHelper));
 			testInstaller.Bind(new GameConfigHelper(this));
 			return testInstaller;
-		}
-
-
-		public void CheckFirebaseRun()
-		{
-			if (_testLabManager.IsTestingScenario)
-			{
-				FLog.Info("Detected case scenario: " + _testLabManager.ScenarioNumber);
-				PlayTestCase testCase = _testLabManager.ScenarioNumber switch
-				{
-					1  => new PlayMatch(1),
-					2  => new PlayMatch(2),
-					5  => new PlayMatch(5),
-				
-					10 => new PlayMatch(1, true, GameId.MazeMayhem),
-					11 => new PlayMatch(2,true, GameId.MazeMayhem),
-					12 => new PlayMatch(5,true, GameId.MazeMayhem),
-					_ => new TutorialTestCase()
-				};
-				RunInsideCoroutine(testCase);
-			}
-
-			if (_runningTest == null) return;
-
-			_runningTest.BeforeGameAwaken();
 		}
 
 		public bool IsRunning()

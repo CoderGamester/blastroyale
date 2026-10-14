@@ -1,5 +1,5 @@
+using FirstLight.Inspector;
 using Quantum;
-using Sirenix.OdinInspector;
 using UnityEngine;
 
 namespace FirstLight.Game.MonoComponent.Match
@@ -10,11 +10,11 @@ namespace FirstLight.Game.MonoComponent.Match
 	public class RadialIndicatorMonoComponent : MonoBehaviour, IIndicator
 	{
 		private static readonly int _color = Shader.PropertyToID("_Color");
-		
-		[SerializeField, Required] protected GameObject _indicator;
+
+		[SerializeField, InspectorField(Required = true)] protected GameObject _indicator;
 		[SerializeField] protected float _localHeight = 0.025f;
 		[SerializeField] protected bool _initiallyEnabled = false;
-		
+
 		private Transform _playerTransform;
 		private Vector3 _position;
 		private float _maxRange;
@@ -24,7 +24,7 @@ namespace FirstLight.Game.MonoComponent.Match
 		public bool VisualState => _indicator.activeSelf;
 		/// <inheritdoc />
 		public IndicatorVfxId IndicatorVfxId => IndicatorVfxId.Radial;
-		
+
 		private void Awake()
 		{
 			_indicator.SetActive(_initiallyEnabled);
@@ -47,16 +47,16 @@ namespace FirstLight.Game.MonoComponent.Match
 		public void SetVisualProperties(float size, float minRange, float maxRange)
 		{
 			var cacheTransform = transform;
-			
+
 			_maxRange = maxRange;
 			cacheTransform.localScale = new Vector3(size, cacheTransform.localScale.y, size);
 		}
 
 		/// <inheritdoc />
-		public void Init(EntityView playerEntityView)
+		public void Init(QuantumEntityView playerEntityView)
 		{
 			_playerTransform = playerEntityView.transform;
-			
+
 			transform.SetParent(_playerTransform);
 		}
 
@@ -64,17 +64,17 @@ namespace FirstLight.Game.MonoComponent.Match
 		public void SetTransformState(Vector2 direction)
 		{
 			var move = direction * _maxRange;
-			
+
 			_position.x = move.x;
 			_position.z = move.y;
 		}
-		
+
 		/// <inheritdoc />
 		public void SetColor(Color c)
 		{
 			_indicator.GetComponent<MeshRenderer>().material.SetColor(_color, c);
 		}
-		
+
 		/// <inheritdoc />
 		public void ResetColor()
 		{

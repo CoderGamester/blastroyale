@@ -1,3 +1,4 @@
+using GameLovers.Services.Commands;
 using Cysharp.Threading.Tasks;
 using FirstLight.Game.Ids;
 using FirstLight.Game.Logic;
@@ -7,7 +8,7 @@ using FirstLight.Server.SDK.Modules.Commands;
 namespace FirstLight.Game.Commands
 {
 	/// <summary>
-	/// Scraps an Non-NFT item and awards the player resources 
+	/// Scraps an equipment item and awards the player resources
 	/// </summary>
 	public struct ScrapItemCommand : IGameCommand
 	{
@@ -24,7 +25,7 @@ namespace FirstLight.Game.Commands
 			ctx.Logic.UniqueIdLogic().MarkIdSeen(Item.Id);
 
 			ctx.Logic.CurrencyLogic().AddCurrency(reward.Key, reward.Value);
-			ctx.Services.MessageBrokerService().Publish(new CurrencyChangedMessage
+			ctx.Services.MessageBrokerService().PublishSafe(new CurrencyChangedMessage
 			{
 				Id = reward.Key,
 				Change = (int) reward.Value,
@@ -32,7 +33,7 @@ namespace FirstLight.Game.Commands
 				NewValue = ctx.Logic.CurrencyLogic().GetCurrencyAmount(reward.Key)
 			});
 
-			ctx.Services.MessageBrokerService().Publish(new ItemScrappedMessage
+			ctx.Services.MessageBrokerService().PublishSafe(new ItemScrappedMessage
 			{
 				Id = Item,
 				GameId = info.Equipment.GameId,

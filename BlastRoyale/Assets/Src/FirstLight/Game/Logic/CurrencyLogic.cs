@@ -1,3 +1,6 @@
+using IDataProvider = FirstLight.Server.SDK.Models.IDataProvider;
+using FirstLight.Game.Utils;
+using GameLovers.GameData;
 using FirstLight.Game.Data;
 using FirstLight.Game.Logic.RPC;
 using FirstLight.Server.SDK.Models;
@@ -26,7 +29,7 @@ namespace FirstLight.Game.Logic
 	public interface ICurrencyLogic : ICurrencyDataProvider
 	{
 		/// <summary>
-		/// Adds the given <paramref name="amount"/> to the current <paramref name="currency"/> wallet amount
+		/// Adds the given <paramref name="amount"/> to the current <paramref name="currency"/> balance amount
 		/// </summary>
 		/// <exception cref="LogicException">
 		/// Thrown when the given <paramref name="currency"/> is not part of the <seealso cref="GameIdGroup.Currency"/> group
@@ -34,11 +37,11 @@ namespace FirstLight.Game.Logic
 		void AddCurrency(GameId currency, ulong amount);
 
 		/// <summary>
-		/// Deducts the given <paramref name="amount"/> from the current <paramref name="currency"/> wallet amount
+		/// Deducts the given <paramref name="amount"/> from the current <paramref name="currency"/> balance amount
 		/// </summary>
 		/// <exception cref="LogicException">
 		/// Thrown when the given <paramref name="currency"/> is not part of the <seealso cref="GameIdGroup.Currency"/> group
-		/// or if the given <paramref name="amount"/> is higher than the current amount in the player's wallet
+		/// or if the given <paramref name="amount"/> is higher than the current amount in the player's balance
 		/// </exception>
 		void DeductCurrency(GameId currency, ulong amount);
 	}
@@ -46,7 +49,7 @@ namespace FirstLight.Game.Logic
 	/// <inheritdoc cref="ICurrencyLogic"/>
 	public class CurrencyLogic : AbstractBaseLogic<PlayerData>, ICurrencyLogic, IGameLogicInitializer
 	{
-		private IObservableDictionary<GameId, ulong> _currencies;
+		private ObservableDictionary<GameId, ulong> _currencies;
 
 		/// <inheritdoc />
 		public IObservableDictionaryReader<GameId, ulong> Currencies => _currencies;
@@ -59,8 +62,8 @@ namespace FirstLight.Game.Logic
 		public void Init()
 		{
 			var defaultValues = new PlayerData().Currencies;
-			
-			_currencies = new ObservableDictionary<GameId, ulong>(Data.Currencies);
+
+			_currencies = new ObservableDictionary<GameId, ulong>(Data.Currencies) {ObservableUpdateFlag = ObservableUpdateFlag.Both};
 
 			foreach (var pair in defaultValues)
 			{
@@ -74,13 +77,11 @@ namespace FirstLight.Game.Logic
 		public void ReInit()
 		{
 			var defaultValues = new PlayerData().Currencies;
-			
+
 			{
-				var listeners = _currencies.GetObservers();
-				_currencies = new ObservableDictionary<GameId, ulong>(Data.Currencies);
-				_currencies.AddObservers(listeners);
+				_currencies.Rebind(Data.Currencies);
 			}
-			
+
 			foreach (var pair in defaultValues)
 			{
 				if (!_currencies.ContainsKey(pair.Key))
@@ -88,8 +89,8 @@ namespace FirstLight.Game.Logic
 					_currencies.Add(pair.Key, pair.Value);
 				}
 			}
-			
-			_currencies.InvokeUpdate();
+
+			_currencies.NotifyAll();
 		}
 
 		/// <inheritdoc />

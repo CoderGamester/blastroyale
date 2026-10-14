@@ -180,7 +180,7 @@ namespace FirstLight.Tests.EditorMode
 			};
 			var args = new FrameContext.Args
 			{
-				AssetDatabase = UnityDB.DefaultResourceManager.CreateAssetDatabase(),
+				ResourceManager = QuantumUnityDB.Global,
 				AssetSerializer = null,
 				CommandSerializer = null,
 				HeapConfig = Heap.Config.Default(4),

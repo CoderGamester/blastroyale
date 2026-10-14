@@ -50,7 +50,7 @@ namespace FirstLight.Game.MonoComponent.Match
 		public void Dispose()
 		{
 			QuantumEvent.UnsubscribeListener(this);
-			_gameServices.MessageBrokerService.Unsubscribe<EntityViewLoaded>(OnEntityViewLoad);
+			_gameServices.MessageBrokerService.Unsubscribe<EntityViewLoaded>(this);
 		}
 
 		public VisibilityCheckResult CheckSpectatorVisibility(EntityRef entity)
@@ -211,7 +211,7 @@ namespace FirstLight.Game.MonoComponent.Match
 				}
 			}
 
-			_gameServices.MessageBrokerService.Publish(new LocalPlayerEntityVisibilityUpdate()
+			_gameServices.MessageBrokerService.PublishSafe(new LocalPlayerEntityVisibilityUpdate()
 			{
 				Entity = towardsEntity,
 				CanSee = visibility.CanSee

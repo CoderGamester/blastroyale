@@ -1,3 +1,5 @@
+using IConfigsProvider = FirstLight.Server.SDK.Modules.GameConfiguration.IConfigsProvider;
+using GameLovers.GameData;
 using System;
 using FirstLight.Game.Commands;
 using FirstLight.Game.Configs;

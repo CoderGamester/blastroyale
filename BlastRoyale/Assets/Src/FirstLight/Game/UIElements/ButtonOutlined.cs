@@ -5,9 +5,10 @@ using UnityEngine.UIElements;
 namespace FirstLight.Game.UIElements
 {
 	/// <summary>
-	/// A button that contains a outlined label 
+	/// A button that contains a outlined label
 	/// </summary>
-	public class ButtonOutlined : LabelOutlined
+	[UxmlElement]
+	public partial class ButtonOutlined : LabelOutlined
 	{
 		private Clickable m_Clickable;
 
@@ -42,7 +43,6 @@ namespace FirstLight.Game.UIElements
 			}
 		}
 
-		[Obsolete("Do not use default constructor")]
 		public ButtonOutlined()
 		{
 			AddToClassList("button-outlined");
@@ -59,8 +59,5 @@ namespace FirstLight.Game.UIElements
 			tabIndex = 0;
 		}
 
-		public new class UxmlFactory : UxmlFactory<ButtonOutlined, UxmlTraits>
-		{
-		}
 	}
 }

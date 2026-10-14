@@ -1,0 +1,17 @@
+asset QuantumGameConfigs;
+asset QuantumMapConfigs;
+asset QuantumWeaponConfigs;
+asset QuantumBotConfigs;
+asset QuantumBotDifficultyConfigs;
+asset QuantumConsumableConfigs;
+asset QuantumChestConfigs;
+asset QuantumDestructibleConfigs;
+asset QuantumSpecialConfigs;
+asset QuantumAssetConfigs;
+asset QuantumShrinkingCircleConfigs;
+asset QuantumEquipmentStatConfigs;
+asset QuantumBaseEquipmentStatConfigs;
+asset QuantumEquipmentMaterialStatConfigs;
+asset QuantumStatConfigs;
+asset QuantumGameModeConfigs;
+asset QuantumReviveConfigs;

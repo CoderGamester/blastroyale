@@ -1,3 +1,4 @@
+using MainInstaller = FirstLight.Game.Utils.MainInstaller;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,8 +10,8 @@ using FirstLight.Game.Services;
 using FirstLight.Game.UIElements;
 using FirstLight.Game.Utils;
 using FirstLight.Game.Utils.UCSExtensions;
-using FirstLight.UIService;
-using I2.Loc;
+using FirstLight.Game.UI;
+using FirstLight.Game.Localization;
 using Quantum;
 using QuickEye.UIToolkit;
 using Unity.Services.Authentication;
@@ -26,9 +27,9 @@ namespace FirstLight.Game.Views.UITK
 
 		private const string BOT_SLIDER_HIDDEN = "bots-slider--hidden";
 		private const string HORIZONTAL_SCROLL_PICKER_HIDDEN = "horizontal-scroll-picker--hidden";
-		
+
 		private readonly AsyncBufferedQueue _updateQueue = new (TimeSpan.FromSeconds(0.01f), true);
-		
+
 		[Q("unity-tabs-container")] private VisualElement _tabsContainer;
 		[Q("Tabs")] private TabbedView _tabs;
 		[Q("Title")] private LocalizedLabel _bigTitle;
@@ -69,7 +70,7 @@ namespace FirstLight.Game.Views.UITK
 		private bool _mutatorsTurnedOn;
 		private bool _weaponFilterTurnedOn;
 		private HashSet<string> _spectatorsBefore = new ();
-			
+
 		protected override void Attached()
 		{
 			_services = MainInstaller.ResolveServices();
@@ -92,7 +93,7 @@ namespace FirstLight.Game.Views.UITK
 			_privateRoomToggle.RegisterValueChangedCallback(v => MatchSettings.PrivateRoom = v.newValue);
 			_showCreatorNameToggle.RegisterValueChangedCallback(v => MatchSettings.ShowCreatorName = v.newValue);
 			_spectatorToggle.RegisterCallback<PointerDownEvent>(e => OnSpectatorToggleClicked(e).Forget(), TrickleDown.TrickleDown);
-			
+
 			_botDifficultySlider.Q("unity-drag-container").RegisterCallback<PointerUpEvent, MatchSettingsView>((e, arg) =>
 			{
 				arg.MatchSettings.BotDifficulty = _botDifficultySlider.value;
@@ -108,10 +109,10 @@ namespace FirstLight.Game.Views.UITK
 		private async UniTaskVoid OnSpectatorToggleClicked(PointerDownEvent e)
 		{
 			if (!_spectatorToggle.enabledSelf) return;
-			
-			e.PreventDefault();
+
 			e.StopImmediatePropagation();
-			
+			_spectatorToggle.focusController?.IgnoreEvent(e);
+
 			var wasEnabled = _spectatorToggle.enabledSelf;
 			_spectatorToggle.SetEnabled(false);
 			SpectatorChanged(!_spectatorToggle.value);
@@ -196,9 +197,9 @@ namespace FirstLight.Game.Views.UITK
 			{
 				var specs = spectators.Select(s => s.Id).ToHashSet();
 				var newSpectators = specs.Except(_spectatorsBefore).ToHashSet();
-		
+
 				_spectatorsScrollView.Clear();
-			
+
 				foreach (var player in spectators)
 				{
 					var isHost = player.Id == _services.FLLobbyService.CurrentMatchLobby.HostId;
@@ -219,7 +220,7 @@ namespace FirstLight.Game.Views.UITK
 							buttons.Add(new PlayerContextButton(PlayerButtonContextStyle.Red, ScriptLocalization.UITCustomGames.option_kick,
 								() => _services.FLLobbyService.KickPlayerFromMatch(player.Id).Forget()));
 						}
-				
+
 						_services.GameSocialService.OpenPlayerOptions(playerElement, Presenter.Root, player.Id, player.GetPlayerName(), new PlayerContextSettings()
 						{
 							ExtraButtons = buttons,
@@ -230,7 +231,7 @@ namespace FirstLight.Game.Views.UITK
 						playerElement.AnimatePing(1.1f);
 					}
 				}
-				
+
 				if (spectators.Any(s => s.IsLocal()))
 				{
 					FLog.Verbose("Local player is spectator");
@@ -271,7 +272,7 @@ namespace FirstLight.Game.Views.UITK
 				MatchSettings.MaxPlayers = val;
 				RefreshData(true);
 				PopupPresenter.ClosePopupScreen().Forget();
-				
+
 			}, ScriptTerms.UITCustomGames.max_players, ScriptTerms.UITCustomGames.max_players_desc, 2, 48, MatchSettings.MaxPlayers).Forget();
 		}
 

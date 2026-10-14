@@ -7,7 +7,8 @@ namespace FirstLight.Game.UIElements
 	/// <summary>
 	/// Displays an interactive Joystick. Joystick pointer events are captured from it's parent.
 	/// </summary>
-	public class JoystickElement : VisualElement
+	[UxmlElement]
+	public partial class JoystickElement : VisualElement
 	{
 		private const string UssBlock = "joystick";
 		private const string UssFree = UssBlock + "--free";
@@ -22,7 +23,7 @@ namespace FirstLight.Game.UIElements
 		private readonly VisualElement _stick;
 		private readonly VisualElement _directionHalo;
 		private Vector3 _initialPosition;
-		
+
 		public event Action<Vector2> OnMove;
 		public event Action<float> OnClick; // Float so that we can use it directly with the input system
 
@@ -73,7 +74,7 @@ namespace FirstLight.Game.UIElements
 
 		private void OnPointerDown(PointerDownEvent evt)
 		{
-			_initialPosition = transform.position;
+			_initialPosition = resolvedStyle.translate;
 			parent.CapturePointer(evt.pointerId);
 
 			AddToClassList(UssFree);
@@ -82,7 +83,7 @@ namespace FirstLight.Game.UIElements
 			var parentPosition = parent.WorldToLocal(evt.position);
 			var offsetPosition = parentPosition - new Vector2(worldBound.width / 2f, worldBound.height / 2f);
 
-			transform.position = offsetPosition;
+			style.translate = new Translate(offsetPosition.x, offsetPosition.y);
 
 			OnClick?.Invoke(1f);
 		}
@@ -94,12 +95,12 @@ namespace FirstLight.Game.UIElements
 			var parentPosition = parent.WorldToLocal(evt.position);
 			var offsetPosition = parentPosition - new Vector2(worldBound.width / 2f, worldBound.height / 2f);
 
-			var stickPosition = offsetPosition - (Vector2) transform.position;
+			var stickPosition = offsetPosition - (Vector2) resolvedStyle.translate;
 			var stickPositionClamped = Vector2.ClampMagnitude(stickPosition, worldBound.width / 2f);
 			var stickPositionClampedNormalized = stickPositionClamped.normalized;
 
-			_stick.transform.position = stickPositionClamped;
-			_directionHalo.transform.rotation = VectorToRotation(stickPositionClampedNormalized);
+			_stick.style.translate = new Translate(stickPositionClamped.x, stickPositionClamped.y);
+			_directionHalo.style.rotate = VectorToRotation(stickPositionClampedNormalized);
 
 			_directionHalo.style.opacity = stickPositionClamped.magnitude / (worldBound.width / 2f);
 
@@ -114,15 +115,15 @@ namespace FirstLight.Game.UIElements
 			RemoveFromClassList(UssFree);
 			_stick.RemoveFromClassList(UssStickFree);
 
-			transform.position = _initialPosition;
-			_stick.transform.position = Vector3.zero;
+			style.translate = new Translate(_initialPosition.x, _initialPosition.y, _initialPosition.z);
+			_stick.style.translate = new Translate(0, 0);
 			_directionHalo.style.opacity = 0f;
 
 			OnMove?.Invoke(Vector3.zero);
 			OnClick?.Invoke(0f);
 		}
 
-		private static Quaternion VectorToRotation(Vector2 direction)
+		private static Rotate VectorToRotation(Vector2 direction)
 		{
 			var angleInRadians = Mathf.Atan2(direction.y, direction.x);
 			var angleInDegrees = angleInRadians * Mathf.Rad2Deg;
@@ -133,15 +134,8 @@ namespace FirstLight.Game.UIElements
 				angleInDegrees += 360;
 			}
 
-			return Quaternion.Euler(0, 0, angleInDegrees + 90);
+			return new Rotate(Angle.Degrees(angleInDegrees + 90));
 		}
 
-		public new class UxmlFactory : UxmlFactory<JoystickElement, UxmlTraits>
-		{
-		}
-
-		public new class UxmlTraits : VisualElement.UxmlTraits
-		{
-		}
 	}
 }

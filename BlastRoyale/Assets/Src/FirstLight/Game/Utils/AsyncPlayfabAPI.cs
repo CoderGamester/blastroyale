@@ -5,7 +5,6 @@ using System.Threading.Tasks;
 using Cysharp.Threading.Tasks;
 using PlayFab;
 using PlayFab.ClientModels;
-using PlayFab.CloudScriptModels;
 using PlayFab.MultiplayerModels;
 
 namespace FirstLight.Game.Utils
@@ -51,31 +50,23 @@ namespace FirstLight.Game.Utils
 		private static Func<UpdateUserTitleDisplayNameRequest, UniTask<UpdateUserTitleDisplayNameResult>> UpdateUserTitleDisplayNameFunc { get; }
 			= Wrap<UpdateUserTitleDisplayNameRequest, UpdateUserTitleDisplayNameResult>(PlayFabClientAPI.UpdateUserTitleDisplayName);
 
-		private static Func<ExecuteFunctionRequest, UniTask<ExecuteFunctionResult>> ExecuteFunctionFunc { get; }
-			= Wrap<ExecuteFunctionRequest, ExecuteFunctionResult>(PlayFabCloudScriptAPI.ExecuteFunction);
-		
 		private static Func<GetUserDataRequest, UniTask<GetUserDataResult>> GetUserDataFunc { get; }
 			= Wrap<GetUserDataRequest, GetUserDataResult>(PlayFabClientAPI.GetUserData);
-			
+
 		private static Func<UpdateUserDataRequest, UniTask<UpdateUserDataResult>> UpdateUserDataFunc { get; }
 			= Wrap<UpdateUserDataRequest, UpdateUserDataResult>(PlayFabClientAPI.UpdateUserData);
-		
+
 		private static Func<WriteClientPlayerEventRequest, UniTask<WriteEventResponse>> WritePlaystreamAnalyticsEventFunc { get; }
 			= Wrap<WriteClientPlayerEventRequest, WriteEventResponse>(PlayFabClientAPI.WritePlayerEvent);
-		
+
 		public static UniTask<WriteEventResponse> WritePlaystreamAnalyticsEvent(WriteClientPlayerEventRequest req)
 		{
 			return WritePlaystreamAnalyticsEventFunc(req);
 		}
-		
+
 		public static UniTask<UpdateUserTitleDisplayNameResult> UpdateUserTitleDisplayName(UpdateUserTitleDisplayNameRequest req)
 		{
 			return UpdateUserTitleDisplayNameFunc(req);
-		}
-
-		public static UniTask<ExecuteFunctionResult> ExecuteFunction(ExecuteFunctionRequest req)
-		{
-			return ExecuteFunctionFunc(req);
 		}
 
 		/// <inheritdoc cref="PlayFabClientAPI.GetCatalogItems"/>
@@ -223,13 +214,13 @@ namespace FirstLight.Game.Utils
 			{
 				return GetUserReadOnlyDataFunc(req);
 			}
-			
+
 			public static UniTask<GetUserDataResult> GetUserData(
 				GetUserDataRequest req)
 			{
 				return GetUserDataFunc(req);
 			}
-			
+
 			public static UniTask<UpdateUserDataResult> UpdateUserData(
 				UpdateUserDataRequest req)
 			{

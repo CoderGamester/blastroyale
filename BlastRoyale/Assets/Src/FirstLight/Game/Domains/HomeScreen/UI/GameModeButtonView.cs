@@ -1,4 +1,5 @@
-﻿using System;
+using MainInstaller = FirstLight.Game.Utils.MainInstaller;
+using System;
 using System.Linq;
 using FirstLight.FLogger;
 using FirstLight.Game.Configs.Remote;
@@ -6,7 +7,7 @@ using FirstLight.Game.Services;
 using FirstLight.Game.UIElements;
 using FirstLight.Game.Utils;
 using FirstLight.Game.Utils.UCSExtensions;
-using FirstLight.UIService;
+using FirstLight.Game.UI;
 using Unity.Services.Lobbies;
 using UnityEngine.UIElements;
 

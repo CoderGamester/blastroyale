@@ -1,7 +1,7 @@
+using FirstLight.Inspector;
 using System;
 using System.Collections.Generic;
 using Quantum;
-using Sirenix.OdinInspector;
 using UnityEngine;
 using UnityEngine.Serialization;
 
@@ -14,10 +14,10 @@ public class AnimatedBackground : MonoBehaviour
 	[Serializable]
 	public class AnimatedBackgroundColor
 	{
-		[SerializeField, Required] public Color Bottom;
-		[SerializeField, Required] public Color Middle;
-		[SerializeField, Required] public Color Top;
-		[SerializeField, Required] public Color Pattern;
+		[SerializeField] public Color Bottom;
+		[SerializeField] public Color Middle;
+		[SerializeField] public Color Top;
+		[SerializeField] public Color Pattern;
 	}
 
 	private static readonly int _trigerredColorChange = Shader.PropertyToID("_TrigerredColorChange");
@@ -32,24 +32,24 @@ public class AnimatedBackground : MonoBehaviour
 	private static readonly int _colorTargetBottomPID = Shader.PropertyToID("_ColorBottomTarget");
 	private static readonly int _colorTargetPatternPID = Shader.PropertyToID("_ColorPatternTarget");
 
-	[SerializeField, Required] private Renderer _quadRenderer;
+	[SerializeField, InspectorField(Required = true)] private Renderer _quadRenderer;
 
-	[SerializeField, Required] private AnimatedBackgroundColor _default;
-	[SerializeField, Required] private AnimatedBackgroundColor _dimmedColor;
+	[SerializeField, InspectorField(Required = true)] private AnimatedBackgroundColor _default;
+	[SerializeField, InspectorField(Required = true)] private AnimatedBackgroundColor _dimmedColor;
 
-	[SerializeField, Required, FoldoutGroup("Rarity Colors")]
+	[SerializeField, InspectorField(Required = true), UnityEngine.Header("Rarity Colors")]
 	private AnimatedBackgroundColor _common;
 
-	[SerializeField, Required, FoldoutGroup("Rarity Colors")]
+	[SerializeField, InspectorField(Required = true)]
 	private AnimatedBackgroundColor _uncommon;
 
-	[SerializeField, Required, FoldoutGroup("Rarity Colors")]
+	[SerializeField, InspectorField(Required = true)]
 	private AnimatedBackgroundColor _rare;
 
-	[SerializeField, Required, FoldoutGroup("Rarity Colors")]
+	[SerializeField, InspectorField(Required = true)]
 	private AnimatedBackgroundColor _epic;
 
-	[SerializeField, Required, FoldoutGroup("Rarity Colors", expanded: true)]
+	[SerializeField, InspectorField(Required = true)]
 	private AnimatedBackgroundColor _legendary;
 
 	private Dictionary<EquipmentRarity, AnimatedBackgroundColor> _colorMap;
@@ -119,14 +119,14 @@ public class AnimatedBackground : MonoBehaviour
 	private bool _usingDimmed = false;
 #pragma warning restore CS0414 // Field is assigned but its value is never used
 
-	[Button("Test Default Color")]
+	[InspectorAction("Test Default Color")]
 	private void SetDefaultButton()
 	{
 		_usingDimmed = false;
 		SetDefault();
 	}
 
-	[Button("Test Dimmed Color")]
+	[InspectorAction("Test Dimmed Color")]
 	private void SetDimmedButton()
 	{
 		_usingDimmed = true;

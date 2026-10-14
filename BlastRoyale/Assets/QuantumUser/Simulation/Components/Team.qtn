@@ -1,0 +1,25 @@
+synced event OnTeamPositionPing
+{
+    entity_ref Entity;
+    Int32 TeamId;
+    FPVector2 Position;
+    TeamPingType Type;
+}
+
+enum TeamPingType
+{
+    General,
+    Chest,
+    Player,
+    Equipment
+}
+
+component TeamMember {
+    int TeamId;
+    int TeamIndex;
+    byte Color;
+
+	// Cached team mates, to avoid looping all entities
+	[AllocateOnComponentAdded, FreeOnComponentRemoved]
+	hash_set<EntityRef> TeamMates;
+}

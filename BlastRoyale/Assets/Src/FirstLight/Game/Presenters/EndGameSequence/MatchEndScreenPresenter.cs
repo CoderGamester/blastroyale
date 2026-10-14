@@ -1,3 +1,5 @@
+using FirstLight.Inspector;
+using MainInstaller = FirstLight.Game.Utils.MainInstaller;
 using System;
 using System.Collections;
 using Cysharp.Threading.Tasks;
@@ -6,9 +8,8 @@ using FirstLight.Game.Services;
 using FirstLight.Game.UIElements;
 using FirstLight.Game.Utils;
 using FirstLight.UiService;
-using FirstLight.UIService;
+using FirstLight.Game.UI;
 using Quantum;
-using Sirenix.OdinInspector;
 using UnityEngine;
 using UnityEngine.Playables;
 using UnityEngine.UIElements;
@@ -25,8 +26,8 @@ namespace FirstLight.Game.Presenters
 			public Action OnTimeToLeave;
 		}
 
-		[SerializeField, Required] private PlayableDirector _winDirector;
-		[SerializeField, Required] private PlayableDirector _blastedDirector;
+		[SerializeField, InspectorField(Required = true)] private PlayableDirector _winDirector;
+		[SerializeField, InspectorField(Required = true)] private PlayableDirector _blastedDirector;
 
 		private VisualElement _matchEndTitle;
 		private VisualElement _blastedTitle;

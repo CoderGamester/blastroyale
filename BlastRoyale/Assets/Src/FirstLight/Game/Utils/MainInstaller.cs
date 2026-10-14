@@ -3,7 +3,7 @@ using Cysharp.Threading.Tasks;
 using FirstLight.FLogger;
 using FirstLight.Game.Logic;
 using FirstLight.Game.Services;
-using FirstLight.Services;
+using GameLovers.Services;
 
 namespace FirstLight.Game.Utils
 {
@@ -74,11 +74,6 @@ namespace FirstLight.Game.Utils
 		public static IMatchServices ResolveMatchServices()
 		{
 			return Resolve<IMatchServices>();
-		}
-
-		public static IWeb3Service ResolveWeb3()
-		{
-			return Resolve<IWeb3Service>();
 		}
 
 		/// <summary>

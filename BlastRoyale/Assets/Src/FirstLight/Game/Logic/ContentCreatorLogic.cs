@@ -1,4 +1,6 @@
-﻿using FirstLight.Game.Data;
+using IDataProvider = FirstLight.Server.SDK.Models.IDataProvider;
+using GameLovers.GameData;
+using FirstLight.Game.Data;
 using FirstLight.Server.SDK.Models;
 
 namespace FirstLight.Game.Logic
@@ -14,8 +16,8 @@ namespace FirstLight.Game.Logic
         /// </summary>
         IObservableFieldReader<string>SupportingCreatorCode { get;  }
     }
-    
-    
+
+
     /// <inheritidoc cref="IContentCreatorDataProvider" />
     public interface IContentCreatorLogic : IContentCreatorDataProvider
     {
@@ -25,35 +27,33 @@ namespace FirstLight.Game.Logic
         void UpdateCreatorSupport(string creatorCode);
     }
 
-    
+
     /// <inheritdoc cref="IContentCreatorLogic"/>
     public class ContentCreatorLogic : AbstractBaseLogic<ContentCreatorData>, IContentCreatorLogic, IGameLogicInitializer
     {
-        private IObservableField<string> _supportingCreatorCode;
+        private ObservableResolverField<string> _supportingCreatorCode;
 
         public IObservableFieldReader<string> SupportingCreatorCode => _supportingCreatorCode;
-        
+
         public ContentCreatorLogic(IGameLogic gameLogic, IDataProvider dataProvider) : base(gameLogic, dataProvider)
         {
         }
 
-        
+
         public void Init()
         {
             _supportingCreatorCode = new ObservableResolverField<string>(() => Data.SupportingCreatorCode, val => Data.SupportingCreatorCode = val);
         }
-        
+
         public void ReInit()
         {
             {
-                var listeners = _supportingCreatorCode.GetObservers();
-                _supportingCreatorCode = new ObservableResolverField<string>(() => Data.SupportingCreatorCode, val => Data.SupportingCreatorCode = val);
-                _supportingCreatorCode.AddObservers(listeners);
+                _supportingCreatorCode.Rebind(() => Data.SupportingCreatorCode, val => Data.SupportingCreatorCode = val);
             }
-            
+
             _supportingCreatorCode.InvokeUpdate();
         }
-        
+
         public void UpdateCreatorSupport(string creatorCode)
         {
             if (_supportingCreatorCode.Value.Equals(creatorCode)) {
@@ -63,8 +63,8 @@ namespace FirstLight.Game.Logic
             _supportingCreatorCode.Value = creatorCode;
         }
 
-        
 
-        
+
+
     }
 }

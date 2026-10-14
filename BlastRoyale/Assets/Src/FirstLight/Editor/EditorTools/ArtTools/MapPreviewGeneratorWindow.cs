@@ -1,8 +1,6 @@
 using System;
 using System.IO;
 using JetBrains.Annotations;
-using Sirenix.OdinInspector;
-using Sirenix.OdinInspector.Editor;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -13,27 +11,46 @@ namespace FirstLight.Editor.EditorTools.ArtTools
 	/// <summary>
 	/// Art tool to generate PNG image of map preview
 	/// </summary>
-	public class MapPreviewGeneratorWindow : OdinEditorWindow
+	public class MapPreviewGeneratorWindow : EditorWindow
 	{
-		[SerializeField, FolderPath(AbsolutePath = true, RequireExistingPath = true)]
-		private string _outputDirectory;
+		[SerializeField]
+		private string _outputDirectory = null;
 
-		[SerializeField, Required]
-		private GameObject _mapPreviewSetup;
-		
-		[SerializeField, Required]
-		private RenderTexture _renderTexture;
+		[SerializeField]
+		private GameObject _mapPreviewSetup = null;
+
+		[SerializeField]
+		private RenderTexture _renderTexture = null;
 
 		private Camera _camera;
-		
-		
+
+
 		[MenuItem("FLG/Art/Generators/Map Preview")]
 		private static void OpenWindow()
 		{
 			GetWindow<MapPreviewGeneratorWindow>("Map Preview Generator").Show();
 		}
-		
-		[Button, HideInEditorMode]
+
+		private void OnGUI()
+		{
+			using (new EditorGUILayout.HorizontalScope())
+			{
+				_outputDirectory = EditorGUILayout.TextField("Output Directory", _outputDirectory);
+				if (GUILayout.Button("Browse", GUILayout.Width(65)))
+				{
+					var path = EditorUtility.OpenFolderPanel("Map preview output", _outputDirectory, "");
+					if (!string.IsNullOrEmpty(path)) _outputDirectory = path;
+				}
+			}
+			_mapPreviewSetup = (GameObject) EditorGUILayout.ObjectField("Preview Setup", _mapPreviewSetup, typeof(GameObject), false);
+			_renderTexture = (RenderTexture) EditorGUILayout.ObjectField("Render Texture", _renderTexture, typeof(RenderTexture), false);
+			if (!Application.isPlaying) EditorGUILayout.HelpBox("Enter Play Mode to prepare and export a snapshot.", MessageType.Info);
+			using (new EditorGUI.DisabledScope(!Application.isPlaying || _mapPreviewSetup == null))
+				if (GUILayout.Button("Prepare Snapshot")) PrepareSnapshot();
+			using (new EditorGUI.DisabledScope(!Application.isPlaying || _camera == null || _renderTexture == null || !Directory.Exists(_outputDirectory)))
+				if (GUILayout.Button("Export Snapshot Image")) ExportSnapshotImage();
+		}
+
 		private void PrepareSnapshot()
 		{
 			if (_camera != null)
@@ -44,27 +61,31 @@ namespace FirstLight.Editor.EditorTools.ArtTools
 
 			var go = GameObject.Instantiate(_mapPreviewSetup);
 			_camera = go.GetComponentInChildren<Camera>();
+			if (_camera == null)
+			{
+				Destroy(go);
+				Debug.LogError("Map preview setup requires a Camera in its hierarchy.");
+			}
 		}
 
-		[Button, HideInEditorMode]
 		private void ExportSnapshotImage()
 		{
 			var bounds = CalculateAllGeometryBounds();
-			
+
 			float cameraSize = Mathf.Max(bounds.size.x, bounds.size.y, bounds.size.z) * 0.5f;
 			_camera.orthographicSize = cameraSize;
-			
-			Vector3 boundsCenter = bounds.center; 
-			float distance = CalculateCameraDistance(bounds, _camera, 1f); 
+
+			Vector3 boundsCenter = bounds.center;
+			float distance = CalculateCameraDistance(bounds, _camera, 1f);
 			Vector3 cameraPosition = boundsCenter - _camera.transform.forward * distance;
 
-			_camera.transform.position = cameraPosition.x * _camera.transform.right 
+			_camera.transform.position = cameraPosition.x * _camera.transform.right
 				+ cameraPosition.z *  _camera.transform.up
 				+ cameraPosition.y * -_camera.transform.forward;
-			
+
 			WriteRenderTextureToDisk(_camera, SceneManager.GetActiveScene().name);
 		}
-		
+
 		private float CalculateCameraDistance(Bounds bounds, Camera camera, float zoomFactor)
 		{
 			float boundsSize = Mathf.Max(bounds.size.x, bounds.size.y, bounds.size.z);
@@ -73,8 +94,8 @@ namespace FirstLight.Editor.EditorTools.ArtTools
 
 		private void HideSceneGeometry()
 		{
-			GameObject[] allObjects = FindObjectsOfType<GameObject>();
-			
+			GameObject[] allObjects = FindObjectsByType<GameObject>(FindObjectsSortMode.None);
+
 			foreach (GameObject obj in allObjects)
 			{
 				Renderer renderer = obj.GetComponent<Renderer>();
@@ -102,8 +123,8 @@ namespace FirstLight.Editor.EditorTools.ArtTools
 		{
 			var sceneBounds = new Bounds();
 			var foundBounds = false;
-			GameObject[] allObjects = GameObject.FindGameObjectsWithTag("MapPreviewObject"); 
-			
+			GameObject[] allObjects = GameObject.FindGameObjectsWithTag("MapPreviewObject");
+
 			foreach (GameObject obj in allObjects)
 			{
 				Renderer renderer = obj.GetComponent<Renderer>();
@@ -112,26 +133,26 @@ namespace FirstLight.Editor.EditorTools.ArtTools
 					if (!foundBounds)
 					{
 						sceneBounds = renderer.bounds;
-						
+
 						foundBounds = true;
 					}
 					else
 					{
-						sceneBounds.Encapsulate(renderer.bounds);	
+						sceneBounds.Encapsulate(renderer.bounds);
 					}
 				}
 			}
 
 			return sceneBounds;
 		}
-		
-		
+
+
 		[UsedImplicitly]
 		private bool IsEnvironmentReady()
 		{
 			return Application.isPlaying;
 		}
-		
+
 		private void WriteRenderTextureToDisk(Camera camera, string filename, bool crop = false)
 		{
 			var ext = ".png";
@@ -139,13 +160,13 @@ namespace FirstLight.Editor.EditorTools.ArtTools
 
 			HideSceneGeometry();
 			ShowSceneGeometry();
-			
+
 			RenderTexture.active = _renderTexture;
 			camera.targetTexture = _renderTexture;
 			RenderTexture.active = _renderTexture;
 
 			camera.Render();
-			
+
 			var width = _renderTexture.width;
 			var height = _renderTexture.height;
 

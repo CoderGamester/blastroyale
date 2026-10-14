@@ -1,8 +1,9 @@
+using GameLovers.GameData;
 using System.Collections.Generic;
 using FirstLight.Game.Ids;
 using FirstLight.Game.Infos;
 using FirstLight.Game.MonoComponent.EntityViews;
-using FirstLight.SDK.Services;
+using GameLovers.Services;
 using Quantum;
 using UnityEngine;
 
@@ -14,13 +15,13 @@ namespace FirstLight.Game.Messages
 		public GameObject Item;
 		public GameId Id;
 	}
-	
+
 	public struct ItemConvertedToBlastBuckMessage : IMessage
 	{
 		public List<Equipment> Items;
 		public int BlastBucks;
 	}
-	
+
 	public struct ItemScrappedMessage : IMessage
 	{
 		public UniqueId Id;
@@ -29,13 +30,13 @@ namespace FirstLight.Game.Messages
 		public float Durability;
 		public Pair<GameId, uint> Reward;
 	}
-	
+
 	public struct EquipmentInstantiatedMessage : IMessage
 	{
 		public GameObject Object;
 		public Equipment Equipment;
 	}
-	
+
 	public struct ItemUpgradedMessage : IMessage
 	{
 		public UniqueId Id;

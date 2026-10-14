@@ -9,7 +9,8 @@ namespace FirstLight.Game.UIElements
 	/// <summary>
 	/// A single item in the summary part of the RewardsScreen
 	/// </summary>
-	public class RewardSummaryItemElement : VisualElement
+	[UxmlElement]
+	public partial class RewardSummaryItemElement : VisualElement
 	{
 		private const string USS_BLOCK = "reward-summary-item";
 		private const string USS_ICON = USS_BLOCK + "__icon";
@@ -19,7 +20,7 @@ namespace FirstLight.Game.UIElements
 
 		protected readonly Label _label;
 		protected readonly VisualElement _icon;
-		
+
 		public RewardSummaryItemElement()
 		{
 			AddToClassList(USS_BLOCK);
@@ -41,8 +42,5 @@ namespace FirstLight.Game.UIElements
 			return this;
 		}
 
-		public new class UxmlFactory : UxmlFactory<RewardSummaryItemElement, UxmlTraits>
-		{
-		}
 	}
 }

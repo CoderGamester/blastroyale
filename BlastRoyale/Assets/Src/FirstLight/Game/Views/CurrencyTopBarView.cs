@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using FirstLight.Game.UIElements;
 using FirstLight.Game.Utils;
 using FirstLight.Game.Views.UITK;
-using FirstLight.UIService;
+using FirstLight.Game.UI;
 using Quantum;
 using UnityEngine.UIElements;
 
@@ -39,17 +39,6 @@ namespace FirstLight.Game.Views
 				count++;
 			}
 
-			var cryptoElement = new CryptoCurrenciesDisplayElement();
-			cryptoElement.SetMainCurrency(GameId.NOOB);
-			var cryptoView = new CryptoCurrenciesDisplayView()
-			{
-				ShowOnly = showOnly
-			};
-			cryptoElement.SetAnimationOrigin(animationOrigin);
-			cryptoElement.AddClass(DefaultClasses);
-			cryptoElement.AddClass("anim-delay-" + count);
-			Element.Add(cryptoElement);
-			Presenter.AddView(cryptoElement, cryptoView);
 		}
 	}
 }

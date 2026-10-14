@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using UnityEngine;
 using UnityEngine.UIElements;
 using Color = UnityEngine.Color;
@@ -9,7 +9,8 @@ namespace FirstLight.Game.UIElements
 	/// Displays the might graphic.
 	/// TODO: Borders don't work so great
 	/// </summary>
-	public class AngledContainerElement : ImageButton
+	[UxmlElement]
+	public partial class AngledContainerElement : ImageButton
 	{
 		private static readonly CustomStyleProperty<Color> S_FillColor = new ("--fill-color");
 		private static readonly CustomStyleProperty<Color> S_BorderColor = new ("--border-color");
@@ -30,7 +31,6 @@ namespace FirstLight.Game.UIElements
 		private Color _fillColor;
 #pragma warning restore CS0414 // Field is assigned but its value is never used
 		private VectorImage cachedImage;
-		private VisualElement _contentContainer;
 		private readonly VisualElement _background;
 		private readonly VisualElement _mask;
 		private Vector2[] _vertexes = null;
@@ -312,8 +312,5 @@ namespace FirstLight.Game.UIElements
 			return new Rect(min, max - min);
 		}
 
-		public new class UxmlFactory : UxmlFactory<AngledContainerElement, UxmlTraits>
-		{
-		}
 	}
 }

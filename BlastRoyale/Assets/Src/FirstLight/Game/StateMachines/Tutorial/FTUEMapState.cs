@@ -1,3 +1,4 @@
+using MainInstaller = FirstLight.Game.Utils.MainInstaller;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,8 +13,8 @@ using FirstLight.Game.Presenters;
 using FirstLight.Game.Services;
 using FirstLight.Game.Services.Tutorial;
 using FirstLight.Game.Utils;
-using FirstLight.Statechart;
-using I2.Loc;
+using GameLovers.StatechartMachine;
+using FirstLight.Game.Localization;
 using Photon.Deterministic;
 using Quantum;
 using Quantum.Commands;
@@ -219,7 +220,7 @@ namespace FirstLight.Game.StateMachines
 			_tutorialOverlay.HideGuideHand();
 		}
 
-		private EntityView GetLocalPlayerView()
+		private QuantumEntityView GetLocalPlayerView()
 		{
 			_matchServices.EntityViewUpdaterService.TryGetView(_matchServices.SpectateService.GetSpectatedEntity(), out var entityView);
 			return entityView;
@@ -421,7 +422,7 @@ namespace FirstLight.Game.StateMachines
 			{
 				Completed = AreTheFirstBotsDead
 			};
-			_services.MessageBrokerService.Publish(new AdvancedFirstMatchMessage
+			_services.MessageBrokerService.PublishSafe(new AdvancedFirstMatchMessage
 			{
 				State = TutorialFirstMatchStates.EnterKill2Bots
 			});
@@ -501,7 +502,7 @@ namespace FirstLight.Game.StateMachines
 			{
 				Completed = IsFinalBotDead
 			};
-			_services.MessageBrokerService.Publish(new AdvancedFirstMatchMessage
+			_services.MessageBrokerService.PublishSafe(new AdvancedFirstMatchMessage
 			{
 				State = TutorialFirstMatchStates.EnterKillFinalBot
 			});

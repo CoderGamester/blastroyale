@@ -1,4 +1,4 @@
-using Sirenix.OdinInspector;
+using FirstLight.Inspector;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
@@ -9,8 +9,8 @@ namespace FirstLight.Game.MonoComponent.MainMenu
 	/// </summary>
 	public class MainMenuVfxMonoComponent : MonoBehaviour, IPointerClickHandler
 	{
-		[SerializeField, Required] private ParticleSystem _particleSystem;
-		
+		[SerializeField, InspectorField(Required = true)] private ParticleSystem _particleSystem;
+
 		public void OnPointerClick(PointerEventData eventData)
 		{
 			if (eventData.dragging)

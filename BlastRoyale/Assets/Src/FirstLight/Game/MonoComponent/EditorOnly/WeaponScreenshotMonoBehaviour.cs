@@ -1,4 +1,5 @@
-﻿using System.Collections;
+using GameLovers.GameData;
+using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -18,7 +19,7 @@ namespace FirstLight.Editor.EditorTools.Skins
 		private Camera _camera;
 		private Vector3 _originalCameraPos;
 		private Quaternion _originalCameraRot;
-		
+
 		private RenderTexture _rt;
 
 		private async void Start()
@@ -68,7 +69,7 @@ namespace FirstLight.Editor.EditorTools.Skins
 				yield return new WaitForSeconds(0.1f);
 				FocusOn(_camera, obj, 1.1f);
 				var sprite = TakeScreenshot(screenShotFile);
-				
+
 				_camera.transform.SetPositionAndRotation(_originalCameraPos, _originalCameraRot);
 				var currentEntry = config.Config.MeleeWeapons.Get(current.Key);
 				if (currentEntry.Sprite == null || currentEntry.Sprite.editorAsset == null)

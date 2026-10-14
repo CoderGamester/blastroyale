@@ -132,7 +132,7 @@ namespace FirstLight.Game.StateMachines
 		private void UnloadSimulation()
 		{
 			FLog.Verbose("Unloading Simulation");
-			if (QuantumRunner.Default != null && !QuantumRunner.Default.IsDestroyed())
+			if (QuantumRunner.Default != null && QuantumRunner.Default.UnityObject != null)
 			{
 				QuantumRunner.Default.Shutdown();
 			}
@@ -186,13 +186,14 @@ namespace FirstLight.Game.StateMachines
 		private void OnGameStart(CallbackGameStarted callback)
 		{
 			FLog.Verbose("Game Start");
+			SetPlayerMatchData(callback.Game);
 			// paused on Start means waiting for Snapshot
 			if (callback.Game.Session.IsPaused)
 			{
 				FLog.Verbose("Waiting for snapshot");
 				return;
 			}
-			
+
 			GameStartAsync(callback.Game).Forget();
 			FLog.Verbose("Waiting for all players to join");
 		}
@@ -200,10 +201,8 @@ namespace FirstLight.Game.StateMachines
 		private async UniTaskVoid GameStartAsync(QuantumGame game)
 		{
 			FLog.Info("Game Started Message");
-			//await UniTask.Delay(100); // tech debt, leftover shall eb removed
 			await UniTask.WaitUntil(() => QuantumRunner.Default.IsDefinedAndRunning());
 			await PublishMatchStartedMessage(game, false);
-			//await UniTask.Delay(1000); // tech debt, leftover shall eb removed
 			await UniTask.WaitUntil(_services.UIService.IsScreenOpen<HUDScreenPresenter>);
 
 			if (!QuantumRunner.Default.IsDefinedAndRunning(false)) return;
@@ -255,11 +254,11 @@ namespace FirstLight.Game.StateMachines
 
 			WaitForCamera().Forget();
 
-			
+
 			await PublishMatchStartedMessage(QuantumRunner.Default.Game, true);
 			await UniTask.WaitUntil(_services.UIService.IsScreenOpen<HUDScreenPresenter>);
-	
-			
+
+
 		}
 
 		private void OnQuitGameScreenClickedMessage(QuitGameClickedMessage message)
@@ -298,16 +297,14 @@ namespace FirstLight.Game.StateMachines
 
 			FLog.Info($"Starting simulation from source {_services.NetworkService.JoinSource.ToString()}");
 
-			var client = _services.NetworkService.QuantumClient;
-
 			var startParams = _services.RoomService.CurrentRoom.GetDefaultStartParameters();
-			startParams.NetworkClient = client;
+			startParams.ClientId = _services.NetworkService.UserId;
 			if (IsSpectator())
 			{
-				startParams.GameMode = DeterministicGameMode.Spectating;
+				startParams.GameMode = DeterministicGameMode.Multiplayer;
 			}
 
-			FLog.Verbose("Starting " + ModelSerializer.Serialize(startParams.RuntimeConfig.MatchConfigs).Value);
+			FLog.Verbose("Starting " + ModelSerializer.Serialize(((RuntimeConfig)startParams.RuntimeConfig).MatchConfigs).Value);
 
 			var snapShot = _gameDataProvider.AppDataProvider.LastFrameSnapshot.Value;
 			if (snapShot is {FrameNumber: > 0, Offline: true} && _services.RoomService.CurrentRoom.IsOffline)
@@ -315,12 +312,12 @@ namespace FirstLight.Game.StateMachines
 				FLog.Info("Restoring Local Snapshot");
 				FLog.Verbose(snapShot);
 				startParams.FrameData = snapShot.SnapshotBytes;
-				startParams.InitialFrame = snapShot.FrameNumber;
+				startParams.InitialTick = snapShot.FrameNumber;
 			}
 
 			_networkService.SetLastRoom();
 
-			QuantumRunner.StartGame(_services.NetworkService.UserId, startParams);
+			QuantumRunner.StartGame(startParams);
 
 			_services.MessageBrokerService.PublishSafe(new MatchSimulationStartedMessage());
 		}
@@ -338,7 +335,7 @@ namespace FirstLight.Game.StateMachines
 		private void StopSimulation()
 		{
 			FLog.Verbose("Stopping Simulation");
-			if (QuantumRunner.Default == null || QuantumRunner.Default.IsDestroyed())
+			if (QuantumRunner.Default == null || QuantumRunner.Default.UnityObject == null)
 			{
 				FLog.Verbose("Simulation already destroyed");
 				return;
@@ -358,7 +355,6 @@ namespace FirstLight.Game.StateMachines
 			if (!isResync)
 			{
 				_services.AnalyticsService.MatchCalls.MatchStart();
-				SetPlayerMatchData(game);
 			}
 
 			await UniTask.WaitUntil(IsSimulationReady);
@@ -371,7 +367,7 @@ namespace FirstLight.Game.StateMachines
 			if (!QuantumRunner.Default.IsDefinedAndRunning()) return false;
 			var game = QuantumRunner.Default.Game;
 
-			if (game.GetLocalPlayers().Length == 0 ||
+			if ((!IsSpectator() && game.GetLocalPlayers().Count == 0) ||
 				game.Frames.Verified == null || game.Frames.Verified.Number == 0)
 			{
 				return false;
@@ -382,24 +378,27 @@ namespace FirstLight.Game.StateMachines
 				return false;
 			}
 
-			var localPlayerData = container->PlayersData[game.GetLocalPlayerRef()];
-			if (!localPlayerData.IsValid)
+			if (!IsSpectator())
 			{
-				return false;
+				var localPlayerData = container->PlayersData[game.GetLocalPlayerRef()];
+				if (!localPlayerData.IsValid)
+				{
+					return false;
+				}
+
+				if (!game.Frames.Verified.Exists(localPlayerData.Entity))
+				{
+					return false;
+				}
 			}
 
-			if (!game.Frames.Verified.Exists(localPlayerData.Entity))
-			{
-				return false;
-			}
-
-			// Waiting specific system initializations until we update photon 2.1.9
-			var hasCircle = game.Frames.Verified.Context.GameModeConfig.Systems.Any(s => s == typeof(ShrinkingCircleSystem).FullName);
+			// Wait for the mode-specific systems to initialize before publishing match readiness.
+			var hasCircle = game.Frames.Verified.SystemAnyEnabledSelf<ShrinkingCircleSystem>();
 			if (hasCircle && !game.Frames.Verified.Unsafe.TryGetPointerSingleton<ShrinkingCircle>(out var circle))
 			{
 				return false;
 			}
-			
+
 			return true;
 		}
 
@@ -433,7 +432,7 @@ namespace FirstLight.Game.StateMachines
 			}
 #endif
 			FLog.Info("Sending player runtime data");
-			game.SendPlayerData(game.GetLocalPlayerRef(), new RuntimePlayer
+			game.AddPlayer(0, new RuntimePlayer
 			{
 				PlayerId = PlayFabSettings.staticPlayer.PlayFabId,
 				UnityId = AuthenticationService.Instance.PlayerId,

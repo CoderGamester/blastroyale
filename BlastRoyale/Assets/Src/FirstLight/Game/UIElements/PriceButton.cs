@@ -1,3 +1,4 @@
+using GameLovers.GameData;
 using FirstLight.FLogger;
 using FirstLight.Game.Infos;
 using FirstLight.Game.Utils;
@@ -9,7 +10,8 @@ namespace FirstLight.Game.UIElements
 	/// <summary>
 	/// A button with a title text and a price / icon deisplayed above.
 	/// </summary>
-	public class PriceButton : ImageButton
+	[UxmlElement]
+	public partial class PriceButton : ImageButton
 	{
 		private const string UssButtonStyle = "button-long";
 		private const string UssBlock = "price-button";
@@ -27,7 +29,13 @@ namespace FirstLight.Game.UIElements
 		private VisualElement _holder;
 		private Label _title;
 
-		private string localizationKey { get; set; }
+		private string _localizationKey;
+		[UxmlAttribute("localization-key")]
+		private string localizationKey
+		{
+			get => _localizationKey;
+			set { _localizationKey = value; _title.text = value.LocalizeKey(); }
+		}
 
 		public PriceButton()
 		{
@@ -52,7 +60,7 @@ namespace FirstLight.Game.UIElements
 
 				_holder = holder;
 				_priceHolder = priceHolder;
-				
+
 				holder.Add(_title = new Label("REPAIR") {name = "title"});
 			}
 		}
@@ -60,7 +68,7 @@ namespace FirstLight.Game.UIElements
 		/// <summary>
 		/// Sets the price amount and icon.
 		/// </summary>
-		public void SetPrice(Pair<GameId, uint> price, bool isNft, bool insufficient = false, bool overrideDisablePrice = false)
+		public void SetPrice(Pair<GameId, uint> price, bool insufficient = false, bool overrideDisablePrice = false)
 		{
 			_price.text = price.Value.ToString();
 			_price.RemoveModifiers();
@@ -71,36 +79,14 @@ namespace FirstLight.Game.UIElements
 
 			_icon.RemoveSpriteClasses();
 			_icon.AddToClassList(string.Format(UssSpriteIcon, price.Key.ToString().ToLowerInvariant()));
-			
-			_priceHolder.SetDisplay(!isNft);
-			_title.EnableInClassList(UssOffsetTitle, isNft);
+
+			_priceHolder.SetDisplay(true);
+			_title.EnableInClassList(UssOffsetTitle, false);
 
 			if (overrideDisablePrice)
 			{
 				_priceHolder.SetDisplay(false);
 				_title.EnableInClassList(UssOffsetTitle, true);
-			}
-		}
-
-		public new class UxmlFactory : UxmlFactory<PriceButton, UxmlTraits>
-		{
-		}
-
-		public new class UxmlTraits : AutoFocusTrait
-		{
-			UxmlStringAttributeDescription _localizationKeyAttribute = new()
-			{
-				name = "localization-key",
-				use = UxmlAttributeDescription.Use.Required
-			};
-
-			public override void Init(VisualElement ve, IUxmlAttributes bag, CreationContext cc)
-			{
-				base.Init(ve, bag, cc);
-
-				var pb = (PriceButton) ve;
-				pb.localizationKey = _localizationKeyAttribute.GetValueFromBag(bag, cc);
-				pb._title.text = pb.localizationKey.LocalizeKey();
 			}
 		}
 	}

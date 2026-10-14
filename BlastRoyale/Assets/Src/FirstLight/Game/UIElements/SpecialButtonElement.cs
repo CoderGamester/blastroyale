@@ -1,3 +1,4 @@
+using MainInstaller = FirstLight.Game.Utils.MainInstaller;
 using System;
 using FirstLight.Game.Logic;
 using FirstLight.Game.Services;
@@ -8,7 +9,8 @@ using UnityEngine.UIElements;
 
 namespace FirstLight.Game.UIElements
 {
-	public class SpecialButtonElement : VisualElement
+	[UxmlElement]
+	public partial class SpecialButtonElement : VisualElement
 	{
 		private const string USS_BLOCK = "special-button";
 		private const string USS_DRAGGABLE = USS_BLOCK + "--draggable";
@@ -227,7 +229,6 @@ namespace FirstLight.Game.UIElements
 		{
 			if (_onCooldown || !_container.HasPointerCapture(evt.pointerId)) return;
 
-
 			var maxRange = _invertedSpecialCancel ? worldBound.width / 2f : worldBound.width / (_inCancel ? 1 : 2f);
 			var parentPosition = parent.WorldToLocal(evt.position);
 			var offsetPosition = parentPosition - new Vector2(worldBound.width / 2f, worldBound.height / 2f);
@@ -236,7 +237,7 @@ namespace FirstLight.Game.UIElements
 			var stickPositionClamped = Vector2.ClampMagnitude(stickPosition, maxRange);
 			var stickPositionClampedNormalized = stickPositionClamped / maxRange;
 
-			_stick.transform.position = stickPositionClamped;
+			_stick.style.translate = new Translate(stickPositionClamped.x, stickPositionClamped.y);
 
 			var inCancelArea = (_invertedSpecialCancel
 				? _cancelCircle.ContainsPoint(_cancelCircle.WorldToLocal(evt.position))
@@ -266,7 +267,6 @@ namespace FirstLight.Game.UIElements
 			ResetBtnState(evt.pointerId);
 		}
 
-
 		private void ResetBtnState(int pointerId)
 		{
 			_container.ReleasePointer(pointerId);
@@ -276,7 +276,7 @@ namespace FirstLight.Game.UIElements
 			RemoveFromClassList(USS_DRAGGING);
 			_cancelCircle.RemoveFromClassList(USS_CANCEL_CIRCLE_SMALL);
 
-			_stick.transform.position = Vector3.zero;
+			_stick.style.translate = new Translate(0, 0);
 
 			if (_inCancel)
 			{
@@ -288,12 +288,5 @@ namespace FirstLight.Game.UIElements
 			_inCancel = false;
 		}
 
-		public new class UxmlFactory : UxmlFactory<SpecialButtonElement, UxmlTraits>
-		{
-		}
-
-		public new class UxmlTraits : VisualElement.UxmlTraits
-		{
-		}
 	}
 }

@@ -3,7 +3,7 @@ using FirstLight.Game.Data;
 using FirstLight.Game.Data.DataTypes;
 using FirstLight.Game.Presenters;
 using FirstLight.Game.Utils;
-using I2.Loc;
+using FirstLight.Game.Localization;
 using Quantum;
 using UnityEngine.UIElements;
 
@@ -12,7 +12,8 @@ namespace FirstLight.Game.UIElements
 	/// <summary>
 	/// Displays a category of items in the collection screen, e.g. Characters, Banners, Gliders, etc.
 	/// </summary>
-	public class CollectionCategoryElement : ImageButton
+	[UxmlElement]
+	public partial class CollectionCategoryElement : ImageButton
 	{
 		private const string UssBlock = "collection-category";
 
@@ -29,7 +30,7 @@ namespace FirstLight.Game.UIElements
 		private const string UssSpriteIconCharacters = "sprite-home__icon-characters";
 		private const string UssSpriteIconHammer = "sprite-home__icon-melee-skin";
 		private const string UssSpriteIconProfilePicture = "sprite-home__icon-avatar";
-		
+
 		public CollectionCategory Category { get; set; }
 
 		private readonly VisualElement _icon;
@@ -100,8 +101,5 @@ namespace FirstLight.Game.UIElements
 			EnableInClassList(UssBlockSelected, selected);
 		}
 
-		public new class UxmlFactory : UxmlFactory<CollectionCategoryElement, AutoFocusTrait>
-		{
-		}
 	}
 }

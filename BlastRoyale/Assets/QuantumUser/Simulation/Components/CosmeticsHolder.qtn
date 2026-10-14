@@ -1,0 +1,5 @@
+component CosmeticsHolder
+{
+    [AllocateOnComponentAdded, FreeOnComponentRemoved]
+    list<GameId> Cosmetics;
+}

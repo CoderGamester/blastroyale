@@ -1,3 +1,4 @@
+using MainInstaller = FirstLight.Game.Utils.MainInstaller;
 using FirstLight.FLogger;
 using FirstLight.Game.Messages;
 using FirstLight.Game.Services;
@@ -25,7 +26,7 @@ namespace FirstLight.Game.Utils
 		{
 			return Application.internetReachability == NetworkReachability.NotReachable;
 		}
-		
+
 		/// <summary>
 		/// Requests to check if the device is disconnted from internet, or Photon is disconnected
 		/// </summary>
@@ -43,7 +44,7 @@ namespace FirstLight.Game.Utils
 			if (IsOfflineOrDisconnected())
 			{
 				FLog.Warn("Client is offline, sending network disconnected message");
-				MainInstaller.Resolve<IGameServices>().MessageBrokerService.Publish(new NetworkActionWhileDisconnectedMessage());
+				MainInstaller.Resolve<IGameServices>().MessageBrokerService.PublishSafe(new NetworkActionWhileDisconnectedMessage());
 				return false;
 			}
 

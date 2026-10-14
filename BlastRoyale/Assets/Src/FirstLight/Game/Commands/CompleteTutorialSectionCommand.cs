@@ -1,3 +1,4 @@
+using GameLovers.Services.Commands;
 using Cysharp.Threading.Tasks;
 using FirstLight.Game.Data;
 using FirstLight.Game.Logic;
@@ -29,7 +30,7 @@ namespace FirstLight.Game.Commands
 
 					var rewardItems = ctx.Logic.RewardLogic().GetRewardsFromTutorial(tutorialSection);
 					ctx.Logic.RewardLogic().Reward(rewardItems);
-					ctx.Services.MessageBrokerService().Publish(new CompletedTutorialSectionMessage() {Section = tutorialSection});
+					ctx.Services.MessageBrokerService().PublishSafe(new CompletedTutorialSectionMessage() {Section = tutorialSection});
 				}
 			}
 

@@ -21,8 +21,9 @@
         "PlayFab",
         "GameLovers.MobileServices",
         "Unity.Services.Multiplayer",
-        "PhotonQuantum",
-        "PhotonRealtime"
+        "Quantum.Unity",
+        "Photon.Realtime",
+        "Quantum.Simulation"
     ],
     "includePlatforms": [
         "Editor"
@@ -34,11 +35,11 @@
         "Newtonsoft.Json.dll",
         "nunit.framework.dll",
         "NSubstitute.dll",
-        "quantum.code.dll",
-        "quantum.core.dll",
-        "PhotonDeterministic.dll",
-        "Photon3Unity3D.dll",
-        "FirstLightServerSDK.dll"
+        "FirstLightServerSDK.dll",
+        "Quantum.Deterministic.dll",
+        "Quantum.Engine.dll",
+        "Quantum.Log.dll",
+        "PhotonClient.dll"
     ],
     "autoReferenced": false,
     "defineConstraints": [

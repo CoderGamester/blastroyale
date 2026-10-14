@@ -1,10 +1,9 @@
 using System;
 using System.Collections.Generic;
-using System.Net.Http;
 using System.Threading.Tasks;
 using FirstLight.FLogger;
 using FirstLight.Game.Data;
-using FirstLight.Services;
+using GameLovers.Services;
 using Newtonsoft.Json;
 using PlayFab;
 using PlayFab.ClientModels;
@@ -18,23 +17,23 @@ namespace FirstLight.Editor.EditorTools
 	/// </summary>
 	public static class PlayFabShortcuts
 	{
-	
+
 		[MenuItem("Tools/PlayFab/Open Current Account")]
 		private static void OpenCurrentAccount()
 		{
 			Application.OpenURL($"https://developer.playfab.com/en-us/r/t/***REMOVED***/players/FIXME/data");
 		}
-		
-		
+
+
 #if UNITY_EDITOR && ENABLE_PLAYFABADMIN_API
 		[MenuItem("Tools/PlayFab/Delete Player Accounts")]
 		private static void DeleteAllPlayers()
 		{
 			Debug.Log($"# Deleting All Players");
-			
+
 			PlayerPrefs.DeleteAll();
 			GetAllPlayFabPlayers(OnPlayersSuccess);
-		
+
 			void OnPlayersSuccess(PlayFab.AdminModels.GetPlayersInSegmentResult result)
 			{
 				foreach (var playerProfile in result.PlayerProfiles)
@@ -44,13 +43,9 @@ namespace FirstLight.Editor.EditorTools
 						PlayFabId = playerProfile.PlayerId
 					}, null, OnPlayFabError);
 				}
-				
+
 				FLog.Info($"# Deleting {result.PlayerProfiles.Count.ToString()} Players");
 
-				var task = new HttpClient().DeleteAsync("https://devmarketplaceapi.azure-api.net/accounts/admin/unlinkall?key=devkey");
-				task.Wait();
-
-				FLog.Info("Accounts wallets unlinked");
 			}
 		}
 
@@ -58,7 +53,7 @@ namespace FirstLight.Editor.EditorTools
 		private static void UnlinkAllPlayers()
 		{
 			Debug.Log($"# Unlinking All Players");
-			
+
 			PlayerPrefs.DeleteAll();
 			GetAllPlayFabPlayers(OnPlayersSuccess);
 
@@ -76,7 +71,7 @@ namespace FirstLight.Editor.EditorTools
 
 				Debug.Log($"# Unlinking {result.PlayerProfiles.Count.ToString()} Players");
 			}
-			
+
 			void OnPlayerProfileSuccess(PlayFab.AdminModels.GetPlayerProfileResult result)
 			{
 				if (result.PlayerProfile.LinkedAccounts == null || result.PlayerProfile.LinkedAccounts.Count == 0)
@@ -169,7 +164,7 @@ namespace FirstLight.Editor.EditorTools
 		private static void GetAllPlayFabPlayers(Action<PlayFab.AdminModels.GetPlayersInSegmentResult> onSuccess)
 		{
 			PlayFabAdminAPI.GetAllSegments(new PlayFab.AdminModels.GetAllSegmentsRequest(), OnSegmentsSuccess, OnPlayFabError);
-		
+
 			void OnSegmentsSuccess(PlayFab.AdminModels.GetAllSegmentsResult result)
 			{
 				foreach (var segment in result.Segments)
@@ -183,7 +178,7 @@ namespace FirstLight.Editor.EditorTools
 						break;
 					}
 				}
-				
+
 				FLog.Info($"# Obtained {result.Segments.Count.ToString()} Segments");
 			}
 		}

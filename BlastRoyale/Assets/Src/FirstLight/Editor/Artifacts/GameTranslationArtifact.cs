@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using System.IO;
 using FirstLight.Server.SDK.Modules;
-using I2.Loc;
+using FirstLight.Game.Localization;
 using UnityEngine;
 
 namespace FirstLight.Editor.Artifacts
@@ -12,9 +12,9 @@ namespace FirstLight.Editor.Artifacts
 		{
 			var language = "English";
 			var terms = new Dictionary<string, string>();
-			foreach (var s in LocalizationManager.GetTermsList())
+			foreach (var s in GameLocalization.GetTermsList())
 			{
-				terms[s] = LocalizationManager.GetTranslation(s, default, default, default, default, default, language);
+				terms[s] = GameLocalization.GetTranslation(s, language);
 			}
 
 			return ModelSerializer.Serialize(terms).Value;

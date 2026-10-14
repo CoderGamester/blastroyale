@@ -1,8 +1,8 @@
+using IDataProvider = FirstLight.Server.SDK.Models.IDataProvider;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
-using ExitGames.Client.Photon.StructWrapping;
 using FirstLight.Game.Configs;
 using FirstLight.Game.Data;
 using FirstLight.Game.Data.DataTypes;
@@ -145,7 +145,7 @@ namespace FirstLight.Game.Logic
 			List<ItemData> collection = new List<ItemData>();
 			foreach (var id in group.Id.GetIds())
 			{
-				// Player can have multiple items marked as genericcollectionitem, this means the id represent multiple collectables 
+				// Player can have multiple items marked as genericcollectionitem, this means the id represent multiple collectables
 				if (id.IsInGroup(GameIdGroup.GenericCollectionItem)) continue;
 				collection.Add(ItemFactory.Collection(id));
 			}

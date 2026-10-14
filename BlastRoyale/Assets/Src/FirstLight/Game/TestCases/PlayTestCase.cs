@@ -1,3 +1,4 @@
+using MainInstaller = FirstLight.Game.Utils.MainInstaller;
 using System.Collections;
 using FirstLight.Game.Logic;
 using FirstLight.Game.Services;
@@ -31,8 +32,8 @@ namespace FirstLight.Game.TestCases
 		protected GamemodeUIHelper UIGamemode => _installer.Resolve<GamemodeUIHelper>();
 		protected PlayerConfigsHelper PlayerConfigs => _installer.Resolve<PlayerConfigsHelper>();
 		protected GameConfigHelper GameConfigHelper => _installer.Resolve<GameConfigHelper>();
-		
-		
+
+
 		// Game stuff
 		protected MessageBrokerHelper MessageBroker => _installer.Resolve<MessageBrokerHelper>();
 		protected IGameServices Services => MainInstaller.ResolveServices();

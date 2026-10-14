@@ -1,5 +1,5 @@
 using FirstLight.Game.Services;
-using I2.Loc;
+using FirstLight.Game.Localization;
 using Quantum;
 using UnityEngine.Playables;
 
@@ -12,10 +12,10 @@ namespace FirstLight.Game.Timeline
 	[System.Serializable]
 	public class GenericVideoBehaviour : PlayableBehaviourBase
 	{
-		public LocalizedString Title;
-		public LocalizedString Description;
+		public LocalizedTerm Title;
+		public LocalizedTerm Description;
 		public GameId VideoId;
-		public LocalizedString ButtonText;
+		public LocalizedTerm ButtonText;
 
 		/// <inheritdoc />
 		protected override void OnEnter(Playable playable)
@@ -25,10 +25,10 @@ namespace FirstLight.Game.Timeline
 				ButtonText = ButtonText.ToString(),
 				ButtonOnClick = Resume
 			};
-			
-			// Legacy video dialogs have been removed, but preserved all the FTUE related functionality just in case 
+
+			// Legacy video dialogs have been removed, but preserved all the FTUE related functionality just in case
 			// we need to reference it. This is required for FtueTrack.cs
-			
+
 			// Services.GenericDialogService.OpenVideoDialog(Title.ToString(), Description.ToString(), VideoId, false, confirmButton);
 		}
 	}

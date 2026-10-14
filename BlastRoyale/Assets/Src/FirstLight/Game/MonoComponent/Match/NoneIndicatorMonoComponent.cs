@@ -29,7 +29,7 @@ namespace FirstLight.Game.MonoComponent.Match
 		}
 
 		/// <inheritdoc />
-		public void Init(EntityView playerEntityView)
+		public void Init(QuantumEntityView playerEntityView)
 		{
 			transform.SetParent(playerEntityView.transform);
 		}
@@ -39,13 +39,13 @@ namespace FirstLight.Game.MonoComponent.Match
 		{
 			transform.localPosition = new Vector3(direction.x, 10f, direction.y);
 		}
-		
+
 		/// <inheritdoc />
 		public void SetColor(Color c)
 		{
 			// Not implemented
 		}
-		
+
 		/// <inheritdoc />
 		public void ResetColor()
 		{

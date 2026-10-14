@@ -1,6 +1,6 @@
 using System;
 using FirstLight.Game.UIElements;
-using FirstLight.UIService;
+using FirstLight.Game.UI;
 using QuickEye.UIToolkit;
 
 namespace FirstLight.Game.Views.UITK.Popups

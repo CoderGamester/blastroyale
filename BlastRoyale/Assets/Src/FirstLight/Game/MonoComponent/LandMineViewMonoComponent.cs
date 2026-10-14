@@ -1,27 +1,28 @@
-﻿using System;
+using FirstLight.Inspector;
+using MainInstaller = FirstLight.Game.Utils.MainInstaller;
+using System;
 using Cysharp.Threading.Tasks;
 using FirstLight.FLogger;
 using FirstLight.Game.Ids;
 using FirstLight.Game.Utils;
 using Photon.Deterministic;
 using Quantum;
-using Sirenix.OdinInspector;
 using UnityEngine;
 
 namespace FirstLight.Game.MonoComponent
 {
 	public class LandMineViewMonoComponent : MonoBehaviour
 	{
-		[Required] [SerializeField] private Transform _visualTransform;
-		[Required] [SerializeField] private Transform _circle;
+		[SerializeField, InspectorField(Required = true)]  private Transform _visualTransform;
+		[SerializeField, InspectorField(Required = true)]  private Transform _circle;
 
-		private EntityView _view;
+		private QuantumEntityView _view;
 		private Animator _animator;
 		private static readonly int _moveTrigger = Animator.StringToHash("Move");
 
 		private void Awake()
 		{
-			_view = GetComponent<EntityView>();
+			_view = GetComponent<QuantumEntityView>();
 			_animator = GetComponentInChildren<Animator>();
 			QuantumEvent.Subscribe<EventLandMineTriggered>(this, OnMineTrigerred);
 			QuantumEvent.Subscribe<EventLandMineExploded>(this, OnMineExploded);

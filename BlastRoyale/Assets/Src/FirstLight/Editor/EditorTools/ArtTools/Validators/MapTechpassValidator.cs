@@ -1,7 +1,7 @@
+using Quantum;
 using System.Linq;
 using FirstLight.Editor.EditorTools.ArtTools;
 using FirstLight.Game.Utils;
-using Sirenix.OdinInspector.Editor.Validation;
 using UnityEditor;
 using UnityEngine;
 
@@ -15,7 +15,7 @@ public class TechPassValidator
 	private static void ValidateMap()
 	{
 		var l = Object.FindObjectsByType<GameObject>(FindObjectsInactive.Include, FindObjectsSortMode.None);
-		
+
 		foreach(var go in l)
 		{
 			if (go.GetComponent<QuantumStaticBoxCollider3D>() != null)

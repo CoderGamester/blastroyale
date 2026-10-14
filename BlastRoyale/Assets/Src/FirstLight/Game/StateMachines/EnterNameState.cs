@@ -15,10 +15,10 @@ using FirstLight.Game.Services;
 using FirstLight.Game.Services.Authentication;
 using FirstLight.Game.Utils;
 using FirstLight.Game.Utils.UCSExtensions;
-using FirstLight.NativeUi;
-using FirstLight.Services;
-using FirstLight.Statechart;
-using I2.Loc;
+using GameLovers.MobileServices.NativeUi;
+using GameLovers.Services;
+using GameLovers.StatechartMachine;
+using FirstLight.Game.Localization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using PlayFab;
@@ -122,7 +122,7 @@ namespace FirstLight.Game.StateMachines
 		{
 			await _services.UIService.CloseScreen<LoadingSpinnerScreenPresenter>(false);
 			// HACK: When you open a generic dialog in a close action of another generic dialog it will not work.
-			// Because the ui.CloseLayer will be called after the close callback, closing it immediately 
+			// Because the ui.CloseLayer will be called after the close callback, closing it immediately
 			await UniTask.WaitUntil(() => !_services.UIService.IsScreenOpen<GenericButtonDialogPresenter>());
 			await _services.GenericDialogService.OpenSimpleMessage(ScriptLocalization.UITShared.error, errorMessage,
 				() => TriggerNameSetInvalid().Forget());

@@ -1,3 +1,4 @@
+using GameLovers.Services.Commands;
 using Cysharp.Threading.Tasks;
 using ExitGames.Client.Photon;
 using FirstLight.Game.Logic;
@@ -16,7 +17,7 @@ namespace FirstLight.Game.Commands
 		public UniTask Execute(CommandExecutionContext ctx)
 		{
 			var refunded = ctx.Logic.GameEvents().RefundEventPasses();
-			ctx.Services.MessageBrokerService().Publish(new TicketsRefundedMessage()
+			ctx.Services.MessageBrokerService().PublishSafe(new TicketsRefundedMessage()
 			{
 				Refunds = refunded
 			});

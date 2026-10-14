@@ -1,0 +1,23 @@
+component Chest
+{
+	[HideInInspector] GameId Id;
+	[HideInInspector] ChestType ChestType;
+	[HideInInspector] FP CollectTime;
+}
+
+component ChestContents
+{
+	list<SimulationItem> Items;
+}
+
+
+enum ChestType
+{
+	Consumable,
+    Equipment,
+    Legendary,
+    Tutorial,
+    Weapon,
+    Vitality,
+    Ammo
+}

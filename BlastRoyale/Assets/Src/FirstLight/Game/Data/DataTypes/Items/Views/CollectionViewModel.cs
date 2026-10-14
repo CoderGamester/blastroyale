@@ -1,3 +1,4 @@
+using MainInstaller = FirstLight.Game.Utils.MainInstaller;
 using System;
 using System.Threading.Tasks;
 using Cysharp.Threading.Tasks;
@@ -18,7 +19,7 @@ namespace FirstLight.Game.Data.DataTypes
 		public GameId GameId { get; }
 		public uint Amount { get; }
 		public string DisplayName { get; }
-		
+
 		public string ItemTypeDisplayName => Item.GetCollectionCategory().GetCollectionCategoryDisplayName();
 
 		public VisualElement ItemCard => new CollectionRewardsSummaryElement()
@@ -46,7 +47,7 @@ namespace FirstLight.Game.Data.DataTypes
 				icon.AddToClassList(GameId.GetUSSSpriteClass());
 			}
 		}
-		
+
 		public string Description => null;
 
 		public CollectionViewModel(ItemData item)

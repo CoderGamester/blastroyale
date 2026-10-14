@@ -1,3 +1,4 @@
+using FirstLight.Game.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,8 +10,7 @@ using FirstLight.Game.Messages;
 using FirstLight.Game.MonoComponent.Match;
 using FirstLight.Game.Services.Match;
 using FirstLight.Game.Utils;
-using FirstLight.SDK.Services;
-using FirstLight.Services;
+using GameLovers.Services;
 using Quantum;
 using Object = UnityEngine.Object;
 
@@ -73,7 +73,7 @@ namespace FirstLight.Game.Services
 		public MatchServices(IEntityViewUpdaterService entityViewUpdaterService,
 							 IGameServices services,
 							 IGameDataProvider dataProvider,
-							 IDataService dataService)
+							 IClientDataService dataService)
 		{
 			_messageBrokerService = services.MessageBrokerService;
 			_gameServices = services;
@@ -136,7 +136,7 @@ namespace FirstLight.Game.Services
 			{
 				service.OnMatchStarted(message.Game, message.IsResync);
 			}
-			
+
 			_runOnMatchStart?.Invoke(_isReconnect);
 			_runOnMatchStart = null;
 		}

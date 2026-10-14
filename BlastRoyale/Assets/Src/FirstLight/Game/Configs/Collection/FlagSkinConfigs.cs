@@ -1,8 +1,10 @@
+using FirstLight.Inspector;
+using IgnoreServerSerialization = FirstLight.Server.SDK.Modules.GameConfiguration.IgnoreServerSerialization;
+using GameLovers.GameData;
 using System;
 using System.Collections.Generic;
 using FirstLight.Server.SDK.Modules.GameConfiguration;
 using Quantum;
-using Sirenix.OdinInspector;
 using UnityEngine;
 using UnityEngine.AddressableAssets;
 
@@ -11,11 +13,11 @@ namespace FirstLight.Game.Configs
 	[Serializable]
 	public struct FlagConfigEntry
 	{
-		[Required] public GameId GameId;
-		[Required] public AssetReferenceT<Mesh> Mesh;
-		[Required] public AssetReferenceSprite Sprite;
+		 public GameId GameId;
+		[InspectorField(Required = true)] public AssetReferenceT<Mesh> Mesh;
+		[InspectorField(Required = true)] public AssetReferenceSprite Sprite;
 	}
-	
+
 	[Serializable, IgnoreServerSerialization]
 	public struct FlagSkinConfig
 	{

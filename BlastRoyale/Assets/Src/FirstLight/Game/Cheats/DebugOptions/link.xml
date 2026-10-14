@@ -1,0 +1,5 @@
+<linker>
+  <assembly fullname="FirstLight.Game">
+    <type fullname="DebugOptions" preserve="all" />
+  </assembly>
+</linker>

@@ -1,4 +1,4 @@
-﻿using ExitGames.Client.Photon;
+﻿using Photon.Client;
 using FirstLight.Game.Commands;
 using Photon.Realtime;
 
@@ -19,15 +19,15 @@ namespace FirstLight.Game.Services.RoomService
 		public void OnEvent(EventData photonEvent)
 		{
 			// DebugEvent(photonEvent);
-			if (photonEvent.Code == (byte) QuantumCustomEvents.KickPlayer)
+			if (photonEvent.Code == (byte) QuantumCustomEvents.KickPlayer && photonEvent.CustomData is int actorNumber)
 			{
-				OnKickPlayerEventReceived((int) photonEvent.CustomData, photonEvent.Sender);
+				OnKickPlayerEventReceived(actorNumber, photonEvent.Sender);
 			}
 		}
 
 		internal bool SendKickCommand(Player playerToKick)
 		{
-			var eventOptions = new RaiseEventOptions() {Receivers = ReceiverGroup.All};
+			var eventOptions = new RaiseEventArgs() {Receivers = ReceiverGroup.All};
 			return _service._networkService.QuantumClient.OpRaiseEvent((byte) QuantumCustomEvents.KickPlayer, playerToKick.ActorNumber,
 				eventOptions,
 				SendOptions.SendReliable);
@@ -35,8 +35,8 @@ namespace FirstLight.Game.Services.RoomService
 
 		private void OnKickPlayerEventReceived(int userIdToLeave, int senderIndex)
 		{
-			if (_service.CurrentRoom.LocalPlayer.ActorNumber != userIdToLeave ||
-				!_service.InRoom || _service.CurrentRoom.MasterClientId != senderIndex)
+			if (!_service.InRoom || _service.CurrentRoom == null ||
+				_service.CurrentRoom.LocalPlayer.ActorNumber != userIdToLeave || _service.CurrentRoom.MasterClientId != senderIndex)
 			{
 				return;
 			}

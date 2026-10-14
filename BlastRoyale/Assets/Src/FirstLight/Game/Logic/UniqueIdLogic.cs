@@ -1,8 +1,11 @@
+using IDataProvider = FirstLight.Server.SDK.Models.IDataProvider;
+using FirstLight.Game.Utils;
+using GameLovers.GameData;
 using FirstLight.Game.Data;
 using FirstLight.Game.Ids;
 using FirstLight.Game.Logic.RPC;
 using FirstLight.Server.SDK.Models;
-using FirstLight.Services;
+using GameLovers.Services;
 using Quantum;
 
 namespace FirstLight.Game.Logic
@@ -46,8 +49,8 @@ namespace FirstLight.Game.Logic
 	/// <inheritdoc cref="IUniqueIdLogic" />
 	public class UniqueIdLogic : AbstractBaseLogic<IdData>, IUniqueIdLogic, IGameLogicInitializer
 	{
-		private IObservableDictionary<UniqueId, GameId> _ids;
-		private IObservableList<UniqueId> _newIds;
+		private ObservableDictionary<UniqueId, GameId> _ids;
+		private ObservableList<UniqueId> _newIds;
 
 		public IObservableDictionaryReader<UniqueId, GameId> Ids => _ids;
 		public IObservableListReader<UniqueId> NewIds => _newIds;
@@ -58,26 +61,22 @@ namespace FirstLight.Game.Logic
 
 		public void Init()
 		{
-			_ids = new ObservableDictionary<UniqueId, GameId>(Data.GameIds);
+			_ids = new ObservableDictionary<UniqueId, GameId>(Data.GameIds) {ObservableUpdateFlag = ObservableUpdateFlag.Both};
 			_newIds = new ObservableList<UniqueId>(Data.NewIds);
 		}
 
 		public void ReInit()
 		{
 			{
-				var listeners = _ids.GetObservers();
-				_ids = new ObservableDictionary<UniqueId, GameId>(Data.GameIds);
-				_ids.AddObservers(listeners);
+				_ids.Rebind(Data.GameIds);
 			}
-			
+
 			{
-				var listeners = _newIds.GetObservers();
-				_newIds = new ObservableList<UniqueId>(Data.NewIds);
-				_newIds.AddObservers(listeners);
+				_newIds.Rebind(Data.NewIds);
 			}
-			
-			_ids.InvokeUpdate();
-			_newIds.InvokeUpdate();
+
+			_ids.NotifyAll();
+			_newIds.NotifyAll();
 		}
 
 		public UniqueId GenerateNewUniqueId(GameId gameId)

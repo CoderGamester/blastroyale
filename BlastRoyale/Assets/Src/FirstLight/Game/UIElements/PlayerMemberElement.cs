@@ -11,7 +11,8 @@ namespace FirstLight.Game.UIElements
 	/// <summary>
 	/// Displays player avatar element with border, mask and background image.
 	/// </summary>
-	public class PlayerMemberElement : VisualElement
+	[UxmlElement]
+	public partial class PlayerMemberElement : VisualElement
 	{
 		private const string USS_BLOCK = "squad-member";
 		private const string USS_PFP = USS_BLOCK + "__pfp";
@@ -42,8 +43,5 @@ namespace FirstLight.Game.UIElements
 			_pfp.SetSprite(image);
 		}
 
-		public new class UxmlFactory : UxmlFactory<PlayerMemberElement, UxmlTraits>
-		{
-		}
 	}
 }

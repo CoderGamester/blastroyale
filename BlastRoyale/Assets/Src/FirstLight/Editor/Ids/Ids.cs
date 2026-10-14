@@ -45,7 +45,7 @@ namespace FirstLight.Editor.Ids
 			IAP = 23,
 			GenericCollectionItem = 39,
 			NOOBRareTokens = 40,
-			CryptoCurrency = 41,
+			BonusCurrency = 41,
 			ProductBundle = 295,
 
 			#region CollectionGroup
@@ -64,13 +64,13 @@ namespace FirstLight.Editor.Ids
 		{
 			{"Random", 0, GameDesign},
 			{"Any", 126, GameDesign },
-			
+
 			{"RealMoney", 125, Currency},
 			{"COIN", 61, Currency},
 			{"BlastBuck", 105, Currency},
 			{"BLST", 14, Currency},
 			{"Fragments", 112, Currency, Deprecated},
-			{"NOOB", 209, Currency, CryptoCurrency},
+			{"NOOB", 209, Currency, BonusCurrency},
 			{"NOOBSilver", 291, Collectable, NOOBRareTokens},
 			{"NOOBGolden", 249, Collectable, NOOBRareTokens},
 			{"NOOBRainbow", 250, Collectable, NOOBRareTokens},
@@ -80,32 +80,32 @@ namespace FirstLight.Editor.Ids
 			{"BPP", 26, Resource, ResourcePool},
 			{"Bundle", 296, ProductBundle},
 			{"PremiumBattlePass", 950, IAP},
-			{"PartnerANCIENT8", 900, Currency, CryptoCurrency},
-			{"PartnerAPECOIN", 901, Currency, CryptoCurrency},
-			{"PartnerBEAM", 902, Currency, CryptoCurrency},
-			{"PartnerBLOCKLORDS", 903, Currency, CryptoCurrency},
-			{"PartnerBLOODLOOP", 904, Currency, CryptoCurrency},
-			{"PartnerCROSSTHEAGES", 905, Currency, CryptoCurrency},
-			{"PartnerFARCANA", 906, Currency, CryptoCurrency},
-			{"PartnerGAM3SGG", 907, Currency, CryptoCurrency},
-			{"PartnerIMMUTABLE", 908, Currency, CryptoCurrency},
-			{"PartnerMOCAVERSE", 909, Currency, CryptoCurrency},
-			{"PartnerNYANHEROES", 910, Currency, CryptoCurrency},
-			{"PartnerPIRATENATION", 911, Currency, CryptoCurrency},
-			{"PartnerPIXELMON", 912, Currency, CryptoCurrency},
-			{"PartnerPLANETMOJO", 913, Currency, CryptoCurrency},
-			{"PartnerSEEDIFY", 914, Currency, CryptoCurrency},
-			{"PartnerWILDERWORLD", 915, Currency, CryptoCurrency},
-			{"PartnerXBORG", 916, Currency, CryptoCurrency},
-			{"PartnerBREED", 917, Currency, CryptoCurrency},
-			{"PartnerMEME", 918, Currency, CryptoCurrency},
-			{"PartnerYGG", 919, Currency, CryptoCurrency},
-			{"FestiveSNOWFLAKE", 271, Currency, CryptoCurrency},
-			{"EventTicket", 272, Currency, CryptoCurrency},
-			{"FestiveLUNARCOIN", 293, Currency, CryptoCurrency},
-			{"FestiveFEATHER", 294, Currency, CryptoCurrency},
-			{"FestiveLANTERN", 600, Currency, CryptoCurrency},
-			{"FestiveEGG", 601, Currency, CryptoCurrency},
+			{"PartnerANCIENT8", 900, Currency, BonusCurrency},
+			{"PartnerAPECOIN", 901, Currency, BonusCurrency},
+			{"PartnerBEAM", 902, Currency, BonusCurrency},
+			{"PartnerBLOCKLORDS", 903, Currency, BonusCurrency},
+			{"PartnerBLOODLOOP", 904, Currency, BonusCurrency},
+			{"PartnerCROSSTHEAGES", 905, Currency, BonusCurrency},
+			{"PartnerFARCANA", 906, Currency, BonusCurrency},
+			{"PartnerGAM3SGG", 907, Currency, BonusCurrency},
+			{"PartnerIMMUTABLE", 908, Currency, BonusCurrency},
+			{"PartnerMOCAVERSE", 909, Currency, BonusCurrency},
+			{"PartnerNYANHEROES", 910, Currency, BonusCurrency},
+			{"PartnerPIRATENATION", 911, Currency, BonusCurrency},
+			{"PartnerPIXELMON", 912, Currency, BonusCurrency},
+			{"PartnerPLANETMOJO", 913, Currency, BonusCurrency},
+			{"PartnerSEEDIFY", 914, Currency, BonusCurrency},
+			{"PartnerWILDERWORLD", 915, Currency, BonusCurrency},
+			{"PartnerXBORG", 916, Currency, BonusCurrency},
+			{"PartnerBREED", 917, Currency, BonusCurrency},
+			{"PartnerMEME", 918, Currency, BonusCurrency},
+			{"PartnerYGG", 919, Currency, BonusCurrency},
+			{"FestiveSNOWFLAKE", 271, Currency, BonusCurrency},
+			{"EventTicket", 272, Currency, BonusCurrency},
+			{"FestiveLUNARCOIN", 293, Currency, BonusCurrency},
+			{"FestiveFEATHER", 294, Currency, BonusCurrency},
+			{"FestiveLANTERN", 600, Currency, BonusCurrency},
+			{"FestiveEGG", 601, Currency, BonusCurrency},
 			{"FloodCity", 137, Map, Deprecated},
 			{"MainDeck", 143, Map},
 			{"FtueDeck", 5, Map},
@@ -219,7 +219,6 @@ namespace FirstLight.Editor.Ids
 			{"CoreRare", 47, Core, IAP, Chest, Deprecated},
 			{"CoreEpic", 48, Core, IAP, Chest, Deprecated},
 			{"CoreLegendary", 59, Core, IAP, Chest, Deprecated},
-			{"GasTicket", 999, Currency},
 
 			#region Collections
 
@@ -299,7 +298,7 @@ namespace FirstLight.Editor.Ids
 			{"PlayerSkinStreetrunner", 288, PlayerSkin, Collection},
 			{"PlayerSkinValkyrie", 289, PlayerSkin, Collection},
 			{"PlayerSkinYeti", 290, PlayerSkin, Collection},
-			
+
 			{"PlayerSkinCorposFemaleDark", 295, PlayerSkin, Collection},
 			{"PlayerSkinCorposMaleDark", 297, PlayerSkin, Collection},
 			{"PlayerSkinGym", 298, PlayerSkin, Collection},
@@ -311,7 +310,7 @@ namespace FirstLight.Editor.Ids
 			{"PlayerSkinSakura", 344, PlayerSkin, Collection},
 			{"PlayerSkinZombie", 345, PlayerSkin, Collection},
 			{"PlayerSkinCyberBunny", 346, PlayerSkin, Collection},
-			
+
 			{"PlayerSkinAnubis", 459, PlayerSkin, Collection},
 			{"PlayerSkinDesert", 458, PlayerSkin, Collection},
 			{"PlayerSkinDragon", 460, PlayerSkin, Collection},
@@ -348,12 +347,12 @@ namespace FirstLight.Editor.Ids
 			{"FlagPooEmoji", 279, DeathMarker, Collection},
 			{"FlagRoyalCrown", 280, DeathMarker, Collection},
 			{"FlagSalt", 281, DeathMarker, BotItem, Collection},
-			
+
 			{"FlagLamp", 330, DeathMarker, Collection},
 			{"FlagStrong", 331, DeathMarker, Collection},
 			{"FlagNight", 332, DeathMarker, Collection},
 			{"FlagPOG", 340, DeathMarker, Collection},
-			
+
 			{"FlagCryEmoji", 351, DeathMarker, Collection},
 			{"FlagGoat", 352, DeathMarker, Collection},
 			{"FlagCyberBunny", 353, DeathMarker, Collection},
@@ -436,7 +435,7 @@ namespace FirstLight.Editor.Ids
 			{"MeleeSkinSuitCase", 471, MeleeSkin, Collection},
 
 			// WEAPON GENERATION TOKEN KEEP THIS HERE
-				
+
 			#endregion
 
 			#region ProfilePictures
@@ -447,7 +446,6 @@ namespace FirstLight.Editor.Ids
 			{"Avatar4", 120, ProfilePicture, Collection},
 			{"Avatar5", 121, ProfilePicture, Collection},
 			{"AvatarRemote", 123, ProfilePicture, Collection, GenericCollectionItem},
-			{"AvatarNFTCollection", 124, ProfilePicture, Collection, GenericCollectionItem},
 			{"AvatarAssasinmask", 150, ProfilePicture, Collection},
 			{"AvatarBlastcatads", 151, ProfilePicture, Collection},
 			{"AvatarBurgerads", 152, ProfilePicture, Collection},
@@ -554,7 +552,7 @@ namespace FirstLight.Editor.Ids
 			{"AvatarStar", 557, ProfilePicture, Collection},
 			{"AvatarMaleCorpoDark", 558, ProfilePicture, Collection},
 			{"AvatarFemaleCorpoDark", 559, ProfilePicture, Collection},
-			
+
 			{"AvatarSupporterGold202501", 560, ProfilePicture, Collection},
 			{"AvatarSupporterGold202502", 561, ProfilePicture, Collection},
 			{"AvatarSupporterGold202503", 562, ProfilePicture, Collection},
@@ -567,7 +565,7 @@ namespace FirstLight.Editor.Ids
 			{"AvatarSupporterBronze202502", 569, ProfilePicture, Collection},
 			{"AvatarSupporterBronze202503", 570, ProfilePicture, Collection},
 			{"AvatarSupporterBronze202504", 571, ProfilePicture, Collection},
-			
+
 			{"AvatarCyberBunny", 572, ProfilePicture, Collection},
 			{"AvatarEaster", 573, ProfilePicture, Collection},
 			{"AvatarRaincoat", 574, ProfilePicture, Collection},

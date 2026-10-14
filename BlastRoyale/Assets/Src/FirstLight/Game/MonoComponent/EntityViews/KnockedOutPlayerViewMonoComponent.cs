@@ -1,4 +1,6 @@
-﻿using DG.Tweening;
+using FirstLight.Inspector;
+using MainInstaller = FirstLight.Game.Utils.MainInstaller;
+using DG.Tweening;
 using DG.Tweening.Core;
 using DG.Tweening.Plugins.Options;
 using FirstLight.Game.Domains.VFX;
@@ -6,27 +8,26 @@ using FirstLight.Game.Ids;
 using FirstLight.Game.MonoComponent.Collections;
 using FirstLight.Game.Services;
 using FirstLight.Game.Utils;
-using FirstLight.Services;
+using GameLovers.Services;
 using Quantum;
 using Quantum.Systems;
-using Sirenix.OdinInspector;
 using UnityEngine;
 using UnityEngine.UI;
 
 namespace FirstLight.Game.MonoComponent.EntityViews
 {
-	[RequireComponent(typeof(EntityView))]
+	[RequireComponent(typeof(QuantumEntityView))]
 	public unsafe class KnockedOutPlayerViewMonoComponent : MonoBehaviour
 	{
 		private const float ANIMATION_DURATION = 0.333f;
 
-		[SerializeField, Required] private GameObject _indicatorsRoot;
-		[SerializeField, Required] private Image _reviveProgressIndicator;
-		[SerializeField, Required] private Image _rangeIndicator;
+		[SerializeField, InspectorField(Required = true)] private GameObject _indicatorsRoot;
+		[SerializeField, InspectorField(Required = true)] private Image _reviveProgressIndicator;
+		[SerializeField, InspectorField(Required = true)] private Image _rangeIndicator;
 
 		private IGameServices _services;
 		private IMatchServices _matchServices;
-		private EntityView _view;
+		private QuantumEntityView _view;
 		private TweenerCore<Vector3, Vector3, VectorOptions> _tweener;
 		private bool _circleActive;
 		private Quaternion _vfxInitialRotation;
@@ -40,7 +41,7 @@ namespace FirstLight.Game.MonoComponent.EntityViews
 		{
 			_services = MainInstaller.ResolveServices();
 			_matchServices = MainInstaller.ResolveMatchServices();
-			_view = GetComponent<EntityView>();
+			_view = GetComponent<QuantumEntityView>();
 			_view.OnEntityInstantiated.AddListener(OnEntityInstantiated);
 			_vfxInitialRotation = _indicatorsRoot.transform.rotation;
 			QuantumEvent.Subscribe<EventOnPlayerRevived>(this, OnPlayerRevived);

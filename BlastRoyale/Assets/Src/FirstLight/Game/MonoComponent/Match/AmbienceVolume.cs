@@ -1,3 +1,4 @@
+using MainInstaller = FirstLight.Game.Utils.MainInstaller;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -27,20 +28,20 @@ namespace FirstLight.Game.MonoComponent.Match
 		private void OnTriggerEnter(Collider other)
 		{
 			if (!other.TryGetComponent<PlayerCharacterViewMonoComponent>(out var player)) return;
-			
+
 			if (player.EntityRef == _matchServices.SpectateService.SpectatedPlayer.Value.Entity)
 			{
-				_services.MessageBrokerService.Publish(new PlayerEnteredAmbienceMessage(){Ambience = _ambienceType});
+				_services.MessageBrokerService.PublishSafe(new PlayerEnteredAmbienceMessage(){Ambience = _ambienceType});
 			}
 		}
 
 		private void OnTriggerExit(Collider other)
 		{
 			if (!other.TryGetComponent<PlayerCharacterViewMonoComponent>(out var player)) return;
-			
+
 			if (player.EntityRef == _matchServices.SpectateService.SpectatedPlayer.Value.Entity)
 			{
-				_services.MessageBrokerService.Publish(new PlayerLeftAmbienceMessage(){Ambience = _ambienceType});
+				_services.MessageBrokerService.PublishSafe(new PlayerLeftAmbienceMessage(){Ambience = _ambienceType});
 			}
 		}
 

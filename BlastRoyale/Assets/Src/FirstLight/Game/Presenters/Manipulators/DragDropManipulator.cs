@@ -12,17 +12,17 @@ namespace FirstLight.Game.Presenters.Manipulators
 	{
 		public event Action<VisualElement> OnStartDrag;
 		public event Action<VisualElement> OnEndDrag;
-		
+
 		/// <summary>
 		/// Will only allow dragging inside the parent element
 		/// </summary>
 		public bool OnlyInsideParent = false;
-		
+
 		/// <summary>
 		/// Cancel all event propagation when element is "draggable"
 		/// </summary>
 		public bool CancelEvents = true;
-		
+
 		private Vector2 _lastPos;
 		private PickingMode _originalPickingMode;
 
@@ -42,7 +42,7 @@ namespace FirstLight.Game.Presenters.Manipulators
 			target.UnregisterCallback<PointerUpEvent>(OnPointerUp, TrickleDown.TrickleDown);
 			target.UnregisterCallback<PointerMoveEvent>(OnPointerMove, TrickleDown.TrickleDown);
 		}
-		
+
 		private void OnPointerDown(PointerDownEvent ev)
 		{
 			if(CancelEvents) CancelEvent(ev);
@@ -65,14 +65,15 @@ namespace FirstLight.Game.Presenters.Manipulators
 			var currentPos = target.parent.WorldToLocal(ev.position);
 			if (OnlyInsideParent && !target.parent.worldBound.Contains(ev.position))
 				return;
-			target.transform.position -= (Vector3)(_lastPos - currentPos);
+			var position = target.resolvedStyle.translate - (Vector3)(_lastPos - currentPos);
+			target.style.translate = new Translate(position.x, position.y, position.z);
 			_lastPos = currentPos;
 		}
-		
+
 		private void CancelEvent(EventBase e)
 		{
-			e.PreventDefault();
 			e.StopImmediatePropagation();
+			target.focusController?.IgnoreEvent(e);
 		}
 	}
 }

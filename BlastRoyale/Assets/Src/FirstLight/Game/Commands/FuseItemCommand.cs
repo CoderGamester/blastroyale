@@ -1,3 +1,4 @@
+using GameLovers.Services.Commands;
 using Cysharp.Threading.Tasks;
 using FirstLight.Game.Ids;
 using FirstLight.Game.Logic;
@@ -8,7 +9,7 @@ using FirstLight.Server.SDK.Modules.Commands;
 namespace FirstLight.Game.Commands
 {
 	/// <summary>
-	/// Upgrades an Non-NFT item and awards the player resources 
+	/// Upgrades an equipment item and awards the player resources
 	/// </summary>
 	public struct FuseItemCommand : IGameCommand
 	{
@@ -28,7 +29,7 @@ namespace FirstLight.Game.Commands
 			foreach(var price in cost)
 			{
 				ctx.Logic.CurrencyLogic().DeductCurrency(price.Key, price.Value);
-				ctx.Services.MessageBrokerService().Publish(new CurrencyChangedMessage
+				ctx.Services.MessageBrokerService().PublishSafe(new CurrencyChangedMessage
 				{
 					Id = price.Key,
 					Change = -(int) price.Value,
@@ -39,7 +40,7 @@ namespace FirstLight.Game.Commands
 
 			logic.Fuse(Item);
 
-			ctx.Services.MessageBrokerService().Publish(new ItemFusedMessage
+			ctx.Services.MessageBrokerService().PublishSafe(new ItemFusedMessage
 			{
 				Id = Item,
 				GameId = info.Equipment.GameId,

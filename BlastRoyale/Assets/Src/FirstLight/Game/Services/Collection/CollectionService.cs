@@ -1,4 +1,4 @@
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
 using Cysharp.Threading.Tasks;
@@ -8,7 +8,7 @@ using FirstLight.Game.Data.DataTypes;
 using FirstLight.Game.Logic;
 using FirstLight.Game.Messages;
 using FirstLight.Game.Services.Collection.Handles;
-using FirstLight.SDK.Services;
+using GameLovers.Services;
 using FirstLight.Server.SDK.Modules.GameConfiguration;
 using Quantum;
 using UnityEngine;
@@ -23,7 +23,7 @@ namespace FirstLight.Game.Services.Collection
 		UniTask<Sprite> LoadCollectionItemSprite(ItemData item, bool instantiate = true, CancellationToken cancellationToken = default);
 
 		/// <summary>
-		/// Find the cosmetic of ids present in the group, 
+		/// Find the cosmetic of ids present in the group,
 		/// </summary>
 		/// <param name="group"></param>
 		/// <param name="returnDefault">If no skin was present for given group, return the default skin</param>

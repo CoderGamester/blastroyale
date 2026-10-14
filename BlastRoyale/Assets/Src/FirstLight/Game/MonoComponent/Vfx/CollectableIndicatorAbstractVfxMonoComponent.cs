@@ -1,6 +1,6 @@
+using FirstLight.Inspector;
 using FirstLight.Game.Domains.VFX;
 using Quantum;
-using Sirenix.OdinInspector;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -11,7 +11,7 @@ namespace FirstLight.Game.MonoComponent.Vfx
 	/// </summary>
 	public class CollectableIndicatorVfxMonoBehaviour : VfxMonoBehaviour
 	{
-		[SerializeField, Required] private Image _progressIndicator;
+		[SerializeField, InspectorField(Required = true)] private Image _progressIndicator;
 
 		private float _startTime;
 		private float _endTime;
@@ -40,11 +40,11 @@ namespace FirstLight.Game.MonoComponent.Vfx
 
 		private void UpdateView(CallbackUpdateView callback)
 		{
-			if (callback.Game.Frames.Verified.Culled(_entity))
+			if (callback.Game.Frames.Verified.IsPredictionCulled(_entity))
 			{
 				return;
 			}
-			
+
 			UpdateIndicator(callback.Game.Frames.Predicted.Time.AsFloat);
 		}
 

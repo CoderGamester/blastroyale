@@ -1,7 +1,7 @@
 using System.Collections;
 using FirstLight.Game.Data;
 using FirstLight.Game.Messages;
-using I2.Loc;
+using FirstLight.Game.Localization;
 using Quantum;
 using Quantum.Commands;
 using UnityEngine;
@@ -79,7 +79,7 @@ namespace FirstLight.Game.TestCases
 			yield return UIGame.WaitDropZoneSelectScreen();
 			yield return UIGame.SelectRandomPosition();
 			yield return UIGame.WaitForGameToEndAndGoToMenu(60 * 8);
-		
+
 		}
 	}
 }

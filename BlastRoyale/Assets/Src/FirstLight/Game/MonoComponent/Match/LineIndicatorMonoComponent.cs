@@ -1,6 +1,6 @@
+using FirstLight.Inspector;
 using FirstLight.Game.Utils;
 using Quantum;
-using Sirenix.OdinInspector;
 using UnityEngine;
 
 namespace FirstLight.Game.MonoComponent.Match
@@ -12,9 +12,9 @@ namespace FirstLight.Game.MonoComponent.Match
 	public class LineIndicatorMonoComponent : MonoBehaviour, IIndicator
 	{
 		private static readonly int _color = Shader.PropertyToID("_Color");
-		
+
 		[SerializeField] private Color _reloadColor = new Color(255, 64, 118);
-		[SerializeField, Required] private MeshRenderer _indicator;
+		[SerializeField, InspectorField(Required = true)] private MeshRenderer _indicator;
 		[SerializeField] private float _localHeight = 0.25f;
 
 		private Quaternion _rotation;
@@ -23,7 +23,7 @@ namespace FirstLight.Game.MonoComponent.Match
 		public bool VisualState => _indicator.enabled;
 		/// <inheritdoc />
 		public IndicatorVfxId IndicatorVfxId => IndicatorVfxId.Line;
-		
+
 		private void Awake()
 		{
 			_indicator.enabled = false;
@@ -49,7 +49,7 @@ namespace FirstLight.Game.MonoComponent.Match
 		}
 
 		/// <inheritdoc />
-		public void Init(EntityView playerEntityView)
+		public void Init(QuantumEntityView playerEntityView)
 		{
 			var cacheTransform = transform;
 
@@ -66,17 +66,17 @@ namespace FirstLight.Game.MonoComponent.Match
 			{
 				return;
 			}
-			
+
 			_rotation = Quaternion.LookRotation(new Vector3(position.x, 0f, position.y), Vector3.up);
 			transform.rotation = _rotation;
 		}
-		
+
 		/// <inheritdoc />
 		public void SetColor(Color c)
 		{
 			// Not implemented
 		}
-		
+
 		/// <inheritdoc />
 		public void ResetColor()
 		{

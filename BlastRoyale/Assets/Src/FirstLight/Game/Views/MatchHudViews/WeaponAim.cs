@@ -1,17 +1,17 @@
- using System.Linq;
+ using FirstLight.Inspector;
+using System.Linq;
 using FirstLight.FLogger;
 using FirstLight.Game.Domains.VFX;
 using FirstLight.Game.Ids;
  using FirstLight.Game.MonoComponent.EntityPrototypes;
  using FirstLight.Game.MonoComponent.EntityViews;
  using FirstLight.Game.Utils;
-using FirstLight.Services;
+using GameLovers.Services;
 using Photon.Deterministic;
 using Quantum;
  using Quantum.Physics2D;
  using Quantum.Physics3D;
 using Quantum.Systems;
-using Sirenix.OdinInspector;
 using UnityEngine;
 using Vector2 = UnityEngine.Vector2;
 using Vector3 = UnityEngine.Vector3;
@@ -29,10 +29,10 @@ namespace FirstLight.Game.Views.MatchHudViews
 	public unsafe class WeaponAim : VfxMonoBehaviour
 	{
 		private const QueryOptions _hitQuery = QueryOptions.HitDynamics | QueryOptions.HitKinematics | QueryOptions.HitStatics | QueryOptions.ComputeDetailedInfo;
-	
-		[Required, SerializeField] private LineRenderer _centerLineRenderer;
-		[Required, SerializeField] private LineRenderer _upperLineRenderer;
-		[Required, SerializeField] private LineRenderer _lowerLineRenderer;
+
+		[SerializeField, InspectorField(Required = true)] private LineRenderer _centerLineRenderer;
+		[SerializeField, InspectorField(Required = true)] private LineRenderer _upperLineRenderer;
+		[SerializeField, InspectorField(Required = true)] private LineRenderer _lowerLineRenderer;
 
 		private const int _minAngleVariation = 90;
 		private readonly Color _sideLineStartColor = new (0.13f, 0.13f, 0.13f);
@@ -45,18 +45,18 @@ namespace FirstLight.Game.Views.MatchHudViews
 		private FP _variationRange;
 		private FP _range;
 		private FP _angleVariation = 0;
-		private EntityView _view;
+		private QuantumEntityView _view;
 		private FPVector2 _aim;
 		private FPVector2 _lastAim;
 		private int _lastFrameUpdate;
 
-		public void SetView(EntityView view)
+		public void SetView(QuantumEntityView view)
 		{
 			_view = view;
 			transform.parent = _view.transform;
 			_playerView = _view.GetComponent<PlayerCharacterMonoComponent>().PlayerView;
 		}
-		
+
 		void OnEnable()
 		{
 			_upperLineRenderer.gameObject.SetActive(_angleVariation > _minAngleVariation);
@@ -74,15 +74,15 @@ namespace FirstLight.Game.Views.MatchHudViews
 		public void UpdateWeapon(Frame f, EntityRef entity, QuantumWeaponConfig newWeapon)
 		{
 			if (!f.TryGet<Stats>(entity, out var stats)) return;
-			
+
 			_range = stats.GetStatData(StatType.AttackRange).StatValue;
 			_angleVariation = newWeapon.MinAttackAngle;
 			AdjustDottedLine(_centerLineRenderer);
-			
+
 			// X and Y are similar to the main bullet collider
 			var colliderSize = new FPVector2(FP._0_10 + FP._0_01, _range / 2);
 			_shape = Shape2D.CreateBox(colliderSize);
-			
+
 			if (_angleVariation > _minAngleVariation)
 			{
 				_upperLineRenderer.gameObject.SetActive(true);
@@ -109,7 +109,7 @@ namespace FirstLight.Game.Views.MatchHudViews
 
 			if(ShouldReRenderLines()) ReRenderLines();
 		}
-		
+
 		/// <summary>
 		/// Sets the color of line renderers.
 		/// </summary>
@@ -135,7 +135,7 @@ namespace FirstLight.Game.Views.MatchHudViews
 			_upperLineRenderer.startColor = _sideLineStartColor;
 			_upperLineRenderer.endColor = _sideLineEndColor;
 		}
-		
+
 		/// <summary>
 		// We attempt to render the line update on the begining of the frame it was changed
 		// to avoid rendering the update on the next frame if the update was done after rendering was already done
@@ -152,7 +152,7 @@ namespace FirstLight.Game.Views.MatchHudViews
 		private void ReRenderLines()
 		{
 			if (!QuantumRunner.Default.IsDefinedAndRunning()) return;
-			
+
 			var f = QuantumRunner.Default.Game.Frames.Verified;
 			if (!f.Unsafe.TryGetPointer<PlayerCharacter>(_view.EntityRef, out var playerCharacter))
 			{
@@ -169,12 +169,12 @@ namespace FirstLight.Game.Views.MatchHudViews
 			origin += offset + ProjectileSystem.CAMERA_CORRECTION;
 
 			DrawAimLine(f, _centerLineRenderer, _view.EntityRef, origin, end);
-			
+
 			if (_angleVariation > _minAngleVariation)
 			{
 				end = FPVector2.Rotate(_aim, (-_angleVariation / FP._2) * FP.Deg2Rad) * _variationRange;
 				DrawAimLine(f, _lowerLineRenderer, _view.EntityRef, origin, end);
-				
+
 				end = FPVector2.Rotate(_aim, (_angleVariation / FP._2) * FP.Deg2Rad) * _variationRange;
 				DrawAimLine(f, _upperLineRenderer, _view.EntityRef, origin, end);
 			}
@@ -191,9 +191,9 @@ namespace FirstLight.Game.Views.MatchHudViews
 			var centerForShape = origin + (direction / 2);
 
 			var rot = directionNormalized.ToRotation();
-			
+
 			_hits = f.Physics2D.OverlapShape(centerForShape, rot, _shape, f.Layers.GetLayerMask(PhysicsLayers.PLAYERS, PhysicsLayers.OBSTACLES), _hitQuery);
-			
+
 			if (_hits.Count > 0)
 			{
 				var closestHit = FPVector2.Zero;
@@ -201,7 +201,7 @@ namespace FirstLight.Game.Views.MatchHudViews
 				for (var i = 0; i < _hits.Count; i++)
 				{
 					var hit = _hits[i];
-					
+
 					var checkSqrDistance = FPVector2.DistanceSquared(_hits[i].Point, origin);
 					if (checkSqrDistance < smallestDistanceSqr && IsValidRaycastHit(f, &hit, entity))
 					{
@@ -216,7 +216,7 @@ namespace FirstLight.Game.Views.MatchHudViews
 			}
 			return FPVector2.Zero;
 		}
-		
+
 		/// <summary>
 		/// TODO: Remove this method and use the above function when quantum fixes getting the collision point
 		/// </summary>
@@ -237,14 +237,14 @@ namespace FirstLight.Game.Views.MatchHudViews
 				}
 				return v.Point;
 			}
-			
+
 		}
 
 		private void DrawAimLine(Frame f, LineRenderer line, EntityRef entity, FPVector2 origin, FPVector2 direction)
 		{
 			var originUnity = origin;
 			line.SetPosition(0, originUnity.ToUnityVector3());
-			
+
 			var hit = GetHitLinecast(f, entity, origin, direction);
 			var lineEnd = originUnity + direction;
 

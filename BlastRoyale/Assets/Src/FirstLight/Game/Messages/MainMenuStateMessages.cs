@@ -3,7 +3,7 @@ using FirstLight.Game.Data;
 using FirstLight.Game.Ids;
 using Photon.Realtime;
 using Quantum;
-using FirstLight.SDK.Services;
+using GameLovers.Services;
 
 namespace FirstLight.Game.Messages
 {
@@ -26,7 +26,7 @@ namespace FirstLight.Game.Messages
 	public struct GameModeScreenOpenedMessage : IMessage
 	{
 	}
-	
+
 	public struct MatchInfoPopupOpenedMessage : IMessage
 	{
 	}
@@ -67,7 +67,7 @@ namespace FirstLight.Game.Messages
 	{
 		public CustomMatchSettings Settings;
 	}
-	
+
 	/// <summary>
 	/// Triggered everytime player joins a custom match simulation
 	/// </summary>

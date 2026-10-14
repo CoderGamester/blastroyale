@@ -1,3 +1,4 @@
+using GameLovers.GameData;
 using System;
 using System.Collections.Generic;
 using Photon.Deterministic;
@@ -14,7 +15,7 @@ namespace FirstLight.Game.Configs
 		public FP BasePower;
 		public FP DurabilityCostIncreasePerPoint;
 	}
-	
+
 	/// <summary>
 	/// Scriptable Object tool to import the <seealso cref="RepairDataConfig"/> sheet data
 	/// </summary>

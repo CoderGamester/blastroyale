@@ -1,3 +1,6 @@
+using IDataProvider = FirstLight.Server.SDK.Models.IDataProvider;
+using FirstLight.Game.Utils;
+using GameLovers.GameData;
 
 using FirstLight.Game.Data;
 using FirstLight.Server.SDK.Models;
@@ -16,7 +19,7 @@ namespace FirstLight.Game.Logic
 		bool HasTriggeredSegmentationAction(int actionIdentifier);
 
 	}
-	
+
 	/// <summary>
 	/// Logic to handle liveops data
 	/// </summary>
@@ -31,7 +34,7 @@ namespace FirstLight.Game.Logic
 	/// <inheritdoc cref="IPlayerLogic"/>
 	public class LiveopsLogic : AbstractBaseLogic<LiveopsData>, ILiveopsLogic, IGameLogicInitializer
 	{
-		private IObservableList<int> _triggeredActions;
+		private ObservableList<int> _triggeredActions;
 
 		/// <inheritdoc />
 		public IObservableListReader<int> TriggeredActions => _triggeredActions;
@@ -44,12 +47,10 @@ namespace FirstLight.Game.Logic
 		public void ReInit()
 		{
 			{
-				var listeners = _triggeredActions.GetObservers();
-				_triggeredActions = new ObservableList<int>(Data.TriggeredActions);
-				_triggeredActions.AddObservers(listeners);
+				_triggeredActions.Rebind(Data.TriggeredActions);
 			}
-			
-			_triggeredActions.InvokeUpdate();
+
+			_triggeredActions.NotifyAll();
 		}
 
 		public LiveopsLogic(IGameLogic gameLogic, IDataProvider dataProvider) : base(gameLogic, dataProvider)

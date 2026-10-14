@@ -1,3 +1,4 @@
+using GameLovers.GameData;
 using System;
 using System.Collections.Generic;
 using Photon.Deterministic;
@@ -13,7 +14,7 @@ namespace FirstLight.Game.Configs
 		public uint FragmentReward;
 		public uint CoinReward;
 	}
-	
+
 	/// <summary>
 	/// Scriptable Object tool to import the <seealso cref="ScrapConfig"/> sheet data
 	/// </summary>

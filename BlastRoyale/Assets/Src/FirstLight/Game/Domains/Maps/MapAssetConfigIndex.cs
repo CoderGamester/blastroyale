@@ -1,12 +1,12 @@
+using FirstLight.Inspector;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using Cysharp.Threading.Tasks;
-using FirstLight.AssetImporter;
+using GameLovers.Services.AssetsImporter;
 using FirstLight.Game.Utils;
 using FirstLight.Server.SDK.Modules.GameConfiguration;
 using Quantum;
-using Sirenix.OdinInspector;
 using TMPro;
 using UnityEditor;
 using UnityEngine;
@@ -28,7 +28,7 @@ namespace FirstLight.Game.Configs
 			public AssetReferenceT<MapAssetConfig> Ref;
 		}
 
-		[TableList] public List<Entry> Configs;
+		 public List<Entry> Configs;
 
 		/// <summary>
 		/// Return a new asset reference for the map config, so you can loadaddressable directly on it
@@ -52,7 +52,7 @@ namespace FirstLight.Game.Configs
 		}
 
 #if UNITY_EDITOR
-		[Button]
+		[InspectorAction]
 		public void Fill()
 		{
 			var assetPaths = AssetDatabase.FindAssets(string.Format("t:{0}", typeof(MapAssetConfig)))

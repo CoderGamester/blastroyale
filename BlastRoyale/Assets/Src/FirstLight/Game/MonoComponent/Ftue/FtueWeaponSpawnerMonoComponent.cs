@@ -1,7 +1,7 @@
+using FirstLight.Inspector;
 using FirstLight.Game.Utils;
 using Quantum;
 using Quantum.Commands;
-using Sirenix.OdinInspector;
 using UnityEngine;
 using UnityEngine.Playables;
 
@@ -12,7 +12,7 @@ namespace FirstLight.Game.MonoComponent.Ftue
 	/// </summary>
 	public class FtueWeaponSpawnerMonoComponent : MonoBehaviour
 	{
-		[SerializeField, Required] private PlayableDirector _timeline;
+		[SerializeField, InspectorField(Required = true)] private PlayableDirector _timeline;
 		[SerializeField] private GameId _weapon;
 
 		private void Awake()
@@ -24,7 +24,7 @@ namespace FirstLight.Game.MonoComponent.Ftue
 		{
 			QuantumRunner.Default.Game.SendCommand(new CheatWeaponSpawnCommand
 			{
-				Position = transform.position.ToFPVector2(), 
+				Position = transform.position.ToFPVector2(),
 				Weapon = _weapon
 			});
 		}

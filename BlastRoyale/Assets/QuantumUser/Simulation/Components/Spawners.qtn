@@ -1,0 +1,31 @@
+component CollectablePlatformSpawner
+{
+	[HideInInspector] EntityRef Collectable;
+	[HideInInspector] FP NextSpawnTime;
+	[HideInInspector] UInt32 SpawnCount;
+	UInt32 RespawnTimeInSec;
+	UInt32 InitialSpawnDelayInSec;
+	GameId GameId;
+	Int32 RarityModifier;
+	bool Disabled;
+	bool DoNotDestroy;
+}
+
+enum SpawnerType
+{
+    Any,
+    Player,
+    AnyBot,
+    BotOfType
+}
+
+component PlayerSpawner
+{
+	SpawnerType SpawnerType;
+	BotBehaviourType BehaviourType;
+}
+
+component AirDropSpawner
+{
+
+}

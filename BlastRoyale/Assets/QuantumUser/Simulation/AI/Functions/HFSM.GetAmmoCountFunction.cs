@@ -1,0 +1,18 @@
+using Photon.Deterministic;
+using System;
+
+namespace Quantum
+{
+	/// <summary>
+	/// Returns the player's current ammo count
+	/// </summary>
+	[Serializable]
+	public class GetAmmoCountFunction : AIFunction<FP>
+	{
+		/// <inheritdoc />
+		public unsafe override FP Execute(Frame f, EntityRef e, ref AIContext aiContext)
+		{
+			return f.Unsafe.GetPointer<Stats>(e)->GetCurrentAmmo();
+		}
+	}
+}

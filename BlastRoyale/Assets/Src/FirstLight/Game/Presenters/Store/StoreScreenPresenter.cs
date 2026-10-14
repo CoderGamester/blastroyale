@@ -1,3 +1,4 @@
+using MainInstaller = FirstLight.Game.Utils.MainInstaller;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,8 +12,8 @@ using FirstLight.Game.Services;
 using FirstLight.Game.UIElements;
 using FirstLight.Game.Utils;
 using FirstLight.Game.Views.UITK;
-using FirstLight.UIService;
-using I2.Loc;
+using FirstLight.Game.UI;
+using FirstLight.Game.Localization;
 using Quantum;
 using UnityEngine;
 using UnityEngine.UIElements;
@@ -64,7 +65,6 @@ namespace FirstLight.Game.Presenters.Store
 			_scroll = Root.Q<ScrollView>("ProductScrollView").Required();
 			_header.backClicked = Data.OnBackClicked;
 
-			Root.Q<CryptoCurrenciesDisplayElement>("CryptoCurrency").AttachView(this, out CryptoCurrenciesDisplayView _);
 			Root.Q<CurrencyDisplayElement>("Coins").AttachView(this, out CurrencyDisplayView _);
 			Root.Q<CurrencyDisplayElement>("BlastBucks").AttachView(this, out CurrencyDisplayView _);
 
@@ -130,7 +130,6 @@ namespace FirstLight.Game.Presenters.Store
 			SetupCreatorsCodeSupport();
 		}
 
-
 		private ProductFlags SetupBuyNotAllowedFlags(GameProduct product, ProductFlags flags)
 		{
 			var trackedPurchasedItem = GetTrackedPurchasedItem(product);
@@ -176,7 +175,7 @@ namespace FirstLight.Game.Presenters.Store
 			{
 				name = "CategoryButton",
 			};
-			
+
 			categoryButton.AddToClassList(USS_CATEGORY_BUTTON);
 
 			if (_gameServices.IAPService.HasStoreItemsUpdate(categoryName))
@@ -185,11 +184,11 @@ namespace FirstLight.Game.Presenters.Store
 				{
 					name = "CategoryNotification"
 				};
-				
+
 				updateNotification.AddToClassList(USS_NOTIFICATION_ICON);
 				categoryButton.RegisterCallback<GeometryChangedEvent>(ResolveCategoryNewNotificationPosition);
 				categoryButton.Add(updateNotification);
-				
+
 			}
 
 			return categoryButton;
@@ -203,14 +202,13 @@ namespace FirstLight.Game.Presenters.Store
 			if (categoryNotification != null)
 			{
 				var textSize = categoryButton.MeasureTextSize(categoryButton.text, 0, VisualElement.MeasureMode.Undefined, 0, VisualElement.MeasureMode.Undefined);
-				
+
 				categoryNotification.style.position = Position.Absolute;
 				categoryNotification.style.left = (categoryButton.resolvedStyle.width + textSize.x) / 2 - 10; // Using a 10px offset to slightly shift the notification icon over the text for better visual alignment.
 				categoryNotification.style.bottom = (categoryButton.resolvedStyle.height + textSize.y) / 5;
 			}
 		}
 
-		
 		private bool IsNewOnStore(GameProduct product)
 		{
 			return _gameServices.IAPService.HasStoreItemsUpdate(null, product.PlayfabProductConfig.CatalogItem.ItemId);

@@ -1,4 +1,4 @@
-using Sirenix.OdinInspector;
+using FirstLight.Inspector;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -8,7 +8,7 @@ public class CustomNavMeshGenerator : MonoBehaviour
 {
 	public GameObject[] targetObjects;
 
-	[Button("Generate Mesh")]
+	[InspectorAction("Generate Mesh")]
 	public void CustomButtonClicked()
 	{
 		// Code to execute when the button is clicked
@@ -128,4 +128,3 @@ public class CustomNavMeshGenerator : MonoBehaviour
 		return worldBounds;
 	}
 }
-

@@ -1,13 +1,14 @@
+using GameLovers.Services.Commands;
+using IDataProvider = FirstLight.Server.SDK.Models.IDataProvider;
 using System.Collections.Generic;
 using FirstLight.Game.Data.DataTypes;
 using FirstLight.Game.Messages;
 using FirstLight.Game.Services;
 using FirstLight.Game.Services.Analytics;
-using FirstLight.SDK.Services;
+using GameLovers.Services;
 using FirstLight.Server.SDK.Models;
 using FirstLight.Server.SDK.Modules.Commands;
 using FirstLight.Server.SDK.Modules.GameConfiguration;
-using FirstLight.Services;
 using FirstLightServerSDK.Services;
 
 namespace FirstLight.Game.Logic
@@ -70,14 +71,13 @@ namespace FirstLight.Game.Logic
 
 		/// <inheritdoc cref="IPlayerStoreDataProvider"/>
 		IPlayerStoreDataProvider PlayerStoreDataProvider { get; }
-		
+
 		IRemoteConfigProvider RemoteConfigProvider { get; }
-		
+
 		IBuffLogic BuffsLogic { get; }
-		
+
 		IGameEventsDataProvider GameEventsDataProvider { get; }
-		
-		IWeb3DataProvider Web3Data { get; }
+
 	}
 
 	/// <summary>
@@ -128,15 +128,14 @@ namespace FirstLight.Game.Logic
 
 		/// <inheritdoc cref="IPlayerStoreLogic"/>
 		IPlayerStoreLogic PlayerStoreLogic { get; }
-		
+
 		/// <inheritdoc cref="ILiveopsLogic"/>
 		ILiveopsLogic LiveopsLogic { get; }
 
 		ICollectionLogic CollectionLogic { get; }
 
 		IGameEventsLogic GameEventsLogic { get; }
-		
-		IWeb3Logic Web3Logic { get; }
+
 	}
 
 	/// <inheritdoc cref="IGameLogic"/>
@@ -189,8 +188,6 @@ namespace FirstLight.Game.Logic
 		/// <inheritdoc />
 		public IPlayerStoreDataProvider PlayerStoreDataProvider => PlayerStoreLogic;
 
-		public IWeb3DataProvider Web3Data => Web3Logic;
-		
 		public IRemoteConfigProvider RemoteConfigProvider { get; set; }
 		public IBuffLogic BuffsLogic { get; set; }
 
@@ -231,15 +228,14 @@ namespace FirstLight.Game.Logic
 
 		/// <inheritdoc />
 		public IPlayerStoreLogic PlayerStoreLogic { get; }
-		
+
 		/// <inheritdoc />
 		public ILiveopsLogic LiveopsLogic { get; }
 
 		public ICollectionLogic CollectionLogic { get; }
 
 		public IGameEventsLogic GameEventsLogic { get; }
-				
-		public IWeb3Logic Web3Logic { get; }
+
 		public IGameEventsDataProvider GameEventsDataProvider => GameEventsLogic;
 
 		public GameLogic(IMessageBrokerService messageBroker, IRemoteConfigProvider remoteConfigProvider, ITimeService timeService,
@@ -266,8 +262,7 @@ namespace FirstLight.Game.Logic
 			CollectionLogic = new CollectionLogic(this, dataProvider);
 			BuffsLogic = new BuffsLogic(this, dataProvider);
 			GameEventsLogic = new GameEventsLogic(this, dataProvider);
-			Web3Logic = new Web3Logic(this, dataProvider);
-			
+
 			_logicInitializers = new List<IGameLogicInitializer>();
 
 			_logicInitializers.Add(UniqueIdLogic as IGameLogicInitializer);
@@ -282,7 +277,6 @@ namespace FirstLight.Game.Logic
 			_logicInitializers.Add(LiveopsLogic as IGameLogicInitializer);
 			_logicInitializers.Add(CollectionLogic as IGameLogicInitializer);
 			_logicInitializers.Add(BuffsLogic as IGameLogicInitializer);
-			_logicInitializers.Add(Web3Logic as IGameLogicInitializer);
 		}
 
 		/// <inheritdoc />
@@ -301,7 +295,7 @@ namespace FirstLight.Game.Logic
 				logicInitializer.ReInit();
 			}
 
-			MessageBrokerService.Publish(new DataReinitializedMessage());
+			MessageBrokerService.PublishSafe(new DataReinitializedMessage());
 		}
 	}
 
@@ -357,7 +351,6 @@ namespace FirstLight.Game.Logic
 			container.Add(logic.RngLogic);
 			container.Add(logic.BuffsLogic);
 			container.Add(logic.GameEventsLogic);
-			container.Add(logic.Web3Logic);
 			return container;
 		}
 
@@ -375,6 +368,5 @@ namespace FirstLight.Game.Logic
 		public static IRngLogic RngLogic(this LogicContainer c) => c.Get<IRngLogic>();
 		public static IBuffLogic BuffLogic(this LogicContainer c) => c.Get<IBuffLogic>();
 		public static IGameEventsLogic GameEvents(this LogicContainer c) => c.Get<IGameEventsLogic>();
-		public static IWeb3Logic Web3(this LogicContainer c) => c.Get<IWeb3Logic>();
 	}
 }

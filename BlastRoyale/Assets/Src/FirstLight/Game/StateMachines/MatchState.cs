@@ -1,3 +1,5 @@
+using MainInstaller = FirstLight.Game.Utils.MainInstaller;
+using IAssetAdderService = FirstLight.Game.Services.IAssetAdderService;
 using System;
 using System.Threading.Tasks;
 using Assets.Src.FirstLight.Game.Commands.QuantumLogicCommands;
@@ -14,10 +16,10 @@ using FirstLight.Game.Services;
 using FirstLight.Game.Services.RoomService;
 using FirstLight.Game.Utils;
 using FirstLight.Server.SDK.Modules.Commands;
-using FirstLight.Services;
-using FirstLight.Statechart;
-using FirstLight.UIService;
-using I2.Loc;
+using GameLovers.Services;
+using GameLovers.StatechartMachine;
+using FirstLight.Game.UI;
+using FirstLight.Game.Localization;
 using Photon.Realtime;
 using Quantum;
 using UnityEngine;
@@ -50,19 +52,19 @@ namespace FirstLight.Game.StateMachines
 			public SimulationResult Simulation;
 		}
 
-		public static Data SharedData = new Data(); // DEATH TO THE STATE MACHINE  
+		public static Data SharedData = new Data(); // DEATH TO THE STATE MACHINE
 
 		private readonly GameSimulationState _gameSimulationState;
 		private readonly IGameServices _services;
 		private readonly IGameDataProvider _dataProvider;
 		private readonly IInternalGameNetworkService _networkService;
 		private readonly IRoomService _roomService;
-		private readonly IDataService _dataService;
+		private readonly IClientDataService _dataService;
 		private readonly IAssetAdderService _assetAdderService;
 		private IMatchServices _matchServices;
 		private Action<IStatechartEvent> _statechartTrigger;
 
-		public MatchState(IGameServices services, IDataService dataService, IInternalGameNetworkService networkService,
+		public MatchState(IGameServices services, IClientDataService dataService, IInternalGameNetworkService networkService,
 						  IGameDataProvider gameDataProvider,
 						  IAssetAdderService assetAdderService, Action<IStatechartEvent> statechartTrigger, IRoomService roomService)
 		{
@@ -280,7 +282,7 @@ namespace FirstLight.Game.StateMachines
 
 			FLog.Verbose("Quantum Logic Command Received: " + ev.CommandType.ToString());
 
-			_services.MessageBrokerService.Publish(new BeforeSimulationCommand()
+			_services.MessageBrokerService.PublishSafe(new BeforeSimulationCommand()
 			{
 				Game = game,
 				Type = ev.CommandType
@@ -373,7 +375,7 @@ namespace FirstLight.Game.StateMachines
 		private async UniTaskVoid MatchStateEndTrigger(IWaitActivity activity)
 		{
 			// Workaround to triggering statechart events on enter/exit
-			// Necessary for audio to play at correct time, but this can't be called OnEnter or OnExit, or the 
+			// Necessary for audio to play at correct time, but this can't be called OnEnter or OnExit, or the
 			// state machine ends up working very strangely.
 			// FIX THIS SHIT = 5000 TACOS
 			await UniTask.NextFrame();
@@ -384,7 +386,7 @@ namespace FirstLight.Game.StateMachines
 
 		private void PublishMatchEnded(bool isDisconnected, bool isPlayerQuit, QuantumGame game)
 		{
-			_services.MessageBrokerService.Publish(new MatchEndedMessage()
+			_services.MessageBrokerService.PublishSafe(new MatchEndedMessage()
 			{
 				Game = game,
 				IsDisconnected = isDisconnected,
@@ -402,7 +404,7 @@ namespace FirstLight.Game.StateMachines
 			_matchServices.FrameSnapshotService.ClearFrameSnapshot();
 			if (playerQuit)
 			{
-				_services.MessageBrokerService.Publish(new LeftBeforeMatchFinishedMessage());
+				_services.MessageBrokerService.PublishSafe(new LeftBeforeMatchFinishedMessage());
 			}
 		}
 
@@ -410,7 +412,7 @@ namespace FirstLight.Game.StateMachines
 		{
 			return SharedData.Simulation == Data.SimulationResult.Error
 				|| QuantumRunner.Default == null
-				|| QuantumRunner.Default.IsDestroyed()
+				|| QuantumRunner.Default.UnityObject == null
 				|| NetworkUtils.IsOfflineOrDisconnected();
 		}
 
@@ -440,17 +442,23 @@ namespace FirstLight.Game.StateMachines
 
 		private void StopSimulation()
 		{
-			_services.MessageBrokerService.Publish(new SimulationEndedMessage {Game = QuantumRunner.Default?.Game});
+			_services.MessageBrokerService.PublishSafe(new SimulationEndedMessage {Game = QuantumRunner.Default?.Game});
 			if (QuantumRunner.Default != null && QuantumRunner.Default.IsRunning)
 			{
 #if UNITY_EDITOR
 				if (FeatureFlags.GetLocalConfiguration().RecordQuantumInput)
 				{
-					Quantum.Editor.ReplayMenu.ExportDialogReplayAndDB(QuantumRunner.Default.Game, new QuantumUnityJsonSerializer(), ".json");
+					var replay = QuantumRunner.Default.Game.GetRecordedReplay(includeChecksums: (QuantumRunner.Default.RecordingFlags & RecordingFlags.Checksums) != 0, includeDb: true);
+					if (replay != null)
+					{
+						var path = System.IO.Path.Combine(UnityEngine.Application.persistentDataPath, "blast-royale-replay-" + DateTime.UtcNow.ToString("yyyyMMdd-HHmmss") + ".json");
+						System.IO.File.WriteAllText(path, UnityEngine.JsonUtility.ToJson(replay));
+						FLog.Info("Saved Quantum replay to " + path);
+					}
 				}
 #endif
 				_matchServices.MatchEndDataService.Reload();
-				QuantumRunner.ShutdownAll(true);
+				QuantumRunner.ShutdownAll();
 			}
 		}
 

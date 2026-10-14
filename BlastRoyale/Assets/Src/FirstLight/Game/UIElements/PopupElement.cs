@@ -1,4 +1,4 @@
-using I2.Loc;
+using FirstLight.Game.Localization;
 using UnityEngine.UIElements;
 
 namespace FirstLight.Game.UIElements
@@ -6,9 +6,16 @@ namespace FirstLight.Game.UIElements
 	/// <summary>
 	/// Displays the base popup
 	/// </summary>
-	public class PopupElement : VisualElement
+	[UxmlElement]
+	public partial class PopupElement : VisualElement
 	{
-		private string titleLocalizationKey { get; set; }
+		private string _titleLocalizationKey;
+		[UxmlAttribute("title-localization-key")]
+		private string titleLocalizationKey
+		{
+			get => _titleLocalizationKey;
+			set => Localize(value);
+		}
 
 		private const string UssPopup = "popup-element";
 		private const string UssPopupFront = UssPopup + "__front";
@@ -53,31 +60,13 @@ namespace FirstLight.Game.UIElements
 			blocker.name = "Blocker";
 			blocker.AddToClassList(UssPopupBlocker);
 			frontPopup.Add(blocker);
+			Localize(null);
 		}
 
 		public void Localize(string key)
 		{
-			titleLocalizationKey = key;
-			_title.text = LocalizationManager.TryGetTranslation(key, out var translation) ? translation : $"#{key}#";
-		}
-
-		public new class UxmlFactory : UxmlFactory<PopupElement, UxmlTraits>
-		{
-		}
-
-		public new class UxmlTraits : VisualElement.UxmlTraits
-		{
-			UxmlStringAttributeDescription _localizationKeyAttribute = new ()
-			{
-				name = "title-localization-key",
-				use = UxmlAttributeDescription.Use.Required
-			};
-
-			public override void Init(VisualElement ve, IUxmlAttributes bag, CreationContext cc)
-			{
-				base.Init(ve, bag, cc);
-				((PopupElement) ve).Localize(_localizationKeyAttribute.GetValueFromBag(bag, cc));
-			}
+			_titleLocalizationKey = key;
+			_title.text = GameLocalization.TryGetTranslation(key, out var translation) ? translation : $"#{key}#";
 		}
 	}
 }

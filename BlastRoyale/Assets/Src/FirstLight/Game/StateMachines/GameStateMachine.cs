@@ -7,9 +7,9 @@ using FirstLight.Game.Logic;
 using FirstLight.Game.Presenters;
 using FirstLight.Game.Services;
 using FirstLight.Game.Utils;
-using FirstLight.Statechart;
+using GameLovers.StatechartMachine;
 using FirstLightServerSDK.Services;
-using I2.Loc;
+using FirstLight.Game.Localization;
 using Quantum.Systems.Bots;
 using Unity.Services.UserReporting;
 using Unity.Services.UserReporting.Client;
@@ -28,7 +28,7 @@ namespace FirstLight.Game.StateMachines
 	/// </summary>
 	public class GameStateMachine : IGameStateMachine
 	{
-		private readonly Statechart.Statechart _statechart;
+		private readonly GameLovers.StatechartMachine.Statechart _statechart;
 		private readonly AuthenticationState _authenticationState;
 		private readonly AudioState _audioState;
 		private readonly NetworkState _networkState;
@@ -51,7 +51,7 @@ namespace FirstLight.Game.StateMachines
 			_tutorialState = new TutorialState(services, Trigger);
 			_coreLoopState = new CoreLoopState(_reconnection, services, gameLogic, services.DataService, networkService, assetAdderService, Trigger,
 				services.RoomService);
-			_statechart = new Statechart.Statechart(Setup);
+			_statechart = new GameLovers.StatechartMachine.Statechart(Setup);
 		}
 
 		/// <inheritdoc cref="IStatechart.Run"/>
@@ -67,7 +67,11 @@ namespace FirstLight.Game.StateMachines
 
 		public string GetCurrentStateDebug()
 		{
-			return _statechart.DebugCurrentState();
+			#if UNITY_EDITOR
+			return _statechart.CurrentState;
+#else
+			return "Runtime state tracing unavailable";
+#endif
 		}
 
 		private void Setup(IStateFactory stateFactory)
@@ -107,14 +111,14 @@ namespace FirstLight.Game.StateMachines
 
 			_services.GenericDialogService.OpenButtonDialog(ScriptLocalization.UITShared.error, desc, false, confirmButton);
 #else
-			var button = new FirstLight.NativeUi.AlertButton
+			var button = new GameLovers.MobileServices.NativeUi.AlertButton
 			{
 				Callback = () => { _services.QuitGame("Closing no internet popup"); },
-				Style = FirstLight.NativeUi.AlertButtonStyle.Negative,
+				Style = GameLovers.MobileServices.NativeUi.AlertButtonStyle.Cancel,
 				Text = ScriptLocalization.General.ExitGame
 			};
 
-			FirstLight.NativeUi.NativeUiService.ShowAlertPopUp(false, ScriptLocalization.General.NoInternet,
+			GameLovers.MobileServices.NativeUi.NativeUiService.ShowAlertPopUp(false, ScriptLocalization.General.NoInternet,
 				ScriptLocalization.General.NoInternetDescription, button);
 #endif
 		}

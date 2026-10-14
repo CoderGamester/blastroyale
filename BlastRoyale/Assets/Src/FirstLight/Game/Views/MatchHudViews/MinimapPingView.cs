@@ -1,6 +1,7 @@
+using FirstLight.Inspector;
+using GameLovers.Services.Pooling;
 using DG.Tweening;
-using FirstLight.Services;
-using Sirenix.OdinInspector;
+using GameLovers.Services;
 using UnityEngine;
 
 namespace FirstLight.Game.Views.MatchHudViews
@@ -15,10 +16,10 @@ namespace FirstLight.Game.Views.MatchHudViews
 		/// </summary>
 		public Vector3 ViewportPosition { get; set; }
 
-		[SerializeField, Required] private RectTransform _container;
-		[SerializeField, Required] private RectTransform _rectTransform;
+		[SerializeField, InspectorField(Required = true)] private RectTransform _container;
+		[SerializeField, InspectorField(Required = true)] private RectTransform _rectTransform;
 
-		[SerializeField, Title("Animation")] private Ease _showEase = Ease.OutSine;
+		[SerializeField, UnityEngine.Header("Animation")] private Ease _showEase = Ease.OutSine;
 		[SerializeField] private float _showDuration = 0.3f;
 		[SerializeField] private float _shownScale = 0.4f;
 		[SerializeField] private Ease _hideEase = Ease.InSine;
@@ -29,7 +30,7 @@ namespace FirstLight.Game.Views.MatchHudViews
 			_rectTransform.DOKill();
 
 			gameObject.SetActive(true);
-			
+
 			_rectTransform.localScale = Vector3.zero;
 			_rectTransform.DOScale(Vector3.one * _shownScale, _showDuration).SetEase(_showEase);
 		}
@@ -39,7 +40,7 @@ namespace FirstLight.Game.Views.MatchHudViews
 			_rectTransform.DOScale(Vector3.zero, _hideDuration).SetEase(_hideEase)
 				.OnComplete(() => { gameObject.SetActive(false); });
 		}
-		
+
 		/// <summary>
 		/// Updates the anchoredPosition, clamping it to a circle within the container.
 		/// </summary>

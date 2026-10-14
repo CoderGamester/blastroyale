@@ -1,3 +1,4 @@
+using GameLovers.GameData;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -48,7 +49,6 @@ namespace FirstLight.Game.Infos
 		public Pair<GameId, uint> RepairCost;
 		public uint CurrentDurability;
 		public bool IsEquipped;
-		public bool IsNft;
 		public int MaxLevel;
 		public Dictionary<EquipmentStatType, float> Stats;
 
@@ -59,36 +59,8 @@ namespace FirstLight.Game.Infos
 
 		public override string ToString()
 		{
-			return $"{nameof(Id)}: {Id}, {nameof(Equipment)}: {Equipment}, {nameof(Manufacturer)}: {Manufacturer}, {nameof(ScrappingValue)}: {ScrappingValue}, {nameof(UpgradeCost)}: {UpgradeCost}, {nameof(FuseCost)}: {FuseCost}, {nameof(RepairCost)}: {RepairCost}, {nameof(CurrentDurability)}: {CurrentDurability}, {nameof(IsEquipped)}: {IsEquipped}, {nameof(IsNft)}: {IsNft}, {nameof(MaxLevel)}: {MaxLevel}, {nameof(Stats)}: {Stats}, {nameof(IsBroken)}: {IsBroken}";
+			return $"{nameof(Id)}: {Id}, {nameof(Equipment)}: {Equipment}, {nameof(Manufacturer)}: {Manufacturer}, {nameof(ScrappingValue)}: {ScrappingValue}, {nameof(UpgradeCost)}: {UpgradeCost}, {nameof(FuseCost)}: {FuseCost}, {nameof(RepairCost)}: {RepairCost}, {nameof(CurrentDurability)}: {CurrentDurability}, {nameof(IsEquipped)}: {IsEquipped}, {nameof(MaxLevel)}: {MaxLevel}, {nameof(Stats)}: {Stats}, {nameof(IsBroken)}: {IsBroken}";
 		}
-	}
-
-	public struct NftEquipmentInfo
-	{
-		public EquipmentInfo EquipmentInfo;
-		public NftEquipmentData NftData;
-		public uint NftCooldownInMinutes;
-
-		/// <summary>
-		/// Requests the end of the NFT cooldown in UTC time
-		/// </summary>
-		public DateTime CooldownEndUtcTime => new DateTime(NftData.InsertionTimestamp).AddMinutes(NftCooldownInMinutes);
-
-		/// <summary>
-		/// Requests the missing cooldown time for this NFT
-		/// </summary>
-		public TimeSpan Cooldown => CooldownEndUtcTime - DateTime.UtcNow;
-
-		/// <summary>
-		/// Requests if this equipment's NFT is on cooldown or not
-		/// </summary>
-		public bool IsOnCooldown => Cooldown.TotalSeconds > 0;
-
-		/// <summary>
-		/// Because old jsons didn't had SSL, making it backwards compatible
-		/// we need SSL for iOS because 'random Apple rant'
-		/// </summary>
-		public string SafeImageUrl => NftData.ImageUrl.Replace("http:", "https:");
 	}
 
 	/// <summary>
@@ -96,36 +68,6 @@ namespace FirstLight.Game.Infos
 	/// </summary>
 	public static class EquipmentInfoExtensions
 	{
-		/// <summary>
-		/// Requests the Augmented Sum value for the <see cref="EquipmentInfo"/> list based on the given
-		/// <paramref name="modSumFunc"/> modifier
-		/// </summary>
-		public static double GetAugmentedModSum(this List<EquipmentInfo> items, QuantumGameConfig gameConfig,
-												Func<EquipmentInfo, double> modSumFunc)
-		{
-			var modEquipmentList = new List<Tuple<double, Equipment>>();
-			var nftAssumed = gameConfig.NftAssumedOwned;
-			var earningsAugDropMod = (double) gameConfig.EarningsAugmentationStrengthDropMod;
-			var earningsAugSteepnessMod = (double) gameConfig.EarningsAugmentationStrengthSteepnessMod;
-			var augmentedModSum = 0d;
-
-			foreach (var nft in items)
-			{
-				modEquipmentList.Add(new Tuple<double, Equipment>(modSumFunc(nft), nft.Equipment));
-			}
-
-			modEquipmentList = modEquipmentList.OrderByDescending(x => x.Item1).ToList();
-
-			for (var i = 0; i < modEquipmentList.Count; i++)
-			{
-				var strength = Math.Pow(Math.Max(0, 1 - Math.Pow(i, earningsAugDropMod) / nftAssumed),
-					earningsAugSteepnessMod);
-
-				augmentedModSum += modEquipmentList[i].Item1 * strength;
-			}
-
-			return augmentedModSum;
-		}
 
 		/// <summary>
 		/// Requests the durability states for all the equipments in the given <paramref name="items"/>
@@ -136,9 +78,9 @@ namespace FirstLight.Game.Infos
 
 			maxDurability = 0u;
 
-			foreach (var nft in items)
+			foreach (var item in items)
 			{
-				total += nft.CurrentDurability;
+				total += item.CurrentDurability;
 			}
 
 			return total;
@@ -151,9 +93,9 @@ namespace FirstLight.Game.Infos
 		{
 			var total = 0f;
 
-			foreach (var nft in items)
+			foreach (var item in items)
 			{
-				total += nft.Stats[stat];
+				total += item.Stats[stat];
 			}
 
 			return total;

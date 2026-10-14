@@ -17,8 +17,8 @@ namespace FirstLight.Game.Data
 		public SerializedVisualElementSetup FromElement(VisualElement e)
 		{
 			ElementId = e.name;
-			PositionX = e.transform.position.x;
-			PositionY = e.transform.position.y;
+			PositionX = e.resolvedStyle.translate.x;
+			PositionY = e.resolvedStyle.translate.y;
 			Opacity = e.style.opacity.value == 0 ? 1 : e.style.opacity.value;
 			Size = e.style.scale.value.value.x == 0 ? 1 : e.style.scale.value.value.x;
 			return this;
@@ -26,12 +26,12 @@ namespace FirstLight.Game.Data
 
 		public void ToElement(VisualElement e)
 		{
-			e.transform.position = new Vector3(PositionX, PositionY, 0);
+			e.style.translate = new Translate(PositionX, PositionY);
 			e.style.opacity = Opacity;
 			e.style.scale = new Scale(new Vector2(Size, Size));
 		}
 	}
-	
+
 	[Serializable]
 	public class UIPositionData
 	{

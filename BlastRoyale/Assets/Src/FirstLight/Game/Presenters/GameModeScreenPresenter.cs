@@ -1,3 +1,6 @@
+using FirstLight.Inspector;
+using MainInstaller = FirstLight.Game.Utils.MainInstaller;
+using GameLovers.GameData;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -18,11 +21,10 @@ using FirstLight.Game.Utils;
 using FirstLight.Game.Views;
 using FirstLight.Game.Views.UITK.Popups;
 using FirstLight.Server.SDK.Modules;
-using FirstLight.UIService;
-using I2.Loc;
+using FirstLight.Game.UI;
+using FirstLight.Game.Localization;
 using Quantum;
 using Unity.Services.Lobbies;
-using Sirenix.OdinInspector;
 using UnityEngine;
 using UnityEngine.Playables;
 using UnityEngine.UIElements;
@@ -47,7 +49,7 @@ namespace FirstLight.Game.Presenters
 
 		[SerializeField] private VisualTreeAsset _buttonAsset;
 
-		[SerializeField, Required, TabGroup("Animation")]
+		[SerializeField, InspectorField(Required = true), UnityEngine.Header("Animation")]
 		private PlayableDirector _newEventDirector;
 
 		[SerializeField] private Sprite _buyEventTicketSprite;
@@ -247,7 +249,7 @@ namespace FirstLight.Game.Presenters
 					})
 					.ContinueWith( (_) =>
 					{
-						_services.MessageBrokerService.Publish(new MatchInfoPopupOpenedMessage());
+						_services.MessageBrokerService.PublishSafe(new MatchInfoPopupOpenedMessage());
 					})
 					.Forget();
 				return;

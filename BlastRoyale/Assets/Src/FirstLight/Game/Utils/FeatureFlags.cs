@@ -77,7 +77,7 @@ namespace FirstLight.Game.Utils
 		/// </summary>
 		[Description("Dev QOL/Autostart test game")]
 		public bool StartTestGameAutomatically = false;
-		
+
 		/// <summary>
 		/// If automatically starts the test game mode after the game boot up
 		/// </summary>
@@ -85,13 +85,13 @@ namespace FirstLight.Game.Utils
 		public bool SkipMatchLoadTimer = false;
 
 		/// <summary>
-		/// If we should consider if the player has NFTs even if he doens't
+		/// Development feature override
 		/// </summary>
 		[Description("Dev QOL/Unlock all fame stuff")]
 		public bool UnlockAllFameStuff = false;
 
 		/// <summary>
-		/// If we should consider if the player has NFTs even if he doens't
+		/// Development feature override
 		/// </summary>
 		[Description("Dev QOL/Disable Reconnection")]
 		public bool DisableReconnection = false;
@@ -101,20 +101,19 @@ namespace FirstLight.Game.Utils
 		/// </summary>
 		[Description("Dev QOL/Append Minute to Playtest room")]
 		public bool AppendMinuteToPlaytest = true;
-		
+
 		/// <summary>
 		/// Fixed quantum seed
 		/// </summary>
 		[Description("Dev QOL/Fixed Quantum Seed")]
 		public bool FixedQuantumSeed = false;
-		
+
 		/// <summary>
 		/// Fixed quantum seed
 		/// </summary>
 		[Description("Dev QOL/Use bot behaviour")]
 		public bool UseBotBehaviour = false;
 	}
-
 
 	/// <summary>
 	/// Simple class to represent feature flags in the game.
@@ -126,7 +125,7 @@ namespace FirstLight.Game.Utils
 
 		/// <summary>
 		/// When true, will send end of match commands using quantum server consensus algorithm.
-		/// When false commands will go directly to our backend. 
+		/// When false commands will go directly to our backend.
 		/// To use this in our backend the backend needs to be compiled with this flag being False.
 		/// </summary>
 		public static bool QUANTUM_CUSTOM_SERVER = false;
@@ -136,22 +135,10 @@ namespace FirstLight.Game.Utils
 		/// </summary>
 		public static bool WAIT_REWARD_SYNC = false;
 
-		public static bool WEB3_REBUY_LAST_MISS = true;
-		
 		/// <summary>
 		/// Forces to stop the game when pausing
 		/// </summary>
 		public static bool PAUSE_DISCONNECT_DIALOG = false;
-
-		/// <summary>
-		/// Enables / disables item durability checks for Non NFTs
-		/// </summary>
-		public static bool ITEM_DURABILITY_NON_NFTS = false;
-
-		/// <summary>
-		/// Enables / disables item durability checks for NFTs
-		/// </summary>
-		public static bool ITEM_DURABILITY_NFTS = false;
 
 		/// <summary>
 		/// Enables / disables the store button in the home screen
@@ -172,7 +159,7 @@ namespace FirstLight.Game.Utils
 		/// If the tutorial is active, useful for testing
 		/// </summary>
 		public static bool TUTORIAL = true;
-		
+
 		/// <summary>
 		/// If the tutorial first battle is active or not
 		/// </summary>
@@ -215,23 +202,10 @@ namespace FirstLight.Game.Utils
 		public static bool DAMAGED_CAMERA_SHAKE = false;
 
 		/// <summary>
-		/// Should game fetch remote web3 collections
-		/// </summary>
-		public static bool REMOTE_COLLECTIONS = false;
-		
-		/// <summary>
 		/// Only for testing.
 		/// When true, you will become invisible when entering bushes.
 		/// </summary>
 		public static bool ALWAYS_TOGGLE_INVISIBILITY_AREAS = false;
-
-		/// <summary>
-		/// When not null, will means the game can connect to WEB3.
-		/// When the ID is set it will be used by the client to authenticate the web3 
-		/// client.
-		/// </summary>
-		public static string IMX_ID = null;
-		
 
 		/// <summary>
 		/// Parses the feature flags from a given input dictionary.
@@ -243,16 +217,6 @@ namespace FirstLight.Game.Utils
 			if (TrySetFlag("QUANTUM_CUSTOM_SERVER", overrideData, out var customServer))
 			{
 				QUANTUM_CUSTOM_SERVER = customServer;
-			}
-
-			if (TrySetFlag("ITEM_DURABILITY_NON_NFTS", overrideData, out var itemDurabilityNonNFTs))
-			{
-				ITEM_DURABILITY_NON_NFTS = itemDurabilityNonNFTs;
-			}
-
-			if (TrySetFlag("ITEM_DURABILITY_NFTS", overrideData, out var itemDurabilityNFTs))
-			{
-				ITEM_DURABILITY_NFTS = itemDurabilityNFTs;
 			}
 
 			if (TrySetFlag("STORE_ENABLED", overrideData, out var storeEnabled))
@@ -269,7 +233,7 @@ namespace FirstLight.Game.Utils
 			{
 				TUTORIAL = tutorial;
 			}
-			
+
 			if (TrySetFlag("TUTORIAL_BATTLE", overrideData, out var tutorialBattle))
 			{
 				TUTORIAL_BATTLE = tutorialBattle;
@@ -279,21 +243,12 @@ namespace FirstLight.Game.Utils
 			{
 				PAUSE_DISCONNECT_DIALOG = pauseFreeze;
 			}
-			
-			if (TrySetFlag("WEB3_REBUY_LAST_MISS", overrideData, out var web3Buy))
-			{
-				WEB3_REBUY_LAST_MISS = web3Buy;
-			}
-			
+
 			if (TrySetFlag("WAIT_REWARD_SYNC", overrideData, out var waitSync))
 			{
 				WAIT_REWARD_SYNC = waitSync;
 			}
 
-			if (TrySetStringFlag("IMX_ID", overrideData, out var imxId))
-			{
-				IMX_ID = imxId;
-			}
 		}
 
 		/// <summary>

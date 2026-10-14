@@ -1,6 +1,6 @@
 using System;
 using FirstLight.Game.Utils;
-using I2.Loc;
+using FirstLight.Game.Localization;
 using Quantum;
 using UnityEngine;
 using UnityEngine.UIElements;
@@ -11,7 +11,8 @@ namespace FirstLight.Game.UIElements
 	/// <summary>
 	/// Displays the status bar above a player's head.
 	/// </summary>
-	public class PlayerStatusBarElement : VisualElement
+	[UxmlElement]
+	public partial class PlayerStatusBarElement : VisualElement
 	{
 		private const int DAMAGE_NUMBER_MAX_POOL_SIZE = 15;
 		private const int DAMAGE_NUMBER_ANIM_DURATION = 1000;
@@ -233,8 +234,8 @@ namespace FirstLight.Game.UIElements
 			// Color
 			// var color = t < 0.3 ? Color.Lerp(Color.red, Color.white, t * 3.33f) : Color.white;
 
-			damageNumber.transform.position = pf;
-			damageNumber.transform.scale = new Vector3(scale, scale, 1);
+			damageNumber.style.translate = new Translate(pf.x, pf.y);
+			damageNumber.style.scale = new Scale(new Vector2(scale, scale));
 			damageNumber.style.opacity = opacity;
 			// damageNumber.style.color = color;
 		}
@@ -251,8 +252,5 @@ namespace FirstLight.Game.UIElements
 			NoInputWarning
 		}
 
-		public new class UxmlFactory : UxmlFactory<PlayerStatusBarElement, UxmlTraits>
-		{
-		}
 	}
 }

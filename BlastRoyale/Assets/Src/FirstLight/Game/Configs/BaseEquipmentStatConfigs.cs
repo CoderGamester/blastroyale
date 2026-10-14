@@ -1,3 +1,4 @@
+using GameLovers.GameData;
 using System.Collections.Generic;
 using Quantum;
 using UnityEngine;
@@ -9,13 +10,13 @@ namespace FirstLight.Game.Configs
 	/// </summary>
 	[CreateAssetMenu(fileName = "BaseEquipmentStatConfigs",
 	                 menuName = "ScriptableObjects/Configs/BaseEquipmentStatConfigs")]
-	public class BaseEquipmentStatConfigs : QuantumBaseEquipmentStatConfigsAsset,
+	public class BaseEquipmentStatConfigs : QuantumBaseEquipmentStatConfigs,
 	                                         IConfigsContainer<QuantumBaseEquipmentStatConfig>
 	{
 		public List<QuantumBaseEquipmentStatConfig> Configs
 		{
-			get => Settings.QuantumConfigs;
-			set => Settings.QuantumConfigs = value;
+			get => QuantumConfigs;
+			set => QuantumConfigs = value;
 		}
 	}
 }

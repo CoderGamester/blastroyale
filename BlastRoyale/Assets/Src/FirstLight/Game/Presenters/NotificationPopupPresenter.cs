@@ -5,7 +5,7 @@ using FirstLight.FLogger;
 using FirstLight.Game.Services;
 using FirstLight.Game.UIElements;
 using FirstLight.Game.Utils;
-using FirstLight.UIService;
+using FirstLight.Game.UI;
 using UnityEngine.UIElements;
 
 namespace FirstLight.Game.Presenters

@@ -1,3 +1,4 @@
+using MainInstaller = FirstLight.Game.Utils.MainInstaller;
 using System.Collections;
 using System.Collections.Generic;
 using FirstLight.Game.Messages;
@@ -22,7 +23,7 @@ namespace FirstLight.Game.MonoComponent.Match
 		{
 			if (!other.TryGetComponent<PlayerCharacterViewMonoComponent>(out var player)) return;
 
-			_services.MessageBrokerService.Publish(new PlayerEnteredMessageVolume {VolumeId = VolumeId});
+			_services.MessageBrokerService.PublishSafe(new PlayerEnteredMessageVolume {VolumeId = VolumeId});
 		}
 	}
 }

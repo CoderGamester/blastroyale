@@ -2,7 +2,7 @@ using System;
 using System.Linq;
 using FirstLight.Game.Utils;
 using FirstLight.Game.Utils.UCSExtensions;
-using I2.Loc;
+using FirstLight.Game.Localization;
 using Quantum;
 using Unity.Services.Lobbies.Models;
 using UnityEngine;
@@ -13,7 +13,8 @@ namespace FirstLight.Game.UIElements
 	/// <summary>
 	/// Shows a match lobby item in the match list.
 	/// </summary>
-	public class MatchLobbyItemElement : VisualElement
+	[UxmlElement]
+	public partial class MatchLobbyItemElement : VisualElement
 	{
 		private const string USS_BLOCK = "match-lobby-item";
 		private const string USS_CONTAINER = USS_BLOCK + "__container";
@@ -50,25 +51,25 @@ namespace FirstLight.Game.UIElements
 			Add(mainContainer);
 			mainContainer.AddToClassList(USS_CONTAINER);
 			{
-				
+
 				var containerBackground = new VisualElement();
 				containerBackground.AddToClassList(USS_ACTION_BACKGROUND);
 				mainContainer.Add(containerBackground);
-				
+
 				var infoContainer = new VisualElement();
 				var actionContainer = new VisualElement();
-				
+
 				infoContainer.AddToClassList(USS_INFO_CONTAINER);
 				actionContainer.AddToClassList(USS_ACTION_CONTAINER);
-				
+
 				SetupInfoContainer(infoContainer);
 				SetupActionContainer(actionContainer);
-				
+
 				mainContainer.Add(infoContainer);
 				mainContainer.Add(actionContainer);
 
 				// container.Add();
-				
+
 				// container.Add(_lobbyNameLabel = new Label("FirstLightReallyLongPotato's game"));
 				// _lobbyNameLabel.AddToClassList(USS_NAME);
 				// container.Add(_lobbyModeLabel = new Label("BattleRoyale\nDUOS"));
@@ -99,7 +100,7 @@ namespace FirstLight.Game.UIElements
 
 		private void SetupActionContainer(VisualElement actionContainer)
 		{
-			
+
 			actionContainer.Add(_actionButton = new LocalizedButton(ScriptTerms.UITCustomGames.join) {name = "ActionButton"});
 			_actionButton.AddToClassList("button-long");
 			_actionButton.AddToClassList(USS_ACTION_BUTTON);
@@ -115,21 +116,21 @@ namespace FirstLight.Game.UIElements
 		{
 			infoContainer.Add(_lobbyNameLabel = new Label("FirstLightReallyLongPotato's game") {name = "lobby-name"});
 			_lobbyNameLabel.AddToClassList(USS_NAME);
-				
+
 			infoContainer.Add(_lobbyModeLabel = new Label("BattleRoyale\nDUOS") {name = "lobby-mode"});
 			_lobbyModeLabel.AddToClassList(USS_MODE);
 			{
 				_lobbyModeLabel.Add(_mutatorsCountLabel = new Label("+3") {name = "mutators-count"});
 				_mutatorsCountLabel.AddToClassList(USS_MUTATORS_COUNT);
 			}
-				
+
 			infoContainer.Add(_lobbyPlayersLabel = new Label("1/30"));
 			_lobbyPlayersLabel.AddToClassList(USS_PLAYERS);
 			{
 				_lobbyPlayersLabel.Add(_friendIcon = new VisualElement() {name = "friend-icon"});
 				_friendIcon.AddToClassList(USS_FRIEND_ICON);
 			}
-				
+
 			infoContainer.Add(_lobbyRegion = new LocalizedLabel("EU"));
 			_lobbyRegion.AddToClassList(USS_STATUS);
 		}
@@ -145,7 +146,7 @@ namespace FirstLight.Game.UIElements
 			var matchSettings = lobby.GetMatchSettings();
 			var maxPlayers = lobby.MaxPlayers - GameConstants.Data.MATCH_SPECTATOR_SPOTS;
 			var totalAdjustedPlayers = Mathf.Min(lobby.NonSpectators().Count, maxPlayers);
-			
+
 			_lobbyModeLabel.text = $"{matchSettings.GameModeID}\n{LocalizationUtils.GetTranslationForTeamSize(matchSettings.SquadSize)}";
 			_lobbyPlayersLabel.text = $"{totalAdjustedPlayers}/{maxPlayers}";
 			_lobbyRegion.text = lobby.GetMatchRegion().GetPhotonRegionTranslation();
@@ -154,8 +155,5 @@ namespace FirstLight.Game.UIElements
 			_friendIcon.SetVisibility(lobby.Players.Any(p => p.IsFriend()));
 		}
 
-		public new class UxmlFactory : UxmlFactory<MatchLobbyItemElement>
-		{
-		}
 	}
 }

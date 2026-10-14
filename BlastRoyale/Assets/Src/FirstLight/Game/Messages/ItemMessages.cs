@@ -1,8 +1,7 @@
 using System.Collections.Generic;
 using FirstLight.Game.Ids;
-using FirstLight.Services;
+using GameLovers.Services;
 using Quantum;
-using FirstLight.SDK.Services;
 
 namespace FirstLight.Game.Messages
 {

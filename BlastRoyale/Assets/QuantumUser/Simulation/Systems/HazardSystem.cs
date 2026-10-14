@@ -1,0 +1,118 @@
+using System;
+using System.Collections.Generic;
+using Photon.Deterministic;
+
+namespace Quantum.Systems
+{
+	/// <summary>
+	/// TODO: DELETE THE HAZARD SYSTEM
+	/// </summary>
+	public unsafe class HazardSystem : SystemMainThreadFilter<HazardSystem.HazardFilter>, ISignalOnComponentAdded<Stun>
+	{
+
+		public struct HazardFilter
+		{
+			public EntityRef Entity;
+			public Hazard* Hazard;
+			public Transform2D* Transform;
+		}
+
+
+		/// <inheritdoc />
+		public override void Update(Frame f, ref HazardFilter filter)
+		{
+			var hazard = filter.Hazard;
+
+			if (f.Time > hazard->EndTime)
+			{
+				f.Add<EntityDestroyer>(filter.Entity);
+			}
+
+			if (f.Time < hazard->NextTickTime)
+			{
+				return;
+			}
+
+			hazard->NextTickTime += hazard->NextTickTime == FP._0 ? f.Time + hazard->Interval : hazard->Interval;
+
+			ProcessAreaHazard(f, hazard, ref filter);
+		}
+
+		private void ProcessAreaHazard(Frame f, Hazard* hazard, ref HazardFilter filter)
+		{
+			if (f.Unsafe.GetPointerSingleton<GameContainer>()->IsGameOver)
+			{
+				return;
+			}
+
+
+			//check the area when the hazard explodes
+			var shape = Shape2D.CreateCircle(hazard->Radius);
+			var hits = f.Physics2D.OverlapShape(filter.Transform->Position, FP._0, shape,
+				f.Context.TargetAllLayerMask, QueryOptions.HitDynamics | QueryOptions.HitKinematics);
+			hits.SortCastDistance();
+
+			uint properHits = 0;
+			//loop through each hit, and create a spell to deal damage to each target hit
+			for (var j = 0; j < hits.Count; j++)
+			{
+				if (f.TryGet<Stats>(hits[j].Entity, out var targetStats))
+				{
+					var targetHP = targetStats.GetStatData(StatType.Health).BaseValue;
+					var damage = targetHP * hazard->PowerAmount;
+
+					var spell = new Spell
+					{
+						Id = Spell.DefaultId,
+						Attacker = hazard->Attacker,
+						Cooldown = FP._0,
+						EndTime = FP._0,
+						NextHitTime = FP._0,
+						OriginalHitPosition = filter.Transform->Position,
+						PowerAmount = (uint)damage,
+						SpellSource = filter.Entity,
+						TeamSource = hazard->TeamSource,
+						Victim = hits[j].Entity,
+						KnockbackAmount = hazard->Knockback
+					};
+
+					if (spell.Victim == spell.Attacker)
+					{
+						spell.TeamSource = 0;
+						spell.PowerAmount = (uint)(spell.PowerAmount * Constants.SELF_DAMAGE_MODIFIER);
+					}
+
+					if (!QuantumHelpers.ProcessHit(f, &spell))
+					{
+						continue;
+					}
+
+					properHits++;
+					OnHit(f, &spell);
+				}
+			}
+
+			f.Events.OnHazardLand(filter.Hazard->GameId, filter.Transform->Position, filter.Hazard->Attacker, properHits);
+		}
+
+		private void OnHit(Frame f, Spell* spell)
+		{
+			var source = f.Unsafe.GetPointer<Hazard>(spell->SpellSource);
+
+			if (source->StunDuration > FP._0)
+			{
+				StatusModifiers.AddStatusModifierToEntity(f, spell->Victim, StatusModifierType.Stun, source->StunDuration);
+			}
+
+			f.Events.OnHazardHit(spell->Attacker, spell->Victim, spell->OriginalHitPosition);
+		}
+
+		public void OnAdded(Frame f, EntityRef entity, Stun* component)
+		{
+			if (!f.Unsafe.TryGetPointer<TopDownController>(entity, out var kcc)) return;
+
+			kcc->AimDirection = FPVector2.Zero;
+			kcc->MoveDirection = FPVector2.Zero;
+		}
+	}
+}

@@ -1,4 +1,5 @@
-﻿using System;
+using MainInstaller = FirstLight.Game.Utils.MainInstaller;
+using System;
 using FirstLight.Game.Domains.VFX;
 using FirstLight.Game.Ids;
 using FirstLight.Game.Services;

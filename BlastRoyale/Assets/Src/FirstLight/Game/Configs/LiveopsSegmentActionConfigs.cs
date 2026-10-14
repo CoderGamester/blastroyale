@@ -1,3 +1,5 @@
+using IgnoreServerSerialization = FirstLight.Server.SDK.Modules.GameConfiguration.IgnoreServerSerialization;
+using GameLovers.GameData;
 using System;
 using System.Collections.Generic;
 using FirstLight.Server.SDK.Modules.GameConfiguration;
@@ -9,7 +11,7 @@ namespace FirstLight.Game.Configs
 	{
 		ButtonDialog
 	}
-	
+
 	[Serializable]
 	[IgnoreServerSerialization]
 	public struct LiveopsSegmentActionConfig
@@ -19,17 +21,17 @@ namespace FirstLight.Game.Configs
 		public LiveopsAction Action;
 		public List<string> ActionParameter;
 	}
-	
+
 	/// <summary>
 	/// Scriptable Object tool to import the <seealso cref="LiveopsSegmentActionConfig"/> sheet data
 	/// </summary>
-	
+
 	[CreateAssetMenu(fileName = "LiveopsSegmentActionConfigs", menuName = "ScriptableObjects/Configs/LiveopsSegmentActionConfigs")]
 	[IgnoreServerSerialization]
 	public class LiveopsSegmentActionConfigs : ScriptableObject, IConfigsContainer<LiveopsSegmentActionConfig>
 	{
 		[SerializeField] private List<LiveopsSegmentActionConfig> _configs = new ();
-		
+
 		/// <inheritdoc />
 		public List<LiveopsSegmentActionConfig> Configs
 		{

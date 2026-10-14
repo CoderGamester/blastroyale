@@ -1,3 +1,4 @@
+using Quantum;
 using Photon.Deterministic;
 using System.Collections.Generic;
 using UnityEditor;

@@ -18,7 +18,7 @@ namespace FirstLight.Game.Services.Analytics
 	/// </summary>
 	public class AnalyticsCallsUi : AnalyticsCalls
 	{
-		public AnalyticsCallsUi(IAnalyticsService analyticsService, UIService.UIService uiService) : base(analyticsService)
+		public AnalyticsCallsUi(IAnalyticsService analyticsService, FirstLight.Game.UI.UIService uiService) : base(analyticsService)
 		{
 			uiService.OnScreenOpened += ScreenView;
 		}

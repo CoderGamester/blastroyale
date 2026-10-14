@@ -1,3 +1,5 @@
+using MainInstaller = FirstLight.Game.Utils.MainInstaller;
+using FirstLight.Game.Services.Infrastructure;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,7 +11,7 @@ using FirstLight.Game.Services.Authentication;
 using FirstLight.Game.Services.Social;
 using FirstLight.Game.Utils;
 using FirstLight.Game.Utils.UCSExtensions;
-using I2.Loc;
+using FirstLight.Game.Localization;
 using Unity.Services.CloudSave;
 using Unity.Services.Friends.Models;
 using Unity.Services.Lobbies.Models;
@@ -21,7 +23,8 @@ namespace FirstLight.Game.UIElements
 	/// <summary>
 	/// Displays a relationship in the friends screen (friend / request / blocked)
 	/// </summary>
-	public class FriendListElement : ImageButton
+	[UxmlElement]
+	public partial class FriendListElement : ImageButton
 	{
 		private const string USS_BLOCK = "friend-list-element";
 		private const string USS_LOCAL_MODIFIER = USS_BLOCK + "--local";
@@ -387,8 +390,5 @@ namespace FirstLight.Game.UIElements
 			return this;
 		}
 
-		public new class UxmlFactory : UxmlFactory<FriendListElement, UxmlTraits>
-		{
-		}
 	}
 }

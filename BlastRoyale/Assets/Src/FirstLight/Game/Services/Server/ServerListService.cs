@@ -52,10 +52,11 @@ namespace FirstLight.Game.Services
 		private IThreadService _threadService;
 		private ICoroutineService _coroutineService;
 		private readonly IGameBackendService _backendService;
-		private LoadBalancingClient _client;
+		private RealtimeClient _client;
 		private Dictionary<string, IServerListService.ServerPing> Pings = new ();
 
 		private bool _fetching;
+		private bool _regionResultReceived;
 
 		public ServerListService(IThreadService threadService, ICoroutineService coroutineService, IGameBackendService backendService, IMessageBrokerService _messageBrokerService)
 		{
@@ -75,7 +76,7 @@ namespace FirstLight.Game.Services
 		{
 			while (_fetching)
 			{
-				yield return new WaitForSeconds(1);
+				yield return new WaitForSecondsRealtime(0.1f);
 				_client?.Service();
 			}
 		}
@@ -101,13 +102,13 @@ namespace FirstLight.Game.Services
 		public void OnDisconnected(DisconnectCause cause)
 		{
 			FLog.Info("Disconnected" + cause);
+			if (State == IServerListService.ServerListState.Connecting && !_regionResultReceived)
+				State = IServerListService.ServerListState.Failed;
 			Disconnect();
 		}
 
 		public void FetchServersAndPing()
 		{
-			_client = new LoadBalancingClient("", FLEnvironment.Current.PhotonAppIDRealtime, "");
-			_client.AddCallbackTarget(this);
 			if (_fetching)
 			{
 				FLog.Info("Already collecting regions and pings!");
@@ -115,33 +116,45 @@ namespace FirstLight.Game.Services
 			}
 
 			FLog.Info("Fetching pings");
-			if (!_client.ConnectToNameServer())
+			_client = new RealtimeClient {ClientType = ClientAppType.Quantum};
+			_client.AddCallbackTarget(this);
+			_fetching = true;
+			_regionResultReceived = false;
+			State = IServerListService.ServerListState.Connecting;
+			_client.GetRegions(new AppSettings
+			{
+				AppIdQuantum = FLEnvironment.Configuration.PhotonQuantumAppId,
+				UseNameServer = true
+			});
+			if (_client.State == ClientState.Disconnected || _client.State == ClientState.PeerCreated)
 			{
 				State = IServerListService.ServerListState.Failed;
 				FLog.Error("Failed to connect to name server");
+				Disconnect();
+				return;
 			}
 
-			_fetching = true;
-			State = IServerListService.ServerListState.Connecting;
 			_coroutineService.StartCoroutine(TickQuantum());
 		}
 
 		public void OnRegionListReceived(RegionHandler regionHandler)
 		{
-			FLog.Info("OnPingedRegions" + regionHandler.GetResults());
-			UpdateList(regionHandler);
-			State = IServerListService.ServerListState.FetchedRegions;
-			FLog.Info("Fetched Regions");
-
-			if (OnRegionsFetched != null)
-				_threadService.MainThreadDispatcher.Enqueue(OnRegionsFetched);
-			OnRegionsFetched?.Invoke();
-			if (!regionHandler.PingMinimumOfRegions(OnFetchedRegionPings, ""))
+			// Realtime v5 completes its region ping workflow before this callback.
+			var client = _client;
+			if (!ReferenceEquals(client?.RegionHandler, regionHandler)) return;
+			_regionResultReceived = true;
+			_threadService.MainThreadDispatcher.Enqueue(() =>
 			{
-				State = IServerListService.ServerListState.Failed;
-				FLog.Error("Failed to fetch pings");
+				if (!ReferenceEquals(_client, client)) return;
+				UpdateList(regionHandler);
+				State = IServerListService.ServerListState.FetchedRegions;
+				OnRegionsFetched?.Invoke();
+				State = regionHandler.BestRegion == null
+					? IServerListService.ServerListState.Failed
+					: IServerListService.ServerListState.FetchedPings;
+				if (State == IServerListService.ServerListState.FetchedPings) OnRegionsPinged?.Invoke();
 				Disconnect();
-			}
+			});
 		}
 
 		private void Disconnect()
@@ -149,16 +162,6 @@ namespace FirstLight.Game.Services
 			_client?.RemoveCallbackTarget(this);
 			_client?.Disconnect();
 			_fetching = false;
-		}
-
-		private void OnFetchedRegionPings(RegionHandler obj)
-		{
-			FLog.Info("Fetched pings");
-			UpdateList(obj);
-			if (OnRegionsPinged != null)
-				_threadService.MainThreadDispatcher.Enqueue(OnRegionsPinged);
-			State = IServerListService.ServerListState.FetchedPings;
-			Disconnect();
 		}
 
 		private void UpdateList(RegionHandler obj)
@@ -176,6 +179,8 @@ namespace FirstLight.Game.Services
 
 		public void OnCustomAuthenticationFailed(string debugMessage)
 		{
+			State = IServerListService.ServerListState.Failed;
+			Disconnect();
 		}
 	}
 }

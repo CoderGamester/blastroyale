@@ -1,6 +1,6 @@
 using System;
 using FirstLight.Game.UIElements;
-using FirstLight.UIService;
+using FirstLight.Game.UI;
 using QuickEye.UIToolkit;
 
 namespace FirstLight.Game.Views.UITK.Popups
@@ -23,7 +23,7 @@ namespace FirstLight.Game.Views.UITK.Popups
 		protected override void Attached()
 		{
 			Element.AssignQueryResults(this);
-			
+
             _supportButton.clicked += () => _onSupport?.Invoke(_creatorCodeInput.value);
 		}
 	}

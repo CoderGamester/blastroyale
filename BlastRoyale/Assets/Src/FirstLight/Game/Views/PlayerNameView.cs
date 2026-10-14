@@ -1,9 +1,10 @@
-﻿using Cysharp.Threading.Tasks;
+using MainInstaller = FirstLight.Game.Utils.MainInstaller;
+using Cysharp.Threading.Tasks;
 using FirstLight.Game.Services;
 using FirstLight.Game.UIElements;
 using FirstLight.Game.Utils;
 using FirstLight.Game.Utils.UCSExtensions;
-using FirstLight.UIService;
+using FirstLight.Game.UI;
 using QuickEye.UIToolkit;
 using Unity.Services.Authentication;
 using Unity.Services.Friends;

@@ -1,3 +1,4 @@
+using Quantum;
 using UnityEditor;
 using UnityEngine;
 
@@ -5,7 +6,7 @@ namespace FirstLight.Editor.EditorTools
 {
 	/// <summary>
 	/// This tool adds QuantumStaticBoxCollider3D component for Unity BoxCollider
-	/// found in hierarchy (deep search) - assisting level designers 
+	/// found in hierarchy (deep search) - assisting level designers
 	/// </summary>
 	public class QuantumBoxColliderEditorWindow : UnityEditor.EditorWindow
 	{

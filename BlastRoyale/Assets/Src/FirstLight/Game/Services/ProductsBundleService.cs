@@ -1,4 +1,5 @@
-﻿using System;
+using MainInstaller = FirstLight.Game.Utils.MainInstaller;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -11,12 +12,12 @@ using FirstLight.Game.Logic;
 using FirstLight.Game.Messages;
 using FirstLight.Game.Presenters;
 using FirstLight.Game.Utils;
-using FirstLight.SDK.Services;
-using I2.Loc;
+using GameLovers.Services;
+using FirstLight.Game.Localization;
 
 namespace FirstLight.Game.Services
 {
-	
+
 	public interface IProductsBundleService
 	{
 		public UniTask<IAPHelpers.BuyProductResult> OpenBundlePurchasePopup(string bundleId, bool isRealMoneyPurchase);
@@ -31,12 +32,12 @@ namespace FirstLight.Game.Services
 	public class ProductsBundleService : IProductsBundleService
 	{
 		private readonly IMessageBrokerService _messageBrokerService;
-		
+
 		private readonly IGameDataProvider _gameDataProvider;
 
 		private IReadOnlyCollection<GameProductsBundle> _registeredGameProductBundles;
 
-		public ProductsBundleService(IGameDataProvider gameDataProvider, 
+		public ProductsBundleService(IGameDataProvider gameDataProvider,
 									 IMessageBrokerService messageBrokerService,
 									 IHomeScreenService homeScreenService)
 		{
@@ -44,8 +45,8 @@ namespace FirstLight.Game.Services
 			_gameDataProvider = gameDataProvider;
 			homeScreenService.RegisterNotificationQueueProcessor(ProcessHomeScreenBanner);
 		}
-		
-		
+
+
 		private static IGameServices GameServices => MainInstaller.ResolveServices();
 
 		private void LoadProductBundles()
@@ -70,25 +71,25 @@ namespace FirstLight.Game.Services
 		//Bundle has PopupNotifications capabilities to show
 		private async UniTask<IHomeScreenService.ProcessorResult> ProcessHomeScreenBanner(Type arg)
 		{
-			
+
 			while (true)
 			{
 				if (arg != typeof(HomeScreenPresenter)) return IHomeScreenService.ProcessorResult.None;
 				if (GameServices.RoomService.InRoom) return IHomeScreenService.ProcessorResult.None;
 				if (GameServices.MatchmakingService.IsMatchmaking.Value) return IHomeScreenService.ProcessorResult.None;
-				
+
 				if (_gameDataProvider.PlayerDataProvider.Level.Value < 4)
 				{
 					return IHomeScreenService.ProcessorResult.None;
 				}
-				
+
 				await UniTask.WaitUntil(() => GameServices.IAPService.UnityStore.Initialized);
 
 				LoadProductBundles();
-				
+
 				foreach (var gameProductBundle in _registeredGameProductBundles)
 				{
-					var bundleId = gameProductBundle.Bundle.PlayfabProductConfig.CatalogItem.ItemId; 
+					var bundleId = gameProductBundle.Bundle.PlayfabProductConfig.CatalogItem.ItemId;
 
 					if (HasPendingPurchase(bundleId) || HasSeenProductsBundle(bundleId)) continue;
 
@@ -116,7 +117,7 @@ namespace FirstLight.Game.Services
 				if (purchaseResult == IAPHelpers.BuyProductResult.Rewarded)
 				{
 					MarkProductsBundleBannerAsPurchased(bundleId);
-					_messageBrokerService.Publish(new PurchasedBundleMessage());
+					_messageBrokerService.PublishSafe(new PurchasedBundleMessage());
 					return IHomeScreenService.ProcessorResult.OpenOriginalScreen;
 				}
 
@@ -142,10 +143,10 @@ namespace FirstLight.Game.Services
 				await GameServices.GenericDialogService.OpenSimpleMessageAndWait(
 					ScriptLocalization.UITBattlePass.popup_already_bought_season_title,
 					ScriptLocalization.UITBattlePass.popup_already_bought_season_desc);
-				
+
 				return IAPHelpers.BuyProductResult.Rejected;
 			}
-			
+
 			if (HasPendingPurchase(bundleId))
 			{
 				await GameServices.GenericDialogService.OpenSimpleMessageAndWait(ScriptLocalization.UITStore.pending_popup_title,
@@ -154,10 +155,10 @@ namespace FirstLight.Game.Services
 			}
 
 			var product = GetGameProductBundle(bundleId);
-			
+
 			return await GameServices.IAPService.BuyProductHandleUI(product.Bundle,
-																	GameServices.UIService, 
-																	GameServices.RewardService, 
+																	GameServices.UIService,
+																	GameServices.RewardService,
 																	GameServices.GenericDialogService);
 		}
 
@@ -165,7 +166,7 @@ namespace FirstLight.Game.Services
 		{
 			return GameServices.IAPService.IsPending(GetGameProductBundle(bundleId).Bundle);
 		}
-		
+
 		public bool HasSeenProductsBundle(string bundleId)
 		{
 			return _gameDataProvider.PlayerStoreDataProvider.HasSeenProductsBundleBanner(bundleId);
@@ -185,17 +186,17 @@ namespace FirstLight.Game.Services
 			if (bundle.Bundle.PlayfabProductConfig.StoreItemData.IsTimeLimitedByPlayer)
 			{
 				var firstTimeBundleHasShow = _gameDataProvider.PlayerStoreDataProvider.GetFirstTimeBundleHasShowToPlayer(bundleId);
-				
-				if (firstTimeBundleHasShow == null) 
+
+				if (firstTimeBundleHasShow == null)
 				{
 					firstTimeBundleHasShow = GameServices.CommandService.ExecuteCommandWithResult(new MarkProductsBundleFirstAppearedCommand()
 					{
 						BundleId = bundleId
 					});
 				}
-				
+
 				var playerPurchaseTimeLimit = firstTimeBundleHasShow.Value.AddSeconds(bundle.Bundle.PlayfabProductConfig.StoreItemData.TimeLimitedByPlayerExpiresAfterSeconds);
-				var expireAt = DateTime.UtcNow.Add(playerPurchaseTimeLimit.Subtract(DateTime.UtcNow));    
+				var expireAt = DateTime.UtcNow.Add(playerPurchaseTimeLimit.Subtract(DateTime.UtcNow));
 				return expireAt;
 			}
 
@@ -208,7 +209,7 @@ namespace FirstLight.Game.Services
 			//Bundle doesn't expire
 			return null;
 		}
-		
+
 
 		public void MarkProductsBundleBannerAsSeen(string bundleId)
 		{
@@ -217,7 +218,7 @@ namespace FirstLight.Game.Services
 				BundleId = bundleId
 			});
 		}
-		
+
 		public void MarkProductsBundleBannerAsPurchased(string bundleId)
 		{
 			GameServices.CommandService.ExecuteCommand(new MarkProductsBundleBannerAsPurchasedCommand()

@@ -1,0 +1,18 @@
+using System;
+
+namespace Quantum
+{
+	/// <summary>
+	/// Handles logic when we start a Parachute Landing Fall.
+	/// </summary>
+	[Serializable]
+	public unsafe class SkydivePLFAction : AIAction
+	{
+		public override void Execute(Frame f, EntityRef e, ref AIContext aiContext)
+		{
+			var player = f.Unsafe.GetPointer<PlayerCharacter>(e);
+			f.Events.OnLocalPlayerSkydivePLF(player->Player, e);
+			f.Events.OnPlayerSkydivePLF(player->Player, e);
+		}
+	}
+}

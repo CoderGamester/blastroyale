@@ -1,9 +1,10 @@
+using GameLovers.GoogleSheetImporter;
 using System.Collections.Generic;
 using FirstLight.Editor.EditorTools;
 using FirstLight.Game.Configs;
 using FirstLight.Game.Configs.AssetConfigs;
 using FirstLight.Game.Utils;
-using FirstLight.GoogleSheetImporter;
+using GameLoversEditor.GoogleSheetImporter;
 using Quantum;
 using UnityEditor;
 
@@ -20,7 +21,7 @@ namespace FirstLight.Editor.SheetImporters
 			var config = QuantumDeserializer.DeserializeTo<QuantumConsumableConfig>(data);
 
 			config.AssetRef = assetConfigs.ConsumablePrototype;
-			
+
 			return config;
 		}
 	}

@@ -11,12 +11,14 @@ namespace FirstLight.Editor.Build
 		[MenuItem("FLG/Build/Local/Addressables/No Debug", false, 10)]
 		public static void BuildAddressablesNoDebug()
 		{
+			Builder.SetupAddressables(false);
 			Builder.BuildAddressables(false);
 		}
 
 		[MenuItem("FLG/Build/Local/Addressables/Debug", false, 11)]
 		public static void BuildAddressablesYesDebug()
 		{
+			Builder.SetupAddressables(false);
 			Builder.BuildAddressables(true);
 		}
 

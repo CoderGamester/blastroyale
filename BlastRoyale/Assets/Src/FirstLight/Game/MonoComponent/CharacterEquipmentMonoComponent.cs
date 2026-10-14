@@ -1,3 +1,4 @@
+using MainInstaller = FirstLight.Game.Utils.MainInstaller;
 using Cysharp.Threading.Tasks;
 using FirstLight.FLogger;
 using FirstLight.Game.Configs;
@@ -8,7 +9,6 @@ using FirstLight.Game.MonoComponent.EntityViews;
 using FirstLight.Game.Services;
 using FirstLight.Game.Utils;
 using Quantum;
-using SRF;
 using UnityEngine;
 
 namespace FirstLight.Game.MonoComponent
@@ -29,7 +29,7 @@ namespace FirstLight.Game.MonoComponent
 
 		private GameId[] _cosmetics = { };
 		private WeaponType _equippedGunType;
-		
+
 		private WeaponType _meleeWeaponType;
 
 		public GameId[] Cosmetics
@@ -87,10 +87,11 @@ namespace FirstLight.Game.MonoComponent
 			{
 				_skin.WeaponType = _meleeWeaponType;
 			}
-			
+
 			weaponTransform.SetParent(anchor);
-			weaponTransform.ResetLocal();
-			
+			weaponTransform.SetLocalPositionAndRotation(Vector3.zero, Quaternion.identity);
+			weaponTransform.localScale = Vector3.one;
+
 			if (weaponTransform.TryGetComponent<RenderersContainerMonoComponent>(out var renderContainer))
 			{
 				AddEquipmentRenderersContainer(renderContainer);
@@ -142,7 +143,7 @@ namespace FirstLight.Game.MonoComponent
 				Destroy(_weaponGun);
 			}
 
-			_services.MessageBrokerService.Publish(new ItemEquippedMessage()
+			_services.MessageBrokerService.PublishSafe(new ItemEquippedMessage()
 			{
 				Character = gameObject.GetComponent<PlayerCharacterViewMonoComponent>(),
 				Item = weapon,
@@ -156,8 +157,10 @@ namespace FirstLight.Game.MonoComponent
 			var anchor = _skin.WeaponAnchor;
 
 			weaponTransform.SetParent(anchor);
-			weaponTransform.ResetLocal();
-			weaponTransform.GetChild(0).ResetLocal();
+			weaponTransform.SetLocalPositionAndRotation(Vector3.zero, Quaternion.identity);
+			weaponTransform.localScale = Vector3.one;
+			weaponTransform.GetChild(0).SetLocalPositionAndRotation(Vector3.zero, Quaternion.identity);
+			weaponTransform.GetChild(0).localScale = Vector3.one;
 
 			if (weaponTransform.TryGetComponent<RenderersContainerMonoComponent>(out var renderContainer))
 			{
@@ -174,7 +177,7 @@ namespace FirstLight.Game.MonoComponent
 
 			_weaponGun = weapon;
 
-			_services.MessageBrokerService.Publish(new EquipmentInstantiatedMessage()
+			_services.MessageBrokerService.PublishSafe(new EquipmentInstantiatedMessage()
 			{
 				Equipment = equip,
 				Object = weapon

@@ -1,10 +1,12 @@
+using FirstLight.Inspector;
+using MainInstaller = FirstLight.Game.Utils.MainInstaller;
+using GameLovers.GameData;
 using System.Collections.Generic;
 using FirstLight.Game.Ids;
 using FirstLight.Game.Services;
 using FirstLight.Game.Utils;
 using UnityEngine;
 using UnityEngine.VFX;
-using ReadOnlyOdin = Sirenix.OdinInspector.ReadOnlyAttribute;
 
 namespace FirstLight.Game.MonoComponent
 {
@@ -35,7 +37,7 @@ namespace FirstLight.Game.MonoComponent
 		/// Sets the color of the renderers.
 		/// </summary>
 		void SetColor(Color color);
-		
+
 		/// <summary>
 		/// Sets the additive color of the renderers.
 		/// </summary>
@@ -62,13 +64,13 @@ namespace FirstLight.Game.MonoComponent
 		private static readonly int _mainTex = Shader.PropertyToID("_MainTex");
 		private static readonly int _additiveColor = Shader.PropertyToID("_AdditiveColor");
 		private static readonly int _color = Shader.PropertyToID("_Color");
-		
-		[SerializeField, ReadOnlyOdin] private List<Renderer> _renderers = new();
-		[SerializeField, ReadOnlyOdin] private List<Renderer> _particleRenderers = new();
-		[SerializeField, ReadOnlyOdin] private List<Material> _originalMaterials = new();
-		[SerializeField, ReadOnlyOdin] private List<Color> _rendererColors = new();
-		[SerializeField, ReadOnlyOdin] private List<Color> _rendererAdditiveColors = new();
-		
+
+		[SerializeField, InspectorField(ReadOnly = true)] private List<Renderer> _renderers = new();
+		[SerializeField, InspectorField(ReadOnly = true)] private List<Renderer> _particleRenderers = new();
+		[SerializeField, InspectorField(ReadOnly = true)] private List<Material> _originalMaterials = new();
+		[SerializeField, InspectorField(ReadOnly = true)] private List<Color> _rendererColors = new();
+		[SerializeField, InspectorField(ReadOnly = true)] private List<Color> _rendererAdditiveColors = new();
+
 		private IGameServices _services;
 
 		private void OnValidate()
@@ -163,7 +165,7 @@ namespace FirstLight.Game.MonoComponent
 				if (_originalMaterials[i].HasProperty(_color))
 				{
 					_renderers[i].material.color = _originalMaterials[i].color;
-					
+
 					_rendererColors[i] = _originalMaterials[i].color;
 				}
 			}
@@ -180,7 +182,7 @@ namespace FirstLight.Game.MonoComponent
 					return true;
 				}
 			}
-			
+
 			return false;
 		}
 
@@ -196,7 +198,7 @@ namespace FirstLight.Game.MonoComponent
 				}
 			}
 		}
-		
+
 		public void ResetAdditiveColor()
 		{
 			for (var i = 0; i < _renderers.Count; i++)

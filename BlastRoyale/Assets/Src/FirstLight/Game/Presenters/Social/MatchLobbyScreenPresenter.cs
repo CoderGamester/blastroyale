@@ -1,3 +1,5 @@
+using FirstLight.Inspector;
+using MainInstaller = FirstLight.Game.Utils.MainInstaller;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,11 +14,9 @@ using FirstLight.Game.UIElements.Kit;
 using FirstLight.Game.Utils;
 using FirstLight.Game.Utils.UCSExtensions;
 using FirstLight.Game.Views.UITK;
-using FirstLight.Modules.UIService.Runtime;
-using FirstLight.UIService;
-using I2.Loc;
+using FirstLight.Game.UI;
+using FirstLight.Game.Localization;
 using QuickEye.UIToolkit;
-using Sirenix.OdinInspector;
 using Unity.Services.Authentication;
 using Unity.Services.Lobbies;
 using Unity.Services.Lobbies.Models;
@@ -202,7 +202,7 @@ namespace FirstLight.Game.Presenters
 
 			FLog.Verbose("Joininig room from Custom Lobby");
 			_joining = true;
-			_services.MessageBrokerService.Publish(new JoinedCustomMatch());
+			_services.MessageBrokerService.PublishSafe(new JoinedCustomMatch());
 			await _services.UIService.OpenScreen<LoadingSpinnerScreenPresenter>();
 			// TODO mihak: This should not be here, move when we refac network service
 			await _services.RoomService.JoinRoomAsync(room, playerJoinRoomProperties);
@@ -222,7 +222,7 @@ namespace FirstLight.Game.Presenters
 			}
 		}
 
-		[Button]
+		[InspectorAction]
 		private void RefreshData()
 		{
 			_updateBuffer.Add(() =>
@@ -342,7 +342,7 @@ namespace FirstLight.Game.Presenters
 			// TODO: user flow should not be handled here but in state machines
 			await _services.UIService.OpenScreen<LoadingSpinnerScreenPresenter>();
 
-			_services.MessageBrokerService.Publish(new StartedCustomMatch()
+			_services.MessageBrokerService.PublishSafe(new StartedCustomMatch()
 			{
 				Settings = _matchSettingsView.MatchSettings
 			});

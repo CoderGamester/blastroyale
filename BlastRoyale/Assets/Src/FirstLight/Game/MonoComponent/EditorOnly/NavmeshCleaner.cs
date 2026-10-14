@@ -7,6 +7,7 @@
 #endif
 #if UNITY_EDITOR
 	using UnityEditor;
+		using Unity.AI.Navigation;
 #endif
 
 	/// <summary>
@@ -82,10 +83,7 @@
 					o.transform.localScale = Vector3.one;
 					o.transform.localPosition = Vector3.zero;
 					o.transform.localRotation = Quaternion.identity;
-#pragma warning disable CS0618 // Type or member is obsolete
-					GameObjectUtility.SetStaticEditorFlags(o, GameObjectUtility.GetStaticEditorFlags(gameObject) | StaticEditorFlags.NavigationStatic);
-#pragma warning restore CS0618 // Type or member is obsolete
-					GameObjectUtility.SetNavMeshArea(o, 1);
+					GameObjectUtility.SetStaticEditorFlags(o, GameObjectUtility.GetStaticEditorFlags(gameObject));
 					m_Child.Add(o);
 					Undo.RegisterCreatedObjectUndo(o, "");
 				}
@@ -93,7 +91,14 @@
 				{
 					o = m_Child[i].gameObject;
 				}
-				
+
+				// Current NavMeshSurface baking consumes modifier areas, including reused meshes.
+				var modifier = o.GetComponent<NavMeshModifier>();
+				if (modifier == null) modifier = Undo.AddComponent<NavMeshModifier>(o);
+				Undo.RecordObject(modifier, "NavMesh cleaner area");
+				modifier.overrideArea = true;
+				modifier.area = 1; // Not Walkable, preserving the old cleaner exclusion.
+				modifier.ignoreFromBuild = false;
 
 				MeshFilter meshfilter = m_Child[i].GetComponent<MeshFilter>();
 				Undo.RecordObject(meshfilter, "MeshUpdate");
@@ -683,7 +688,7 @@
 			// https://en.wikipedia.org/wiki/Möller–Trumbore_intersection_algorithm
 			static float IntersectTest(Ray ray, Vector3 v0, Vector3 v1, Vector3 v2, float mint, ref Vector3 outNormal)
 			{
-				// edges from v1 & v2 to v0.     
+				// edges from v1 & v2 to v0.
 				Vector3 e1 = v1 - v0;
 				Vector3 e2 = v2 - v0;
 

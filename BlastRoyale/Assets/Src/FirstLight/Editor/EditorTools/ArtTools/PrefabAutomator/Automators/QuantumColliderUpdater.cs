@@ -1,3 +1,4 @@
+using Quantum;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.Rendering;
@@ -8,7 +9,7 @@ namespace FirstLight.Editor.EditorTools.ArtTools
 	{
 		public bool CastShadows;
 		public bool ReceiveShadows;
-			
+
 		[MenuItem("FLG/Art/Prefab Automation/Quantum Collider Setup")]
 		public static void OpenWindow()
 		{
@@ -22,7 +23,7 @@ namespace FirstLight.Editor.EditorTools.ArtTools
 			GUILayout.Label("Ensures all objects that have box colliders to have a quantum static collider.");
 			GUILayout.Label("Will skip objects that already have quantum static colliders.");
 		}
-		
+
 		protected override bool OnUpdateGameObject(GameObject o)
 		{
 			var colliders = o.GetComponentsInChildren<BoxCollider>();

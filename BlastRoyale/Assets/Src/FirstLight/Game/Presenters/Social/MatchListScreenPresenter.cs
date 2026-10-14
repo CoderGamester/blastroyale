@@ -1,3 +1,4 @@
+using MainInstaller = FirstLight.Game.Utils.MainInstaller;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,8 +10,8 @@ using FirstLight.Game.Utils;
 using FirstLight.Game.Utils.UCSExtensions;
 using FirstLight.Game.Views.UITK;
 using FirstLight.Game.Views.UITK.Popups;
-using FirstLight.UIService;
-using I2.Loc;
+using FirstLight.Game.UI;
+using FirstLight.Game.Localization;
 using QuickEye.UIToolkit;
 using Unity.Services.Lobbies;
 using Unity.Services.Lobbies.Models;
@@ -82,7 +83,7 @@ namespace FirstLight.Game.Presenters
 		{
 			if (_services.UIService.IsScreenOpen<MatchInfoPopupPresenter>())
 			{
-				_services.UIService.CloseScreen<MatchInfoPopupPresenter>();
+				_services.UIService.CloseScreen<MatchInfoPopupPresenter>().Forget();
 			}
 
 			return base.OnScreenClose();
@@ -165,10 +166,10 @@ namespace FirstLight.Game.Presenters
 				MatchSettings = lobby.GetMatchSettings().ToSimulationMatchConfig(),
 				ClickAction = () =>
 				{
-					_services.UIService.CloseScreen<MatchInfoPopupPresenter>();
+					_services.UIService.CloseScreen<MatchInfoPopupPresenter>().Forget();
 					JoinMatch(lobby.Id, !lobby.HasRoomInGrid()).Forget();
 				}
-			});
+			}).Forget();
 		}
 	}
 }

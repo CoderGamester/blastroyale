@@ -1,5 +1,5 @@
 using FirstLight.Game.Services;
-using FirstLight.SDK.Services;
+using GameLovers.Services;
 
 namespace FirstLight.Game.Messages
 {

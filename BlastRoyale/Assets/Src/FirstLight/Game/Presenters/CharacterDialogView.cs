@@ -1,7 +1,8 @@
+using MainInstaller = FirstLight.Game.Utils.MainInstaller;
 using System.Collections.Generic;
 using FirstLight.Game.Utils;
 using FirstLight.Game.Services;
-using FirstLight.UIService;
+using FirstLight.Game.UI;
 using UnityEngine;
 using UnityEngine.UIElements;
 
@@ -18,7 +19,7 @@ namespace FirstLight.Game.Presenters
 		private const string CHARACTER_BOTTOM = "back_avatar--bottom";
 		private const string CHARACTER_TOP = "back_avatar--top";
 		private const string CHARACTER_CENTER = "back_avatar--center";
-		
+
 		private const string MOOD_STYLE = "sprite-ftue__character-";
 
 		private const string BUBBLE_LEFT = "bubble--left";
@@ -26,18 +27,18 @@ namespace FirstLight.Game.Presenters
 		private const string BUBBLE_BOTTOM = "bubble--bottom";
 		private const string BUBBLE_TOP = "bubble--top";
 		private const string BUBBLE_CENTER = "bubble--center";
-		
+
 		private const string LOC_TEXT_RIGHT = "bubble__text--right";
 
 		private const int SCALE_DURATION_MS = 250;
 		private const int SCALE_BUMP_DURATION_MS = 150;
 		private const float BUMP_SIZE = 1.15f;
-		
+
 		private VisualElement _backAvatarMale;
 		private VisualElement _characterMale;
 		private VisualElement _bubbleMale;
 		private Label _localizedLabelMale;
-		
+
 		private VisualElement _backAvatarFemale;
 		private VisualElement _characterFemale;
 		private VisualElement _bubbleFemale;
@@ -50,7 +51,7 @@ namespace FirstLight.Game.Presenters
 		protected override void Attached()
 		{
 			_services = MainInstaller.Resolve<IGameServices>();
-			
+
 			_backAvatarMale = Element.Q<VisualElement>("BackAvatarMale").Required();
 			_characterMale = Element.Q<VisualElement>("MaleCharacter").Required();
 			_bubbleMale = Element.Q<VisualElement>("MaleBubble").Required();
@@ -67,7 +68,7 @@ namespace FirstLight.Game.Presenters
 				{CharacterType.Female, new[] {_characterFemale, _bubbleFemale, _localizedLabelFemale, _backAvatarFemale}},
 				{CharacterType.Male, new[] {_characterMale, _bubbleMale, _localizedLabelMale, _backAvatarMale}}
 			};
-			
+
 			Element.SetupClicks(_services);
 		}
 
@@ -97,17 +98,17 @@ namespace FirstLight.Game.Presenters
 		/// </summary>
 		public void HideDialog(CharacterType character)
 		{
-			_characters[character][3].experimental.animation.Start((e) => e.transform.scale, new Vector3(0, 0, 1),
-				SCALE_DURATION_MS, (e, v) => { e.transform.scale = v; }).OnCompleted(() =>
+			_characters[character][3].experimental.animation.Start((e) => e.resolvedStyle.scale.value, new Vector3(0, 0, 1),
+				SCALE_DURATION_MS, (e, v) => { e.style.scale = new Scale((Vector2)v); }).OnCompleted(() =>
 			{
 				_characters[character][3].SetDisplay(false);
 				RemovePosStyles(character);
 				_characters[character][0].RemoveSpriteClasses();
-				
+
 			});
 
-			_characters[character][1].experimental.animation.Start((e) => e.transform.scale, new Vector3(0, 0, 1),
-				SCALE_DURATION_MS, (e, v) => { e.transform.scale = v; }).OnCompleted(() =>
+			_characters[character][1].experimental.animation.Start((e) => e.resolvedStyle.scale.value, new Vector3(0, 0, 1),
+				SCALE_DURATION_MS, (e, v) => { e.style.scale = new Scale((Vector2)v); }).OnCompleted(() =>
 			{
 				_characters[character][1].SetDisplay(false);
 			});
@@ -122,13 +123,13 @@ namespace FirstLight.Game.Presenters
 
 			_characters[character][3].style.scale = new StyleScale(new Scale(Vector3.zero));
 			_characters[character][3].SetDisplay(true);
-			_characters[character][3].experimental.animation.Start((e) => e.transform.scale, objScale, SCALE_DURATION_MS,
-				(e, v) => { e.transform.scale = v; });
+			_characters[character][3].experimental.animation.Start((e) => e.resolvedStyle.scale.value, objScale, SCALE_DURATION_MS,
+				(e, v) => { e.style.scale = new Scale((Vector2)v); });
 
 			_characters[character][1].style.scale = new StyleScale(new Scale(Vector3.zero));
 			_characters[character][1].SetDisplay(true);
-			_characters[character][1].experimental.animation.Start((e) => e.transform.scale, objScale, SCALE_DURATION_MS,
-				(e, v) => { e.transform.scale = v; });
+			_characters[character][1].experimental.animation.Start((e) => e.resolvedStyle.scale.value, objScale, SCALE_DURATION_MS,
+				(e, v) => { e.style.scale = new Scale((Vector2)v); });
 		}
 
 		private void SetMood(CharacterType character, CharacterDialogMoodType mood)
@@ -136,11 +137,11 @@ namespace FirstLight.Game.Presenters
 			var moodClass = MOOD_STYLE+character.ToString().ToLowerInvariant() + "-" + mood.ToString().ToLowerInvariant();
 			if (_characters[character][0].ClassListContains(moodClass))
 				return;
-			
+
 			_characters[character][0].RemoveSpriteClasses();
-			
+
 			_characters[character][0].AddToClassList(moodClass);
-			
+
 			SmallBumpAnimElement(_characters[character][3]);
 		}
 
@@ -163,13 +164,13 @@ namespace FirstLight.Game.Presenters
 			{
 				_characters[character][3].AddToClassList(CHARACTER_LEFT);
 				_characters[character][1].AddToClassList(BUBBLE_LEFT);
-			} 
+			}
 			else
 			{
 				_characters[character][3].AddToClassList(CHARACTER_CENTER);
 				_characters[character][1].AddToClassList(BUBBLE_CENTER);
 			}
-			
+
 			if (position is CharacterDialogPosition.TopRight or CharacterDialogPosition.TopLeft)
 			{
 				_characters[character][3].AddToClassList(CHARACTER_TOP);
@@ -185,7 +186,7 @@ namespace FirstLight.Game.Presenters
 				_characters[character][3].AddToClassList(CHARACTER_CENTER);
 			}
 		}
-		
+
 		private void RemovePosStyles(CharacterType character)
 		{
 			_characters[character][3].RemoveFromClassList(CHARACTER_LEFT);
@@ -204,7 +205,7 @@ namespace FirstLight.Game.Presenters
 		private void SetText(CharacterType character, string message, bool bump = false)
 		{
 			((Label) _characters[character][2]).text = message;
-			
+
 			if (bump)
 			{
 				SmallBumpAnimElement(_characters[character][1]);
@@ -213,16 +214,16 @@ namespace FirstLight.Game.Presenters
 
 		private void SmallBumpAnimElement(VisualElement ve)
 		{
-			var currentScale = ve.transform.scale;
-			ve.experimental.animation.Start((e) => e.transform.scale, currentScale * BUMP_SIZE, SCALE_BUMP_DURATION_MS/2,
-				(e, v) => { e.transform.scale = v; }).OnCompleted(() =>
+			var currentScale = ve.resolvedStyle.scale.value;
+			ve.experimental.animation.Start((e) => e.resolvedStyle.scale.value, currentScale * BUMP_SIZE, SCALE_BUMP_DURATION_MS/2,
+				(e, v) => { e.style.scale = new Scale((Vector2)v); }).OnCompleted(() =>
 			{
-				ve.experimental.animation.Start((e) => e.transform.scale, currentScale, SCALE_BUMP_DURATION_MS/2,
-					(e, v) => { e.transform.scale = v; });
+				ve.experimental.animation.Start((e) => e.resolvedStyle.scale.value, currentScale, SCALE_BUMP_DURATION_MS/2,
+					(e, v) => { e.style.scale = new Scale((Vector2)v); });
 			});
 		}
 	}
-	
+
 	public enum CharacterType
 	{
 		Male,
@@ -245,6 +246,6 @@ namespace FirstLight.Game.Presenters
 		BottomRight,
 		Center
 	}
-	
-	
+
+
 }

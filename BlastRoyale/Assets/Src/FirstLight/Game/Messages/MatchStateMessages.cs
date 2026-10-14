@@ -3,7 +3,7 @@ using System.Data;
 using FirstLight.Game.MonoComponent.EntityPrototypes;
 using FirstLight.Game.Services;
 using Quantum;
-using FirstLight.SDK.Services;
+using GameLovers.Services;
 using Photon.Realtime;
 using UnityEngine;
 
@@ -49,7 +49,7 @@ namespace FirstLight.Game.Messages
 
 	public struct EntityViewLoaded : IMessage
 	{
-		public EntityView View;
+		public QuantumEntityView View;
 		public EntityBase Entity;
 	}
 

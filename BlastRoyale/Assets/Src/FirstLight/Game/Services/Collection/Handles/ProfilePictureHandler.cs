@@ -1,4 +1,6 @@
-﻿using System.Collections.Generic;
+using MainInstaller = FirstLight.Game.Utils.MainInstaller;
+using FirstLight.Game.Services.Infrastructure;
+using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
 using Cysharp.Threading.Tasks;
@@ -34,7 +36,7 @@ namespace FirstLight.Game.Services.Collection.Handles
 		public async UniTask<Sprite> LoadCollectionItemSprite(ItemData item, bool instantiate = true, CancellationToken ct = default)
 		{
 			var avatarUrl = AvatarHelpers.GetAvatarUrl(item, Config);
-			
+
 			var services = MainInstaller.ResolveServices();
 			var tex = await services.RemoteTextureService.RequestTexture(avatarUrl, cancellationToken: ct);
 			return Sprite.Create(tex, new Rect(0.0f, 0.0f, tex.width, tex.height), new Vector2(0.5f, 0.5f));

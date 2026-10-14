@@ -1,6 +1,7 @@
+using MainInstaller = FirstLight.Game.Utils.MainInstaller;
 using FirstLight.Game.Services.Analytics;
 using FirstLight.Game.Utils;
-using FirstLight.UIService;
+using FirstLight.Game.UI;
 using UnityEngine;
 using UnityEngine.UIElements;
 
@@ -38,13 +39,13 @@ namespace FirstLight.Game.Views.UITK
 				services.AnalyticsService.UiCalls.ButtonAction(UIAnalyticsButtonsNames.TiktokLink);
 				Application.OpenURL(GameConstants.Links.TIKTOK_LINK);
 			};
-			
+
 			Element.Q<Button>("TwitterButton").Required().clicked += () =>
 			{
 				services.AnalyticsService.UiCalls.ButtonAction(UIAnalyticsButtonsNames.TwitterLink);
 				Application.OpenURL(GameConstants.Links.TWITTER_LINK);
 			};
-			
+
 			var calendarButton = Element.Q<Button>("CalendarButton");
 			if (calendarButton != null)
 				calendarButton.clicked += () =>

@@ -4,7 +4,8 @@ using UnityEngine.UIElements;
 
 namespace FirstLight.Game.UIElements
 {
-	public class GameIdIconSummaryItemElement : RewardSummaryItemElement
+	[UxmlElement]
+	public partial class GameIdIconSummaryItemElement : RewardSummaryItemElement
 	{
 		public override RewardSummaryItemElement SetReward(IItemViewModel itemViewModel)
 		{
@@ -13,8 +14,5 @@ namespace FirstLight.Game.UIElements
 			return this;
 		}
 
-		public new class UxmlFactory : UxmlFactory<CollectionRewardsSummaryElement, UxmlTraits>
-		{
-		}
 	}
 }

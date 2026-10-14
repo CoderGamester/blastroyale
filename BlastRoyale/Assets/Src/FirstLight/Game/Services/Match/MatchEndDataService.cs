@@ -1,3 +1,4 @@
+using FirstLight.Game.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,7 +9,7 @@ using FirstLight.Game.Logic;
 using FirstLight.Game.Messages;
 using FirstLight.Game.Utils;
 using FirstLight.Server.SDK.Modules;
-using FirstLight.Services;
+using GameLovers.Services;
 using Quantum;
 using UnityEngine;
 using UnityEngine.Rendering.LookDev;
@@ -43,7 +44,7 @@ namespace FirstLight.Game.Services
 		/// MatchConfigs used during this match.
 		/// </summary>
 		SimulationMatchConfig MatchConfig { get; }
-		
+
 		/// <summary>
 		/// Player that killed the local player. Will have a value if the player was killed.
 		/// </summary>
@@ -74,7 +75,7 @@ namespace FirstLight.Game.Services
 		/// Read all data from simulation. Just in case we missed something for a reconnecting player
 		/// </summary>
 		void Reload();
-		
+
 		/// <summary>
 		/// Checks if current player played the game as spectator
 		/// </summary>
@@ -123,7 +124,7 @@ namespace FirstLight.Game.Services
 		public PlayerRef LocalPlayerKiller { get; private set; }
 		public bool DiedFromRoofDamage { get; private set; }
 		public Dictionary<PlayerRef, ClientCachedPlayerMatchData> PlayerMatchData { get; private set; } = new ();
-		
+
 		public void Reload()
 		{
 			ReadMatchDataForEndingScreens(QuantumRunner.Default.Game);
@@ -201,7 +202,7 @@ namespace FirstLight.Game.Services
 		public unsafe void ReadMatchDataForEndingScreens(QuantumGame game)
 		{
 			FLog.Verbose("Reading simulation data for match end sequence");
-			if (game == null || game.Frames.Verified == null || game.IsSessionDestroyed)
+			if (game == null || game.Frames.Verified == null || game.Session == null)
 			{
 				FLog.Error("Simulation was null or game was destroyed, could not read simulation data");
 				return;
@@ -219,7 +220,7 @@ namespace FirstLight.Game.Services
 				FLog.Error("Trying to read simulation data without a game container in memory");
 				return;
 			}
-			
+
 			LocalPlayer = game.GetLocalPlayerRef();
 			QuantumPlayerMatchData = gameContainer->GeneratePlayersMatchData(frame, out var leader, out _);
 			JoinedAsSpectator = _services.RoomService.IsLocalPlayerSpectator;
@@ -228,14 +229,14 @@ namespace FirstLight.Game.Services
 			MatchConfig = game.Configurations.Runtime.MatchConfigs;
 			foreach (var quantumPlayerData in QuantumPlayerMatchData)
 			{
-				// This means that the match disconnected before the 
+				// This means that the match disconnected before the
 				if (quantumPlayerData.Data.Player == PlayerRef.None)
 				{
 					continue;
 				}
 
 				var frameData = frame.GetPlayerData(quantumPlayerData.Data.Player);
-				
+
 				Equipment weapon = Equipment.None;
 
 				if (PlayersFinalEquipment.ContainsKey(quantumPlayerData.Data.Player))
@@ -250,7 +251,7 @@ namespace FirstLight.Game.Services
 				}
 
 				var cosmetics = PlayerLoadout.GetCosmetics(frame, quantumPlayerData.Data.Entity);
-				
+
 				if (!quantumPlayerData.IsBot && cosmetics.Length == 0 && frameData != null)
 				{
 					cosmetics = frameData.Cosmetics;
@@ -259,7 +260,7 @@ namespace FirstLight.Game.Services
 				{
 					cosmetics = new [] { equipmentEventData.Skin };
 				}
-				
+
 				var playerData = new ClientCachedPlayerMatchData(quantumPlayerData.Data.Player, quantumPlayerData, weapon, cosmetics);
 
 				if (game.PlayerIsLocal(playerData.PlayerRef))

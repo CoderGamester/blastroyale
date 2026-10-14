@@ -1,6 +1,6 @@
 using System;
 using FirstLight.Game.UIElements;
-using FirstLight.UIService;
+using FirstLight.Game.UI;
 using QuickEye.UIToolkit;
 using UnityEngine.UIElements;
 
@@ -16,7 +16,7 @@ namespace FirstLight.Game.Views.UITK.Popups
 
         private readonly string _infoText;
         private readonly Action _onOkButton;
-        
+
 		public GenericInfoPopupView(string infoText, Action onOkButton)
         {
             _infoText = infoText;

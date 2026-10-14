@@ -1,3 +1,4 @@
+using MainInstaller = FirstLight.Game.Utils.MainInstaller;
 using System;
 using System.Collections.Generic;
 using Cysharp.Threading.Tasks;
@@ -7,11 +8,10 @@ using FirstLight.Game.Logic;
 using FirstLight.Game.Services;
 using FirstLight.Game.UIElements;
 using FirstLight.Game.Utils;
-using FirstLight.NativeUi;
+using GameLovers.MobileServices.NativeUi;
 using FirstLight.UiService;
-using FirstLight.UIService;
-using I2.Loc;
-using Sirenix.OdinInspector;
+using FirstLight.Game.UI;
+using FirstLight.Game.Localization;
 using UnityEngine;
 using UnityEngine.UIElements;
 
@@ -54,7 +54,7 @@ namespace FirstLight.Game.Presenters
 
 		protected override UniTask OnScreenOpen(bool reload)
 		{
-			
+
 			SetFrontDimBlockerActive(false);
 
 			_services.AudioFxService.PlayClip2D(AudioId.DisconnectScreenAppear);
@@ -119,7 +119,7 @@ namespace FirstLight.Game.Presenters
 		{
 			var button = new AlertButton
 			{
-				Style = AlertButtonStyle.Positive,
+				Style = AlertButtonStyle.Default,
 				Text = ScriptLocalization.General.Confirm
 			};
 

@@ -3,7 +3,7 @@ using System.Linq;
 using FirstLight.Game.Logic;
 using FirstLight.Game.Presenters;
 using FirstLight.Game.TestCases.Helpers;
-using I2.Loc;
+using FirstLight.Game.Localization;
 using Photon.Deterministic;
 using Quantum;
 using UnityEngine;

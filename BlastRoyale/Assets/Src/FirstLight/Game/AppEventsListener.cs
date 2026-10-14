@@ -1,4 +1,5 @@
-﻿using FirstLight.Game.Data;
+using MainInstaller = FirstLight.Game.Utils.MainInstaller;
+using FirstLight.Game.Data;
 using FirstLight.Game.Messages;
 using FirstLight.Game.Services;
 using FirstLight.Game.Utils;
@@ -20,7 +21,7 @@ namespace FirstLight.Game
 
 		private void OnApplicationFocus(bool hasFocus)
 		{
-			_services?.MessageBrokerService?.Publish(new ApplicationFocusMessage() { IsFocus = hasFocus });
+			_services?.MessageBrokerService?.PublishSafe(new ApplicationFocusMessage() { IsFocus = hasFocus });
 			if (!hasFocus)
 			{
 				_services?.DataSaver?.SaveData<AppData>();
@@ -29,12 +30,12 @@ namespace FirstLight.Game
 
 		private void OnApplicationPause(bool isPaused)
 		{
-			_services?.MessageBrokerService?.Publish(new ApplicationPausedMessage { IsPaused = isPaused });
+			_services?.MessageBrokerService?.PublishSafe(new ApplicationPausedMessage { IsPaused = isPaused });
 		}
 
 		private void OnApplicationQuit()
 		{
-			_services?.MessageBrokerService?.Publish(new ApplicationQuitMessage());
+			_services?.MessageBrokerService?.PublishSafe(new ApplicationQuitMessage());
 		}
 	}
 }

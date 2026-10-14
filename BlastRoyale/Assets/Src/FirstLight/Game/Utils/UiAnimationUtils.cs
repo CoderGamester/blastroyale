@@ -10,7 +10,7 @@ using FirstLight.Game.Services;
 using FirstLight.Game.UIElements;
 using FirstLight.Game.Views.UITK;
 using FirstLight.UiService;
-using I2.Loc;
+using FirstLight.Game.Localization;
 using Quantum;
 using UnityEngine;
 using UnityEngine.UIElements;
@@ -31,7 +31,7 @@ namespace FirstLight.Game.Utils
 				{
 					var pct = easing(f / duration);
 					var size = 1 + extraScale * pct;
-					el.transform.scale = new Vector3(size, size, size);
+					el.style.scale = new Scale(new Vector2(size, size));
 					return;
 				}
 
@@ -39,7 +39,7 @@ namespace FirstLight.Game.Utils
 				{
 					var pct = 1 - easing((f - duration) / duration);
 					var size = 1 + extraScale * pct;
-					el.transform.scale = new Vector3(size, size, size);
+					el.style.scale = new Scale(new Vector2(size, size));
 					return;
 				}
 			});
@@ -69,7 +69,7 @@ namespace FirstLight.Game.Utils
 			{
 				if (cancelled) return;
 				cancelled = true;
-				element.transform.scale = Vector3.one;
+				element.style.scale = new Scale(Vector2.one);
 				anim.Stop();
 			};
 		}
@@ -128,7 +128,7 @@ namespace FirstLight.Game.Utils
 			anim.Start();
 			return anim;
 		}
-		
+
 		public static IValueAnimation AnimateOpacity(this VisualElement element, float fromAmount = 0f, float toAmount = 1f, int duration = 150)
 		{
 			var from = new StyleValues

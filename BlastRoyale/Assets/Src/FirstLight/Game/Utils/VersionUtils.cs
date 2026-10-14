@@ -71,7 +71,7 @@ namespace FirstLight.Game.Utils
 			LoadVersionData(textAsset);
 			Resources.UnloadAsset(textAsset);
 		}
-		
+
 		public static void LoadVersionData()
 		{
 			if (_loaded) return;
@@ -92,12 +92,6 @@ namespace FirstLight.Game.Utils
 			_versionData = JsonUtility.FromJson<VersionData>(textAsset.text);
 			_loaded = true;
 
-#if !DISABLE_SRDEBUGGER
-			if (Debug.isDebugBuild && SRDebug.Instance != null)
-			{
-				SRDebug.Instance.AddSystemInfo(SRDebugger.InfoEntry.Create("Version", VersionUtils.VersionInternal), "Game");
-			}
-#endif
 		}
 
 		/// <summary>

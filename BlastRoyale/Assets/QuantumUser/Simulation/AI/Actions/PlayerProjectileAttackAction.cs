@@ -1,0 +1,30 @@
+using System;
+using Photon.Deterministic;
+using Quantum.Systems;
+using Quantum.Systems.Bots;
+
+namespace Quantum
+{
+	/// <summary>
+	/// This action attacks at <see cref="PlayerCharacter"/> aiming direction based on it's <see cref="Weapon"/> data
+	/// and it's an projectile speed based attack
+	/// </summary>
+	/// <remarks>
+	/// Use <see cref="PlayerRaycastAttackAction"/> if is not a projectile speed base attack
+	/// </remarks>
+	[Serializable]
+
+	public unsafe class PlayerProjectileAttackAction : AIAction
+	{
+		/// <inheritdoc />
+		public override void Execute(Frame f, EntityRef e, ref AIContext aiContext)
+		{
+			if (ReviveSystem.IsKnockedOut(f, e))
+			{
+				return;
+			}
+
+			ProjectileSystem.Shoot(f, e);
+		}
+	}
+}

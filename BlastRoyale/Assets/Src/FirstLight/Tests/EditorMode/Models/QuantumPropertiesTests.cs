@@ -1,3 +1,4 @@
+using RoomProperties = FirstLight.Game.Services.RoomService.RoomProperties;
 using System.Collections;
 using System.Collections.Generic;
 using FirstLight.Game.Ids;

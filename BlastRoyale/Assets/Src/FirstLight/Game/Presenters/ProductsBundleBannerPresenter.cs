@@ -1,4 +1,5 @@
-﻿using System;
+using MainInstaller = FirstLight.Game.Utils.MainInstaller;
+using System;
 using System.Linq;
 using Cysharp.Threading.Tasks;
 using FirstLight.FLogger;
@@ -8,7 +9,7 @@ using FirstLight.Game.Presenters.ProductsBundle;
 using FirstLight.Game.Services;
 using FirstLight.Game.UIElements;
 using FirstLight.Game.Utils;
-using FirstLight.UIService;
+using FirstLight.Game.UI;
 using QuickEye.UIToolkit;
 using UnityEngine.UIElements;
 using Button = UnityEngine.UIElements.Button;
@@ -27,7 +28,7 @@ namespace FirstLight.Game.Presenters
 		private ScreenResult _result = ScreenResult.Close;
 
 		private VisualElement _rewardDisplayTemplate;
-		
+
 		[Q("CloseButton")] private Button _closeButton;
 		[Q("Blocker")] private VisualElement _blocker;
 
@@ -39,7 +40,7 @@ namespace FirstLight.Game.Presenters
 		[Q("TimeLeftText")] private Label _timeLeftText;
 		[Q("PurchaseBundleButton")] private LocalizedButton _buyBundleButton;
 
-		
+
 		private void Awake()
 		{
 			_gameServices = MainInstaller.ResolveServices();
@@ -67,7 +68,7 @@ namespace FirstLight.Game.Presenters
 		protected override UniTask OnScreenOpen(bool reload)
 		{
 			_closeCooldown.Trigger();
-			
+
 			var bundle = _gameServices.IAPService.AvailableGameProductBundles
 				.FirstOrDefault(product => product.Name == Data.BundleId);
 
@@ -77,7 +78,7 @@ namespace FirstLight.Game.Presenters
 			}
 
 			LoadBundleContent(bundle);
-			
+
 			return UniTask.CompletedTask;
 		}
 
@@ -85,7 +86,7 @@ namespace FirstLight.Game.Presenters
 		{
 			_bundleRewardsContainer.Clear();
 
-			
+
 			var playerBundleTimeLeft = _gameServices.ProductsBundleService.GetBundlePurchaseTimeExpireAt(Data?.BundleId).Value;
 
 			_timeLeftText.ShowCooldown(playerBundleTimeLeft, true, () => CloseBannerPopup());
@@ -96,7 +97,7 @@ namespace FirstLight.Game.Presenters
 				_bundleRewardsContainer.Add(new RewardDisplayContainerElement().SetupContainer(bundleProduct));
 			}
 		}
-		
+
 		private void ClickedOutsideBanner(PointerDownEvent evt)
 		{
 			if (_closeCooldown.IsCooldown()) return;
@@ -123,24 +124,24 @@ namespace FirstLight.Game.Presenters
 		{
 
 			var bundle = _gameServices.ProductsBundleService.GetGameProductBundle(Data.BundleId);
-			
+
 			if (_dataProvider.PlayerStoreDataProvider.HasPurchasedProductsBundle(bundle.Name))
 			{
 				_buyBundleButton.SetDisplay(false);
 				return;
 			}
-			
+
 			_buyBundleButton.clicked += () => CloseBannerPopup(ScreenResult.BuyBundleRealMoney);
 		}
 
 		private void IAPServiceOnPurchaseFinished(string itemId, ItemData data, bool success, IUnityStoreService.PurchaseFailureData reason)
 		{
 			if (!success) return;
-			
+
 			CloseBannerPopup();
 		}
-		
-	
+
+
 		//Enum-State Datas
 		public enum ScreenResult
 		{

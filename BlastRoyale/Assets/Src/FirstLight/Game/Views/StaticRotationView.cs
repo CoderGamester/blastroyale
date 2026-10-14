@@ -1,4 +1,3 @@
-using Sirenix.OdinInspector;
 using UnityEngine;
 
 namespace FirstLight.Game.Views
@@ -8,7 +7,7 @@ namespace FirstLight.Game.Views
 	/// </summary>
 	public class StaticRotationView : MonoBehaviour
 	{
-		[SerializeField, Required] private Vector3 _staticRotation;
+		[SerializeField] private Vector3 _staticRotation;
 
 		private void LateUpdate()
 		{

@@ -1,10 +1,11 @@
+using MainInstaller = FirstLight.Game.Utils.MainInstaller;
 using System;
 using FirstLight.Game.Services;
 using FirstLight.Game.Services.Analytics;
 using FirstLight.Game.Utils;
 using FirstLight.UiService;
-using FirstLight.UIService;
-using I2.Loc;
+using FirstLight.Game.UI;
+using FirstLight.Game.Localization;
 using UnityEngine.Events;
 using UnityEngine.UIElements;
 
@@ -34,7 +35,7 @@ namespace FirstLight.Game.Presenters
 			Root.Q<Button>("GuestButton").clicked += OnPlayAsGuestButtonClicked;
 			Root.SetupClicks(_services);
 		}
-		
+
 		private void OnLoginRegisterClicked()
 		{
 			Data.GoToLoginClicked();

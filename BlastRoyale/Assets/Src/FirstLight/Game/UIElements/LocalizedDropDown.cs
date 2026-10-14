@@ -1,16 +1,23 @@
 using System.Collections.Generic;
-using I2.Loc;
+using FirstLight.Game.Localization;
 using UnityEngine.UIElements;
 
 namespace FirstLight.Game.UIElements
 {
 	/// <summary>
-	/// A button that has it's text set from a I2 Localization key.
+	/// A button that has it's text set from a bundled game translation key.
 	/// </summary>
-	public class LocalizedDropDown : DropdownField
+	[UxmlElement]
+	public partial class LocalizedDropDown : DropdownField
 	{
-		protected string localizationKey { get; set; }
-		
+		private string _localizationKey;
+		[UxmlAttribute("localization-key")]
+		protected string localizationKey
+		{
+			get => _localizationKey;
+			set => Localize(value);
+		}
+
 		public LocalizedDropDown() : this(string.Empty)
 		{
 		}
@@ -25,27 +32,8 @@ namespace FirstLight.Game.UIElements
 		/// </summary>
 		public void Localize(string key)
 		{
-			localizationKey = key;
-			label = LocalizationManager.TryGetTranslation(key, out var translation) ? translation : $"#{key}#";
-		}
-
-		public new class UxmlFactory : UxmlFactory<LocalizedDropDown, UxmlTraits>
-		{
-		}
-
-		public new class UxmlTraits : DropdownField.UxmlTraits
-		{
-			UxmlStringAttributeDescription _localizationKeyAttribute = new()
-			{
-				name = "localization-key",
-				use = UxmlAttributeDescription.Use.Required
-			};
-
-			public override void Init(VisualElement ve, IUxmlAttributes bag, CreationContext cc)
-			{
-				base.Init(ve, bag, cc);
-				((LocalizedDropDown) ve).Localize(_localizationKeyAttribute.GetValueFromBag(bag, cc));
-			}
+			_localizationKey = key;
+			label = GameLocalization.TryGetTranslation(key, out var translation) ? translation : $"#{key}#";
 		}
 	}
 }

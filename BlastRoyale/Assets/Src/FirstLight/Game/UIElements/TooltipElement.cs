@@ -20,7 +20,8 @@ namespace FirstLight.Game.UIElements
 	/// <summary>
 	/// Displays the might graphic.
 	/// </summary>
-	public class TooltipElement : VisualElement
+	[UxmlElement]
+	public partial class TooltipElement : VisualElement
 	{
 		static CustomStyleProperty<Color> s_FillColor = new ("--fill-color");
 		static CustomStyleProperty<Color> s_BorderColor = new ("--border-color");
@@ -30,11 +31,22 @@ namespace FirstLight.Game.UIElements
 		static CustomStyleProperty<float> s_TipWidth = new ("--tip-width");
 
 
-		protected TipDirection tipPosition { get; set; }
+		private TipDirection _tipPosition;
+		[UxmlAttribute("tip-position")]
+		protected TipDirection tipPosition
+		{
+			get => _tipPosition;
+			set
+			{
+				_tipPosition = value;
+				if (_contentContainer == null) return;
+				MarkDirtyRepaint();
+				CalculateOffsets(true);
+			}
+		}
 		private Color _color;
 		private Color _borderColorStyle;
 		private float _borderWidthStyle;
-		private float _borderRadiusStyle;
 		private float _tipWidthStyle;
 		private float _tipLengthStyle;
 
@@ -51,7 +63,7 @@ namespace FirstLight.Game.UIElements
 		private Vector2 _end;
 
 
-		public TooltipElement() : this(TipDirection.Left)
+		public TooltipElement() : this(TipDirection.Top)
 		{
 		}
 
@@ -68,7 +80,7 @@ namespace FirstLight.Game.UIElements
 			generateVisualContent += GenerateVisualContent;
 			RegisterCallback<CustomStyleResolvedEvent>(ResolvedCustomStyle);
 		}
-		
+
 
 		public override VisualElement contentContainer => _content;
 
@@ -95,7 +107,7 @@ namespace FirstLight.Game.UIElements
 
 			if (_end.y - _start.y < _tipLengthStyle)
 			{
-				
+
 				return;
 			}
 
@@ -299,27 +311,6 @@ namespace FirstLight.Game.UIElements
 
 
 			painter.ArcTo(new Vector2(_start.x, _start.y), new Vector2(_start.x + _cornerLength, _start.y), _borderRadius);
-		}
-
-
-		public new class UxmlFactory : UxmlFactory<TooltipElement, UxmlTraits>
-		{
-		}
-
-		public new class UxmlTraits : VisualElement.UxmlTraits
-		{
-			UxmlEnumAttributeDescription<TipDirection> _tipPosition = new ()
-			{
-				name = "tip-position",
-				use = UxmlAttributeDescription.Use.Required,
-				defaultValue = TipDirection.Top,
-			};
-
-			public override void Init(VisualElement ve, IUxmlAttributes bag, CreationContext cc)
-			{
-				base.Init(ve, bag, cc);
-				((TooltipElement) ve).tipPosition = _tipPosition.GetValueFromBag(bag, cc);
-			}
 		}
 	}
 }

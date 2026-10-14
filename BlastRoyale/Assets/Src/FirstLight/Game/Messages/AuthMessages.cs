@@ -1,6 +1,6 @@
 using FirstLight.Game.Services.Authentication;
 using FirstLight.Server.SDK.Modules.GameConfiguration;
-using FirstLight.SDK.Services;
+using GameLovers.Services;
 
 namespace FirstLight.Game.Messages
 {

@@ -1,10 +1,11 @@
+using MainInstaller = FirstLight.Game.Utils.MainInstaller;
 using System;
 using Cysharp.Threading.Tasks;
 using FirstLight.Game.Messages;
 using FirstLight.Game.Presenters;
 using FirstLight.Game.Services;
 using FirstLight.Game.Utils;
-using FirstLight.Statechart;
+using GameLovers.StatechartMachine;
 using Quantum;
 
 namespace FirstLight.Game.StateMachines
@@ -61,26 +62,26 @@ namespace FirstLight.Game.StateMachines
 
 			spawning.Event(NetworkState.PhotonDisconnectedEvent).Target(final);
 			spawning.Event(_localPlayerAliveEvent).Target(alive);
-			
+
 			alive.Event(_localPlayerDeadEvent).Target(deadCheck);
 			alive.Event(NetworkState.PhotonDisconnectedEvent).Target(final);
 
 			deadCheck.Transition().Condition(IsNotOnline).Target(final);
 			deadCheck.Transition().Condition(IsMatchEnding).Target(final);
 			deadCheck.Transition().Target(dead);
-			
+
 			dead.OnEnter(MatchEndAnalytics);
 			dead.OnEnter(OpenMatchEndScreen);
 			dead.Event(_localPlayerNextEvent).Target(spectating);
 			dead.Event(NetworkState.PhotonDisconnectedEvent).Target(final);
-			
+
 			spectating.OnEnter(OpenSpectateScreen);
 			spectating.Event(GameSimulationState.LocalPlayerExitEvent).Target(final);
 			spectating.Event(NetworkState.PhotonDisconnectedEvent).Target(final);
 
 			final.OnEnter(UnsubscribeEvents);
 		}
-		
+
 		private void SubscribeEvents()
 		{
 			_matchServices = MainInstaller.Resolve<IMatchServices>();;
@@ -92,13 +93,13 @@ namespace FirstLight.Game.StateMachines
 		{
 			QuantumEvent.UnsubscribeListener(this);
 		}
-		
+
 		private bool IsNotOnline()
 		{
 			return !_services.NetworkService.QuantumClient.IsConnectedAndReady;
 		}
 
-		
+
 		private void MatchEndAnalytics()
 		{
 			_services.AnalyticsService.MatchCalls.MatchEnd(QuantumRunner.Default.Game, false, _matchServices.MatchEndDataService.LocalPlayerMatchData.PlayerRank);
@@ -141,7 +142,7 @@ namespace FirstLight.Game.StateMachines
 		{
 			_statechartTrigger(_localPlayerDeadEvent);
 		}
-		
+
 		private void OpenMatchEndScreen()
 		{
 			var data = new MatchEndScreenPresenter.StateData
@@ -161,7 +162,7 @@ namespace FirstLight.Game.StateMachines
 			{
 				OnLeaveClicked = () =>
 				{
-					_services.MessageBrokerService.Publish(new LeftBeforeMatchFinishedMessage());
+					_services.MessageBrokerService.PublishSafe(new LeftBeforeMatchFinishedMessage());
 					_statechartTrigger(GameSimulationState.LocalPlayerExitEvent);
 				}
 			};

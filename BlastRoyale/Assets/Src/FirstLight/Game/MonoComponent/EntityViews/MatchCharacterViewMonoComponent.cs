@@ -23,11 +23,11 @@ namespace FirstLight.Game.MonoComponent.EntityViews
 				_footsteps.SpawnFootprints = value;
 			}
 		}
-		
+
 		/// <summary>
 		/// Initializes the Adventure character view with the given player data
 		/// </summary>
-		public async UniTask Init(EntityView entityView, PlayerLoadout loadout, Frame frame)
+		public async UniTask Init(QuantumEntityView entityView, PlayerLoadout loadout, Frame frame)
 		{
 			Cosmetics = loadout.Cosmetics;
 			_footsteps = gameObject.AddComponent<FootprinterMonoComponent>();
@@ -61,7 +61,7 @@ namespace FirstLight.Game.MonoComponent.EntityViews
 					entityViewBase.SetEntityView(runner.Game, entityView);
 				}
 				EquipWeapon(loadout.Weapon.GameId);
-				
+
 			}
 
 			if (isSkydiving)

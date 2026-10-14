@@ -1,3 +1,4 @@
+using MainInstaller = FirstLight.Game.Utils.MainInstaller;
 using System;
 using System.Linq;
 using Cysharp.Threading.Tasks;
@@ -5,8 +6,8 @@ using FirstLight.FLogger;
 using FirstLight.Game.Services;
 using FirstLight.Game.UIElements;
 using FirstLight.Game.Utils;
-using FirstLight.UIService;
-using I2.Loc;
+using FirstLight.Game.UI;
+using FirstLight.Game.Localization;
 using Newtonsoft.Json;
 using PlayFab;
 using UnityEngine.UIElements;
@@ -149,7 +150,7 @@ namespace FirstLight.Game.Presenters
 				};
 
 				string errorMessage =
-					LocalizationManager.TryGetTranslation("UITLoginRegister/invalid_input", out var translation)
+					GameLocalization.TryGetTranslation("UITLoginRegister/invalid_input", out var translation)
 						? translation
 						: $"#{"UITLoginRegister/invalid_input"}#";
 				_services.GenericDialogService.OpenButtonDialog(ScriptLocalization.UITShared.error, errorMessage, false,
@@ -217,7 +218,7 @@ namespace FirstLight.Game.Presenters
 				};
 
 				string errorMessage =
-					LocalizationManager.TryGetTranslation("UITLoginRegister/invalid_input", out var translation)
+					GameLocalization.TryGetTranslation("UITLoginRegister/invalid_input", out var translation)
 						? translation
 						: $"#{"UITLoginRegister/invalid_input"}#";
 				await _services.GenericDialogService.OpenButtonDialog(ScriptLocalization.UITShared.error, errorMessage, false,

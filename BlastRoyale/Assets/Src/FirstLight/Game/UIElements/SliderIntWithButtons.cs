@@ -5,9 +5,10 @@ using UnityEngine.UIElements;
 namespace FirstLight.Game.UIElements
 {
 	/// <summary>
-	/// A button that has it's text set from a I2 Localization key.
+	/// A button that has it's text set from a bundled game translation key.
 	/// </summary>
-	public class SliderIntWithButtons : SliderInt
+	[UxmlElement]
+	public partial class SliderIntWithButtons : SliderInt
 	{
 		private const string USS_BLOCK = "slider-with-buttons";
 		private const string USS_BUTTON = USS_BLOCK + "__button";
@@ -24,13 +25,14 @@ namespace FirstLight.Game.UIElements
 		private string _tooltipFormat = "{0}";
 		private bool _usePlusMinusSymbol;
 
+		[UxmlAttribute("use-plus-minus-symbols")]
 		public bool usePlusMinusSymbol
 		{
 			get => _usePlusMinusSymbol;
 			set
 			{
-				_leftButton.text = "-";
-				_rightButton.text = "+";
+				_leftButton.text = value ? "-" : lowValue.ToString();
+				_rightButton.text = value ? "+" : highValue.ToString();
 				_usePlusMinusSymbol = value;
 			}
 		}
@@ -107,27 +109,6 @@ namespace FirstLight.Game.UIElements
 		private void UpdateTooltip(int val)
 		{
 			_tooltipLabel.text = string.Format(_tooltipFormat, val);
-		}
-
-		protected new class UxmlFactory : UxmlFactory<SliderIntWithButtons, UxmlTraits>
-		{
-		}
-
-		protected new class UxmlTraits : SliderInt.UxmlTraits
-		{
-			private readonly UxmlBoolAttributeDescription _usePlusMinusSymbol = new ()
-			{
-				name = "use-plus-minus-symbols",
-				defaultValue = false,
-				use = UxmlAttributeDescription.Use.Optional
-			};
-
-			public override void Init(VisualElement ve, IUxmlAttributes bag, CreationContext cc)
-			{
-				var el = (SliderIntWithButtons) ve;
-				el.usePlusMinusSymbol = _usePlusMinusSymbol.GetValueFromBag(bag, cc);
-				base.Init(ve, bag, cc);
-			}
 		}
 	}
 }

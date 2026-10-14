@@ -1,3 +1,4 @@
+using MainInstaller = FirstLight.Game.Utils.MainInstaller;
 using System;
 using System.Linq;
 using System.Net;
@@ -41,22 +42,22 @@ namespace FirstLight.Game.Utils
 		{
 			if (runner == null)
 			{
-				Debug.Log("NULL");
+				return "NULL";
 			}
 
 			var s = MainInstaller.Resolve<IGameServices>();
 			return JsonConvert.SerializeObject(new
 			{
 				LocalPlayerActive = !s.NetworkService.LocalPlayer.IsInactive,
-				HasGameTimedOut = runner.HasGameStartTimedOut,
+				State = runner.State,
 				LocalPlayerRef = runner.Game.GetLocalPlayerRef(),
 				Running = runner.IsRunning,
 				Stall = runner.Session.IsStalling,
 				Pause = runner.Session.IsPaused,
 				Online = runner.Session.IsOnline,
 				Spectating = runner.Session.IsSpectating,
-				Active = runner.isActiveAndEnabled,
-				LocalPlayers = runner.Session.LocalPlayerIndices.Length,
+				Active = runner.UnityObject != null && runner.UnityObject.activeInHierarchy,
+				LocalPlayers = runner.Session.LocalPlayers.Count,
 				Predicted = runner.Session.IsPredicted,
 				Stats = runner.Session.Stats,
 				LocalInputOffset = runner.Session.LocalInputOffset,
@@ -66,7 +67,7 @@ namespace FirstLight.Game.Utils
 
 		public static bool IsDefinedAndRunning(this QuantumRunner runner, bool considerStalling = true)
 		{
-			return runner != null && runner.Game is {IsSessionDestroyed: false} && !runner.IsDestroyed() && runner.isActiveAndEnabled &&
+			return runner != null && runner.Game?.Session != null && runner.UnityObject != null && runner.UnityObject.activeInHierarchy &&
 				runner.IsRunning && (!considerStalling || !runner.Session.IsStalling) &&
 				!runner.Session.IsPaused;
 		}

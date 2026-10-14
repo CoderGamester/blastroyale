@@ -1,3 +1,4 @@
+using MainInstaller = FirstLight.Game.Utils.MainInstaller;
 using System;
 using FirstLight.Game.Configs;
 using FirstLight.Game.Data;
@@ -5,7 +6,7 @@ using FirstLight.Game.Data.DataTypes;
 using FirstLight.Game.Infos;
 using FirstLight.Game.Services;
 using FirstLight.Game.Utils;
-using I2.Loc;
+using FirstLight.Game.Localization;
 using Quantum;
 using UnityEngine;
 using UnityEngine.UIElements;
@@ -16,7 +17,8 @@ namespace FirstLight.Game.UIElements
 	/// <summary>
 	/// Displays a category of items in the collection screen, e.g. Characters, Banners, Gliders, etc.
 	/// </summary>
-	public class CollectionCardElement : ImageButton
+	[UxmlElement]
+	public partial class CollectionCardElement : ImageButton
 	{
 		private const string EMPTY_LOC_KEY = "UITCollection/no_{0}";
 
@@ -38,7 +40,6 @@ namespace FirstLight.Game.UIElements
 
 		private const string UssLockedIcon = UssBlock + "__locked-icon";
 		private const string UssBadgeHolder = UssBlock + "__badge-holder";
-		private const string UssBadgeNft = UssBlock + "__badge-nft";
 		private const string UssBadgeLoaned = UssBlock + "__badge-loaned";
 		private const string UssBadgeEquipped = UssBlock + "__badge-equipped";
 
@@ -53,7 +54,6 @@ namespace FirstLight.Game.UIElements
 		private readonly Label _name;
 
 		private readonly VisualElement _locked;
-		private readonly VisualElement _nftBadge;
 		private readonly VisualElement _loanedBadge;
 		private readonly VisualElement _equippedBadge;
 		private readonly VisualElement _notification;
@@ -93,8 +93,6 @@ namespace FirstLight.Game.UIElements
 			var badgeHolder = new VisualElement {name = "badge-holder"};
 			cardHolder.Add(badgeHolder);
 			badgeHolder.AddToClassList(UssBadgeHolder);
-			badgeHolder.Add(_nftBadge = new VisualElement {name = "badge-nft"});
-			_nftBadge.AddToClassList(UssBadgeNft);
 
 			badgeHolder.Add(
 				_loanedBadge = new Label(ScriptLocalization.UITEquipment.loaned) {name = "badge-loaned"});
@@ -113,7 +111,6 @@ namespace FirstLight.Game.UIElements
 
 			SetNotificationPip(false);
 			SetLoanedIcon(false);
-			SetIsNft(false);
 			clicked += () => Clicked?.Invoke(CollectionIndex);
 		}
 
@@ -140,7 +137,6 @@ namespace FirstLight.Game.UIElements
 
 		public void SetNotificationPip(bool b) => _notification.SetDisplay(b);
 		public void SetLoanedIcon(bool b) => _loanedBadge.SetDisplay(b);
-		public void SetIsNft(bool b) => _nftBadge.SetDisplay(b);
 		public void SetIsEquipped(bool b) => _equippedBadge.SetDisplay(b);
 		public void SetIsOwned(bool b) => SetLocked(b);
 
@@ -168,8 +164,5 @@ namespace FirstLight.Game.UIElements
 			view.DrawIcon(_image);
 		}
 
-		public new class UxmlFactory : UxmlFactory<CollectionCardElement, AutoFocusTrait>
-		{
-		}
 	}
 }

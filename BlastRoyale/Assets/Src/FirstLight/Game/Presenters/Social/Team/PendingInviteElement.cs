@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using FirstLight.Game.Services;
 using FirstLight.Game.UIElements;
 using FirstLight.Game.Utils;
@@ -12,7 +12,8 @@ namespace FirstLight.Game.Presenters.Social.Team
 	/// <summary>
 	/// Element used in the team ui to display a pending invite
 	/// </summary>
-	public class PendingInviteElement : VisualElement
+	[UxmlElement]
+	public partial class PendingInviteElement : VisualElement
 	{
 		[Q] private Label _playerName;
 		[Q] private Label _status;
@@ -52,8 +53,5 @@ namespace FirstLight.Game.Presenters.Social.Team
 			}).ExecuteLater(3000);
 		}
 
-		public new class UxmlFactory : UxmlFactory<PendingInviteElement, UxmlTraits>
-		{
-		}
 	}
 }

@@ -1,5 +1,6 @@
+using FirstLight.Game.Services.Infrastructure;
 using System;
-using FirstLight.Services;
+using GameLovers.Services;
 
 namespace FirstLight.Game.Services
 {

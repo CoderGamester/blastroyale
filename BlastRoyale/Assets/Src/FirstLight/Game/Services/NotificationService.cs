@@ -1,4 +1,4 @@
-﻿#if UNITY_IOS || UNITY_ANDROID
+#if UNITY_IOS || UNITY_ANDROID
 using System;
 using System.Collections.Generic;
 using System.Globalization;
@@ -6,13 +6,12 @@ using FirstLight.FLogger;
 using FirstLight.Game.Configs.Utils;
 using FirstLight.Game.Utils;
 using Unity.Notifications;
-using Unity.Services.PushNotifications;
 using FirstLight.Game.Configs.Remote;
 using UnityEngine;
 #endif
 using FirstLight.Game.Messages;
 using FirstLightServerSDK.Services;
-using FirstLight.SDK.Services;
+using GameLovers.Services;
 using Cysharp.Threading.Tasks;
 
 namespace FirstLight.Game.Services
@@ -96,7 +95,6 @@ namespace FirstLight.Game.Services
 #if UNITY_IOS || UNITY_ANDROID
 			if (Application.isEditor) return;
 			Init();
-			await InitRemotePushNotifications();
 			var request = NotificationCenter.RequestPermission();
 
 			while (request.Status == NotificationsPermissionStatus.RequestPending)
@@ -156,34 +154,6 @@ namespace FirstLight.Game.Services
 			}, category, new NotificationDateTimeSchedule(dateTime));
 		}
 
-		private async UniTask InitRemotePushNotifications()
-		{
-			if (Application.isEditor) return;
-
-			PushNotificationsService.Instance.OnRemoteNotificationReceived += PushNotificationReceived;
-
-			try
-			{
-				var token = await PushNotificationsService.Instance.RegisterForPushNotificationsAsync().AsUniTask();
-				FLog.Info($"Registered for push notifications with token: {token}");
-			}
-			catch (Exception e)
-			{
-				FLog.Warn("Failed to register for push notifications: ", e);
-			}
-
-			return;
-
-			// Only for testing for now
-			void PushNotificationReceived(Dictionary<string, object> notificationData)
-			{
-				FLog.Info("Notification received!");
-				foreach (var (key, value) in notificationData)
-				{
-					FLog.Info($"Notification data item: {key} - {value}");
-				}
-			}
-		}
 #endif
 	}
 }

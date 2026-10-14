@@ -1,3 +1,4 @@
+using MainInstaller = FirstLight.Game.Utils.MainInstaller;
 using System.Collections;
 using System.Collections.Generic;
 using Cysharp.Threading.Tasks;
@@ -27,7 +28,7 @@ public class FootprinterMonoComponent : MonoBehaviour
 	private IMatchServices _matchServices;
 	private Vector3 _rightStepScale;
 	private Vector3 _leftStepScale;
-	private EntityView _view;
+	private QuantumEntityView _view;
 	private PlayerCharacterMonoComponent _character;
 
 	private readonly Vector3 _footSpawnOffset = new (0f, 0.05f, 0f);
@@ -51,7 +52,7 @@ public class FootprinterMonoComponent : MonoBehaviour
 		_globalPool.Clear();
 	}
 
-	public void Init(EntityView view, PlayerLoadout loadout)
+	public void Init(QuantumEntityView view, PlayerLoadout loadout)
 	{
 		var services = MainInstaller.Resolve<IGameServices>();
 		_character = view.GetComponent<PlayerCharacterMonoComponent>();

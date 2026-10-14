@@ -9,7 +9,8 @@ namespace FirstLight.Game.UIElements
 	///
 	/// Hint: Make the width half the size of the element to get a full circular loader.
 	/// </summary>
-	public class RadialProgressElement : VisualElement
+	[UxmlElement]
+	public partial class RadialProgressElement : VisualElement
 	{
 		private static readonly CustomStyleProperty<Color> _trackColorStyle = new("--track-color");
 		private static readonly CustomStyleProperty<Color> _progressColorStyle = new("--progress-color");
@@ -20,6 +21,7 @@ namespace FirstLight.Game.UIElements
 		private Color _trackColor = Color.grey;
 		private Color _progressColor = Color.green;
 
+		[UxmlAttribute("progress")]
 		public float Progress
 		{
 			get => _progress;
@@ -34,7 +36,7 @@ namespace FirstLight.Game.UIElements
 			get => _trackColor;
 			set
 			{
-				_trackColor = value; 
+				_trackColor = value;
 				MarkDirtyRepaint();
 			}
 		}
@@ -59,7 +61,7 @@ namespace FirstLight.Game.UIElements
 		{
 			UpdateCustomStyles();
 		}
-		
+
 		[SuppressMessage("ReSharper", "ConvertIfToOrExpression")]
 		[SuppressMessage("ReSharper", "ReplaceWithSingleAssignment.False")]
 		private void UpdateCustomStyles()
@@ -107,25 +109,6 @@ namespace FirstLight.Game.UIElements
 			painter.Arc(new Vector2(size * 0.5f, size * 0.5f), size * 0.5f, -90.0f,
 				360.0f * Progress - 90.0f);
 			painter.Stroke();
-		}
-
-		public new class UxmlFactory : UxmlFactory<RadialProgressElement, UxmlTraits>
-		{
-		}
-
-		public new class UxmlTraits : VisualElement.UxmlTraits
-		{
-			private readonly UxmlFloatAttributeDescription _progressAttribute = new()
-			{
-				name = "progress"
-			};
-
-			public override void Init(VisualElement ve, IUxmlAttributes bag, CreationContext cc)
-			{
-				base.Init(ve, bag, cc);
-
-				((RadialProgressElement) ve).Progress = _progressAttribute.GetValueFromBag(bag, cc);
-			}
 		}
 	}
 }

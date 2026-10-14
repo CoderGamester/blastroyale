@@ -6,7 +6,6 @@ using FirstLight.Game.Configs;
 using FirstLight.Game.MonoComponent.Collections;
 using FirstLight.Game.Utils;
 using Quantum;
-using Sirenix.Utilities;
 using UnityEditor;
 using UnityEditor.Animations;
 using UnityEditor.Compilation;
@@ -153,7 +152,7 @@ namespace FirstLight.Editor.AssetImporters
 						var characterTexturePath = Path.Combine(assetPath, $"T_{CHARACTER_PREFIX}{characterName}.png");
 						var characterPrefabFilename = $"{CHARACTER_PREFIX}{characterName}.prefab";
 						var characterFBX = (GameObject) AssetDatabase.LoadMainAssetAtPath(characterFBXPath);
-						var animations = AssetDatabase.LoadAllAssetRepresentationsAtPath(characterFBXPath).FilterCast<AnimationClip>().ToArray();
+						var animations = AssetDatabase.LoadAllAssetRepresentationsAtPath(characterFBXPath).OfType<AnimationClip>().ToArray();
 						var animatorController = (AnimatorController) AssetDatabase.LoadMainAssetAtPath(ANIMATION_CONTROLLER_PATH);
 
 						Debug.Log($"Importing new character: {characterName}");

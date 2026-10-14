@@ -1,3 +1,4 @@
+using GameLovers.GameData;
 using System;
 using System.IO;
 using FirstLight.Game.Configs.Collection;

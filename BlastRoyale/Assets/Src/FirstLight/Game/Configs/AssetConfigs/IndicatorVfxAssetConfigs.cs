@@ -1,4 +1,4 @@
-using FirstLight.AssetImporter;
+using GameLovers.Services.AssetsImporter;
 using FirstLight.Game.Ids;
 using Quantum;
 using UnityEngine;

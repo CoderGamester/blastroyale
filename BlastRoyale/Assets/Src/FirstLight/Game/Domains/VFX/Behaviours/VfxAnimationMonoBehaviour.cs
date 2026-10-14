@@ -1,7 +1,7 @@
+using FirstLight.Inspector;
 using FirstLight.Game.Domains.VFX;
 using FirstLight.Game.Ids;
-using FirstLight.Services;
-using Sirenix.OdinInspector;
+using GameLovers.Services;
 using UnityEngine;
 
 namespace FirstLight.Game.MonoComponent.Vfx
@@ -12,7 +12,7 @@ namespace FirstLight.Game.MonoComponent.Vfx
 	/// </remarks>
 	public class VfxAnimationMonoBehaviour : VfxMonoBehaviour
 	{
-		[SerializeField, Required] private Animation _animation;
+		[SerializeField, InspectorField(Required = true)] private Animation _animation;
 
 		private void OnValidate()
 		{

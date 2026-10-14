@@ -24,7 +24,7 @@ namespace FirstLight.Editor.Artifacts
 				"FirstLight.DataExtensions.dll",
 				"FirstLight.Game.Server.dll",
 				"FirstLight.Game.dll",
-				"FirstLight.Services.dll",
+				"GameLovers.Services.dll",
 				"FirstLight.Models.dll",
 				"UniTask.dll",
 				"PhotonQuantum.dll"
@@ -37,15 +37,6 @@ namespace FirstLight.Editor.Artifacts
 			Dlls = new[]
 			{
 				"FirstLightServerSDK.dll"
-			}
-		};
-
-		public static readonly DllArtifacts Odin = new ()
-		{
-			SourceDir = $"{Application.dataPath}/../Assets/Plugins/Sirenix/Assemblies/",
-			Dlls = new[]
-			{
-				"Sirenix.OdinInspector.Attributes.dll"
 			}
 		};
 
@@ -63,8 +54,7 @@ namespace FirstLight.Editor.Artifacts
 			GameDlls,
 			QuantumDlls,
 			QuantumAssetDBArtifact,
-			ServerSdk,
-			Odin
+			ServerSdk
 		};
 
 		public static void Copy(string target, params IArtifact[] artifacts)

@@ -1,3 +1,4 @@
+using GameLovers.GameData;
 using System;
 using System.Collections.Generic;
 using Quantum;
@@ -12,7 +13,7 @@ namespace FirstLight.Game.Configs
 		public uint FragmentCost;
 		public uint CoinCost;
 	}
-	
+
 	/// <summary>
 	/// Scriptable Object tool to import the <seealso cref="FuseConfig"/> sheet data
 	/// </summary>

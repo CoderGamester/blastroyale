@@ -1,3 +1,4 @@
+using GameLovers.GameData;
 using System;
 using System.Collections.Generic;
 using Photon.Deterministic;
@@ -12,7 +13,7 @@ namespace FirstLight.Game.Configs
 		public uint Level;
 		public uint CoinCost;
 	}
-	
+
 	/// <summary>
 	/// Scriptable Object tool to import the <seealso cref="UpgradeDataConfig"/> sheet data
 	/// </summary>

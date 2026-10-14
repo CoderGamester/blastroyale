@@ -1,5 +1,5 @@
 using FirstLight.Game.Configs;
-using FirstLightEditor.GoogleSheetImporter;
+using GameLoversEditor.GoogleSheetImporter;
 
 namespace FirstLight.Editor.SheetImporters
 {

@@ -47,7 +47,7 @@ namespace FirstLight.Game.Services.RoomService
 		/// <summary>
 		/// Returns a room parameters used for creation of custom and matchmaking rooms
 		/// </summary>
-		public EnterRoomParams GetRoomCreateParams(MatchRoomSetup setup, bool offline = false, string[] expectedPlayers = null)
+		public EnterRoomArgs GetRoomCreateParams(MatchRoomSetup setup, bool offline = false, string[] expectedPlayers = null)
 		{
 			var roomNameFinal = string.IsNullOrEmpty(setup.RoomIdentifier) ? null : setup.RoomIdentifier;
 			// In offline games we need to create the room with the correct TTL as we cannot update TTL
@@ -59,12 +59,11 @@ namespace FirstLight.Game.Services.RoomService
 			}
 
 			var createProperties = GetCreateRoomProperties(setup);
-			var roomParams = new EnterRoomParams
+			var roomParams = new EnterRoomArgs
 			{
 				RoomName = roomNameFinal,
-				PlayerProperties = null,
 
-				// Expected users commented out. This is used for squads specifically when 
+				// Expected users commented out. This is used for squads specifically when
 				// joining only a single squad to the game.
 				// This makes the game auto-start when all players join the game not giving
 				// time to select the drop zone. This is because our matchmaking is the same as our
@@ -97,7 +96,7 @@ namespace FirstLight.Game.Services.RoomService
 		/// <summary>
 		/// Returns room entry parameters used solely for entering rooms directly (custom games)
 		/// </summary>
-		public EnterRoomParams GetRoomEnterParams(string roomName)
+		public EnterRoomArgs GetRoomEnterParams(string roomName)
 		{
 			var roomNameFinal = roomName;
 
@@ -106,11 +105,10 @@ namespace FirstLight.Game.Services.RoomService
 				roomNameFinal += RoomCommitLockData;
 			}
 
-			Log.Warn("Enter Custom Games");
-			return new EnterRoomParams
+			FLog.Info("Enter Custom Games");
+			return new EnterRoomArgs
 			{
 				RoomName = roomNameFinal,
-				PlayerProperties = null,
 				ExpectedUsers = null,
 				Lobby = TypedLobby.Default,
 				RoomOptions = new RoomOptions

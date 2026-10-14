@@ -4,7 +4,7 @@ using FirstLight.Game.Data.DataTypes;
 using FirstLight.Game.Messages;
 using FirstLight.Game.Presenters;
 using FirstLight.Game.Utils;
-using FirstLight.SDK.Services;
+using GameLovers.Services;
 using FirstLightServerSDK.Services;
 using UnityEngine;
 
@@ -15,12 +15,12 @@ namespace FirstLight.Game.Services
 	/// </summary>
 	public class DeepLinkService
 	{
-		private readonly UIService.UIService _uiService;
+		private readonly FirstLight.Game.UI.UIService _uiService;
 		private readonly IRemoteConfigProvider _remoteConfigProvider;
 
 		private string _deepLink;
 
-		public DeepLinkService(IMessageBrokerService messageBrokerService, UIService.UIService uiService, IRemoteConfigProvider remoteConfigProvider)
+		public DeepLinkService(IMessageBrokerService messageBrokerService, FirstLight.Game.UI.UIService uiService, IRemoteConfigProvider remoteConfigProvider)
 		{
 			_uiService = uiService;
 			_remoteConfigProvider = remoteConfigProvider;

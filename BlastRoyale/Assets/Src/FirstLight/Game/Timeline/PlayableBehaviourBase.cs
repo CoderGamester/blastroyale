@@ -1,3 +1,4 @@
+using MainInstaller = FirstLight.Game.Utils.MainInstaller;
 using FirstLight.Game.Logic;
 using FirstLight.Game.Services;
 using FirstLight.Game.Utils;
@@ -15,7 +16,7 @@ namespace FirstLight.Game.Timeline
 		protected IGameServices Services;
 		protected IGameDataProvider DataProvider;
 		protected Playable Playable;
-		
+
 		public bool IsPlaying { get; private set; }
 		public TimelineClip CustomClipReference { get; set; }
 		public double StartTime => CustomClipReference.start;
@@ -32,7 +33,7 @@ namespace FirstLight.Game.Timeline
 			Playable = playable;
 			Services = MainInstaller.Resolve<IGameServices>();
 			DataProvider = MainInstaller.Resolve<IGameDataProvider>();
-			
+
 			OnCreated(playable);
 		}
 
@@ -46,7 +47,7 @@ namespace FirstLight.Game.Timeline
 
 			IsPlaying = true;
 			Playable = playable;
-			
+
 			OnEnter(playable);
 		}
 
@@ -57,13 +58,13 @@ namespace FirstLight.Game.Timeline
 			{
 				return;
 			}
-			
+
 			Playable = playable;
 			IsPlaying = false;
-			
+
 			OnExit(playable);
 		}
-		
+
 		protected virtual void OnCreated(Playable playable) { }
 		protected virtual void OnEnter(Playable playable) { }
 		protected virtual void OnExit(Playable playable) { }

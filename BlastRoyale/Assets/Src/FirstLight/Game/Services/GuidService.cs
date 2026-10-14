@@ -15,39 +15,39 @@ namespace FirstLight.Game.Services
 		/// Adds the given <paramref name="element"/> to the list of GUIDs reference by this service
 		/// </summary>
 		void AddElement(IGuidElement element);
-		
+
 		/// <summary>
 		/// Removes the element with the given <paramref name="id"/> of the list of GUIDs reference by this service
 		/// </summary>
 		void RemoveElement(GuidId id);
-		
+
 		/// <summary>
 		/// Removes the given <paramref name="element"/> from the list of GUIDs reference by this service
 		/// </summary>
 		void RemoveElement(IGuidElement element);
-		
+
 		/// <summary>
 		/// Requests the <see cref="IGuidElement"/> matching the given <paramref name="id"/> from the list of GUIDs
 		/// reference by this service
 		/// </summary>
 		IGuidElement GetElement(GuidId id);
 	}
-	
+
 	/// <inheritdoc />
 	public class GuidService : IGuidService
 	{
 		private readonly Dictionary<GuidId, IList<IGuidElement>> _elements = new Dictionary<GuidId, IList<IGuidElement>>(new GuidIdComparer());
-		
+
 		/// <inheritdoc />
 		public void AddElement(IGuidElement element)
 		{
 			if (!_elements.TryGetValue(element.Id, out var elements))
 			{
 				elements = new List<IGuidElement>();
-				
+
 				_elements.Add(element.Id, elements);
 			}
-			
+
 			elements.Add(element);
 		}
 
@@ -68,7 +68,7 @@ namespace FirstLight.Game.Services
 		{
 			if (!_elements.ContainsKey(id))
 			{
-				var elements = Object.FindObjectsOfType<GuidElementMonoComponent>(true);
+				var elements = Object.FindObjectsByType<GuidElementMonoComponent>(FindObjectsInactive.Include, FindObjectsSortMode.None);
 
 				foreach (var element in elements)
 				{

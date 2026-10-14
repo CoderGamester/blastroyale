@@ -1,6 +1,6 @@
+using FirstLight.Inspector;
 using FirstLight.Game.Messages;
 using Quantum;
-using Sirenix.OdinInspector;
 using UnityEngine;
 
 namespace FirstLight.Game.MonoComponent.EntityPrototypes
@@ -11,7 +11,7 @@ namespace FirstLight.Game.MonoComponent.EntityPrototypes
 	/// </remarks>
 	public abstract class HealthEntityBase : EntityBase
 	{
-		[SerializeField, Required] private Transform _healthBarAnchor;
+		[SerializeField, InspectorField(Required = true)] private Transform _healthBarAnchor;
 
 		/// <summary>
 		/// The <see cref="Transform"/> anchor values to attach the avatars health bar

@@ -1,10 +1,11 @@
+using FirstLight.Inspector;
+using MainInstaller = FirstLight.Game.Utils.MainInstaller;
 using System;
 using System.Collections;
 using DG.Tweening;
 using FirstLight.Game.Ids;
 using FirstLight.Game.Services;
 using FirstLight.Game.Utils;
-using Sirenix.OdinInspector;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
@@ -13,15 +14,15 @@ namespace FirstLight.Game.Views
 {
 	/// <summary>
 	/// Custom extension of unity's ui button class that plays a legacy
-	/// animation when pressed. 
+	/// animation when pressed.
 	/// </summary>
 	[RequireComponent(typeof(UnityEngine.Animation))]
 	public class UiButtonView : Button
 	{
-		// Legacy animation component 
-		[HideInInspector, Required] public Animation Animation;
-		[HideInInspector, Required] public RectTransform RectTransform;
-		
+		// Legacy animation component
+		[HideInInspector, InspectorField(Required = true)] public Animation Animation;
+		[HideInInspector, InspectorField(Required = true)] public RectTransform RectTransform;
+
 		// Ease for select and unselect scale tween playback
 		public Ease PressedEase = Ease.Linear;
 		// Duration of scale tween animation
@@ -37,12 +38,12 @@ namespace FirstLight.Game.Views
 
 		private const AudioId BUTTON_CLICK_FORWARD_SFX = AudioId.ButtonClickForward;
 		private const AudioId BUTTON_CLICK_BACKWAWRD_SFX = AudioId.ButtonClickBackward;
-		
+
 		private Coroutine _coroutine;
 		private IGameServices _gameService;
 
 		public bool CanAnimate => Anchor != null && Animation != null && ClickClip != null;
-		
+
 #if UNITY_EDITOR
 		/// <inheritdoc />
 		protected override void OnValidate()
@@ -55,10 +56,10 @@ namespace FirstLight.Game.Views
 				Debug.Assert(Anchor != null, $"Anchor has not been referenced {gameObject.FullGameObjectPath()}");
 				Debug.Assert(Animation.clip != null, $"Animation has not been referenced {gameObject.FullGameObjectPath()}");
 			}
-			
+
 			base.OnValidate();
 		}
-#endif	
+#endif
 		/// <inheritdoc />
 		protected override void Awake()
 		{
@@ -91,7 +92,7 @@ namespace FirstLight.Game.Views
 				_coroutine = null;
 			}
 		}
-		
+
 		/// <inheritdoc />
 		public override void OnPointerDown (PointerEventData eventData)
 		{
@@ -104,13 +105,13 @@ namespace FirstLight.Game.Views
 			{
 				Animation.Stop();
 			}
-			
+
 			if (_coroutine != null)
 			{
 				_gameService.CoroutineService.StopCoroutine(_coroutine);
 				_coroutine = null;
 			}
-			
+
 			_coroutine = _gameService.CoroutineService.StartCoroutine(ScaleAfterPointerEventCo(PressedScale));
 		}
 
@@ -127,7 +128,7 @@ namespace FirstLight.Game.Views
 				_gameService.CoroutineService.StopCoroutine(_coroutine);
 				_coroutine = null;
 			}
-			
+
 			if (RectTransformUtility.RectangleContainsScreenPoint(RectTransform, eventData.position))
 			{
 				if (OverrideClickSfxId != AudioId.None && PlaySound)
@@ -168,17 +169,17 @@ namespace FirstLight.Game.Views
 				yield return null;
 				UpdateScaleAfterPointerEvent(endTime, fromScale, targetScale, PressedEase);
 			}
-			
+
 			Anchor.localScale = targetScale;
 			_coroutine = null;
 		}
-		
+
 		private void UpdateScaleAfterPointerEvent(float endTime, Vector3 fromScale, Vector3 targetScale, Ease ease)
 		{
 			var deltaTime = endTime - Time.time;
 			var t = 1f - (deltaTime / PressedDuration);
 			var localScale = Anchor.localScale;
-			
+
 			localScale.x = DOVirtual.EasedValue(fromScale.x, targetScale.x, t, ease);
 			localScale.y = DOVirtual.EasedValue(fromScale.y, targetScale.y, t, ease);
 			Anchor.localScale = localScale;

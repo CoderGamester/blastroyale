@@ -1,10 +1,10 @@
-﻿using System;
+using FirstLight.Inspector;
+using System;
 using System.Collections.Generic;
 using System.Linq;
-using FirstLight.AssetImporter;
+using GameLovers.Services.AssetsImporter;
 using FirstLight.Game.Utils;
 using Quantum;
-using Sirenix.OdinInspector;
 using TMPro;
 using UnityEngine;
 using UnityEngine.AddressableAssets;
@@ -16,7 +16,7 @@ namespace FirstLight.Game.Configs
 	public class MapAssetConfig : ScriptableObject
 	{
 		public AssetReferenceScene Scene;
-		public AssetReferenceT<MapAsset> QuantumMap;
+		public AssetReferenceT<Quantum.Map> QuantumMap;
 		public AssetReferenceSprite MapPreview;
 		public MapAreaConfig MapAreas;
 	}
@@ -38,7 +38,7 @@ namespace FirstLight.Game.Configs
 			return Areas.FirstOrDefault(a => a.Color.CompareRGB(pixelColor))?.Name ?? string.Empty;
 		}
 
-		[Button]
+		[InspectorAction]
 		private void RefreshAreas()
 		{
 			var texture = AddressableUtils.LoadAddressableEditorTime(AreaTextureRef);

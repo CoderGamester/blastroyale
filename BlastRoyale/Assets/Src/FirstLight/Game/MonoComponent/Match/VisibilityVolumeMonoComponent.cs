@@ -1,3 +1,4 @@
+using MainInstaller = FirstLight.Game.Utils.MainInstaller;
 using System.Collections.Generic;
 using System.Linq;
 using FirstLight.FLogger;
@@ -9,7 +10,7 @@ using Quantum;
 using UnityEngine;
 namespace FirstLight.Game.MonoComponent.Match
 {
-	
+
 	/// <summary>
 	/// Old building visibility volume to be stored on players
 	/// </summary>
@@ -24,7 +25,7 @@ namespace FirstLight.Game.MonoComponent.Match
 			return CollidingVisibilityVolumes.Any(visVolume => visVolume.VolumeHasSpectatedPlayer());
 		}
 	}
-	
+
 	/// <summary>
 	/// This class handles showing/hiding player renderers inside and outside of visibility volumes based on various factors
 	/// This is deprecated in favor of EntityVisibilityService
@@ -33,7 +34,7 @@ namespace FirstLight.Game.MonoComponent.Match
 	public class VisibilityVolumeMonoComponent : MonoBehaviour
 	{
 		[SerializeField] private bool _occludeAudio = true;
-		
+
 		private IGameServices _services;
 		private IMatchServices _matchServices;
 		private IEntityViewUpdaterService _entityViewUpdater;
@@ -66,7 +67,7 @@ namespace FirstLight.Game.MonoComponent.Match
 			}
 		}
 		/// <summary>
-		/// Requests to check if this volume contains 
+		/// Requests to check if this volume contains
 		/// </summary>
 		public bool VolumeHasSpectatedPlayer()
 		{
@@ -109,7 +110,7 @@ namespace FirstLight.Game.MonoComponent.Match
 			{
 				CheckUpdateOneVisiblePlayer(player);
 			}
-			
+
 			if (_occludeAudio && player.EntityRef == _matchServices.SpectateService.SpectatedPlayer.Value.Entity &&
 				player.BuildingVisibility.CollidingVisibilityVolumes.Count == 0)
 			{

@@ -16,14 +16,14 @@ namespace FirstLight.Game.Services
 	/// </summary>
 	public class InGameNotificationService
 	{
-		private readonly UIService.UIService _uiService;
+		private readonly FirstLight.Game.UI.UIService _uiService;
 
 		private readonly List<InGameNotificationEntry> _messages = new ();
 		private bool _isProcessingQueue;
 		private CancellationTokenSource _currentNotificationToken;
 		private InGameNotificationEntry _currentInGameNotificationMessage;
 
-		public InGameNotificationService(UIService.UIService uiService)
+		public InGameNotificationService(FirstLight.Game.UI.UIService uiService)
 		{
 			_uiService = uiService;
 		}

@@ -1,3 +1,5 @@
+using IDataProvider = FirstLight.Server.SDK.Models.IDataProvider;
+using GameLovers.GameData;
 using System;
 using System.Collections.Generic;
 using FirstLight.FLogger;
@@ -97,11 +99,11 @@ namespace FirstLight.Game.Logic
 	/// <inheritdoc cref="IPlayerLogic"/>
 	public class PlayerLogic : AbstractBaseLogic<PlayerData>, IPlayerLogic, IGameLogicInitializer
 	{
-		private IObservableField<uint> _trophies;
-		private IObservableField<uint> _level;
-		private IObservableField<uint> _xp;
+		private ObservableResolverField<uint> _trophies;
+		private ObservableResolverField<uint> _level;
+		private ObservableResolverField<uint> _xp;
 
-		private IObservableField<TutorialSection> _tutorialSections;
+		private ObservableField<TutorialSection> _tutorialSections;
 
 		/// <inheritdoc />
 		public IObservableFieldReader<uint> Trophies => _trophies;
@@ -136,27 +138,19 @@ namespace FirstLight.Game.Logic
 		public void ReInit()
 		{
 			{
-				var listeners = _trophies.GetObservers();
-				_trophies = new ObservableResolverField<uint>(() => Data.Trophies, val => Data.Trophies = val);
-				_trophies.AddObservers(listeners);
+				_trophies.Rebind(() => Data.Trophies, val => Data.Trophies = val);
 			}
 
 			{
-				var listeners = _level.GetObservers();
-				_level = new ObservableResolverField<uint>(() => Data.Level, val => Data.Level = val);
-				_level.AddObservers(listeners);
+				_level.Rebind(() => Data.Level, val => Data.Level = val);
 			}
 
 			{
-				var listeners = _xp.GetObservers();
-				_xp = new ObservableResolverField<uint>(() => Data.Xp, val => Data.Xp = val);
-				_xp.AddObservers(listeners);
+				_xp.Rebind(() => Data.Xp, val => Data.Xp = val);
 			}
 
 			{
-				var listeners = _tutorialSections.GetObservers();
-				_tutorialSections = new ObservableField<TutorialSection>(DataProvider.GetData<TutorialData>().TutorialSections);
-				_tutorialSections.AddObservers(listeners);
+				_tutorialSections.Rebind(DataProvider.GetData<TutorialData>().TutorialSections);
 			}
 
 			_trophies.InvokeUpdate();

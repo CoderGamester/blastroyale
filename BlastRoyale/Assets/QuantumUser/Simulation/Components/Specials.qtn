@@ -1,0 +1,89 @@
+#define MAX_SPECIALS 2
+
+struct Special
+{
+	GameId SpecialId;
+	SpecialType SpecialType;
+	FP InitialCooldown;
+	FP Cooldown;
+	FP Radius;
+	FP SpecialPower;
+	FP Speed;
+	FP MinRange;
+	FP MaxRange;
+	FP AvailableTime;
+	UInt32 Charges;
+	UInt32 Knockback;
+}
+
+enum SpecialType
+{
+	Airstrike,
+	StunGrenade,
+	ShieldSelfStatus,
+	HazardAimSpawn,
+	ShieldedCharge,
+	Grenade,
+	Radar,
+	Landmine,
+	Heal
+}
+
+synced event OnPlayerSpecialUpdated
+{
+    player_ref Player;
+    entity_ref Entity;
+    UInt32 SpecialIndex;
+    Special Special;
+}
+
+synced event OnAirstrikeUsed
+{
+	entity_ref Hazard;
+	FPVector2 TargetPosition;
+	Hazard HazardData;
+}
+
+synced event OnStunGrenadeUsed
+{
+	entity_ref Hazard;
+	FPVector2 TargetPosition;
+	Hazard HazardData;
+}
+
+synced event OnGenericSpecialUsed
+{
+	entity_ref Hazard;
+	FPVector2 TargetPosition;
+	Hazard HazardData;
+}
+
+synced event OnShieldedChargeUsed
+{
+	entity_ref Attacker;
+	FP ChargeDuration;
+}
+
+synced event OnGrenadeUsed
+{
+	entity_ref Hazard;
+	FPVector2 TargetPosition;
+	Hazard HazardData;
+}
+
+synced event OnSkyBeamUsed
+{
+	entity_ref Hazard;
+	FPVector2 TargetPosition;
+	Hazard HazardData;
+}
+
+synced event OnRadarUsed
+{
+	local player_ref Player;
+	FP Duration;
+	FP Range;
+}
+
+signal SpecialUsed(entity_ref entity, Int32 specialIndex);
+signal UseGenericSpecial(Special special, entity_ref attacker, FPVector2 aimDirection, FP maxRange);

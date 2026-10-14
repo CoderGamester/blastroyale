@@ -1,7 +1,7 @@
 using System;
 using FirstLight.Editor.EditorTools;
 using FirstLight.Game.Configs;
-using FirstLightEditor.GoogleSheetImporter;
+using GameLoversEditor.GoogleSheetImporter;
 using Quantum;
 
 namespace FirstLight.Editor.SheetImporters

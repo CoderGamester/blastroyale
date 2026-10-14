@@ -6,13 +6,12 @@ using FirstLight.Game.Data.DataTypes;
 using FirstLight.Game.Logic;
 using FirstLight.Game.UIElements;
 using FirstLight.Game.Utils;
-using FirstLight.UIService;
-using I2.Loc;
+using FirstLight.Game.UI;
+using FirstLight.Game.Localization;
 using Quantum;
 using QuickEye.UIToolkit;
 using UnityEngine;
 using UnityEngine.UIElements;
-
 
 namespace FirstLight.Game.Presenters
 {
@@ -30,17 +29,17 @@ namespace FirstLight.Game.Presenters
 		private void OnClicked(ClickEvent evt)
 		{
 			var tooltip = new VisualElement();
-			
+
 			var collectedInMap = new Dictionary<GameId, int>(_rewards.CollectedRewards);
 			var winBonus = new Dictionary<GameId, int>(_rewards.BonusFromWinning);
-			
+
 			foreach (var (key, value) in _rewards.CollectedBonuses)
 			{
 				// Deduct non-collected to only show what was being collected
 				if (collectedInMap.TryGetValue(key, out var collected))
 				{
 					collectedInMap[key] = collected - value;
-					
+
 					// Deduct win bonuses too so we show them separated
 					if (winBonus.TryGetValue(key, out var wonAsBonus))
 					{
@@ -74,15 +73,15 @@ namespace FirstLight.Game.Presenters
 				tooltip.Add(foundInMap);
 			}
 
-			var hasAnyNftBonus = _rewards.CollectedBonuses.Any(kv => kv.Value > 0);
-			if (hasAnyNftBonus)
+			var hasAnyBonus = _rewards.CollectedBonuses.Any(kv => kv.Value > 0);
+			if (hasAnyBonus)
 			{
-				var nftBonus = CreateItemList(new RewardSection()
+				var itemBonus = CreateItemList(new RewardSection()
 				{
-					Title = ScriptLocalization.UITStandings.nft_buffs,
+					Title = ScriptLocalization.UITStandings.item_bonuses,
 					Currencies = _rewards.CollectedBonuses,
 				});
-				tooltip.Add(nftBonus);
+				tooltip.Add(itemBonus);
 			}
 			_rewardContainer.OpenTooltip(Presenter.Root, tooltip);
 		}
@@ -92,10 +91,10 @@ namespace FirstLight.Game.Presenters
 			public string Title;
 			public Dictionary<GameId, int> Currencies;
 		}
-		
+
 		private VisualElement CreateItemList(params RewardSection [] rewards)
 		{
-			
+
 			if (rewards.Length == 0 || rewards.All(r => r.Currencies == null || r.Currencies.Count == 0))
 			{
 				return null;

@@ -1,3 +1,4 @@
+using MainInstaller = FirstLight.Game.Utils.MainInstaller;
 using System.Collections;
 using FirstLight.Game.Configs;
 using FirstLight.Game.Configs.Remote;
