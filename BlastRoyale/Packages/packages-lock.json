@@ -46,7 +46,7 @@
       "hash": "8ce2d7295afd200895179c981e5e43e60ce11d18"
     },
     "com.gamelovers.services": {
-      "version": "https://github.com/CoderGamester/Unity-Services.git#dd2b87a6398288e13201330be065a4e3a3429bb3",
+      "version": "https://github.com/CoderGamester/Unity-Services.git#12af946385ab192b6c29c62e2c33ccc33455a265",
       "depth": 0,
       "source": "git",
       "dependencies": {
@@ -55,7 +55,7 @@
         "com.cysharp.unitask": "2.5.10",
         "com.unity.test-framework.performance": "3.5.0"
       },
-      "hash": "dd2b87a6398288e13201330be065a4e3a3429bb3"
+      "hash": "12af946385ab192b6c29c62e2c33ccc33455a265"
     },
     "com.gamelovers.statechart": {
       "version": "https://github.com/CoderGamester/Statechart-HFSM.git#21aabc10111ffe4adbe5d4a7e4843a648994ce39",
@@ -158,6 +158,17 @@
       "depth": 0,
       "source": "registry",
       "dependencies": {},
+      "url": "https://packages.unity.com"
+    },
+    "com.unity.ai.desktop": {
+      "version": "0.4.0-exp.3",
+      "depth": 0,
+      "source": "registry",
+      "dependencies": {
+        "com.unity.pipeline": "0.6.0-exp.1",
+        "com.unity.modules.ui": "1.0.0",
+        "com.unity.modules.screencapture": "1.0.0"
+      },
       "url": "https://packages.unity.com"
     },
     "com.unity.ai.navigation": {
@@ -298,7 +309,7 @@
     },
     "com.unity.nuget.mono-cecil": {
       "version": "1.11.6",
-      "depth": 2,
+      "depth": 1,
       "source": "registry",
       "dependencies": {},
       "url": "https://packages.unity.com"
@@ -308,6 +319,20 @@
       "depth": 0,
       "source": "registry",
       "dependencies": {},
+      "url": "https://packages.unity.com"
+    },
+    "com.unity.pipeline": {
+      "version": "0.8.0-exp.1",
+      "depth": 0,
+      "source": "registry",
+      "dependencies": {
+        "com.unity.test-framework": "1.1.33",
+        "com.unity.nuget.mono-cecil": "1.11.6",
+        "com.unity.modules.uielements": "1.0.0",
+        "com.unity.modules.jsonserialize": "1.0.0",
+        "com.unity.modules.screencapture": "1.0.0",
+        "com.unity.nuget.newtonsoft-json": "3.0.2"
+      },
       "url": "https://packages.unity.com"
     },
     "com.unity.probuilder": {

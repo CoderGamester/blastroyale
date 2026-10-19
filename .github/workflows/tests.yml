@@ -82,6 +82,8 @@ jobs:
           allowDirtyBuild: true
       - name: Apply the exact pinned MobileServices player-assembly scanner repair
         run: python3 Tools/Modernization/patch_mobile_services_scanner.py --project BlastRoyale
+      - name: Keep pinned UiService test resources out of players
+        run: python3 Tools/Modernization/patch_ui_service_editor.py --project BlastRoyale
       - name: Activate Unity and run tests
         id: tests
         uses: game-ci/unity-test-runner@32e57712352b500e17974b245a6dce9e11a73213 # v4
