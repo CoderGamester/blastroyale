@@ -1,6 +1,6 @@
 # Human actions
 
-On this host, authorized Photon/Unity project and development-environment configuration passes native binding, live guest/twelve-model/Public-profile/restart/conflict checks and actual Boot-to-tutorial/normal Maze gameplay. The following steps are for a fresh developer; remaining final builds/content checks are agent work, not missing credentials. No actual ID or credential is published. The operational backend is **UGS only plus Photon**: no PlayFab title, Azure deployment or custom server is needed.
+On this host, authorized Photon/Unity project and development-environment configuration passes native binding, live guest/twelve-model/Public-profile/restart/conflict checks and actual Boot-to-tutorial/normal Maze gameplay. The following steps are for a fresh developer; Editor movement, attacks and repeated result/Home/match flow also pass. There is no remaining credential blocker for local guest play. No actual ID or credential is published. The operational backend is **UGS only plus Photon**: no PlayFab title, Azure deployment or custom server is needed.
 
 ## Required fresh-machine setup
 
@@ -13,7 +13,7 @@ On this host, authorized Photon/Unity project and development-environment config
 7. For friend name lookup, Cloud Save > Player Data > Indexes: create an ascending string index for `player_name` in **Public** access. Sign in to publish the searchable record. [Official index/query guide](https://docs.unity.com/en-us/cloud-save/concepts/queries).
 8. Create a free **Quantum 3** application in [Photon Dashboard](https://dashboard.photonengine.com/app/create), using ordinary Photon authentication, and configure its actual App ID. The temporary application used on this host was explicitly authorized; a fresh developer needs an application they are authorized to use.
 
-Keep real client/account IDs out of Git, including locally linked ProjectSettings account fields. The build helper configures/validates the real native Unity project ID from ignored local config. Resources ships in the player and cannot protect backend keys or service-account credentials; those never belong in this JSON. One Unity process owns a project at a time.
+Keep real client/account IDs out of Git, including locally linked ProjectSettings account fields. The build helper configures/validates the real native Unity project ID from ignored local config. Resources ships in the player and cannot protect backend keys or service-account credentials; those never belong in this JSON. One Unity process owns a project at a time. After initial UPM resolution, close Unity and apply the two exact pinned package repairs listed in README step 7 before testing/building; CI applies both automatically.
 
 ## Optional recoverable accounts
 

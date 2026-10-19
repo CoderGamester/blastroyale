@@ -1,0 +1,38 @@
+{
+  "UnityVersion": "6000.3.26f1",
+  "ServicesVersion": "2.2.0",
+  "Matches": [
+    {
+      "FirstFrame": 26,
+      "LastFrame": 1920,
+      "Bots": 35,
+      "MovementPolls": 305,
+      "ShootingPolls": 67,
+      "LocalAttacks": 3,
+      "Entity": "E.00405.003",
+      "FirstPosition": "(0.02999878, 43.20999)",
+      "LastPosition": "(-7.123764, 41.72792)",
+      "GreatestDistance": 7.3056729099878925
+    },
+    {
+      "FirstFrame": 23,
+      "LastFrame": 1086,
+      "Bots": 35,
+      "MovementPolls": 40,
+      "ShootingPolls": 67,
+      "LocalAttacks": 3,
+      "Entity": "E.00405.003",
+      "FirstPosition": "(-29.2, -4.099991)",
+      "LastPosition": "(-26.80257, -5.701752)",
+      "GreatestDistance": 3.0098738042097253
+    }
+  ],
+  "Errors": [],
+  "Warnings": [
+    "BoxCollider does not support negative scale or size.\nThe effective box size has been forced positive and is likely to give unexpected collision geometry.\nIf you absolutely need to use negative scaling you can use the convex MeshCollider. Scene hierarchy path \"Maze Mayhem/propper cover/Scatter_asset_4 Variant (2) (Missing Prefab with guid: 68f15bccafbfd4147a8ffa2c435a5574)/Placeholder for referenced BoxCollider in Prefab instance (2)\"",
+    "BoxCollider does not support negative scale or size.\nThe effective box size has been forced positive and is likely to give unexpected collision geometry.\nIf you absolutely need to use negative scaling you can use the convex MeshCollider. Scene hierarchy path \"Maze Mayhem/propper cover/Scatter_asset_4 Variant (2) (Missing Prefab with guid: 68f15bccafbfd4147a8ffa2c435a5574)/Placeholder for referenced BoxCollider in Prefab instance (2)\""
+  ],
+  "CodeCommit": "77c7da136",
+  "Scope": "Final Services 2.2.0 source. Real Game view controls moved and attacked in two native Maze matches in one Play session. First match: actual death, spectator Leave, standings Next, progression Leave, Home Play. Second match: native advancing frames, movement and attacks, then Editor Stop. The observer supplies no input, creates no runner and advances no frames.",
+  "RemainingWarning": "The same negative-scale BoxCollider warning from accepted map placeholder geometry occurs once on each Maze load; no spectator warning or runtime error."
+}

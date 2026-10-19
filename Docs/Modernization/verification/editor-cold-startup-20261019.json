@@ -1,0 +1,10 @@
+{
+  "editor": "6000.3.26f1",
+  "project": "BlastRoyale",
+  "phase": "Cold native Editor startup before tests or Play",
+  "compilationFailed": false,
+  "consoleErrors": 0,
+  "consoleWarnings": 0,
+  "rawLog": "artifacts/editor-final-verified-20261019.log",
+  "codeCheckpoint": "36f907295; subsequent spectator-only guard compiled and passed the current suites separately"
+}

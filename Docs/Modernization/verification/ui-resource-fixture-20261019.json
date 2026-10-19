@@ -1,0 +1,51 @@
+{
+  "success": true,
+  "result": {
+    "status": "completed",
+    "duration": 0.33,
+    "summary": {
+      "total": 5,
+      "passed": 5,
+      "failed": 0,
+      "skipped": 0,
+      "inconclusive": 0
+    },
+    "results": [
+      {
+        "FullName": "GameLovers.UiService.Tests.ResourcesUiAssetLoaderTests.InstantiatePrefab_ThrowsKeyNotFoundException_WhenResourceNotFound",
+        "Status": "Passed",
+        "Duration": 0.010774,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "GameLovers.UiService.Tests.ResourcesUiAssetLoaderTests.InstantiatePrefab_UsesAddressAsResourcePath",
+        "Status": "Passed",
+        "Duration": 0.000408,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "GameLovers.UiService.Tests.ResourcesUiAssetLoaderTests.InstantiatePrefab_ValidResourceAddress_LoadsCachesAndInstantiatesInactive",
+        "Status": "Passed",
+        "Duration": 0.0037774,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "GameLovers.UiService.Tests.ResourcesUiAssetLoaderTests.UnloadAsset_DestroysGameObject",
+        "Status": "Passed",
+        "Duration": 0.0002075,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "GameLovers.UiService.Tests.ResourcesUiAssetLoaderTests.UnloadAsset_HandlesNullGracefully",
+        "Status": "Passed",
+        "Duration": 0.000365,
+        "Message": null,
+        "StackTrace": null
+      }
+    ]
+  }
+}

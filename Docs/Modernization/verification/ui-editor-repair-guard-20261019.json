@@ -1,0 +1,11 @@
+{
+  "result": "Pass",
+  "checks": [
+    "Current installed layout idempotent",
+    "Scratch exact rollback",
+    "Orphan destination metadata refused before source write",
+    "Scratch exact reapply",
+    "Unknown package pin refused"
+  ],
+  "nativeResourcesFixture": "ui-resource-fixture-20261019.json"
+}

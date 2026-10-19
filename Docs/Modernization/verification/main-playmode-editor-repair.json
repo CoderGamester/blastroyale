@@ -1,0 +1,114 @@
+{
+  "success": true,
+  "result": {
+    "status": "completed",
+    "duration": 0.43,
+    "summary": {
+      "total": 14,
+      "passed": 14,
+      "failed": 0,
+      "skipped": 0,
+      "inconclusive": 0
+    },
+    "results": [
+      {
+        "FullName": "FirstLight.Tests.PlayMode.JoystickPointerLifecycleTests.Drag_AnotherPointerPressesAndReleases_OwnerKeepsControl",
+        "Status": "Passed",
+        "Duration": 0.0564168,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLight.Tests.PlayMode.JoystickPointerLifecycleTests.Drag_JoystickDetached_ResetsAndReattachmentRemainsUsable",
+        "Status": "Passed",
+        "Duration": 0.0103945,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLight.Tests.PlayMode.JoystickPointerLifecycleTests.Drag_PointerCanceled_ResetsOnceAndAcceptsNextPointer",
+        "Status": "Passed",
+        "Duration": 0.0108858,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLight.Tests.PlayMode.JoystickPointerLifecycleTests.Drag_PointerCaptureReleased_ResetsWithoutPointerUp",
+        "Status": "Passed",
+        "Duration": 0.007315,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLight.Tests.PlayMode.Services.PlayerInputLifetimeTests.Dispose_WithHeldSpecial_DoesNotSendCommandToStoppedRunner(Q)",
+        "Status": "Passed",
+        "Duration": 0.006621,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLight.Tests.PlayMode.Services.PlayerInputLifetimeTests.Dispose_WithHeldSpecial_DoesNotSendCommandToStoppedRunner(E)",
+        "Status": "Passed",
+        "Duration": 0.0009989,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLight.Tests.PlayMode.Services.PlayerInputLifetimeTests.Dispose_WithoutMatchEnded_RemovesNativeSubscriptions",
+        "Status": "Passed",
+        "Duration": 0.0003546,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLight.Tests.PlayMode.Services.PlayerInputLifetimeTests.EndMatch_TwoMatches_RemovesOwnedNativeSubscriptions",
+        "Status": "Passed",
+        "Duration": 0.0003982,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLightEditor.Services.Tests.CoroutineServiceTest.StartAsyncCoroutine_Successfully",
+        "Status": "Passed",
+        "Duration": 0.0039678,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLightEditor.Services.Tests.CoroutineServiceTest.StartAsyncCoroutine_WithData_Successfully",
+        "Status": "Passed",
+        "Duration": 0.0040894,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLightEditor.Services.Tests.CoroutineServiceTest.StartCoroutine_Successfully",
+        "Status": "Passed",
+        "Duration": 0.0025824,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLightEditor.Services.Tests.CoroutineServiceTest.StopAllCoroutines_Successfully",
+        "Status": "Passed",
+        "Duration": 0.1022595,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLightEditor.Services.Tests.CoroutineServiceTest.StopAsyncCoroutine_Successfully",
+        "Status": "Passed",
+        "Duration": 0.1020968,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLightEditor.Services.Tests.CoroutineServiceTest.StopCoroutine_Successfully",
+        "Status": "Passed",
+        "Duration": 0.1020892,
+        "Message": null,
+        "StackTrace": null
+      }
+    ]
+  }
+}

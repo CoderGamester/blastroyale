@@ -1,0 +1,2242 @@
+{
+  "success": true,
+  "result": {
+    "status": "completed",
+    "duration": 8.8,
+    "summary": {
+      "total": 318,
+      "passed": 318,
+      "failed": 0,
+      "skipped": 0,
+      "inconclusive": 0
+    },
+    "results": [
+      {
+        "FullName": "FirstLight.Tests.EditorMode.Systems.OfflineMazeSessionTests.MazeSessionInitializesTicksMovesQueriesPhysicsAndExecutesBots",
+        "Status": "Passed",
+        "Duration": 1.3868315,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLight.Tests.EditorMode.Systems.OfflineMazeSessionTests.RecordedMazeSessionReplaysToIdenticalVerifiedChecksum",
+        "Status": "Passed",
+        "Duration": 0.715439,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLight.Tests.EditorMode.Systems.Quantum3CommandSerializationTests.EmojiIdRoundTrips(FlagPooEmoji)",
+        "Status": "Passed",
+        "Duration": 0.0009219,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLight.Tests.EditorMode.Systems.Quantum3CommandSerializationTests.EmojiIdRoundTrips(FlagCryEmoji)",
+        "Status": "Passed",
+        "Duration": 3.62e-05,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLight.Tests.EditorMode.Systems.Quantum3CommandSerializationTests.EmojiIdRoundTrips(MalePunk)",
+        "Status": "Passed",
+        "Duration": 2.56e-05,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLight.Tests.EditorMode.Systems.Quantum3CommandSerializationTests.RepeatedSerializationProducesIdenticalPayload",
+        "Status": "Passed",
+        "Duration": 0.001476,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLight.Tests.EditorMode.Systems.Quantum3CommandSerializationTests.SpecialAimRoundTripsEveryFixedPointBit(0L,0L,0)",
+        "Status": "Passed",
+        "Duration": 0.0004652,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLight.Tests.EditorMode.Systems.Quantum3CommandSerializationTests.SpecialAimRoundTripsEveryFixedPointBit(-196609L,131073L,1)",
+        "Status": "Passed",
+        "Duration": 2.1e-05,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLight.Tests.EditorMode.Systems.Quantum3CommandSerializationTests.SpecialAimRoundTripsEveryFixedPointBit(65537L,-32769L,2)",
+        "Status": "Passed",
+        "Duration": 1.85e-05,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLight.Tests.EditorMode.Systems.Quantum3CommandSerializationTests.TeamPingRoundTripsNegativeAndFractionalCoordinates(General)",
+        "Status": "Passed",
+        "Duration": 0.0002757,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLight.Tests.EditorMode.Systems.Quantum3CommandSerializationTests.TeamPingRoundTripsNegativeAndFractionalCoordinates(Chest)",
+        "Status": "Passed",
+        "Duration": 3.59e-05,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLight.Tests.EditorMode.Systems.Quantum3CommandSerializationTests.TeamPingRoundTripsNegativeAndFractionalCoordinates(Player)",
+        "Status": "Passed",
+        "Duration": 2.82e-05,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLight.Tests.EditorMode.Systems.Quantum3CommandSerializationTests.TeamPingRoundTripsNegativeAndFractionalCoordinates(Equipment)",
+        "Status": "Passed",
+        "Duration": 3.1e-05,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLight.Tests.EditorMode.Systems.Quantum3CommandSerializationTests.WeaponSlotPayloadPreservesSignedIndex(-1)",
+        "Status": "Passed",
+        "Duration": 0.0002146,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLight.Tests.EditorMode.Systems.Quantum3CommandSerializationTests.WeaponSlotPayloadPreservesSignedIndex(0)",
+        "Status": "Passed",
+        "Duration": 3.59e-05,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLight.Tests.EditorMode.Systems.Quantum3CommandSerializationTests.WeaponSlotPayloadPreservesSignedIndex(2)",
+        "Status": "Passed",
+        "Duration": 2.23e-05,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLight.Tests.EditorMode.Systems.Quantum3MovementMathTests.CardinalAimDirectionSurvivesRotationRoundTrip(1,0)",
+        "Status": "Passed",
+        "Duration": 0.0004162,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLight.Tests.EditorMode.Systems.Quantum3MovementMathTests.CardinalAimDirectionSurvivesRotationRoundTrip(0,1)",
+        "Status": "Passed",
+        "Duration": 2.46e-05,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLight.Tests.EditorMode.Systems.Quantum3MovementMathTests.CardinalAimDirectionSurvivesRotationRoundTrip(-1,0)",
+        "Status": "Passed",
+        "Duration": 1.71e-05,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLight.Tests.EditorMode.Systems.Quantum3MovementMathTests.CardinalAimDirectionSurvivesRotationRoundTrip(0,-1)",
+        "Status": "Passed",
+        "Duration": 1.67e-05,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLight.Tests.EditorMode.Systems.Quantum3MovementMathTests.FullSteeringPointsTransformTowardsAim",
+        "Status": "Passed",
+        "Duration": 0.0001492,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLight.Tests.EditorMode.Systems.Quantum3MovementMathTests.ZeroSteeringWeightKeepsCurrentRotation",
+        "Status": "Passed",
+        "Duration": 6.95e-05,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLight.Tests.EditorMode.Systems.Quantum3StatsTests.ConstructorInitializesEveryGameplayStatAndCollectionHandle",
+        "Status": "Passed",
+        "Duration": 0.0009902,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLight.Tests.EditorMode.AddressableConfigLookupTests.ActiveIdsResolveTheirOriginalConfigurationAfterAnEntryIsRetired",
+        "Status": "Passed",
+        "Duration": 0.0040253,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLight.Tests.EditorMode.BackendClientStateTests.BundledConfigHasOneSoloModeAndAnExplicitSupportedQueue",
+        "Status": "Passed",
+        "Duration": 0.0017249,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLight.Tests.EditorMode.BackendClientStateTests.CloudSnapshotExcludesAccountCredentialsAndDeviceSettings",
+        "Status": "Passed",
+        "Duration": 0.0167226,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLight.Tests.EditorMode.BackendClientStateTests.PublicNameSupportsUnnumberedAndLegacyNumberedProfiles(\"abc\",\"abc\")",
+        "Status": "Passed",
+        "Duration": 0.0002386,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLight.Tests.EditorMode.BackendClientStateTests.PublicNameSupportsUnnumberedAndLegacyNumberedProfiles(\"Miguel\",\"Miguel\")",
+        "Status": "Passed",
+        "Duration": 2.11e-05,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLight.Tests.EditorMode.BackendClientStateTests.PublicNameSupportsUnnumberedAndLegacyNumberedProfiles(\"Miguel#1234\",\"Miguel\")",
+        "Status": "Passed",
+        "Duration": 2.48e-05,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLight.Tests.EditorMode.BackendClientStateTests.PublicNameSupportsUnnumberedAndLegacyNumberedProfiles(\"Miguel#Clash\",\"Miguel#Clash\")",
+        "Status": "Passed",
+        "Duration": 1.64e-05,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLight.Tests.EditorMode.BackendClientStateTests.PublicNameSupportsUnnumberedAndLegacyNumberedProfiles(null,null)",
+        "Status": "Passed",
+        "Duration": 1.45e-05,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLight.Tests.EditorMode.BackendClientStateTests.QueuedSnapshotDoesNotChangeWhenNextCommandMutatesPlayer",
+        "Status": "Passed",
+        "Duration": 0.0002124,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLight.Tests.EditorMode.Integration.CollectionIntegrationTests.TestEquipSkinCommand",
+        "Status": "Passed",
+        "Duration": 0.2843199,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLight.Tests.EditorMode.Integration.CollectionIntegrationTests.TestGiveDefaultSkins",
+        "Status": "Passed",
+        "Duration": 0.1816003,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLight.Tests.EditorMode.Integration.EquipmentIntegrationTest.ScrapItemCommand",
+        "Status": "Passed",
+        "Duration": 0.1943104,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLight.Tests.EditorMode.Integration.EquipmentIntegrationTest.TestAddingEquipment",
+        "Status": "Passed",
+        "Duration": 0.2441618,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLight.Tests.EditorMode.Integration.EquipmentIntegrationTest.TestSetLoadoutCommand",
+        "Status": "Passed",
+        "Duration": 0.210236,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLight.Tests.EditorMode.Integration.EquipmentIntegrationTest.UpgradeItemCommand",
+        "Status": "Passed",
+        "Duration": 0.1872192,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLight.Tests.EditorMode.Integration.RewardIntegrationTests.TestCollectionReward",
+        "Status": "Passed",
+        "Duration": 0.18694,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLight.Tests.EditorMode.Integration.RewardIntegrationTests.TestGenericEquipmentReward",
+        "Status": "Passed",
+        "Duration": 0.1874022,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLight.Tests.EditorMode.Integration.RewardIntegrationTests.TestGenericToInventory",
+        "Status": "Passed",
+        "Duration": 0.187611,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLight.Tests.EditorMode.Integration.RewardIntegrationTests.TestGenericUnclaimedReward",
+        "Status": "Passed",
+        "Duration": 0.184614,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLight.Tests.EditorMode.Integration.RewardIntegrationTests.TesTrophyReward",
+        "Status": "Passed",
+        "Duration": 0.2191597,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLight.Tests.EditorMode.Integration.RewardIntegrationTests.TestTutorialCompletingCommandRewards",
+        "Status": "Passed",
+        "Duration": 0.3686299,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLight.Tests.EditorMode.Integration.RewardIntegrationTests.TestTutorialSectionRewardList",
+        "Status": "Passed",
+        "Duration": 0.3641812,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLight.Tests.EditorMode.Integration.RewardIntegrationTests.TestXPReward",
+        "Status": "Passed",
+        "Duration": 0.1921443,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLight.Tests.EditorMode.Logic.BattlePassLogicTest.TestAddBPP",
+        "Status": "Passed",
+        "Duration": 0.0847177,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLight.Tests.EditorMode.Logic.BattlePassLogicTest.TestGetRemainingPoints",
+        "Status": "Passed",
+        "Duration": 0.0063618,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLight.Tests.EditorMode.Logic.BattlePassLogicTest.TestGetRewardForLevel",
+        "Status": "Passed",
+        "Duration": 0.0031222,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLight.Tests.EditorMode.Logic.BattlePassLogicTest.TestIsRedeemable",
+        "Status": "Passed",
+        "Duration": 0.0042362,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLight.Tests.EditorMode.Logic.BattlePassLogicTest.TestMaxLevel",
+        "Status": "Passed",
+        "Duration": 0.0027638,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLight.Tests.EditorMode.Logic.BattlePassLogicTest.TestRedeem100BPP",
+        "Status": "Passed",
+        "Duration": 0.0059943,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLight.Tests.EditorMode.Logic.BattlePassLogicTest.TestRedeemBPPNoLevelUp",
+        "Status": "Passed",
+        "Duration": 0.0036077,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLight.Tests.EditorMode.Logic.BattlePassLogicTest.TestRedeemBPPOneLevelUp",
+        "Status": "Passed",
+        "Duration": 0.0038466,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLight.Tests.EditorMode.Logic.BattlePassLogicTest.TestRedeemBPPOneLevelUpExact",
+        "Status": "Passed",
+        "Duration": 0.0036788,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLight.Tests.EditorMode.Logic.BattlePassLogicTest.TestRedeemBPPThreeLevelUp",
+        "Status": "Passed",
+        "Duration": 0.0042836,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLight.Tests.EditorMode.Logic.BuffsLogicTests.TestAdditive",
+        "Status": "Passed",
+        "Duration": 0.1921593,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLight.Tests.EditorMode.Logic.BuffsLogicTests.TestBuffEntity",
+        "Status": "Passed",
+        "Duration": 0.1912351,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLight.Tests.EditorMode.Logic.BuffsLogicTests.TestMultiplicative",
+        "Status": "Passed",
+        "Duration": 0.1911766,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLight.Tests.EditorMode.Logic.BuffsLogicTests.TestNoBuffs",
+        "Status": "Passed",
+        "Duration": 0.1885746,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLight.Tests.EditorMode.Logic.CollectionLogicTests.TestOwnedAfterAdding",
+        "Status": "Passed",
+        "Duration": 0.1882845,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLight.Tests.EditorMode.Logic.CollectionLogicTests.TestOwnedChecks",
+        "Status": "Passed",
+        "Duration": 0.1898212,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLight.Tests.EditorMode.Logic.CurrencyLogicTest.AddCurrencyCheck",
+        "Status": "Passed",
+        "Duration": 0.0031363,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLight.Tests.EditorMode.Logic.CurrencyLogicTest.DeductCurrency_InvalidAmount_ThrowsException",
+        "Status": "Passed",
+        "Duration": 0.0020524,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLight.Tests.EditorMode.Logic.CurrencyLogicTest.DeductCurrencyCheck",
+        "Status": "Passed",
+        "Duration": 0.0018361,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLight.Tests.EditorMode.Logic.CurrencyLogicTest.InvalidCurrencyType_ThrowsException",
+        "Status": "Passed",
+        "Duration": 0.0019976,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLight.Tests.EditorMode.Logic.EquipmentLogicTest.AddToInventory_AlreadyInInventory_ThrowsException",
+        "Status": "Passed",
+        "Duration": 0.0117858,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLight.Tests.EditorMode.Logic.EquipmentLogicTest.AddToInventory_NotEquipment_ThrowsException",
+        "Status": "Passed",
+        "Duration": 0.0033327,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLight.Tests.EditorMode.Logic.EquipmentLogicTest.AddToInventoryCheck",
+        "Status": "Passed",
+        "Duration": 0.0033275,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLight.Tests.EditorMode.Logic.EquipmentLogicTest.Equip_NotInInventory_ThrowsException",
+        "Status": "Passed",
+        "Duration": 0.0030242,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLight.Tests.EditorMode.Logic.EquipmentLogicTest.Equip_SlotAlreadyEquipped_Replace",
+        "Status": "Passed",
+        "Duration": 0.0062575,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLight.Tests.EditorMode.Logic.EquipmentLogicTest.Equip_WeaponAndGear_Check",
+        "Status": "Passed",
+        "Duration": 0.004611,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLight.Tests.EditorMode.Logic.EquipmentLogicTest.EquipCheck",
+        "Status": "Passed",
+        "Duration": 0.0038232,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLight.Tests.EditorMode.Logic.EquipmentLogicTest.ScrapItem_NotInventory_ThrowsException",
+        "Status": "Passed",
+        "Duration": 0.0030604,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLight.Tests.EditorMode.Logic.EquipmentLogicTest.ScrapItemCheck",
+        "Status": "Passed",
+        "Duration": 0.0034165,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLight.Tests.EditorMode.Logic.EquipmentLogicTest.SetLoadout_ScrapItem_UnequipItem",
+        "Status": "Passed",
+        "Duration": 0.0038531,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLight.Tests.EditorMode.Logic.EquipmentLogicTest.SetLoadoutCheck",
+        "Status": "Passed",
+        "Duration": 0.0029938,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLight.Tests.EditorMode.Logic.EquipmentLogicTest.SetLoadoutCheck_DoubleCall_ReplaceSlot",
+        "Status": "Passed",
+        "Duration": 0.0031423,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLight.Tests.EditorMode.Logic.EquipmentLogicTest.Unequip_EmptySlot_ThrowsException",
+        "Status": "Passed",
+        "Duration": 0.0029261,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLight.Tests.EditorMode.Logic.EquipmentLogicTest.Unequip_NotInInventory_ThrowsException",
+        "Status": "Passed",
+        "Duration": 0.0029319,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLight.Tests.EditorMode.Logic.EquipmentLogicTest.UnequipCheck",
+        "Status": "Passed",
+        "Duration": 0.0035048,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLight.Tests.EditorMode.Logic.EquipmentLogicTest.UpgradeItem_MaxLevel_ThrowsException",
+        "Status": "Passed",
+        "Duration": 0.003473,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLight.Tests.EditorMode.Logic.EquipmentLogicTest.UpgradeItem_NotInventory_ThrowsException",
+        "Status": "Passed",
+        "Duration": 0.0031822,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLight.Tests.EditorMode.Logic.EquipmentLogicTest.UpgradeItemCheck",
+        "Status": "Passed",
+        "Duration": 0.0032116,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLight.Tests.EditorMode.Logic.ResourceLogicTest.WithdrawFromResourcePool_EmptyPool_NothingHappens",
+        "Status": "Passed",
+        "Duration": 0.0188555,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLight.Tests.EditorMode.Logic.ResourceLogicTest.WithdrawFromResourcePool_OverflowWithdraw_WithdrawLeft",
+        "Status": "Passed",
+        "Duration": 0.0066838,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLight.Tests.EditorMode.Logic.ResourceLogicTest.WithdrawFromResourcePool_RestockOverflow_WithdrawFromFull",
+        "Status": "Passed",
+        "Duration": 0.0071831,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLight.Tests.EditorMode.Logic.ResourceLogicTest.WithdrawFromResourcePoolCheck",
+        "Status": "Passed",
+        "Duration": 0.0067161,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLight.Tests.EditorMode.Logic.RewardLogicTest.CalculateMatchRewards_NoWinningPlacement_GetsLastRewards",
+        "Status": "Passed",
+        "Duration": 0.0194857,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLight.Tests.EditorMode.Logic.RewardLogicTest.CalculateMatchRewards_WinningPlacement_GetsCorrectRewards",
+        "Status": "Passed",
+        "Duration": 0.003831,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLight.Tests.EditorMode.Logic.RewardLogicTest.ClaimUncollectedRewards_WhenCalled_CleansRewards",
+        "Status": "Passed",
+        "Duration": 0.0042062,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLight.Tests.EditorMode.Logic.RewardLogicTest.ClaimUncollectedRewards_WhenCalled_ReturnsCorrectRewards",
+        "Status": "Passed",
+        "Duration": 0.0034247,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLight.Tests.EditorMode.Logic.RewardLogicTest.CollectRewards_Empty_DoesNothing",
+        "Status": "Passed",
+        "Duration": 0.0029645,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLight.Tests.EditorMode.Logic.RewardLogicTest.GiveMatchRewards_Collected_Coins",
+        "Status": "Passed",
+        "Duration": 0.0042501,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLight.Tests.EditorMode.Logic.RewardLogicTest.GiveMatchRewards_Collected_Coins_Triple_Modifier",
+        "Status": "Passed",
+        "Duration": 0.0034574,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLight.Tests.EditorMode.Logic.RewardLogicTest.GiveMatchRewards_Custom_RewardsNothing",
+        "Status": "Passed",
+        "Duration": 0.0029032,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLight.Tests.EditorMode.Logic.RewardLogicTest.GiveMatchRewards_EmptyMatchData_RewardsNothing",
+        "Status": "Passed",
+        "Duration": 0.0029664,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLight.Tests.EditorMode.Logic.RewardLogicTest.GiveMatchRewards_EmptyPool_RewardsTrophies",
+        "Status": "Passed",
+        "Duration": 0.003415,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLight.Tests.EditorMode.Logic.RewardLogicTest.GiveMatchRewards_NoBPP_Modifier",
+        "Status": "Passed",
+        "Duration": 0.0033086,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLight.Tests.EditorMode.Logic.RewardLogicTest.GiveMatchRewards_NoWinningPlacement_GetsLastRewards",
+        "Status": "Passed",
+        "Duration": 0.0032365,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLight.Tests.EditorMode.Logic.RewardLogicTest.GiveMatchRewards_PlayerAfk_NoRewards",
+        "Status": "Passed",
+        "Duration": 0.0034027,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLight.Tests.EditorMode.Logic.RewardLogicTest.GiveMatchRewards_PlayerQuit_RewardsTrophies",
+        "Status": "Passed",
+        "Duration": 0.0028798,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLight.Tests.EditorMode.Logic.RewardLogicTest.GiveMatchRewards_Test_Compromised_MetaRewardsConfig",
+        "Status": "Passed",
+        "Duration": 0.0063521,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLight.Tests.EditorMode.Logic.RewardLogicTest.GiveMatchRewards_TestLimitedEvent_Buffer",
+        "Status": "Passed",
+        "Duration": 0.0041757,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLight.Tests.EditorMode.Logic.RewardLogicTest.GiveMatchRewards_TestLimitedEvent_InvalidTime",
+        "Status": "Passed",
+        "Duration": 0.0030502,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLight.Tests.EditorMode.Logic.RewardLogicTest.GiveMatchRewards_TestLimitedEvent_ValidTime",
+        "Status": "Passed",
+        "Duration": 0.0032296,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLight.Tests.EditorMode.Logic.RewardLogicTest.GiveMatchRewards_TripleTrophies_Modifier",
+        "Status": "Passed",
+        "Duration": 0.0031918,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLight.Tests.EditorMode.Logic.RewardLogicTest.GiveMatchRewards_WinningPlacement_GetsCorrectRewards",
+        "Status": "Passed",
+        "Duration": 0.0032809,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLight.Tests.EditorMode.Logic.RewardLogicTest.TestCurrencySerialization",
+        "Status": "Passed",
+        "Duration": 0.0037246,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLight.Tests.EditorMode.Logic.RewardLogicTest.TestItemDataCompare",
+        "Status": "Passed",
+        "Duration": 0.0031796,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLight.Tests.EditorMode.Logic.RngLogicTest.Next_Twice_NewResult",
+        "Status": "Passed",
+        "Duration": 0.0021555,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLight.Tests.EditorMode.Logic.RngLogicTest.NextCheck",
+        "Status": "Passed",
+        "Duration": 0.0013158,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLight.Tests.EditorMode.Logic.RngLogicTest.NextFp_Twice_NewResult",
+        "Status": "Passed",
+        "Duration": 0.0018281,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLight.Tests.EditorMode.Logic.RngLogicTest.NextFpCheck",
+        "Status": "Passed",
+        "Duration": 0.0012129,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLight.Tests.EditorMode.Logic.RngLogicTest.Peek_Twice_SameResult",
+        "Status": "Passed",
+        "Duration": 0.0013067,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLight.Tests.EditorMode.Logic.RngLogicTest.PeekCheck",
+        "Status": "Passed",
+        "Duration": 0.0012787,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLight.Tests.EditorMode.Logic.RngLogicTest.PeekFp_Twice_SameResult",
+        "Status": "Passed",
+        "Duration": 0.0012608,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLight.Tests.EditorMode.Logic.RngLogicTest.PeekRange_MaxNotBigger_TrowsException",
+        "Status": "Passed",
+        "Duration": 0.0012582,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLight.Tests.EditorMode.Logic.RngLogicTest.PeekRange_Twice_SameResult",
+        "Status": "Passed",
+        "Duration": 0.0011523,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLight.Tests.EditorMode.Logic.RngLogicTest.PeekRangeCheck",
+        "Status": "Passed",
+        "Duration": 0.001123,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLight.Tests.EditorMode.Logic.RngLogicTest.RestoreCheck",
+        "Status": "Passed",
+        "Duration": 0.0015249,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLight.Tests.EditorMode.Logic.TutorialDataTests.TestLiveopsTutorialFlags",
+        "Status": "Passed",
+        "Duration": 0.0041291,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLight.Tests.EditorMode.Logic.UniqueIdLogicTest.GenerateUniqueIdTest",
+        "Status": "Passed",
+        "Duration": 0.0033483,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLight.Tests.EditorMode.Logic.UniqueIdLogicTest.RemoveId_NoId_ThrowsException",
+        "Status": "Passed",
+        "Duration": 0.0023164,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLight.Tests.EditorMode.Logic.UniqueIdLogicTest.RemoveIdTest",
+        "Status": "Passed",
+        "Duration": 0.0022688,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLight.Tests.EditorMode.Models.EquipmentSerializerTest.OldEquipmentDataToNew",
+        "Status": "Passed",
+        "Duration": 0.0143199,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLight.Tests.EditorMode.Models.EquipmentSerializerTest.SerializeIntoArray",
+        "Status": "Passed",
+        "Duration": 0.0002017,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLight.Tests.EditorMode.Models.EquipmentSerializerTest.TestDeserializeOldStuff",
+        "Status": "Passed",
+        "Duration": 8.09e-05,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLight.Tests.EditorMode.Models.ItemDataTests.TestCollectionMeta",
+        "Status": "Passed",
+        "Duration": 0.0002411,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLight.Tests.EditorMode.Models.ItemDataTests.TestCurrencyMeta",
+        "Status": "Passed",
+        "Duration": 6.76e-05,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLight.Tests.EditorMode.Models.ItemDataTests.TestDeserializeCollectionMetadata",
+        "Status": "Passed",
+        "Duration": 0.0013093,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLight.Tests.EditorMode.Models.ItemDataTests.TestDeserializeEquipmentMetadata",
+        "Status": "Passed",
+        "Duration": 0.0005028,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLight.Tests.EditorMode.Models.ItemDataTests.TestEquipmentMeta",
+        "Status": "Passed",
+        "Duration": 6.75e-05,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLight.Tests.EditorMode.Models.ItemDataTests.TestNoMetadata",
+        "Status": "Passed",
+        "Duration": 4.61e-05,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLight.Tests.EditorMode.Models.ItemDataTests.TestSerializeDeserializeItemDataWithMetadata",
+        "Status": "Passed",
+        "Duration": 9.2e-05,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLight.Tests.EditorMode.Models.ItemDataTests.TestSerializeNoMetadata",
+        "Status": "Passed",
+        "Duration": 6.03e-05,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLight.Tests.EditorMode.Models.LocalizationCatalogTests.FallsBackToEnglishForUntranslatedText",
+        "Status": "Passed",
+        "Duration": 0.0105077,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLight.Tests.EditorMode.Models.LocalizationCatalogTests.MissingTermsRemainDetectable",
+        "Status": "Passed",
+        "Duration": 0.0001015,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLight.Tests.EditorMode.Models.LocalizationCatalogTests.ReadsPreservedTranslations(\"en\",\"Adventure Completed!\")",
+        "Status": "Passed",
+        "Duration": 7.01e-05,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLight.Tests.EditorMode.Models.LocalizationCatalogTests.ReadsPreservedTranslations(\"ru\",\"\u041f\u0440\u0438\u043a\u043b\u044e\u0447\u0435\u043d\u0438\u0435 \u0437\u0430\u0432\u0435\u0440\u0448\u0435\u043d\u043e!\")",
+        "Status": "Passed",
+        "Duration": 2e-05,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLight.Tests.EditorMode.Models.LocalizationCatalogTests.ReadsPreservedTranslations(\"pt\",\"Aventura conclu\u00edda!\")",
+        "Status": "Passed",
+        "Duration": 1.52e-05,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLight.Tests.EditorMode.Models.LocalizationCatalogTests.RejectsUnsupportedLanguage",
+        "Status": "Passed",
+        "Duration": 0.000182,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLight.Tests.EditorMode.Models.QuantumPropertiesTests.TestPropertiesHashConversion",
+        "Status": "Passed",
+        "Duration": 0.0026901,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLight.Tests.EditorMode.Models.QuantumPropertiesTests.TestPropertiesSystemHash",
+        "Status": "Passed",
+        "Duration": 0.0002097,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLight.Tests.EditorMode.PackageMigration.ClientStateMigrationTests.DynamicServerRegistryPreservesReferenceIdentity",
+        "Status": "Passed",
+        "Duration": 0.0027463,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLight.Tests.EditorMode.PackageMigration.ClientStateMigrationTests.KeepsLegacyLocalPersistenceKey",
+        "Status": "Passed",
+        "Duration": 0.0001072,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLight.Tests.EditorMode.PackageMigration.ClientStateMigrationTests.MessageSnapshotAllowsSubscriptionChangesDuringTransitions",
+        "Status": "Passed",
+        "Duration": 0.0008423,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLight.Tests.EditorMode.PackageMigration.ClientStateMigrationTests.PersistsLocalStateAndLeavesRemoteStateInMemory",
+        "Status": "Passed",
+        "Duration": 0.0006971,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLight.Tests.EditorMode.PackageMigration.ClientStateMigrationTests.ReplacingLocalStateWithRemoteStateDoesNotSaveStaleData",
+        "Status": "Passed",
+        "Duration": 0.0001132,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLight.Tests.EditorMode.Services.BundledShopReadinessTests.CashRequestRejectsWithoutExecutingEarnedCurrencyCommand",
+        "Status": "Passed",
+        "Duration": 0.0273801,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLight.Tests.EditorMode.Services.BundledShopReadinessTests.CatalogReadinessCompletesWithoutPaymentSdk",
+        "Status": "Passed",
+        "Duration": 0.0370823,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLight.Tests.EditorMode.Services.BundledShopReadinessTests.FailurePopupCompletesWhenRealDialogCloses",
+        "Status": "Passed",
+        "Duration": 0.0184408,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLight.Tests.EditorMode.Services.BundledShopReadinessTests.OldPaymentFailureJsonRemainsReadableWithoutPaymentTypes",
+        "Status": "Passed",
+        "Duration": 0.0159505,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLight.Tests.EditorMode.Services.PhotonPartyReservationTests.AcceptsActualSerializedRoomForUnchangedParty",
+        "Status": "Passed",
+        "Duration": 0.0027219,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLight.Tests.EditorMode.Services.PhotonPartyReservationTests.RejectsChangedPartyLeader",
+        "Status": "Passed",
+        "Duration": 0.000121,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLight.Tests.EditorMode.Services.PhotonPartyReservationTests.RejectsChangedPartyMembership",
+        "Status": "Passed",
+        "Duration": 0.0001109,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLight.Tests.EditorMode.Services.PhotonPartyReservationTests.RejectsClearedActiveReservation",
+        "Status": "Passed",
+        "Duration": 0.0001058,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLight.Tests.EditorMode.Services.PhotonPartyReservationTests.RejectsDifferentPhotonRegion",
+        "Status": "Passed",
+        "Duration": 8.53e-05,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLight.Tests.EditorMode.Services.PhotonPartyReservationTests.RejectsExpiredReservation",
+        "Status": "Passed",
+        "Duration": 0.0001178,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLight.Tests.EditorMode.Services.PhotonPartyReservationTests.RejectsOldBackendQueueTicket",
+        "Status": "Passed",
+        "Duration": 7.9e-05,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLight.Tests.EditorMode.Services.PhotonPartyReservationTests.RejectsRoomIdentifierMismatch",
+        "Status": "Passed",
+        "Duration": 8.82e-05,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLight.Tests.EditorMode.Services.PhotonPartyReservationTests.RejectsUnresolvedRandomMap",
+        "Status": "Passed",
+        "Duration": 9.52e-05,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLight.Tests.EditorMode.Services.RoomRunnerShutdownTests.Shutdown_AfterRoomServiceStartedLeaving_PreservesPhotonConnection(Leaving)",
+        "Status": "Passed",
+        "Duration": 0.0051678,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLight.Tests.EditorMode.Services.RoomRunnerShutdownTests.Shutdown_AfterRoomServiceStartedLeaving_PreservesPhotonConnection(DisconnectingFromGameServer)",
+        "Status": "Passed",
+        "Duration": 0.0014077,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLight.Tests.EditorMode.Services.RoomRunnerShutdownTests.Shutdown_AfterRoomServiceStartedLeaving_PreservesPhotonConnection(ConnectedToMasterServer)",
+        "Status": "Passed",
+        "Duration": 0.0012228,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLight.Tests.EditorMode.Services.RoomRunnerShutdownTests.StartParameters_OfflineRoom_DoesNotCreateNetworkCommunicator",
+        "Status": "Passed",
+        "Duration": 0.001504,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLight.Tests.EditorMode.UgsCommandQueueTests.DelayedOldAccountCompletionPreservesNewAccountLatestSave",
+        "Status": "Passed",
+        "Duration": 0.0070469,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLight.Tests.EditorMode.UgsCommandQueueTests.FailedSaveRetainsHeadAndLatestImmutableSnapshotForRetry",
+        "Status": "Passed",
+        "Duration": 0.0020657,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLight.Tests.EditorMode.UgsCommandQueueTests.NativeExpiryInvalidatesSessionAndRecoveryEmitsNewSignIn",
+        "Status": "Passed",
+        "Duration": 0.0003244,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLight.Tests.EditorMode.UgsCommandQueueTests.NativeNormalRefreshPreservesAccountGenerationAndPendingSave",
+        "Status": "Passed",
+        "Duration": 0.0002743,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLight.Tests.EditorMode.UgsCommandQueueTests.SamePlayerSignOutAndSignInInvalidatesPreviousSession",
+        "Status": "Passed",
+        "Duration": 0.0002612,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLightEditor.DataExtensions.Tests.EnumSelectorTest.ValueCheck",
+        "Status": "Passed",
+        "Duration": 0.0012843,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLightEditor.DataExtensions.Tests.EnumSelectorTest.ValueSetCheck",
+        "Status": "Passed",
+        "Duration": 9.02e-05,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLightEditor.DataExtensions.Tests.ObservableDictionaryTest.InvokeCheck",
+        "Status": "Passed",
+        "Duration": 0.0058892,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLightEditor.DataExtensions.Tests.ObservableDictionaryTest.InvokeCheck_NotObserving_DoesNothing",
+        "Status": "Passed",
+        "Duration": 0.0012755,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLightEditor.DataExtensions.Tests.ObservableDictionaryTest.InvokeObserveCheck",
+        "Status": "Passed",
+        "Duration": 0.00119,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLightEditor.DataExtensions.Tests.ObservableDictionaryTest.ObserveCheck",
+        "Status": "Passed",
+        "Duration": 0.0032454,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLightEditor.DataExtensions.Tests.ObservableDictionaryTest.Rebind_PreservesReaderAndSubscription",
+        "Status": "Passed",
+        "Duration": 0.0018494,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLightEditor.DataExtensions.Tests.ObservableDictionaryTest.StopObserve_KeyCheck",
+        "Status": "Passed",
+        "Duration": 0.0020825,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLightEditor.DataExtensions.Tests.ObservableDictionaryTest.StopObserveCheck",
+        "Status": "Passed",
+        "Duration": 0.0016055,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLightEditor.DataExtensions.Tests.ObservableDictionaryTest.StopObservingAll_Everything_Check",
+        "Status": "Passed",
+        "Duration": 0.0014774,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLightEditor.DataExtensions.Tests.ObservableDictionaryTest.StopObservingAll_MultipleCalls_Check",
+        "Status": "Passed",
+        "Duration": 0.0014802,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLightEditor.DataExtensions.Tests.ObservableDictionaryTest.StopObservingAll_NotObserving_DoesNothing",
+        "Status": "Passed",
+        "Duration": 0.0011876,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLightEditor.DataExtensions.Tests.ObservableDictionaryTest.StopObservingAllCheck",
+        "Status": "Passed",
+        "Duration": 0.0015695,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLightEditor.DataExtensions.Tests.ObservableDictionaryTest.ValueCheck",
+        "Status": "Passed",
+        "Duration": 0.0012539,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLightEditor.DataExtensions.Tests.ObservableDictionaryTest.ValueSetCheck",
+        "Status": "Passed",
+        "Duration": 0.0013008,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLightEditor.DataExtensions.Tests.ObservableFieldTest.InvokeCheck",
+        "Status": "Passed",
+        "Duration": 0.0020632,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLightEditor.DataExtensions.Tests.ObservableFieldTest.InvokeCheck_NotObserving_DoesNothing",
+        "Status": "Passed",
+        "Duration": 0.0011114,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLightEditor.DataExtensions.Tests.ObservableFieldTest.InvokeObserveCheck",
+        "Status": "Passed",
+        "Duration": 0.0011443,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLightEditor.DataExtensions.Tests.ObservableFieldTest.ObserveCheck",
+        "Status": "Passed",
+        "Duration": 0.0011839,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLightEditor.DataExtensions.Tests.ObservableFieldTest.ResolverRebind_PreservesReaderAndSubscription",
+        "Status": "Passed",
+        "Duration": 0.0018243,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLightEditor.DataExtensions.Tests.ObservableFieldTest.StopObserve_NotObserving_DoesNothing",
+        "Status": "Passed",
+        "Duration": 0.0011099,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLightEditor.DataExtensions.Tests.ObservableFieldTest.StopObserveCheck",
+        "Status": "Passed",
+        "Duration": 0.0012842,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLightEditor.DataExtensions.Tests.ObservableFieldTest.StopObservingAll_Everything_Check",
+        "Status": "Passed",
+        "Duration": 0.0011264,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLightEditor.DataExtensions.Tests.ObservableFieldTest.StopObservingAll_MultipleCalls_Check",
+        "Status": "Passed",
+        "Duration": 0.001109,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLightEditor.DataExtensions.Tests.ObservableFieldTest.StopObservingAll_NotObserving_DoesNothing",
+        "Status": "Passed",
+        "Duration": 0.0010261,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLightEditor.DataExtensions.Tests.ObservableFieldTest.StopObservingAllCheck",
+        "Status": "Passed",
+        "Duration": 0.0010235,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLightEditor.DataExtensions.Tests.ObservableFieldTest.ValueCheck",
+        "Status": "Passed",
+        "Duration": 0.0009679,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLightEditor.DataExtensions.Tests.ObservableFieldTest.ValueSetCheck",
+        "Status": "Passed",
+        "Duration": 0.0012625,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLightEditor.DataExtensions.Tests.ObservableListTest.InvokeCheck",
+        "Status": "Passed",
+        "Duration": 0.002962,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLightEditor.DataExtensions.Tests.ObservableListTest.InvokeCheck_NotObserving_DoesNothing",
+        "Status": "Passed",
+        "Duration": 0.001048,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLightEditor.DataExtensions.Tests.ObservableListTest.InvokeObserveCheck",
+        "Status": "Passed",
+        "Duration": 0.0011526,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLightEditor.DataExtensions.Tests.ObservableListTest.ObserveCheck",
+        "Status": "Passed",
+        "Duration": 0.0014968,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLightEditor.DataExtensions.Tests.ObservableListTest.Rebind_PreservesReaderAndSubscription",
+        "Status": "Passed",
+        "Duration": 0.0020953,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLightEditor.DataExtensions.Tests.ObservableListTest.StopObserveCheck",
+        "Status": "Passed",
+        "Duration": 0.0011263,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLightEditor.DataExtensions.Tests.ObservableListTest.StopObservingAll_Everything_Check",
+        "Status": "Passed",
+        "Duration": 0.0010175,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLightEditor.DataExtensions.Tests.ObservableListTest.StopObservingAll_MultipleCalls_Check",
+        "Status": "Passed",
+        "Duration": 0.0011919,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLightEditor.DataExtensions.Tests.ObservableListTest.StopObservingAll_NotObserving_DoesNothing",
+        "Status": "Passed",
+        "Duration": 0.001093,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLightEditor.DataExtensions.Tests.ObservableListTest.StopObservingAllCheck",
+        "Status": "Passed",
+        "Duration": 0.0010415,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLightEditor.DataExtensions.Tests.ObservableListTest.ValueCheck",
+        "Status": "Passed",
+        "Duration": 0.0010317,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLightEditor.DataExtensions.Tests.ObservableListTest.ValueSetCheck",
+        "Status": "Passed",
+        "Duration": 0.0009897,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLightEditor.Services.Tests.CommandServiceTest.ExecuteCommand_Successfully",
+        "Status": "Passed",
+        "Duration": 0.0010846,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLightEditor.Services.Tests.DataServiceTest.AddData_Successfully",
+        "Status": "Passed",
+        "Duration": 0.0003654,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLightEditor.Services.Tests.InstallerTest.Bind_NotInterface_ThrowsException",
+        "Status": "Passed",
+        "Duration": 0.000142,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLightEditor.Services.Tests.InstallerTest.Bind_Resolve_Successfully",
+        "Status": "Passed",
+        "Duration": 0.0001368,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLightEditor.Services.Tests.InstallerTest.Resolve_NotBinded_ThrowsException",
+        "Status": "Passed",
+        "Duration": 7e-05,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLightEditor.Services.Tests.ObjectPoolTest.Despawn_Successfully",
+        "Status": "Passed",
+        "Duration": 0.0009209,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLightEditor.Services.Tests.ObjectPoolTest.DespawnAll_Successfully",
+        "Status": "Passed",
+        "Duration": 0.0004389,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLightEditor.Services.Tests.ObjectPoolTest.Spawn_EmptyPool_Successfully",
+        "Status": "Passed",
+        "Duration": 0.0002889,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLightEditor.Services.Tests.ObjectPoolTest.Spawn_Successfully",
+        "Status": "Passed",
+        "Duration": 0.0001212,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLightEditor.Services.Tests.PoolServiceTest.AddPool_SameType_ThrowsException",
+        "Status": "Passed",
+        "Duration": 0.000414,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLightEditor.Services.Tests.PoolServiceTest.AddPool_Successfully",
+        "Status": "Passed",
+        "Duration": 9.42e-05,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLightEditor.Services.Tests.PoolServiceTest.Despawn_NotAddedPool_ThrowsException",
+        "Status": "Passed",
+        "Duration": 0.0001625,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLightEditor.Services.Tests.PoolServiceTest.Despawn_Successfully",
+        "Status": "Passed",
+        "Duration": 0.000259,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLightEditor.Services.Tests.PoolServiceTest.DespawnAll_Successfully",
+        "Status": "Passed",
+        "Duration": 0.0001095,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLightEditor.Services.Tests.PoolServiceTest.RemovePool_NotAdded_DoesNothing",
+        "Status": "Passed",
+        "Duration": 8.26e-05,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLightEditor.Services.Tests.PoolServiceTest.RemovePool_Successfully",
+        "Status": "Passed",
+        "Duration": 5.13e-05,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLightEditor.Services.Tests.PoolServiceTest.Spawn_NotAddedPool_ThrowsException",
+        "Status": "Passed",
+        "Duration": 7.43e-05,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLightEditor.Services.Tests.PoolServiceTest.Spawn_Successfully",
+        "Status": "Passed",
+        "Duration": 6.5e-05,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLightEditor.Services.Tests.TimeServiceTest.AddTime_AllTimeTypes_Successfully",
+        "Status": "Passed",
+        "Duration": 0.0006073,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLightEditor.Services.Tests.TimeServiceTest.DateTime_Convertions_Successfully",
+        "Status": "Passed",
+        "Duration": 0.0001052,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLightEditor.Services.Tests.TimeServiceTest.UnityTime_Convertions_Successfully",
+        "Status": "Passed",
+        "Duration": 0.0002714,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLightEditor.Services.Tests.TimeServiceTest.UnixTime_Convertions_Successfully",
+        "Status": "Passed",
+        "Duration": 9.38e-05,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLightEditor.StateChart.Tests.StatechartChoiceTest.BasicSetup",
+        "Status": "Passed",
+        "Duration": 0.0080411,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLightEditor.StateChart.Tests.StatechartChoiceTest.BasicSetup_WithoutTarget_ThrowsException",
+        "Status": "Passed",
+        "Duration": 0.0064623,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLightEditor.StateChart.Tests.StatechartChoiceTest.MissingTransition_ThrowsException",
+        "Status": "Passed",
+        "Duration": 0.0056423,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLightEditor.StateChart.Tests.StatechartChoiceTest.MultipleTrueConditions_PicksFirstTransition",
+        "Status": "Passed",
+        "Duration": 0.0056921,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLightEditor.StateChart.Tests.StatechartChoiceTest.StateTransitionsLoop_ThrowsException",
+        "Status": "Passed",
+        "Duration": 0.0055878,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLightEditor.StateChart.Tests.StatechartLeaveTest.BasicSetup_NestStateTransitionWithoutTarget_ThrowsException",
+        "Status": "Passed",
+        "Duration": 0.009734,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLightEditor.StateChart.Tests.StatechartLeaveTest.BasicSetup_SplitStateTransitionWithoutTarget_ThrowsException",
+        "Status": "Passed",
+        "Duration": 0.0108648,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLightEditor.StateChart.Tests.StatechartLeaveTest.MultipleTransitions_ThrowsException",
+        "Status": "Passed",
+        "Duration": 0.0038449,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLightEditor.StateChart.Tests.StatechartLeaveTest.NestStateBasicSetup",
+        "Status": "Passed",
+        "Duration": 0.0095032,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLightEditor.StateChart.Tests.StatechartLeaveTest.NestStateBasicSetup_ExecuteFinal_SameResult",
+        "Status": "Passed",
+        "Duration": 0.0087994,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLightEditor.StateChart.Tests.StatechartLeaveTest.NoSplitFinalized_LeaveOneSplit_LeaveAll",
+        "Status": "Passed",
+        "Duration": 0.0122557,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLightEditor.StateChart.Tests.StatechartLeaveTest.NoSplitFinalized_LeaveOneSplitExecuteFinal_ExecuteOtherSplitFinal",
+        "Status": "Passed",
+        "Duration": 0.0121484,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLightEditor.StateChart.Tests.StatechartLeaveTest.SameLayerTarget_ThrowsException",
+        "Status": "Passed",
+        "Duration": 0.0032004,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLightEditor.StateChart.Tests.StatechartLeaveTest.SplitStateBasicSetup",
+        "Status": "Passed",
+        "Duration": 0.010724,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLightEditor.StateChart.Tests.StatechartLeaveTest.SplitStateBasicSetup_ExecuteFinal_SameResult",
+        "Status": "Passed",
+        "Duration": 0.0102425,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLightEditor.StateChart.Tests.StatechartLeaveTest.WrongLayerTarget_ThrowsException",
+        "Status": "Passed",
+        "Duration": 0.0147011,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLightEditor.StateChart.Tests.StatechartNestTest.BasicSetup",
+        "Status": "Passed",
+        "Duration": 0.0074256,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLightEditor.StateChart.Tests.StatechartNestTest.BasicSetup_WithoutTarget",
+        "Status": "Passed",
+        "Duration": 0.0062805,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLightEditor.StateChart.Tests.StatechartNestTest.InnerEventTrigger",
+        "Status": "Passed",
+        "Duration": 0.007684,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLightEditor.StateChart.Tests.StatechartNestTest.InnerEventTrigger_ExecuteFinal_SameResult",
+        "Status": "Passed",
+        "Duration": 0.008074,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLightEditor.StateChart.Tests.StatechartNestTest.InnerEventTrigger_NotExecuteExit_SameResult",
+        "Status": "Passed",
+        "Duration": 0.0077325,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLightEditor.StateChart.Tests.StatechartNestTest.InnerEventTrigger_RunResetRun",
+        "Status": "Passed",
+        "Duration": 0.0113836,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLightEditor.StateChart.Tests.StatechartNestTest.NestedStates_InnerEventTrigger",
+        "Status": "Passed",
+        "Duration": 0.015559,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLightEditor.StateChart.Tests.StatechartNestTest.NestedStates_OuterEventLayer0",
+        "Status": "Passed",
+        "Duration": 0.0150686,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLightEditor.StateChart.Tests.StatechartNestTest.OuterEventTrigger",
+        "Status": "Passed",
+        "Duration": 0.0093323,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLightEditor.StateChart.Tests.StatechartNestTest.OuterEventTrigger_ExecuteFinal",
+        "Status": "Passed",
+        "Duration": 0.0097744,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLightEditor.StateChart.Tests.StatechartNestTest.OuterEventTrigger_NotExecuteExit",
+        "Status": "Passed",
+        "Duration": 0.0094395,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLightEditor.StateChart.Tests.StatechartNestTest.OuterEventTrigger_NotExecuteExit_ExecuteFinal",
+        "Status": "Passed",
+        "Duration": 0.0089693,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLightEditor.StateChart.Tests.StatechartNestTest.StateTransitionsLoop_ThrowsException",
+        "Status": "Passed",
+        "Duration": 0.0085826,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLightEditor.StateChart.Tests.StatechartSplitTest.BasicSetup",
+        "Status": "Passed",
+        "Duration": 0.011432,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLightEditor.StateChart.Tests.StatechartSplitTest.BasicSetup_WithoutTarget",
+        "Status": "Passed",
+        "Duration": 0.010711,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLightEditor.StateChart.Tests.StatechartSplitTest.InnerEventTrigger",
+        "Status": "Passed",
+        "Duration": 0.0298627,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLightEditor.StateChart.Tests.StatechartSplitTest.InnerEventTrigger_ExecuteFinal_SameResult",
+        "Status": "Passed",
+        "Duration": 0.0279873,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLightEditor.StateChart.Tests.StatechartSplitTest.InnerEventTrigger_NotExecuteExit_SameResult",
+        "Status": "Passed",
+        "Duration": 0.0468173,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLightEditor.StateChart.Tests.StatechartSplitTest.NestedStates_InnerEventTrigger",
+        "Status": "Passed",
+        "Duration": 0.0262452,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLightEditor.StateChart.Tests.StatechartSplitTest.NestedStates_OuterEventTrigger",
+        "Status": "Passed",
+        "Duration": 0.026707,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLightEditor.StateChart.Tests.StatechartSplitTest.NestedStates_OuterEventTriggerSameTrigger_ExecutesMostOuter",
+        "Status": "Passed",
+        "Duration": 0.0278026,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLightEditor.StateChart.Tests.StatechartSplitTest.OuterEventTrigger",
+        "Status": "Passed",
+        "Duration": 0.0112907,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLightEditor.StateChart.Tests.StatechartSplitTest.OuterEventTrigger_ExecuteFinal",
+        "Status": "Passed",
+        "Duration": 0.0109356,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLightEditor.StateChart.Tests.StatechartSplitTest.OuterEventTrigger_NotExecuteExit",
+        "Status": "Passed",
+        "Duration": 0.0117216,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLightEditor.StateChart.Tests.StatechartSplitTest.OuterEventTrigger_NotExecuteExit_ExecuteFinal",
+        "Status": "Passed",
+        "Duration": 0.01131,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLightEditor.StateChart.Tests.StatechartSplitTest.SplitState_StateTransitionsLoop_ThrowsException",
+        "Status": "Passed",
+        "Duration": 0.0106772,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLightEditor.StateChart.Tests.StatechartSplitTest.StatechartSplit_HalfFinal_NotFinalized",
+        "Status": "Passed",
+        "Duration": 0.0090449,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLightEditor.StateChart.Tests.StatechartSplitTest.StatechartSplit_RunResetRun",
+        "Status": "Passed",
+        "Duration": 0.0113645,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLightEditor.StateChart.Tests.StatechartStateTest.BasicSetup",
+        "Status": "Passed",
+        "Duration": 0.0044977,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLightEditor.StateChart.Tests.StatechartStateTest.BasicSetup_TransitionWithoutTarget",
+        "Status": "Passed",
+        "Duration": 0.0036187,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLightEditor.StateChart.Tests.StatechartStateTest.PauseRunStatechart",
+        "Status": "Passed",
+        "Duration": 0.0032808,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLightEditor.StateChart.Tests.StatechartStateTest.ResetRunStatechart",
+        "Status": "Passed",
+        "Duration": 0.0035712,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLightEditor.StateChart.Tests.StatechartStateTest.StateTransitionsLoop_ThrowsException",
+        "Status": "Passed",
+        "Duration": 0.0031198,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLightEditor.StateChart.Tests.StatechartStateTest.TriggerNotConfiguredEvent_DoesNothing",
+        "Status": "Passed",
+        "Duration": 0.0033875,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLightEditor.StateChart.Tests.StatechartTaskWaitTest.BasicSetup",
+        "Status": "Passed",
+        "Duration": 0.0073669,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLightEditor.StateChart.Tests.StatechartTaskWaitTest.EventTrigger_DoesNotInterruptTaskWait",
+        "Status": "Passed",
+        "Duration": 0.0038979,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLightEditor.StateChart.Tests.StatechartTaskWaitTest.MissingTaskWaiter_ThrowsException",
+        "Status": "Passed",
+        "Duration": 0.002551,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLightEditor.StateChart.Tests.StatechartTaskWaitTest.NestState_OuterEventTrigger_QueuesExitUntilTaskCompletes",
+        "Status": "Passed",
+        "Duration": 0.0072627,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLightEditor.StateChart.Tests.StatechartTaskWaitTest.StateTransitionsLoop_ThrowsException",
+        "Status": "Passed",
+        "Duration": 0.0033725,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLightEditor.StateChart.Tests.StatechartTest.BasicSetup",
+        "Status": "Passed",
+        "Duration": 0.0029737,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLightEditor.StateChart.Tests.StatechartTest.BasicSetup_TransitionWithoutTarget_ThrowsException",
+        "Status": "Passed",
+        "Duration": 0.0021919,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLightEditor.StateChart.Tests.StatechartTest.InitialState_MultipleTransitions_ThrowsException",
+        "Status": "Passed",
+        "Duration": 0.0021506,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLightEditor.StateChart.Tests.StatechartTest.InitialState_StateTransitionsLoop_ThrowsException",
+        "Status": "Passed",
+        "Duration": 0.0014622,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLightEditor.StateChart.Tests.StatechartTest.MultipleFinalState_ThrowsException",
+        "Status": "Passed",
+        "Duration": 0.0015003,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLightEditor.StateChart.Tests.StatechartTest.MultipleInitialStates_ThrowsException",
+        "Status": "Passed",
+        "Duration": 0.0007842,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLightEditor.StateChart.Tests.StatechartTest.NoInitialState_ThrowsException",
+        "Status": "Passed",
+        "Duration": 0.000766,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLightEditor.StateChart.Tests.StatechartTransitionTest.BasicSetup",
+        "Status": "Passed",
+        "Duration": 0.0043704,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLightEditor.StateChart.Tests.StatechartTransitionTest.BasicSetup_TransitionWithoutTarget_ThrowsException",
+        "Status": "Passed",
+        "Duration": 0.0036172,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLightEditor.StateChart.Tests.StatechartTransitionTest.BasicSetup_TransitionWithoutTransition_ThrowsException",
+        "Status": "Passed",
+        "Duration": 0.002976,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLightEditor.StateChart.Tests.StatechartTransitionTest.StateTransitionsLoop_ThrowsException",
+        "Status": "Passed",
+        "Duration": 0.003611,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLightEditor.StateChart.Tests.StatechartWaitTest.BasicSetup",
+        "Status": "Passed",
+        "Duration": 0.0346754,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLightEditor.StateChart.Tests.StatechartWaitTest.EventTrigger",
+        "Status": "Passed",
+        "Duration": 0.0047127,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLightEditor.StateChart.Tests.StatechartWaitTest.NestState_OuterEventTriggerAndActivityComplete_NoTransition",
+        "Status": "Passed",
+        "Duration": 0.0448826,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLightEditor.StateChart.Tests.StatechartWaitTest.SplitActivity_CompleteBoth",
+        "Status": "Passed",
+        "Duration": 0.0503233,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLightEditor.StateChart.Tests.StatechartWaitTest.SplitActivity_CompleteOnlyOneActivity",
+        "Status": "Passed",
+        "Duration": 0.0495475,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FirstLightEditor.StateChart.Tests.StatechartWaitTest.StateTransitionsLoop_ThrowsException",
+        "Status": "Passed",
+        "Duration": 0.003891,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "GameLoversEditor.GoogleSheetImporter.Tests.CsvParserTest.ArrayParse_Successfully",
+        "Status": "Passed",
+        "Duration": 0.0008421,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "GameLoversEditor.GoogleSheetImporter.Tests.CsvParserTest.ConvertCsv_OnlyHeadlines_EmptyResult",
+        "Status": "Passed",
+        "Duration": 0.0004459,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "GameLoversEditor.GoogleSheetImporter.Tests.CsvParserTest.ConvertCsv_Successfully",
+        "Status": "Passed",
+        "Duration": 0.000194,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "GameLoversEditor.GoogleSheetImporter.Tests.CsvParserTest.ConvertCsv_WrongFormatSeparator_EmptyResult",
+        "Status": "Passed",
+        "Duration": 4.05e-05,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "GameLoversEditor.GoogleSheetImporter.Tests.CsvParserTest.Deserialize_ExtraFields_Successfully",
+        "Status": "Passed",
+        "Duration": 0.001293,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "GameLoversEditor.GoogleSheetImporter.Tests.CsvParserTest.Deserialize_MissingFields_Successfully",
+        "Status": "Passed",
+        "Duration": 0.000101,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "GameLoversEditor.GoogleSheetImporter.Tests.CsvParserTest.Deserialize_Successfully",
+        "Status": "Passed",
+        "Duration": 0.0013889,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "GameLoversEditor.GoogleSheetImporter.Tests.CsvParserTest.DictionaryParse_ElementOddAmount_ThrowsException",
+        "Status": "Passed",
+        "Duration": 0.0001885,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "GameLoversEditor.GoogleSheetImporter.Tests.CsvParserTest.DictionaryParse_Successfully",
+        "Status": "Passed",
+        "Duration": 6.48e-05,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "GameLoversEditor.GoogleSheetImporter.Tests.CsvParserTest.DictionaryParsePair_Successfully",
+        "Status": "Passed",
+        "Duration": 6.92e-05,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "GameLoversEditor.GoogleSheetImporter.Tests.CsvParserTest.ParseInt_Successfully",
+        "Status": "Passed",
+        "Duration": 5.48e-05,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "GameLoversEditor.GoogleSheetImporter.Tests.CsvParserTest.ParseInt_WithFloat_ThrowsException",
+        "Status": "Passed",
+        "Duration": 0.0005522,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "AddressableAssets.DocExampleCode.TestStub.RequiredTest",
+        "Status": "Passed",
+        "Duration": 3.84e-05,
+        "Message": null,
+        "StackTrace": null
+      }
+    ]
+  }
+}

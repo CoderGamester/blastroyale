@@ -1,0 +1,32 @@
+{
+  "result": "Succeeded",
+  "codeCommit": "77c7da136",
+  "unity": "6000.3.26f1",
+  "services": "2.2.0",
+  "pipeline": "0.8.0-exp.1",
+  "target": "iOS",
+  "development": true,
+  "unsigned": true,
+  "nativeBuildErrors": 0,
+  "nativeBuildWarnings": [
+    "Pipeline: No RuntimePipelineConfig asset found (Project Settings > Pipeline > Runtime). Pipeline will be disabled in Player builds."
+  ],
+  "packedAssetRecords": 8974,
+  "testPrefabRecords": 0,
+  "artifact": {
+    "path": "BlastRoyale/Builds/iOS/BlastRoyale-Xcode",
+    "checks": {
+      "xcodeProject": true,
+      "il2cppSources": true,
+      "unityFramework": true,
+      "data": true
+    },
+    "il2cppCppSourceCount": 1439,
+    "projectSha256": "229dd9117c6d10fcaa90104257d4d066380fec71eb26eed83b22cf17284a8005",
+    "projectBytes": 545100
+  },
+  "addressables": "Built by the existing target-correct Builder.BatchBuild",
+  "xcodeCompilation": "Not run",
+  "signing": "Not run",
+  "deviceTest": "Not run"
+}

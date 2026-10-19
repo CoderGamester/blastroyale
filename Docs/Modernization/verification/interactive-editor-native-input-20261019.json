@@ -1,0 +1,44 @@
+{
+  "UnityVersion": "6000.3.26f1",
+  "Matches": [
+    {
+      "FirstFrame": 0,
+      "LastFrame": 3177,
+      "Bots": 35,
+      "MovementPolls": 121,
+      "ShootingPolls": 0,
+      "LocalAttacks": 0,
+      "Entity": null,
+      "FirstPosition": null,
+      "LastPosition": null,
+      "GreatestDistance": 0.0
+    },
+    {
+      "FirstFrame": 25,
+      "LastFrame": 7397,
+      "Bots": 3,
+      "MovementPolls": 121,
+      "ShootingPolls": 151,
+      "LocalAttacks": 0,
+      "Entity": "E.00405.003",
+      "FirstPosition": "(14.7, 41)",
+      "LastPosition": "(5.722519, 46.9211)",
+      "GreatestDistance": 10.754278175090434
+    },
+    {
+      "FirstFrame": 23,
+      "LastFrame": 843,
+      "Bots": 35,
+      "MovementPolls": 0,
+      "ShootingPolls": 66,
+      "LocalAttacks": 3,
+      "Entity": "E.00405.003",
+      "FirstPosition": "(-14.09999, -48.45)",
+      "LastPosition": "(-14.09999, -48.45)",
+      "GreatestDistance": 0.0
+    }
+  ],
+  "Errors": [],
+  "Scope": "Normal live Editor UI; observation only. First match attached after local death, second measured WASD/Space, third measured actual native attacks with right-arrow plus shooting joystick. Two full spectator/standings/progression/Home exits; next matches started in the same Play session. Third match ended by Editor Stop.",
+  "PackageCheckpoint": "Before Services 2.2.0 update. Final Services source passes the host suites and mobile builds separately; this manual GUI flow has not been repeated after the package update."
+}

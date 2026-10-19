@@ -1,0 +1,29 @@
+{
+  "checkedOn": "2026-10-19",
+  "quantum": {
+    "version": "3.0.14 Stable",
+    "build": 2241,
+    "archiveSha256": "5e12afa93acace8f99a8bd7a396df3a3ea4f02e7177b52d2d7d3c5f2c5d5146c",
+    "shippedPayloadsPresent": 307,
+    "byteIdenticalPayloads": 295,
+    "expectedLayoutAndAsmdefDifferences": 12,
+    "exactDllPayloads": 9
+  },
+  "botSdk": {
+    "version": "3.10.2",
+    "compatibleQuantum": "3.0",
+    "byteIdenticalPayloads": 289,
+    "missingOrChangedPayloads": 0,
+    "exactMetadataFiles": 318,
+    "archiveSha256": "d9267d4f26b3acdc3cfda229c8744cd4482e42508c01d8c45ac1cc3d703cf5a7"
+  },
+  "realtimeVersion": "5.1.20",
+  "layoutTargetsVerified": 16,
+  "generatedGuidGuardsVerified": 22,
+  "scope": "Current installed state independently compared with legitimately downloaded vendor archives and guarded source-layout manifests. No fresh-machine restore run is implied. Bot3.10.5 is for Quantum3.1 and is not this release pairing.",
+  "officialSources": [
+    "https://doc.photonengine.com/quantum/v3/getting-started/initial-setup",
+    "https://doc.photonengine.com/quantum/v3/getting-started/release-notes",
+    "https://doc.photonengine.com/quantum/v3/addons/bot-sdk/overview"
+  ]
+}

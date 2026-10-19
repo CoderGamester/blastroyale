@@ -1,0 +1,29 @@
+{
+  "result": "Succeeded",
+  "codeCommit": "77c7da136",
+  "unity": "6000.3.26f1",
+  "services": "2.2.0",
+  "pipeline": "0.8.0-exp.1",
+  "target": "Android",
+  "development": true,
+  "nativeBuildErrors": 0,
+  "nativeBuildWarnings": [
+    "Pipeline: No RuntimePipelineConfig asset found (Project Settings > Pipeline > Runtime). Pipeline will be disabled in Player builds."
+  ],
+  "packedAssetRecords": 8970,
+  "testPrefabRecords": 0,
+  "artifact": {
+    "path": "BlastRoyale/Builds/Android/BlastRoyale.apk",
+    "bytes": 532168390,
+    "sha256": "0b3a0706a7fba63dbb8d00a2a4871805e90bd44f63903d3a28cf54ccc0a440bf",
+    "checks": {
+      "manifest": true,
+      "dex": true,
+      "arm64": true,
+      "arm32": true,
+      "allZipCrcValid": true
+    }
+  },
+  "addressables": "Built by the existing target-correct Builder.BatchBuild",
+  "deviceTest": "Not run"
+}

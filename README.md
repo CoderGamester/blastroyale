@@ -1,8 +1,8 @@
 # Blast Royale — Unity 6.3 modernization
 
-Mobile top-down battle royale using Unity **6000.3.26f1**, Photon Quantum **3.0.14 Stable2241** and one Unity Gaming Services development backend. Work is on `upgrade/codex`; no upstream push was made. `Backend/` is retained unchanged as the future authoritative reference.
+Mobile top-down battle royale using Unity **6000.3.26f1**, Photon Quantum **3.0.14 Stable 2241** and one Unity Gaming Services development backend. Work is on `upgrade/codex`; no upstream push was made. `Backend/` is retained unchanged as the future authoritative reference.
 
-Current acceptance: **314 Main EditMode and six PlayMode tests pass**, including the final account/map/UI changes, with zero C# diagnostics and SDK import warnings in those runs. Live UGS guest/twelve-model persistence/restart/conflict checks pass. The actual tutorial runs with one player/four bots; normal Home Play reaches Maze with one player/35 bots, 270 advancing verified frames, an active Alive HUD, Metal rendering and no runtime errors. All ten maps have bounded native restoration proofs; only FtueDeck/Maze have actual game-flow proof. Final Addressables, development Android APK and unsigned iOS export pass; device/signing/remoteCI tests remain unrun. [Exact status and limits](REPORT.md).
+Current Editor acceptance: **318 EditMode and 14 PlayMode tests pass**. The final Services 2.2.0 code also passes real Game view movement, Quantum attacks, death/spectating, results, return Home and replay, with zero captured runtime errors. Accepted map placeholders retain one collider warning per Maze load. Both Photon SDKs are verified: Quantum **3.0.14 Stable 2241**, Bot SDK **3.10.2**, with Realtime **5.1.20**. Missing commercial map art uses accepted placeholders. [Current builds, exact evidence and unrun checks](REPORT.md).
 
 ## Prerequisites
 
@@ -31,16 +31,16 @@ Current acceptance: **314 Main EditMode and six PlayMode tests pass**, including
    Copy only if no configured local file exists. Fill `PhotonQuantumAppId`, `UnityProjectId`, `UnityEnvironmentName` and the optional actual `UnityEnvironmentId`. Keep bundled shop/remote config enabled for initial development. IDs must be real; never put backend/service-account/server keys in Resources, which ships with the player.
 5. Create/select one free [Unity Cloud project](https://cloud.unity.com/) and a **development** environment. Link this checkout to that exact project in Project Settings > Services; the native SDK uses `Application.cloudProjectId`, so JSON alone is insufficient. Enable Authentication, CloudSave, Friends and Lobby. Add the ascending Public string index for `player_name` to support friend lookup. Do not configure a PlayFab title or Azure deployment. [Exact human steps](HUMAN_ACTIONS.md).
 6. Create a free **Quantum3** app in [Photon Dashboard](https://dashboard.photonengine.com/app/create). Another developer needs their own authorized App ID; this host's temporary authorized ID remains private.
-7. After the first UPM import, close Unity and run `python3 Tools/Modernization/patch_mobile_services_scanner.py --project BlastRoyale`. This repairs the exact pinned Editor capability scanner; reapply after deleting Library. [Native proof and restore order](Docs/Modernization/mobile-scanner-repair.md).
+7. After the first UPM import, close Unity and run `python3 Tools/Modernization/patch_mobile_services_scanner.py --project BlastRoyale` and `python3 Tools/Modernization/patch_ui_service_editor.py --project BlastRoyale`. These guarded repairs fix the pinned capability scanner, keep the unchanged UiService test fixture under its existing Editor folder, and port its camera-query test API. Reapply after deleting Library or resolving a fresh package cache. [Native proof and restore order](Docs/Modernization/mobile-scanner-repair.md).
 8. Optional recoverable accounts use hosted Unity Player Accounts. Create native `Resources/UnityPlayerAccountSettings.asset` through Project Settings > Services > Player Accounts, configure its real client ID and allowed desktop/mobile redirects. Guest play does not require it. [Actual account SDK setup](Docs/Modernization/ugs-backend.md).
 
 Keep locally linked project/account IDs out of Git, including Unity's modified ProjectSettings account fields. The blank template is the public setup contract. `DELETED-ASSETS.md` retains original missing-content provenance and current restore instructions.
 
 ## Playing and limitations
 
-Open `Assets/Scenes/Boot.unity` and enter Play Mode after native project configuration is complete. First login runs the FtueDeck onboarding path; the bundled development mode then uses solo Photon rooms with bots. UGS Lobby carries party membership and room reservations for compatible party modes; Custom Games remain available.
+Open `Assets/Scenes/Boot.unity` using **FLG > Scene > Open Boot Scene** (Option+9 on macOS), then enter Play Mode after native project configuration is complete. Playing an arbitrary map directly is an authoring preview and does not run application initialization. First login runs the FtueDeck onboarding path; the bundled development mode then uses solo Photon rooms with bots. UGS Lobby carries party membership and room reservations for compatible party modes; Custom Games remain available.
 
-Actual configured Boot-to-tutorial and Home Play-to-normal Maze pass with advancing verified frames and no runtime errors. This is match-start proof; match completion and physical device controls are not verified. Missing commercial art uses clearly marked unit-box approximations. Native source/prototype/cache/GUID/restart acceptance covers the other maps, without individual rendered-match or original-art equivalence claims. Local trophies and earned virtual purchases persist through Cloud Save. Global rankings and real-money purchases are unavailable. Progression/grants are client authoritative; future trusted behavior belongs at the marked boundaries pointing to `Backend/`.
+Use **WASD** to move, **arrow keys** to aim and **Space** to attack, or the two onscreen joysticks. Aiming must provide a direction; Space alone with no direction does not prove an attack. Actual configured Boot-to-tutorial and normal Maze input, death/spectator/results/Home and another match pass. Physical device controls are not verified. Missing commercial art uses clearly marked unit-box approximations. Native source/prototype/cache/GUID/restart acceptance covers the other maps, without individual rendered-match or original-art equivalence claims. Local trophies and earned virtual purchases persist through Cloud Save. Global rankings and real-money purchases are unavailable. Progression/grants are client authoritative; future trusted behavior belongs at the marked boundaries pointing to `Backend/`.
 
 ## Local validation
 
@@ -62,7 +62,7 @@ python3 Tools/CI/test_addressable_id_contract.py -q
 python3 Tools/CI/validate_addressable_ids.py
 ```
 
-Actionlint, eight CI helper checks and seven Addressable contract cases pass locally. Main EditMode and PlayMode have been rerun after UGS, account, all-map and UI integration; final content/mobile exports pass; physical-device acceptance remains unrun. Raw logs/APKs remain ignored; public evidence is under Docs/Modernization/verification.
+Actionlint, eight CI helper checks and seven Addressable contract cases pass locally. Main EditMode and PlayMode are rerun after the current package/runtime repairs, including a test run after actual Editor Play. Fresh final mobile outputs and their exact package checkpoint are linked from the report; physical-device acceptance remains unrun. Raw logs/APKs remain ignored; public evidence is under Docs/Modernization/verification.
 
 ## GitHub Actions
 
