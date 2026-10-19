@@ -128,22 +128,27 @@ namespace FirstLight.Game.Presenters
 
 		private void OnSpectatedPlayerChanged(SpectatedPlayer _, SpectatedPlayer current)
 		{
-			var f = QuantumRunner.Default.Game.Frames.Predicted;
+			if (!current.Player.IsValid)
+			{
+				if (current.Entity.IsValid)
+				{
+					FLog.Warn($"Invalid player entity {current.Entity} being spectated");
+				}
+				return;
+			}
+
+			var runner = QuantumRunner.Default;
+			if (!runner.IsDefinedAndRunning(considerStalling: false)) return;
+			var f = runner.Game.Frames.Predicted;
+			if (f == null || !f.TryGet<PlayerCharacter>(current.Entity, out var _))
+			{
+				return;
+			}
+
 			FixedArray<PlayerMatchData> playersData;
 			unsafe
 			{
 				playersData = f.Unsafe.GetPointerSingleton<GameContainer>()->PlayersData;
-			}
-
-			if (!current.Player.IsValid)
-			{
-				FLog.Warn($"Invalid player entity {current.Entity} being spectated");
-				return;
-			}
-
-			if (!f.TryGet<PlayerCharacter>(current.Entity, out var _))
-			{
-				return;
 			}
 
 			var data = new QuantumPlayerMatchData(f, playersData[current.Player]);
