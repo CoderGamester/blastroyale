@@ -12,7 +12,7 @@ namespace FirstLight.Editor.Build
 {
 	/// <summary>
 	/// Set the internal version in any VersionService instances in the project before building
-	/// and whenever the project loads.
+	/// and before entering Play Mode.
 	/// </summary>
 	public static class VersionEditorUtils
 	{
@@ -39,25 +39,23 @@ namespace FirstLight.Editor.Build
 		/// </summary>
 		public static string LoadVersionDataSerializedSync ()
 		{
-			var textAsset = Resources.Load<TextAsset>(VersionUtils.VersionDataFilename);
-			if (!textAsset)
-			{
-				Debug.LogError("Could not load internal version from Resources.");
-				return string.Empty;
-			}
-
-			var serialized = textAsset.text;
-			Resources.UnloadAsset(textAsset);
-			return serialized;
+			var path = Path.Combine(Application.dataPath, "Resources", VersionUtils.VersionDataFilename + ".txt");
+			return File.Exists(path) ? File.ReadAllText(path) : string.Empty;
 		}
 
 		/// <summary>
-		/// Set the internal version for when the app plays in editor.
+		/// Register version stamping before the app enters Play Mode.
 		/// </summary>
 		[InitializeOnLoadMethod]
 		private static void OnEditorLoad()
 		{
-			SetAndSaveInternalVersion("development");
+			if (AssetDatabase.IsAssetImportWorkerProcess()) return;
+			EditorApplication.playModeStateChanged += UpdateEditorVersion;
+		}
+
+		private static void UpdateEditorVersion(PlayModeStateChange state)
+		{
+			if (state == PlayModeStateChange.ExitingEditMode) SetAndSaveInternalVersion("development");
 		}
 
 		private static VersionUtils.VersionData GenerateInternalVersionSuffix(string environment)
@@ -139,7 +137,7 @@ namespace FirstLight.Editor.Build
 			
 			AssetDatabase.ImportAsset(
 				Path.Combine(assets, resources,
-					Path.ChangeExtension(VersionUtils.VersionDataFilename, textExtension)));
+					Path.ChangeExtension(VersionUtils.VersionDataFilename, textExtension)), ImportAssetOptions.ForceSynchronousImport);
 		}
 	}
 }

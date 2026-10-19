@@ -56,6 +56,7 @@ namespace FirstLight.Editor.Build
 				BuildTarget = BuildUtils.GetBuildTarget(),
 				DevelopmentBuild = BuildUtils.GetIsDevelopmentBuild(),
 				RemoteAddressables = BuildUtils.GetUseRemoteAddressables(),
+				AdditionalOptions = BuildOptions.DetailedBuildReport,
 			});
 
 			if (buildReport.summary.result != BuildResult.Succeeded)
