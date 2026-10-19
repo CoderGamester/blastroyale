@@ -25,16 +25,13 @@ namespace FirstLight.Tests.EditorMode.Logic
 		[SetUp]
 		public void Init()
 		{
-			var mockStatsConfigs = Substitute.For<EquipmentStatConfigs>();
 			ConfigsProvider.GetConfig<QuantumBaseEquipmentStatConfig>(Arg.Any<int>()).Returns(new QuantumBaseEquipmentStatConfig());
 			ConfigsProvider.GetConfig<QuantumEquipmentStatConfig>(Arg.Any<int>()).Returns(new QuantumEquipmentStatConfig());
 			_item = SetupItem(1, GameId.ApoCrossbow);
 			_equipmentLogic = new EquipmentLogic(GameLogic, DataService);
 
 			TestData.Inventory.Add(_item.Key, _item.Value);
-			mockStatsConfigs.GetConfig(Arg.Do<Equipment>(_ => new QuantumEquipmentStatConfig()));
 			InitConfigData(new QuantumGameConfig());
-			InitConfigData(mockStatsConfigs);
 			InitConfigData(new QuantumWeaponConfig {});
 			InitConfigData(new ScrapConfig
 			{

@@ -28,7 +28,7 @@ namespace Quantum
 	/// </summary>
 	public partial struct TopDownController
 	{
-		public static TopDownKCCSettings _settings = new TopDownKCCSettings();
+		public static TopDownKCCSettings _settings = AssetObject.Create<TopDownKCCSettings>();
 
 		public void Init()
 		{

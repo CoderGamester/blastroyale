@@ -2,6 +2,7 @@ using MainInstaller = FirstLight.Game.Utils.MainInstaller;
 using System;
 using System.Diagnostics;
 using System.Linq;
+using System.Threading;
 using FirstLight.FLogger;
 using Cysharp.Threading.Tasks;
 using FirstLight.Game.Configs;
@@ -43,6 +44,7 @@ namespace FirstLight.Game.StateMachines
 		private readonly IInternalGameNetworkService _networkService;
 
 		private IMatchServices _matchServices;
+		private CancellationTokenSource _simulationLifetime;
 
 		public GameSimulationState(IGameDataProvider gameDataProvider, IGameServices services, IInternalGameNetworkService networkService,
 								   Action<IStatechartEvent> statechartTrigger)
@@ -101,7 +103,8 @@ namespace FirstLight.Game.StateMachines
 		/// </summary>
 		private async UniTaskVoid CloseSwipeTransition()
 		{
-			await UniTask.NextFrame();
+			if (_simulationLifetime == null) return;
+			if (await UniTask.NextFrame(cancellationToken: _simulationLifetime.Token).SuppressCancellationThrow()) return;
 			await _services.UIService.CloseScreen<SwipeTransitionScreenPresenter>(false);
 		}
 
@@ -120,6 +123,7 @@ namespace FirstLight.Game.StateMachines
 
 		private void UnsubscribeEvents()
 		{
+			CancelSimulationWaits();
 			_services?.MessageBrokerService.UnsubscribeAll(this);
 			//_matchServices?.SpectateService?.SpectatedPlayer?.StopObserving(TO_DELETE_WITH_NEW_START_SEQUENCE);
 			QuantumEvent.UnsubscribeListener(this);
@@ -130,6 +134,7 @@ namespace FirstLight.Game.StateMachines
 
 		private void UnloadSimulation()
 		{
+			CancelSimulationWaits();
 			FLog.Verbose("Unloading Simulation");
 			if (QuantumRunner.Default != null && QuantumRunner.Default.UnityObject != null)
 			{
@@ -139,6 +144,7 @@ namespace FirstLight.Game.StateMachines
 
 		private void OnGameDestroyed(CallbackGameDestroyed cb)
 		{
+			CancelSimulationWaits();
 			FLog.Verbose("Game Destroyed");
 			_statechartTrigger(SimulationDestroyedEvent);
 		}
@@ -159,24 +165,6 @@ namespace FirstLight.Game.StateMachines
 			});
 		}
 
-		private async UniTask WaitForCameraOnPlayer()
-		{
-			await UniTask.WaitUntil(IsSpectatingPlayer);
-		}
-
-		private bool IsSpectatingPlayer()
-		{
-			if (!QuantumRunner.Default.IsDefinedAndRunning(false) || _matchServices == null) return false;
-			var spectated = _matchServices.SpectateService.SpectatedPlayer.Value;
-			if (!spectated.Entity.IsValid) return false;
-			return true;
-		}
-
-		private async UniTask WaitForCamera()
-		{
-			await WaitForCameraOnPlayer();
-		}
-
 		private bool IsSpectator()
 		{
 			return _services.RoomService.IsLocalPlayerSpectator;
@@ -184,6 +172,7 @@ namespace FirstLight.Game.StateMachines
 
 		private void OnGameStart(CallbackGameStarted callback)
 		{
+			if (_simulationLifetime == null) return;
 			FLog.Verbose("Game Start");
 			SetPlayerMatchData(callback.Game);
 			// Q3 also raises GameStarted after GameResynced; that callback already owns reconnect bootstrap.
@@ -195,18 +184,17 @@ namespace FirstLight.Game.StateMachines
 				return;
 			}
 
-			GameStartAsync(callback.Game).Forget();
+			GameStartAsync(callback.Game, _simulationLifetime.Token).Forget();
 			FLog.Verbose("Waiting for all players to join");
 		}
 
-		private async UniTaskVoid GameStartAsync(QuantumGame game)
+		private async UniTaskVoid GameStartAsync(QuantumGame game, CancellationToken token)
 		{
 			FLog.Info("Game Started Message");
-			await UniTask.WaitUntil(() => QuantumRunner.Default.IsDefinedAndRunning());
-			await PublishMatchStartedMessage(game, false);
-			await UniTask.WaitUntil(_services.UIService.IsScreenOpen<HUDScreenPresenter>);
-
-			if (!QuantumRunner.Default.IsDefinedAndRunning(false)) return;
+			if (!await PublishMatchStartedMessage(game, false, token)) return;
+			if (await UniTask.WaitUntil(_services.UIService.IsScreenOpen<HUDScreenPresenter>,
+				cancellationToken: token).SuppressCancellationThrow()) return;
+			if (!IsCurrentGame(game)) return;
 
 			var f = game.Frames.Verified;
 			var entityRef = game.GetLocalPlayerEntityRef();
@@ -237,29 +225,23 @@ namespace FirstLight.Game.StateMachines
 			}
 
 			_statechartTrigger(SimulationStartedEvent);
-			WaitForCamera().Forget();
 		}
 
 		private void OnGameResync(CallbackGameResynced callback)
 		{
+			if (_simulationLifetime == null) return;
 			FLog.Info(
 				$"Game Resync {callback.Game.Frames.Verified.Number} vs {_gameDataProvider.AppDataProvider.LastFrameSnapshot.Value.FrameNumber}");
 
-			ResyncCoroutine().Forget();
+			ResyncCoroutine(callback.Game, _simulationLifetime.Token).Forget();
 		}
 
-		private async UniTaskVoid ResyncCoroutine()
+		private async UniTaskVoid ResyncCoroutine(QuantumGame game, CancellationToken token)
 		{
-			await UniTask.WaitUntil(() => QuantumRunner.Default.IsDefinedAndRunning());
+			if (await UniTask.WaitUntil(() => IsCurrentGame(game),
+				cancellationToken: token).SuppressCancellationThrow()) return;
 			_statechartTrigger(SimulationStartedEvent);
-
-			WaitForCamera().Forget();
-
-
-			await PublishMatchStartedMessage(QuantumRunner.Default.Game, true);
-			await UniTask.WaitUntil(_services.UIService.IsScreenOpen<HUDScreenPresenter>);
-
-
+			await PublishMatchStartedMessage(game, true, token);
 		}
 
 		private void OnQuitGameScreenClickedMessage(QuitGameClickedMessage message)
@@ -293,12 +275,20 @@ namespace FirstLight.Game.StateMachines
 
 		private void StartSimulation()
 		{
+			CancelSimulationWaits();
+			_simulationLifetime = new CancellationTokenSource();
 			MatchState.SharedData.Simulation = MatchState.Data.SimulationResult.Success;
 			Assert.IsNull(QuantumRunner.Default, "Simulation already running");
 
 			FLog.Info($"Starting simulation from source {_services.NetworkService.JoinSource.ToString()}");
 
-			var startParams = _services.RoomService.CurrentRoom.GetDefaultStartParameters();
+			var room = _services.RoomService.CurrentRoom;
+			var startParams = room.GetDefaultStartParameters();
+			startParams.OnShutdown = (_, _) =>
+			{
+				if (ReferenceEquals(_services.RoomService.CurrentRoom, room))
+					_services.RoomService.LeaveRoom(false);
+			};
 			startParams.ClientId = _services.NetworkService.UserId;
 			if (IsSpectator())
 			{
@@ -318,7 +308,17 @@ namespace FirstLight.Game.StateMachines
 
 			_networkService.SetLastRoom();
 
-			QuantumRunner.StartGame(startParams);
+			try
+			{
+				QuantumRunner.StartGame(startParams);
+			}
+			catch
+			{
+				CancelSimulationWaits();
+				if (ReferenceEquals(_services.RoomService.CurrentRoom, room))
+					_services.RoomService.LeaveRoom(false);
+				throw;
+			}
 
 			_services.MessageBrokerService.PublishSafe(new MatchSimulationStartedMessage());
 		}
@@ -335,6 +335,7 @@ namespace FirstLight.Game.StateMachines
 		/// </summary>
 		private void StopSimulation()
 		{
+			CancelSimulationWaits();
 			FLog.Verbose("Stopping Simulation");
 			if (QuantumRunner.Default == null || QuantumRunner.Default.UnityObject == null)
 			{
@@ -351,22 +352,37 @@ namespace FirstLight.Game.StateMachines
 			_services.RoomService.LeaveRoom(false);
 		}
 
-		private async UniTask PublishMatchStartedMessage(QuantumGame game, bool isResync)
+		private void CancelSimulationWaits()
 		{
+			_simulationLifetime?.Cancel();
+			_simulationLifetime?.Dispose();
+			_simulationLifetime = null;
+		}
+
+		private static bool IsCurrentGame(QuantumGame game)
+		{
+			return QuantumRunner.Default.IsDefinedAndRunning(false) &&
+				ReferenceEquals(QuantumRunner.Default.Game, game);
+		}
+
+		private async UniTask<bool> PublishMatchStartedMessage(QuantumGame game, bool isResync, CancellationToken token)
+		{
+			if (await UniTask.WaitUntil(() => IsSimulationReady(game),
+				cancellationToken: token).SuppressCancellationThrow()) return false;
+			if (!IsCurrentGame(game)) return false;
+
 			if (!isResync)
 			{
 				_services.AnalyticsService.MatchCalls.MatchStart();
 			}
 
-			await UniTask.WaitUntil(IsSimulationReady);
-
 			_services.MessageBrokerService.PublishSafe(new MatchStartedMessage {Game = game, IsResync = isResync});
+			return true;
 		}
 
-		private unsafe bool IsSimulationReady()
+		private unsafe bool IsSimulationReady(QuantumGame game)
 		{
-			if (!QuantumRunner.Default.IsDefinedAndRunning()) return false;
-			var game = QuantumRunner.Default.Game;
+			if (!IsCurrentGame(game)) return false;
 
 			if ((!IsSpectator() && game.GetLocalPlayers().Count == 0) ||
 				game.Frames.Verified == null || game.Frames.Verified.Number == 0)

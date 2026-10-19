@@ -166,6 +166,19 @@ namespace FirstLight.Game.Services.Infrastructure
 
 		private IEnumerator LoadImage(string uri, Action<Texture2D> callback, Action error, int handle, bool cacheOnDisk = true, bool useCache = true)
 		{
+			// The original avatar CDN is retired. Keep existing profile URLs readable without contacting it.
+			if (Uri.TryCreate(uri, UriKind.Absolute, out var source) &&
+				source.Host.Equals("cdn.blastroyale.com", StringComparison.OrdinalIgnoreCase) &&
+				source.AbsolutePath.StartsWith("/avatars/", StringComparison.OrdinalIgnoreCase))
+			{
+				yield return null;
+				if (!_requests.Remove(handle)) yield break;
+				var avatar = Path.GetFileNameWithoutExtension(source.AbsolutePath);
+				var texture = Resources.Load<Texture2D>($"Avatars/{avatar}") ?? Resources.Load<Texture2D>("Avatars/Default");
+				callback(texture);
+				yield break;
+			}
+
 			FLog.Verbose($"Loading texture URI: {uri}");
 			var cachedUri = useCache ? GetImageUri(uri) : uri;
 			var request = UnityWebRequestTexture.GetTexture(cachedUri);
@@ -209,6 +222,10 @@ namespace FirstLight.Game.Services.Infrastructure
 				else if (cacheOnDisk)
 				{
 					CacheTexture(tex, request.downloadHandler.data, uri, callback);
+				}
+				else
+				{
+					callback(tex);
 				}
 			}
 		}

@@ -128,14 +128,11 @@ namespace FirstLight.Game.Services.RoomService
 				roomSize = playersInRoom;
 			}
 
-			var quitBehaviour = ShutdownConnectionOptions.LeaveRoomAndBecomeInactive;
-
 			FLog.Info($"Starting simulation for {roomSize} players");
 
 			if (_room.IsOffline)
 			{
 				gameMode = DeterministicGameMode.Local;
-				quitBehaviour = ShutdownConnectionOptions.None;
 			}
 
 			var recordInput = FeatureFlags.GetLocalConfiguration().RecordQuantumInput;
@@ -146,7 +143,8 @@ namespace FirstLight.Game.Services.RoomService
 				ReplayProvider = null,
 				GameMode = gameMode,
 				RunnerId = "DEFAULT",
-				Communicator = _room.IsOffline ? null : new QuantumNetworkCommunicator(_roomService._networkService.QuantumClient, quitBehaviour),
+				// RoomService owns leaving. A second leave during runner shutdown disconnects a client already Leaving.
+				Communicator = _room.IsOffline ? null : new QuantumNetworkCommunicator(_roomService._networkService.QuantumClient, ShutdownConnectionOptions.None),
 				StartGameTimeoutInSeconds = 15,
 				RecordingFlags = recordInput ? RecordingFlags.Input | RecordingFlags.Checksums : RecordingFlags.None,
 				GameParameters = QuantumRunnerUnityFactory.CreateGameParameters,

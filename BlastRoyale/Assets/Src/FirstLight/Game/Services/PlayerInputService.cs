@@ -64,26 +64,34 @@ namespace FirstLight.Game.Services
 			_gameServices = gameServices;
 
 			Input = new LocalInput();
-			Input.Gameplay.SetCallbacks(this);
 		}
 
 		public void OnMatchStarted(QuantumGame game, bool isReconnect)
 		{
+			OnMatchEnded(game, false);
+			Input.Gameplay.SetCallbacks(this);
 			Input.Enable();
 			QuantumCallback.SubscribeManual<CallbackPollInput>(this, PollInput);
-			QuantumEvent.SubscribeManual<EventOnPlayerKnockedOut>(OnPlayerKnockedOut);
-			QuantumEvent.SubscribeManual<EventOnPlayerRevived>(OnPlayerRevived);
+			QuantumEvent.SubscribeManual<EventOnPlayerKnockedOut>(this, OnPlayerKnockedOut);
+			QuantumEvent.SubscribeManual<EventOnPlayerRevived>(this, OnPlayerRevived);
 		}
 
 		public void OnMatchEnded(QuantumGame game, bool isDisconnected)
 		{
+			Input.Gameplay.SetCallbacks(null);
 			Input.Disable();
 			QuantumCallback.UnsubscribeListener(this);
 			QuantumEvent.UnsubscribeListener(this);
+			_direction = default;
+			_aim = default;
+			_shooting = false;
+			_specialCancel = false;
+			_quantumInput = default;
 		}
 
 		public void Dispose()
 		{
+			OnMatchEnded(null, true);
 			Input.Dispose();
 		}
 		

@@ -397,11 +397,13 @@ namespace FirstLight.Game.StateMachines
 		private void HandleSimulationEnd(bool playerQuit)
 		{
 			FLog.Verbose("[MatchState] Match End");
-			PublishMatchEnded(false, playerQuit, QuantumRunner.Default.Game);
-
-			_services.AnalyticsService.MatchCalls.MatchEnd(QuantumRunner.Default.Game, playerQuit,
-				_matchServices.MatchEndDataService.LocalPlayerMatchData.PlayerRank);
 			_matchServices.FrameSnapshotService.ClearFrameSnapshot();
+			var game = QuantumRunner.Default?.Game;
+			if (game?.Frames.Verified == null) return;
+			PublishMatchEnded(false, playerQuit, game);
+
+			_services.AnalyticsService.MatchCalls.MatchEnd(game, playerQuit,
+				_matchServices.MatchEndDataService.LocalPlayerMatchData.PlayerRank);
 			if (playerQuit)
 			{
 				_services.MessageBrokerService.PublishSafe(new LeftBeforeMatchFinishedMessage());

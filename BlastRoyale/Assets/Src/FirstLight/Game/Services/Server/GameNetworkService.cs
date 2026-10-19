@@ -506,20 +506,15 @@ namespace FirstLight.Game.Services
 			if (QuantumClient.Server == ServerConnection.GameServer)
 			{
 				FLog.Info("ReconnectPhoton - ReconnectAndRejoin");
-				QuantumClient.ReconnectAndRejoin();
+				if (QuantumClient.ReconnectAndRejoin()) return;
+				requiresManualReconnection = true;
 			}
-			else
-			{
-				var settingsRegion = _services.LocalPrefsService.ServerRegion.Value;
-				if (settingsRegion != QuantumClient.CurrentRegion)
-				{
-					FLog.Info("ReconnectPhoton - ReconnectToMaster changing region ");
-					QuantumClient.ConnectUsingSettings(CreatePhotonSettings(settingsRegion));
-					return;
-				}
 
-				FLog.Info("ReconnectPhoton - ReconnectToMaster");
-				QuantumClient.ReconnectToMaster();
+			var settingsRegion = _services.LocalPrefsService.ServerRegion.Value;
+			if (settingsRegion != QuantumClient.CurrentRegion || !QuantumClient.ReconnectToMaster())
+			{
+				FLog.Info("ReconnectPhoton - connecting with current settings");
+				QuantumClient.ConnectUsingSettings(CreatePhotonSettings(settingsRegion));
 			}
 		}
 

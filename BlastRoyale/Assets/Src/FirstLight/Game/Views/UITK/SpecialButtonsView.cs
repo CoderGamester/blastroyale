@@ -59,11 +59,11 @@ namespace FirstLight.Game.Views.UITK
 
 		public override void OnScreenOpen(bool reload)
 		{
-			QuantumEvent.SubscribeManual<EventOnLocalPlayerSpawned>(OnLocalPlayerSpawned);
-			QuantumEvent.SubscribeManual<EventOnLocalPlayerSpecialUsed>(OnLocalPlayerSpecialUsed);
-			QuantumEvent.SubscribeManual<EventOnPlayerSpecialUpdated>(OnPlayerSpecialUpdated);
-			QuantumEvent.SubscribeManual<EventOnPlayerKnockedOut>(OnPlayerKnockedOut);
-			QuantumEvent.SubscribeManual<EventOnPlayerRevived>(OnPlayerRevived);
+			QuantumEvent.SubscribeManual<EventOnLocalPlayerSpawned>(this, OnLocalPlayerSpawned);
+			QuantumEvent.SubscribeManual<EventOnLocalPlayerSpecialUsed>(this, OnLocalPlayerSpecialUsed);
+			QuantumEvent.SubscribeManual<EventOnPlayerSpecialUpdated>(this, OnPlayerSpecialUpdated);
+			QuantumEvent.SubscribeManual<EventOnPlayerKnockedOut>(this, OnPlayerKnockedOut);
+			QuantumEvent.SubscribeManual<EventOnPlayerRevived>(this, OnPlayerRevived);
 		}
 
 		private void OnPlayerRevived(EventOnPlayerRevived callback)

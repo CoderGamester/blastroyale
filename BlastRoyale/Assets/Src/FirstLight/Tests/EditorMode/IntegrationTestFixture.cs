@@ -1,4 +1,6 @@
 using System.Linq;
+using System.Collections;
+using System.Collections.Generic;
 using MainInstaller = FirstLight.Game.Utils.MainInstaller;
 using AssetResolverService = FirstLight.Game.Services.AssetResolverService;
 using RngData = FirstLight.Game.Data.RngData;
@@ -21,6 +23,9 @@ using FirstLight.UiService;
 using FirstLight.Game.UI;
 using FirstLightServerSDK.Services;
 using NUnit.Framework;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
+using Newtonsoft.Json.Serialization;
 using Src.FirstLight.Server.ServerServices;
 using UnityEngine;
 using UnityEngine.AddressableAssets;
@@ -48,6 +53,9 @@ namespace FirstLight.Tests.EditorMode
 		protected TutorialService TestTutorial;
 		protected AssetResolverService TestAssetResolver = new ();
 		protected VfxService<VfxId> TestVfx;
+		private IGameDataProvider _previousDataProvider;
+		private IGameServices _previousServices;
+		private readonly List<ScriptableObject> _nativeConfigs = new();
 
 		[OneTimeSetUp]
 		public void SetupOnce()
@@ -71,17 +79,57 @@ namespace FirstLight.Tests.EditorMode
 				if (serializedType.Contains(", quantum.code]"))
 					property.Value = serializedType.Replace(", quantum.code]", ", " + typeof(Quantum.QuantumGameModeConfig).Assembly.GetName().Name + "]");
 			}
-			var serializedConfig = legacyJson.ToString();
-			TestConfigs = new ConfigsSerializer().Deserialize<ConfigsProvider>(serializedConfig);
+			var serializer = JsonSerializer.Create(new JsonSerializerSettings
+			{
+				TypeNameHandling = TypeNameHandling.Auto,
+				Converters = {new StringEnumConverter()},
+				ContractResolver = new NativeConfigContractResolver(_nativeConfigs)
+			});
+			var configs = configRows.ToObject<Dictionary<Type, IEnumerable>>(serializer);
+			TestConfigs = new ConfigsProvider();
+			TestConfigs.UpdateTo(ulong.TryParse((string) legacyJson["Version"], out var version) ? version : 0, configs);
 
 			// TODO: Fix async issue with asset resolver on NUnit
 			// TestStates.Run();      // Not working due to async asset loading
 			WorkaroundForStateRun(); // Workaround for now
 		}
 
+		[OneTimeTearDown]
+		public void DisposeNativeConfigs()
+		{
+			foreach (var config in _nativeConfigs) UnityEngine.Object.DestroyImmediate(config);
+			_nativeConfigs.Clear();
+		}
+
+		private sealed class NativeConfigContractResolver : DefaultContractResolver
+		{
+			private readonly List<ScriptableObject> _created;
+
+			public NativeConfigContractResolver(List<ScriptableObject> created) => _created = created;
+
+			protected override JsonObjectContract CreateObjectContract(Type objectType)
+			{
+				var contract = base.CreateObjectContract(objectType);
+				if (typeof(ScriptableObject).IsAssignableFrom(objectType))
+				{
+					contract.DefaultCreator = () =>
+					{
+						var config = ScriptableObject.CreateInstance(objectType);
+						_created.Add(config);
+						return config;
+					};
+				}
+				return contract;
+			}
+		}
+
 		[SetUp]
 		public void Setup()
 		{
+			MainInstaller.TryResolve(out _previousDataProvider);
+			MainInstaller.TryResolve(out _previousServices);
+			MainInstaller.Clean<IGameDataProvider>();
+			MainInstaller.Clean<IGameServices>();
 			var messageBroker = new MessageBrokerService();
 			TimeService = new TimeService();
 			RemoteConfigProvider = new UnityRemoteConfigProvider();
@@ -115,6 +163,10 @@ namespace FirstLight.Tests.EditorMode
 		{
 			MainInstaller.Clean<IGameDataProvider>();
 			MainInstaller.Clean<IGameServices>();
+			if (_previousDataProvider != null) MainInstaller.Bind(_previousDataProvider);
+			if (_previousServices != null) MainInstaller.Bind(_previousServices);
+			_previousDataProvider = null;
+			_previousServices = null;
 		}
 
 		protected async Task WaitFor(Func<bool> condition, int timeoutMillis = 10000)

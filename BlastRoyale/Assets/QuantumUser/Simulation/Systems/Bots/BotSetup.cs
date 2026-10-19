@@ -114,44 +114,42 @@ namespace Quantum.Systems.Bots
 
 		private void AddFasterBotAgent(Frame f, NavMeshAgentConfig c)
 		{
-			var newValue = new NavMeshAgentConfig()
-			{
-				Path = FasterIntervalBotConfig,
-				Acceleration = c.Acceleration,
-				MovementType = c.MovementType,
-				Priority = c.Priority,
-				Speed = c.Speed,
-				AvoidanceQuality = c.AvoidanceQuality,
-				PathQuality = c.PathQuality,
-				AvoidanceType = c.AvoidanceType,
-				AngularSpeed = c.AngularSpeed,
-				CachedWaypointCount = c.CachedWaypointCount,
-				AutoBraking = c.AutoBraking,
-				AvoidanceLayer = c.AvoidanceLayer,
-				AvoidanceMask = c.AvoidanceMask,
-				AvoidanceRadius = c.AvoidanceRadius,
-				StoppingDistance = c.StoppingDistance,
-				UpdateInterval = 5,
-				VerticalPositioning = c.VerticalPositioning,
-				AutoBrakingDistance = c.AutoBrakingDistance,
-				ReduceAvoidanceFactor = c.ReduceAvoidanceFactor,
-				AutomaticTargetCorrection = c.AutomaticTargetCorrection,
-				AutomaticTargetCorrectionRadius = c.AutomaticTargetCorrectionRadius,
-				ShowDebugAvoidance = c.ShowDebugAvoidance,
-				MaxAvoidanceCandidates = c.MaxAvoidanceCandidates,
-				MaxRepathTimeout = c.MaxRepathTimeout,
-				AvoidanceCanReduceSpeed = c.AvoidanceCanReduceSpeed,
-				ClampAgentToNavmesh = c.ClampAgentToNavmesh,
-				DynamicLineOfSight = c.DynamicLineOfSight,
-				EnableWaypointDetectionAxis = c.EnableWaypointDetectionAxis,
-				DefaultWaypointDetectionDistance = c.DefaultWaypointDetectionDistance,
-				LineOfSightFunneling = c.LineOfSightFunneling,
-				ReduceAvoidanceAtWaypoints = c.ReduceAvoidanceAtWaypoints,
-				WaypointDetectionAxisExtend = c.WaypointDetectionAxisExtend,
-				ClampAgentToNavmeshCorrection = c.ClampAgentToNavmeshCorrection,
-				WaypointDetectionAxisOffset = c.WaypointDetectionAxisOffset,
-				DynamicLineOfSightWaypointRange = c.DynamicLineOfSightWaypointRange,
-			};
+			var newValue = AssetObject.Create<NavMeshAgentConfig>();
+			newValue.Path = FasterIntervalBotConfig;
+			newValue.Acceleration = c.Acceleration;
+			newValue.MovementType = c.MovementType;
+			newValue.Priority = c.Priority;
+			newValue.Speed = c.Speed;
+			newValue.AvoidanceQuality = c.AvoidanceQuality;
+			newValue.PathQuality = c.PathQuality;
+			newValue.AvoidanceType = c.AvoidanceType;
+			newValue.AngularSpeed = c.AngularSpeed;
+			newValue.CachedWaypointCount = c.CachedWaypointCount;
+			newValue.AutoBraking = c.AutoBraking;
+			newValue.AvoidanceLayer = c.AvoidanceLayer;
+			newValue.AvoidanceMask = c.AvoidanceMask;
+			newValue.AvoidanceRadius = c.AvoidanceRadius;
+			newValue.StoppingDistance = c.StoppingDistance;
+			newValue.UpdateInterval = 5;
+			newValue.VerticalPositioning = c.VerticalPositioning;
+			newValue.AutoBrakingDistance = c.AutoBrakingDistance;
+			newValue.ReduceAvoidanceFactor = c.ReduceAvoidanceFactor;
+			newValue.AutomaticTargetCorrection = c.AutomaticTargetCorrection;
+			newValue.AutomaticTargetCorrectionRadius = c.AutomaticTargetCorrectionRadius;
+			newValue.ShowDebugAvoidance = c.ShowDebugAvoidance;
+			newValue.MaxAvoidanceCandidates = c.MaxAvoidanceCandidates;
+			newValue.MaxRepathTimeout = c.MaxRepathTimeout;
+			newValue.AvoidanceCanReduceSpeed = c.AvoidanceCanReduceSpeed;
+			newValue.ClampAgentToNavmesh = c.ClampAgentToNavmesh;
+			newValue.DynamicLineOfSight = c.DynamicLineOfSight;
+			newValue.EnableWaypointDetectionAxis = c.EnableWaypointDetectionAxis;
+			newValue.DefaultWaypointDetectionDistance = c.DefaultWaypointDetectionDistance;
+			newValue.LineOfSightFunneling = c.LineOfSightFunneling;
+			newValue.ReduceAvoidanceAtWaypoints = c.ReduceAvoidanceAtWaypoints;
+			newValue.WaypointDetectionAxisExtend = c.WaypointDetectionAxisExtend;
+			newValue.ClampAgentToNavmeshCorrection = c.ClampAgentToNavmeshCorrection;
+			newValue.WaypointDetectionAxisOffset = c.WaypointDetectionAxisOffset;
+			newValue.DynamicLineOfSightWaypointRange = c.DynamicLineOfSightWaypointRange;
 			f.DynamicAssetDB.AddAsset(newValue);
 		}
 

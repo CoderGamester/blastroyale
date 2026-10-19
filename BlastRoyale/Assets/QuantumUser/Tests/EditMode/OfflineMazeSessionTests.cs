@@ -21,6 +21,8 @@ namespace FirstLight.Tests.EditorMode.Systems
 		private bool _pollLocal;
 		private int _pollCount;
 		private AssetObject[] _assets;
+		private CallbackDispatcher _callbacks;
+		private EventDispatcher _events;
 
 		[SetUp]
 		public void SetUp()
@@ -38,8 +40,10 @@ namespace FirstLight.Tests.EditorMode.Systems
 				}
 			}).ToArray();
 			Assert.That(_assets.Length, Is.GreaterThanOrEqualTo(213), "The native migrated asset catalog must be loaded.");
-			QuantumCallback.SubscribeManual<CallbackGameStarted>(this, OnGameStarted);
-			QuantumCallback.SubscribeManual<CallbackPollInput>(this, OnPollInput);
+			_callbacks = new CallbackDispatcher();
+			_events = new EventDispatcher();
+			_callbacks.SubscribeManual<CallbackGameStarted>(this, OnGameStarted);
+			_callbacks.SubscribeManual<CallbackPollInput>(this, OnPollInput);
 		}
 
 		[TearDown]
@@ -48,7 +52,7 @@ namespace FirstLight.Tests.EditorMode.Systems
 			_pollLocal = false;
 			_runner?.Shutdown();
 			_runner = null;
-			QuantumCallback.UnsubscribeListener(this);
+			_callbacks?.UnsubscribeListener(this);
 		}
 
 		private void OnGameStarted(CallbackGameStarted callback)
@@ -136,6 +140,14 @@ namespace FirstLight.Tests.EditorMode.Systems
 			};
 		}
 
+		private QuantumGameStartParameters CreateGameParameters()
+		{
+			var parameters = QuantumRunnerUnityFactory.CreateGameParameters;
+			parameters.CallbackDispatcher = _callbacks;
+			parameters.EventDispatcher = _events;
+			return parameters;
+		}
+
 		private void StartLocal()
 		{
 			var session = QuantumDeterministicSessionConfigAsset.DefaultConfig;
@@ -149,7 +161,7 @@ namespace FirstLight.Tests.EditorMode.Systems
 				RunnerId = Marker,
 				PlayerCount = 1,
 				Communicator = null,
-				GameParameters = QuantumRunnerUnityFactory.CreateGameParameters,
+				GameParameters = CreateGameParameters(),
 				RunnerFactory = new DotNetRunnerFactory(),
 				RecordingFlags = RecordingFlags.Input | RecordingFlags.Checksums
 			};
@@ -223,7 +235,7 @@ namespace FirstLight.Tests.EditorMode.Systems
 			_pollLocal = false;
 			_runner.Shutdown();
 			_runner = null;
-			var parameters = QuantumRunnerUnityFactory.CreateGameParameters;
+			var parameters = CreateGameParameters();
 			var arguments = new SessionRunner.Arguments
 			{
 				RuntimeConfig = parameters.AssetSerializer.ConfigFromByteArray<RuntimeConfig>(replay.RuntimeConfigData.Decode(), compressed: true),

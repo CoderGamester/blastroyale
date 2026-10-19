@@ -190,18 +190,23 @@ namespace FirstLight.Game.UIElements
 			_container.RegisterCallback<PointerDownEvent>(OnPointerDown);
 			_container.RegisterCallback<PointerMoveEvent>(OnPointerMove);
 			_container.RegisterCallback<PointerUpEvent>(OnPointerUp);
+			_container.RegisterCallback<PointerCancelEvent>(OnPointerCancel);
+			_container.RegisterCallback<PointerCaptureOutEvent>(OnPointerCaptureOut);
 		}
 
 		private void OnDetachFromPanel(DetachFromPanelEvent evt)
 		{
+			CancelPointer();
 			_container.UnregisterCallback<PointerDownEvent>(OnPointerDown);
 			_container.UnregisterCallback<PointerMoveEvent>(OnPointerMove);
 			_container.UnregisterCallback<PointerUpEvent>(OnPointerUp);
+			_container.UnregisterCallback<PointerCancelEvent>(OnPointerCancel);
+			_container.UnregisterCallback<PointerCaptureOutEvent>(OnPointerCaptureOut);
 		}
 
 		private void OnPointerDown(PointerDownEvent evt)
 		{
-			if (_onCooldown) return;
+			if (_onCooldown || _currentPointerId.HasValue) return;
 
 			_container.CapturePointer(evt.pointerId);
 			_currentPointerId = evt.pointerId;
@@ -227,7 +232,7 @@ namespace FirstLight.Game.UIElements
 
 		private void OnPointerMove(PointerMoveEvent evt)
 		{
-			if (_onCooldown || !_container.HasPointerCapture(evt.pointerId)) return;
+			if (_onCooldown || _currentPointerId != evt.pointerId || !_container.HasPointerCapture(evt.pointerId)) return;
 
 			var maxRange = _invertedSpecialCancel ? worldBound.width / 2f : worldBound.width / (_inCancel ? 1 : 2f);
 			var parentPosition = parent.WorldToLocal(evt.position);
@@ -263,14 +268,31 @@ namespace FirstLight.Game.UIElements
 
 		private void OnPointerUp(PointerUpEvent evt)
 		{
-			if (_onCooldown) return;
+			if (_currentPointerId != evt.pointerId) return;
 			ResetBtnState(evt.pointerId);
+		}
+
+		private void OnPointerCancel(PointerCancelEvent evt)
+		{
+			if (_currentPointerId == evt.pointerId) CancelPointer();
+		}
+
+		private void OnPointerCaptureOut(PointerCaptureOutEvent evt)
+		{
+			if (_currentPointerId == evt.pointerId) CancelPointer();
+		}
+
+		private void CancelPointer()
+		{
+			if (!_currentPointerId.HasValue) return;
+			_inCancel = true;
+			ResetBtnState(_currentPointerId.Value);
 		}
 
 		private void ResetBtnState(int pointerId)
 		{
-			_container.ReleasePointer(pointerId);
 			_currentPointerId = null;
+			_container.ReleasePointer(pointerId);
 
 			RemoveFromClassList(_invertedSpecialCancel ? USS_PRESSED_INVERT : USS_PRESSED);
 			RemoveFromClassList(USS_DRAGGING);
@@ -285,6 +307,7 @@ namespace FirstLight.Game.UIElements
 			}
 
 			OnPress?.Invoke(0f);
+			OnCancel?.Invoke(0f);
 			_inCancel = false;
 		}
 

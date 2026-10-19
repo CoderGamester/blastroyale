@@ -23,6 +23,8 @@ namespace FirstLight.Game.UIElements
 		private readonly VisualElement _stick;
 		private readonly VisualElement _directionHalo;
 		private Vector3 _initialPosition;
+		private int? _pointerId;
+		private VisualElement _inputSurface;
 
 		public event Action<Vector2> OnMove;
 		public event Action<float> OnClick; // Float so that we can use it directly with the input system
@@ -55,9 +57,12 @@ namespace FirstLight.Game.UIElements
 
 		private void OnAttachToPanel(AttachToPanelEvent evt)
 		{
-			parent.RegisterCallback<PointerDownEvent>(OnPointerDown);
-			parent.RegisterCallback<PointerMoveEvent>(OnPointerMove);
-			parent.RegisterCallback<PointerUpEvent>(OnPointerUp);
+			_inputSurface = parent;
+			_inputSurface.RegisterCallback<PointerDownEvent>(OnPointerDown);
+			_inputSurface.RegisterCallback<PointerMoveEvent>(OnPointerMove);
+			_inputSurface.RegisterCallback<PointerUpEvent>(OnPointerUp);
+			_inputSurface.RegisterCallback<PointerCancelEvent>(OnPointerCancel);
+			_inputSurface.RegisterCallback<PointerCaptureOutEvent>(OnPointerCaptureOut);
 		}
 
 		private void OnDetachFromPanel(DetachFromPanelEvent evt)
@@ -67,20 +72,27 @@ namespace FirstLight.Game.UIElements
 
 		public void RemoveListeners()
 		{
-			parent.UnregisterCallback<PointerDownEvent>(OnPointerDown);
-			parent.UnregisterCallback<PointerMoveEvent>(OnPointerMove);
-			parent.UnregisterCallback<PointerUpEvent>(OnPointerUp);
+			if (_inputSurface == null) return;
+			ResetPointer();
+			_inputSurface.UnregisterCallback<PointerDownEvent>(OnPointerDown);
+			_inputSurface.UnregisterCallback<PointerMoveEvent>(OnPointerMove);
+			_inputSurface.UnregisterCallback<PointerUpEvent>(OnPointerUp);
+			_inputSurface.UnregisterCallback<PointerCancelEvent>(OnPointerCancel);
+			_inputSurface.UnregisterCallback<PointerCaptureOutEvent>(OnPointerCaptureOut);
+			_inputSurface = null;
 		}
 
 		private void OnPointerDown(PointerDownEvent evt)
 		{
+			if (_pointerId.HasValue) return;
+			_pointerId = evt.pointerId;
 			_initialPosition = resolvedStyle.translate;
-			parent.CapturePointer(evt.pointerId);
+			_inputSurface.CapturePointer(evt.pointerId);
 
 			AddToClassList(UssFree);
 			_stick.AddToClassList(UssStickFree);
 
-			var parentPosition = parent.WorldToLocal(evt.position);
+			var parentPosition = _inputSurface.WorldToLocal(evt.position);
 			var offsetPosition = parentPosition - new Vector2(worldBound.width / 2f, worldBound.height / 2f);
 
 			style.translate = new Translate(offsetPosition.x, offsetPosition.y);
@@ -90,9 +102,9 @@ namespace FirstLight.Game.UIElements
 
 		private void OnPointerMove(PointerMoveEvent evt)
 		{
-			if (!parent.HasPointerCapture(evt.pointerId)) return;
+			if (_pointerId != evt.pointerId || !_inputSurface.HasPointerCapture(evt.pointerId)) return;
 
-			var parentPosition = parent.WorldToLocal(evt.position);
+			var parentPosition = _inputSurface.WorldToLocal(evt.position);
 			var offsetPosition = parentPosition - new Vector2(worldBound.width / 2f, worldBound.height / 2f);
 
 			var stickPosition = offsetPosition - (Vector2) resolvedStyle.translate;
@@ -110,7 +122,25 @@ namespace FirstLight.Game.UIElements
 
 		private void OnPointerUp(PointerUpEvent evt)
 		{
-			parent.ReleasePointer(evt.pointerId);
+			if (_pointerId == evt.pointerId) ResetPointer();
+		}
+
+		private void OnPointerCancel(PointerCancelEvent evt)
+		{
+			if (_pointerId == evt.pointerId) ResetPointer();
+		}
+
+		private void OnPointerCaptureOut(PointerCaptureOutEvent evt)
+		{
+			if (_pointerId == evt.pointerId) ResetPointer();
+		}
+
+		private void ResetPointer()
+		{
+			if (!_pointerId.HasValue) return;
+			var pointerId = _pointerId.Value;
+			_pointerId = null;
+			_inputSurface.ReleasePointer(pointerId);
 
 			RemoveFromClassList(UssFree);
 			_stick.RemoveFromClassList(UssStickFree);

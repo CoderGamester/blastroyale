@@ -190,8 +190,8 @@ namespace FirstLight.Game.Presenters
 		{
 			QuantumEvent.SubscribeManual<EventOnLocalPlayerSkydiveDrop>(this, _ => HideControls(true));
 			QuantumEvent.SubscribeManual<EventOnLocalPlayerSkydiveLand>(this, _ => HideControls(false));
-			QuantumEvent.SubscribeManual<EventOnPlayerKnockedOut>(OnPlayerKnockedOut);
-			QuantumEvent.SubscribeManual<EventOnPlayerRevived>(OnPlayerRevived);
+			QuantumEvent.SubscribeManual<EventOnPlayerKnockedOut>(this, OnPlayerKnockedOut);
+			QuantumEvent.SubscribeManual<EventOnPlayerRevived>(this, OnPlayerRevived);
 
 			_menuButton.SetVisibility(IsMenuVisible());
 			MainInstaller.ResolveMatchServices().RunOnMatchStart((isReconnect) =>
