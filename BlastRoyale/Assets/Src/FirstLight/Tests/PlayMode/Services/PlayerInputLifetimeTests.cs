@@ -42,6 +42,8 @@ namespace FirstLight.Tests.PlayMode.Services
 		[TestCase(Key.E)]
 		public void Dispose_WithHeldSpecial_DoesNotSendCommandToStoppedRunner(Key key)
 		{
+			var previousBackgroundBehavior = InputSystem.settings.backgroundBehavior;
+			InputSystem.settings.backgroundBehavior = InputSettings.BackgroundBehavior.IgnoreFocus;
 			var keyboard = InputSystem.AddDevice<Keyboard>();
 			var input = new PlayerInputService(null, null, null);
 			try
@@ -55,7 +57,11 @@ namespace FirstLight.Tests.PlayMode.Services
 			finally
 			{
 				try { input.Dispose(); }
-				finally { InputSystem.RemoveDevice(keyboard); }
+				finally
+				{
+					InputSystem.RemoveDevice(keyboard);
+					InputSystem.settings.backgroundBehavior = previousBackgroundBehavior;
+				}
 			}
 			AssertSubscriptions(input, false);
 		}

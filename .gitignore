@@ -136,6 +136,8 @@ BlastRoyale/Assets/InitTestScene*.unity.meta
 BlastRoyale/BuildArtifacts/
 BlastRoyale/Assets/Resources/version-data.txt
 BlastRoyale/Assets/Resources/version-data.txt.meta
+BlastRoyale/Assets/Resources/game-version-data.txt
+BlastRoyale/Assets/Resources/game-version-data.txt.meta
 BlastRoyale/com.Tivadar.Best.HTTP.xml
 BlastRoyale/com.Tivadar.Best.TLSSecurity.xml
 BlastRoyale/com.Tivadar.Best.SignalR.xml

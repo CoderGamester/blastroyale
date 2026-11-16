@@ -63,3 +63,7 @@ Assets/Scenes/**/*.asset filter=lfs diff=lfs merge=lfs -diff -merge
 *.mat whitespace=-blank-at-eol
 *.prefab whitespace=-blank-at-eol
 *.unity whitespace=-blank-at-eol
+
+# Keep local Unity Gaming Services project linking out of commits.
+BlastRoyale/ProjectSettings/ProjectSettings.asset filter=ugs-link
+

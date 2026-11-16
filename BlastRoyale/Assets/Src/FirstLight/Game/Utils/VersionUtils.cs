@@ -13,7 +13,7 @@ namespace FirstLight.Game.Utils
 	/// </summary>
 	public static class VersionUtils
 	{
-		public const string VersionDataFilename = "version-data";
+		public const string VersionDataFilename = "game-version-data";
 
 		/// <summary>
 		/// Official application version only (M.m.p)
