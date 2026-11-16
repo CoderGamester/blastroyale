@@ -26,6 +26,7 @@ namespace FirstLight.Editor.EditorTools.MapGenerator
 	/// </summary>
 	public class MapGeneratorEditorWindow : EditorWindow
 	{
+		[Serializable]
 		public struct AllowedMapStruct
 		{
 			public string Id;

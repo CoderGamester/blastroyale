@@ -15,7 +15,7 @@ using UnityEngine;
 
 public partial class DebugOptions
 {
-#if UNITY_EDITOR || DEVELOPMENT_BUILD
+#if DEBUG
 	private static uint _currencyValue = 100;
 
 	private static void AddCurrencyCheats()

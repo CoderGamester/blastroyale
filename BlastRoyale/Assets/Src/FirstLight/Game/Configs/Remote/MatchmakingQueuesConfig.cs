@@ -4,6 +4,7 @@ using UnityEngine.Serialization;
 
 namespace FirstLight.Game.Configs.Remote
 {
+	[Serializable]
 	public class PlayfabMatchmakingConfig
 	{
 		public string QueueName;

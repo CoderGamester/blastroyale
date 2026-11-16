@@ -2,7 +2,7 @@ using FirstLight.Inspector;
 using MainInstaller = FirstLight.Game.Utils.MainInstaller;
 using System;
 using System.Linq;
-using Cinemachine;
+using Unity.Cinemachine;
 using Cysharp.Threading.Tasks;
 using FirstLight.FLogger;
 using FirstLight.Game.Configs;
@@ -25,13 +25,13 @@ namespace FirstLight.Game.MonoComponent.Match
 	/// </summary>
 	public class FixedAdventureCameraMonoComponent : MonoBehaviour
 	{
-		[SerializeField, InspectorField(Required = true)] private CinemachineVirtualCamera _spawnCamera;
-		[SerializeField, InspectorField(Required = true)] private CinemachineVirtualCamera _adventureCamera;
-		[SerializeField, InspectorField(Required = true)] private CinemachineVirtualCamera _deathCamera;
-		[SerializeField, InspectorField(Required = true)] private CinemachineVirtualCamera _specialAimCamera;
-		[SerializeField, InspectorField(Required = true)] private CinemachineVirtualCamera _winnerCamera;
+		[SerializeField, InspectorField(Required = true)] private CinemachineVirtualCameraBase _spawnCamera;
+		[SerializeField, InspectorField(Required = true)] private CinemachineVirtualCameraBase _adventureCamera;
+		[SerializeField, InspectorField(Required = true)] private CinemachineVirtualCameraBase _deathCamera;
+		[SerializeField, InspectorField(Required = true)] private CinemachineVirtualCameraBase _specialAimCamera;
+		[SerializeField, InspectorField(Required = true)] private CinemachineVirtualCameraBase _winnerCamera;
 
-		[SerializeField] private CinemachineVirtualCamera[] _spectateCameras;
+		[SerializeField] private CinemachineVirtualCameraBase[] _spectateCameras;
 
 		//this object is locked to the player and used for more intriacate camera control
 		[SerializeField, InspectorField(Required = true)] private GameObject _followObject;
@@ -147,7 +147,13 @@ namespace FirstLight.Game.MonoComponent.Match
 			{
 				SetActiveCamera(_spawnCamera);
 				_spawnCamera.SnapCamera();
-				FLGCamera.Instance.CinemachineBrain.ManualUpdate();
+
+				// Cinemachine 3 requires ManualUpdate mode when forcing an immediate brain evaluation.
+				var brain = FLGCamera.Instance.CinemachineBrain;
+				var updateMethod = brain.UpdateMethod;
+				brain.UpdateMethod = CinemachineBrain.UpdateMethods.ManualUpdate;
+				brain.ManualUpdate();
+				brain.UpdateMethod = updateMethod;
 
 				SetActiveCamera(_adventureCamera);
 			}
@@ -192,15 +198,15 @@ namespace FirstLight.Game.MonoComponent.Match
 			SetTargetTransform(t);
 		}
 
-		private void SetActiveCamera(CinemachineVirtualCamera virtualCamera)
+		private void SetActiveCamera(CinemachineVirtualCameraBase virtualCamera)
 		{
-			if (virtualCamera != null && virtualCamera.gameObject != null && FLGCamera.Instance.CinemachineBrain.ActiveVirtualCamera != null &&
-				virtualCamera.gameObject == FLGCamera.Instance.CinemachineBrain.ActiveVirtualCamera.VirtualCameraGameObject)
+			var activeCamera = FLGCamera.Instance.CinemachineBrain.ActiveVirtualCamera as CinemachineVirtualCameraBase;
+			if (virtualCamera != null && activeCamera != null && virtualCamera.gameObject == activeCamera.gameObject)
 			{
 				return;
 			}
 
-			FLGCamera.Instance.CinemachineBrain.ActiveVirtualCamera?.VirtualCameraGameObject.SetActive(false);
+			if (activeCamera != null) activeCamera.gameObject.SetActive(false);
 
 			virtualCamera.gameObject.SetActive(true);
 		}

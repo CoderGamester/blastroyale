@@ -1,3 +1,4 @@
+#pragma warning disable UAC1001, UAC1002, UAC1015
 #if !DISABLE_PLAYFABENTITY_API
 using System;
 using System.Collections.Generic;

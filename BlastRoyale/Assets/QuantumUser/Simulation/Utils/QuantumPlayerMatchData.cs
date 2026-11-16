@@ -4,7 +4,6 @@ using Photon.Deterministic;
 
 namespace Quantum
 {
-	[Serializable]
 	public unsafe struct QuantumPlayerMatchData
 	{
 		public string PlayerName;

@@ -19,6 +19,11 @@ TrueTypeFontImporter:
   ascentCalculationMode: 1
   useLegacyBoundsCalculation: 0
   shouldRoundAdvanceValue: 1
+  subsetRecipes:
+  - key: 7832e1fcb057c44e48fbbb2ea5135595
+    characters: 20-7e,a0-ff,2007-2009,200b,2012-2014,2018-201a,201c-201e,2020-2022,2026,2030,2032-2033,2039-203a,2044,20ac,2122,25a1
+    flags: 1
+    faceIndex: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 

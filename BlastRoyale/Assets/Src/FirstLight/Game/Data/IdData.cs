@@ -8,7 +8,6 @@ namespace FirstLight.Game.Data
 	/// <summary>
 	/// Contains all the data that scopes possible Id mapping in the game
 	/// </summary>
-	[Serializable]
 	public class IdData
 	{
 		public UniqueId UniqueIdCounter;

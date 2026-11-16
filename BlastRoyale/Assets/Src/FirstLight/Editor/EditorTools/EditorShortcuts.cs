@@ -107,61 +107,6 @@ namespace FirstLight.Editor.EditorTools
 			EditorSceneManager.OpenScene(GetScenePath("TestScene"));
 		}
 
-#if DEVELOPMENT_BUILD
-		[MenuItem("FLG/Cheats/Refill Ammo And Specials %m")]
-		private static void RefillAmmoAndSpecials()
-		{
-			QuantumRunner.Default?.Game?.SendCommand(new Quantum.Commands.CheatRefillAmmoAndSpecials());
-		}
-
-		[MenuItem("FLG/Cheats/Make Player Super Tough %l")]
-		private static void MakePlayerSuperTough()
-		{
-			QuantumRunner.Default?.Game?.SendCommand(new Quantum.Commands.CheatMakeLocalPlayerSuperToughCommand());
-		}
-
-		[MenuItem("FLG/Cheats/Skip Tutorial Step %o")]
-		private static void SkipTutorialSection()
-		{
-			MainInstaller.ResolveServices().TutorialService.SkipTutorial();
-		}
-
-		[MenuItem("FLG/Backend/Netcode/Simulate Disconnection")]
-		private static void SimulateDisconnection()
-		{
-			var client = MainInstaller.Resolve<IGameServices>().NetworkService.QuantumClient;
-			client.LoadBalancingPeer.NetworkSimulationSettings.IncomingLossPercentage = 100;
-			client.LoadBalancingPeer.NetworkSimulationSettings.OutgoingLossPercentage = 100;
-			client.LoadBalancingPeer.IsSimulationEnabled = true;
-		}
-
-		[MenuItem("FLG/Backend/Netcode/Simulate Lag")]
-		private static void SimulateLag()
-		{
-			var client = MainInstaller.Resolve<IGameServices>().NetworkService.QuantumClient;
-			client.LoadBalancingPeer.NetworkSimulationSettings.IncomingLossPercentage = 3;
-			client.LoadBalancingPeer.NetworkSimulationSettings.OutgoingLossPercentage = 3;
-			client.LoadBalancingPeer.NetworkSimulationSettings.OutgoingLag = 100;
-			client.LoadBalancingPeer.NetworkSimulationSettings.IncomingLag = 100;
-			client.LoadBalancingPeer.NetworkSimulationSettings.IncomingJitter = 10;
-			client.LoadBalancingPeer.NetworkSimulationSettings.OutgoingJitter = 10;
-			client.LoadBalancingPeer.IsSimulationEnabled = true;
-		}
-
-		[MenuItem("FLG/Backend/Netcode/Normal Internet")]
-		private static void Normal()
-		{
-			var client = MainInstaller.Resolve<IGameServices>().NetworkService.QuantumClient;
-			client.LoadBalancingPeer.IsSimulationEnabled = false;
-		}
-
-		[MenuItem("FLG/Cheats/Disconnect")]
-		private static void Disconnect()
-		{
-			var client = MainInstaller.Resolve<IGameServices>().NetworkService.QuantumClient;
-			client.Disconnect();
-		}
-#endif
 		private static string GetScenePath(string scene)
 		{
 			return AssetDatabase.GUIDToAssetPath(AssetDatabase.FindAssets($"t:scene {scene}")[0]);

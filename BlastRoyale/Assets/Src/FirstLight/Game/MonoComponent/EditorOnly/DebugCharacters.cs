@@ -27,7 +27,7 @@ namespace FirstLight.Game.MonoComponent.EditorOnly
 		public Transform Cameras;
 
 		private string _currentCharacter;
-		public MethodInfo _currentTrigger;
+		[NonSerialized] public MethodInfo _currentTrigger;
 		private Transform _currentCamera;
 		private GameObject _currentWeapon;
 		private int _characterRotation;

@@ -72809,7 +72809,7 @@ MonoBehaviour:
   m_GenerateLinks: 0
   m_IgnoreFromBuild: 0
   m_ApplyToChildren: 1
-  m_AffectedAgents: ffffffff
+  m_AffectedAgents: ffffffffi
 --- !u!1 &514094460
 GameObject:
   m_ObjectHideFlags: 0
@@ -139049,9 +139049,41 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1482450230702968987, guid: 75a7246011e10a74192f5ab2eab40507, type: 3}
+      propertyPath: m_Name
+      value: Parachute Camera
+      objectReference: {fileID: 0}
+    - target: {fileID: 2340851769966848443, guid: 75a7246011e10a74192f5ab2eab40507, type: 3}
+      propertyPath: m_Name
+      value: Spectator Camera 2
+      objectReference: {fileID: 0}
     - target: {fileID: 3262944819368052089, guid: 75a7246011e10a74192f5ab2eab40507, type: 3}
       propertyPath: m_Name
       value: CameraSetup
+      objectReference: {fileID: 0}
+    - target: {fileID: 4389749980422631210, guid: 75a7246011e10a74192f5ab2eab40507, type: 3}
+      propertyPath: Target.TrackingTarget
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6644597904016617941, guid: 75a7246011e10a74192f5ab2eab40507, type: 3}
+      propertyPath: m_Name
+      value: DeathCamera
+      objectReference: {fileID: 0}
+    - target: {fileID: 6644597904059184709, guid: 75a7246011e10a74192f5ab2eab40507, type: 3}
+      propertyPath: m_Name
+      value: Adventure Camera
+      objectReference: {fileID: 0}
+    - target: {fileID: 6644597904166932281, guid: 75a7246011e10a74192f5ab2eab40507, type: 3}
+      propertyPath: m_Name
+      value: IntroCamera
+      objectReference: {fileID: 0}
+    - target: {fileID: 7201189139215792682, guid: 75a7246011e10a74192f5ab2eab40507, type: 3}
+      propertyPath: m_Name
+      value: Winner Camera
+      objectReference: {fileID: 0}
+    - target: {fileID: 7775805217235827899, guid: 75a7246011e10a74192f5ab2eab40507, type: 3}
+      propertyPath: m_Name
+      value: Spectator Camera 1
       objectReference: {fileID: 0}
     - target: {fileID: 7922642237387115857, guid: 75a7246011e10a74192f5ab2eab40507, type: 3}
       propertyPath: m_LocalPosition.x
@@ -139092,6 +139124,10 @@ PrefabInstance:
     - target: {fileID: 7922642237387115857, guid: 75a7246011e10a74192f5ab2eab40507, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8431401016875031390, guid: 75a7246011e10a74192f5ab2eab40507, type: 3}
+      propertyPath: m_Name
+      value: Special Aim Camera
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -149166,20 +149202,20 @@ MonoBehaviour:
   - {fileID: 1718038141}
   - {fileID: 1718038140}
   - {fileID: 1718038139}
-  - {fileID: 1246643029}
-  - {fileID: 959000799}
   - {fileID: 860592552}
+  - {fileID: 959000799}
+  - {fileID: 1246643029}
   - {fileID: 82391450}
   - {fileID: 82391449}
   - {fileID: 82391448}
   - {fileID: 82391447}
   - {fileID: 82391446}
   - {fileID: 82391445}
-  - {fileID: 1285238837}
-  - {fileID: 1616013513}
   - {fileID: 1033306059}
   - {fileID: 1192695559}
+  - {fileID: 1285238837}
   - {fileID: 1345296717}
+  - {fileID: 1616013513}
   - {fileID: 2115269043}
   - {fileID: 1178922268}
   - {fileID: 1178922267}
@@ -149200,10 +149236,10 @@ MonoBehaviour:
   - {fileID: 63678462}
   - {fileID: 63678461}
   - {fileID: 63678460}
-  - {fileID: 1776444211}
-  - {fileID: 888433518}
   - {fileID: 386347600}
   - {fileID: 739733192}
+  - {fileID: 888433518}
+  - {fileID: 1776444211}
   - {fileID: 779495400}
   - {fileID: 779495399}
   - {fileID: 779495398}
@@ -149345,6 +149381,7 @@ MonoBehaviour:
   - {fileID: 1638464809}
   - {fileID: 1048333239}
   - {fileID: 1022233690}
+  - {fileID: 1022233689}
   - {fileID: 2105262827}
   - {fileID: 1714170213}
   - {fileID: 301412670}
@@ -149630,86 +149667,51 @@ MonoBehaviour:
   - {fileID: 1551133774}
   - {fileID: 599187295}
   - {fileID: 1252001652}
-  - {fileID: 1285884456}
-  - {fileID: 1692143783}
-  - {fileID: 1692143782}
-  - {fileID: 1692143781}
-  - {fileID: 1692143780}
-  - {fileID: 1692143779}
-  - {fileID: 1692143778}
-  - {fileID: 1280409878}
-  - {fileID: 1361980004}
-  - {fileID: 706949489}
-  - {fileID: 1099769091}
-  - {fileID: 1316647684}
-  - {fileID: 1660100793}
-  - {fileID: 596183450}
-  - {fileID: 285466479}
-  - {fileID: 87372313}
-  - {fileID: 143210053}
-  - {fileID: 143210052}
-  - {fileID: 1604166841}
-  - {fileID: 1704863631}
-  - {fileID: 445838456}
-  - {fileID: 1553033796}
-  - {fileID: 1607249587}
-  - {fileID: 602641158}
-  - {fileID: 2001084542}
-  - {fileID: 806779151}
-  - {fileID: 692761130}
-  - {fileID: 736093396}
-  - {fileID: 1939247163}
-  - {fileID: 1960682263}
-  - {fileID: 678779985}
-  - {fileID: 709774310}
-  - {fileID: 835109190}
-  - {fileID: 1291988694}
-  - {fileID: 446890838}
-  - {fileID: 446890837}
-  - {fileID: 1118517015}
-  - {fileID: 558612094}
-  - {fileID: 1719021599}
-  - {fileID: 1098065003}
-  - {fileID: 1291189966}
-  - {fileID: 628904135}
-  - {fileID: 726765172}
-  - {fileID: 1795997923}
-  - {fileID: 1354181356}
-  - {fileID: 967237809}
-  - {fileID: 73961144}
-  - {fileID: 574830697}
-  - {fileID: 1599522252}
-  - {fileID: 1138742681}
-  - {fileID: 41193254}
-  - {fileID: 769263169}
-  - {fileID: 2092700963}
-  - {fileID: 606906577}
-  - {fileID: 1999308113}
-  - {fileID: 535419870}
-  - {fileID: 2059686294}
-  - {fileID: 350812034}
-  - {fileID: 1591140229}
-  - {fileID: 1952593229}
-  - {fileID: 1177886447}
-  - {fileID: 172492682}
-  - {fileID: 1993054894}
-  - {fileID: 877713058}
-  - {fileID: 70844677}
-  - {fileID: 65008641}
-  - {fileID: 1871035285}
-  - {fileID: 2007559742}
-  - {fileID: 822529259}
-  - {fileID: 2073224323}
-  - {fileID: 2073224322}
-  - {fileID: 2073224321}
-  - {fileID: 2073224320}
-  - {fileID: 1002733094}
-  - {fileID: 1002733093}
-  - {fileID: 1002733092}
-  - {fileID: 1002733091}
-  - {fileID: 1002733090}
-  - {fileID: 1002733089}
-  - {fileID: 1002733088}
+  - {fileID: 370155866}
+  - {fileID: 275142136}
+  - {fileID: 828870113}
+  - {fileID: 123029842}
+  - {fileID: 2027569973}
+  - {fileID: 216417613}
+  - {fileID: 281329692}
+  - {fileID: 1179265008}
+  - {fileID: 567885622}
+  - {fileID: 909900122}
+  - {fileID: 1662646577}
+  - {fileID: 28670368}
+  - {fileID: 801975415}
+  - {fileID: 945286595}
+  - {fileID: 945286594}
+  - {fileID: 945286593}
+  - {fileID: 945286592}
+  - {fileID: 630898235}
+  - {fileID: 1013348783}
+  - {fileID: 1433798604}
+  - {fileID: 578646928}
+  - {fileID: 441057443}
+  - {fileID: 407237024}
+  - {fileID: 407237023}
+  - {fileID: 1379972396}
+  - {fileID: 335777281}
+  - {fileID: 1527618574}
+  - {fileID: 1819494393}
+  - {fileID: 994932366}
+  - {fileID: 867603554}
+  - {fileID: 867603553}
+  - {fileID: 867603552}
+  - {fileID: 82613236}
+  - {fileID: 1918255137}
+  - {fileID: 1918255136}
+  - {fileID: 1918255135}
+  - {fileID: 578793949}
+  - {fileID: 636298342}
+  - {fileID: 546050901}
+  - {fileID: 546050900}
+  - {fileID: 546050899}
+  - {fileID: 1637185891}
+  - {fileID: 1637185890}
+  - {fileID: 1637185889}
+  - {fileID: 1637185888}
   - {fileID: 172594223}
   - {fileID: 172594222}
   - {fileID: 172594221}
@@ -149717,122 +149719,155 @@ MonoBehaviour:
   - {fileID: 172594219}
   - {fileID: 172594218}
   - {fileID: 172594217}
-  - {fileID: 1637185891}
-  - {fileID: 1637185890}
-  - {fileID: 1637185889}
-  - {fileID: 1637185888}
-  - {fileID: 546050901}
-  - {fileID: 546050900}
-  - {fileID: 546050899}
-  - {fileID: 382005015}
-  - {fileID: 1514552877}
-  - {fileID: 99128852}
-  - {fileID: 1165910044}
-  - {fileID: 636298342}
-  - {fileID: 578793949}
-  - {fileID: 1918255137}
-  - {fileID: 1918255136}
-  - {fileID: 1918255135}
-  - {fileID: 82613236}
-  - {fileID: 867603554}
-  - {fileID: 867603553}
-  - {fileID: 867603552}
-  - {fileID: 994932366}
-  - {fileID: 1819494393}
-  - {fileID: 1527618574}
-  - {fileID: 335777281}
-  - {fileID: 1379972396}
-  - {fileID: 407237024}
-  - {fileID: 407237023}
-  - {fileID: 919548366}
-  - {fileID: 2137467969}
-  - {fileID: 441057443}
-  - {fileID: 330805866}
-  - {fileID: 578646928}
-  - {fileID: 1433798604}
-  - {fileID: 353606907}
-  - {fileID: 1791718939}
-  - {fileID: 803934944}
-  - {fileID: 1661232185}
-  - {fileID: 2137004265}
-  - {fileID: 1229034626}
-  - {fileID: 174643552}
-  - {fileID: 300004151}
-  - {fileID: 516229697}
-  - {fileID: 345697801}
-  - {fileID: 671511185}
-  - {fileID: 1013348783}
-  - {fileID: 1498051560}
-  - {fileID: 1429025185}
-  - {fileID: 624310362}
-  - {fileID: 571009078}
-  - {fileID: 36821839}
-  - {fileID: 1285883001}
-  - {fileID: 1285883000}
-  - {fileID: 630898235}
-  - {fileID: 945286595}
-  - {fileID: 945286594}
-  - {fileID: 945286593}
-  - {fileID: 945286592}
-  - {fileID: 1812562453}
-  - {fileID: 711044538}
-  - {fileID: 3390565}
-  - {fileID: 751765692}
-  - {fileID: 801975415}
-  - {fileID: 28670368}
-  - {fileID: 1662646577}
-  - {fileID: 167845890}
-  - {fileID: 1648985074}
-  - {fileID: 945509024}
-  - {fileID: 909900122}
-  - {fileID: 567885622}
-  - {fileID: 259700311}
-  - {fileID: 594916222}
-  - {fileID: 1179265008}
-  - {fileID: 15064331}
-  - {fileID: 745540197}
-  - {fileID: 858447377}
-  - {fileID: 2012619748}
-  - {fileID: 27632539}
-  - {fileID: 1459173270}
-  - {fileID: 1531181936}
-  - {fileID: 68048238}
-  - {fileID: 2053488087}
-  - {fileID: 758382718}
-  - {fileID: 1647817907}
-  - {fileID: 1422219799}
-  - {fileID: 1782036017}
-  - {fileID: 925830271}
-  - {fileID: 281329692}
-  - {fileID: 216417613}
-  - {fileID: 638544210}
-  - {fileID: 1503644281}
-  - {fileID: 1949106807}
-  - {fileID: 2027569973}
-  - {fileID: 1913761743}
-  - {fileID: 123029842}
-  - {fileID: 173065596}
-  - {fileID: 1100577563}
-  - {fileID: 327997344}
-  - {fileID: 828870113}
-  - {fileID: 1109472352}
-  - {fileID: 634319139}
-  - {fileID: 275142136}
-  - {fileID: 1331137601}
-  - {fileID: 1225118131}
-  - {fileID: 658660332}
-  - {fileID: 836617853}
-  - {fileID: 911609938}
-  - {fileID: 1729177360}
-  - {fileID: 1880937144}
-  - {fileID: 1261016249}
-  - {fileID: 591287581}
-  - {fileID: 370155866}
-  - {fileID: 616819109}
+  - {fileID: 1002733094}
+  - {fileID: 1002733093}
+  - {fileID: 1002733092}
+  - {fileID: 1002733091}
+  - {fileID: 1002733090}
+  - {fileID: 1002733089}
+  - {fileID: 1002733088}
+  - {fileID: 2073224323}
+  - {fileID: 2073224322}
+  - {fileID: 2073224321}
+  - {fileID: 2073224320}
+  - {fileID: 1795997923}
+  - {fileID: 726765172}
+  - {fileID: 628904135}
+  - {fileID: 558612094}
+  - {fileID: 1118517015}
+  - {fileID: 446890838}
+  - {fileID: 446890837}
+  - {fileID: 445838456}
+  - {fileID: 1604166841}
+  - {fileID: 143210053}
+  - {fileID: 143210052}
+  - {fileID: 87372313}
+  - {fileID: 596183450}
+  - {fileID: 1316647684}
+  - {fileID: 1099769091}
+  - {fileID: 1361980004}
+  - {fileID: 1280409878}
+  - {fileID: 1692143783}
+  - {fileID: 1692143782}
+  - {fileID: 1692143781}
+  - {fileID: 1692143780}
+  - {fileID: 1692143779}
+  - {fileID: 1692143778}
   - {fileID: 200045177}
-  StaticCollider3DReferences:
-  - {fileID: 1553839697}
-  - {fileID: 1553839696}
+  - {fileID: 616819109}
+  - {fileID: 591287581}
+  - {fileID: 1261016249}
+  - {fileID: 1880937144}
+  - {fileID: 1729177360}
+  - {fileID: 911609938}
+  - {fileID: 836617853}
+  - {fileID: 658660332}
+  - {fileID: 1225118131}
+  - {fileID: 1331137601}
+  - {fileID: 634319139}
+  - {fileID: 1109472352}
+  - {fileID: 327997344}
+  - {fileID: 1100577563}
+  - {fileID: 173065596}
+  - {fileID: 1913761743}
+  - {fileID: 1949106807}
+  - {fileID: 1503644281}
+  - {fileID: 638544210}
+  - {fileID: 925830271}
+  - {fileID: 1782036017}
+  - {fileID: 1422219799}
+  - {fileID: 1647817907}
+  - {fileID: 758382718}
+  - {fileID: 2053488087}
+  - {fileID: 68048238}
+  - {fileID: 1531181936}
+  - {fileID: 1459173270}
+  - {fileID: 27632539}
+  - {fileID: 2012619748}
+  - {fileID: 858447377}
+  - {fileID: 745540197}
+  - {fileID: 15064331}
+  - {fileID: 594916222}
+  - {fileID: 259700311}
+  - {fileID: 945509024}
+  - {fileID: 1648985074}
+  - {fileID: 167845890}
+  - {fileID: 751765692}
+  - {fileID: 3390565}
+  - {fileID: 711044538}
+  - {fileID: 1812562453}
+  - {fileID: 1285883000}
+  - {fileID: 1285883001}
+  - {fileID: 36821839}
+  - {fileID: 571009078}
+  - {fileID: 624310362}
+  - {fileID: 1429025185}
+  - {fileID: 1498051560}
+  - {fileID: 671511185}
+  - {fileID: 345697801}
+  - {fileID: 516229697}
+  - {fileID: 300004151}
+  - {fileID: 174643552}
+  - {fileID: 1229034626}
+  - {fileID: 2137004265}
+  - {fileID: 1661232185}
+  - {fileID: 803934944}
+  - {fileID: 1791718939}
+  - {fileID: 353606907}
+  - {fileID: 330805866}
+  - {fileID: 2137467969}
+  - {fileID: 919548366}
+  - {fileID: 1165910044}
+  - {fileID: 99128852}
+  - {fileID: 1514552877}
+  - {fileID: 382005015}
+  - {fileID: 822529259}
+  - {fileID: 2007559742}
+  - {fileID: 1871035285}
+  - {fileID: 65008641}
+  - {fileID: 70844677}
+  - {fileID: 877713058}
+  - {fileID: 1993054894}
+  - {fileID: 172492682}
+  - {fileID: 1177886447}
+  - {fileID: 1952593229}
+  - {fileID: 1591140229}
+  - {fileID: 350812034}
+  - {fileID: 2059686294}
+  - {fileID: 535419870}
+  - {fileID: 1999308113}
+  - {fileID: 606906577}
+  - {fileID: 2092700963}
+  - {fileID: 769263169}
+  - {fileID: 41193254}
+  - {fileID: 1138742681}
+  - {fileID: 1599522252}
+  - {fileID: 574830697}
+  - {fileID: 73961144}
+  - {fileID: 967237809}
+  - {fileID: 1354181356}
+  - {fileID: 1291189966}
+  - {fileID: 1098065003}
+  - {fileID: 1719021599}
+  - {fileID: 1291988694}
+  - {fileID: 835109190}
+  - {fileID: 709774310}
+  - {fileID: 678779985}
+  - {fileID: 1960682263}
+  - {fileID: 1939247163}
+  - {fileID: 736093396}
+  - {fileID: 692761130}
+  - {fileID: 806779151}
+  - {fileID: 2001084542}
+  - {fileID: 602641158}
+  - {fileID: 1607249587}
+  - {fileID: 1553033796}
+  - {fileID: 1704863631}
+  - {fileID: 285466479}
+  - {fileID: 1660100793}
+  - {fileID: 706949489}
+  - {fileID: 1285884456}
+  StaticCollider3DReferences: []
   MapEntityReferences:
   - {fileID: 0}
   - {fileID: 0}
@@ -308111,7 +308146,7 @@ Light:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1690425870}
   m_Enabled: 0
-  serializedVersion: 12
+  serializedVersion: 13
   m_Type: 1
   m_Color: {r: 0.9622642, g: 0.9554557, b: 0.81247777, a: 1}
   m_Intensity: 0.25
@@ -308163,7 +308198,7 @@ Light:
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ForceVisible: 0
-  m_ShadowRadius: 0
+  m_ShapeRadius: 0
   m_ShadowAngle: 3
   m_LightUnit: 1
   m_LuxAtDistance: 1

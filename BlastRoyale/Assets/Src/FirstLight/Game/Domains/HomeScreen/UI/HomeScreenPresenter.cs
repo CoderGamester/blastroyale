@@ -264,7 +264,7 @@ namespace FirstLight.Game.Domains.HomeScreen.UI
 			_services.NewsService.HasNotSeenNews().ContinueWith(SetHasNewsNotification);
 
 
-#if DEVELOPMENT_BUILD && !UNITY_EDITOR
+#if DEBUG && !UNITY_EDITOR
 			_outOfSyncWarningLabel.SetDisplay(VersionUtils.IsOutOfSync());
 #else
 			_outOfSyncWarningLabel.SetDisplay(false);

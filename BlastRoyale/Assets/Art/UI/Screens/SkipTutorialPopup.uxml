@@ -110,6 +110,6 @@
                 </FirstLight.Game.UIElements.AngledContainerElement>
             </ui:VisualElement>
         </ui:VisualElement>
-        <FirstLight.Game.UIElements.LocalizedLabel name="TapToChoose" text="Tap to choose" style="font-size: 36px; -unity-font-definition: url(&quot;project://database/Assets/Art/UI/Fonts/Stawix-Bold-Static.asset?fileID=11400000&amp;guid=b745807711bab4fc0891193a62f7419f&amp;type=2#Stawix-Bold-Static&quot;); bottom: auto; color: rgb(255, 255, 255);" />
+        <FirstLight.Game.UIElements.LocalizedLabel name="TapToChoose" text="Tap to choose" class="font-bold" style="font-size: 36px; bottom: auto; color: rgb(255, 255, 255);" />
     </ui:VisualElement>
 </ui:UXML>

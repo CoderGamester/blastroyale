@@ -39,7 +39,7 @@ namespace FirstLight.Game.TestCases.Helpers
 		{
 			foreach (var type in types)
 			{
-				var screen = Object.FindFirstObjectByType(type) as UIPresenter;
+				var screen = Object.FindAnyObjectByType(type) as UIPresenter;
 				if (screen != null && screen.gameObject.activeSelf)
 				{
 					return screen;
@@ -64,14 +64,14 @@ namespace FirstLight.Game.TestCases.Helpers
 
 		public T GetPresenter2<T>() where T : UIPresenter
 		{
-			return Object.FindFirstObjectByType<T>();
+			return Object.FindAnyObjectByType<T>();
 		}
 
 		public IEnumerator WaitForGenericDialog(float timeout = 30f, string title = "")
 		{
 			yield return TestTools.Until(() =>
 				{
-					var dialog = Object.FindFirstObjectByType<GenericButtonDialogPresenter>();
+					var dialog = Object.FindAnyObjectByType<GenericButtonDialogPresenter>();
 					return dialog != null && dialog.gameObject.activeSelf && (title == "" || dialog.Title == title);
 				},
 				timeout,
@@ -82,14 +82,14 @@ namespace FirstLight.Game.TestCases.Helpers
 		{
 			yield return TestTools.Until(() =>
 				{
-					var dialog = Object.FindFirstObjectByType<GenericInputDialogPresenter>();
+					var dialog = Object.FindAnyObjectByType<GenericInputDialogPresenter>();
 					return dialog != null && dialog.gameObject.activeSelf && (title == "" || dialog.Title == title);
 				},
 				timeout,
 				$"Generic input dialog with title {title} did not open.");
 
 			// Wait a little to be able to view the inputs
-			var presenter = Object.FindFirstObjectByType<GenericInputDialogPresenter>();
+			var presenter = Object.FindAnyObjectByType<GenericInputDialogPresenter>();
 			var dialogRoot = presenter.GetComponent<UIDocument>().rootVisualElement;
 			var input = dialogRoot.Q<TextField>();
 			input.Focus();
@@ -113,7 +113,7 @@ namespace FirstLight.Game.TestCases.Helpers
 		public (VisualElement, VisualElement)? SearchForElementGlobally(
 			string name, Func<UQueryBuilder<VisualElement>, UQueryBuilder<VisualElement>> queryProcessor = null)
 		{
-			foreach (var foundObject in Object.FindObjectsByType<UIPresenter>(FindObjectsSortMode.None))
+			foreach (var foundObject in Object.FindObjectsByType<UIPresenter>())
 			{
 				var root = foundObject.Root;
 

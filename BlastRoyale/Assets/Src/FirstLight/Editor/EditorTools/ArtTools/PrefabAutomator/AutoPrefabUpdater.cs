@@ -43,7 +43,7 @@ public class AutoPrefabUpdater : EditorWindow
 				if (_updateSceneOnly)
 				{
 					var saveOpenScene = false;
-					var l = FindObjectsByType<GameObject>(FindObjectsInactive.Include, FindObjectsSortMode.None);
+					var l = FindObjectsByType<GameObject>(FindObjectsInactive.Include);
 
 					for (int i = 0; i < l.Count(); i++)
 					{

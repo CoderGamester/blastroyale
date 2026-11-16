@@ -1,14 +1,14 @@
 # Blast Royale modernization report
 
-Checkpoint: **2026-10-19 UTC**. **The reported Editor Play failure is repaired, and the final source is playable in this checkout.** Code commit `77c7da136`, with Services 2.2.0, passes **318 EditMode and 14 PlayMode cases**, zero failures/skips. Real Game view controls moved the local player **7.305673 units** and emitted **three native Quantum attacks** in the first match; death → spectating → standings → progression → Home → another match passed in the same Play session. The second match also accepted movement and emitted three attacks, with **zero captured runtime errors across the run**. The only runtime warning is a negative-scale BoxCollider on accepted placeholder geometry, repeated once per Maze load. The earlier cold-start repair checkpoint has zero console errors/warnings.
+Checkpoint: **2026-11-16 UTC**. **Upgraded to Unity 6000.6.6f1 (`d20c9ac777da`) with Cinemachine 3, Dynamic UI fonts, and zero paid Asset Store dependencies.** Final source passes **318 EditMode and 14 PlayMode cases** in headless `-batchmode -nographics` (`0` failures/skips, `0` C# or `UAC*` warnings) and builds bundled Addressables cleanly. Earlier interactive Game view sessions also verified real movement (**7.305673 units**), **three native Quantum attacks**, death → spectating → standings → progression → Home → second match, with **zero captured runtime errors**.
 
-`Backend/` is untouched. Proprietary Photon files, downloaded runtime binaries, real client/account IDs and build outputs stay ignored. No upstream push, history rewrite, paid plugin purchase or server deployment was made. Evidence below separates native Editor, isolated fixtures, cloud probes, mobile export and device acceptance.
+`Backend/` is untouched. Proprietary Photon files, downloaded runtime binaries, real client/account IDs and build outputs stay ignored. Evidence below separates native Editor, isolated fixtures, cloud probes, mobile export and device acceptance.
 
 ## Nine-section status
 
 | Section | Status | Evidence and remaining work |
 | --- | --- | --- |
-| 1. Unity 6.3 | **Pass locally** | Exact Editor; final source passes 318 EditMode/14 PlayMode, clean cold startup and Android APK and unsigned iOS export. Final-source real input/attacks/results/Home/replay pass; device/Xcode/signing remain separate acceptance. |
+| 1. Unity 6.6 | **Pass locally** | Unity `6000.6.6f1` (`d20c9ac777da`), Cinemachine 3 (`6.6.0`), URP `17.6.0`, Dynamic fonts, `0` compiler/`UAC*` warnings; **318/318 EditMode**, **14/14 headless PlayMode**, and clean bundled Addressables build; mobile exports verified on 6.3 (`AndroidTargetSdkVersion: 36` set for 6.6); device/Xcode/signing remain separate acceptance. |
 | 2. Photon Quantum | **Done** | Real stable 3.0.14 source/codegen, 213 original assets, ten native maps, Q2→Q3 binary conversions, two genuine session/replay fixtures and actual tutorial/normal match. Device and two-player acceptance remain outside these proofs. |
 | 3. Web3 cleanup | **Done** | Client integrations, transfer flows, UI/config and dependencies removed; ordinary earned currency integer IDs retained. Untouched Backend and historical documentation are explicit exceptions. |
 | 4. GameLovers packages | **Done** | Six current public Git pins, old embedded generic modules removed, actual caller/adapter ports, 124 native package cases and Main gameplay pass. Physical mobile behavior is not verified. |
@@ -28,9 +28,9 @@ Normal match shutdown previously left Photon while the SDK communicator also att
 
 EditMode fixtures now own their Quantum dispatchers and preserve/restore global bindings. This fixes failures specifically observed when tests run after actual Play; all original session/replay assertions remain. No broad claim of live reconnection, malformed-config recovery, every special interruption, physical-device behavior or two-client social testing follows from these results. The older 2026-10-14 cloud/content records below remain historical scoped evidence.
 
-## 1. Unity 6.3
+## 1. Unity 6.6
 
-Editor is exactly **6000.3.26f1**, revision `de8167e7440c`. Recommended pins include URP **17.3.0**, Addressables **2.10.3**, Input System **1.20.0**, Test Framework **1.6.0**, mobile notifications **2.5.0** and Multiplayer Services **2.3.3**. Genuine UXML source generation and current runtime/Editor APIs replace deprecated factories, transforms and service calls. The real Render Graph path replaces obsolete URP compatibility mode. [Package record](Docs/Modernization/unity-package-upgrade.json).
+Editor is **6000.6.6f1**, revision `d20c9ac777da` (upgraded from `6000.3.26f1`). Key pins include URP **17.6.0**, Cinemachine **6.6.0** (Cinemachine 3), Timeline **6.6.0**, uGUI **2.6.0**, Test Framework **1.8.0**, Addressables **2.11.2**, Input System **1.20.1**, Multiplayer Services **2.4.1**, Cloud Save **3.4.2**, mobile notifications **2.5.0**, and Android target SDK **36**. Genuine `[UxmlElement]` source generation (including embedded MIT `DebugUI` and `UI Toolkit Plus`), style-transform Timeline mixing (`UITKTimeline`), Dynamic font migration for Advanced Text, and `Unity.Cinemachine` camera conversion replace deprecated Unity 6.3/6.6 APIs. The real Render Graph path replaces obsolete URP compatibility mode. [Historical 6.3 package record](Docs/Modernization/unity-package-upgrade.json).
 
 | Executed check | Result and scope | Durable evidence |
 | --- | --- | --- |

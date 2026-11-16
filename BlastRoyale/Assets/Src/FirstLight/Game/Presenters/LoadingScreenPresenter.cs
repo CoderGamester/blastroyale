@@ -29,7 +29,7 @@ namespace FirstLight.Game.Presenters
 			_labelsContainer.Clear();
 
 			_environmentRedirectTask = _labelsContainer.schedule.Execute(CheckEnvironmentRedirect).Every(1000);
-#if UNITY_EDITOR || DEVELOPMENT_BUILD
+#if DEBUG
 			_labelsContainer.Add(new Label(FLEnvironment.Current.Name));
 
 			var config = FeatureFlags.GetLocalConfiguration();

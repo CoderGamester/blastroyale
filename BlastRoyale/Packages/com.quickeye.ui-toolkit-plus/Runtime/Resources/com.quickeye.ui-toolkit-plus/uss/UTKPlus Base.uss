@@ -1,0 +1,147 @@
+:root {
+    --qe-colors-tab_group-background: rgb(53, 53, 53);
+    --qe-colors-tab-background-checked: rgb(60, 60, 60);
+    --qe-colors-tab-background-active: rgb(44, 93, 135);
+    --qe-colors-tab-background-hover: rgb(48, 48, 48);
+    --qe-colors-tab-dropdown-area-hover: rgb(73, 73, 73);
+}
+
+.qe-tab-group {
+    background-color: var(--qe-colors-tab_group-background);
+    flex-direction: row;
+}
+
+.qe-tab-group.qe-tab-group--horizontal {
+    flex-shrink: 0;
+}
+
+.qe-tab-group--horizontal > ScrollView {
+    align-items: flex-end;
+    flex-direction: row;
+}
+
+.qe-tab-group--vertical > ScrollView {
+}
+
+.qe-tab {
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: space-between;
+    padding-top: 2px;
+    height: 25px;
+}
+
+.qe-tab-group--vertical .qe-tab {
+    padding-left: 2px;
+    padding-top: 0px;
+}
+
+.qe-tab__text {
+    padding-bottom: 1px;
+    justify-content: center;
+    align-self: center;
+    padding-right: 5px;
+    padding-left: 5px;
+}
+
+.qe-tab--unchecked:hover {
+    background-color: var(--qe-colors-tab-background-hover);
+    border-top-left-radius: 2px;
+    border-bottom-left-radius: 0px;
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 0px;
+}
+
+.qe-tab--checked {
+    background-color: var(--qe-colors-tab-background-checked);
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 0px;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 0px;
+    border-top-width: 2px;
+    border-color: var(--qe-colors-tab-background-active);
+    padding-top: 0px;
+}
+
+.qe-tab-group--vertical .qe-tab--checked {
+    border-top-width: 0px;
+    border-left-width: 2px;
+    padding-left: 0px;
+    border-radius: 3px;
+}
+
+.qe-tab--active {
+    background-color: var(--qe-colors-tab-background-active);
+    color: var(--unity-colors-highlight-text-inactive);
+}
+
+.qe-tab--reorderable-dragged {
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+
+.qe-tab--checked .qe-tab-dropdown__dropdown-area {
+    transition-property: width;
+    transition-duration: 0.2s;
+    transition-timing-function: ease;
+}
+
+.qe-tab--unchecked .qe-tab-dropdown__dropdown-area {
+    transition-property: width, opacity;
+    transition-duration: 0.2s, 0.2s;
+    transition-timing-function: ease, linear;
+    width: 0;
+    opacity: 0;
+}
+
+.qe-tab-dropdown__dropdown-area {
+    width: 19px;
+    align-content: flex-end;
+    border-left-width: 1px;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.qe-tab-dropdown .qe-tab__text {
+    flex-shrink: 1;
+    overflow: hidden;
+}
+
+.qe-tab-dropdown__arrow {
+    margin: 0;
+    padding: 0;
+    width: 14px;
+    height: 16px;
+    -unity-background-scale-mode: scale-to-fit;
+}
+
+.qe-tab-dropdown__dropdown-area:hover {
+    background-color: var(--qe-colors-tab-dropdown-area-hover);
+}
+
+.qe-tab-group__horizontal-scroller #unity-slider {
+    visibility: hidden;
+}
+
+.qe-tab-group__horizontal-scroller {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    border-width: 0;
+}
+
+.qe-tab-group__horizontal-scroller RepeatButton {
+    height: 100%;
+    -unity-background-scale-mode: scale-to-fit;
+    background-color: var(--qe-colors-tab-background-hover);
+    max-height: 100%;
+    min-height: 100%;
+}

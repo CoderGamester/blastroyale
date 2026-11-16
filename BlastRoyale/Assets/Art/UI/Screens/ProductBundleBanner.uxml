@@ -17,8 +17,8 @@
                 <ui:VisualElement name="Container" class="banner-content-container">
                     <ui:VisualElement name="RewardContent" class="reward-content">
                         <ui:VisualElement name="BundleTextContainer" picking-mode="Ignore" class="bundle-text-container ">
-                            <FirstLight.Game.UIElements.LabelOutlined tabindex="-1" text="STARTER PACK" parse-escape-sequences="true" display-tooltip-when-elided="true" name="BundleTitleText" class="bundle-text-container__title" style="-unity-font-definition: url(&quot;project://database/Assets/Art/UI/Fonts/Rubik-Black%20SDF.asset?fileID=11400000&amp;guid=82951ee0c88a775439646cc2d7ea7e9d&amp;type=2#Rubik-Black SDF&quot;);" />
-                            <FirstLight.Game.UIElements.LabelOutlined tabindex="-1" text="ONLY ONE CHANCE TO BUY!" parse-escape-sequences="true" display-tooltip-when-elided="true" name="BundleDescriptionText" class="bundle-text-container__description" style="-unity-font-definition: url(&quot;project://database/Assets/Art/UI/Fonts/Rubik-Black%20SDF.asset?fileID=11400000&amp;guid=82951ee0c88a775439646cc2d7ea7e9d&amp;type=2#Rubik-Black SDF&quot;);" />
+                            <FirstLight.Game.UIElements.LabelOutlined tabindex="-1" text="STARTER PACK" parse-escape-sequences="true" display-tooltip-when-elided="true" name="BundleTitleText" class="bundle-text-container__title" />
+                            <FirstLight.Game.UIElements.LabelOutlined tabindex="-1" text="ONLY ONE CHANCE TO BUY!" parse-escape-sequences="true" display-tooltip-when-elided="true" name="BundleDescriptionText" class="bundle-text-container__description" />
                         </ui:VisualElement>
                         <ui:VisualElement name="BundleContentsContainer" picking-mode="Ignore" class="bundle-content-container">
                             <FirstLight.Game.UIElements.LabelOutlined tabindex="-1" text="ITEMS IN THE PACK" parse-escape-sequences="true" display-tooltip-when-elided="true" name="PackContent" class="bundle-rewards-text" />

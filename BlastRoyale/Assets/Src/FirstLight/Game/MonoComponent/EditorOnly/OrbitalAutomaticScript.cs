@@ -1,4 +1,4 @@
-using Cinemachine;
+using Unity.Cinemachine;
 using UnityEngine;
 
 namespace FirstLight.Game.MonoComponent.EditorOnly
@@ -7,18 +7,17 @@ namespace FirstLight.Game.MonoComponent.EditorOnly
 	{
 		public float speed = 30f;
 
-		private Cinemachine.CinemachineVirtualCamera m_VirtualCam;
+		private CinemachineOrbitalFollow _orbitalFollow;
 
 		void Start()
 		{
-			if (GetComponent<Cinemachine.CinemachineVirtualCamera>())
-				m_VirtualCam = GetComponent<Cinemachine.CinemachineVirtualCamera>();
+			_orbitalFollow = GetComponent<CinemachineOrbitalFollow>();
 		}
 
 		void Update()
 		{
-			if (m_VirtualCam.GetCinemachineComponent<CinemachineOrbitalTransposer>())
-				m_VirtualCam.GetCinemachineComponent<CinemachineOrbitalTransposer>().m_XAxis.Value += Time.deltaTime * speed;
+			if (_orbitalFollow != null)
+				_orbitalFollow.HorizontalAxis.Value += Time.deltaTime * speed;
 		}
 	}
 }

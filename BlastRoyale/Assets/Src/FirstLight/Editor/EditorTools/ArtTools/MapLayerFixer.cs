@@ -18,7 +18,7 @@ namespace FirstLight.Editor.EditorTools.ArtTools
 		[MenuItem("FLG/Art/Fix Map Layers & Colliders")]
 		private static void OpenWindow()
 		{
-			foreach (var o in Object.FindObjectsByType<GameObject>(FindObjectsInactive.Include, FindObjectsSortMode.None))
+			foreach (var o in Object.FindObjectsByType<GameObject>(FindObjectsInactive.Include))
 			{
 				if (o.GetComponentInChildren<QuantumStaticBoxCollider3D>() != null)
 				{

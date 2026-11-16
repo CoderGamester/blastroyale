@@ -141,6 +141,7 @@
     text-shadow: 5px 5px 0 rgb(0, 0, 0);
     margin-top: -10px;
     letter-spacing: 3px;
+    -unity-font-definition: url("project://database/Assets/Art/UI/Fonts/Rubik-Black%20SDF.asset?fileID=11400000&guid=82951ee0c88a775439646cc2d7ea7e9d&type=2#Rubik-Black SDF");
 }
 
 .bundle-content-container {

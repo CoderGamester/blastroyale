@@ -19,7 +19,7 @@ namespace FirstLight.Editor.EditorTools.MapTools
 		[MenuItem("FLG/Map/Spawners/Show")]
 		private static void ShowSpawners()
 		{
-			foreach (var o in Object.FindObjectsByType<SpawnerDebugMonoComponent>(FindObjectsInactive.Include, FindObjectsSortMode.None))
+			foreach (var o in Object.FindObjectsByType<SpawnerDebugMonoComponent>(FindObjectsInactive.Include))
 			{
 				_ = o.ShowDebugIcon();
 			}
@@ -28,7 +28,7 @@ namespace FirstLight.Editor.EditorTools.MapTools
 		[MenuItem("FLG/Map/Spawners/Hide")]
 		private static void HideSpawners()
 		{
-			foreach (var o in Object.FindObjectsByType<SpawnerDebugMonoComponent>(FindObjectsInactive.Include, FindObjectsSortMode.None))
+			foreach (var o in Object.FindObjectsByType<SpawnerDebugMonoComponent>(FindObjectsInactive.Include))
 			{
 				o.HideDebugIcon();
 			}

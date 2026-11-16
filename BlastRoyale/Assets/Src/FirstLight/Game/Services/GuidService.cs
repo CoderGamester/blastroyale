@@ -68,7 +68,7 @@ namespace FirstLight.Game.Services
 		{
 			if (!_elements.ContainsKey(id))
 			{
-				var elements = Object.FindObjectsByType<GuidElementMonoComponent>(FindObjectsInactive.Include, FindObjectsSortMode.None);
+				var elements = Object.FindObjectsByType<GuidElementMonoComponent>(FindObjectsInactive.Include);
 
 				foreach (var element in elements)
 				{

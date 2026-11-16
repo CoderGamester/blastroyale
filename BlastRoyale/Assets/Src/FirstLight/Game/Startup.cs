@@ -198,7 +198,7 @@ namespace FirstLight.Game
 
 		private static void InitPlugins()
 		{
-#if UNITY_EDITOR || DEVELOPMENT_BUILD
+#if DEBUG
 			FirstLight.Game.Cheats.RuntimeDebugPanel.Initialize();
 #endif
 

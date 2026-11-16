@@ -20,7 +20,7 @@ namespace FirstLight.Game.Utils
 
 		public static void SaveState(IGameBackendService gameBackend, IDataProvider dataProvider, Action doneCallback)
 		{
-#if DEVELOPMENT_BUILD || UNITY_EDITOR
+#if DEBUG
 			var date = DateTime.Now.ToString("dd-MM-yyyy-HH-mm-ss");
 			var states = $"{Application.persistentDataPath}/crash-logs/{date}/states";
 

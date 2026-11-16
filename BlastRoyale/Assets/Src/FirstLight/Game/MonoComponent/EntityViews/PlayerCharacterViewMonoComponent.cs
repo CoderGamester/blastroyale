@@ -41,7 +41,7 @@ namespace FirstLight.Game.MonoComponent.EntityViews
 		/// Deprecated, should be removed.
 		/// This is only used for buildings.
 		/// </summary>
-		[System.Obsolete] public PlayerBuildingVisibility BuildingVisibility;
+		[System.Obsolete, System.NonSerialized] public PlayerBuildingVisibility BuildingVisibility;
 
 		private Vector3 _lastPosition;
 		private DateTime _lastMoving;

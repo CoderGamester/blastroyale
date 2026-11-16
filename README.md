@@ -1,19 +1,19 @@
-# Blast Royale — Unity 6.3 modernization
+# Blast Royale — Unity 6.6 modernization
 
-Mobile top-down battle royale using Unity **6000.3.26f1**, Photon Quantum **3.0.14 Stable 2241** and one Unity Gaming Services development backend. Work is on `upgrade/codex`; no upstream push was made. `Backend/` is retained unchanged as the future authoritative reference.
+Mobile top-down battle royale using Unity **6000.6.6f1**, Photon Quantum **3.0.14 Stable 2241** and one Unity Gaming Services development backend. `Backend/` is retained unchanged as the future authoritative reference.
 
-Current Editor acceptance: **318 EditMode and 14 PlayMode tests pass**. The final Services 2.2.0 code also passes real Game view movement, Quantum attacks, death/spectating, results, return Home and replay, with zero captured runtime errors. Accepted map placeholders retain one collider warning per Maze load. Both Photon SDKs are verified: Quantum **3.0.14 Stable 2241**, Bot SDK **3.10.2**, with Realtime **5.1.20**. Missing commercial map art uses accepted placeholders. [Current builds, exact evidence and unrun checks](REPORT.md).
+Current Editor acceptance on Unity **6000.6.6f1**: **318 EditMode and 14 PlayMode tests pass** with zero compiler or `UAC*` analyzer warnings, and bundled Addressables + player script compilation succeed cleanly. Earlier interactive Game view runs also verified movement, Quantum attacks, death/spectating, results, return Home and replay, with zero captured runtime errors. Both Photon SDKs are verified: Quantum **3.0.14 Stable 2241**, Bot SDK **3.10.2**, with Realtime **5.1.20**. Missing commercial map art uses accepted placeholders. [Current builds, exact evidence and unrun checks](REPORT.md).
 
 ## Prerequisites
 
-- Unity 6000.3.26f1 with Android and iOS support. This host already has it at `/Applications/Unity/Hub/Editor/6000.3.26f1/`.
+- Unity 6000.6.6f1 with Android and iOS support (`/Applications/Unity/Hub/Editor/6000.6.6f1/` on macOS).
 - Free eligible Photon and Unity accounts; actual Quantum3 SDK/Bot SDK download permission. SDK/source/binaries remain local and ignored.
 - Git/Python3; .NET10 is used by the guarded SDK source-layout tool. Use the existing host tools; no extra Editor bridge is required.
 - No Animancer Pro, DOTween Pro, Odin, Bakery, I2, SRDebugger or EssentialKit purchase is needed. Their surviving behaviors use free replacements.
 
 ## Clone to configured Editor
 
-1. Clone the public repository, check out this modernization branch, and open `BlastRoyale/` only with 6000.3.26f1. Allow exact pinned UPM dependencies to resolve. Close this project's Editor before running any batchmode command or local dependency restore. One Unity process owns each project.
+1. Clone the public repository, check out this modernization branch, and open `BlastRoyale/` only with 6000.6.6f1. Allow exact pinned UPM dependencies to resolve. Close this project's Editor before running any batchmode command or local dependency restore. One Unity process owns each project.
 2. Restore the legitimate Photon 3.0.14/build 2241 and matching Bot SDK 3.10.2 locally. Follow [the exact SDK/codegen/metadata restoration order](Docs/Modernization/quantum.md). Preserve authored QuantumUser source/settings; never import the old quantum.code DLL into Q3. Apply source-layout phases 1, 2 and 5 in order through [the guarded tool](Tools/Modernization/QuantumSdkLayout/README.md).
 3. With Unity closed, run the checksum-pinned public runtime restore from the repository root:
 
@@ -47,7 +47,7 @@ Use **WASD** to move, **arrow keys** to aim and **Space** to attack, or the two 
 Use the exact target Editor with this project's GUI closed. Explicit XML/log paths keep nonzero test evidence inspectable:
 
 ```sh
-/Applications/Unity/Hub/Editor/6000.3.26f1/Unity.app/Contents/MacOS/Unity \
+/Applications/Unity/Hub/Editor/6000.6.6f1/Unity.app/Contents/MacOS/Unity \
   -batchmode -nographics -projectPath "$PWD/BlastRoyale" \
   -runTests -testPlatform EditMode \
   -testResults "$PWD/artifacts/editmode.xml" -logFile "$PWD/artifacts/editmode.log"

@@ -13,7 +13,8 @@
         "GameLovers.GoogleSheetImporter",
         "Quantum.Unity",
         "Quantum.Simulation",
-        "Unity.InputSystem"
+        "Unity.InputSystem",
+        "Unity.InputSystem.TestFramework"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],

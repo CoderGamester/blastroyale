@@ -1,5 +1,4 @@
 using System;
-using Cinemachine;
 using UnityEngine;
 
 namespace FirstLight.Game.Utils

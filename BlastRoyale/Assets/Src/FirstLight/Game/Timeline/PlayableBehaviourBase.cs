@@ -1,4 +1,5 @@
 using MainInstaller = FirstLight.Game.Utils.MainInstaller;
+using System;
 using FirstLight.Game.Logic;
 using FirstLight.Game.Services;
 using FirstLight.Game.Utils;
@@ -11,6 +12,7 @@ namespace FirstLight.Game.Timeline
 	/// <summary>
 	/// A behaviour on the timeline to be executed when reached
 	/// </summary>
+	[Serializable]
 	public abstract class PlayableBehaviourBase : PlayableBehaviour
 	{
 		protected IGameServices Services;

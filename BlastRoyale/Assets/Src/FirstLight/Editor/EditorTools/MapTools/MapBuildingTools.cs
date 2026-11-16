@@ -48,7 +48,7 @@ namespace FirstLight.Editor.EditorTools.MapTools
 		{
 			//GameObjectHashSet done = new GameObjectHashSet();
 			var done = new HashSet<string>();
-			foreach (var o in GameObject.FindObjectsByType<GameObject>(FindObjectsInactive.Include, FindObjectsSortMode.None))
+			foreach (var o in GameObject.FindObjectsByType<GameObject>(FindObjectsInactive.Include))
 			{
 				if (PrefabUtility.IsPartOfRegularPrefab(o))
 				{
@@ -74,7 +74,7 @@ namespace FirstLight.Editor.EditorTools.MapTools
 			var quad = GameObject.Find("USE_THIS").GetComponent<MeshFilter>().sharedMesh;
 
 			Debug.Log("Running");
-			foreach (var o in GameObject.FindObjectsByType<GameObject>(FindObjectsInactive.Include, FindObjectsSortMode.None))
+			foreach (var o in GameObject.FindObjectsByType<GameObject>(FindObjectsInactive.Include))
 			{
 				var rend = o.GetComponent<MeshRenderer>();
 				if (rend == null) continue;
@@ -108,7 +108,7 @@ namespace FirstLight.Editor.EditorTools.MapTools
 		[MenuItem("FLG/Map/Disable Non Lightmapped")]
 		private static void DisableNonLightmapped()
 		{
-			foreach (var o in GameObject.FindObjectsByType<GameObject>(FindObjectsInactive.Include, FindObjectsSortMode.None))
+			foreach (var o in GameObject.FindObjectsByType<GameObject>(FindObjectsInactive.Include))
 			{
 				var rend = o.GetComponent<MeshRenderer>();
 				if (rend == null) continue;

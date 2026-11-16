@@ -120,9 +120,8 @@ namespace Quantum
 
 		private IEnumerable<string> GetOptionalSystems()
 		{
-			return from assembly in AppDomain.CurrentDomain.GetAssemblies()
-			       from type in assembly.GetTypes()
-			       where type.IsDefined(typeof(OptionalSystemAttribute))
+			return from type in typeof(QuantumGameModeConfig).Assembly.GetTypes()
+			       where type.IsDefined(typeof(OptionalSystemAttribute), false)
 			       select type.AssemblyQualifiedName;
 		}
 

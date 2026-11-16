@@ -7,7 +7,6 @@ namespace FirstLight.Game.Logic.RPC
 	/// <summary>
 	/// This object defines the result of an function app logic execution
 	/// </summary>
-	[Serializable]
 	public class LogicResult : PlayFabResultCommon
 	{
 		/// <summary>

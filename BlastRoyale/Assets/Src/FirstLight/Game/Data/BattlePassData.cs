@@ -8,7 +8,6 @@ using Quantum;
 
 namespace FirstLight.Game.Data
 {
-	[Serializable]
 	public class BattlePassSeasonData
 	{
 		public bool Purchased = false;
@@ -29,7 +28,6 @@ namespace FirstLight.Game.Data
 		};
 	}
 
-	[Serializable]
 	public class BattlePassData
 	{
 		public Dictionary<uint, BattlePassSeasonData> Seasons = new ();

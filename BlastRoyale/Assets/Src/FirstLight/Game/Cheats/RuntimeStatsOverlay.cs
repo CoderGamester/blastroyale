@@ -12,7 +12,7 @@ namespace FirstLight.Game.Cheats
 
 		public static void Toggle()
 		{
-#if UNITY_EDITOR || DEVELOPMENT_BUILD
+#if DEBUG
 			if (!_instance)
 			{
 				var owner = new GameObject("Development simulation counters");
@@ -30,8 +30,8 @@ namespace FirstLight.Game.Cheats
 
 		private void OnGUI()
 		{
-#if UNITY_EDITOR || DEVELOPMENT_BUILD
-			if (_visible) _window = GUILayout.Window(GetInstanceID(), _window, DrawCounters, "Simulation counters");
+#if DEBUG
+			if (_visible) _window = GUILayout.Window(GetEntityId().GetHashCode(), _window, DrawCounters, "Simulation counters");
 #endif
 		}
 

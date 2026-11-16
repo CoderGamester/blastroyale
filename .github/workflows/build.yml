@@ -62,7 +62,7 @@ jobs:
           UNITY_PASSWORD: ${{ secrets.UNITY_PASSWORD }}
         with:
           projectPath: BlastRoyale
-          unityVersion: 6000.3.26f1
+          unityVersion: 6000.6.6f1
           targetPlatform: StandaloneLinux64
           buildMethod: FirstLight.Editor.Build.PackageRestore.Resolve
           versioning: None
@@ -79,7 +79,7 @@ jobs:
           UNITY_PASSWORD: ${{ secrets.UNITY_PASSWORD }}
         with:
           projectPath: BlastRoyale
-          unityVersion: 6000.3.26f1
+          unityVersion: 6000.6.6f1
           targetPlatform: ${{ inputs.target || 'Android' }}
           buildMethod: FirstLight.Editor.Build.Builder.BatchBuild
           buildsPath: artifacts/build

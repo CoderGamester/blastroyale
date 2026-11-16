@@ -31,9 +31,9 @@ namespace FirstLight.Game.Presenters
 			Login
 		}
 
-		public AngledContainerElement _tutorialButton;
-		public AngledContainerElement _skipButton;
-		public AngledContainerElement _loginButton;
+		[System.NonSerialized] public AngledContainerElement _tutorialButton;
+		[System.NonSerialized] public AngledContainerElement _skipButton;
+		[System.NonSerialized] public AngledContainerElement _loginButton;
 
 		protected override void QueryElements()
 		{

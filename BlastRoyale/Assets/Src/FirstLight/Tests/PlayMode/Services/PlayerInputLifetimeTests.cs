@@ -2,12 +2,11 @@ using FirstLight.Game.Services;
 using NUnit.Framework;
 using Quantum;
 using UnityEngine.InputSystem;
-using UnityEngine.InputSystem.LowLevel;
 using Assert = NUnit.Framework.Assert;
 
 namespace FirstLight.Tests.PlayMode.Services
 {
-	public class PlayerInputLifetimeTests
+	public class PlayerInputLifetimeTests : InputTestFixture
 	{
 		[Test]
 		public void EndMatch_TwoMatches_RemovesOwnedNativeSubscriptions()
@@ -42,26 +41,19 @@ namespace FirstLight.Tests.PlayMode.Services
 		[TestCase(Key.E)]
 		public void Dispose_WithHeldSpecial_DoesNotSendCommandToStoppedRunner(Key key)
 		{
-			var previousBackgroundBehavior = InputSystem.settings.backgroundBehavior;
-			InputSystem.settings.backgroundBehavior = InputSettings.BackgroundBehavior.IgnoreFocus;
 			var keyboard = InputSystem.AddDevice<Keyboard>();
 			var input = new PlayerInputService(null, null, null);
 			try
 			{
 				input.OnMatchStarted(null, false);
-				InputState.Change(keyboard, new KeyboardState(key));
+				Press(keyboard[key]);
 				Assert.That(keyboard[key].isPressed, Is.True);
 				var special = key == Key.Q ? input.Input.Gameplay.SpecialButton0 : input.Input.Gameplay.SpecialButton1;
 				Assert.That(special.IsPressed(), Is.True, "The real gameplay action must be held before teardown.");
 			}
 			finally
 			{
-				try { input.Dispose(); }
-				finally
-				{
-					InputSystem.RemoveDevice(keyboard);
-					InputSystem.settings.backgroundBehavior = previousBackgroundBehavior;
-				}
+				input.Dispose();
 			}
 			AssertSubscriptions(input, false);
 		}

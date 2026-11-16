@@ -204,7 +204,7 @@ namespace FirstLight.Game.Services
 			{
 				if (desynchs.Count > 0)
 				{
-#if DEVELOPMENT_BUILD && !UNITY_EDITOR
+#if DEBUG && !UNITY_EDITOR
 					DebugOptions.Current.SendQuietBugReport($"models desynched {string.Join(',', desynchs)}");
 #endif
 

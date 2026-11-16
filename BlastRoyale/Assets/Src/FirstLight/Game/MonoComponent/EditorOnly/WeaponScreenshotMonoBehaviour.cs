@@ -15,7 +15,7 @@ namespace FirstLight.Editor.EditorTools.Skins
 	public class WeaponScreenshot : MonoBehaviour
 	{
 #if UNITY_EDITOR
-		public IEnumerator<Pair<GameId, GameObject>> _skins;
+		private IEnumerator<Pair<GameId, GameObject>> _skins;
 		private Camera _camera;
 		private Vector3 _originalCameraPos;
 		private Quaternion _originalCameraRot;

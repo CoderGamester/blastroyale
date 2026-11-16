@@ -4,7 +4,6 @@ using FirstLight.Game.Data.DataTypes;
 
 namespace FirstLight.Game.Data
 {
-	[Serializable]
 	public class PlayerStoreData 
 	{
 		

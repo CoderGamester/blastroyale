@@ -58,6 +58,11 @@ namespace FirstLight.Game.UIElements
 
 		private void UpdateFontSize()
 		{
+			if (panel == null)
+			{
+				return;
+			}
+
 			var textSize = MeasureTextSize(text,
 				float.MaxValue, MeasureMode.AtMost, float.MaxValue, MeasureMode.AtMost);
 

@@ -3,7 +3,7 @@ using MainInstaller = FirstLight.Game.Utils.MainInstaller;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using Cinemachine;
+using Unity.Cinemachine;
 using Cysharp.Threading.Tasks;
 using FirstLight.FLogger;
 using FirstLight.Game.Data.DataTypes;
@@ -33,7 +33,7 @@ namespace FirstLight.Game.Presenters
 		private const string BADGE_SPRITE_PREFIX = "BadgePlace";
 
 		[SerializeField] private BaseCharacterMonoComponent _character;
-		[SerializeField] private CinemachineVirtualCamera _camera;
+		[SerializeField] private CinemachineVirtualCameraBase _camera;
 		[SerializeField] private VisualTreeAsset _leaderboardEntryAsset;
 		[SerializeField, InspectorField(Required = true)] private VisualTreeAsset _playerNameTemplate;
 

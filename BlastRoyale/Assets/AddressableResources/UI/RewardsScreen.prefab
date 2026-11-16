@@ -70,8 +70,7 @@ MonoBehaviour:
     - m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 554487801968122399}
-          m_TargetAssemblyTypeName: FirstLight.Game.Presenters.RewardsScreenPresenter,
-            FirstLight.Game
+          m_TargetAssemblyTypeName: FirstLight.Game.Presenters.RewardsScreenPresenter, FirstLight.Game
           m_MethodName: OnLevelUpSignal
           m_Mode: 1
           m_Arguments:
@@ -85,8 +84,7 @@ MonoBehaviour:
     - m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 554487801968122399}
-          m_TargetAssemblyTypeName: FirstLight.Game.Presenters.RewardsScreenPresenter,
-            FirstLight.Game
+          m_TargetAssemblyTypeName: FirstLight.Game.Presenters.RewardsScreenPresenter, FirstLight.Game
           m_MethodName: OnChangeRewardsSignal
           m_Mode: 1
           m_Arguments:
@@ -232,6 +230,13 @@ MonoBehaviour:
   m_ParentUI: {fileID: 0}
   sourceAsset: {fileID: 9197481963319205126, guid: 51187315e13505a46b734f975cc9be73, type: 3}
   m_SortingOrder: 0
+  m_Position: 0
+  m_WorldSpaceSizeMode: 1
+  m_WorldSpaceWidth: 1920
+  m_WorldSpaceHeight: 1080
+  m_PivotReferenceSize: 0
+  m_Pivot: 0
+  m_WorldSpaceCollider: {fileID: 0}
 --- !u!114 &554487801968122399
 MonoBehaviour:
   m_ObjectHideFlags: 0

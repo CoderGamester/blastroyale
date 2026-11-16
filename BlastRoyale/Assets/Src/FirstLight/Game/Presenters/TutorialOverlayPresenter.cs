@@ -27,7 +27,7 @@ namespace FirstLight.Game.Presenters
 		[SerializeField] private GameObject _guideHandRoot;
 		[SerializeField] private Animator _guideHandAnimator;
 
-		public CharacterDialogView Dialog;
+		[System.NonSerialized] public CharacterDialogView Dialog;
 
 		private float _initialScale;
 		private float _highlightedScale;

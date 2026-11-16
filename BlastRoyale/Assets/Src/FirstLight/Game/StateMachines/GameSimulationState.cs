@@ -440,7 +440,7 @@ namespace FirstLight.Game.StateMachines
 			var useBotBehaviour = (FLGTestRunner.Instance.IsRunning() && FLGTestRunner.Instance.UseBotBehaviour) ||
 				FeatureFlags.GetLocalConfiguration().UseBotBehaviour;
 
-#if UNITY_EDITOR || DEVELOPMENT_BUILD
+#if DEBUG
 
 			if (DebugOptions.Current != null && DebugOptions.Current.DontSendPlayerData)
 			{

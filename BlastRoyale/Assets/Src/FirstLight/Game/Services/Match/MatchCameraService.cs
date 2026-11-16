@@ -1,4 +1,4 @@
-using Cinemachine;
+using Unity.Cinemachine;
 using FirstLight.FLogger;
 using FirstLight.Game.Logic;
 using FirstLight.Game.Utils;
@@ -24,12 +24,12 @@ namespace FirstLight.Game.Services
 							  Vector3 position = default);
 
 
-		void SetCameras(CinemachineVirtualCamera adventureCamera);
+		void SetCameras(CinemachineVirtualCameraBase adventureCamera);
 
 		/// <summary>
 		/// Gets the current camera running
 		/// </summary>
-		CinemachineVirtualCamera GetCamera();
+		CinemachineVirtualCameraBase GetCamera();
 	}
 
 	/// <inheritdoc />
@@ -42,7 +42,7 @@ namespace FirstLight.Game.Services
 
 		private CinemachineImpulseSource _impulseSource;
 		private GameObject _cameraServiceObject;
-		private CinemachineVirtualCamera _adventureCamera;
+		private CinemachineVirtualCameraBase _adventureCamera;
 
 		public MatchCameraService(IGameDataProvider gameDataProvider, IMatchServices matchServices, IGameServices services)
 		{
@@ -72,14 +72,14 @@ namespace FirstLight.Game.Services
 
 			var newImpulse = new CinemachineImpulseDefinition
 			{
-				m_ImpulseType = CinemachineImpulseDefinition.ImpulseTypes.Uniform,
-				m_ImpulseShape = CinemachineImpulseDefinition.ImpulseShapes.Bump,
-				m_ImpulseDuration = 0.08f,
-				m_DissipationDistance = 99999,
-				m_ImpactRadius = 999999,
+				ImpulseType = CinemachineImpulseDefinition.ImpulseTypes.Uniform,
+				ImpulseShape = CinemachineImpulseDefinition.ImpulseShapes.Bump,
+				ImpulseDuration = 0.08f,
+				DissipationDistance = 99999,
+				ImpactRadius = 999999,
 			};
 
-			_impulseSource.m_ImpulseDefinition = newImpulse;
+			_impulseSource.ImpulseDefinition = newImpulse;
 			var a = new Vector3(-shotRotation.x, 0, -shotRotation.y);
 			CinemachineImpulseManager.Instance.Clear();
 			newImpulse.CreateAndReturnEvent(this._adventureCamera.transform.position, a.normalized * strength);
@@ -97,15 +97,15 @@ namespace FirstLight.Game.Services
 			}
 			var newImpulse = new CinemachineImpulseDefinition
 			{
-				m_ImpulseType = CinemachineImpulseDefinition.ImpulseTypes.Dissipating,
-				m_ImpulseShape = shape,
-				m_ImpulseDuration = duration,
-				m_DissipationDistance = GameConstants.Screenshake.SCREENSHAKE_DISSAPATION_DISTANCE_MAX,
-				m_ImpactRadius = GameConstants.Screenshake.SCREENSHAKE_DISSAPATION_DISTANCE_MIN,
+				ImpulseType = CinemachineImpulseDefinition.ImpulseTypes.Dissipating,
+				ImpulseShape = shape,
+				ImpulseDuration = duration,
+				DissipationDistance = GameConstants.Screenshake.SCREENSHAKE_DISSAPATION_DISTANCE_MAX,
+				ImpactRadius = GameConstants.Screenshake.SCREENSHAKE_DISSAPATION_DISTANCE_MIN,
 			};
 
 			var vel = Random.insideUnitCircle.normalized;
-			_impulseSource.m_ImpulseDefinition = newImpulse;
+			_impulseSource.ImpulseDefinition = newImpulse;
 
 			var cameraSkew = _adventureCamera.transform.position - _adventureCamera.Follow.position;
 			position += cameraSkew;
@@ -135,12 +135,12 @@ namespace FirstLight.Game.Services
 		{
 		}
 
-		public void SetCameras(CinemachineVirtualCamera adventureCamera)
+		public void SetCameras(CinemachineVirtualCameraBase adventureCamera)
 		{
 			_adventureCamera = adventureCamera;
 		}
 
-		public CinemachineVirtualCamera GetCamera()
+		public CinemachineVirtualCameraBase GetCamera()
 		{
 			return _adventureCamera;
 		}
@@ -204,7 +204,7 @@ namespace FirstLight.Game.Services
 			{
 				if (damagedPlayerIsLocal)
 				{
-					_matchServices.MatchCameraService.StartScreenShake(Cinemachine.CinemachineImpulseDefinition.ImpulseShapes.Recoil,
+					_matchServices.MatchCameraService.StartScreenShake(CinemachineImpulseDefinition.ImpulseShapes.Recoil,
 						GameConstants.Screenshake.SCREENSHAKE_SMALL_DURATION, GameConstants.Screenshake.SCREENSHAKE_MEDIUM_STRENGTH,
 						callback.Entity.GetPosition(f).ToUnityVector3());
 				}

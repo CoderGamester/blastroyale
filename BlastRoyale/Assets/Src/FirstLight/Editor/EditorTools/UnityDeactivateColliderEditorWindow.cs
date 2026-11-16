@@ -24,7 +24,7 @@ namespace FirstLight.Editor.EditorTools
 			
 			if (GUILayout.Button("Deactivate Unity Colliders"))
 			{
-				var boxColliders = Object.FindObjectsByType<BoxCollider>(FindObjectsInactive.Include, FindObjectsSortMode.None);
+				var boxColliders = Object.FindObjectsByType<BoxCollider>(FindObjectsInactive.Include);
 				foreach (var c in boxColliders)
 				{
 					if (c.enabled)
@@ -36,7 +36,7 @@ namespace FirstLight.Editor.EditorTools
 					}
 				}
 				
-				var meshColliders = Object.FindObjectsByType<MeshCollider>(FindObjectsInactive.Include, FindObjectsSortMode.None);
+				var meshColliders = Object.FindObjectsByType<MeshCollider>(FindObjectsInactive.Include);
 				foreach (var c in meshColliders)
 				{
 					if (c.enabled)

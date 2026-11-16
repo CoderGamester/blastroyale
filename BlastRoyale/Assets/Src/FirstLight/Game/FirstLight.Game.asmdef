@@ -2,7 +2,7 @@
   "name": "FirstLight.Game",
   "rootNamespace": "",
   "references": [
-    "Cinemachine",
+    "Unity.Cinemachine",
     "Unity.TextMeshPro",
     "Unity.InputSystem",
     "Unity.Addressables",

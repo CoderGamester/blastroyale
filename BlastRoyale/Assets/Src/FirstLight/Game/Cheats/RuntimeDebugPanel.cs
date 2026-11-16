@@ -38,7 +38,7 @@ namespace FirstLight.Game.Cheats
 	/// <summary>Local diagnostic tools available in the Editor and development players.</summary>
 	public sealed class RuntimeDebugPanel : MonoBehaviour
 	{
-#if UNITY_EDITOR || DEVELOPMENT_BUILD
+#if DEBUG
 		private static readonly List<DebugOption> Options = new List<DebugOption>();
 		private static readonly Queue<string> Logs = new Queue<string>();
 		private static RuntimeDebugPanel _instance;
@@ -53,7 +53,7 @@ namespace FirstLight.Game.Cheats
 		[RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.SubsystemRegistration)]
 		private static void Reset()
 		{
-#if UNITY_EDITOR || DEVELOPMENT_BUILD
+#if DEBUG
 			Options.Clear();
 			Logs.Clear();
 			_instance = null;
@@ -62,7 +62,7 @@ namespace FirstLight.Game.Cheats
 
 		public static void Initialize()
 		{
-#if UNITY_EDITOR || DEVELOPMENT_BUILD
+#if DEBUG
 			if (_instance != null) return;
 			var owner = new GameObject("Development Diagnostics");
 			DontDestroyOnLoad(owner);
@@ -72,14 +72,14 @@ namespace FirstLight.Game.Cheats
 
 		public static void AddOptions(IEnumerable<DebugOption> options)
 		{
-#if UNITY_EDITOR || DEVELOPMENT_BUILD
+#if DEBUG
 			Options.AddRange(options);
 #endif
 		}
 
 		public static void RegisterOptions(object owner)
 		{
-#if UNITY_EDITOR || DEVELOPMENT_BUILD
+#if DEBUG
 			foreach (var member in owner.GetType().GetMembers(BindingFlags.Public | BindingFlags.Instance | BindingFlags.Static))
 			{
 				var category = member.GetCustomAttribute<CategoryAttribute>();
@@ -92,7 +92,7 @@ namespace FirstLight.Game.Cheats
 #endif
 		}
 
-#if UNITY_EDITOR || DEVELOPMENT_BUILD
+#if DEBUG
 		private void OnEnable() => Application.logMessageReceived += CaptureLog;
 		private void OnDisable() => Application.logMessageReceived -= CaptureLog;
 
@@ -105,7 +105,7 @@ namespace FirstLight.Game.Cheats
 
 		public static void SaveReport(string description)
 		{
-#if UNITY_EDITOR || DEVELOPMENT_BUILD
+#if DEBUG
 			var directory = Path.Combine(Application.persistentDataPath, "Diagnostics");
 			Directory.CreateDirectory(directory);
 			var path = Path.Combine(directory, "report-" + DateTime.UtcNow.ToString("yyyyMMdd-HHmmss-fff", CultureInfo.InvariantCulture) + ".txt");
@@ -121,14 +121,14 @@ namespace FirstLight.Game.Cheats
 #endif
 		}
 
-#if UNITY_EDITOR || DEVELOPMENT_BUILD
+#if DEBUG
 		private void OnGUI()
 		{
 			if (GUI.Button(new Rect(10, 10, 130, 38), _visible ? "Hide diagnostics" : "Diagnostics")) _visible = !_visible;
 			if (!_visible) return;
 			_window.width = Mathf.Min(640, Screen.width - 40);
 			_window.height = Mathf.Min(640, Screen.height - 80);
-			_window = GUILayout.Window(GetInstanceID(), _window, DrawWindow, "Development Diagnostics");
+			_window = GUILayout.Window(GetEntityId().GetHashCode(), _window, DrawWindow, "Development Diagnostics");
 		}
 
 		private void DrawWindow(int windowId)

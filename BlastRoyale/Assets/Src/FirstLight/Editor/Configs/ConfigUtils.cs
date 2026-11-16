@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using GameLoversEditor.GoogleSheetImporter;
+using UnityEditor;
 
 namespace FirstLight.Editor.Configs
 {
@@ -14,21 +15,17 @@ namespace FirstLight.Editor.Configs
 		/// </summary>
 		public static Dictionary<Type, IGoogleSheetConfigsImporter> GetAllImporters()
 		{
-			var importerInterface = typeof(IGoogleSheetConfigsImporter);
 			var soImporterInterface = typeof(IScriptableObjectImporter);
 			var importers = new Dictionary<Type, IGoogleSheetConfigsImporter>();
 
-			foreach (var assembly in AppDomain.CurrentDomain.GetAssemblies())
+			foreach (var type in TypeCache.GetTypesDerivedFrom<IGoogleSheetConfigsImporter>())
 			{
-				foreach (var type in assembly.GetTypes())
+				if (!type.IsAbstract && !type.IsInterface && soImporterInterface.IsAssignableFrom(type))
 				{
-					if (!type.IsAbstract && !type.IsInterface && importerInterface.IsAssignableFrom(type) && soImporterInterface.IsAssignableFrom(type))
-					{
-						var importer = Activator.CreateInstance(type) as IGoogleSheetConfigsImporter;
-						var soType = ((IScriptableObjectImporter) importer)!.ScriptableObjectType;
+					var importer = Activator.CreateInstance(type) as IGoogleSheetConfigsImporter;
+					var soType = ((IScriptableObjectImporter) importer)!.ScriptableObjectType;
 
-						importers.Add(soType, Activator.CreateInstance(type) as IGoogleSheetConfigsImporter);
-					}
+					importers.Add(soType, Activator.CreateInstance(type) as IGoogleSheetConfigsImporter);
 				}
 			}
 

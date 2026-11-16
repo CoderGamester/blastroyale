@@ -94,7 +94,7 @@ namespace FirstLight.Editor.EditorTools.ArtTools
 
 		private void HideSceneGeometry()
 		{
-			GameObject[] allObjects = FindObjectsByType<GameObject>(FindObjectsSortMode.None);
+			GameObject[] allObjects = FindObjectsByType<GameObject>();
 
 			foreach (GameObject obj in allObjects)
 			{

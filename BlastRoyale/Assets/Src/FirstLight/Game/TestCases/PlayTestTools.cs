@@ -29,7 +29,7 @@ namespace FirstLight.Game.TestCases
 		/// <typeparam name="T">Type of the object to wait for</typeparam>
 		public static IEnumerator UntilObjectOfType<T>(float timeout = 30, bool crash = true) where T : MonoBehaviour
 		{
-			yield return Until(() => Object.FindFirstObjectByType<T>() != null && Object.FindFirstObjectByType<T>().gameObject.activeSelf, timeout, $"Object of type {typeof(T).Name} not found.");
+			yield return Until(() => Object.FindAnyObjectByType<T>() != null && Object.FindAnyObjectByType<T>().gameObject.activeSelf, timeout, $"Object of type {typeof(T).Name} not found.");
 		}
 
 		/// <summary>
@@ -39,7 +39,7 @@ namespace FirstLight.Game.TestCases
 		/// <returns></returns>
 		public static UIDocument GetUIDocument<T>() where T : Component
 		{
-			var pt = Object.FindFirstObjectByType<T>();
+			var pt = Object.FindAnyObjectByType<T>();
 			if (pt != null) return pt.GetComponent<UIDocument>();
 			return null;
 		}

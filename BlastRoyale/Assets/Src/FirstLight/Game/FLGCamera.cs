@@ -1,5 +1,5 @@
 using FirstLight.Inspector;
-using Cinemachine;
+using Unity.Cinemachine;
 using FirstLight.Game.Core;
 using UnityEngine;
 using UnityEngine.EventSystems;

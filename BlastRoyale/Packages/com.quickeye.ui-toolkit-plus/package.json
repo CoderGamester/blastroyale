@@ -1,0 +1,27 @@
+{
+  "name": "com.quickeye.ui-toolkit-plus",
+  "displayName": "UI Toolkit Plus",
+  "description": "- Boilerplate Code Generation\n- Tabs\n- Reorderable Manipulator\n- Built-in USS Exporter",
+  "version": "3.0.3",
+  "unity": "2021.3",
+  "author": "Quick Eye",
+  "type": "library",
+  "samples": [
+    {
+      "displayName": "Reorderable Manipulator",
+      "description": "Basic usage of the Reorderable manipulator.",
+      "path": "Samples~/ReorderableCards"
+    },
+    {
+      "displayName": "UI code generation",
+      "description": "Example usage of UI code generation.",
+      "path": "Samples~/UICodeGeneration"
+    },
+    {
+      "displayName": "Tabs",
+      "description": "Example usage of Tabs elements.",
+      "path": "Samples~/Tabs"
+    }
+  ],
+  "_fingerprint": "e954c009b99edad93d3f1144b23eb363be171878"
+}

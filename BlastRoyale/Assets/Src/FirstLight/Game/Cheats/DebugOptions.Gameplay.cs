@@ -19,7 +19,7 @@ public partial class DebugOptions
 	{
 		Utils.ForceCrash(ForcedCrashCategory.FatalError);
 	}
-#if UNITY_EDITOR || DEVELOPMENT_BUILD
+#if DEBUG
 
 	private static void AddQuantumCheats()
 	{

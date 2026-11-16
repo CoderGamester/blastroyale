@@ -16,6 +16,11 @@ TrueTypeFontImporter:
   ascentCalculationMode: 1
   useLegacyBoundsCalculation: 0
   shouldRoundAdvanceValue: 1
+  subsetRecipes:
+  - key: 8bd3b374bd663476b9726b6549377d89
+    characters: a421
+    flags: 1
+    faceIndex: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 

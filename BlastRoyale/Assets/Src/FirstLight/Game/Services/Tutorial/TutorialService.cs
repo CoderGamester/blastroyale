@@ -142,7 +142,7 @@ namespace FirstLight.Game.Services
 		public GameObject[] FindTutorialObjects(string referenceTag)
 		{
 			var objects = GameObject.FindGameObjectsWithTag(referenceTag);
-#if DEVELOPMENT_BUILD
+#if DEBUG && !UNITY_EDITOR
 			if (objects == null || objects.Length == 0)
 			{
 				throw new Exception($"Tutorial could not find game object {referenceTag} - was reference changed ?");

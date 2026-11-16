@@ -9,7 +9,7 @@ public partial class DebugOptions : INotifyPropertyChanged
 	public static DebugOptions Current { get; private set; }
 	public event PropertyChangedEventHandler PropertyChanged;
 
-#if UNITY_EDITOR || DEVELOPMENT_BUILD
+#if DEBUG
 	[RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.AfterSceneLoad)]
 	public static void OnStartup()
 	{

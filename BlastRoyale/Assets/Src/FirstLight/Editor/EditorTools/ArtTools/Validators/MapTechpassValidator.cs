@@ -14,7 +14,7 @@ public class TechPassValidator
 	[MenuItem("FLG/Art/Validators/MapValidation")]
 	private static void ValidateMap()
 	{
-		var l = Object.FindObjectsByType<GameObject>(FindObjectsInactive.Include, FindObjectsSortMode.None);
+		var l = Object.FindObjectsByType<GameObject>(FindObjectsInactive.Include);
 
 		foreach(var go in l)
 		{

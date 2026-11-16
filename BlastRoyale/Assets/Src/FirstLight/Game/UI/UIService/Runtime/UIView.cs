@@ -1,9 +1,11 @@
+using System;
 using FirstLight.Game.UI;
 using QuickEye.UIToolkit;
 using UnityEngine.UIElements;
 
 namespace FirstLight.Game.UI
 {
+	[Serializable]
 	public class UIView
 	{
 		/// <summary>

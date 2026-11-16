@@ -51,6 +51,13 @@ MonoBehaviour:
   m_ParentUI: {fileID: 0}
   sourceAsset: {fileID: 9197481963319205126, guid: ab136385bb5774a519548e15c2729390, type: 3}
   m_SortingOrder: 0
+  m_Position: 0
+  m_WorldSpaceSizeMode: 1
+  m_WorldSpaceWidth: 1920
+  m_WorldSpaceHeight: 1080
+  m_PivotReferenceSize: 0
+  m_Pivot: 0
+  m_WorldSpaceCollider: {fileID: 0}
 --- !u!114 &572607484
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -65,7 +72,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _document: {fileID: 3274073835039566590}
   _character: {fileID: 1362319859418750371}
-  _camera: {fileID: 8278269561853960441}
+  _camera: {fileID: 6238797912633318435}
   _leaderboardEntryAsset: {fileID: 9197481963319205126, guid: 6fb24398d54ea4f059d3e6f638340f5d, type: 3}
   _playerNameTemplate: {fileID: 9197481963319205126, guid: 12f945a3724c66742a881285b2b16800, type: 3}
 --- !u!1001 &862008424895337714
@@ -351,14 +358,14 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2949304956738128959, guid: 1345048504cb60373bf0ba2afb4072d7, type: 3}
   m_PrefabInstance: {fileID: 3685629624976557818}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &8278269561853960441 stripped
+--- !u!114 &6238797912633318435 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4739949357168174595, guid: 1345048504cb60373bf0ba2afb4072d7, type: 3}
+  m_CorrespondingSourceObject: {fileID: 7327731768882584281, guid: 1345048504cb60373bf0ba2afb4072d7, type: 3}
   m_PrefabInstance: {fileID: 3685629624976557818}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 45e653bab7fb20e499bda25e1b646fea, type: 3}
+  m_Script: {fileID: 11500000, guid: f9dfa5b682dcd46bda6128250e975f58, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: 
+  m_EditorClassIdentifier: Unity.Cinemachine::Unity.Cinemachine.CinemachineCamera
